@@ -1,22 +1,49 @@
 {
   "name": "@almadar/patterns",
   "version": "1.0.0",
-  "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "description": "Pattern registry and component mappings for Almadar",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./registry.json": "./src/patterns-registry.json",
     "./patterns-registry.json": "./src/patterns-registry.json",
     "./integrators-registry.json": "./src/integrators-registry.json",
     "./component-mapping.json": "./src/component-mapping.json",
     "./event-contracts.json": "./src/event-contracts.json"
   },
+  "files": [
+    "dist",
+    "src/*.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "tsc",
-    "typecheck": "tsc --noEmit"
+    "build": "tsup",
+    "build:watch": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
-    "typescript": "catalog:"
-  }
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/almadar-io/almadar.git",
+    "directory": "packages/almadar-patterns"
+  },
+  "license": "MIT",
+  "keywords": [
+    "almadar",
+    "patterns",
+    "ui",
+    "registry"
+  ]
 }
