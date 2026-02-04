@@ -6,7 +6,9 @@
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./registry.json": "./src/registry.json",
+    "./registry.json": "./src/patterns-registry.json",
+    "./patterns-registry.json": "./src/patterns-registry.json",
+    "./integrators-registry.json": "./src/integrators-registry.json",
     "./component-mapping.json": "./src/component-mapping.json",
     "./event-contracts.json": "./src/event-contracts.json"
   },
