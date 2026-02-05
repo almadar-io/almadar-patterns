@@ -1316,6 +1316,36 @@
       "importPath": "@/clients/trait-wars/templates/HexTraitWarsGame",
       "category": "template",
       "client": "trait-wars"
+    },
+    "hero-avatar": {
+      "component": "HeroAvatar",
+      "importPath": "@/clients/trait-wars/atoms/HeroAvatar",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "trait-slot": {
+      "component": "TraitSlot",
+      "importPath": "@/clients/trait-wars/molecules/TraitSlot",
+      "category": "input",
+      "client": "trait-wars"
+    },
+    "unit-roster": {
+      "component": "UnitRoster",
+      "importPath": "@/clients/trait-wars/organisms/UnitRoster",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "hero-profile": {
+      "component": "HeroProfileTemplate",
+      "importPath": "@/clients/trait-wars/templates/HeroProfileTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "army-builder": {
+      "component": "ArmyBuilderTemplate",
+      "importPath": "@/clients/trait-wars/templates/ArmyBuilderTemplate",
+      "category": "template",
+      "client": "trait-wars"
     }
   }
 }
