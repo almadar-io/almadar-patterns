@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-05T01:33:29.874Z",
+  "exportedAt": "2026-02-05T02:13:35.686Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -11567,6 +11567,162 @@
       "componentMapping": {
         "component": "SegmentRenderer",
         "importPath": "@/clients/kflow/organisms/SegmentRenderer"
+      }
+    },
+    "agent-chat-panel": {
+      "type": "agent-chat-panel",
+      "category": "display",
+      "client": "builder",
+      "description": "Chat panel for AI agent interactions",
+      "suggestedFor": [
+        "AI chat",
+        "agent conversations",
+        "builder IDE"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "messages": {
+          "types": [
+            "array"
+          ],
+          "description": "Chat messages array"
+        },
+        "onSend": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when message is sent"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        }
+      },
+      "componentMapping": {
+        "component": "AgentChatPanel",
+        "importPath": "@/clients/builder/organisms/agent/AgentChatPanel"
+      }
+    },
+    "schema-diff-viewer": {
+      "type": "schema-diff-viewer",
+      "category": "display",
+      "client": "builder",
+      "description": "Displays diff between schema versions",
+      "suggestedFor": [
+        "schema changes",
+        "version comparison",
+        "builder IDE"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "diff": {
+          "types": [
+            "object"
+          ],
+          "description": "Schema diff object"
+        },
+        "showLineNumbers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show line numbers"
+        }
+      },
+      "componentMapping": {
+        "component": "SchemaDiffViewer",
+        "importPath": "@/clients/builder/organisms/agent/SchemaDiffViewer"
+      }
+    },
+    "studio-home-web-template": {
+      "type": "studio-home-web-template",
+      "category": "template",
+      "client": "builder",
+      "description": "Home page template for web-based builder studio",
+      "suggestedFor": [
+        "builder home",
+        "project list",
+        "studio landing"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "projects": {
+          "types": [
+            "array"
+          ],
+          "description": "List of projects"
+        },
+        "recentFiles": {
+          "types": [
+            "array"
+          ],
+          "description": "Recent files"
+        }
+      },
+      "componentMapping": {
+        "component": "StudioHomeWebTemplate",
+        "importPath": "@/clients/builder/templates/StudioHomeWebTemplate"
+      }
+    },
+    "studio-project-template": {
+      "type": "studio-project-template",
+      "category": "template",
+      "client": "builder",
+      "description": "Project workspace template for builder studio",
+      "suggestedFor": [
+        "project editing",
+        "schema editing",
+        "builder workspace"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "project": {
+          "types": [
+            "object"
+          ],
+          "description": "Current project data"
+        },
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "description": "Schema being edited"
+        }
+      },
+      "componentMapping": {
+        "component": "StudioProjectTemplate",
+        "importPath": "@/clients/builder/templates/StudioProjectTemplate"
+      }
+    },
+    "todo-list": {
+      "type": "todo-list",
+      "category": "display",
+      "client": "builder",
+      "description": "List of todos/tasks for agent workflow",
+      "suggestedFor": [
+        "task list",
+        "agent todos",
+        "workflow tracking"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "todos": {
+          "types": [
+            "array"
+          ],
+          "description": "List of todo items"
+        },
+        "onToggle": {
+          "types": [
+            "function"
+          ],
+          "description": "Toggle todo completion"
+        }
+      },
+      "componentMapping": {
+        "component": "TodoList",
+        "importPath": "@/clients/builder/organisms/agent/TodoList"
       }
     }
   },
