@@ -21,3 +21,31 @@ export function getPatternDefinition(patternType: string) {
 export function getComponentForPattern(patternType: string) {
   return (componentMapping as any).mappings?.[patternType] ?? null;
 }
+
+/**
+ * Check if a pattern is entity-aware (requires data injection).
+ *
+ * Entity-aware patterns:
+ * 1. Have `entityAware: true` in the registry (explicit flag)
+ * 2. OR have both `entity` and `data` props in propsSchema (auto-detection fallback)
+ *
+ * @param patternType - Pattern type to check
+ * @returns true if the pattern is entity-aware
+ */
+export function isEntityAwarePattern(patternType: string): boolean {
+  const definition = getPatternDefinition(patternType);
+  if (!definition) return false;
+
+  // Explicit flag takes precedence
+  if (definition.entityAware === true) return true;
+
+  // Auto-detect based on props (fallback)
+  const propsSchema = definition.propsSchema;
+  if (!propsSchema) return false;
+
+  // If pattern has both 'entity' and ('data' or 'items') props, it's likely entity-aware
+  const hasEntityProp = 'entity' in propsSchema;
+  const hasDataProp = 'data' in propsSchema || 'items' in propsSchema;
+
+  return hasEntityProp && hasDataProp;
+}

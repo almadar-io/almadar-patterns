@@ -5,6 +5,7 @@
     "entity-table": {
       "type": "entity-table",
       "category": "display",
+      "entityAware": true,
       "description": "Data table with columns and sorting",
       "suggestedFor": [
         "data-dense views",
@@ -247,6 +248,7 @@
     "entity-list": {
       "type": "entity-list",
       "category": "display",
+      "entityAware": true,
       "description": "Vertical list of items",
       "suggestedFor": [
         "mobile-friendly lists",
@@ -394,6 +396,7 @@
     "entity-cards": {
       "type": "entity-cards",
       "category": "display",
+      "entityAware": true,
       "description": "Grid of cards for visual content",
       "suggestedFor": [
         "visual items",
@@ -541,6 +544,7 @@
     "entity-detail": {
       "type": "entity-detail",
       "category": "display",
+      "entityAware": true,
       "description": "Single entity view with all fields",
       "suggestedFor": [
         "detail pages",
@@ -672,6 +676,7 @@
     "detail-panel": {
       "type": "detail-panel",
       "category": "display",
+      "entityAware": true,
       "description": "Detail view panel for drawers/sidebars",
       "suggestedFor": [
         "drawer content",
@@ -945,6 +950,7 @@
     "form": {
       "type": "form",
       "category": "form",
+      "entityAware": true,
       "description": "Complete form with fields and actions",
       "suggestedFor": [
         "create forms",
@@ -2534,6 +2540,7 @@
     "stats": {
       "type": "stats",
       "category": "dashboard",
+      "entityAware": true,
       "description": "Key metrics and statistics",
       "suggestedFor": [
         "dashboards",
@@ -8914,6 +8921,7 @@
       "type": "inspections-list",
       "category": "template",
       "client": "inspection-system",
+      "entityAware": true,
       "description": "Inspections list view template",
       "suggestedFor": [
         "inspection management",
@@ -8956,6 +8964,7 @@
       "type": "companies-list",
       "category": "template",
       "client": "inspection-system",
+      "entityAware": true,
       "description": "Companies list view template",
       "suggestedFor": [
         "company management",
@@ -8998,6 +9007,7 @@
       "type": "inspectors-list",
       "category": "template",
       "client": "inspection-system",
+      "entityAware": true,
       "description": "Inspectors management template",
       "suggestedFor": [
         "inspector management",
