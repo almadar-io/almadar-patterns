@@ -9162,6 +9162,538 @@
         "importPath": "@/clients/inspection-system/templates/InspectionFormDemoTemplate"
       }
     },
+    "inspector-card": {
+      "type": "inspector-card",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Card component for displaying inspector information",
+      "suggestedFor": [
+        "inspector display",
+        "staff cards",
+        "personnel list"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Inspector data object"
+        },
+        "item": {
+          "types": ["object"],
+          "description": "Inspector data alias"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact, detail"
+        },
+        "showAvatar": {
+          "types": ["boolean"],
+          "description": "Show inspector avatar"
+        },
+        "displayFields": {
+          "types": ["array"],
+          "description": "Fields to display"
+        },
+        "itemActions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "InspectorCard",
+        "importPath": "@/clients/inspection-system/molecules/InspectorCard"
+      }
+    },
+    "company-card": {
+      "type": "company-card",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Card component for displaying company information",
+      "suggestedFor": [
+        "company display",
+        "business cards",
+        "entity list"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Company data object"
+        },
+        "item": {
+          "types": ["object"],
+          "description": "Company data alias"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact, detail"
+        },
+        "showInspectionHistory": {
+          "types": ["boolean"],
+          "description": "Show inspection history indicator"
+        },
+        "displayFields": {
+          "types": ["array"],
+          "description": "Fields to display"
+        },
+        "itemActions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "CompanyCard",
+        "importPath": "@/clients/inspection-system/molecules/CompanyCard"
+      }
+    },
+    "company-info-card": {
+      "type": "company-info-card",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Detailed company information card with inspection history",
+      "suggestedFor": [
+        "company details",
+        "business info",
+        "entity detail view"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Company data object"
+        },
+        "item": {
+          "types": ["object"],
+          "description": "Company data alias"
+        },
+        "displayFields": {
+          "types": ["array"],
+          "description": "Fields to display"
+        },
+        "showInspectionHistory": {
+          "types": ["boolean"],
+          "description": "Show inspection history section"
+        },
+        "showActions": {
+          "types": ["boolean"],
+          "description": "Show action buttons"
+        },
+        "actions": {
+          "types": ["array"],
+          "description": "Custom actions"
+        }
+      },
+      "componentMapping": {
+        "component": "CompanyInfoCard",
+        "importPath": "@/clients/inspection-system/molecules/CompanyInfoCard"
+      }
+    },
+    "inspection-card": {
+      "type": "inspection-card",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Card component for displaying inspection information",
+      "suggestedFor": [
+        "inspection display",
+        "case cards",
+        "inspection list"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Inspection data object"
+        },
+        "item": {
+          "types": ["object"],
+          "description": "Inspection data alias"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact, detail"
+        },
+        "displayFields": {
+          "types": ["array"],
+          "description": "Fields to display"
+        },
+        "itemActions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "InspectionCard",
+        "importPath": "@/clients/inspection-system/molecules/InspectionCard"
+      }
+    },
+    "inspection-checklist": {
+      "type": "inspection-checklist",
+      "category": "form",
+      "client": "inspection-system",
+      "description": "Checklist component for displaying and tracking inspection rules",
+      "suggestedFor": [
+        "rule checking",
+        "compliance checklist",
+        "inspection rules"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "items": {
+          "types": ["array"],
+          "description": "Checklist items"
+        },
+        "data": {
+          "types": ["array"],
+          "description": "Checklist items alias"
+        },
+        "entity": {
+          "types": ["string"],
+          "description": "Entity name for data binding"
+        },
+        "showRuleCount": {
+          "types": ["boolean"],
+          "description": "Show rule count summary"
+        },
+        "showSeverityBadge": {
+          "types": ["boolean"],
+          "description": "Show severity badges"
+        },
+        "readOnly": {
+          "types": ["boolean"],
+          "description": "Read-only mode"
+        },
+        "emptyTitle": {
+          "types": ["string"],
+          "description": "Empty state title"
+        },
+        "emptyIcon": {
+          "types": ["string"],
+          "description": "Empty state icon"
+        },
+        "itemActions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "InspectionChecklist",
+        "importPath": "@/clients/inspection-system/molecules/InspectionChecklist"
+      }
+    },
+    "checklist-item": {
+      "type": "checklist-item",
+      "category": "form",
+      "client": "inspection-system",
+      "description": "Individual checklist item with check/uncheck toggle",
+      "suggestedFor": [
+        "rule item",
+        "checklist entry",
+        "compliance item"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "id": {
+          "types": ["string"],
+          "description": "Item ID"
+        },
+        "name": {
+          "types": ["string"],
+          "description": "Item name/title"
+        },
+        "description": {
+          "types": ["string"],
+          "description": "Item description"
+        },
+        "data": {
+          "types": ["object"],
+          "description": "Item data for detail variant"
+        },
+        "displayFields": {
+          "types": ["array"],
+          "description": "Fields to display in detail variant"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact, detail"
+        },
+        "isChecked": {
+          "types": ["boolean"],
+          "description": "Whether item is checked"
+        },
+        "showSeverityBadge": {
+          "types": ["boolean"],
+          "description": "Show severity badge"
+        },
+        "severity": {
+          "types": ["string"],
+          "description": "Severity level"
+        },
+        "readOnly": {
+          "types": ["boolean"],
+          "description": "Read-only mode"
+        },
+        "actions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "ChecklistItem",
+        "importPath": "@/clients/inspection-system/molecules/ChecklistItem"
+      }
+    },
+    "inspection-summary": {
+      "type": "inspection-summary",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Summary component displaying inspection results and compliance stats",
+      "suggestedFor": [
+        "inspection results",
+        "compliance summary",
+        "inspection overview"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Summary data object"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact, card"
+        },
+        "showActions": {
+          "types": ["boolean"],
+          "description": "Show action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "InspectionSummary",
+        "importPath": "@/clients/inspection-system/molecules/InspectionSummary"
+      }
+    },
+    "violation-form": {
+      "type": "violation-form",
+      "category": "form",
+      "client": "inspection-system",
+      "description": "Form for recording violations during inspection",
+      "suggestedFor": [
+        "violation recording",
+        "non-compliance form",
+        "issue capture"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "initialData": {
+          "types": ["object"],
+          "description": "Initial form data"
+        },
+        "rule": {
+          "types": ["object"],
+          "description": "Rule being violated"
+        },
+        "submitEvent": {
+          "types": ["string"],
+          "description": "Event to emit on submit"
+        },
+        "cancelEvent": {
+          "types": ["string"],
+          "description": "Event to emit on cancel"
+        }
+      },
+      "componentMapping": {
+        "component": "ViolationForm",
+        "importPath": "@/clients/inspection-system/molecules/ViolationForm"
+      }
+    },
+    "violation-list-item": {
+      "type": "violation-list-item",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "List item for displaying violations",
+      "suggestedFor": [
+        "violation display",
+        "non-compliance list",
+        "issue tracking"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "data": {
+          "types": ["object"],
+          "description": "Violation data"
+        },
+        "item": {
+          "types": ["object"],
+          "description": "Violation data alias"
+        },
+        "variant": {
+          "types": ["string"],
+          "description": "Display variant: default, compact"
+        },
+        "showActions": {
+          "types": ["boolean"],
+          "description": "Show action buttons"
+        },
+        "itemActions": {
+          "types": ["array"],
+          "description": "Action buttons"
+        }
+      },
+      "componentMapping": {
+        "component": "ViolationListItem",
+        "importPath": "@/clients/inspection-system/molecules/ViolationListItem"
+      }
+    },
+    "evidence-gallery": {
+      "type": "evidence-gallery",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Gallery component for displaying evidence photos",
+      "suggestedFor": [
+        "photo gallery",
+        "evidence display",
+        "image collection"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "photos": {
+          "types": ["array"],
+          "description": "Photos to display"
+        },
+        "items": {
+          "types": ["array"],
+          "description": "Photos alias"
+        },
+        "allowAdd": {
+          "types": ["boolean"],
+          "description": "Allow adding photos"
+        },
+        "allowDelete": {
+          "types": ["boolean"],
+          "description": "Allow deleting photos"
+        },
+        "maxPhotos": {
+          "types": ["number"],
+          "description": "Maximum photos allowed"
+        },
+        "columns": {
+          "types": ["number"],
+          "description": "Grid columns (2, 3, or 4)"
+        },
+        "emptyMessage": {
+          "types": ["string"],
+          "description": "Empty state message"
+        }
+      },
+      "componentMapping": {
+        "component": "EvidenceGallery",
+        "importPath": "@/clients/inspection-system/molecules/EvidenceGallery"
+      }
+    },
+    "evidence-thumbnail": {
+      "type": "evidence-thumbnail",
+      "category": "display",
+      "client": "inspection-system",
+      "description": "Thumbnail component for evidence photos",
+      "suggestedFor": [
+        "photo thumbnail",
+        "evidence preview",
+        "image preview"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "id": {
+          "types": ["string"],
+          "description": "Photo ID"
+        },
+        "url": {
+          "types": ["string"],
+          "description": "Photo URL"
+        },
+        "thumbnail": {
+          "types": ["string"],
+          "description": "Thumbnail URL"
+        },
+        "caption": {
+          "types": ["string"],
+          "description": "Photo caption"
+        },
+        "size": {
+          "types": ["string"],
+          "description": "Size variant: sm, md, lg"
+        },
+        "allowDelete": {
+          "types": ["boolean"],
+          "description": "Allow deletion"
+        }
+      },
+      "componentMapping": {
+        "component": "EvidenceThumbnail",
+        "importPath": "@/clients/inspection-system/molecules/EvidenceThumbnail"
+      }
+    },
+    "inspection-wizard-step": {
+      "type": "inspection-wizard-step",
+      "category": "layout",
+      "client": "inspection-system",
+      "description": "Step component for inspection wizard",
+      "suggestedFor": [
+        "wizard step",
+        "inspection phase",
+        "workflow step"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "id": {
+          "types": ["string"],
+          "description": "Step ID"
+        },
+        "stepNumber": {
+          "types": ["number"],
+          "description": "Step number"
+        },
+        "title": {
+          "types": ["string"],
+          "description": "Step title"
+        },
+        "description": {
+          "types": ["string"],
+          "description": "Step description"
+        },
+        "status": {
+          "types": ["string"],
+          "description": "Step status: pending, active, completed, error"
+        },
+        "isActive": {
+          "types": ["boolean"],
+          "description": "Is this the current step"
+        },
+        "isFirst": {
+          "types": ["boolean"],
+          "description": "Is first step"
+        },
+        "isLast": {
+          "types": ["boolean"],
+          "description": "Is last step"
+        },
+        "totalSteps": {
+          "types": ["number"],
+          "description": "Total number of steps"
+        },
+        "showNavigation": {
+          "types": ["boolean"],
+          "description": "Show navigation buttons"
+        },
+        "disableNext": {
+          "types": ["boolean"],
+          "description": "Disable next/complete button"
+        }
+      },
+      "componentMapping": {
+        "component": "InspectionWizardStep",
+        "importPath": "@/clients/inspection-system/molecules/InspectionWizardStep"
+      }
+    },
     "credit-meter": {
       "type": "credit-meter",
       "category": "display",
