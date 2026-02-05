@@ -547,6 +547,42 @@
       "category": "template",
       "client": "inspection-system"
     },
+    "inspector-card": {
+      "component": "InspectorCard",
+      "importPath": "@/clients/inspection-system/molecules/InspectorCard",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "company-card": {
+      "component": "CompanyCard",
+      "importPath": "@/clients/inspection-system/molecules/CompanyCard",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "company-info-card": {
+      "component": "CompanyInfoCard",
+      "importPath": "@/clients/inspection-system/molecules/CompanyInfoCard",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "inspection-card": {
+      "component": "InspectionCard",
+      "importPath": "@/clients/inspection-system/molecules/InspectionCard",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "inspection-summary": {
+      "component": "InspectionSummary",
+      "importPath": "@/clients/inspection-system/molecules/InspectionSummary",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "violation-form": {
+      "component": "ViolationForm",
+      "importPath": "@/clients/inspection-system/molecules/ViolationForm",
+      "category": "form",
+      "client": "inspection-system"
+    },
     "inspection-wizard": {
       "component": "InspectionWizardTemplate",
       "importPath": "@/clients/inspection-system/templates/InspectionWizardTemplate",
