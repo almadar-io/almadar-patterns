@@ -583,6 +583,42 @@
       "category": "form",
       "client": "inspection-system"
     },
+    "checklist-item": {
+      "component": "ChecklistItem",
+      "importPath": "@/clients/inspection-system/molecules/ChecklistItem",
+      "category": "form",
+      "client": "inspection-system"
+    },
+    "evidence-gallery": {
+      "component": "EvidenceGallery",
+      "importPath": "@/clients/inspection-system/molecules/EvidenceGallery",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "evidence-thumbnail": {
+      "component": "EvidenceThumbnail",
+      "importPath": "@/clients/inspection-system/molecules/EvidenceThumbnail",
+      "category": "display",
+      "client": "inspection-system"
+    },
+    "inspection-checklist": {
+      "component": "InspectionChecklist",
+      "importPath": "@/clients/inspection-system/molecules/InspectionChecklist",
+      "category": "form",
+      "client": "inspection-system"
+    },
+    "inspection-wizard-step": {
+      "component": "InspectionWizardStep",
+      "importPath": "@/clients/inspection-system/molecules/InspectionWizardStep",
+      "category": "form",
+      "client": "inspection-system"
+    },
+    "violation-list-item": {
+      "component": "ViolationListItem",
+      "importPath": "@/clients/inspection-system/molecules/ViolationListItem",
+      "category": "display",
+      "client": "inspection-system"
+    },
     "inspection-wizard": {
       "component": "InspectionWizardTemplate",
       "importPath": "@/clients/inspection-system/templates/InspectionWizardTemplate",
