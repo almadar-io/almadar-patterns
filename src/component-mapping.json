@@ -1304,6 +1304,18 @@
       "importPath": "@/clients/trait-wars/organisms/TraitPanel",
       "category": "display",
       "client": "trait-wars"
+    },
+    "hex-battlefield": {
+      "component": "BattlefieldTemplate",
+      "importPath": "@/clients/trait-wars/templates/BattlefieldTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "hero-selection": {
+      "component": "HexTraitWarsGame",
+      "importPath": "@/clients/trait-wars/templates/HexTraitWarsGame",
+      "category": "template",
+      "client": "trait-wars"
     }
   }
 }
