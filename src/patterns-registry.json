@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-02T18:33:40.865Z",
+  "exportedAt": "2026-02-05T01:33:29.874Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -3343,6 +3343,10 @@
           ],
           "description": "Array of nested pattern configurations"
         }
+      },
+      "componentMapping": {
+        "component": "Flex",
+        "importPath": "@/components/molecules/Flex"
       }
     },
     "hstack": {
@@ -3392,6 +3396,10 @@
           ],
           "description": "Array of nested pattern configurations"
         }
+      },
+      "componentMapping": {
+        "component": "Flex",
+        "importPath": "@/components/molecules/Flex"
       }
     },
     "box": {
@@ -3455,6 +3463,10 @@
           ],
           "description": "Nested patterns"
         }
+      },
+      "componentMapping": {
+        "component": "Box",
+        "importPath": "@/components/atoms/Box"
       }
     },
     "grid": {
@@ -3505,6 +3517,10 @@
           ],
           "description": "Array of grid cell patterns"
         }
+      },
+      "componentMapping": {
+        "component": "Grid",
+        "importPath": "@/components/molecules/Grid"
       }
     },
     "center": {
@@ -3536,6 +3552,10 @@
           ],
           "description": "Content to center"
         }
+      },
+      "componentMapping": {
+        "component": "Center",
+        "importPath": "@/components/atoms/Center"
       }
     },
     "spacer": {
@@ -3560,6 +3580,10 @@
           ],
           "description": "Fixed size or \"flex\""
         }
+      },
+      "componentMapping": {
+        "component": "Spacer",
+        "importPath": "@/components/atoms/Spacer"
       }
     },
     "divider": {
@@ -3602,6 +3626,10 @@
           ],
           "description": "Margin around divider"
         }
+      },
+      "componentMapping": {
+        "component": "Divider",
+        "importPath": "@/components/atoms/Divider"
       }
     },
     "game-canvas": {
@@ -5434,6 +5462,10 @@
           ],
           "description": "Icon position: left, right"
         }
+      },
+      "componentMapping": {
+        "component": "Button",
+        "importPath": "@/components/atoms/Button"
       }
     },
     "button-group": {
@@ -5463,6 +5495,10 @@
           ],
           "description": "Button alignment"
         }
+      },
+      "componentMapping": {
+        "component": "ButtonGroup",
+        "importPath": "@/components/molecules/ButtonGroup"
       }
     },
     "icon-button": {
@@ -5511,6 +5547,10 @@
           ],
           "description": "Accessibility label"
         }
+      },
+      "componentMapping": {
+        "component": "Button",
+        "importPath": "@/components/atoms/Button"
       }
     },
     "link": {
@@ -5552,6 +5592,10 @@
           ],
           "description": "Event to emit on click (for programmatic navigation)"
         }
+      },
+      "componentMapping": {
+        "component": "Button",
+        "importPath": "@/components/atoms/Button"
       }
     },
     "text": {
@@ -5605,6 +5649,10 @@
           ],
           "description": "Text alignment: left, center, right"
         }
+      },
+      "componentMapping": {
+        "component": "Typography",
+        "importPath": "@/components/atoms/Typography"
       }
     },
     "heading": {
@@ -5640,6 +5688,10 @@
           ],
           "description": "Size override: xs, sm, md, lg, xl, 2xl, 3xl"
         }
+      },
+      "componentMapping": {
+        "component": "Typography",
+        "importPath": "@/components/atoms/Typography"
       }
     },
     "badge": {
@@ -5675,6 +5727,10 @@
           ],
           "description": "Size: sm, md"
         }
+      },
+      "componentMapping": {
+        "component": "Badge",
+        "importPath": "@/components/atoms/Badge"
       }
     },
     "avatar": {
@@ -5716,6 +5772,10 @@
           ],
           "description": "Size: xs, sm, md, lg, xl"
         }
+      },
+      "componentMapping": {
+        "component": "Avatar",
+        "importPath": "@/components/atoms/Avatar"
       }
     },
     "icon": {
@@ -5752,6 +5812,10 @@
           ],
           "description": "Color token"
         }
+      },
+      "componentMapping": {
+        "component": "Icon",
+        "importPath": "@/components/atoms/Icon"
       }
     },
     "image": {
@@ -5870,6 +5934,10 @@
           ],
           "description": "Card body content"
         }
+      },
+      "componentMapping": {
+        "component": "Card",
+        "importPath": "@/components/molecules/Card"
       }
     },
     "progress-bar": {
@@ -5918,6 +5986,10 @@
           ],
           "description": "Show percentage label"
         }
+      },
+      "componentMapping": {
+        "component": "ProgressBar",
+        "importPath": "@/components/atoms/ProgressBar"
       }
     },
     "spinner": {
@@ -5946,6 +6018,10 @@
           ],
           "description": "Color token"
         }
+      },
+      "componentMapping": {
+        "component": "Spinner",
+        "importPath": "@/components/atoms/Spinner"
       }
     },
     "input": {
@@ -6005,6 +6081,10 @@
           ],
           "description": "Event to emit on blur"
         }
+      },
+      "componentMapping": {
+        "component": "Input",
+        "importPath": "@/components/atoms/Input"
       }
     },
     "textarea": {
@@ -6058,6 +6138,10 @@
           ],
           "description": "Event to emit on change"
         }
+      },
+      "componentMapping": {
+        "component": "Textarea",
+        "importPath": "@/components/atoms/Textarea"
       }
     },
     "select": {
@@ -6112,6 +6196,10 @@
           ],
           "description": "Event to emit on change"
         }
+      },
+      "componentMapping": {
+        "component": "Select",
+        "importPath": "@/components/atoms/Select"
       }
     },
     "checkbox": {
@@ -6153,6 +6241,10 @@
           ],
           "description": "Event to emit on change"
         }
+      },
+      "componentMapping": {
+        "component": "Checkbox",
+        "importPath": "@/components/atoms/Checkbox"
       }
     },
     "radio": {
@@ -6205,6 +6297,10 @@
           ],
           "description": "Event to emit on change"
         }
+      },
+      "componentMapping": {
+        "component": "Radio",
+        "importPath": "@/components/atoms/Radio"
       }
     },
     "switch": {
@@ -6246,6 +6342,10 @@
           ],
           "description": "Event to emit on change"
         }
+      },
+      "componentMapping": {
+        "component": "Switch",
+        "importPath": "@/components/atoms/Switch"
       }
     },
     "label": {
@@ -6280,6 +6380,10 @@
           ],
           "description": "Show required indicator"
         }
+      },
+      "componentMapping": {
+        "component": "Label",
+        "importPath": "@/components/atoms/Label"
       }
     },
     "alert": {
@@ -6329,6 +6433,10 @@
           ],
           "description": "Event to emit on dismiss"
         }
+      },
+      "componentMapping": {
+        "component": "Alert",
+        "importPath": "@/components/molecules/Alert"
       }
     },
     "tooltip": {
@@ -6366,6 +6474,10 @@
           ],
           "description": "Trigger element"
         }
+      },
+      "componentMapping": {
+        "component": "Tooltip",
+        "importPath": "@/components/molecules/Tooltip"
       }
     },
     "popover": {
@@ -6410,6 +6522,10 @@
           ],
           "description": "Trigger element"
         }
+      },
+      "componentMapping": {
+        "component": "Popover",
+        "importPath": "@/components/molecules/Popover"
       }
     },
     "menu": {
@@ -6446,6 +6562,10 @@
           ],
           "description": "Position: bottom-start, bottom-end, top-start, top-end"
         }
+      },
+      "componentMapping": {
+        "component": "Menu",
+        "importPath": "@/components/molecules/Menu"
       }
     },
     "accordion": {
@@ -6484,6 +6604,10 @@
           ],
           "description": "Initially open item indices"
         }
+      },
+      "componentMapping": {
+        "component": "Accordion",
+        "importPath": "@/components/molecules/Accordion"
       }
     },
     "container": {
@@ -6519,6 +6643,10 @@
           ],
           "description": "Container content"
         }
+      },
+      "componentMapping": {
+        "component": "Container",
+        "importPath": "@/components/molecules/Container"
       }
     },
     "simple-grid": {
@@ -6555,6 +6683,10 @@
           ],
           "description": "Grid items"
         }
+      },
+      "componentMapping": {
+        "component": "SimpleGrid",
+        "importPath": "@/components/molecules/SimpleGrid"
       }
     },
     "float-button": {
@@ -6597,6 +6729,10 @@
           ],
           "description": "Variant: primary, secondary"
         }
+      },
+      "componentMapping": {
+        "component": "FloatingActionButton",
+        "importPath": "@/components/molecules/FloatingActionButton"
       }
     },
     "custom": {
@@ -6752,6 +6888,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TrustMeter",
+        "importPath": "@/clients/winning-11/atoms/TrustMeter"
       }
     },
     "growth-meter": {
@@ -6826,6 +6966,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "GrowthMeter",
+        "importPath": "@/clients/winning-11/atoms/GrowthMeter"
       }
     },
     "care-indicator": {
@@ -6872,6 +7016,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CareIndicator",
+        "importPath": "@/clients/winning-11/atoms/CareIndicator"
       }
     },
     "season-indicator": {
@@ -6917,6 +7065,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SeasonIndicator",
+        "importPath": "@/clients/winning-11/atoms/SeasonIndicator"
       }
     },
     "plant-card": {
@@ -7021,6 +7173,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "PlantCard",
+        "importPath": "@/clients/winning-11/molecules/PlantCard"
       }
     },
     "harvest-card": {
@@ -7101,6 +7257,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "HarvestCard",
+        "importPath": "@/clients/winning-11/molecules/HarvestCard"
       }
     },
     "weather-widget": {
@@ -7175,6 +7335,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "WeatherWidget",
+        "importPath": "@/clients/winning-11/molecules/WeatherWidget"
       }
     },
     "garden-view": {
@@ -7309,6 +7473,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "GardenView",
+        "importPath": "@/clients/winning-11/organisms/GardenView"
       }
     },
     "relationship-garden": {
@@ -7347,6 +7515,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "RelationshipGardenTemplate",
+        "importPath": "@/clients/winning-11/templates/RelationshipGardenTemplate"
       }
     },
     "trust-intelligence": {
@@ -7379,6 +7551,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TrustIntelligenceTemplate",
+        "importPath": "@/clients/winning-11/templates/TrustIntelligenceTemplate"
       }
     },
     "connections-view": {
@@ -7417,6 +7593,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ConnectionsTemplate",
+        "importPath": "@/clients/winning-11/templates/ConnectionsTemplate"
       }
     },
     "invites-list": {
@@ -7449,6 +7629,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InvitesTemplate",
+        "importPath": "@/clients/winning-11/templates/InvitesTemplate"
       }
     },
     "admin-dashboard": {
@@ -7481,6 +7665,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "AdminDashboardTemplate",
+        "importPath": "@/clients/winning-11/templates/AdminDashboardTemplate"
       }
     },
     "assessment-form": {
@@ -7513,6 +7701,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "AssessmentTemplate",
+        "importPath": "@/clients/winning-11/templates/AssessmentTemplate"
       }
     },
     "suggestions-list": {
@@ -7545,6 +7737,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SuggestionsTemplate",
+        "importPath": "@/clients/winning-11/templates/SuggestionsTemplate"
       }
     },
     "graph-intelligence": {
@@ -7577,6 +7773,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "GraphIntelligenceTemplate",
+        "importPath": "@/clients/winning-11/templates/GraphIntelligenceTemplate"
       }
     },
     "seed-network": {
@@ -7609,6 +7809,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SeedNetworkTemplate",
+        "importPath": "@/clients/winning-11/templates/SeedNetworkTemplate"
       }
     },
     "projects-list": {
@@ -7647,6 +7851,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ProjectsTemplate",
+        "importPath": "@/clients/winning-11/templates/ProjectsTemplate"
       }
     },
     "project-detail": {
@@ -7679,6 +7887,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ProjectDetailTemplate",
+        "importPath": "@/clients/winning-11/templates/ProjectDetailTemplate"
       }
     },
     "teams-list": {
@@ -7711,6 +7923,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TeamsTemplate",
+        "importPath": "@/clients/winning-11/templates/TeamsTemplate"
       }
     },
     "team-detail": {
@@ -7743,6 +7959,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TeamDetailTemplate",
+        "importPath": "@/clients/winning-11/templates/TeamDetailTemplate"
       }
     },
     "team-members-list": {
@@ -7781,6 +8001,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TeamMembersTemplate",
+        "importPath": "@/clients/winning-11/templates/TeamMembersTemplate"
       }
     },
     "user-profile": {
@@ -7819,6 +8043,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "UserProfileTemplate",
+        "importPath": "@/clients/winning-11/templates/UserProfileTemplate"
       }
     },
     "users-list": {
@@ -7857,6 +8085,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "UsersTemplate",
+        "importPath": "@/clients/winning-11/templates/UsersTemplate"
       }
     },
     "law-reference-badge": {
@@ -7916,6 +8148,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "LawReferenceBadge",
+        "importPath": "@/clients/inspection-system/atoms/LawReferenceBadge"
       }
     },
     "phase-indicator": {
@@ -7955,6 +8191,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "PhaseIndicator",
+        "importPath": "@/clients/inspection-system/atoms/PhaseIndicator"
       }
     },
     "card-selector": {
@@ -8018,6 +8258,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CardSelector",
+        "importPath": "@/clients/inspection-system/molecules/CardSelector"
       }
     },
     "compliance-summary": {
@@ -8068,6 +8312,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ComplianceSummary",
+        "importPath": "@/clients/inspection-system/molecules/ComplianceSummary"
       }
     },
     "conditional-field": {
@@ -8114,6 +8362,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ConditionalField",
+        "importPath": "@/clients/inspection-system/molecules/ConditionalField"
       }
     },
     "document-preview": {
@@ -8164,6 +8416,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "DocumentPreview",
+        "importPath": "@/clients/inspection-system/molecules/DocumentPreview"
       }
     },
     "entity-search": {
@@ -8215,6 +8471,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "EntitySearch",
+        "importPath": "@/clients/inspection-system/molecules/EntitySearch"
       }
     },
     "inspection-timeline": {
@@ -8259,6 +8519,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectionTimeline",
+        "importPath": "@/clients/inspection-system/molecules/InspectionTimeline"
       }
     },
     "objection-recorder": {
@@ -8297,6 +8561,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ObjectionRecorder",
+        "importPath": "@/clients/inspection-system/molecules/ObjectionRecorder"
       }
     },
     "participant-list": {
@@ -8335,6 +8603,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ParticipantList",
+        "importPath": "@/clients/inspection-system/molecules/ParticipantList"
       }
     },
     "photo-attachment": {
@@ -8379,6 +8651,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "PhotoAttachment",
+        "importPath": "@/clients/inspection-system/molecules/PhotoAttachment"
       }
     },
     "progress-header": {
@@ -8423,6 +8699,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ProgressHeader",
+        "importPath": "@/clients/inspection-system/molecules/ProgressHeader"
       }
     },
     "rule-check-item": {
@@ -8474,6 +8754,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "RuleCheckItem",
+        "importPath": "@/clients/inspection-system/molecules/RuleCheckItem"
       }
     },
     "repeatable-form-section": {
@@ -8524,6 +8808,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "RepeatableFormSection",
+        "importPath": "@/components/molecules/RepeatableFormSection"
       }
     },
     "floating-action-menu": {
@@ -8562,6 +8850,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "FloatingActionMenu",
+        "importPath": "@/clients/inspection-system/organisms/FloatingActionMenu"
       }
     },
     "signature-capture": {
@@ -8612,6 +8904,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SignatureCapture",
+        "importPath": "@/clients/inspection-system/organisms/SignatureCapture"
       }
     },
     "inspections-list": {
@@ -8650,6 +8946,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectionsTemplate",
+        "importPath": "@/clients/inspection-system/templates/InspectionsTemplate"
       }
     },
     "companies-list": {
@@ -8688,6 +8988,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CompaniesTemplate",
+        "importPath": "@/clients/inspection-system/templates/CompaniesTemplate"
       }
     },
     "inspectors-list": {
@@ -8720,6 +9024,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectorsTemplate",
+        "importPath": "@/clients/inspection-system/templates/InspectorsTemplate"
       }
     },
     "inspection-wizard": {
@@ -8758,6 +9066,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectionWizardTemplate",
+        "importPath": "@/clients/inspection-system/templates/InspectionWizardTemplate"
       }
     },
     "inspection-process": {
@@ -8796,6 +9108,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectionProcessTemplate",
+        "importPath": "@/clients/inspection-system/templates/InspectionProcessTemplate"
       }
     },
     "inspection-form-demo": {
@@ -8840,6 +9156,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "InspectionFormDemoTemplate",
+        "importPath": "@/clients/inspection-system/templates/InspectionFormDemoTemplate"
       }
     },
     "credit-meter": {
@@ -8909,6 +9229,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CreditMeter",
+        "importPath": "@/clients/blaz-kelemnc/atoms/CreditMeter"
       }
     },
     "credit-expiration-alert": {
@@ -8953,6 +9277,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CreditExpirationAlert",
+        "importPath": "@/clients/blaz-kelemnc/atoms/CreditExpirationAlert"
       }
     },
     "exercise-video-link": {
@@ -9004,6 +9332,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ExerciseVideoLink",
+        "importPath": "@/clients/blaz-kelemnc/atoms/ExerciseVideoLink"
       }
     },
     "shareable-link-generator": {
@@ -9054,6 +9386,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ShareableLinkGenerator",
+        "importPath": "@/clients/blaz-kelemnc/atoms/ShareableLinkGenerator"
       }
     },
     "body-measurement-input": {
@@ -9104,6 +9440,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "BodyMeasurementInput",
+        "importPath": "@/clients/blaz-kelemnc/molecules/BodyMeasurementInput"
       }
     },
     "daily-progress-input": {
@@ -9149,6 +9489,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "DailyProgressInput",
+        "importPath": "@/clients/blaz-kelemnc/molecules/DailyProgressInput"
       }
     },
     "group-session-card": {
@@ -9206,6 +9550,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "GroupSessionCard",
+        "importPath": "@/clients/blaz-kelemnc/molecules/GroupSessionCard"
       }
     },
     "lift-tracker": {
@@ -9257,6 +9605,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "LiftTracker",
+        "importPath": "@/clients/blaz-kelemnc/molecules/LiftTracker"
       }
     },
     "meal-plan-card": {
@@ -9308,6 +9660,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MealPlanCard",
+        "importPath": "@/clients/blaz-kelemnc/molecules/MealPlanCard"
       }
     },
     "nutrition-summary": {
@@ -9370,6 +9726,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "NutritionSummary",
+        "importPath": "@/clients/blaz-kelemnc/molecules/NutritionSummary"
       }
     },
     "progress-chart": {
@@ -9427,6 +9787,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ProgressChart",
+        "importPath": "@/clients/blaz-kelemnc/molecules/ProgressChart"
       }
     },
     "special-exercise-card": {
@@ -9478,6 +9842,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SpecialExerciseCard",
+        "importPath": "@/clients/blaz-kelemnc/molecules/SpecialExerciseCard"
       }
     },
     "trainee-card": {
@@ -9529,6 +9897,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TraineeCard",
+        "importPath": "@/clients/blaz-kelemnc/molecules/TraineeCard"
       }
     },
     "workout-plan-card": {
@@ -9586,6 +9958,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "WorkoutPlanCard",
+        "importPath": "@/clients/blaz-kelemnc/molecules/WorkoutPlanCard"
       }
     },
     "ai-analysis-panel": {
@@ -9636,6 +10012,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "AIAnalysisPanel",
+        "importPath": "@/clients/blaz-kelemnc/organisms/AIAnalysisPanel"
       }
     },
     "kinesiology-exam-form": {
@@ -9692,6 +10072,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "KinesiologyExamForm",
+        "importPath": "@/clients/blaz-kelemnc/organisms/KinesiologyExamForm"
       }
     },
     "session-scheduler": {
@@ -9748,6 +10132,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SessionScheduler",
+        "importPath": "@/clients/blaz-kelemnc/organisms/SessionScheduler"
       }
     },
     "trainee-comparison": {
@@ -9799,6 +10187,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "TraineeComparison",
+        "importPath": "@/clients/blaz-kelemnc/organisms/TraineeComparison"
       }
     },
     "weekly-calendar": {
@@ -9856,6 +10248,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "WeeklyCalendar",
+        "importPath": "@/clients/blaz-kelemnc/organisms/WeeklyCalendar"
       }
     },
     "mind-map-connections": {
@@ -9895,6 +10291,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MindMapConnections",
+        "importPath": "@/clients/kflow/atoms/MindMapConnections"
       }
     },
     "concept-meta-tags": {
@@ -9945,6 +10345,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ConceptMetaTags",
+        "importPath": "@/clients/kflow/molecules/ConceptMetaTags"
       }
     },
     "graph-legend": {
@@ -9996,6 +10400,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "GraphLegend",
+        "importPath": "@/clients/kflow/molecules/GraphLegend"
       }
     },
     "layer-navigator": {
@@ -10054,6 +10462,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "LayerNavigator",
+        "importPath": "@/clients/kflow/molecules/LayerNavigator"
       }
     },
     "learning-goal-display": {
@@ -10105,6 +10517,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "LearningGoalDisplay",
+        "importPath": "@/clients/kflow/molecules/LearningGoalDisplay"
       }
     },
     "mind-map-header": {
@@ -10156,6 +10572,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MindMapHeader",
+        "importPath": "@/clients/kflow/molecules/MindMapHeader"
       }
     },
     "mind-map-node": {
@@ -10213,6 +10633,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MindMapNode",
+        "importPath": "@/clients/kflow/molecules/MindMapNode"
       }
     },
     "note-content": {
@@ -10258,6 +10682,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "NoteContent",
+        "importPath": "@/clients/kflow/molecules/NoteContent"
       }
     },
     "note-list-item": {
@@ -10309,6 +10737,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "NoteListItem",
+        "importPath": "@/clients/kflow/molecules/NoteListItem"
       }
     },
     "streaming-display": {
@@ -10353,6 +10785,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "StreamingDisplay",
+        "importPath": "@/clients/kflow/molecules/StreamingDisplay"
       }
     },
     "connection-block": {
@@ -10392,6 +10828,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ConnectionBlock",
+        "importPath": "@/clients/kflow/molecules/learning/ConnectionBlock"
       }
     },
     "quiz-block": {
@@ -10444,6 +10884,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "QuizBlock",
+        "importPath": "@/clients/kflow/molecules/learning/QuizBlock"
       }
     },
     "reflection-block": {
@@ -10488,6 +10932,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ReflectionBlock",
+        "importPath": "@/clients/kflow/molecules/learning/ReflectionBlock"
       }
     },
     "activation-block": {
@@ -10532,6 +10980,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ActivationBlock",
+        "importPath": "@/clients/kflow/molecules/learning/ActivationBlock"
       }
     },
     "bloom-quiz-block": {
@@ -10578,6 +11030,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "BloomQuizBlock",
+        "importPath": "@/clients/kflow/molecules/learning/BloomQuizBlock"
       }
     },
     "code-block": {
@@ -10629,6 +11085,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "CodeBlock",
+        "importPath": "@/clients/kflow/molecules/markdown/CodeBlock"
       }
     },
     "markdown-content": {
@@ -10668,6 +11128,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MarkdownContent",
+        "importPath": "@/clients/kflow/molecules/markdown/MarkdownContent"
       }
     },
     "concept-card": {
@@ -10725,6 +11189,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ConceptCard",
+        "importPath": "@/clients/kflow/organisms/ConceptCard"
       }
     },
     "flash-cards-display": {
@@ -10770,6 +11238,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "FlashCardsDisplay",
+        "importPath": "@/clients/kflow/organisms/FlashCardsDisplay"
       }
     },
     "flash-card-stack": {
@@ -10815,6 +11287,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "FlashCardStack",
+        "importPath": "@/clients/kflow/organisms/FlashCardStack"
       }
     },
     "flash-card": {
@@ -10861,6 +11337,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "FlashCard",
+        "importPath": "@/clients/kflow/organisms/FlashCard"
       }
     },
     "force-directed-graph": {
@@ -10918,6 +11398,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "ForceDirectedGraph",
+        "importPath": "@/clients/kflow/organisms/ForceDirectedGraph"
       }
     },
     "mind-map-canvas": {
@@ -10975,6 +11459,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "MindMapCanvas",
+        "importPath": "@/clients/kflow/organisms/MindMapCanvas"
       }
     },
     "note-list": {
@@ -11032,6 +11520,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "NoteList",
+        "importPath": "@/clients/kflow/organisms/NoteList"
       }
     },
     "segment-renderer": {
@@ -11071,6 +11563,10 @@
           ],
           "description": "Additional CSS classes"
         }
+      },
+      "componentMapping": {
+        "component": "SegmentRenderer",
+        "importPath": "@/clients/kflow/organisms/SegmentRenderer"
       }
     }
   },
