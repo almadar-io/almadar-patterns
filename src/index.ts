@@ -6,6 +6,9 @@ import eventContracts from './event-contracts.json';
 // Export both registries
 export { patternsRegistry, integratorsRegistry, componentMapping, eventContracts };
 
+// Export pattern types for compile-time validation
+export { PatternType, PATTERN_TYPES, isValidPatternType } from './pattern-types.js';
+
 // Backwards compatible alias - registry refers to patterns registry
 export const registry = patternsRegistry;
 
