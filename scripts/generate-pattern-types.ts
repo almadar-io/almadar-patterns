@@ -36,7 +36,8 @@ interface PatternsRegistry {
 }
 
 /**
- * Convert registry type strings to TypeScript types
+ * Convert registry type strings to TypeScript types.
+ * All props also allow string bindings (e.g., '@entity.x') for runtime resolution.
  */
 function mapType(types: string[]): string {
     const tsTypes = types.map(t => {
@@ -51,6 +52,11 @@ function mapType(types: string[]): string {
             default: return 'unknown';
         }
     });
+    // Always allow string bindings (e.g., '@entity.isOpen') for all prop types
+    // This is essential for behaviors where values are bound at runtime
+    if (!tsTypes.includes('string')) {
+        tsTypes.push('string');
+    }
     return tsTypes.join(' | ');
 }
 
