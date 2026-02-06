@@ -274,7 +274,7 @@
           ],
           "description": "Data array - primary prop for data"
         },
-        "type": {
+        "entityType": {
           "types": [
             "string"
           ],
@@ -6058,7 +6058,7 @@
           ],
           "description": "Placeholder text"
         },
-        "type": {
+        "inputType": {
           "types": [
             "string"
           ],
@@ -6991,7 +6991,7 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
-        "type": {
+        "careType": {
           "required": true,
           "types": [
             "string"
@@ -8393,7 +8393,7 @@
           ],
           "description": "Document URL"
         },
-        "type": {
+        "documentType": {
           "types": [
             "string"
           ],
@@ -9185,27 +9185,39 @@
       "typicalSize": "medium",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Inspector data object"
         },
         "item": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Inspector data alias"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact, detail"
         },
         "showAvatar": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show inspector avatar"
         },
         "displayFields": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Fields to display"
         },
         "itemActions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9227,27 +9239,39 @@
       "typicalSize": "medium",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Company data object"
         },
         "item": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Company data alias"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact, detail"
         },
         "showInspectionHistory": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show inspection history indicator"
         },
         "displayFields": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Fields to display"
         },
         "itemActions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9269,27 +9293,39 @@
       "typicalSize": "large",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Company data object"
         },
         "item": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Company data alias"
         },
         "displayFields": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Fields to display"
         },
         "showInspectionHistory": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show inspection history section"
         },
         "showActions": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show action buttons"
         },
         "actions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Custom actions"
         }
       },
@@ -9311,23 +9347,33 @@
       "typicalSize": "medium",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Inspection data object"
         },
         "item": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Inspection data alias"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact, detail"
         },
         "displayFields": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Fields to display"
         },
         "itemActions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9349,39 +9395,57 @@
       "typicalSize": "large",
       "propsSchema": {
         "items": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Checklist items"
         },
         "data": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Checklist items alias"
         },
         "entity": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Entity name for data binding"
         },
         "showRuleCount": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show rule count summary"
         },
         "showSeverityBadge": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show severity badges"
         },
         "readOnly": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Read-only mode"
         },
         "emptyTitle": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Empty state title"
         },
         "emptyIcon": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Empty state icon"
         },
         "itemActions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9403,47 +9467,69 @@
       "typicalSize": "small",
       "propsSchema": {
         "id": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Item ID"
         },
         "name": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Item name/title"
         },
         "description": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Item description"
         },
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Item data for detail variant"
         },
         "displayFields": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Fields to display in detail variant"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact, detail"
         },
         "isChecked": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Whether item is checked"
         },
         "showSeverityBadge": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show severity badge"
         },
         "severity": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Severity level"
         },
         "readOnly": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Read-only mode"
         },
         "actions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9465,15 +9551,21 @@
       "typicalSize": "large",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Summary data object"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact, card"
         },
         "showActions": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show action buttons"
         }
       },
@@ -9495,19 +9587,27 @@
       "typicalSize": "medium",
       "propsSchema": {
         "initialData": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Initial form data"
         },
         "rule": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Rule being violated"
         },
         "submitEvent": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Event to emit on submit"
         },
         "cancelEvent": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Event to emit on cancel"
         }
       },
@@ -9529,23 +9629,33 @@
       "typicalSize": "small",
       "propsSchema": {
         "data": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Violation data"
         },
         "item": {
-          "types": ["object"],
+          "types": [
+            "object"
+          ],
           "description": "Violation data alias"
         },
         "variant": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Display variant: default, compact"
         },
         "showActions": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show action buttons"
         },
         "itemActions": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Action buttons"
         }
       },
@@ -9567,31 +9677,45 @@
       "typicalSize": "medium",
       "propsSchema": {
         "photos": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Photos to display"
         },
         "items": {
-          "types": ["array"],
+          "types": [
+            "array"
+          ],
           "description": "Photos alias"
         },
         "allowAdd": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Allow adding photos"
         },
         "allowDelete": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Allow deleting photos"
         },
         "maxPhotos": {
-          "types": ["number"],
+          "types": [
+            "number"
+          ],
           "description": "Maximum photos allowed"
         },
         "columns": {
-          "types": ["number"],
+          "types": [
+            "number"
+          ],
           "description": "Grid columns (2, 3, or 4)"
         },
         "emptyMessage": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Empty state message"
         }
       },
@@ -9613,27 +9737,39 @@
       "typicalSize": "small",
       "propsSchema": {
         "id": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Photo ID"
         },
         "url": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Photo URL"
         },
         "thumbnail": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Thumbnail URL"
         },
         "caption": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Photo caption"
         },
         "size": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Size variant: sm, md, lg"
         },
         "allowDelete": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Allow deletion"
         }
       },
@@ -9655,47 +9791,69 @@
       "typicalSize": "large",
       "propsSchema": {
         "id": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Step ID"
         },
         "stepNumber": {
-          "types": ["number"],
+          "types": [
+            "number"
+          ],
           "description": "Step number"
         },
         "title": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Step title"
         },
         "description": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Step description"
         },
         "status": {
-          "types": ["string"],
+          "types": [
+            "string"
+          ],
           "description": "Step status: pending, active, completed, error"
         },
         "isActive": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Is this the current step"
         },
         "isFirst": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Is first step"
         },
         "isLast": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Is last step"
         },
         "totalSteps": {
-          "types": ["number"],
+          "types": [
+            "number"
+          ],
           "description": "Total number of steps"
         },
         "showNavigation": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Show navigation buttons"
         },
         "disableNext": {
-          "types": ["boolean"],
+          "types": [
+            "boolean"
+          ],
           "description": "Disable next/complete button"
         }
       },

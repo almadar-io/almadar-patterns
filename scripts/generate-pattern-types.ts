@@ -65,7 +65,7 @@ function mapType(types: string[]): string {
  */
 function generatePropsInterface(patternName: string, propsSchema: Record<string, PropSchema> | undefined): string {
     if (!propsSchema || Object.keys(propsSchema).length === 0) {
-        return `  '${patternName}': { patternType: '${patternName}'; };`;
+        return `  '${patternName}': { type: '${patternName}'; };`;
     }
 
     const props = Object.entries(propsSchema).map(([propName, schema]) => {
@@ -75,7 +75,7 @@ function generatePropsInterface(patternName: string, propsSchema: Record<string,
         return `    ${comment}${propName}${optional}: ${tsType};`;
     });
 
-    return `  '${patternName}': {\n    patternType: '${patternName}';\n${props.join('\n')}\n  };`;
+    return `  '${patternName}': {\n    type: '${patternName}';\n${props.join('\n')}\n  };`;
 }
 
 async function main() {
