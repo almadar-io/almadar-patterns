@@ -2,8 +2,8 @@
 /**
  * Generate Pattern Types Script
  *
- * Extracts all pattern type names from patterns-registry.json and generates
- * a TypeScript file with a PatternType union type for compile-time validation.
+ * Extracts all pattern type names and their props schemas from patterns-registry.json
+ * and generates TypeScript types for compile-time validation of render-ui effects.
  *
  * Usage: npx tsx scripts/generate-pattern-types.ts
  */
@@ -15,10 +15,61 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+interface PropSchema {
+    required?: boolean;
+    types: string[];
+    description?: string;
+}
+
+interface PatternDefinition {
+    type: string;
+    category?: string;
+    entityAware?: boolean;
+    description?: string;
+    propsSchema?: Record<string, PropSchema>;
+}
+
 interface PatternsRegistry {
     version: string;
     exportedAt: string;
-    patterns: Record<string, unknown>;
+    patterns: Record<string, PatternDefinition>;
+}
+
+/**
+ * Convert registry type strings to TypeScript types
+ */
+function mapType(types: string[]): string {
+    const tsTypes = types.map(t => {
+        switch (t) {
+            case 'string': return 'string';
+            case 'number': return 'number';
+            case 'boolean': return 'boolean';
+            case 'array': return 'unknown[]';
+            case 'object': return 'Record<string, unknown>';
+            case 'function': return '((...args: unknown[]) => unknown)';
+            case 'null': return 'null';
+            default: return 'unknown';
+        }
+    });
+    return tsTypes.join(' | ');
+}
+
+/**
+ * Generate interface for a pattern's props
+ */
+function generatePropsInterface(patternName: string, propsSchema: Record<string, PropSchema> | undefined): string {
+    if (!propsSchema || Object.keys(propsSchema).length === 0) {
+        return `  '${patternName}': { patternType: '${patternName}'; };`;
+    }
+
+    const props = Object.entries(propsSchema).map(([propName, schema]) => {
+        const optional = schema.required ? '' : '?';
+        const tsType = mapType(schema.types);
+        const comment = schema.description ? `/** ${schema.description} */\n    ` : '';
+        return `    ${comment}${propName}${optional}: ${tsType};`;
+    });
+
+    return `  '${patternName}': {\n    patternType: '${patternName}';\n${props.join('\n')}\n  };`;
 }
 
 async function main() {
@@ -31,6 +82,11 @@ async function main() {
 
     const patternNames = Object.keys(registry.patterns).sort();
     console.log(`Found ${patternNames.length} patterns`);
+
+    // Generate props interfaces for each pattern
+    const propsInterfaces = patternNames.map(name =>
+        generatePropsInterface(name, registry.patterns[name].propsSchema)
+    );
 
     // Generate TypeScript file
     const tsContent = `/**
@@ -46,19 +102,48 @@ async function main() {
 /**
  * All valid pattern type names from almadar-patterns registry.
  * Use this type in render-ui effects for compile-time validation.
- *
- * @example
- * const pattern: PatternConfig = {
- *   type: 'entity-table', // ✅ Valid
- *   entity: 'Task',
- * };
- *
- * const invalid: PatternConfig = {
- *   type: 'nonexistent', // ❌ TypeScript error!
- * };
  */
 export type PatternType =
 ${patternNames.map(name => `  | '${name}'`).join('\n')};
+
+/**
+ * Pattern props map - each pattern type maps to its valid props interface.
+ * This enables full type-checking of pattern configurations.
+ */
+export interface PatternPropsMap {
+${propsInterfaces.join('\n')}
+}
+
+/**
+ * Get the props type for a specific pattern.
+ * 
+ * @example
+ * type TableProps = PatternProps<'entity-table'>;
+ * // { type: 'entity-table'; columns: unknown[]; data?: Record<string, unknown>; ... }
+ */
+export type PatternProps<T extends PatternType> = PatternPropsMap[T];
+
+/**
+ * Type-safe pattern configuration.
+ * The props are validated based on the pattern type.
+ * 
+ * @example
+ * // ✅ Valid
+ * const config: PatternConfig<'entity-table'> = { 
+ *   type: 'entity-table', 
+ *   columns: ['name', 'email'] 
+ * };
+ * 
+ * // ❌ Error: Property 'columns' is missing
+ * const bad: PatternConfig<'entity-table'> = { type: 'entity-table' };
+ */
+export type PatternConfig<T extends PatternType = PatternType> = PatternPropsMap[T];
+
+/**
+ * Discriminated union of all pattern configs.
+ * Use when the pattern type is not known statically.
+ */
+export type AnyPatternConfig = PatternPropsMap[PatternType];
 
 /**
  * Array of all pattern type names (for runtime validation)
