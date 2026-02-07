@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-07T17:33:27.124Z",
+  "exportedAt": "2026-02-07T17:56:09.988Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9433,7 +9433,7 @@
           "types": [
             "function"
           ],
-          "description": "Add handler"
+          "description": "Add handler - can accept data from renderForm"
         },
         "onRemove": {
           "types": [
@@ -9447,25 +9447,14 @@
           ],
           "description": "Reorder handler"
         },
-        "trackAddedInState": {
+        "renderForm": {
           "types": [
-            "boolean"
+            "function"
           ],
-          "description": "Inspection-specific enhancements"
-        },
-        "currentState": {
-          "types": [
-            "string"
-          ],
-          "description": "Current inspection state (used when trackAddedInState is true)"
-        },
-        "showAuditInfo": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show audit metadata (addedInState, addedAt)"
+          "description": "Render custom form for adding items"
         }
-      }
+      },
+      "client": "inspection-system"
     },
     "floating-action-menu": {
       "type": "floating-action-menu",
@@ -21276,8 +21265,7 @@
           "types": [
             "array"
           ],
-          "description": "Array of tiles to render",
-          "required": true
+          "description": "Array of tiles to render (optional when entity is provided)"
         },
         "units": {
           "types": [
@@ -21290,6 +21278,18 @@
             "array"
           ],
           "description": "Array of features (resources, portals, etc.)"
+        },
+        "entity": {
+          "types": [
+            "array"
+          ],
+          "description": "Raw Orbital entity data array. When provided, the component maps entity fields to tiles/units/features internally based on entityRole."
+        },
+        "entityRole": {
+          "types": [
+            "string"
+          ],
+          "description": "How to interpret entity data: - 'tiles': generate tiles from entity data - 'units': generate units from entity data - 'both': generate both tiles and features from entity data"
         },
         "selectedUnitId": {
           "types": [
