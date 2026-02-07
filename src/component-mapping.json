@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-04T10:41:53.453Z",
+  "exportedAt": "2026-02-07T15:32:56.819Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -53,7 +53,7 @@
       "category": "form"
     },
     "form-section": {
-      "component": "Form",
+      "component": "FormSection",
       "importPath": "@/components/organisms/Form",
       "category": "form"
     },
@@ -1418,6 +1418,673 @@
       "importPath": "@/clients/trait-wars/atoms/DamagePopup",
       "category": "game",
       "client": "trait-wars"
+    },
+    "conditional-wrapper": {
+      "component": "ConditionalWrapper",
+      "importPath": "@/components/atoms/ConditionalWrapper",
+      "category": "component"
+    },
+    "law-reference-tooltip": {
+      "component": "LawReferenceTooltip",
+      "importPath": "@/components/atoms/LawReferenceTooltip",
+      "category": "component"
+    },
+    "overlay": {
+      "component": "Overlay",
+      "importPath": "@/components/atoms/Overlay",
+      "category": "container"
+    },
+    "stack": {
+      "component": "Stack",
+      "importPath": "@/components/atoms/Stack",
+      "category": "component"
+    },
+    "text-highlight": {
+      "component": "TextHighlight",
+      "importPath": "@/components/atoms/TextHighlight",
+      "category": "component"
+    },
+    "theme-toggle": {
+      "component": "ThemeToggle",
+      "importPath": "@/components/atoms/ThemeToggle",
+      "category": "component"
+    },
+    "typography": {
+      "component": "Typography",
+      "importPath": "@/components/atoms/Typography",
+      "category": "component"
+    },
+    "control-button": {
+      "component": "ControlButton",
+      "importPath": "@/components/atoms/ControlButton",
+      "category": "component"
+    },
+    "health-bar": {
+      "component": "HealthBar",
+      "importPath": "@/components/atoms/HealthBar",
+      "category": "component"
+    },
+    "score-display": {
+      "component": "ScoreDisplay",
+      "importPath": "@/components/atoms/ScoreDisplay",
+      "category": "component"
+    },
+    "sprite": {
+      "component": "Sprite",
+      "importPath": "@/components/atoms/Sprite",
+      "category": "game"
+    },
+    "flex": {
+      "component": "Flex",
+      "importPath": "@/components/molecules/Flex",
+      "category": "component"
+    },
+    "floating-action-button": {
+      "component": "FloatingActionButton",
+      "importPath": "@/components/molecules/FloatingActionButton",
+      "category": "component"
+    },
+    "form-field": {
+      "component": "FormField",
+      "importPath": "@/components/molecules/FormField",
+      "category": "form"
+    },
+    "form-section-header": {
+      "component": "FormSectionHeader",
+      "importPath": "@/components/molecules/FormSectionHeader",
+      "category": "form"
+    },
+    "input-group": {
+      "component": "InputGroup",
+      "importPath": "@/components/molecules/InputGroup",
+      "category": "form"
+    },
+    "relation-select": {
+      "component": "RelationSelect",
+      "importPath": "@/components/molecules/RelationSelect",
+      "category": "form"
+    },
+    "side-panel": {
+      "component": "SidePanel",
+      "importPath": "@/components/molecules/SidePanel",
+      "category": "component"
+    },
+    "violation-alert": {
+      "component": "ViolationAlert",
+      "importPath": "@/components/molecules/ViolationAlert",
+      "category": "state"
+    },
+    "action-buttons": {
+      "component": "ActionButtons",
+      "importPath": "@/components/molecules/ActionButtons",
+      "category": "component"
+    },
+    "d-pad": {
+      "component": "DPad",
+      "importPath": "@/components/molecules/DPad",
+      "category": "component"
+    },
+    "stat-badge": {
+      "component": "StatBadge",
+      "importPath": "@/components/molecules/StatBadge",
+      "category": "display"
+    },
+    "button-pattern": {
+      "component": "ButtonPattern",
+      "importPath": "@/components/organisms/ButtonPattern",
+      "category": "display"
+    },
+    "custom-pattern": {
+      "component": "CustomPattern",
+      "importPath": "@/components/organisms/CustomPattern",
+      "category": "display"
+    },
+    "drawer-slot": {
+      "component": "DrawerSlot",
+      "importPath": "@/components/organisms/DrawerSlot",
+      "category": "layout"
+    },
+    "header": {
+      "component": "Header",
+      "importPath": "@/components/organisms/Header",
+      "category": "header"
+    },
+    "layout-pattern": {
+      "component": "LayoutPattern",
+      "importPath": "@/components/organisms/LayoutPattern",
+      "category": "layout"
+    },
+    "modal-slot": {
+      "component": "ModalSlot",
+      "importPath": "@/components/organisms/ModalSlot",
+      "category": "layout"
+    },
+    "navigation": {
+      "component": "Navigation",
+      "importPath": "@/components/organisms/Navigation",
+      "category": "navigation"
+    },
+    "orbital-visualization": {
+      "component": "OrbitalVisualization",
+      "importPath": "@/components/organisms/OrbitalVisualization",
+      "category": "display"
+    },
+    "section": {
+      "component": "Section",
+      "importPath": "@/components/organisms/Section",
+      "category": "display"
+    },
+    "sidebar": {
+      "component": "Sidebar",
+      "importPath": "@/components/organisms/Sidebar",
+      "category": "navigation"
+    },
+    "split": {
+      "component": "Split",
+      "importPath": "@/components/organisms/Split",
+      "category": "layout"
+    },
+    "table": {
+      "component": "Table",
+      "importPath": "@/components/organisms/Table",
+      "category": "display"
+    },
+    "toast-slot": {
+      "component": "ToastSlot",
+      "importPath": "@/components/organisms/ToastSlot",
+      "category": "layout"
+    },
+    "u-i-slot-renderer": {
+      "component": "UISlotRenderer",
+      "importPath": "@/components/organisms/UISlotRenderer",
+      "category": "layout"
+    },
+    "split-pane": {
+      "component": "SplitPane",
+      "importPath": "@/components/organisms/SplitPane",
+      "category": "layout"
+    },
+    "tabbed-container": {
+      "component": "TabbedContainer",
+      "importPath": "@/components/organisms/TabbedContainer",
+      "category": "navigation"
+    },
+    "auth-layout": {
+      "component": "AuthLayout",
+      "importPath": "@/components/templates/AuthLayout",
+      "category": "template"
+    },
+    "counter-template": {
+      "component": "CounterTemplate",
+      "importPath": "@/components/templates/CounterTemplate",
+      "category": "template"
+    },
+    "crud-template": {
+      "component": "CrudTemplate",
+      "importPath": "@/components/templates/CrudTemplate",
+      "category": "template"
+    },
+    "dashboard-layout": {
+      "component": "DashboardLayout",
+      "importPath": "@/components/templates/DashboardLayout",
+      "category": "template"
+    },
+    "form-template": {
+      "component": "FormTemplate",
+      "importPath": "@/components/templates/FormTemplate",
+      "category": "template"
+    },
+    "game-template": {
+      "component": "GameTemplate",
+      "importPath": "@/components/templates/GameTemplate",
+      "category": "template"
+    },
+    "generic-app-template": {
+      "component": "GenericAppTemplate",
+      "importPath": "@/components/templates/GenericAppTemplate",
+      "category": "template"
+    },
+    "list-template": {
+      "component": "ListTemplate",
+      "importPath": "@/components/templates/ListTemplate",
+      "category": "template"
+    },
+    "settings-template": {
+      "component": "SettingsTemplate",
+      "importPath": "@/components/templates/SettingsTemplate",
+      "category": "template"
+    },
+    "a-i-analysis-panel": {
+      "component": "AIAnalysisPanel",
+      "importPath": "@/clients/blaz-kelemnc/organisms/AIAnalysisPanel",
+      "category": "display",
+      "client": "blaz-kelemnc"
+    },
+    "credits-template": {
+      "component": "CreditsTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/CreditsTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "fitness-template": {
+      "component": "FitnessTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/FitnessTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "meal-plan-detail-template": {
+      "component": "MealPlanDetailTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/MealPlanDetailTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "meal-plans-template": {
+      "component": "MealPlansTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/MealPlansTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "progress-template": {
+      "component": "ProgressTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/ProgressTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "schedule-template": {
+      "component": "ScheduleTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/ScheduleTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "session-detail-template": {
+      "component": "SessionDetailTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/SessionDetailTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "sessions-template": {
+      "component": "SessionsTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/SessionsTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "trainee-detail-template": {
+      "component": "TraineeDetailTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/TraineeDetailTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "trainees-template": {
+      "component": "TraineesTemplate",
+      "importPath": "@/clients/blaz-kelemnc/templates/TraineesTemplate",
+      "category": "template",
+      "client": "blaz-kelemnc"
+    },
+    "studio-home-electron-template": {
+      "component": "StudioHomeElectronTemplate",
+      "importPath": "@/clients/builder/templates/StudioHomeElectronTemplate",
+      "category": "template",
+      "client": "builder"
+    },
+    "companies-template": {
+      "component": "CompaniesTemplate",
+      "importPath": "@/clients/inspection-system/templates/CompaniesTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "inspection-form-demo-template": {
+      "component": "InspectionFormDemoTemplate",
+      "importPath": "@/clients/inspection-system/templates/InspectionFormDemoTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "inspection-process-template": {
+      "component": "InspectionProcessTemplate",
+      "importPath": "@/clients/inspection-system/templates/InspectionProcessTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "inspection-wizard-template": {
+      "component": "InspectionWizardTemplate",
+      "importPath": "@/clients/inspection-system/templates/InspectionWizardTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "inspections-template": {
+      "component": "InspectionsTemplate",
+      "importPath": "@/clients/inspection-system/templates/InspectionsTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "inspectors-template": {
+      "component": "InspectorsTemplate",
+      "importPath": "@/clients/inspection-system/templates/InspectorsTemplate",
+      "category": "template",
+      "client": "inspection-system"
+    },
+    "concept-detail-template": {
+      "component": "ConceptDetailTemplate",
+      "importPath": "@/clients/kflow/templates/ConceptDetailTemplate",
+      "category": "template",
+      "client": "kflow"
+    },
+    "knowledge-graph-template": {
+      "component": "KnowledgeGraphTemplate",
+      "importPath": "@/clients/kflow/templates/KnowledgeGraphTemplate",
+      "category": "template",
+      "client": "kflow"
+    },
+    "lesson-template": {
+      "component": "LessonTemplate",
+      "importPath": "@/clients/kflow/templates/LessonTemplate",
+      "category": "template",
+      "client": "kflow"
+    },
+    "character-sprite": {
+      "component": "CharacterSprite",
+      "importPath": "@/clients/trait-wars/atoms/CharacterSprite",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "cost-display": {
+      "component": "CostDisplay",
+      "importPath": "@/clients/trait-wars/atoms/CostDisplay",
+      "category": "component",
+      "client": "trait-wars"
+    },
+    "game-bar": {
+      "component": "GameBar",
+      "importPath": "@/clients/trait-wars/atoms/GameBar",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "hex-cell": {
+      "component": "HexCell",
+      "importPath": "@/clients/trait-wars/atoms/HexCell",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "map-node": {
+      "component": "MapNode",
+      "importPath": "@/clients/trait-wars/atoms/MapNode",
+      "category": "component",
+      "client": "trait-wars"
+    },
+    "pixel-tile-sprite": {
+      "component": "PixelTileSprite",
+      "importPath": "@/clients/trait-wars/atoms/PixelTileSprite",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "tile-sprite": {
+      "component": "TileSprite",
+      "importPath": "@/clients/trait-wars/atoms/TileSprite",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "trait-icon": {
+      "component": "TraitIcon",
+      "importPath": "@/clients/trait-wars/atoms/TraitIcon",
+      "category": "component",
+      "client": "trait-wars"
+    },
+    "action-menu": {
+      "component": "ActionMenu",
+      "importPath": "@/clients/trait-wars/molecules/ActionMenu",
+      "category": "component",
+      "client": "trait-wars"
+    },
+    "building-detail-panel": {
+      "component": "BuildingDetailPanel",
+      "importPath": "@/clients/trait-wars/molecules/BuildingDetailPanel",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "building-slot": {
+      "component": "BuildingSlot",
+      "importPath": "@/clients/trait-wars/molecules/BuildingSlot",
+      "category": "layout",
+      "client": "trait-wars"
+    },
+    "garrison-unit-card": {
+      "component": "GarrisonUnitCard",
+      "importPath": "@/clients/trait-wars/molecules/GarrisonUnitCard",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "hero-detail-panel": {
+      "component": "HeroDetailPanel",
+      "importPath": "@/clients/trait-wars/molecules/HeroDetailPanel",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "level-up-modal": {
+      "component": "LevelUpModal",
+      "importPath": "@/clients/trait-wars/molecules/LevelUpModal",
+      "category": "container",
+      "client": "trait-wars"
+    },
+    "resource-bar": {
+      "component": "ResourceBar",
+      "importPath": "@/clients/trait-wars/molecules/ResourceBar",
+      "category": "component",
+      "client": "trait-wars"
+    },
+    "unit-card": {
+      "component": "UnitCard",
+      "importPath": "@/clients/trait-wars/molecules/UnitCard",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "unit-recruit-card": {
+      "component": "UnitRecruitCard",
+      "importPath": "@/clients/trait-wars/molecules/UnitRecruitCard",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "building-grid": {
+      "component": "BuildingGrid",
+      "importPath": "@/clients/trait-wars/organisms/BuildingGrid",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "game-board-with-traits": {
+      "component": "GameBoardWithTraits",
+      "importPath": "@/clients/trait-wars/organisms/GameBoardWithTraits",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-tile": {
+      "component": "GameTile",
+      "importPath": "@/clients/trait-wars/organisms/GameTile",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "hex-grid": {
+      "component": "HexGrid",
+      "importPath": "@/clients/trait-wars/organisms/HexGrid",
+      "category": "display",
+      "client": "trait-wars"
+    },
+    "isometric-game-canvas": {
+      "component": "IsometricGameCanvas",
+      "importPath": "@/clients/trait-wars/organisms/IsometricGameCanvas",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "army-builder-template": {
+      "component": "ArmyBuilderTemplate",
+      "importPath": "@/clients/trait-wars/templates/ArmyBuilderTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "battlefield-template": {
+      "component": "BattlefieldTemplate",
+      "importPath": "@/clients/trait-wars/templates/BattlefieldTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "canvas-battle-template": {
+      "component": "CanvasBattleTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasBattleTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "canvas-castle-template": {
+      "component": "CanvasCastleTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasCastleTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "canvas-world-map-template": {
+      "component": "CanvasWorldMapTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasWorldMapTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "castle-template": {
+      "component": "CastleTemplate",
+      "importPath": "@/clients/trait-wars/templates/CastleTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "hero-profile-template": {
+      "component": "HeroProfileTemplate",
+      "importPath": "@/clients/trait-wars/templates/HeroProfileTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "hex-trait-wars-game": {
+      "component": "HexTraitWarsGame",
+      "importPath": "@/clients/trait-wars/templates/HexTraitWarsGame",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "ho-m-m3-castle-template": {
+      "component": "HoMM3CastleTemplate",
+      "importPath": "@/clients/trait-wars/templates/HoMM3CastleTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "ho-m-m3-world-map": {
+      "component": "HoMM3WorldMap",
+      "importPath": "@/clients/trait-wars/templates/HoMM3WorldMap",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "scenario-selector": {
+      "component": "ScenarioSelector",
+      "importPath": "@/clients/trait-wars/templates/ScenarioSelector",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "trait-wars-game": {
+      "component": "TraitWarsGame",
+      "importPath": "@/clients/trait-wars/templates/TraitWarsGame",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "world-map-template": {
+      "component": "WorldMapTemplate",
+      "importPath": "@/clients/trait-wars/templates/WorldMapTemplate",
+      "category": "template",
+      "client": "trait-wars"
+    },
+    "admin-dashboard-template": {
+      "component": "AdminDashboardTemplate",
+      "importPath": "@/clients/winning-11/templates/AdminDashboardTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "assessment-template": {
+      "component": "AssessmentTemplate",
+      "importPath": "@/clients/winning-11/templates/AssessmentTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "connections-template": {
+      "component": "ConnectionsTemplate",
+      "importPath": "@/clients/winning-11/templates/ConnectionsTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "graph-intelligence-template": {
+      "component": "GraphIntelligenceTemplate",
+      "importPath": "@/clients/winning-11/templates/GraphIntelligenceTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "invites-template": {
+      "component": "InvitesTemplate",
+      "importPath": "@/clients/winning-11/templates/InvitesTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "project-detail-template": {
+      "component": "ProjectDetailTemplate",
+      "importPath": "@/clients/winning-11/templates/ProjectDetailTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "projects-template": {
+      "component": "ProjectsTemplate",
+      "importPath": "@/clients/winning-11/templates/ProjectsTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "relationship-garden-template": {
+      "component": "RelationshipGardenTemplate",
+      "importPath": "@/clients/winning-11/templates/RelationshipGardenTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "seed-network-template": {
+      "component": "SeedNetworkTemplate",
+      "importPath": "@/clients/winning-11/templates/SeedNetworkTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "suggestions-template": {
+      "component": "SuggestionsTemplate",
+      "importPath": "@/clients/winning-11/templates/SuggestionsTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "team-detail-template": {
+      "component": "TeamDetailTemplate",
+      "importPath": "@/clients/winning-11/templates/TeamDetailTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "team-members-template": {
+      "component": "TeamMembersTemplate",
+      "importPath": "@/clients/winning-11/templates/TeamMembersTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "teams-template": {
+      "component": "TeamsTemplate",
+      "importPath": "@/clients/winning-11/templates/TeamsTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "trust-intelligence-template": {
+      "component": "TrustIntelligenceTemplate",
+      "importPath": "@/clients/winning-11/templates/TrustIntelligenceTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "user-profile-template": {
+      "component": "UserProfileTemplate",
+      "importPath": "@/clients/winning-11/templates/UserProfileTemplate",
+      "category": "template",
+      "client": "winning-11"
+    },
+    "users-template": {
+      "component": "UsersTemplate",
+      "importPath": "@/clients/winning-11/templates/UsersTemplate",
+      "category": "template",
+      "client": "winning-11"
     }
   }
 }
