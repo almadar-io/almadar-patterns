@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-07T15:32:56.819Z",
+  "exportedAt": "2026-02-07T17:33:27.124Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9433,7 +9433,7 @@
           "types": [
             "function"
           ],
-          "description": "Add handler - can accept data from renderForm"
+          "description": "Add handler"
         },
         "onRemove": {
           "types": [
@@ -9447,14 +9447,25 @@
           ],
           "description": "Reorder handler"
         },
-        "renderForm": {
+        "trackAddedInState": {
           "types": [
-            "function"
+            "boolean"
           ],
-          "description": "Render custom form for adding items"
+          "description": "Inspection-specific enhancements"
+        },
+        "currentState": {
+          "types": [
+            "string"
+          ],
+          "description": "Current inspection state (used when trackAddedInState is true)"
+        },
+        "showAuditInfo": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show audit metadata (addedInState, addedAt)"
         }
-      },
-      "client": "inspection-system"
+      }
     },
     "floating-action-menu": {
       "type": "floating-action-menu",
