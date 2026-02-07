@@ -1,21 +1,35 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-04T10:41:53.453Z",
+  "exportedAt": "2026-02-07T15:32:56.819Z",
   "contracts": {
     "form": {
       "emits": [
         {
-          "event": "SAVE",
-          "trigger": "submit",
+          "event": "GLOBAL_VARIABLE_SET",
+          "trigger": "action",
           "payload": {
-            "type": "FormData"
+            "type": "object"
           }
         },
         {
-          "event": "CANCEL",
-          "trigger": "click",
+          "event": "VIOLATION_DETECTED",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "FIELD_CHANGED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -46,7 +60,7 @@
         "SAVE",
         "CANCEL"
       ],
-      "entityAware": true
+      "entityAware": false
     },
     "form-fields": {
       "emits": [
@@ -68,23 +82,15 @@
     "form-actions": {
       "emits": [
         {
-          "event": "SAVE",
-          "trigger": "click",
+          "event": "DISPATCH",
+          "trigger": "action",
           "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "CANCEL",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
+      "entityAware": true,
       "configDriven": true
     },
     "entity-table": {
@@ -93,33 +99,15 @@
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
+            "type": "object"
+          }
         },
         {
-          "event": "SELECT",
-          "trigger": "select",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        },
-        {
-          "event": "EDIT",
+          "event": "SEARCH",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        },
-        {
-          "event": "DELETE",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -194,6 +182,7 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "title-only": {
@@ -223,44 +212,42 @@
       "emits": [
         {
           "event": "FILTER",
-          "trigger": "change",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "field": "string",
-              "value": "string | null"
-            }
+            "type": "object"
           }
         },
         {
           "event": "CLEAR_FILTERS",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
       "requires": [],
+      "entityAware": true,
       "configDriven": true
     },
     "search-input": {
       "emits": [
         {
           "event": "SEARCH",
-          "trigger": "change",
+          "trigger": "action",
           "payload": {
-            "type": "SearchQuery"
+            "type": "object"
           }
         },
         {
           "event": "CLEAR_SEARCH",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": true
     },
     "empty-state": {
       "emits": [
@@ -274,11 +261,13 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "loading-state": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "error-state": {
       "emits": [
@@ -292,6 +281,7 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "notification": {
@@ -313,7 +303,8 @@
           "optional": true
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "tabs": {
       "emits": [
@@ -329,7 +320,8 @@
           "optional": true
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "tab-bar": {
       "emits": [
@@ -349,7 +341,8 @@
     },
     "breadcrumb": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "wizard-container": {
       "emits": [
@@ -387,7 +380,8 @@
       ],
       "requires": [
         "WIZARD_COMPLETE"
-      ]
+      ],
+      "entityAware": true
     },
     "wizard-progress": {
       "emits": [
@@ -403,7 +397,8 @@
           "optional": true
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "wizard-navigation": {
       "emits": [
@@ -430,6 +425,7 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "pagination": {
@@ -445,7 +441,8 @@
           }
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "modal": {
       "emits": [
@@ -459,7 +456,8 @@
       ],
       "requires": [
         "CLOSE"
-      ]
+      ],
+      "entityAware": false
     },
     "modal-container": {
       "emits": [
@@ -485,7 +483,8 @@
       ],
       "requires": [
         "CLOSE"
-      ]
+      ],
+      "entityAware": false
     },
     "drawer-container": {
       "emits": [
@@ -519,7 +518,8 @@
       "requires": [
         "CONFIRM",
         "CANCEL"
-      ]
+      ],
+      "entityAware": false
     },
     "split-layout": {
       "emits": [],
@@ -536,11 +536,12 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "dashboard-grid": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "tabbed-layout": {
       "emits": [],
@@ -548,7 +549,8 @@
     },
     "stats": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": true
     },
     "card": {
       "emits": [
@@ -561,7 +563,8 @@
           "optional": true
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "game-canvas": {
       "emits": [
@@ -599,15 +602,18 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "game-hud": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "game-controls": {
       "emits": [],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "game-menu": {
@@ -638,37 +644,23 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "game-pause-overlay": {
       "emits": [
         {
           "event": "RESUME",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
-        },
-        {
-          "event": "RESTART",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "QUIT",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
         }
       ],
       "requires": [
         "RESUME"
-      ]
+      ],
+      "entityAware": false
     },
     "game-over-screen": {
       "emits": [
@@ -690,7 +682,8 @@
       ],
       "requires": [
         "RESTART"
-      ]
+      ],
+      "entityAware": false
     },
     "level-select": {
       "emits": [
@@ -702,11 +695,13 @@
           }
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": true
     },
     "tilemap-renderer": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "inventory-panel": {
       "emits": [
@@ -728,7 +723,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "dialogue-box": {
       "emits": [
@@ -748,7 +743,8 @@
           "optional": true
         }
       ],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "card-hand": {
       "emits": [
@@ -789,7 +785,8 @@
     },
     "turn-indicator": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "match3-grid": {
       "emits": [
@@ -833,6 +830,7 @@
         }
       ],
       "requires": [],
+      "entityAware": false,
       "configDriven": true
     },
     "collision-detector": {
@@ -860,12 +858,13 @@
         }
       ],
       "requires": [],
-      "entityAware": true,
+      "entityAware": false,
       "configDriven": true
     },
     "runtime-debugger": {
       "emits": [],
-      "requires": []
+      "requires": [],
+      "entityAware": false
     },
     "game-debug-panel": {
       "emits": [],
@@ -880,14 +879,9 @@
       "emits": [
         {
           "event": "TRUST_CLICK",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "healthStatus": "string",
-              "growthPoints": "number",
-              "entity": "string"
-            }
+            "type": "object"
           },
           "optional": true
         }
@@ -899,14 +893,9 @@
       "emits": [
         {
           "event": "GROWTH_CLICK",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "visualMetaphor": "string",
-              "growthPoints": "number",
-              "entity": "string"
-            }
+            "type": "object"
           },
           "optional": true
         }
@@ -928,37 +917,24 @@
       "emits": [
         {
           "event": "SELECT",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "PlantCardData",
-              "entity": "string"
-            }
+            "type": "object"
           }
         },
         {
           "event": "WATER",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "PlantCardData",
-              "entity": "string"
-            }
+            "type": "object"
           }
         },
         {
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "PlantCardData",
-              "entity": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -967,25 +943,18 @@
     "harvest-card": {
       "emits": [
         {
-          "event": "SELECT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "row": "HarvestEntity",
-              "entity": "string"
-            }
-          }
-        },
-        {
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "HarvestEntity",
-              "entity": "string"
-            }
+            "type": "object"
+          },
+          "optional": true
+        },
+        {
+          "event": "SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           },
           "optional": true
         }
@@ -997,15 +966,9 @@
       "emits": [
         {
           "event": "WEATHER_CLICK",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "condition": "string",
-              "forecast": "string",
-              "trend": "string",
-              "trendValue": "number"
-            }
+            "type": "object"
           },
           "optional": true
         }
@@ -1017,48 +980,31 @@
       "emits": [
         {
           "event": "SELECT",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "GardenItem",
-              "entity": "string"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         },
         {
           "event": "WATER",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "GardenItem",
-              "entity": "string"
-            }
+            "type": "object"
           }
         },
         {
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "GardenItem",
-              "entity": "string"
-            }
-          },
-          "optional": true
-        },
-        {
-          "event": "CREATE",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "entity": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [
@@ -1609,24 +1555,9 @@
       "emits": [
         {
           "event": "CARD_SELECTED",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "optionId": "string",
-              "option": "object"
-            }
-          }
-        },
-        {
-          "event": "CHANGE",
-          "trigger": "change",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "selectedId": "string",
-              "selectedIds": "array"
-            }
+            "type": "object"
           }
         }
       ],
@@ -1659,31 +1590,11 @@
     "conditional-field": {
       "emits": [
         {
-          "event": "CHANGE",
-          "trigger": "change",
+          "event": "FIELD_CHANGE",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "field": "string",
-              "value": "unknown"
-            }
+            "type": "object"
           }
-        },
-        {
-          "event": "SHOW",
-          "trigger": "visibility",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "HIDE",
-          "trigger": "visibility",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
         }
       ],
       "requires": [],
@@ -1692,37 +1603,18 @@
     "document-preview": {
       "emits": [
         {
-          "event": "OPEN",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "url": "string",
-              "type": "string"
-            }
-          }
-        },
-        {
           "event": "DOWNLOAD",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "url": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         },
         {
           "event": "PRINT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "url": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -1732,31 +1624,23 @@
       "emits": [
         {
           "event": "SEARCH",
-          "trigger": "input",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "query": "string",
-              "entityType": "string"
-            }
-          }
-        },
-        {
-          "event": "SELECT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "entity": "object",
-              "entityType": "string"
-            }
-          }
-        },
-        {
-          "event": "CLEAR",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "ENTITY_SELECTED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE_NEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -1766,26 +1650,11 @@
     "inspection-timeline": {
       "emits": [
         {
-          "event": "SELECT_EVENT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "eventId": "string",
-              "event": "object"
-            }
-          }
-        },
-        {
-          "event": "VIEW_DETAILS",
+          "event": "TIMELINE_ITEM_CLICK",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "eventId": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -1794,85 +1663,40 @@
     "objection-recorder": {
       "emits": [
         {
-          "event": "RECORD",
+          "event": "OBJECTION_SUBMITTED",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
-        },
-        {
-          "event": "SAVE",
-          "trigger": "submit",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "text": "string",
-              "audioUrl": "string"
-            }
-          }
-        },
-        {
-          "event": "CANCEL",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "PLAY",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "objectionId": "string"
-            }
-          },
-          "optional": true
         }
       ],
       "requires": [
         "SAVE",
         "CANCEL"
       ],
-      "entityAware": true
+      "entityAware": false
     },
     "participant-list": {
       "emits": [
         {
-          "event": "ADD",
+          "event": "ADD_PARTICIPANT",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
-          "event": "REMOVE",
+          "event": "REMOVE_PARTICIPANT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "participantId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "EDIT",
+          "event": "EDIT_PARTICIPANT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "participantId": "string"
-            }
-          }
-        },
-        {
-          "event": "SELECT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "participant": "object"
-            }
+            "type": "object"
           }
         }
       ],
@@ -1882,40 +1706,17 @@
     "photo-attachment": {
       "emits": [
         {
-          "event": "CAPTURE",
+          "event": "PHOTO_CAPTURED",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
-          "event": "UPLOAD",
+          "event": "PHOTO_REMOVED",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "file": "File"
-            }
-          }
-        },
-        {
-          "event": "DELETE",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "photoId": "string"
-            }
-          }
-        },
-        {
-          "event": "VIEW",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "photoUrl": "string"
-            }
+            "type": "object"
           }
         }
       ],
@@ -1954,47 +1755,11 @@
     "rule-check-item": {
       "emits": [
         {
-          "event": "CHECK",
-          "trigger": "change",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "ruleId": "string",
-              "checked": "boolean"
-            }
-          }
-        },
-        {
-          "event": "UNCHECK",
-          "trigger": "change",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "ruleId": "string"
-            }
-          }
-        },
-        {
-          "event": "ADD_NOTE",
+          "event": "RULE_CHECKED",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "ruleId": "string",
-              "note": "string"
-            }
+            "type": "object"
           }
-        },
-        {
-          "event": "VIEW_LAW",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "lawReference": "string"
-            }
-          },
-          "optional": true
         }
       ],
       "requires": [],
@@ -2003,31 +1768,17 @@
     "repeatable-form-section": {
       "emits": [
         {
-          "event": "ADD_ITEM",
+          "event": "SECTION_ADDED",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
-          "event": "REMOVE_ITEM",
+          "event": "SECTION_REMOVED",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "index": "number"
-            }
-          }
-        },
-        {
-          "event": "EDIT_ITEM",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "index": "number",
-              "item": "object"
-            }
+            "type": "object"
           }
         }
       ],
@@ -2037,28 +1788,10 @@
     "floating-action-menu": {
       "emits": [
         {
-          "event": "ACTION_CLICK",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "actionId": "string",
-              "action": "object"
-            }
-          }
-        },
-        {
-          "event": "OPEN",
+          "event": "QUICK_ACTION",
           "trigger": "action",
           "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "CLOSE",
-          "trigger": "action",
-          "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
@@ -2069,34 +1802,10 @@
     "signature-capture": {
       "emits": [
         {
-          "event": "SIGN",
-          "trigger": "draw",
-          "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "CLEAR",
+          "event": "SIGNATURE_CAPTURED",
           "trigger": "action",
           "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "SAVE",
-          "trigger": "submit",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "signatureData": "string"
-            }
-          }
-        },
-        {
-          "event": "CANCEL",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
@@ -2374,21 +2083,14 @@
           "event": "CREATE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "entity": "string"
-            }
+            "type": "object"
           }
         },
         {
           "event": "ADJUST",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "row": "CreditData",
-              "entity": "string"
-            }
+            "type": "object"
           }
         }
       ],
@@ -2398,13 +2100,17 @@
     "credit-expiration-alert": {
       "emits": [
         {
-          "event": "RENEW",
+          "event": "CREATE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "entity": "string"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "RENEW_CREDITS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2414,40 +2120,30 @@
     "exercise-video-link": {
       "emits": [
         {
-          "event": "PLAY",
-          "trigger": "click",
+          "event": "PLAY_VIDEO",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "videoUrl": "string"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": false
+      "entityAware": true
     },
     "shareable-link-generator": {
       "emits": [
         {
-          "event": "GENERATE",
+          "event": "LINK_GENERATED",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "entityId": "string",
-              "entityType": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "COPY",
+          "event": "LINK_COPIED",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "link": "string"
-            }
+            "type": "object"
           }
         }
       ],
@@ -2457,23 +2153,17 @@
     "body-measurement-input": {
       "emits": [
         {
-          "event": "CHANGE",
-          "trigger": "change",
+          "event": "SAVE",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "measurements": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "SAVE",
-          "trigger": "submit",
+          "event": "CANCEL",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "measurements": "object"
-            }
+            "type": "object"
           }
         }
       ],
@@ -2486,20 +2176,16 @@
       "emits": [
         {
           "event": "SAVE",
-          "trigger": "submit",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "date": "string",
-              "data": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "CANCEL",
+          "event": "ADD_WELLNESS",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
@@ -2513,23 +2199,16 @@
       "emits": [
         {
           "event": "VIEW",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
-          "event": "JOIN",
+          "event": "MANAGE_ATTENDEES",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          }
-        },
-        {
-          "event": "LEAVE",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         }
       ],
@@ -2539,37 +2218,31 @@
     "lift-tracker": {
       "emits": [
         {
-          "event": "ADD_SET",
+          "event": "LOG_LIFT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "exercise": "string",
-              "set": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "UPDATE_SET",
-          "trigger": "change",
+          "event": "VIEW",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "exercise": "string",
-              "setIndex": "number",
-              "set": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "DELETE_SET",
+          "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "exercise": "string",
-              "setIndex": "number"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2580,23 +2253,30 @@
       "emits": [
         {
           "event": "VIEW",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
           "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
-          "event": "SHARE",
+          "event": "DELETE",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
+          }
+        },
+        {
+          "event": "NOTIFY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2620,25 +2300,10 @@
     "progress-chart": {
       "emits": [
         {
-          "event": "SELECT_POINT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "date": "string",
-              "value": "number"
-            }
-          },
-          "optional": true
-        },
-        {
-          "event": "CHANGE_RANGE",
+          "event": "DATE_RANGE_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "range": "string"
-            }
+            "type": "object"
           }
         }
       ],
@@ -2649,19 +2314,37 @@
       "emits": [
         {
           "event": "VIEW",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
-          "event": "PLAY_VIDEO",
+          "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "videoUrl": "string"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SAVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "UPDATE_STATUS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2672,23 +2355,23 @@
       "emits": [
         {
           "event": "VIEW",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
+          }
+        },
+        {
+          "event": "MESSAGE_TRAINEE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         },
         {
           "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          }
-        },
-        {
-          "event": "MESSAGE",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         }
       ],
@@ -2699,23 +2382,37 @@
       "emits": [
         {
           "event": "VIEW",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
           "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
           "event": "START",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2753,23 +2450,9 @@
       "emits": [
         {
           "event": "SAVE",
-          "trigger": "submit",
-          "payload": {
-            "type": "FormData"
-          }
-        },
-        {
-          "event": "CANCEL",
           "trigger": "action",
           "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "SAVE_DRAFT",
-          "trigger": "action",
-          "payload": {
-            "type": "FormData"
+            "type": "object"
           }
         }
       ],
@@ -2782,31 +2465,52 @@
     "session-scheduler": {
       "emits": [
         {
-          "event": "SELECT_SLOT",
-          "trigger": "click",
+          "event": "CREATE",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "slot": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "BOOK",
+          "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "slot": "object",
-              "traineeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "CANCEL_SESSION",
+          "event": "EDIT",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "START",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_DAY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2817,22 +2521,23 @@
       "emits": [
         {
           "event": "SELECT_TRAINEE",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "traineeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "CHANGE_METRIC",
+          "event": "METRIC_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "metric": "string"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "DATE_RANGE_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2842,35 +2547,31 @@
     "weekly-calendar": {
       "emits": [
         {
-          "event": "SELECT_SESSION",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          }
-        },
-        {
-          "event": "SELECT_SLOT",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "date": "string",
-              "time": "string"
-            }
-          }
-        },
-        {
-          "event": "PREV_WEEK",
+          "event": "WEEK_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
-          "event": "NEXT_WEEK",
+          "event": "DAY_SELECTED",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "SLOT_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -2897,7 +2598,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "graph-legend": {
       "emits": [
@@ -2967,7 +2668,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "mind-map-header": {
       "emits": [
@@ -3000,78 +2701,96 @@
       "emits": [
         {
           "event": "SELECT_NODE",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string",
-              "node": "object"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT_NODE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         },
         {
           "event": "EXPAND_NODE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "COLLAPSE_NODE",
+          "event": "AI_GENERATE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "note-content": {
       "emits": [
         {
-          "event": "COPY",
+          "event": "EDIT_NOTE_CONTENT",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "SAVE_NOTE_CONTENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "note-list-item": {
       "emits": [
         {
-          "event": "SELECT",
-          "trigger": "click",
+          "event": "SELECT_NOTE",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
-          "event": "EDIT",
+          "event": "DELETE_NOTE",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
           }
         },
         {
-          "event": "DELETE",
+          "event": "EDIT_NOTE",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
+            "type": "object"
+          }
+        },
+        {
+          "event": "EXPAND_NOTE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_CHILD_NOTE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "streaming-display": {
       "emits": [
@@ -3103,19 +2822,15 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "quiz-block": {
       "emits": [
         {
-          "event": "ANSWER",
-          "trigger": "submit",
+          "event": "REVEAL_QUIZ",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "answer": "string",
-              "correct": "boolean"
-            }
+            "type": "object"
           }
         }
       ],
@@ -3126,74 +2841,65 @@
       "emits": [
         {
           "event": "SAVE_REFLECTION",
-          "trigger": "submit",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "content": "string"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [
         "SAVE"
       ],
-      "entityAware": true
+      "entityAware": false
     },
     "activation-block": {
       "emits": [
         {
-          "event": "COMPLETE_ACTIVATION",
+          "event": "SAVE_ACTIVATION",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "SKIP_ACTIVATION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "bloom-quiz-block": {
       "emits": [
         {
-          "event": "ANSWER",
-          "trigger": "submit",
+          "event": "ANSWER_BLOOM",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "answer": "string",
-              "bloomLevel": "string",
-              "correct": "boolean"
-            }
+            "type": "object"
+          }
+        },
+        {
+          "event": "REVEAL_ANSWER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "code-block": {
       "emits": [
         {
-          "event": "COPY",
+          "event": "COPY_CODE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "code": "string"
-            }
+            "type": "object"
           }
-        },
-        {
-          "event": "RUN",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "code": "string",
-              "language": "string"
-            }
-          },
-          "optional": true
         }
       ],
       "requires": [],
@@ -3314,7 +3020,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "flash-card": {
       "emits": [
@@ -3335,39 +3041,18 @@
     "force-directed-graph": {
       "emits": [
         {
-          "event": "NODE_CLICK",
-          "trigger": "click",
+          "event": "SELECT_NODE",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string",
-              "node": "object"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "NODE_HOVER",
-          "trigger": "hover",
+          "event": "HOVER_NODE",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
-          },
-          "optional": true
-        },
-        {
-          "event": "EDGE_CLICK",
-          "trigger": "click",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "edgeId": "string",
-              "source": "string",
-              "target": "string"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -3376,54 +3061,31 @@
     "mind-map-canvas": {
       "emits": [
         {
-          "event": "NODE_SELECT",
-          "trigger": "click",
+          "event": "MINDMAP_ZOOM",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "NODE_EXPAND",
+          "event": "MINDMAP_PAN",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "NODE_COLLAPSE",
+          "event": "MINDMAP_FOCUS",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "nodeId": "string"
-            }
+            "type": "object"
           }
         },
         {
-          "event": "ZOOM_CHANGE",
+          "event": "MINDMAP_BLUR",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "zoomLevel": "number"
-            }
-          }
-        },
-        {
-          "event": "PAN_CHANGE",
-          "trigger": "action",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "x": "number",
-              "y": "number"
-            }
+            "type": "object"
           }
         }
       ],
@@ -3465,7 +3127,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "segment-renderer": {
       "emits": [
@@ -3517,28 +3179,15 @@
     "editable-json-viewer": {
       "emits": [
         {
-          "event": "CHANGE",
-          "trigger": "change",
-          "payload": {
-            "type": "object",
-            "shape": {
-              "value": "object"
-            }
-          }
-        },
-        {
-          "event": "SAVE",
+          "event": "JSON_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "value": "object"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "chat-message": {
       "emits": [
@@ -3546,10 +3195,7 @@
           "event": "COPY_MESSAGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "message": "object"
-            }
+            "type": "object"
           },
           "optional": true
         },
@@ -3557,10 +3203,7 @@
           "event": "RETRY_MESSAGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "message": "object"
-            }
+            "type": "object"
           },
           "optional": true
         }
@@ -3574,20 +3217,14 @@
           "event": "ACCEPT_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "change": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "REJECT_CHANGE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "change": "object"
-            }
+            "type": "object"
           }
         }
       ],
@@ -3598,24 +3235,21 @@
       "emits": [
         {
           "event": "DISMISS_ERROR",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "error": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "RETRY_ACTION",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "file-operation-item": {
       "emits": [],
@@ -3626,50 +3260,37 @@
       "emits": [
         {
           "event": "TODO_TOGGLE",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "todo": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "TODO_SELECT",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "todo": "object"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "tool-call-card": {
       "emits": [
         {
           "event": "EXPAND_TOOL",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "toolCall": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "RETRY_TOOL",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "toolCall": "object"
-            }
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -3679,79 +3300,69 @@
       "emits": [
         {
           "event": "SELECT_ACTIVITY",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "activity": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "CLEAR_ACTIVITY",
           "trigger": "action",
           "payload": {
-            "type": "void"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "agent-chat-input": {
       "emits": [
         {
           "event": "SEND_MESSAGE",
-          "trigger": "submit",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "message": "string"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "agent-chat-panel": {
       "emits": [
         {
           "event": "SEND_MESSAGE",
-          "trigger": "submit",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "message": "string"
-            }
+            "type": "object"
           }
         },
         {
           "event": "CANCEL_GENERATION",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
           "event": "RETRY",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "agent-status-header": {
       "emits": [
         {
-          "event": "CANCEL",
+          "event": "CANCEL_GENERATION",
           "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         }
       ],
@@ -3764,35 +3375,26 @@
           "event": "ACCEPT_DIFF",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "diff": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "REJECT_DIFF",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "diff": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "VIEW_DIFF",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "diff": "object"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "todo-list": {
       "emits": [
@@ -3800,25 +3402,19 @@
           "event": "TODO_COMPLETE",
           "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "todo": "object"
-            }
+            "type": "object"
           }
         },
         {
           "event": "TODO_SELECT",
-          "trigger": "click",
+          "trigger": "action",
           "payload": {
-            "type": "object",
-            "shape": {
-              "todo": "object"
-            }
+            "type": "object"
           }
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "studio-home-web": {
       "emits": [
@@ -4075,7 +3671,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "trait-state-viewer": {
       "emits": [
@@ -4118,7 +3714,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "hex-game-board": {
       "emits": [
@@ -4178,7 +3774,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "game-board": {
       "emits": [
@@ -4205,7 +3801,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "combat-log": {
       "emits": [],
@@ -4249,7 +3845,1552 @@
         }
       ],
       "requires": [],
+      "entityAware": false
+    },
+    "drawer-slot": {
+      "emits": [
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "modal-slot": {
+      "emits": [
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "toast-slot": {
+      "emits": [
+        {
+          "event": "DISMISS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "a-i-analysis-panel": {
+      "emits": [
+        {
+          "event": "REGENERATE_ANALYSIS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
       "entityAware": true
+    },
+    "credits-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADJUST",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "fitness-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "LOG_LIFT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "meal-plan-detail-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ANALYZE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SHARE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "meal-plans-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ANALYZE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SHARE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "progress-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE_PROGRESS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "schedule-template": {
+      "emits": [
+        {
+          "event": "WEEK_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DAY_SELECTED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "session-detail-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "START",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "sessions-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "START",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "trainee-detail-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_LIFTS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_SESSIONS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "trainees-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "studio-home-electron-template": {
+      "emits": [
+        {
+          "event": "OPEN_FILE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE_NEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "OPEN_RECENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "REMOVE_RECENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CLEAR_RECENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "studio-home-web-template": {
+      "emits": [
+        {
+          "event": "CREATE_PROJECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SELECT_PROJECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE_PROJECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "OPEN_PROJECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "studio-project-template": {
+      "emits": [
+        {
+          "event": "MODE_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TAB_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SAVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VALIDATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPILE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "PREVIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TOGGLE_AGENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TOGGLE_INSPECTOR",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "checklist-item": {
+      "emits": [
+        {
+          "event": "ITEM_CHECKED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "company-card": {
+      "emits": [
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "company-info-card": {
+      "emits": [
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "evidence-gallery": {
+      "emits": [
+        {
+          "event": "VIEW_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "evidence-thumbnail": {
+      "emits": [
+        {
+          "event": "VIEW_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DELETE_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_GALLERY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-card": {
+      "emits": [
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-checklist": {
+      "emits": [
+        {
+          "event": "RULE_CHECKED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "inspection-summary": {
+      "emits": [
+        {
+          "event": "VIEW_DETAILS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DOWNLOAD_REPORT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-wizard-step": {
+      "emits": [
+        {
+          "event": "PREV_STEP",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "NEXT_STEP",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPLETE_STEP",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspector-card": {
+      "emits": [
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "violation-form": {
+      "emits": [
+        {
+          "event": "ADD_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIOLATION_SAVED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "violation-list-item": {
+      "emits": [
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "companies-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-form-demo-template": {
+      "emits": [
+        {
+          "event": "FIELD_CHANGED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "GLOBAL_VARIABLE_SET",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-process-template": {
+      "emits": [
+        {
+          "event": "STEP_BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "INSPECTION_COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "STEP_NEXT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SAVE_DRAFT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SEARCH_INSPECTOR",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "COMPANY_SELECTED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE_NEW_COMPANY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FIELD_SELECTED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_RULE_PHOTO",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DOWNLOAD_DOCUMENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "PRINT_DOCUMENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "INSPECTOR_SIGNED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "MERCHANT_SIGNED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DOWNLOAD_FINAL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ARCHIVE_INSPECTION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspection-wizard-template": {
+      "emits": [
+        {
+          "event": "WIZARD_BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "WIZARD_COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "WIZARD_NEXT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SAVE_DRAFT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "WIZARD_STEP_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspections-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "inspectors-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "admin-dashboard-template": {
+      "emits": [
+        {
+          "event": "REFRESH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "assessment-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "connections-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "graph-intelligence-template": {
+      "emits": [
+        {
+          "event": "REFRESH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ANALYZE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "OPEN_VISUALIZATION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "invites-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "project-detail-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_MEMBER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_ANALYTICS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_TEAM",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "projects-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "relationship-garden-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "seed-network-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "suggestions-template": {
+      "emits": [
+        {
+          "event": "REFRESH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "team-detail-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_MEMBER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "REMOVE_MEMBER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_ANALYTICS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_MEMBERS",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "team-members-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADD_MEMBER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "teams-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "trust-intelligence-template": {
+      "emits": [
+        {
+          "event": "VIEW",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "user-profile-template": {
+      "emits": [
+        {
+          "event": "BACK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "EDIT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_TRUST_SCORE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VIEW_ASSESSMENT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "users-template": {
+      "emits": [
+        {
+          "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CREATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FILTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
     }
   }
 }
