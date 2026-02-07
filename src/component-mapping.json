@@ -1346,6 +1346,78 @@
       "importPath": "@/clients/trait-wars/templates/ArmyBuilderTemplate",
       "category": "template",
       "client": "trait-wars"
+    },
+    "game-battle": {
+      "component": "CanvasBattleTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasBattleTemplate",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-castle": {
+      "component": "CanvasCastleTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasCastleTemplate",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-world-map": {
+      "component": "CanvasWorldMapTemplate",
+      "importPath": "@/clients/trait-wars/templates/CanvasWorldMapTemplate",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-hero-profile": {
+      "component": "HeroProfileTemplate",
+      "importPath": "@/clients/trait-wars/templates/HeroProfileTemplate",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-isometric-canvas": {
+      "component": "IsometricGameCanvas",
+      "importPath": "@/clients/trait-wars/organisms/IsometricGameCanvas",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-combat-log": {
+      "component": "CombatLog",
+      "importPath": "@/clients/trait-wars/organisms/CombatLog",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-trait-viewer": {
+      "component": "TraitStateViewer",
+      "importPath": "@/clients/trait-wars/molecules/TraitStateViewer",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-resource-bar": {
+      "component": "ResourceBar",
+      "importPath": "@/clients/trait-wars/molecules/ResourceBar",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-building-slot": {
+      "component": "BuildingSlot",
+      "importPath": "@/clients/trait-wars/molecules/BuildingSlot",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-recruit-card": {
+      "component": "UnitRecruitCard",
+      "importPath": "@/clients/trait-wars/molecules/UnitRecruitCard",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-trait-slot": {
+      "component": "TraitSlot",
+      "importPath": "@/clients/trait-wars/molecules/TraitSlot",
+      "category": "game",
+      "client": "trait-wars"
+    },
+    "game-damage-popup": {
+      "component": "DamagePopup",
+      "importPath": "@/clients/trait-wars/atoms/DamagePopup",
+      "category": "game",
+      "client": "trait-wars"
     }
   }
 }

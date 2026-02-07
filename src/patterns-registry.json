@@ -4683,6 +4683,857 @@
         }
       }
     },
+    "game-battle": {
+      "type": "game-battle",
+      "category": "game",
+      "description": "Tactical isometric battle template with phase-based turns, combat, and trait state machines",
+      "suggestedFor": [
+        "tactical battle",
+        "combat screen",
+        "strategy game"
+      ],
+      "typicalSize": "large",
+      "componentHints": [
+        "isometric-canvas",
+        "combat-log",
+        "damage-popup",
+        "trait-viewer"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "initialUnits": {
+          "required": true,
+          "types": [
+            "array"
+          ],
+          "description": "Array of BattleUnit objects with id, name, team, position, health, traits"
+        },
+        "boardWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Board width in tiles (default: 8)"
+        },
+        "boardHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "Board height in tiles (default: 6)"
+        },
+        "mapTheme": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual theme: 'dungeon' | 'outdoor' | 'castle'"
+        },
+        "mapTerrain": {
+          "types": [
+            "array"
+          ],
+          "description": "Optional custom terrain tiles"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale (default: 0.45)"
+        },
+        "onGameEnd": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback with 'victory' or 'defeat' result"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "CanvasBattleTemplate",
+        "importPath": "clients/trait-wars/templates/CanvasBattleTemplate"
+      }
+    },
+    "game-castle": {
+      "type": "game-castle",
+      "category": "game",
+      "description": "Castle management template with buildings, garrison, and unit recruitment",
+      "suggestedFor": [
+        "castle view",
+        "base building",
+        "town management"
+      ],
+      "typicalSize": "large",
+      "componentHints": [
+        "isometric-canvas",
+        "building-slot",
+        "garrison-card",
+        "recruit-card",
+        "resource-bar"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "castle": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "StrategicCastle data: name, faction, buildings, garrison, income"
+        },
+        "resources": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "Player resources: gold, resonance, traitShards"
+        },
+        "availableUnits": {
+          "required": true,
+          "types": [
+            "array"
+          ],
+          "description": "Units available for recruitment"
+        },
+        "onBuild": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when building is constructed/upgraded"
+        },
+        "onRecruit": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for recruiting units (unitId, count)"
+        },
+        "onTransferUnit": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for transferring units to/from garrison"
+        },
+        "onExit": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to exit castle view"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale (default: 0.45)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "CanvasCastleTemplate",
+        "importPath": "clients/trait-wars/templates/CanvasCastleTemplate"
+      }
+    },
+    "game-world-map": {
+      "type": "game-world-map",
+      "category": "game",
+      "description": "Strategic world map template with hero movement, resource nodes, and encounters",
+      "suggestedFor": [
+        "world map",
+        "overworld",
+        "strategy map"
+      ],
+      "typicalSize": "large",
+      "componentHints": [
+        "isometric-canvas",
+        "resource-bar",
+        "hero-panel"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "worldMap": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "StrategicWorldMap data: hexes, heroes, castles, turnNumber"
+        },
+        "resources": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "Player resources: gold, resonance, traitShards"
+        },
+        "selectedHeroId": {
+          "types": [
+            "string"
+          ],
+          "description": "Current selected hero ID"
+        },
+        "onHeroSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when hero is selected"
+        },
+        "onHeroMove": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when hero moves (heroId, toX, toY)"
+        },
+        "onEnterCastle": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for entering castle"
+        },
+        "onCollectResource": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for collecting resource (x, y, type, amount)"
+        },
+        "onBattleEncounter": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for battle encounter (attackerId, defenderId)"
+        },
+        "onEndTurn": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to end turn"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale (default: 0.4)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "CanvasWorldMapTemplate",
+        "importPath": "clients/trait-wars/templates/CanvasWorldMapTemplate"
+      }
+    },
+    "game-hero-profile": {
+      "type": "game-hero-profile",
+      "category": "game",
+      "description": "Hero profile template showing stats, trait slots, and progression",
+      "suggestedFor": [
+        "hero profile",
+        "character sheet",
+        "unit details"
+      ],
+      "typicalSize": "medium",
+      "componentHints": [
+        "hero-avatar",
+        "trait-slot",
+        "stats-display"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "hero": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "Hero data: name, archetype, level, experience, traits, equipment"
+        },
+        "onEquipTrait": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when equipping a trait to a slot"
+        },
+        "onRemoveTrait": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when removing a trait from a slot"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "HeroProfileTemplate",
+        "importPath": "clients/trait-wars/templates/HeroProfileTemplate"
+      }
+    },
+    "game-isometric-canvas": {
+      "type": "game-isometric-canvas",
+      "category": "game",
+      "description": "Canvas-based isometric game renderer supporting tiles, units, and features",
+      "suggestedFor": [
+        "isometric game",
+        "tactical map",
+        "strategy board"
+      ],
+      "typicalSize": "large",
+      "componentHints": [
+        "canvas",
+        "isometric-renderer",
+        "tile-layer",
+        "unit-layer"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "tiles": {
+          "required": true,
+          "types": [
+            "array"
+          ],
+          "description": "IsometricTile[] with x, y, terrain, terrainSprite"
+        },
+        "units": {
+          "types": [
+            "array"
+          ],
+          "description": "IsometricUnit[] with id, position, team, sprite, traits"
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "IsometricFeature[] with x, y, type, sprite"
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected unit ID"
+        },
+        "validMoves": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of valid move positions {x, y}"
+        },
+        "attackTargets": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of attack target positions {x, y}"
+        },
+        "hoveredTile": {
+          "types": [
+            "object"
+          ],
+          "description": "Currently hovered tile {x, y}"
+        },
+        "onTileClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when tile is clicked (x, y)"
+        },
+        "onUnitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when unit is clicked (unitId)"
+        },
+        "onTileHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when tile is hovered (x, y)"
+        },
+        "onTileLeave": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when tile hover leaves"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Render scale factor (default: 0.45)"
+        },
+        "assetManifest": {
+          "types": [
+            "object"
+          ],
+          "description": "TraitWarsAssetManifest for resolving sprite URLs"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL"
+        },
+        "onDrawEffects": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom draw callback for particle effects"
+        },
+        "hasActiveEffects": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether active effects need continuous rendering"
+        },
+        "effectSpriteUrls": {
+          "types": [
+            "array"
+          ],
+          "description": "Sprite URLs to preload for effects"
+        }
+      },
+      "componentMapping": {
+        "component": "IsometricGameCanvas",
+        "importPath": "clients/trait-wars/organisms/IsometricGameCanvas"
+      }
+    },
+    "game-combat-log": {
+      "type": "game-combat-log",
+      "category": "game",
+      "description": "Scrollable combat event log showing attacks, moves, and deaths",
+      "suggestedFor": [
+        "combat log",
+        "battle history",
+        "event feed"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "event-list",
+        "auto-scroll"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "events": {
+          "required": true,
+          "types": [
+            "array"
+          ],
+          "description": "CombatEvent[] with id, turn, type, message, timestamp"
+        },
+        "maxVisible": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum visible events before scrolling"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "CombatLog",
+        "importPath": "clients/trait-wars/organisms/CombatLog"
+      }
+    },
+    "game-trait-viewer": {
+      "type": "game-trait-viewer",
+      "category": "game",
+      "description": "Trait state machine viewer showing states, transitions, and current state",
+      "suggestedFor": [
+        "trait display",
+        "state machine view",
+        "ability viewer"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "state-diagram",
+        "trait-info"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "trait": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "TraitStateMachineDefinition with name, states, transitions, currentState"
+        },
+        "showTransitions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show transition arrows and labels"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "TraitStateViewer",
+        "importPath": "clients/trait-wars/molecules/TraitStateViewer"
+      }
+    },
+    "game-resource-bar": {
+      "type": "game-resource-bar",
+      "category": "game",
+      "description": "Resource display bar showing gold, resonance, and trait shards",
+      "suggestedFor": [
+        "resource display",
+        "currency bar",
+        "economy hud"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "resource-icons",
+        "counters"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "resources": {
+          "required": true,
+          "types": [
+            "object"
+          ],
+          "description": "Resources object: gold, resonance, traitShards"
+        },
+        "compact": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Compact inline display mode"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "ResourceBar",
+        "importPath": "clients/trait-wars/molecules/ResourceBar"
+      }
+    },
+    "game-building-slot": {
+      "type": "game-building-slot",
+      "category": "game",
+      "description": "Building slot card showing building type, level, and upgrade status",
+      "suggestedFor": [
+        "building card",
+        "castle slot",
+        "structure management"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "building-icon",
+        "level-badge"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "buildingType": {
+          "required": true,
+          "types": [
+            "string"
+          ],
+          "description": "Building type identifier"
+        },
+        "name": {
+          "required": true,
+          "types": [
+            "string"
+          ],
+          "description": "Display name of the building"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Current building level (0 = not built)"
+        },
+        "maxLevel": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum building level"
+        },
+        "isSelected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this slot is currently selected"
+        },
+        "fallbackIcon": {
+          "types": [
+            "string"
+          ],
+          "description": "Emoji fallback icon if sprite unavailable"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when slot is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "BuildingSlot",
+        "importPath": "clients/trait-wars/molecules/BuildingSlot"
+      }
+    },
+    "game-recruit-card": {
+      "type": "game-recruit-card",
+      "category": "game",
+      "description": "Unit recruitment card with stats, cost, and quantity controls",
+      "suggestedFor": [
+        "unit recruitment",
+        "hiring screen",
+        "army management"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "unit-sprite",
+        "stat-row",
+        "cost-display",
+        "quantity-control"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "id": {
+          "required": true,
+          "types": [
+            "string"
+          ],
+          "description": "Unit type identifier"
+        },
+        "name": {
+          "required": true,
+          "types": [
+            "string"
+          ],
+          "description": "Unit display name"
+        },
+        "unitType": {
+          "types": [
+            "string"
+          ],
+          "description": "Robot unit type for sprite lookup"
+        },
+        "tier": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit tier (1-4)"
+        },
+        "attack": {
+          "types": [
+            "number"
+          ],
+          "description": "Attack stat"
+        },
+        "defense": {
+          "types": [
+            "number"
+          ],
+          "description": "Defense stat"
+        },
+        "health": {
+          "types": [
+            "number"
+          ],
+          "description": "Health stat"
+        },
+        "movement": {
+          "types": [
+            "number"
+          ],
+          "description": "Movement range"
+        },
+        "goldCost": {
+          "types": [
+            "number"
+          ],
+          "description": "Gold cost per unit"
+        },
+        "resonanceCost": {
+          "types": [
+            "number"
+          ],
+          "description": "Resonance cost per unit (optional)"
+        },
+        "available": {
+          "types": [
+            "number"
+          ],
+          "description": "Number available for recruitment"
+        },
+        "recruitCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Current recruitment quantity"
+        },
+        "onIncrement": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to increase recruitment count"
+        },
+        "onDecrement": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to decrease recruitment count"
+        },
+        "onRecruit": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to confirm recruitment"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "UnitRecruitCard",
+        "importPath": "clients/trait-wars/molecules/UnitRecruitCard"
+      }
+    },
+    "game-trait-slot": {
+      "type": "game-trait-slot",
+      "category": "game",
+      "description": "Trait equipment slot showing trait data, state, and equip/unequip actions",
+      "suggestedFor": [
+        "trait equipment",
+        "ability slot",
+        "character trait"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "trait-icon",
+        "state-badge"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "trait": {
+          "types": [
+            "object"
+          ],
+          "description": "TraitData with name, archetype, description, currentState"
+        },
+        "slotIndex": {
+          "types": [
+            "number"
+          ],
+          "description": "Slot position index"
+        },
+        "isLocked": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether slot is locked (requires level)"
+        },
+        "onEquip": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when equipping trait"
+        },
+        "onRemove": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when removing trait"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "TraitSlot",
+        "importPath": "clients/trait-wars/molecules/TraitSlot"
+      }
+    },
+    "game-damage-popup": {
+      "type": "game-damage-popup",
+      "category": "game",
+      "description": "Animated floating damage number popup",
+      "suggestedFor": [
+        "damage display",
+        "combat feedback",
+        "number popup"
+      ],
+      "typicalSize": "small",
+      "componentHints": [
+        "floating-text",
+        "animation"
+      ],
+      "isGame": true,
+      "propsSchema": {
+        "amount": {
+          "required": true,
+          "types": [
+            "number"
+          ],
+          "description": "Damage amount to display"
+        },
+        "damageType": {
+          "types": [
+            "string"
+          ],
+          "description": "Damage type: 'physical' | 'magic' | 'heal' | 'critical'"
+        },
+        "x": {
+          "required": true,
+          "types": [
+            "number"
+          ],
+          "description": "Screen X position"
+        },
+        "y": {
+          "required": true,
+          "types": [
+            "number"
+          ],
+          "description": "Screen Y position"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      },
+      "componentMapping": {
+        "component": "DamagePopup",
+        "importPath": "clients/trait-wars/atoms/DamagePopup"
+      }
+    },
     "inventory-panel": {
       "type": "inventory-panel",
       "category": "game",
