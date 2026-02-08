@@ -60,3 +60,13 @@ export function isEntityAwarePattern(patternType: string): boolean {
 
   return hasEntityProp && hasDataProp;
 }
+
+// Export prompt helpers for @almadar/skills
+export {
+  getPatternsGroupedByCategory,
+  getPatternPropsCompact,
+  getPatternActionsRef,
+  generatePatternDescription,
+  getAllPatternTypes,
+  getPatternMetadata,
+} from './helpers/prompt-helpers.js';
