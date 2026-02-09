@@ -11,15 +11,14 @@
       "import": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./registry.json": "./src/patterns-registry.json",
-    "./patterns-registry.json": "./src/patterns-registry.json",
-    "./integrators-registry.json": "./src/integrators-registry.json",
-    "./component-mapping.json": "./src/component-mapping.json",
-    "./event-contracts.json": "./src/event-contracts.json"
+    "./registry.json": "./dist/registry.json",
+    "./patterns-registry.json": "./dist/patterns-registry.json",
+    "./integrators-registry.json": "./dist/integrators-registry.json",
+    "./component-mapping.json": "./dist/component-mapping.json",
+    "./event-contracts.json": "./dist/event-contracts.json"
   },
   "files": [
-    "dist",
-    "src/*.json"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
