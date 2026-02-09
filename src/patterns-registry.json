@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-07T17:56:09.988Z",
+  "exportedAt": "2026-02-09T10:35:10.183Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9433,7 +9433,7 @@
           "types": [
             "function"
           ],
-          "description": "Add handler - can accept data from renderForm"
+          "description": "Add handler"
         },
         "onRemove": {
           "types": [
@@ -9447,14 +9447,25 @@
           ],
           "description": "Reorder handler"
         },
-        "renderForm": {
+        "trackAddedInState": {
           "types": [
-            "function"
+            "boolean"
           ],
-          "description": "Render custom form for adding items"
+          "description": "Inspection-specific enhancements"
+        },
+        "currentState": {
+          "types": [
+            "string"
+          ],
+          "description": "Current inspection state (used when trackAddedInState is true)"
+        },
+        "showAuditInfo": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show audit metadata (addedInState, addedAt)"
         }
-      },
-      "client": "inspection-system"
+      }
     },
     "floating-action-menu": {
       "type": "floating-action-menu",
@@ -23542,6 +23553,43 @@
         }
       },
       "client": "winning-11"
+    },
+    "game-shell": {
+      "type": "game-shell",
+      "category": "template",
+      "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients — no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
+      "suggestedFor": [
+        "game",
+        "shell",
+        "game shell"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "appName": {
+          "types": [
+            "string"
+          ],
+          "description": "Application / game title shown in the HUD bar"
+        },
+        "hud": {
+          "types": [
+            "node"
+          ],
+          "description": "Optional HUD content rendered above the main area"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Extra class name on the root container"
+        },
+        "showTopBar": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show the minimal top bar (default: true)"
+        }
+      }
     }
   },
   "categories": [

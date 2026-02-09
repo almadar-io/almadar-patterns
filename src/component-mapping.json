@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-07T17:56:09.988Z",
+  "exportedAt": "2026-02-09T10:35:10.183Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -2085,6 +2085,11 @@
       "importPath": "@/clients/winning-11/templates/UsersTemplate",
       "category": "template",
       "client": "winning-11"
+    },
+    "game-shell": {
+      "component": "GameShell",
+      "importPath": "@/components/templates/GameShell",
+      "category": "template"
     }
   }
 }
