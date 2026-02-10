@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-09T10:45:55.417Z",
+  "exportedAt": "2026-02-10T04:12:02.501Z",
   "contracts": {
     "form": {
       "emits": [
@@ -473,55 +473,10 @@
       "requires": [],
       "entityAware": false
     },
-    "game-canvas": {
-      "emits": [
-        {
-          "event": "MOVE_LEFT",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "MOVE_RIGHT",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "JUMP",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "PAUSE",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        }
-      ],
-      "requires": [],
-      "entityAware": false,
-      "configDriven": true
-    },
     "game-hud": {
       "emits": [],
       "requires": [],
       "entityAware": false
-    },
-    "game-controls": {
-      "emits": [],
-      "requires": [],
-      "entityAware": false,
-      "configDriven": true
     },
     "game-menu": {
       "emits": [
@@ -554,21 +509,6 @@
       "entityAware": false,
       "configDriven": true
     },
-    "game-pause-overlay": {
-      "emits": [
-        {
-          "event": "RESUME",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [
-        "RESUME"
-      ],
-      "entityAware": false
-    },
     "game-over-screen": {
       "emits": [
         {
@@ -590,24 +530,6 @@
       "requires": [
         "RESTART"
       ],
-      "entityAware": false
-    },
-    "level-select": {
-      "emits": [
-        {
-          "event": "SELECT_LEVEL",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "tilemap-renderer": {
-      "emits": [],
-      "requires": [],
       "entityAware": false
     },
     "inventory-panel": {
@@ -652,55 +574,6 @@
       ],
       "requires": [],
       "entityAware": false
-    },
-    "input-listener": {
-      "emits": [
-        {
-          "event": "KEY_DOWN",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "KEY_UP",
-          "trigger": "keydown",
-          "payload": {
-            "type": "void"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false,
-      "configDriven": true
-    },
-    "collision-detector": {
-      "emits": [
-        {
-          "event": "COLLISION_ENTER",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
-          }
-        },
-        {
-          "event": "COLLISION_EXIT",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
-          }
-        },
-        {
-          "event": "TRIGGER_ENTER",
-          "trigger": "action",
-          "payload": {
-            "type": "EntityRow"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false,
-      "configDriven": true
     },
     "runtime-debugger": {
       "emits": [],
@@ -979,6 +852,66 @@
       ],
       "requires": [],
       "entityAware": false
+    },
+    "code-viewer": {
+      "emits": [
+        {
+          "event": "CODE_COPY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "document-viewer": {
+      "emits": [
+        {
+          "event": "DOCUMENT_DOWNLOAD",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DOCUMENT_PRINT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DOCUMENT_PAGE_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "media-gallery": {
+      "emits": [
+        {
+          "event": "MEDIA_SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "MEDIA_UPLOAD",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
     }
   }
 }

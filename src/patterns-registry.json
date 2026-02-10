@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-09T10:45:55.417Z",
+  "exportedAt": "2026-02-10T04:12:02.501Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2535,110 +2535,6 @@
         }
       }
     },
-    "game-canvas": {
-      "type": "game-canvas",
-      "category": "game",
-      "description": "Main game rendering area (canvas)",
-      "suggestedFor": [
-        "game page",
-        "main gameplay"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "renderEntities": {
-          "types": [
-            "array"
-          ],
-          "description": "Entity type names to render (optional filter)"
-        },
-        "renderers": {
-          "types": [
-            "object"
-          ],
-          "description": "Rendering functions per entity type"
-        },
-        "renderer": {
-          "types": [
-            "string"
-          ],
-          "description": "Renderer type hint from schema (e.g., 'phaser', 'canvas'). Currently ignored - component uses Canvas2D. Reserved for future multi-renderer support."
-        },
-        "background": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color or gradient"
-        },
-        "width": {
-          "types": [
-            "number",
-            "string"
-          ],
-          "description": "Canvas width in pixels or 'full' for responsive"
-        },
-        "height": {
-          "types": [
-            "number",
-            "string"
-          ],
-          "description": "Canvas height in pixels or 'auto' for aspect ratio"
-        },
-        "aspectRatio": {
-          "types": [
-            "string"
-          ],
-          "description": "Aspect ratio (e.g., '16:9', '4:3')"
-        },
-        "cameraOffset": {
-          "types": [
-            "object"
-          ],
-          "description": "Camera offset for scrolling"
-        },
-        "debug": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Debug mode shows hitboxes and entity info"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "onClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Click handler for canvas"
-        },
-        "enableInput": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable keyboard input handling (updates Input entity)"
-        },
-        "inputBindings": {
-          "types": [
-            "array"
-          ],
-          "description": "Custom input key bindings"
-        },
-        "collisions": {
-          "types": [
-            "array"
-          ],
-          "description": "Collision definitions from schema"
-        },
-        "eventBus": {
-          "types": [
-            "object"
-          ],
-          "description": "Event bus for emitting collision events"
-        }
-      }
-    },
     "game-hud": {
       "type": "game-hud",
       "category": "game",
@@ -2690,68 +2586,6 @@
             "boolean"
           ],
           "description": "Whether to use a semi-transparent background"
-        }
-      }
-    },
-    "game-controls": {
-      "type": "game-controls",
-      "category": "game",
-      "description": "Touch/button controls for mobile/accessibility",
-      "suggestedFor": [
-        "mobile games",
-        "touch controls"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "layout": {
-          "types": [
-            "string"
-          ],
-          "description": "Control layout type",
-          "required": true
-        },
-        "position": {
-          "types": [
-            "string"
-          ],
-          "description": "Position on screen",
-          "required": true
-        },
-        "controls": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Controls to display - accepts readonly for compatibility with generated const arrays"
-        },
-        "onControl": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when control is pressed/released"
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Size variant"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "visible": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether controls are visible"
-        },
-        "opacity": {
-          "types": [
-            "number"
-          ],
-          "description": "Opacity when visible"
         }
       }
     },
@@ -2819,66 +2653,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        }
-      }
-    },
-    "game-pause-overlay": {
-      "type": "game-pause-overlay",
-      "category": "game",
-      "description": "Pause menu that overlays the game",
-      "suggestedFor": [
-        "pause screen",
-        "game overlay"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "options": {
-          "types": [
-            "array"
-          ],
-          "description": "Pause menu options"
-        },
-        "menuItems": {
-          "types": [
-            "array"
-          ],
-          "description": "Alias for options (schema compatibility)"
-        },
-        "onSelect": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when an option is selected (legacy callback, prefer event bus)"
-        },
-        "eventBus": {
-          "types": [
-            "eventbuscontexttype"
-          ],
-          "description": "Event bus for emitting UI events (optional, uses hook if not provided)"
-        },
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Title (default: \"PAUSED\")"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "visible": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether the pause menu is visible"
-        },
-        "onDismiss": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when clicking outside the menu"
         }
       }
     },
@@ -2961,162 +2735,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        }
-      }
-    },
-    "level-select": {
-      "type": "level-select",
-      "category": "game",
-      "description": "Grid or list of levels to choose from",
-      "suggestedFor": [
-        "level selection",
-        "stage selection"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "levels": {
-          "types": [
-            "array"
-          ],
-          "description": "Level data"
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name (schema config)"
-        },
-        "layout": {
-          "types": [
-            "string"
-          ],
-          "description": "Layout variant"
-        },
-        "fields": {
-          "types": [
-            "array"
-          ],
-          "description": "Fields to display per level"
-        },
-        "selectEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event to emit on selection (schema config)"
-        },
-        "onSelect": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when a level is selected"
-        },
-        "navigatesTo": {
-          "types": [
-            "string"
-          ],
-          "description": "Path to navigate to on selection. Supports :id, :levelId, :number placeholders"
-        },
-        "selectedId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected level ID"
-        },
-        "maxStars": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum stars possible per level"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Title above the level grid"
-        }
-      }
-    },
-    "tilemap-renderer": {
-      "type": "tilemap-renderer",
-      "category": "game",
-      "description": "Renders tile-based level data from instances with camera following",
-      "suggestedFor": [
-        "platformer levels",
-        "tile-based games",
-        "rpg maps"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "layers": {
-          "types": [
-            "array"
-          ],
-          "description": "Tile layers to render",
-          "required": true
-        },
-        "tileset": {
-          "types": [
-            "tileset"
-          ],
-          "description": "Tileset configuration",
-          "required": true
-        },
-        "camera": {
-          "types": [
-            "object"
-          ],
-          "description": "Camera position",
-          "required": true
-        },
-        "viewportWidth": {
-          "types": [
-            "number"
-          ],
-          "description": "Viewport width in pixels",
-          "required": true
-        },
-        "viewportHeight": {
-          "types": [
-            "number"
-          ],
-          "description": "Viewport height in pixels",
-          "required": true
-        },
-        "pixelArt": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable pixel art rendering (no smoothing)"
-        },
-        "parallaxLayers": {
-          "types": [
-            "array"
-          ],
-          "description": "Parallax configuration per layer"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Optional className"
-        },
-        "scale": {
-          "types": [
-            "number"
-          ],
-          "description": "Scale factor for rendering"
-        },
-        "debug": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show debug grid"
         }
       }
     },
@@ -3250,74 +2868,6 @@
             "string"
           ],
           "description": "Optional className"
-        }
-      }
-    },
-    "input-listener": {
-      "type": "input-listener",
-      "category": "game",
-      "description": "Invisible component that captures keyboard/mouse input and emits events",
-      "suggestedFor": [
-        "games",
-        "interactive applications",
-        "keyboard shortcuts"
-      ],
-      "typicalSize": "tiny",
-      "propsSchema": {
-        "bindings": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Key bindings configuration"
-        },
-        "enabled": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether input listening is enabled"
-        },
-        "eventBus": {
-          "types": [
-            "eventbuscontexttype"
-          ],
-          "description": "Event bus for emitting events (optional, uses hook if not provided)"
-        }
-      }
-    },
-    "collision-detector": {
-      "type": "collision-detector",
-      "category": "game",
-      "description": "Invisible component that runs collision detection and emits collision events",
-      "suggestedFor": [
-        "games",
-        "2D physics",
-        "spatial interactions"
-      ],
-      "typicalSize": "tiny",
-      "propsSchema": {
-        "algorithm": {
-          "types": [
-            "string"
-          ],
-          "description": "Collision detection algorithm"
-        },
-        "rules": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Collision rules to check"
-        },
-        "enabled": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether collision detection is enabled"
-        },
-        "eventBus": {
-          "types": [
-            "eventbuscontexttype"
-          ],
-          "description": "Event bus for emitting events (optional, uses hook if not provided)"
         }
       }
     },
@@ -7825,50 +7375,49 @@
           "types": [
             "string"
           ],
-          "description": "Chart subtitle or description"
+          "description": "Chart subtitle / description"
         },
         "chartType": {
           "types": [
-            "string"
+            "charttype"
           ],
-          "description": "Chart type: bar, line, pie, area, donut"
+          "description": "Chart type"
         },
         "series": {
           "types": [
             "unknown"
           ],
-          "description": "Data series array with name, data points, and color"
+          "description": "Data series"
         },
         "data": {
           "types": [
-            "unknown",
-            "array"
+            "unknown"
           ],
-          "description": "Simple data points for single-series charts"
+          "description": "Simple data (single series shorthand)"
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Chart height in pixels"
+          "description": "Chart height in px"
         },
         "showLegend": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show chart legend"
+          "description": "Show legend"
         },
         "showValues": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show values on data points"
+          "description": "Show values on chart"
         },
         "actions": {
           "types": [
             "unknown"
           ],
-          "description": "Action buttons with event emission"
+          "description": "Actions for chart interactions"
         },
         "entity": {
           "types": [
@@ -7884,7 +7433,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -7919,13 +7468,13 @@
           "types": [
             "number"
           ],
-          "description": "Minimum value (default: 0)"
+          "description": "Minimum value"
         },
         "max": {
           "types": [
             "number"
           ],
-          "description": "Maximum value (default: 100)"
+          "description": "Maximum value"
         },
         "label": {
           "types": [
@@ -7937,37 +7486,43 @@
           "types": [
             "string"
           ],
-          "description": "Unit suffix (e.g., %, MB, credits)"
+          "description": "Unit suffix (e.g., '%', 'MB', 'credits')"
         },
         "variant": {
           "types": [
-            "string"
+            "metervariant"
           ],
-          "description": "Display variant: linear, radial, segmented"
+          "description": "Display variant"
         },
         "thresholds": {
           "types": [
             "unknown"
           ],
-          "description": "Color thresholds array with value, color, and optional label"
+          "description": "Color thresholds"
         },
         "segments": {
           "types": [
             "number"
           ],
-          "description": "Number of segments for segmented variant"
+          "description": "Number of segments (for segmented variant)"
         },
         "showValue": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show the numeric value"
+          "description": "Show value text"
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size for radial variant: sm, md, lg"
+          "description": "Size (for radial variant)"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Actions"
         },
         "entity": {
           "types": [
@@ -7983,7 +7538,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8017,26 +7572,25 @@
           "types": [
             "unknown"
           ],
-          "description": "Timeline items with id, title, description, date, status, tags"
+          "description": "Timeline items"
         },
         "data": {
           "types": [
-            "unknown",
-            "array"
+            "unknown"
           ],
-          "description": "Schema-driven data array"
+          "description": "Schema-driven data"
         },
         "fields": {
           "types": [
             "unknown"
           ],
-          "description": "Fields to display from schema data"
+          "description": "Fields to display"
         },
         "itemActions": {
           "types": [
             "unknown"
           ],
-          "description": "Actions available per timeline item"
+          "description": "Actions per item"
         },
         "entity": {
           "types": [
@@ -8052,7 +7606,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8086,26 +7640,37 @@
           "types": [
             "unknown"
           ],
-          "description": "Media items with id, src, alt, thumbnail, caption"
+          "description": "Media items"
         },
         "data": {
           "types": [
-            "unknown",
-            "array"
+            "unknown"
           ],
-          "description": "Schema-driven data array"
+          "description": "Schema-driven data"
         },
         "columns": {
           "types": [
             "number"
           ],
-          "description": "Number of grid columns (2-6)"
+          "description": "Column count"
         },
         "selectable": {
           "types": [
             "boolean"
           ],
-          "description": "Enable item selection mode"
+          "description": "Enable item selection"
+        },
+        "selectedItems": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Selected item IDs"
+        },
+        "onSelectionChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Selection change callback"
         },
         "showUpload": {
           "types": [
@@ -8113,17 +7678,17 @@
           ],
           "description": "Show upload button"
         },
-        "aspectRatio": {
-          "types": [
-            "string"
-          ],
-          "description": "Thumbnail aspect ratio: square, landscape, portrait"
-        },
         "actions": {
           "types": [
             "unknown"
           ],
-          "description": "Gallery-level action buttons"
+          "description": "Actions"
+        },
+        "aspectRatio": {
+          "types": [
+            "string"
+          ],
+          "description": "Aspect ratio for thumbnails"
         },
         "entity": {
           "types": [
@@ -8139,7 +7704,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8167,31 +7732,31 @@
           "types": [
             "string"
           ],
-          "description": "Label above the signature pad"
+          "description": "Label above the pad"
         },
         "helperText": {
           "types": [
             "string"
           ],
-          "description": "Helper text below the pad"
+          "description": "Helper text"
         },
         "strokeColor": {
           "types": [
             "string"
           ],
-          "description": "Stroke color for drawing"
+          "description": "Stroke color"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "Stroke width in pixels"
+          "description": "Stroke width"
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Pad height in pixels"
+          "description": "Pad height"
         },
         "readOnly": {
           "types": [
@@ -8205,17 +7770,23 @@
           ],
           "description": "Existing signature image URL"
         },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when signature changes"
+        },
         "signEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on signature confirm"
+          "description": "Event to emit on sign"
         },
         "clearEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on signature clear"
+          "description": "Event to emit on clear"
         },
         "entity": {
           "types": [
@@ -8231,7 +7802,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8275,21 +7846,21 @@
         },
         "documentType": {
           "types": [
-            "string"
+            "documenttype"
           ],
-          "description": "Document type: pdf, text, html, markdown"
+          "description": "Document type"
         },
         "currentPage": {
           "types": [
             "number"
           ],
-          "description": "Current page number"
+          "description": "Current page (for multi-page documents)"
         },
         "totalPages": {
           "types": [
             "number"
           ],
-          "description": "Total number of pages"
+          "description": "Total pages"
         },
         "height": {
           "types": [
@@ -8302,31 +7873,31 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to show the toolbar"
+          "description": "Show toolbar"
         },
         "showDownload": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show download button"
+          "description": "Show download button"
         },
         "showPrint": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show print button"
-        },
-        "documents": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Multiple documents for tabbed view"
+          "description": "Show print button"
         },
         "actions": {
           "types": [
             "unknown"
           ],
-          "description": "Custom action buttons"
+          "description": "Actions"
+        },
+        "documents": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Multiple documents (tabbed view)"
         },
         "entity": {
           "types": [
@@ -8342,7 +7913,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8376,31 +7947,31 @@
           "types": [
             "unknown"
           ],
-          "description": "Graph nodes with id, label, group, color, size"
+          "description": "Graph nodes"
         },
         "edges": {
           "types": [
             "unknown"
           ],
-          "description": "Graph edges with source, target, label, weight"
+          "description": "Graph edges"
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Canvas height in pixels"
+          "description": "Canvas height"
         },
         "showLabels": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show node labels"
+          "description": "Show node labels"
         },
         "interactive": {
           "types": [
             "boolean"
           ],
-          "description": "Enable zoom/pan controls"
+          "description": "Enable zoom/pan"
         },
         "draggable": {
           "types": [
@@ -8408,23 +7979,29 @@
           ],
           "description": "Enable node dragging"
         },
-        "layout": {
+        "actions": {
           "types": [
-            "string"
+            "unknown"
           ],
-          "description": "Layout algorithm: force, circular, grid"
+          "description": "Actions"
+        },
+        "onNodeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "On node click"
         },
         "nodeClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to emit when a node is clicked"
+          "description": "Node click event"
         },
-        "actions": {
+        "layout": {
           "types": [
-            "unknown"
+            "string"
           ],
-          "description": "Custom action buttons"
+          "description": "Layout algorithm"
         },
         "entity": {
           "types": [
@@ -8440,7 +8017,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8474,49 +8051,49 @@
           "types": [
             "string"
           ],
-          "description": "Code content to display"
+          "description": "Code content"
         },
         "language": {
           "types": [
             "string"
           ],
-          "description": "Language label"
+          "description": "Language for display label"
         },
         "diff": {
           "types": [
             "unknown"
           ],
-          "description": "Diff lines array for diff mode"
+          "description": "Diff lines (for diff mode)"
         },
         "oldValue": {
           "types": [
             "string"
           ],
-          "description": "Old value for auto-diff generation"
+          "description": "Old value (for generating diff)"
         },
         "newValue": {
           "types": [
             "string"
           ],
-          "description": "New value for auto-diff generation"
+          "description": "New value (for generating diff)"
         },
         "mode": {
           "types": [
-            "string"
+            "codeviewermode"
           ],
-          "description": "Display mode: code, diff"
+          "description": "Display mode"
         },
         "showLineNumbers": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show line numbers"
+          "description": "Show line numbers"
         },
         "showCopy": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show copy button"
+          "description": "Show copy button"
         },
         "wordWrap": {
           "types": [
@@ -8535,13 +8112,13 @@
           "types": [
             "unknown"
           ],
-          "description": "Multiple files for tabbed view"
+          "description": "Multiple files (tabbed view)"
         },
         "actions": {
           "types": [
             "unknown"
           ],
-          "description": "Custom action buttons"
+          "description": "Actions"
         },
         "entity": {
           "types": [
@@ -8557,7 +8134,7 @@
         },
         "error": {
           "types": [
-            "unknown"
+            "error"
           ],
           "description": "Error state"
         },
@@ -8566,6 +8143,257 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        }
+      }
+    },
+    "canvas-effect": {
+      "type": "canvas-effect",
+      "category": "game",
+      "description": "CanvasEffect Component  Renders animated visual effects as DOM overlays on the canvas. Maps combat action types to particle/flash effects that play at a specified position and auto-dismiss.  Pattern: canvas-effect",
+      "suggestedFor": [
+        "canvas",
+        "effect",
+        "canvas effect"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "actionType": {
+          "types": [
+            "combatactiontype"
+          ],
+          "description": "The type of combat action to visualise",
+          "required": true
+        },
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "Screen-space X position (center of the effect)",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "Screen-space Y position (center of the effect)",
+          "required": true
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "Duration in ms before auto-dismiss (default 800)"
+        },
+        "intensity": {
+          "types": [
+            "number"
+          ],
+          "description": "Optional intensity multiplier (1 = normal)"
+        },
+        "onComplete": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when the effect animation completes"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
+        }
+      }
+    },
+    "isometric-canvas": {
+      "type": "isometric-canvas",
+      "category": "game",
+      "description": "IsometricCanvas  Core isometric game renderer. Maps to the `game-canvas` pattern. Adapted from projects/trait-wars/design-system/organisms/IsometricGameCanvas.tsx with full closed-circuit pattern compliance (className, isLoading, error, entity).  Architecture: - 2:1 diamond isometric projection - Painter's algorithm (tile → feature → unit depth sort) - Camera pan/zoom with lerp - Off-screen culling - Minimap on separate canvas - Sprite sheet animation via resolveUnitFrame - Event bus–friendly handlers (onTileClick, onUnitClick, etc.)",
+      "suggestedFor": [
+        "isometric",
+        "canvas",
+        "isometric canvas"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Closed-circuit props (MANDATORY) ---"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "tiles": {
+          "types": [
+            "array"
+          ],
+          "description": "--- Grid data ---"
+        },
+        "units": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of units on the board"
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of features (resources, portals, buildings, etc.)"
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Interaction state ---"
+        },
+        "validMoves": {
+          "types": [
+            "array"
+          ],
+          "description": "Valid move positions (shown as pulsing green highlights)"
+        },
+        "attackTargets": {
+          "types": [
+            "array"
+          ],
+          "description": "Attack target positions (shown as pulsing red highlights)"
+        },
+        "hoveredTile": {
+          "types": [
+            "object"
+          ],
+          "description": "Hovered tile position"
+        },
+        "onTileClick": {
+          "types": [
+            "function"
+          ],
+          "description": "--- Event handlers ---"
+        },
+        "onUnitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Unit click handler"
+        },
+        "onTileHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Tile hover handler"
+        },
+        "onTileLeave": {
+          "types": [
+            "function"
+          ],
+          "description": "Tile leave handler"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "--- Rendering options ---"
+        },
+        "debug": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show debug grid lines and coordinates"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL tiled behind the isometric grid"
+        },
+        "showMinimap": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Toggle minimap overlay"
+        },
+        "enableCamera": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable camera pan/zoom controls"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Extra scale multiplier for unit draw size. 1 = default."
+        },
+        "getTerrainSprite": {
+          "types": [
+            "function"
+          ],
+          "description": "--- Asset resolution (project-agnostic) ---"
+        },
+        "getFeatureSprite": {
+          "types": [
+            "function"
+          ],
+          "description": "Resolve feature sprite URL from feature type key"
+        },
+        "getUnitSprite": {
+          "types": [
+            "function"
+          ],
+          "description": "Resolve unit static sprite URL"
+        },
+        "resolveUnitFrame": {
+          "types": [
+            "function"
+          ],
+          "description": "Resolve animated sprite sheet frame for a unit"
+        },
+        "effectSpriteUrls": {
+          "types": [
+            "array"
+          ],
+          "description": "Additional sprite URLs to preload (e.g., effect sprites)"
+        },
+        "onDrawEffects": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback to draw canvas effects after units"
+        },
+        "hasActiveEffects": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether there are active effects — keeps RAF loop alive"
         }
       }
     }

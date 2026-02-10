@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-09T10:45:55.417Z",
+  "exportedAt": "2026-02-10T04:12:02.501Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -137,19 +137,9 @@
       "importPath": "@/components/organisms/layout/DashboardGrid",
       "category": "layout"
     },
-    "game-canvas": {
-      "component": "GameCanvas",
-      "importPath": "@/components/organisms/game/GameCanvas",
-      "category": "game"
-    },
     "game-hud": {
       "component": "GameHud",
       "importPath": "@/components/organisms/game/GameHud",
-      "category": "game"
-    },
-    "game-controls": {
-      "component": "GameControls",
-      "importPath": "@/components/organisms/game/GameControls",
       "category": "game"
     },
     "game-menu": {
@@ -157,24 +147,9 @@
       "importPath": "@/components/organisms/game/GameMenu",
       "category": "game"
     },
-    "game-pause-overlay": {
-      "component": "GamePauseOverlay",
-      "importPath": "@/components/organisms/game/GamePauseOverlay",
-      "category": "game"
-    },
     "game-over-screen": {
       "component": "GameOverScreen",
       "importPath": "@/components/organisms/game/GameOverScreen",
-      "category": "game"
-    },
-    "level-select": {
-      "component": "LevelSelect",
-      "importPath": "@/components/organisms/game/LevelSelect",
-      "category": "game"
-    },
-    "tilemap-renderer": {
-      "component": "TilemapRenderer",
-      "importPath": "@/components/organisms/game/TilemapRenderer",
       "category": "game"
     },
     "inventory-panel": {
@@ -185,16 +160,6 @@
     "dialogue-box": {
       "component": "DialogueBox",
       "importPath": "@/components/organisms/game/DialogueBox",
-      "category": "game"
-    },
-    "input-listener": {
-      "component": "InputListener",
-      "importPath": "@/components/organisms/game/InputListener",
-      "category": "game"
-    },
-    "collision-detector": {
-      "component": "CollisionDetector",
-      "importPath": "@/components/organisms/game/CollisionDetector",
       "category": "game"
     },
     "runtime-debugger": {
@@ -654,6 +619,16 @@
       "component": "CodeViewer",
       "importPath": "@almadar/ui",
       "category": "display"
+    },
+    "canvas-effect": {
+      "component": "CanvasEffect",
+      "importPath": "@/components/organisms/CanvasEffect",
+      "category": "game"
+    },
+    "isometric-canvas": {
+      "component": "IsometricCanvas",
+      "importPath": "@/components/organisms/IsometricCanvas",
+      "category": "game"
     }
   }
 }
