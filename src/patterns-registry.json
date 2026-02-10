@@ -229,12 +229,6 @@
           ],
           "description": "Data array - primary prop for data"
         },
-        "type": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity type name for display"
-        },
         "isLoading": {
           "types": [
             "boolean"
@@ -337,6 +331,12 @@
             "string"
           ],
           "description": "Query singleton binding for filter/sort state. When provided, syncs with the query singleton for filtering and sorting. Example: \"@TaskQuery\""
+        },
+        "entityType": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity type name for display"
         }
       }
     },
@@ -3646,12 +3646,6 @@
           ],
           "description": "Maximum value (for calculating percentage) @default 100"
         },
-        "type": {
-          "types": [
-            "progressbartype"
-          ],
-          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'"
-        },
         "variant": {
           "types": [
             "progressbarvariant"
@@ -3699,6 +3693,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "progressType": {
+          "types": [
+            "progressbartype"
+          ],
+          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'"
         }
       }
     },
@@ -3731,12 +3731,6 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
-        "type": {
-          "types": [
-            "string"
-          ],
-          "description": "Input type - supports 'select' and 'textarea' in addition to standard types"
-        },
         "error": {
           "types": [
             "string"
@@ -3790,6 +3784,12 @@
             "react.changeeventhandler"
           ],
           "description": "onChange handler - accepts events from input, select, or textarea"
+        },
+        "inputType": {
+          "types": [
+            "string"
+          ],
+          "description": "Input type - supports 'select' and 'textarea' in addition to standard types"
         }
       }
     },
@@ -4705,13 +4705,6 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
-        "type": {
-          "types": [
-            "highlighttype"
-          ],
-          "description": "Type of highlight (determines color)",
-          "required": true
-        },
         "isActive": {
           "types": [
             "boolean"
@@ -4753,6 +4746,13 @@
             "node"
           ],
           "description": "Highlighted text content",
+          "required": true
+        },
+        "highlightType": {
+          "types": [
+            "highlighttype"
+          ],
+          "description": "Type of highlight (determines color)",
           "required": true
         }
       }
