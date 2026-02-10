@@ -1,7 +1,7 @@
-import patternsRegistry from './patterns-registry.json';
-import integratorsRegistry from './integrators-registry.json';
-import componentMapping from './component-mapping.json';
-import eventContracts from './event-contracts.json';
+import patternsRegistry from './patterns-registry.json' with { type: 'json' };
+import integratorsRegistry from './integrators-registry.json' with { type: 'json' };
+import componentMapping from './component-mapping.json' with { type: 'json' };
+import eventContracts from './event-contracts.json' with { type: 'json' };
 
 // Export both registries
 export { patternsRegistry, integratorsRegistry, componentMapping, eventContracts };
