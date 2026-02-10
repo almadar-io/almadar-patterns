@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T05:31:12.212Z",
+  "exportedAt": "2026-02-10T05:45:36.769Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8188,7 +8188,7 @@
           "types": [
             "number"
           ],
-          "description": "Optional intensity multiplier (1 = normal)"
+          "description": "Optional intensity multiplier (1 = normal, 2 = double size/brightness)"
         },
         "onComplete": {
           "types": [
@@ -8213,6 +8213,18 @@
             "error"
           ],
           "description": "Error state"
+        },
+        "effectSpriteUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Remote asset loading ---"
+        },
+        "assetBaseUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "Base URL for remote assets. Prepended to relative effectSpriteUrl paths."
         }
       }
     },
