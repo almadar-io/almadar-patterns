@@ -7802,6 +7802,772 @@
           "description": "Whether to show the minimal top bar (default: true)"
         }
       }
+    },
+    "chart": {
+      "type": "chart",
+      "category": "visualization",
+      "description": "Data visualization chart supporting bar, line, pie, area, and donut types",
+      "suggestedFor": [
+        "dashboards",
+        "analytics",
+        "data visualization",
+        "reporting"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Chart title"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "Chart subtitle or description"
+        },
+        "chartType": {
+          "types": [
+            "string"
+          ],
+          "description": "Chart type: bar, line, pie, area, donut"
+        },
+        "series": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Data series array with name, data points, and color"
+        },
+        "data": {
+          "types": [
+            "unknown",
+            "array"
+          ],
+          "description": "Simple data points for single-series charts"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Chart height in pixels"
+        },
+        "showLegend": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show chart legend"
+        },
+        "showValues": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show values on data points"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Action buttons with event emission"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "meter": {
+      "type": "meter",
+      "category": "visualization",
+      "description": "Gauge/meter component for displaying a value within a range with thresholds",
+      "suggestedFor": [
+        "dashboards",
+        "progress tracking",
+        "credit/quota displays",
+        "KPI indicators"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Current value",
+          "required": true
+        },
+        "min": {
+          "types": [
+            "number"
+          ],
+          "description": "Minimum value (default: 0)"
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum value (default: 100)"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Display label"
+        },
+        "unit": {
+          "types": [
+            "string"
+          ],
+          "description": "Unit suffix (e.g., %, MB, credits)"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Display variant: linear, radial, segmented"
+        },
+        "thresholds": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Color thresholds array with value, color, and optional label"
+        },
+        "segments": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of segments for segmented variant"
+        },
+        "showValue": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show the numeric value"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size for radial variant: sm, md, lg"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "timeline": {
+      "type": "timeline",
+      "category": "display",
+      "description": "Vertical timeline for displaying chronological events with status indicators",
+      "suggestedFor": [
+        "activity logs",
+        "process tracking",
+        "history views",
+        "workflow steps"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Timeline title"
+        },
+        "items": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Timeline items with id, title, description, date, status, tags"
+        },
+        "data": {
+          "types": [
+            "unknown",
+            "array"
+          ],
+          "description": "Schema-driven data array"
+        },
+        "fields": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Fields to display from schema data"
+        },
+        "itemActions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Actions available per timeline item"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "media-gallery": {
+      "type": "media-gallery",
+      "category": "media",
+      "description": "Grid gallery for images and media with lightbox, selection, and upload",
+      "suggestedFor": [
+        "photo galleries",
+        "image management",
+        "media libraries",
+        "portfolio displays"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Gallery title"
+        },
+        "items": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Media items with id, src, alt, thumbnail, caption"
+        },
+        "data": {
+          "types": [
+            "unknown",
+            "array"
+          ],
+          "description": "Schema-driven data array"
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of grid columns (2-6)"
+        },
+        "selectable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable item selection mode"
+        },
+        "showUpload": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show upload button"
+        },
+        "aspectRatio": {
+          "types": [
+            "string"
+          ],
+          "description": "Thumbnail aspect ratio: square, landscape, portrait"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Gallery-level action buttons"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "signature-pad": {
+      "type": "signature-pad",
+      "category": "form",
+      "description": "Canvas-based signature capture pad with draw, clear, and confirm actions",
+      "suggestedFor": [
+        "form signing",
+        "approval workflows",
+        "document signing",
+        "consent forms"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label above the signature pad"
+        },
+        "helperText": {
+          "types": [
+            "string"
+          ],
+          "description": "Helper text below the pad"
+        },
+        "strokeColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color for drawing"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Stroke width in pixels"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Pad height in pixels"
+        },
+        "readOnly": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the pad is read-only"
+        },
+        "value": {
+          "types": [
+            "string"
+          ],
+          "description": "Existing signature image URL"
+        },
+        "signEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event to emit on signature confirm"
+        },
+        "clearEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event to emit on signature clear"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven context"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "document-viewer": {
+      "type": "document-viewer",
+      "category": "display",
+      "description": "Document viewer for PDFs, text, HTML, and markdown with zoom and pagination",
+      "suggestedFor": [
+        "document management",
+        "PDF viewing",
+        "content preview",
+        "report viewing"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Document title"
+        },
+        "src": {
+          "types": [
+            "string"
+          ],
+          "description": "Document URL (for PDF/external documents)"
+        },
+        "content": {
+          "types": [
+            "string"
+          ],
+          "description": "Document content (for text/html/markdown)"
+        },
+        "documentType": {
+          "types": [
+            "string"
+          ],
+          "description": "Document type: pdf, text, html, markdown"
+        },
+        "currentPage": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "totalPages": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of pages"
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Viewer height"
+        },
+        "showToolbar": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show the toolbar"
+        },
+        "showDownload": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show download button"
+        },
+        "showPrint": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show print button"
+        },
+        "documents": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Multiple documents for tabbed view"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Custom action buttons"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "graph-canvas": {
+      "type": "graph-canvas",
+      "category": "visualization",
+      "description": "Force-directed graph visualization for node-link data with interactive zoom, pan, and layout",
+      "suggestedFor": [
+        "knowledge graphs",
+        "network visualization",
+        "relationship mapping",
+        "dependency graphs"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Graph title"
+        },
+        "nodes": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Graph nodes with id, label, group, color, size"
+        },
+        "edges": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Graph edges with source, target, label, weight"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas height in pixels"
+        },
+        "showLabels": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show node labels"
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable zoom/pan controls"
+        },
+        "draggable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable node dragging"
+        },
+        "layout": {
+          "types": [
+            "string"
+          ],
+          "description": "Layout algorithm: force, circular, grid"
+        },
+        "nodeClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event to emit when a node is clicked"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Custom action buttons"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "code-viewer": {
+      "type": "code-viewer",
+      "category": "display",
+      "description": "Code and diff viewer with line numbers, copy, word-wrap, and multi-file tabs",
+      "suggestedFor": [
+        "code display",
+        "diff viewing",
+        "schema inspection",
+        "log viewing"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Viewer title"
+        },
+        "code": {
+          "types": [
+            "string"
+          ],
+          "description": "Code content to display"
+        },
+        "language": {
+          "types": [
+            "string"
+          ],
+          "description": "Language label"
+        },
+        "diff": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Diff lines array for diff mode"
+        },
+        "oldValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Old value for auto-diff generation"
+        },
+        "newValue": {
+          "types": [
+            "string"
+          ],
+          "description": "New value for auto-diff generation"
+        },
+        "mode": {
+          "types": [
+            "string"
+          ],
+          "description": "Display mode: code, diff"
+        },
+        "showLineNumbers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show line numbers"
+        },
+        "showCopy": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show copy button"
+        },
+        "wordWrap": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable word wrap"
+        },
+        "maxHeight": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Max height before scrolling"
+        },
+        "files": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Multiple files for tabbed view"
+        },
+        "actions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Custom action buttons"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Error state"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
     }
   },
   "categories": [
@@ -7818,6 +8584,8 @@
     "debug",
     "meta",
     "component",
-    "template"
+    "template",
+    "visualization",
+    "media"
   ]
 }
