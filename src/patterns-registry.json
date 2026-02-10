@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T12:24:38.358Z",
+  "exportedAt": "2026-02-10T15:35:56.769Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8955,6 +8955,196 @@
             "string"
           ],
           "description": "className prop"
+        }
+      }
+    },
+    "heading": {
+      "type": "heading",
+      "category": "component",
+      "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
+      "suggestedFor": [
+        "typography"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "typographyvariant"
+          ],
+          "description": "Typography variant"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Heading level (1-6) - alternative to variant for headings"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Text color"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "Text alignment"
+        },
+        "weight": {
+          "types": [
+            "string"
+          ],
+          "description": "Font weight override"
+        },
+        "size": {
+          "types": [
+            "typographysize"
+          ],
+          "description": "Font size override"
+        },
+        "truncate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Truncate with ellipsis (single line)"
+        },
+        "overflow": {
+          "types": [
+            "string"
+          ],
+          "description": "Overflow handling mode"
+        },
+        "as": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Custom HTML element"
+        },
+        "id": {
+          "types": [
+            "string"
+          ],
+          "description": "HTML id attribute"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        },
+        "style": {
+          "types": [
+            "object"
+          ],
+          "description": "Inline style"
+        },
+        "content": {
+          "types": [
+            "node"
+          ],
+          "description": "Text content (alternative to children)"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children elements"
+        }
+      }
+    },
+    "text": {
+      "type": "text",
+      "category": "component",
+      "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
+      "suggestedFor": [
+        "typography"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "typographyvariant"
+          ],
+          "description": "Typography variant"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Heading level (1-6) - alternative to variant for headings"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Text color"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "Text alignment"
+        },
+        "weight": {
+          "types": [
+            "string"
+          ],
+          "description": "Font weight override"
+        },
+        "size": {
+          "types": [
+            "typographysize"
+          ],
+          "description": "Font size override"
+        },
+        "truncate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Truncate with ellipsis (single line)"
+        },
+        "overflow": {
+          "types": [
+            "string"
+          ],
+          "description": "Overflow handling mode"
+        },
+        "as": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Custom HTML element"
+        },
+        "id": {
+          "types": [
+            "string"
+          ],
+          "description": "HTML id attribute"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        },
+        "style": {
+          "types": [
+            "object"
+          ],
+          "description": "Inline style"
+        },
+        "content": {
+          "types": [
+            "node"
+          ],
+          "description": "Text content (alternative to children)"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children elements"
         }
       }
     }
