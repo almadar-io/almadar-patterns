@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T04:12:02.501Z",
+  "exportedAt": "2026-02-10T05:31:12.212Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8394,6 +8394,18 @@
             "boolean"
           ],
           "description": "Whether there are active effects — keeps RAF loop alive"
+        },
+        "assetBaseUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Remote asset loading ---"
+        },
+        "assetManifest": {
+          "types": [
+            "object"
+          ],
+          "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve."
         }
       }
     }
