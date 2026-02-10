@@ -614,6 +614,46 @@
       "component": "GameShell",
       "importPath": "@/components/templates/GameShell",
       "category": "template"
+    },
+    "chart": {
+      "component": "Chart",
+      "importPath": "@almadar/ui",
+      "category": "visualization"
+    },
+    "meter": {
+      "component": "Meter",
+      "importPath": "@almadar/ui",
+      "category": "visualization"
+    },
+    "timeline": {
+      "component": "Timeline",
+      "importPath": "@almadar/ui",
+      "category": "display"
+    },
+    "media-gallery": {
+      "component": "MediaGallery",
+      "importPath": "@almadar/ui",
+      "category": "media"
+    },
+    "signature-pad": {
+      "component": "SignaturePad",
+      "importPath": "@almadar/ui",
+      "category": "form"
+    },
+    "document-viewer": {
+      "component": "DocumentViewer",
+      "importPath": "@almadar/ui",
+      "category": "display"
+    },
+    "graph-canvas": {
+      "component": "GraphCanvas",
+      "importPath": "@almadar/ui",
+      "category": "visualization"
+    },
+    "code-viewer": {
+      "component": "CodeViewer",
+      "importPath": "@almadar/ui",
+      "category": "display"
     }
   }
 }
