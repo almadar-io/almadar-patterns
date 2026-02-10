@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T05:45:36.769Z",
+  "exportedAt": "2026-02-10T12:24:38.358Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -881,62 +881,188 @@
     "form-section": {
       "type": "form-section",
       "category": "form",
-      "description": "Group of related input fields",
+      "description": "Alias for form — Complete form with fields and actions",
       "suggestedFor": [
         "create forms",
         "edit forms",
-        "settings"
+        "data entry"
       ],
-      "typicalSize": "small",
+      "typicalSize": "medium",
       "propsSchema": {
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Section title"
-        },
-        "description": {
-          "types": [
-            "string"
-          ],
-          "description": "Section description"
-        },
         "children": {
           "types": [
             "node"
           ],
-          "description": "Form fields",
-          "required": true
+          "description": "Form fields (traditional React children)"
         },
-        "collapsible": {
+        "onSubmit": {
           "types": [
-            "boolean"
+            "function",
+            "string"
           ],
-          "description": "Collapsible"
+          "description": "Submit handler - receives form data, or event name string for trait dispatch"
         },
-        "defaultCollapsed": {
+        "onCancel": {
           "types": [
-            "boolean"
+            "function",
+            "string"
           ],
-          "description": "Default collapsed state"
+          "description": "Cancel handler - function or event name string for trait dispatch"
         },
-        "card": {
+        "layout": {
           "types": [
-            "boolean"
+            "string"
           ],
-          "description": "Use card wrapper"
+          "description": "Form layout"
         },
-        "columns": {
+        "gap": {
           "types": [
-            "number"
+            "string"
           ],
-          "description": "Grid columns for fields"
+          "description": "Gap between fields"
         },
         "className": {
           "types": [
             "string"
           ],
-          "description": "className prop"
+          "description": "Additional CSS classes"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Schema-based props"
+        },
+        "mode": {
+          "types": [
+            "string"
+          ],
+          "description": "Form mode - 'create' for new records, 'edit' for updating existing"
+        },
+        "fields": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Fields definition (schema format) - accepts readonly for generated const arrays"
+        },
+        "initialData": {
+          "types": [
+            "object",
+            "unknown"
+          ],
+          "description": "Initial form data"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
+        },
+        "submitLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "Submit button label"
+        },
+        "cancelLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "Cancel button label (if provided, shows cancel button)"
+        },
+        "showCancel": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show cancel button (defaults to true for schema forms)"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Form title (used by ModalSlot to extract title)"
+        },
+        "submitEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event dispatch props (for trait state machine integration)"
+        },
+        "cancelEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event to dispatch on cancel (defaults to 'CANCEL')"
+        },
+        "relationsData": {
+          "types": [
+            "object"
+          ],
+          "description": "Relation data props"
+        },
+        "relationsLoading": {
+          "types": [
+            "object"
+          ],
+          "description": "Loading state for relation data: { fieldName: boolean }"
+        },
+        "conditionalFields": {
+          "types": [
+            "object",
+            "boolean"
+          ],
+          "description": "Inspection form extensions"
+        },
+        "hiddenCalculations": {
+          "types": [
+            "array",
+            "boolean"
+          ],
+          "description": "Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately)"
+        },
+        "violationTriggers": {
+          "types": [
+            "array",
+            "boolean"
+          ],
+          "description": "Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately)"
+        },
+        "evaluationContext": {
+          "types": [
+            "formevaluationcontext",
+            "object"
+          ],
+          "description": "Context for S-expression evaluation - accepts flexible types from generated code"
+        },
+        "sections": {
+          "types": [
+            "array"
+          ],
+          "description": "Nested form sections with optional conditions"
+        },
+        "onFieldChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when any field value changes"
+        },
+        "configPath": {
+          "types": [
+            "string"
+          ],
+          "description": "Config path for form configuration (schema-driven)"
+        },
+        "repeatable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the form supports repeatable entries"
         }
       }
     },
@@ -8182,7 +8308,7 @@
           "types": [
             "number"
           ],
-          "description": "Duration in ms before auto-dismiss (default 800)"
+          "description": "Duration in ms before auto-dismiss (default 2000 for canvas, 800 for emoji)"
         },
         "intensity": {
           "types": [
@@ -8225,6 +8351,24 @@
             "string"
           ],
           "description": "Base URL for remote assets. Prepended to relative effectSpriteUrl paths."
+        },
+        "assetManifest": {
+          "types": [
+            "effectassetmanifest"
+          ],
+          "description": "Full effect asset manifest for the sprite particle engine. When provided, enables the canvas-based particle system."
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas width (default 400)"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas height (default 300)"
         }
       }
     },
@@ -8418,6 +8562,399 @@
             "object"
           ],
           "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve."
+        }
+      }
+    },
+    "battle-template": {
+      "type": "battle-template",
+      "category": "template",
+      "description": "BattleTemplate  Generalized tactical battle template composing IsometricCanvas from almadar-ui. Provides turn-based phase management, movement animation, valid-move/attack-target calculation, screen shake/flash, and a game-over overlay.  Game-specific UI (combat log, trait viewer, damage popups, etc.) is injected via render-prop slots so this template remains project-agnostic.",
+      "suggestedFor": [
+        "battle",
+        "template",
+        "battle template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "initialUnits": {
+          "types": [
+            "array"
+          ],
+          "description": "Initial units for the battle",
+          "required": true
+        },
+        "tiles": {
+          "types": [
+            "array"
+          ],
+          "description": "Isometric tiles (pre-resolved with terrainSprite)",
+          "required": true
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale"
+        },
+        "boardWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Board width for bounds checking"
+        },
+        "boardHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "Board height for bounds checking"
+        },
+        "assetManifest": {
+          "types": [
+            "object"
+          ],
+          "description": "Asset manifest for IsometricCanvas"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL for canvas"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier"
+        },
+        "header": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Slots --"
+        },
+        "sidebar": {
+          "types": [
+            "function"
+          ],
+          "description": "Sidebar content (combat log, unit roster, etc.)"
+        },
+        "actions": {
+          "types": [
+            "function"
+          ],
+          "description": "Floating action buttons"
+        },
+        "overlay": {
+          "types": [
+            "function"
+          ],
+          "description": "Floating overlays above the canvas (damage popups, tooltips)"
+        },
+        "gameOverOverlay": {
+          "types": [
+            "function"
+          ],
+          "description": "Game-over screen overlay"
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "-- Obstacle features --"
+        },
+        "onAttack": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Callbacks --"
+        },
+        "onGameEnd": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when battle ends"
+        },
+        "onUnitMove": {
+          "types": [
+            "function"
+          ],
+          "description": "Called after a unit moves"
+        },
+        "calculateDamage": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom combat damage calculator"
+        },
+        "onDrawEffects": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Canvas pass-through --"
+        },
+        "hasActiveEffects": {
+          "types": [
+            "boolean"
+          ],
+          "description": "hasActiveEffects prop"
+        },
+        "effectSpriteUrls": {
+          "types": [
+            "array"
+          ],
+          "description": "effectSpriteUrls prop"
+        },
+        "resolveUnitFrame": {
+          "types": [
+            "function"
+          ],
+          "description": "resolveUnitFrame prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "castle-template": {
+      "type": "castle-template",
+      "category": "template",
+      "description": "CastleTemplate  Generalized castle / base-management template composing IsometricCanvas from almadar-ui. Renders an isometric courtyard/base view and exposes a side-panel area via slots for game-specific UI (building details, recruitment, garrison).",
+      "suggestedFor": [
+        "castle",
+        "template",
+        "castle template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "tiles": {
+          "types": [
+            "array"
+          ],
+          "description": "Isometric tiles (pre-resolved with terrainSprite)",
+          "required": true
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "Building features rendered on the grid"
+        },
+        "units": {
+          "types": [
+            "array"
+          ],
+          "description": "Garrison / stationed units on the grid"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale"
+        },
+        "assetManifest": {
+          "types": [
+            "object"
+          ],
+          "description": "Asset manifest for IsometricCanvas"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL"
+        },
+        "header": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Slots --"
+        },
+        "sidePanel": {
+          "types": [
+            "function"
+          ],
+          "description": "Side panel content (buildings list, recruit tab, garrison tab)"
+        },
+        "overlay": {
+          "types": [
+            "function"
+          ],
+          "description": "Canvas overlay (hover tooltips, etc.)"
+        },
+        "footer": {
+          "types": [
+            "function"
+          ],
+          "description": "Bottom bar (income summary, etc.)"
+        },
+        "onFeatureClick": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Callbacks --"
+        },
+        "onUnitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a unit is clicked"
+        },
+        "onTileClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when any tile is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "world-map-template": {
+      "type": "world-map-template",
+      "category": "template",
+      "description": "WorldMapTemplate  Generalized strategic world-map template composing IsometricCanvas from almadar-ui. Renders an isometric hex/iso map with hero selection, movement animation, and encounter callbacks. Game-specific panels (hero detail, hero lists, resource bars) are injected via render-prop slots.",
+      "suggestedFor": [
+        "world",
+        "map",
+        "template",
+        "world map template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "hexes": {
+          "types": [
+            "array"
+          ],
+          "description": "All map hexes (with pre-resolved terrain sprites)",
+          "required": true
+        },
+        "heroes": {
+          "types": [
+            "array"
+          ],
+          "description": "Heroes on the map",
+          "required": true
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "Features rendered on tiles"
+        },
+        "selectedHeroId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected hero ID"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas render scale"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier"
+        },
+        "assetManifest": {
+          "types": [
+            "object"
+          ],
+          "description": "Asset manifest for IsometricCanvas"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL"
+        },
+        "allowMoveAllHeroes": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Allow selecting / moving ALL heroes (including enemy). For testing."
+        },
+        "isInRange": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom movement range validator"
+        },
+        "header": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Slots --"
+        },
+        "sidePanel": {
+          "types": [
+            "function"
+          ],
+          "description": "Side panel (hero detail, hero lists, etc.)"
+        },
+        "overlay": {
+          "types": [
+            "function"
+          ],
+          "description": "Canvas overlay (tooltips, popups)"
+        },
+        "footer": {
+          "types": [
+            "function"
+          ],
+          "description": "Footer"
+        },
+        "onHeroSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "-- Callbacks --"
+        },
+        "onHeroMove": {
+          "types": [
+            "function"
+          ],
+          "description": "onHeroMove prop"
+        },
+        "onBattleEncounter": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when hero clicks an enemy hero tile"
+        },
+        "onFeatureEnter": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when hero enters a feature hex (castle, resource, etc.)"
+        },
+        "effectSpriteUrls": {
+          "types": [
+            "array"
+          ],
+          "description": "-- Canvas pass-through --"
+        },
+        "resolveUnitFrame": {
+          "types": [
+            "function"
+          ],
+          "description": "resolveUnitFrame prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
         }
       }
     }

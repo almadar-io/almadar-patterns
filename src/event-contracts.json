@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T05:45:36.769Z",
+  "exportedAt": "2026-02-10T12:24:38.358Z",
   "contracts": {
     "form": {
       "emits": [
@@ -42,17 +42,31 @@
     "form-section": {
       "emits": [
         {
-          "event": "SAVE",
-          "trigger": "submit",
+          "event": "GLOBAL_VARIABLE_SET",
+          "trigger": "action",
           "payload": {
-            "type": "FormData"
+            "type": "object"
           }
         },
         {
-          "event": "CANCEL",
-          "trigger": "click",
+          "event": "VIOLATION_DETECTED",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
+          }
+        },
+        {
+          "event": "FIELD_CHANGED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
           }
         }
       ],
@@ -60,7 +74,7 @@
         "SAVE",
         "CANCEL"
       ],
-      "entityAware": false
+      "entityAware": true
     },
     "form-actions": {
       "emits": [

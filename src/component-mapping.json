@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-10T05:45:36.769Z",
+  "exportedAt": "2026-02-10T12:24:38.358Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -38,7 +38,7 @@
       "category": "form"
     },
     "form-section": {
-      "component": "FormSection",
+      "component": "Form",
       "importPath": "@/components/organisms/Form",
       "category": "form"
     },
@@ -639,6 +639,21 @@
       "component": "IsometricCanvas",
       "importPath": "@/components/organisms/IsometricCanvas",
       "category": "game"
+    },
+    "battle-template": {
+      "component": "BattleTemplate",
+      "importPath": "@/components/templates/BattleTemplate",
+      "category": "template"
+    },
+    "castle-template": {
+      "component": "CastleTemplate",
+      "importPath": "@/components/templates/CastleTemplate",
+      "category": "template"
+    },
+    "world-map-template": {
+      "component": "WorldMapTemplate",
+      "importPath": "@/components/templates/WorldMapTemplate",
+      "category": "template"
     }
   }
 }
