@@ -360,6 +360,16 @@
       "importPath": "@/components/atoms/Stack",
       "category": "component"
     },
+    "vstack": {
+      "component": "VStack",
+      "importPath": "@/components/atoms/Stack",
+      "category": "component"
+    },
+    "hstack": {
+      "component": "HStack",
+      "importPath": "@/components/atoms/Stack",
+      "category": "component"
+    },
     "text-highlight": {
       "component": "TextHighlight",
       "importPath": "@/components/atoms/TextHighlight",
