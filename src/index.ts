@@ -70,3 +70,12 @@ export {
   getAllPatternTypes,
   getPatternMetadata,
 } from './helpers/prompt-helpers.js';
+
+// Export pattern recommender for @almadar/agent design tool
+export {
+  recommendPatterns,
+  buildRecommendationContext,
+  formatRecommendationsForPrompt,
+  type RecommendationContext,
+  type PatternRecommendation,
+} from './helpers/pattern-recommender.js';
