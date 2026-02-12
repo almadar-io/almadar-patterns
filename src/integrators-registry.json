@@ -494,8 +494,7 @@
           }
         }
       ]
-    }
-  },
+    },
     "github": {
       "name": "github",
       "description": "GitHub integration - Git operations and GitHub REST API",
