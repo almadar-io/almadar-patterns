@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-12T05:10:54.999Z",
+  "exportedAt": "2026-02-12T05:46:27.709Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -1349,6 +1349,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "stepClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative step click event — emits UI:{stepClickEvent} with { stepIndex }"
         }
       }
     },
@@ -1621,6 +1627,18 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "pageChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative page change event — emits UI:{pageChangeEvent} with { page }"
+        },
+        "pageSizeChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative page size change event — emits UI:{pageSizeChangeEvent} with { pageSize }"
         }
       }
     },
@@ -1688,6 +1706,12 @@
             "string"
           ],
           "description": "Variant for color styling"
+        },
+        "actionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
         }
       }
     },
@@ -1759,6 +1783,12 @@
             "string"
           ],
           "description": "className prop"
+        },
+        "retryEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative retry event — emits UI:{retryEvent} via eventBus when retry button is clicked"
         }
       }
     },
@@ -1834,6 +1864,18 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "dismissEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when toast is dismissed"
+        },
+        "actionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
         }
       }
     },
@@ -2074,6 +2116,12 @@
             "string"
           ],
           "description": "className prop"
+        },
+        "closeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when modal should close"
         }
       }
     },
@@ -2154,6 +2202,12 @@
             "string"
           ],
           "description": "Additional class name"
+        },
+        "closeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when drawer should close"
         }
       }
     },
@@ -2924,8 +2978,7 @@
           "types": [
             "function"
           ],
-          "description": "Called when a slot is selected",
-          "required": true
+          "description": "Called when a slot is selected"
         },
         "onUseItem": {
           "types": [
@@ -2938,6 +2991,24 @@
             "function"
           ],
           "description": "Called when an item is dropped"
+        },
+        "selectSlotEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{selectSlotEvent} with { index } when a slot is selected"
+        },
+        "useItemEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{useItemEvent} with { item } when an item is used"
+        },
+        "dropItemEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{dropItemEvent} with { item } when an item is dropped"
         },
         "showTooltips": {
           "types": [
@@ -3006,6 +3077,24 @@
             "function"
           ],
           "description": "Called when dialogue is advanced (no choices)"
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{completeEvent} when text animation completes"
+        },
+        "choiceEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{choiceEvent} with { choice } when a choice is selected"
+        },
+        "advanceEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{advanceEvent} when dialogue is advanced"
         },
         "className": {
           "types": [
@@ -3215,6 +3304,18 @@
             "function"
           ],
           "description": "Click handler"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
         }
       }
     },
@@ -3331,6 +3432,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name — emits UI:{action} via eventBus on card click"
         }
       }
     },
@@ -3755,6 +3862,12 @@
             "string"
           ],
           "description": "className prop"
+        },
+        "dismissEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when alert is dismissed"
         }
       }
     },
@@ -3958,6 +4071,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "toggleEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative toggle event — emits UI:{toggleEvent} with { itemId, isOpen }"
         }
       }
     },
@@ -4302,6 +4421,12 @@
             "boolean"
           ],
           "description": "blur prop"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name — emits UI:{action} via eventBus on click"
         }
       }
     },
@@ -4403,6 +4528,18 @@
             "number"
           ],
           "description": "Tab index for focus management"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
         }
       }
     },
@@ -4417,6 +4554,13 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "highlightType": {
+          "types": [
+            "highlighttype"
+          ],
+          "description": "Type of highlight (determines color)",
+          "required": true
+        },
         "isActive": {
           "types": [
             "boolean"
@@ -4460,12 +4604,17 @@
           "description": "Highlighted text content",
           "required": true
         },
-        "highlightType": {
+        "action": {
           "types": [
-            "highlighttype"
+            "string"
           ],
-          "description": "Type of highlight (determines color)",
-          "required": true
+          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+        },
+        "hoverEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false }"
         }
       }
     },
@@ -4647,6 +4796,18 @@
             "function"
           ],
           "description": "Called when button is released"
+        },
+        "pressEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name emitted on press via useEventBus"
+        },
+        "releaseEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name emitted on release via useEventBus"
         },
         "pressed": {
           "types": [
@@ -4879,6 +5040,12 @@
             "function"
           ],
           "description": "Optional onClick handler"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name emitted on click via useEventBus"
         }
       }
     },
@@ -5399,6 +5566,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "closeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when panel should close"
         }
       }
     },
@@ -5480,8 +5653,13 @@
           "types": [
             "function"
           ],
-          "description": "Called when a button is pressed/released",
-          "required": true
+          "description": "Called when a button is pressed/released"
+        },
+        "actionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name emitted on action via useEventBus"
         },
         "layout": {
           "types": [
@@ -5523,8 +5701,13 @@
           "types": [
             "function"
           ],
-          "description": "Called when a direction is pressed/released",
-          "required": true
+          "description": "Called when a direction is pressed/released"
+        },
+        "directionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name emitted on direction press/release via useEventBus"
         },
         "size": {
           "types": [
@@ -8358,6 +8541,12 @@
           ],
           "description": "Callback when the effect animation completes"
         },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{completeEvent} when the effect animation completes"
+        },
         "className": {
           "types": [
             "string"
@@ -8508,6 +8697,30 @@
             "function"
           ],
           "description": "Tile leave handler"
+        },
+        "tileClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Declarative event props ---"
+        },
+        "unitClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{unitClickEvent} with { unitId } on unit click"
+        },
+        "tileHoverEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{tileHoverEvent} with { x, y } on tile hover"
+        },
+        "tileLeaveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: emits UI:{tileLeaveEvent} with {} on tile leave"
         },
         "scale": {
           "types": [
