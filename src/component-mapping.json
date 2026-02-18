@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-12T06:50:46.522Z",
+  "exportedAt": "2026-02-18T08:33:19.996Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -550,19 +550,9 @@
       "importPath": "@/components/templates/CounterTemplate",
       "category": "template"
     },
-    "crud-template": {
-      "component": "CrudTemplate",
-      "importPath": "@/components/templates/CrudTemplate",
-      "category": "template"
-    },
     "dashboard-layout": {
       "component": "DashboardLayout",
       "importPath": "@/components/templates/DashboardLayout",
-      "category": "template"
-    },
-    "form-template": {
-      "component": "FormTemplate",
-      "importPath": "@/components/templates/FormTemplate",
       "category": "template"
     },
     "game-template": {
@@ -573,16 +563,6 @@
     "generic-app-template": {
       "component": "GenericAppTemplate",
       "importPath": "@/components/templates/GenericAppTemplate",
-      "category": "template"
-    },
-    "list-template": {
-      "component": "ListTemplate",
-      "importPath": "@/components/templates/ListTemplate",
-      "category": "template"
-    },
-    "settings-template": {
-      "component": "SettingsTemplate",
-      "importPath": "@/components/templates/SettingsTemplate",
       "category": "template"
     },
     "game-shell": {
@@ -653,6 +633,101 @@
     "world-map-template": {
       "component": "WorldMapTemplate",
       "importPath": "@/components/templates/WorldMapTemplate",
+      "category": "template"
+    },
+    "battle-board": {
+      "component": "BattleBoard",
+      "importPath": "@/components/organisms/BattleBoard",
+      "category": "game"
+    },
+    "castle-board": {
+      "component": "CastleBoard",
+      "importPath": "@/components/organisms/CastleBoard",
+      "category": "game"
+    },
+    "game-canvas3-d": {
+      "component": "GameCanvas3D",
+      "importPath": "@/components/organisms/GameCanvas3D",
+      "category": "game"
+    },
+    "world-map-board": {
+      "component": "WorldMapBoard",
+      "importPath": "@/components/organisms/WorldMapBoard",
+      "category": "game"
+    },
+    "collapsible-section": {
+      "component": "CollapsibleSection",
+      "importPath": "@/components/organisms/CollapsibleSection",
+      "category": "display"
+    },
+    "camera3-d": {
+      "component": "Camera3D",
+      "importPath": "@/components/organisms/Camera3D",
+      "category": "display"
+    },
+    "lighting3-d": {
+      "component": "Lighting3D",
+      "importPath": "@/components/organisms/Lighting3D",
+      "category": "display"
+    },
+    "scene3-d": {
+      "component": "Scene3D",
+      "importPath": "@/components/organisms/Scene3D",
+      "category": "display"
+    },
+    "canvas3-d-error-boundary": {
+      "component": "Canvas3DErrorBoundary",
+      "importPath": "@/components/organisms/Canvas3DErrorBoundary",
+      "category": "state"
+    },
+    "canvas3-d-loading-state": {
+      "component": "Canvas3DLoadingState",
+      "importPath": "@/components/organisms/Canvas3DLoadingState",
+      "category": "display"
+    },
+    "model-loader": {
+      "component": "ModelLoader",
+      "importPath": "@/components/organisms/ModelLoader",
+      "category": "display"
+    },
+    "physics-object3-d": {
+      "component": "PhysicsObject3D",
+      "importPath": "@/components/organisms/PhysicsObject3D",
+      "category": "display"
+    },
+    "feature-renderer": {
+      "component": "FeatureRenderer",
+      "importPath": "@/components/organisms/FeatureRenderer",
+      "category": "display"
+    },
+    "feature-renderer3-d": {
+      "component": "FeatureRenderer3D",
+      "importPath": "@/components/organisms/FeatureRenderer3D",
+      "category": "display"
+    },
+    "tile-renderer": {
+      "component": "TileRenderer",
+      "importPath": "@/components/organisms/TileRenderer",
+      "category": "game"
+    },
+    "unit-renderer": {
+      "component": "UnitRenderer",
+      "importPath": "@/components/organisms/UnitRenderer",
+      "category": "display"
+    },
+    "game-canvas3-d-battle-template": {
+      "component": "GameCanvas3DBattleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
+      "category": "template"
+    },
+    "game-canvas3-d-castle-template": {
+      "component": "GameCanvas3DCastleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
+      "category": "template"
+    },
+    "game-canvas3-d-world-map-template": {
+      "component": "GameCanvas3DWorldMapTemplate",
+      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
       "category": "template"
     },
     "heading": {

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-12T06:50:46.522Z",
+  "exportedAt": "2026-02-18T08:33:19.996Z",
   "contracts": {
     "form": {
       "emits": [
@@ -448,7 +448,7 @@
         "CONFIRM",
         "CANCEL"
       ],
-      "entityAware": false
+      "entityAware": true
     },
     "master-detail": {
       "emits": [
