@@ -894,7 +894,7 @@
     "form-section": {
       "type": "form-section",
       "category": "form",
-      "description": "Alias for form — Complete form with fields and actions",
+      "description": "Alias for form \u2014 Complete form with fields and actions",
       "suggestedFor": [
         "create forms",
         "edit forms",
@@ -1367,7 +1367,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative step click event — emits UI:{stepClickEvent} with { stepIndex }"
+          "description": "Declarative step click event \u2014 emits UI:{stepClickEvent} with { stepIndex }"
         }
       }
     },
@@ -1657,13 +1657,13 @@
           "types": [
             "string"
           ],
-          "description": "Declarative page change event — emits UI:{pageChangeEvent} with { page }"
+          "description": "Declarative page change event \u2014 emits UI:{pageChangeEvent} with { page }"
         },
         "pageSizeChangeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative page size change event — emits UI:{pageSizeChangeEvent} with { pageSize }"
+          "description": "Declarative page size change event \u2014 emits UI:{pageSizeChangeEvent} with { pageSize }"
         }
       }
     },
@@ -1736,7 +1736,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
+          "description": "Declarative action event \u2014 emits UI:{actionEvent} via eventBus when action button is clicked"
         }
       }
     },
@@ -1813,7 +1813,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative retry event — emits UI:{retryEvent} via eventBus when retry button is clicked"
+          "description": "Declarative retry event \u2014 emits UI:{retryEvent} via eventBus when retry button is clicked"
         }
       }
     },
@@ -1894,13 +1894,13 @@
           "types": [
             "string"
           ],
-          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when toast is dismissed"
+          "description": "Declarative dismiss event \u2014 emits UI:{dismissEvent} via eventBus when toast is dismissed"
         },
         "actionEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
+          "description": "Declarative action event \u2014 emits UI:{actionEvent} via eventBus when action button is clicked"
         }
       }
     },
@@ -2146,7 +2146,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when modal should close"
+          "description": "Declarative close event \u2014 emits UI:{closeEvent} via eventBus when modal should close"
         }
       }
     },
@@ -2232,7 +2232,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when drawer should close"
+          "description": "Declarative close event \u2014 emits UI:{closeEvent} via eventBus when drawer should close"
         }
       }
     },
@@ -2344,6 +2344,18 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "confirmEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "State-machine event name to emit when the confirm button is clicked"
+        },
+        "cancelEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "State-machine event name to emit when the cancel button is clicked"
         }
       }
     },
@@ -2522,7 +2534,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         },
         "actionPayload": {
           "types": [
@@ -2534,7 +2546,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false } on mouseEnter/mouseLeave"
+          "description": "Declarative hover event \u2014 emits UI:{hoverEvent} with { hovered: true/false } on mouseEnter/mouseLeave"
         }
       }
     },
@@ -3229,7 +3241,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         },
         "actionPayload": {
           "types": [
@@ -3346,7 +3358,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         },
         "actionPayload": {
           "types": [
@@ -3474,7 +3486,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on card click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on card click"
         }
       }
     },
@@ -3904,7 +3916,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when alert is dismissed"
+          "description": "Declarative dismiss event \u2014 emits UI:{dismissEvent} via eventBus when alert is dismissed"
         }
       }
     },
@@ -4113,7 +4125,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative toggle event — emits UI:{toggleEvent} with { itemId, isOpen }"
+          "description": "Declarative toggle event \u2014 emits UI:{toggleEvent} with { itemId, isOpen }"
         }
       }
     },
@@ -4463,7 +4475,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         }
       }
     },
@@ -4570,7 +4582,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         },
         "actionPayload": {
           "types": [
@@ -4645,13 +4657,13 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name \u2014 emits UI:{action} via eventBus on click"
         },
         "hoverEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false }"
+          "description": "Declarative hover event \u2014 emits UI:{hoverEvent} with { hovered: true/false }"
         }
       }
     },
@@ -5608,7 +5620,7 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when panel should close"
+          "description": "Declarative close event \u2014 emits UI:{closeEvent} via eventBus when panel should close"
         }
       }
     },
@@ -7221,7 +7233,7 @@
     "game-shell": {
       "type": "game-shell",
       "category": "template",
-      "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients — no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
+      "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients \u2014 no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
       "suggestedFor": [
         "game",
         "shell",
@@ -8157,7 +8169,7 @@
     "isometric-canvas": {
       "type": "isometric-canvas",
       "category": "game",
-      "description": "IsometricCanvas  Core isometric game renderer. Maps to the `game-canvas` pattern. Adapted from projects/trait-wars/design-system/organisms/IsometricGameCanvas.tsx with full closed-circuit pattern compliance (className, isLoading, error, entity).  Architecture: - 2:1 diamond isometric projection - Painter's algorithm (tile → feature → unit depth sort) - Camera pan/zoom with lerp - Off-screen culling - Minimap on separate canvas - Sprite sheet animation via resolveUnitFrame - Event bus–friendly handlers (onTileClick, onUnitClick, etc.)",
+      "description": "IsometricCanvas  Core isometric game renderer. Maps to the `game-canvas` pattern. Adapted from projects/trait-wars/design-system/organisms/IsometricGameCanvas.tsx with full closed-circuit pattern compliance (className, isLoading, error, entity).  Architecture: - 2:1 diamond isometric projection - Painter's algorithm (tile \u2192 feature \u2192 unit depth sort) - Camera pan/zoom with lerp - Off-screen culling - Minimap on separate canvas - Sprite sheet animation via resolveUnitFrame - Event bus\u2013friendly handlers (onTileClick, onUnitClick, etc.)",
       "suggestedFor": [
         "isometric",
         "canvas",
@@ -8361,7 +8373,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether there are active effects — keeps RAF loop alive"
+          "description": "Whether there are active effects \u2014 keeps RAF loop alive"
         },
         "assetBaseUrl": {
           "types": [
