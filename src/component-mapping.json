@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-18T08:33:19.996Z",
+  "exportedAt": "2026-02-20T13:47:25.106Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -739,6 +739,46 @@
       "component": "Typography",
       "importPath": "@/components/atoms/Typography",
       "category": "component"
+    },
+    "state-indicator": {
+      "component": "StateIndicator",
+      "importPath": "@/components/atoms/StateIndicator",
+      "category": "display"
+    },
+    "error-boundary": {
+      "component": "ErrorBoundary",
+      "importPath": "@/components/molecules/ErrorBoundary",
+      "category": "state"
+    },
+    "skeleton": {
+      "component": "Skeleton",
+      "importPath": "@/components/molecules/Skeleton",
+      "category": "component"
+    },
+    "game-audio-provider": {
+      "component": "GameAudioProvider",
+      "importPath": "@/components/organisms/GameAudioProvider",
+      "category": "game"
+    },
+    "game-audio-toggle": {
+      "component": "GameAudioToggle",
+      "importPath": "@/components/organisms/GameAudioToggle",
+      "category": "game"
+    },
+    "trait-slot": {
+      "component": "TraitSlot",
+      "importPath": "@/components/organisms/TraitSlot",
+      "category": "layout"
+    },
+    "trait-state-viewer": {
+      "component": "TraitStateViewer",
+      "importPath": "@/components/organisms/TraitStateViewer",
+      "category": "display"
+    },
+    "uncontrolled-battle-board": {
+      "component": "UncontrolledBattleBoard",
+      "importPath": "@/components/organisms/UncontrolledBattleBoard",
+      "category": "game"
     }
   }
 }

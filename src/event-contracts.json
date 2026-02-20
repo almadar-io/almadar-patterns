@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-18T08:33:19.996Z",
+  "exportedAt": "2026-02-20T13:47:25.106Z",
   "contracts": {
     "form": {
       "emits": [
@@ -100,7 +100,35 @@
           }
         },
         {
+          "event": "DESELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SORT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
           "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "PAGINATE",
           "trigger": "action",
           "payload": {
             "type": "object"
@@ -114,20 +142,18 @@
     "entity-cards": {
       "emits": [
         {
+          "event": "PAGINATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        },
-        {
-          "event": "SELECT",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -137,20 +163,25 @@
     "entity-list": {
       "emits": [
         {
+          "event": "SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DESELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
           "event": "VIEW",
           "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        },
-        {
-          "event": "SELECT",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -158,9 +189,17 @@
       "configDriven": true
     },
     "detail-panel": {
-      "emits": [],
+      "emits": [
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "page-header": {
       "emits": [
@@ -174,7 +213,7 @@
         }
       ],
       "requires": [],
-      "entityAware": false,
+      "entityAware": true,
       "configDriven": true
     },
     "filter-group": {
@@ -825,7 +864,7 @@
         }
       ],
       "requires": [],
-      "entityAware": false
+      "entityAware": true
     },
     "modal-slot": {
       "emits": [
@@ -845,7 +884,7 @@
         }
       ],
       "requires": [],
-      "entityAware": false
+      "entityAware": true
     },
     "toast-slot": {
       "emits": [
@@ -865,7 +904,7 @@
         }
       ],
       "requires": [],
-      "entityAware": false
+      "entityAware": true
     },
     "code-viewer": {
       "emits": [
@@ -918,6 +957,47 @@
         },
         {
           "event": "MEDIA_UPLOAD",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "table": {
+      "emits": [
+        {
+          "event": "SORT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "DESELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "PAGINATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "SEARCH",
           "trigger": "action",
           "payload": {
             "type": "object"
