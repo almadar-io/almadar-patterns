@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-20T13:47:25.106Z",
+  "exportedAt": "2026-02-23T00:12:23.196Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -730,16 +730,6 @@
       "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
       "category": "template"
     },
-    "heading": {
-      "component": "Typography",
-      "importPath": "@/components/atoms/Typography",
-      "category": "component"
-    },
-    "text": {
-      "component": "Typography",
-      "importPath": "@/components/atoms/Typography",
-      "category": "component"
-    },
     "state-indicator": {
       "component": "StateIndicator",
       "importPath": "@/components/atoms/StateIndicator",
@@ -779,6 +769,71 @@
       "component": "UncontrolledBattleBoard",
       "importPath": "@/components/organisms/UncontrolledBattleBoard",
       "category": "game"
+    },
+    "quiz-block": {
+      "component": "QuizBlock",
+      "importPath": "@/components/molecules/QuizBlock",
+      "category": "component"
+    },
+    "code-block": {
+      "component": "CodeBlock",
+      "importPath": "@/components/molecules/CodeBlock",
+      "category": "component"
+    },
+    "markdown-content": {
+      "component": "MarkdownContent",
+      "importPath": "@/components/molecules/MarkdownContent",
+      "category": "component"
+    },
+    "content-renderer": {
+      "component": "ContentRenderer",
+      "importPath": "@/components/organisms/ContentRenderer",
+      "category": "display"
+    },
+    "jazari-state-machine": {
+      "component": "JazariStateMachine",
+      "importPath": "@/components/organisms/JazariStateMachine",
+      "category": "display"
+    },
+    "state-machine-view": {
+      "component": "StateMachineView",
+      "importPath": "@/components/organisms/StateMachineView",
+      "category": "display"
+    },
+    "book-chapter-view": {
+      "component": "BookChapterView",
+      "importPath": "@/components/organisms/BookChapterView",
+      "category": "display"
+    },
+    "book-cover-page": {
+      "component": "BookCoverPage",
+      "importPath": "@/components/organisms/BookCoverPage",
+      "category": "display"
+    },
+    "book-nav-bar": {
+      "component": "BookNavBar",
+      "importPath": "@/components/organisms/BookNavBar",
+      "category": "navigation"
+    },
+    "book-table-of-contents": {
+      "component": "BookTableOfContents",
+      "importPath": "@/components/organisms/BookTableOfContents",
+      "category": "display"
+    },
+    "book-viewer": {
+      "component": "BookViewer",
+      "importPath": "@/components/organisms/BookViewer",
+      "category": "display"
+    },
+    "heading": {
+      "component": "Typography",
+      "importPath": "@/components/atoms/Typography",
+      "category": "component"
+    },
+    "text": {
+      "component": "Typography",
+      "importPath": "@/components/atoms/Typography",
+      "category": "component"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-20T13:47:25.106Z",
+  "exportedAt": "2026-02-23T00:12:23.196Z",
   "contracts": {
     "form": {
       "emits": [
@@ -998,6 +998,71 @@
         },
         {
           "event": "SEARCH",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "code-block": {
+      "emits": [
+        {
+          "event": "COPY_CODE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "book-cover-page": {
+      "emits": [
+        {
+          "event": "BOOK_START",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "book-nav-bar": {
+      "emits": [
+        {
+          "event": "BOOK_PAGE_PREV",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "book-table-of-contents": {
+      "emits": [
+        {
+          "event": "BOOK_NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "book-viewer": {
+      "emits": [
+        {
+          "event": "BOOK_PAGE_CHANGE",
           "trigger": "action",
           "payload": {
             "type": "object"

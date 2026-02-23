@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-20T13:47:25.106Z",
+  "exportedAt": "2026-02-23T00:12:23.196Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -10827,6 +10827,1018 @@
           ],
           "description": "entity prop",
           "required": true
+        }
+      }
+    },
+    "quiz-block": {
+      "type": "quiz-block",
+      "category": "component",
+      "description": "QuizBlock Molecule Component  A collapsible Q&A block for embedded quiz questions in content. Shows the question with a reveal button for the answer.  Event Contract: - No events emitted (self-contained interaction) - entityAware: false",
+      "suggestedFor": [
+        "quiz",
+        "block",
+        "quiz block"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "question": {
+          "types": [
+            "string"
+          ],
+          "description": "The quiz question",
+          "required": true
+        },
+        "answer": {
+          "types": [
+            "string"
+          ],
+          "description": "The quiz answer (revealed on toggle)",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "code-block": {
+      "type": "code-block",
+      "category": "component",
+      "description": "CodeBlock Molecule Component  A syntax-highlighted code block with copy-to-clipboard functionality. Preserves scroll position during re-renders.  Event Contract: - Emits: UI:COPY_CODE { language, success }",
+      "suggestedFor": [
+        "code",
+        "block",
+        "code block"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "code": {
+          "types": [
+            "string"
+          ],
+          "description": "The code content to display",
+          "required": true
+        },
+        "language": {
+          "types": [
+            "string"
+          ],
+          "description": "Programming language for syntax highlighting"
+        },
+        "showCopyButton": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show the copy button"
+        },
+        "showLanguageBadge": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show the language badge"
+        },
+        "maxHeight": {
+          "types": [
+            "string"
+          ],
+          "description": "Maximum height before scrolling"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "markdown-content": {
+      "type": "markdown-content",
+      "category": "component",
+      "description": "MarkdownContent Molecule Component  Renders markdown content with support for GFM (GitHub Flavored Markdown), math equations (KaTeX), and raw HTML. Handles inline code only — fenced code blocks should be parsed out and rendered with CodeBlock component.  Event Contract: - No events emitted (display-only component) - entityAware: false  NOTE: react-markdown's `components` override API requires native HTML elements — this is the same library-boundary exception as `<iframe>` in DocumentViewer and `<svg>` in JazariStateMachine/StateMachineView.",
+      "suggestedFor": [
+        "markdown",
+        "content",
+        "markdown content"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "content": {
+          "types": [
+            "string"
+          ],
+          "description": "The markdown content to render",
+          "required": true
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "Text direction"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "content-renderer": {
+      "type": "content-renderer",
+      "category": "display",
+      "description": "ContentRenderer Organism  Renders rich content as a sequence of typed segments: markdown, code, orbital diagrams (via JazariStateMachine), and quiz blocks. Accepts either raw content string (auto-parsed) or pre-parsed segments.  Event Contract: - Delegates to child components (CodeBlock -> UI:COPY_CODE) - entityAware: false",
+      "suggestedFor": [
+        "content",
+        "renderer",
+        "content renderer"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "content": {
+          "types": [
+            "string"
+          ],
+          "description": "Raw content string — auto-parsed into segments"
+        },
+        "segments": {
+          "types": [
+            "array"
+          ],
+          "description": "Pre-parsed segments (overrides content)"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "Text direction for markdown"
+        }
+      }
+    },
+    "jazari-state-machine": {
+      "type": "jazari-state-machine",
+      "category": "display",
+      "description": "JazariStateMachine component",
+      "suggestedFor": [
+        "jazari",
+        "state",
+        "machine",
+        "jazari state machine"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "schema": {
+          "types": [
+            "smschema"
+          ],
+          "description": "Full schema — extracts first trait's state machine"
+        },
+        "trait": {
+          "types": [
+            "smtrait"
+          ],
+          "description": "Or pass a single trait directly"
+        },
+        "traitIndex": {
+          "types": [
+            "number"
+          ],
+          "description": "Which trait to visualize (default: 0)"
+        },
+        "entityFields": {
+          "types": [
+            "array"
+          ],
+          "description": "Override entity field labels"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "Text direction (default: 'ltr')"
+        }
+      }
+    },
+    "state-machine-view": {
+      "type": "state-machine-view",
+      "category": "display",
+      "description": "StateMachineView component",
+      "suggestedFor": [
+        "state",
+        "machine",
+        "view",
+        "state machine view"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "layoutData": {
+          "types": [
+            "domlayoutdata"
+          ],
+          "description": "layoutData prop",
+          "required": true
+        },
+        "renderStateNode": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom state node renderer — when provided, replaces the default circle nodes"
+        }
+      }
+    },
+    "book-chapter-view": {
+      "type": "book-chapter-view",
+      "category": "display",
+      "description": "BookChapterView Organism  Renders a single chapter: title + optional orbital diagram + rich content via ContentRenderer.  Event Contract: - Delegates to ContentRenderer children",
+      "suggestedFor": [
+        "book",
+        "chapter",
+        "view",
+        "book chapter view"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "chapter": {
+          "types": [
+            "bookchapter"
+          ],
+          "description": "chapter prop",
+          "required": true
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "direction prop"
+        }
+      }
+    },
+    "book-cover-page": {
+      "type": "book-cover-page",
+      "category": "display",
+      "description": "BookCoverPage Molecule  Renders a book cover with title, subtitle, author, and optional image. Centered layout suitable for the first \"page\" of a BookViewer.  Event Contract: - Emits: UI:BOOK_START",
+      "suggestedFor": [
+        "book",
+        "cover",
+        "page",
+        "book cover page"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        },
+        "author": {
+          "types": [
+            "string"
+          ],
+          "description": "author prop"
+        },
+        "coverImageUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "coverImageUrl prop"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "direction prop"
+        }
+      }
+    },
+    "book-nav-bar": {
+      "type": "book-nav-bar",
+      "category": "navigation",
+      "description": "BookNavBar Molecule  Navigation bar for the BookViewer with prev/next, page indicator, print button, and TOC toggle.  Event Contract: - Emits: UI:BOOK_PAGE_PREV, UI:BOOK_PAGE_NEXT, UI:BOOK_PRINT, UI:BOOK_SHOW_TOC",
+      "suggestedFor": [
+        "book",
+        "nav",
+        "bar",
+        "book nav bar"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "currentPage": {
+          "types": [
+            "number"
+          ],
+          "description": "currentPage prop",
+          "required": true
+        },
+        "totalPages": {
+          "types": [
+            "number"
+          ],
+          "description": "totalPages prop",
+          "required": true
+        },
+        "chapterTitle": {
+          "types": [
+            "string"
+          ],
+          "description": "chapterTitle prop"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "direction prop"
+        }
+      }
+    },
+    "book-table-of-contents": {
+      "type": "book-table-of-contents",
+      "category": "display",
+      "description": "BookTableOfContents Molecule  Renders a clickable table of contents grouped by parts. Highlights the current chapter.  Event Contract: - Emits: UI:BOOK_NAVIGATE { chapterId }",
+      "suggestedFor": [
+        "book",
+        "table",
+        "contents",
+        "book table of contents"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "parts": {
+          "types": [
+            "array"
+          ],
+          "description": "parts prop",
+          "required": true
+        },
+        "currentChapterId": {
+          "types": [
+            "string"
+          ],
+          "description": "currentChapterId prop"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "direction prop"
+        }
+      }
+    },
+    "book-viewer": {
+      "type": "book-viewer",
+      "category": "display",
+      "description": "BookViewer Organism  Flippable book reader with cover, TOC, chapter views, and navigation. Supports RTL layout (Arabic), CSS slide transitions, and print mode.  Page model: 0 = cover, 1 = TOC, 2+ = chapters (flattened from parts)  Event Contract: - Emits: UI:BOOK_PAGE_CHANGE { pageIndex, chapterId? } - Listens: UI:BOOK_START, UI:BOOK_NAVIGATE, UI:BOOK_PAGE_PREV/NEXT, UI:BOOK_PRINT, UI:BOOK_SHOW_TOC",
+      "suggestedFor": [
+        "book",
+        "viewer",
+        "book viewer"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "book": {
+          "types": [
+            "bookdata"
+          ],
+          "description": "book prop",
+          "required": true
+        },
+        "initialPage": {
+          "types": [
+            "number"
+          ],
+          "description": "Initial page index (default: 0 = cover)"
         }
       }
     },
