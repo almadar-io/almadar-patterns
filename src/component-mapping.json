@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-23T00:12:23.196Z",
+  "exportedAt": "2026-02-23T07:59:54.575Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -824,6 +824,11 @@
       "component": "BookViewer",
       "importPath": "@/components/organisms/BookViewer",
       "category": "display"
+    },
+    "scaled-diagram": {
+      "component": "ScaledDiagram",
+      "importPath": "@/components/molecules/ScaledDiagram",
+      "category": "component"
     },
     "heading": {
       "component": "Typography",

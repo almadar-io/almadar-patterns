@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-23T00:12:23.196Z",
+  "exportedAt": "2026-02-23T07:59:54.575Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -11827,18 +11827,43 @@
           ],
           "description": "Currently selected item IDs"
         },
-        "book": {
-          "types": [
-            "bookdata"
-          ],
-          "description": "book prop",
-          "required": true
-        },
         "initialPage": {
           "types": [
             "number"
           ],
           "description": "Initial page index (default: 0 = cover)"
+        },
+        "fieldMap": {
+          "types": [
+            "bookfieldmap"
+          ],
+          "description": "Field name translation map for non-English entity schemas"
+        }
+      }
+    },
+    "scaled-diagram": {
+      "type": "scaled-diagram",
+      "category": "component",
+      "description": "ScaledDiagram Molecule  Wraps a fixed-size diagram (like JazariStateMachine / StateMachineView) and CSS-scales it to fit the parent container width.  The diagram renders at its natural (large) size. We observe the content element and once the diagram is measured we apply transform:scale() with a corrected container height so surrounding layout flows correctly.  Event Contract: - No events emitted (layout-only wrapper) - entityAware: false",
+      "suggestedFor": [
+        "scaled",
+        "diagram",
+        "scaled diagram"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
         }
       }
     },
