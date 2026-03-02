@@ -868,6 +868,28 @@
             "body": "string",
             "state": "string"
           }
+        },
+        {
+          "name": "pull",
+          "description": "Pull latest changes from remote repository",
+          "params": [
+            {
+              "name": "repoPath",
+              "type": "string",
+              "required": true,
+              "description": "Local repository path"
+            },
+            {
+              "name": "branch",
+              "type": "string",
+              "required": false,
+              "description": "Branch to pull"
+            }
+          ],
+          "responseShape": {
+            "success": "boolean",
+            "output": "string"
+          }
         }
       ]
     },
@@ -2209,6 +2231,29 @@
             "warnings": "string[]",
             "summary": "string"
           }
+        },
+        {
+          "name": "compile",
+          "description": "Compile an orbital schema to target shell",
+          "params": [
+            {
+              "name": "schema",
+              "type": "string",
+              "required": true,
+              "description": "Path to .orb schema file"
+            },
+            {
+              "name": "shell",
+              "type": "string",
+              "required": false,
+              "description": "Target shell (typescript, python)"
+            }
+          ],
+          "responseShape": {
+            "success": "boolean",
+            "output": "string",
+            "errors": "string[]"
+          }
         }
       ]
     },
@@ -2318,6 +2363,56 @@
           ],
           "responseShape": {
             "messages": "array"
+          }
+        },
+        {
+          "name": "generate",
+          "description": "Generate code or content using DeepAgent",
+          "params": [
+            {
+              "name": "prompt",
+              "type": "string",
+              "required": true,
+              "description": "Generation prompt"
+            },
+            {
+              "name": "threadId",
+              "type": "string",
+              "required": false,
+              "description": "Thread ID for context"
+            },
+            {
+              "name": "mode",
+              "type": "string",
+              "required": false,
+              "description": "Generation mode"
+            }
+          ],
+          "responseShape": {
+            "result": "string",
+            "threadId": "string"
+          }
+        },
+        {
+          "name": "resume",
+          "description": "Resume a DeepAgent generation thread",
+          "params": [
+            {
+              "name": "threadId",
+              "type": "string",
+              "required": true,
+              "description": "Thread ID to resume"
+            },
+            {
+              "name": "input",
+              "type": "string",
+              "required": false,
+              "description": "Additional input"
+            }
+          ],
+          "responseShape": {
+            "result": "string",
+            "threadId": "string"
           }
         }
       ]

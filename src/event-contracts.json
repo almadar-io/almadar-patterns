@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-23T07:59:54.575Z",
+  "exportedAt": "2026-03-02T04:47:24.388Z",
   "contracts": {
     "form": {
       "emits": [
@@ -84,6 +84,13 @@
           "payload": {
             "type": "object"
           }
+        },
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -92,6 +99,13 @@
     },
     "entity-table": {
       "emits": [
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
         {
           "event": "VIEW",
           "trigger": "action",
@@ -154,6 +168,13 @@
           "payload": {
             "type": "object"
           }
+        },
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -162,6 +183,13 @@
     },
     "entity-list": {
       "emits": [
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
         {
           "event": "SELECT",
           "trigger": "action",
@@ -191,6 +219,13 @@
     "detail-panel": {
       "emits": [
         {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
           "event": "CLOSE",
           "trigger": "action",
           "payload": {
@@ -204,12 +239,11 @@
     "page-header": {
       "emits": [
         {
-          "event": "CREATE",
-          "trigger": "click",
+          "event": "NAVIGATE",
+          "trigger": "action",
           "payload": {
-            "type": "void"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -534,28 +568,11 @@
     "game-menu": {
       "emits": [
         {
-          "event": "START",
-          "trigger": "click",
+          "event": "NAVIGATE",
+          "trigger": "action",
           "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "RESUME",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        },
-        {
-          "event": "RESTART",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
+            "type": "object"
+          }
         }
       ],
       "requires": [],

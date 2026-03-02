@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-23T07:59:54.575Z",
+  "exportedAt": "2026-03-02T04:47:24.388Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -829,6 +829,116 @@
       "component": "ScaledDiagram",
       "importPath": "@/components/molecules/ScaledDiagram",
       "category": "component"
+    },
+    "combat-log": {
+      "component": "CombatLog",
+      "importPath": "@/components/organisms/CombatLog",
+      "category": "game"
+    },
+    "simulation-canvas": {
+      "component": "SimulationCanvas",
+      "importPath": "@/components/organisms/SimulationCanvas",
+      "category": "game"
+    },
+    "simulation-controls": {
+      "component": "SimulationControls",
+      "importPath": "@/components/organisms/SimulationControls",
+      "category": "display"
+    },
+    "simulation-graph": {
+      "component": "SimulationGraph",
+      "importPath": "@/components/organisms/SimulationGraph",
+      "category": "display"
+    },
+    "builder-board": {
+      "component": "BuilderBoard",
+      "importPath": "@/components/organisms/BuilderBoard",
+      "category": "game"
+    },
+    "classifier-board": {
+      "component": "ClassifierBoard",
+      "importPath": "@/components/organisms/ClassifierBoard",
+      "category": "game"
+    },
+    "debugger-board": {
+      "component": "DebuggerBoard",
+      "importPath": "@/components/organisms/DebuggerBoard",
+      "category": "game"
+    },
+    "event-handler-board": {
+      "component": "EventHandlerBoard",
+      "importPath": "@/components/organisms/EventHandlerBoard",
+      "category": "game"
+    },
+    "event-log": {
+      "component": "EventLog",
+      "importPath": "@/components/organisms/EventLog",
+      "category": "display"
+    },
+    "object-rule-panel": {
+      "component": "ObjectRulePanel",
+      "importPath": "@/components/organisms/ObjectRulePanel",
+      "category": "display"
+    },
+    "rule-editor": {
+      "component": "RuleEditor",
+      "importPath": "@/components/organisms/RuleEditor",
+      "category": "display"
+    },
+    "negotiator-board": {
+      "component": "NegotiatorBoard",
+      "importPath": "@/components/organisms/NegotiatorBoard",
+      "category": "game"
+    },
+    "action-palette": {
+      "component": "ActionPalette",
+      "importPath": "@/components/organisms/ActionPalette",
+      "category": "display"
+    },
+    "action-tile": {
+      "component": "ActionTile",
+      "importPath": "@/components/organisms/ActionTile",
+      "category": "game"
+    },
+    "sequence-bar": {
+      "component": "SequenceBar",
+      "importPath": "@/components/organisms/SequenceBar",
+      "category": "display"
+    },
+    "sequencer-board": {
+      "component": "SequencerBoard",
+      "importPath": "@/components/organisms/SequencerBoard",
+      "category": "game"
+    },
+    "simulator-board": {
+      "component": "SimulatorBoard",
+      "importPath": "@/components/organisms/SimulatorBoard",
+      "category": "game"
+    },
+    "code-view": {
+      "component": "CodeView",
+      "importPath": "@/components/organisms/CodeView",
+      "category": "display"
+    },
+    "state-architect-board": {
+      "component": "StateArchitectBoard",
+      "importPath": "@/components/organisms/StateArchitectBoard",
+      "category": "display"
+    },
+    "state-node": {
+      "component": "StateNode",
+      "importPath": "@/components/organisms/StateNode",
+      "category": "display"
+    },
+    "transition-arrow": {
+      "component": "TransitionArrow",
+      "importPath": "@/components/organisms/TransitionArrow",
+      "category": "display"
+    },
+    "variable-panel": {
+      "component": "VariablePanel",
+      "importPath": "@/components/organisms/VariablePanel",
+      "category": "display"
     },
     "heading": {
       "component": "Typography",
