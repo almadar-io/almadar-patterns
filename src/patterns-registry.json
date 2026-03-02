@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-23T07:59:54.575Z",
+  "exportedAt": "2026-03-02T04:47:24.388Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15,15 +15,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -189,15 +183,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -341,15 +329,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -476,6 +458,78 @@
             "boolean"
           ],
           "description": "Show total count in pagination"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop for entity-cards"
+        },
+        "showAvatar": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showAvatar prop for entity-cards"
+        },
+        "id": {
+          "types": [
+            "string"
+          ],
+          "description": "id prop for entity-cards"
+        },
+        "tier": {
+          "types": [
+            "number"
+          ],
+          "description": "tier prop for entity-cards"
+        },
+        "onRecruit": {
+          "types": [
+            "function"
+          ],
+          "description": "onRecruit prop for entity-cards"
+        },
+        "defense": {
+          "types": [
+            "number"
+          ],
+          "description": "defense prop for entity-cards"
+        },
+        "health": {
+          "types": [
+            "number"
+          ],
+          "description": "health prop for entity-cards"
+        },
+        "available": {
+          "types": [
+            "boolean"
+          ],
+          "description": "available prop for entity-cards"
+        },
+        "attack": {
+          "types": [
+            "number"
+          ],
+          "description": "attack prop for entity-cards"
+        },
+        "unitType": {
+          "types": [
+            "string"
+          ],
+          "description": "unitType prop for entity-cards"
+        },
+        "goldCost": {
+          "types": [
+            "number"
+          ],
+          "description": "goldCost prop for entity-cards"
+        },
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop for entity-cards"
         }
       }
     },
@@ -550,13 +604,6 @@
           ],
           "description": "Alias for fields - backwards compatibility"
         },
-        "data": {
-          "types": [
-            "object",
-            "unknown"
-          ],
-          "description": "Data object provided by the trait via render-ui"
-        },
         "initialData": {
           "types": [
             "object",
@@ -581,6 +628,60 @@
             "string"
           ],
           "description": "Panel width (CSS value, e.g., '400px', '50%')"
+        },
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data object injected by the runtime"
+        },
+        "showTransitions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showTransitions prop for detail-panel"
+        },
+        "trait": {
+          "types": [
+            "object"
+          ],
+          "description": "trait prop for detail-panel"
+        },
+        "hero": {
+          "types": [
+            "object"
+          ],
+          "description": "hero prop for detail-panel"
+        },
+        "onEquipTrait": {
+          "types": [
+            "function"
+          ],
+          "description": "onEquipTrait prop for detail-panel"
+        },
+        "onRemoveTrait": {
+          "types": [
+            "function"
+          ],
+          "description": "onRemoveTrait prop for detail-panel"
+        },
+        "showActions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showActions prop for detail-panel"
+        },
+        "showInspectionHistory": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showInspectionHistory prop for detail-panel"
+        },
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity ID for detail binding"
         }
       }
     },
@@ -874,6 +975,12 @@
             "boolean"
           ],
           "description": "Whether the form supports repeatable entries"
+        },
+        "actions": {
+          "types": [
+            "array"
+          ],
+          "description": "Form action buttons"
         }
       }
     },
@@ -1060,6 +1167,12 @@
             "boolean"
           ],
           "description": "Whether the form supports repeatable entries"
+        },
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "entityId prop for form-section"
         }
       }
     },
@@ -1987,21 +2100,15 @@
         },
         "entity": {
           "types": [
-            "string"
+            "array"
           ],
-          "description": "Schema-based props"
+          "description": "Entity data array injected by the runtime"
         },
         "metrics": {
           "types": [
             "unknown"
           ],
           "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays"
-        },
-        "data": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Data to calculate stats from - accepts readonly for compatibility with generated const arrays"
         },
         "isLoading": {
           "types": [
@@ -2014,6 +2121,24 @@
             "error"
           ],
           "description": "Error state"
+        },
+        "resources": {
+          "types": [
+            "array"
+          ],
+          "description": "resources prop for stats"
+        },
+        "compact": {
+          "types": [
+            "boolean"
+          ],
+          "description": "compact prop for stats"
+        },
+        "stats": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of stat definitions"
         }
       }
     },
@@ -2052,6 +2177,18 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Dashboard title"
+        },
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Dashboard items"
         }
       }
     },
@@ -2328,6 +2465,12 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "onCancel": {
+          "types": [
+            "function"
+          ],
+          "description": "Cancel handler"
         }
       }
     },
@@ -3251,6 +3394,30 @@
             "badgesize"
           ],
           "description": "size prop"
+        },
+        "damageType": {
+          "types": [
+            "string"
+          ],
+          "description": "damageType prop for badge"
+        },
+        "amount": {
+          "types": [
+            "number"
+          ],
+          "description": "amount prop for badge"
+        },
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop for badge"
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop for badge"
         }
       }
     },
@@ -3459,6 +3626,60 @@
             "string"
           ],
           "description": "Declarative event name — emits UI:{action} via eventBus on card click"
+        },
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop for card"
+        },
+        "isSelected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isSelected prop for card"
+        },
+        "buildingType": {
+          "types": [
+            "string"
+          ],
+          "description": "buildingType prop for card"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "level prop for card"
+        },
+        "maxLevel": {
+          "types": [
+            "number"
+          ],
+          "description": "maxLevel prop for card"
+        },
+        "trait": {
+          "types": [
+            "object"
+          ],
+          "description": "trait prop for card"
+        },
+        "slotIndex": {
+          "types": [
+            "number"
+          ],
+          "description": "slotIndex prop for card"
+        },
+        "onEquip": {
+          "types": [
+            "function"
+          ],
+          "description": "onEquip prop for card"
+        },
+        "onRemove": {
+          "types": [
+            "function"
+          ],
+          "description": "onRemove prop for card"
         }
       }
     },
@@ -6532,6 +6753,78 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "array"
+          ],
+          "description": "Entity data array injected by the runtime"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
         "logo": {
           "types": [
             "node"
@@ -6581,11 +6874,11 @@
           ],
           "description": "Default collapsed state"
         },
-        "onCollapseChange": {
+        "collapseChangeEvent": {
           "types": [
-            "function"
+            "string"
           ],
-          "description": "Callback when collapse state changes"
+          "description": "Event emitted when collapse state changes, payload: { collapsed: boolean }"
         },
         "hideCollapseButton": {
           "types": [
@@ -6599,41 +6892,17 @@
           ],
           "description": "Show a close button (for mobile)"
         },
-        "onClose": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when close button is clicked"
-        },
-        "onLogoClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when logo/brand is clicked"
-        },
-        "className": {
+        "closeEvent": {
           "types": [
             "string"
           ],
-          "description": "Additional CSS classes"
+          "description": "Event emitted when close button is clicked"
         },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "error"
-          ],
-          "description": "Error state"
-        },
-        "entity": {
+        "logoClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Entity name for schema-driven auto-fetch"
+          "description": "Event emitted when logo/brand is clicked"
         }
       }
     },
@@ -6738,15 +7007,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -7122,6 +7385,24 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "configs": {
+          "types": [
+            "array"
+          ],
+          "description": "configs prop for tabbed-container"
+        },
+        "initialState": {
+          "types": [
+            "string"
+          ],
+          "description": "initialState prop for tabbed-container"
+        },
+        "showDebugPanel": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showDebugPanel prop for tabbed-container"
         }
       }
     },
@@ -7465,12 +7746,6 @@
           ],
           "description": "Data series"
         },
-        "data": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Simple data (single series shorthand)"
-        },
         "height": {
           "types": [
             "number"
@@ -7497,9 +7772,9 @@
         },
         "entity": {
           "types": [
-            "string"
+            "array"
           ],
-          "description": "Entity name for schema-driven auto-fetch"
+          "description": "Entity data array injected by the runtime"
         },
         "isLoading": {
           "types": [
@@ -7650,12 +7925,6 @@
           ],
           "description": "Timeline items"
         },
-        "data": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Schema-driven data"
-        },
         "fields": {
           "types": [
             "unknown"
@@ -7670,9 +7939,9 @@
         },
         "entity": {
           "types": [
-            "string"
+            "array"
           ],
-          "description": "Entity name for schema-driven auto-fetch"
+          "description": "Entity data array injected by the runtime"
         },
         "isLoading": {
           "types": [
@@ -7718,12 +7987,6 @@
           ],
           "description": "Media items"
         },
-        "data": {
-          "types": [
-            "unknown"
-          ],
-          "description": "Schema-driven data"
-        },
         "columns": {
           "types": [
             "number"
@@ -7768,9 +8031,9 @@
         },
         "entity": {
           "types": [
-            "string"
+            "array"
           ],
-          "description": "Entity name for schema-driven auto-fetch"
+          "description": "Entity data array injected by the runtime"
         },
         "isLoading": {
           "types": [
@@ -8548,6 +8811,18 @@
             "object"
           ],
           "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve."
+        },
+        "boardWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "boardWidth prop for isometric-canvas"
+        },
+        "boardHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "boardHeight prop for isometric-canvas"
         }
       }
     },
@@ -9172,18 +9447,6 @@
           ],
           "description": "World map entity data",
           "required": true
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "error"
-          ],
-          "description": "Error state"
         },
         "scale": {
           "types": [
@@ -10958,15 +11221,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11068,15 +11325,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11190,15 +11441,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11295,15 +11540,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11400,15 +11639,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11523,15 +11756,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11641,15 +11868,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11751,15 +11972,9 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity data array injected by the runtime"
         },
         "className": {
           "types": [
@@ -11835,9 +12050,10 @@
         },
         "fieldMap": {
           "types": [
-            "bookfieldmap"
+            "bookfieldmap",
+            "string"
           ],
-          "description": "Field name translation map for non-English entity schemas"
+          "description": "Field name translation map — a BookFieldMap object or locale key (\"ar\")"
         }
       }
     },
@@ -11864,6 +12080,985 @@
             "string"
           ],
           "description": "className prop"
+        }
+      }
+    },
+    "combat-log": {
+      "type": "combat-log",
+      "category": "game",
+      "description": "CombatLog Component  Scrollable log of combat events with icons and colors. Generalized from Trait Wars — removed asset manifest coupling.",
+      "suggestedFor": [
+        "combat",
+        "log",
+        "combat log"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "events": {
+          "types": [
+            "array"
+          ],
+          "description": "events prop",
+          "required": true
+        },
+        "maxVisible": {
+          "types": [
+            "number"
+          ],
+          "description": "maxVisible prop"
+        },
+        "autoScroll": {
+          "types": [
+            "boolean"
+          ],
+          "description": "autoScroll prop"
+        },
+        "showTimestamps": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showTimestamps prop"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "simulation-canvas": {
+      "type": "simulation-canvas",
+      "category": "game",
+      "description": "SimulationCanvas  Self-contained 2D physics canvas for educational presets. Runs its own Euler integration loop — no external physics hook needed.",
+      "suggestedFor": [
+        "simulation",
+        "canvas",
+        "simulation canvas"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "preset": {
+          "types": [
+            "physicspreset"
+          ],
+          "description": "preset prop",
+          "required": true
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "running": {
+          "types": [
+            "boolean"
+          ],
+          "description": "running prop",
+          "required": true
+        },
+        "speed": {
+          "types": [
+            "number"
+          ],
+          "description": "speed prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "simulation-controls": {
+      "type": "simulation-controls",
+      "category": "display",
+      "description": "SimulationControls  Play/pause/step/reset controls with speed and parameter sliders.",
+      "suggestedFor": [
+        "simulation",
+        "controls",
+        "simulation controls"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "running": {
+          "types": [
+            "boolean"
+          ],
+          "description": "running prop",
+          "required": true
+        },
+        "speed": {
+          "types": [
+            "number"
+          ],
+          "description": "speed prop",
+          "required": true
+        },
+        "parameters": {
+          "types": [
+            "object"
+          ],
+          "description": "parameters prop",
+          "required": true
+        },
+        "onPlay": {
+          "types": [
+            "function"
+          ],
+          "description": "onPlay prop",
+          "required": true
+        },
+        "onPause": {
+          "types": [
+            "function"
+          ],
+          "description": "onPause prop",
+          "required": true
+        },
+        "onStep": {
+          "types": [
+            "function"
+          ],
+          "description": "onStep prop",
+          "required": true
+        },
+        "onReset": {
+          "types": [
+            "function"
+          ],
+          "description": "onReset prop",
+          "required": true
+        },
+        "onSpeedChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onSpeedChange prop",
+          "required": true
+        },
+        "onParameterChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onParameterChange prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "simulation-graph": {
+      "type": "simulation-graph",
+      "category": "display",
+      "description": "SimulationGraph  Real-time measurement graph for physics simulations. Renders measurement data as a simple line chart on canvas.",
+      "suggestedFor": [
+        "simulation",
+        "graph",
+        "simulation graph"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop",
+          "required": true
+        },
+        "unit": {
+          "types": [
+            "string"
+          ],
+          "description": "unit prop",
+          "required": true
+        },
+        "maxPoints": {
+          "types": [
+            "number"
+          ],
+          "description": "maxPoints prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "builder-board": {
+      "type": "builder-board",
+      "category": "game",
+      "description": "BuilderBoard  Component-snapping game board. The player places components onto slots in a blueprint. Correct placement completes the build.  Good for: architecture, circuits, molecules, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
+      "suggestedFor": [
+        "builder",
+        "board",
+        "builder board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "builderpuzzleentity"
+          ],
+          "description": "entity prop",
+          "required": true
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "completeEvent prop"
+        }
+      }
+    },
+    "classifier-board": {
+      "type": "classifier-board",
+      "category": "game",
+      "description": "ClassifierBoard  Drag-and-drop classification game. The player sorts items into the correct category buckets. All items must be correctly classified to win.  Good for: taxonomy, pattern recognition, sorting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
+      "suggestedFor": [
+        "classifier",
+        "board",
+        "classifier board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "classifierpuzzleentity"
+          ],
+          "description": "entity prop",
+          "required": true
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "completeEvent prop"
+        }
+      }
+    },
+    "debugger-board": {
+      "type": "debugger-board",
+      "category": "game",
+      "description": "DebuggerBoard  Error-finding game board. The player reviews a code/system listing and identifies lines or elements that contain bugs.  Good for: programming, logic, troubleshooting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
+      "suggestedFor": [
+        "debugger",
+        "board",
+        "debugger board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "debuggerpuzzleentity"
+          ],
+          "description": "entity prop",
+          "required": true
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "completeEvent prop"
+        }
+      }
+    },
+    "event-handler-board": {
+      "type": "event-handler-board",
+      "category": "game",
+      "description": "EventHandlerBoard Organism  Contains ALL game logic for the Event Handler tier (ages 9-12). Kids click on world objects, set WHEN/THEN rules, and watch event chains cascade during playback.  Encourages experimentation: on failure, resets to editing so the kid can try different rules. After 3 failures, shows a progressive hint.",
+      "suggestedFor": [
+        "event",
+        "handler",
+        "board",
+        "event handler board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "eventhandlerpuzzleentity"
+          ],
+          "description": "Puzzle data",
+          "required": true
+        },
+        "stepDurationMs": {
+          "types": [
+            "number"
+          ],
+          "description": "Playback speed in ms per event"
+        },
+        "playEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playEvent}"
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{completeEvent} with { success }"
+        }
+      }
+    },
+    "event-log": {
+      "type": "event-log",
+      "category": "display",
+      "description": "EventLog Component  Scrolling log of events during playback in the Event Handler tier. Shows the chain reaction as events cascade through objects.",
+      "suggestedFor": [
+        "event",
+        "log",
+        "event log"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entries": {
+          "types": [
+            "array"
+          ],
+          "description": "Log entries",
+          "required": true
+        },
+        "maxHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "Max visible height before scroll"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Title label"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "object-rule-panel": {
+      "type": "object-rule-panel",
+      "category": "display",
+      "description": "ObjectRulePanel Component  Shows the rules panel for a selected world object in the Event Handler tier. Displays object info, its current state (via TraitStateViewer), and a list of WHEN/THEN rules the kid has set.",
+      "suggestedFor": [
+        "object",
+        "rule",
+        "panel",
+        "object rule panel"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "object": {
+          "types": [
+            "puzzleobjectdef"
+          ],
+          "description": "The selected object",
+          "required": true
+        },
+        "onRulesChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when rules change",
+          "required": true
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether editing is disabled"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "rule-editor": {
+      "type": "rule-editor",
+      "category": "display",
+      "description": "RuleEditor Component  A single WHEN/THEN rule row for the Event Handler tier (ages 9-12). Kid picks an event trigger and an action from dropdowns.",
+      "suggestedFor": [
+        "rule",
+        "editor",
+        "rule editor"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "rule": {
+          "types": [
+            "ruledefinition"
+          ],
+          "description": "The current rule",
+          "required": true
+        },
+        "availableEvents": {
+          "types": [
+            "array"
+          ],
+          "description": "Available event triggers to listen for",
+          "required": true
+        },
+        "availableActions": {
+          "types": [
+            "array"
+          ],
+          "description": "Available actions to perform",
+          "required": true
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when rule changes",
+          "required": true
+        },
+        "onRemove": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when rule is removed"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether editing is disabled (during playback)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "negotiator-board": {
+      "type": "negotiator-board",
+      "category": "game",
+      "description": "NegotiatorBoard  Turn-based decision matrix game. The player makes choices over multiple rounds against an AI opponent. Each round both sides pick an action, and payoffs are determined by the combination.  Good for: ethics, business, game theory, economics stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
+      "suggestedFor": [
+        "negotiator",
+        "board",
+        "negotiator board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "negotiatorpuzzleentity"
+          ],
+          "description": "entity prop",
+          "required": true
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "completeEvent prop"
+        }
+      }
+    },
+    "action-palette": {
+      "type": "action-palette",
+      "category": "display",
+      "description": "ActionPalette Component  Grid of draggable ActionTile components for the Sequencer tier. Kids pick from these to build their sequence.",
+      "suggestedFor": [
+        "action",
+        "palette",
+        "action palette"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "actions": {
+          "types": [
+            "array"
+          ],
+          "description": "Available actions",
+          "required": true
+        },
+        "usedActionIds": {
+          "types": [
+            "array"
+          ],
+          "description": "IDs of actions that are already used (shown as disabled)"
+        },
+        "allowDuplicates": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether each action can be used multiple times"
+        },
+        "categoryColors": {
+          "types": [
+            "object"
+          ],
+          "description": "Category → color mapping"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label above the palette"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "action-tile": {
+      "type": "action-tile",
+      "category": "game",
+      "description": "ActionTile Component  A draggable action tile for the Sequencer tier (ages 5-8). Kids drag these from the ActionPalette into SequenceBar slots. Sets SlotItemData on dataTransfer for TraitSlot compatibility.",
+      "suggestedFor": [
+        "action",
+        "tile",
+        "action tile"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "action": {
+          "types": [
+            "slotitemdata"
+          ],
+          "description": "The action data",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the tile is disabled / already used"
+        },
+        "categoryColors": {
+          "types": [
+            "object"
+          ],
+          "description": "Category → color mapping"
+        }
+      }
+    },
+    "sequence-bar": {
+      "type": "sequence-bar",
+      "category": "display",
+      "description": "SequenceBar Component  A row of TraitSlot components forming the action sequence for the Sequencer tier (ages 5-8). Kids drag ActionTiles from the palette into these slots to build their sequence.",
+      "suggestedFor": [
+        "sequence",
+        "bar",
+        "sequence bar"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "slots": {
+          "types": [
+            "array"
+          ],
+          "description": "The current sequence (sparse — undefined means empty slot)",
+          "required": true
+        },
+        "maxSlots": {
+          "types": [
+            "number"
+          ],
+          "description": "Max number of slots",
+          "required": true
+        },
+        "onSlotDrop": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when an item is dropped into slot at index",
+          "required": true
+        },
+        "onSlotRemove": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a slot is cleared",
+          "required": true
+        },
+        "playing": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the sequence is currently playing (disable interaction)"
+        },
+        "currentStep": {
+          "types": [
+            "number"
+          ],
+          "description": "Current step index during playback (-1 = not playing)"
+        },
+        "categoryColors": {
+          "types": [
+            "object"
+          ],
+          "description": "Category → color mapping"
+        },
+        "slotFeedback": {
+          "types": [
+            "array"
+          ],
+          "description": "Per-slot correctness feedback shown after a failed attempt"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "sequencer-board": {
+      "type": "sequencer-board",
+      "category": "game",
+      "description": "SequencerBoard Organism  Contains ALL game logic for the Sequencer tier (ages 5-8). Manages the action sequence, validates it, and animates Kekec executing each step on the puzzle scene.  Feedback-first UX: - On failure: slots stay in place, each slot gets a green or red ring showing exactly which steps are correct and which need to change. - Modifying a slot clears its individual feedback so the kid can re-try. - After 3 failures a persistent hint appears above the sequence bar. - \"Reset\" clears everything including attempts / hint.  TraitStateViewer states use indexed labels (\"1. Walk\", \"2. Jump\") so that repeated actions are correctly highlighted during playback.",
+      "suggestedFor": [
+        "sequencer",
+        "board",
+        "sequencer board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "sequencerpuzzleentity"
+          ],
+          "description": "Puzzle data",
+          "required": true
+        },
+        "categoryColors": {
+          "types": [
+            "object"
+          ],
+          "description": "Category → color mapping"
+        },
+        "stepDurationMs": {
+          "types": [
+            "number"
+          ],
+          "description": "Playback speed in ms per step"
+        },
+        "playEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playEvent} with { sequence: string[] }"
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{completeEvent} with { success: boolean }"
+        }
+      }
+    },
+    "simulator-board": {
+      "type": "simulator-board",
+      "category": "game",
+      "description": "SimulatorBoard  Parameter-slider game board. The player adjusts parameters and observes real-time output. Correct parameter values must bring the output within a target range to win.  Good for: physics, economics, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
+      "suggestedFor": [
+        "simulator",
+        "board",
+        "simulator board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "simulatorpuzzleentity"
+          ],
+          "description": "entity prop",
+          "required": true
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "completeEvent prop"
+        }
+      }
+    },
+    "code-view": {
+      "type": "code-view",
+      "category": "display",
+      "description": "CodeView Component  Shows the JSON code representation of a state machine. Toggle between visual and code view in State Architect tier.",
+      "suggestedFor": [
+        "code",
+        "view",
+        "code view"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label"
+        },
+        "defaultExpanded": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the code is expanded by default"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "state-architect-board": {
+      "type": "state-architect-board",
+      "category": "display",
+      "description": "StateArchitectBoard Organism  Contains ALL game logic for the State Architect tier (ages 13+). Kids design state machines via a visual graph editor, then run them to see if the behavior matches the puzzle goal.",
+      "suggestedFor": [
+        "state",
+        "architect",
+        "board",
+        "state architect board"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "statearchitectpuzzleentity"
+          ],
+          "description": "Puzzle data",
+          "required": true
+        },
+        "stepDurationMs": {
+          "types": [
+            "number"
+          ],
+          "description": "Playback speed"
+        },
+        "testEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{testEvent}"
+        },
+        "completeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{completeEvent} with { success, passedTests }"
+        }
+      }
+    },
+    "state-node": {
+      "type": "state-node",
+      "category": "display",
+      "description": "StateNode Component  A draggable state circle for the graph editor in the State Architect tier (ages 13+). Shows state name, highlights when current, and supports click to select.",
+      "suggestedFor": [
+        "state",
+        "node",
+        "state node"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "State name",
+          "required": true
+        },
+        "isCurrent": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this is the current active state"
+        },
+        "isSelected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this node is selected for editing"
+        },
+        "isInitial": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this is the initial state"
+        },
+        "position": {
+          "types": [
+            "object"
+          ],
+          "description": "Position on the graph canvas",
+          "required": true
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "transition-arrow": {
+      "type": "transition-arrow",
+      "category": "display",
+      "description": "TransitionArrow Component  An SVG arrow connecting two state nodes in the graph editor. Shows the event name as a label on the arrow.",
+      "suggestedFor": [
+        "transition",
+        "arrow",
+        "transition arrow"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "from": {
+          "types": [
+            "object"
+          ],
+          "description": "Start position (center of from-node)",
+          "required": true
+        },
+        "to": {
+          "types": [
+            "object"
+          ],
+          "description": "End position (center of to-node)",
+          "required": true
+        },
+        "eventLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "Event label shown on the arrow",
+          "required": true
+        },
+        "guardHint": {
+          "types": [
+            "string"
+          ],
+          "description": "Guard hint shown below event"
+        },
+        "isActive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this transition is currently active"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes for the SVG group"
+        }
+      }
+    },
+    "variable-panel": {
+      "type": "variable-panel",
+      "category": "display",
+      "description": "VariablePanel Component  Shows entity variables and their current values during State Architect playback.",
+      "suggestedFor": [
+        "variable",
+        "panel",
+        "variable panel"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entityName": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name",
+          "required": true
+        },
+        "variables": {
+          "types": [
+            "array"
+          ],
+          "description": "Variables to display",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
         }
       }
     },

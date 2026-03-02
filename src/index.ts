@@ -36,9 +36,8 @@ export function getComponentForPattern(patternType: string) {
 /**
  * Check if a pattern is entity-aware (requires data injection).
  *
- * Entity-aware patterns:
- * 1. Have `entityAware: true` in the registry (explicit flag)
- * 2. OR have both `entity` and `data` props in propsSchema (auto-detection fallback)
+ * Entity-aware patterns have an `entity` prop typed as `array` or `object`
+ * in the registry propsSchema. String-typed entity props are metadata only.
  *
  * @param patternType - Pattern type to check
  * @returns true if the pattern is entity-aware
@@ -50,15 +49,12 @@ export function isEntityAwarePattern(patternType: string): boolean {
   // Explicit flag takes precedence
   if (definition.entityAware === true) return true;
 
-  // Auto-detect based on props (fallback)
   const propsSchema = definition.propsSchema;
   if (!propsSchema) return false;
 
-  // If pattern has both 'entity' and ('data' or 'items') props, it's likely entity-aware
-  const hasEntityProp = 'entity' in propsSchema;
-  const hasDataProp = 'data' in propsSchema || 'items' in propsSchema;
-
-  return hasEntityProp && hasDataProp;
+  // Entity-aware = entity prop type is array or object (carries data, not a name string)
+  const entityTypes: string[] = propsSchema.entity?.types || [];
+  return entityTypes.includes('array') || entityTypes.includes('object');
 }
 
 // Export prompt helpers for @almadar/skills
