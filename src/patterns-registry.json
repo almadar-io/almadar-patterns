@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-02T04:47:24.388Z",
+  "exportedAt": "2026-03-02T17:16:47.841Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15,9 +15,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -183,9 +189,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -329,9 +341,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -427,7 +445,7 @@
           "types": [
             "node"
           ],
-          "description": "Children elements (cards) - optional when using entity/data props"
+          "description": "Children elements (cards) - optional when using entity prop"
         },
         "fields": {
           "types": [
@@ -458,78 +476,6 @@
             "boolean"
           ],
           "description": "Show total count in pagination"
-        },
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "variant prop for entity-cards"
-        },
-        "showAvatar": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showAvatar prop for entity-cards"
-        },
-        "id": {
-          "types": [
-            "string"
-          ],
-          "description": "id prop for entity-cards"
-        },
-        "tier": {
-          "types": [
-            "number"
-          ],
-          "description": "tier prop for entity-cards"
-        },
-        "onRecruit": {
-          "types": [
-            "function"
-          ],
-          "description": "onRecruit prop for entity-cards"
-        },
-        "defense": {
-          "types": [
-            "number"
-          ],
-          "description": "defense prop for entity-cards"
-        },
-        "health": {
-          "types": [
-            "number"
-          ],
-          "description": "health prop for entity-cards"
-        },
-        "available": {
-          "types": [
-            "boolean"
-          ],
-          "description": "available prop for entity-cards"
-        },
-        "attack": {
-          "types": [
-            "number"
-          ],
-          "description": "attack prop for entity-cards"
-        },
-        "unitType": {
-          "types": [
-            "string"
-          ],
-          "description": "unitType prop for entity-cards"
-        },
-        "goldCost": {
-          "types": [
-            "number"
-          ],
-          "description": "goldCost prop for entity-cards"
-        },
-        "name": {
-          "types": [
-            "string"
-          ],
-          "description": "name prop for entity-cards"
         }
       }
     },
@@ -544,6 +490,84 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
         "title": {
           "types": [
             "string"
@@ -628,60 +652,6 @@
             "string"
           ],
           "description": "Panel width (CSS value, e.g., '400px', '50%')"
-        },
-        "entity": {
-          "types": [
-            "object"
-          ],
-          "description": "Entity data object injected by the runtime"
-        },
-        "showTransitions": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showTransitions prop for detail-panel"
-        },
-        "trait": {
-          "types": [
-            "object"
-          ],
-          "description": "trait prop for detail-panel"
-        },
-        "hero": {
-          "types": [
-            "object"
-          ],
-          "description": "hero prop for detail-panel"
-        },
-        "onEquipTrait": {
-          "types": [
-            "function"
-          ],
-          "description": "onEquipTrait prop for detail-panel"
-        },
-        "onRemoveTrait": {
-          "types": [
-            "function"
-          ],
-          "description": "onRemoveTrait prop for detail-panel"
-        },
-        "showActions": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showActions prop for detail-panel"
-        },
-        "showInspectionHistory": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showInspectionHistory prop for detail-panel"
-        },
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity ID for detail binding"
         }
       }
     },
@@ -975,12 +945,6 @@
             "boolean"
           ],
           "description": "Whether the form supports repeatable entries"
-        },
-        "actions": {
-          "types": [
-            "array"
-          ],
-          "description": "Form action buttons"
         }
       }
     },
@@ -1167,12 +1131,6 @@
             "boolean"
           ],
           "description": "Whether the form supports repeatable entries"
-        },
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "entityId prop for form-section"
         }
       }
     },
@@ -2011,6 +1969,84 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
         "label": {
           "types": [
             "string"
@@ -2092,53 +2128,11 @@
           ],
           "description": "Action button"
         },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "entity": {
-          "types": [
-            "array"
-          ],
-          "description": "Entity data array injected by the runtime"
-        },
         "metrics": {
           "types": [
             "unknown"
           ],
           "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "error"
-          ],
-          "description": "Error state"
-        },
-        "resources": {
-          "types": [
-            "array"
-          ],
-          "description": "resources prop for stats"
-        },
-        "compact": {
-          "types": [
-            "boolean"
-          ],
-          "description": "compact prop for stats"
-        },
-        "stats": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of stat definitions"
         }
       }
     },
@@ -2177,18 +2171,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Dashboard title"
-        },
-        "items": {
-          "types": [
-            "array"
-          ],
-          "description": "Dashboard items"
         }
       }
     },
@@ -2465,12 +2447,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "onCancel": {
-          "types": [
-            "function"
-          ],
-          "description": "Cancel handler"
         }
       }
     },
@@ -3394,30 +3370,6 @@
             "badgesize"
           ],
           "description": "size prop"
-        },
-        "damageType": {
-          "types": [
-            "string"
-          ],
-          "description": "damageType prop for badge"
-        },
-        "amount": {
-          "types": [
-            "number"
-          ],
-          "description": "amount prop for badge"
-        },
-        "x": {
-          "types": [
-            "number"
-          ],
-          "description": "x prop for badge"
-        },
-        "y": {
-          "types": [
-            "number"
-          ],
-          "description": "y prop for badge"
         }
       }
     },
@@ -3626,60 +3578,6 @@
             "string"
           ],
           "description": "Declarative event name — emits UI:{action} via eventBus on card click"
-        },
-        "name": {
-          "types": [
-            "string"
-          ],
-          "description": "name prop for card"
-        },
-        "isSelected": {
-          "types": [
-            "boolean"
-          ],
-          "description": "isSelected prop for card"
-        },
-        "buildingType": {
-          "types": [
-            "string"
-          ],
-          "description": "buildingType prop for card"
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "level prop for card"
-        },
-        "maxLevel": {
-          "types": [
-            "number"
-          ],
-          "description": "maxLevel prop for card"
-        },
-        "trait": {
-          "types": [
-            "object"
-          ],
-          "description": "trait prop for card"
-        },
-        "slotIndex": {
-          "types": [
-            "number"
-          ],
-          "description": "slotIndex prop for card"
-        },
-        "onEquip": {
-          "types": [
-            "function"
-          ],
-          "description": "onEquip prop for card"
-        },
-        "onRemove": {
-          "types": [
-            "function"
-          ],
-          "description": "onRemove prop for card"
         }
       }
     },
@@ -6755,9 +6653,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -7007,9 +6911,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -7385,24 +7295,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "configs": {
-          "types": [
-            "array"
-          ],
-          "description": "configs prop for tabbed-container"
-        },
-        "initialState": {
-          "types": [
-            "string"
-          ],
-          "description": "initialState prop for tabbed-container"
-        },
-        "showDebugPanel": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showDebugPanel prop for tabbed-container"
         }
       }
     },
@@ -7746,6 +7638,12 @@
           ],
           "description": "Data series"
         },
+        "data": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Simple data (single series shorthand)"
+        },
         "height": {
           "types": [
             "number"
@@ -7772,9 +7670,9 @@
         },
         "entity": {
           "types": [
-            "array"
+            "string"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Entity name for schema-driven auto-fetch"
         },
         "isLoading": {
           "types": [
@@ -7913,6 +7811,84 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
         "title": {
           "types": [
             "string"
@@ -7936,30 +7912,6 @@
             "unknown"
           ],
           "description": "Actions per item"
-        },
-        "entity": {
-          "types": [
-            "array"
-          ],
-          "description": "Entity data array injected by the runtime"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state"
-        },
-        "error": {
-          "types": [
-            "error"
-          ],
-          "description": "Error state"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
         }
       }
     },
@@ -7975,6 +7927,84 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
         "title": {
           "types": [
             "string"
@@ -8028,30 +8058,6 @@
             "string"
           ],
           "description": "Aspect ratio for thumbnails"
-        },
-        "entity": {
-          "types": [
-            "array"
-          ],
-          "description": "Entity data array injected by the runtime"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state"
-        },
-        "error": {
-          "types": [
-            "error"
-          ],
-          "description": "Error state"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
         }
       }
     },
@@ -8811,18 +8817,6 @@
             "object"
           ],
           "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve."
-        },
-        "boardWidth": {
-          "types": [
-            "number"
-          ],
-          "description": "boardWidth prop for isometric-canvas"
-        },
-        "boardHeight": {
-          "types": [
-            "number"
-          ],
-          "description": "boardHeight prop for isometric-canvas"
         }
       }
     },
@@ -11221,9 +11215,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11325,9 +11325,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11441,9 +11447,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11540,9 +11552,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11639,9 +11657,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11756,9 +11780,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11868,9 +11898,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11972,9 +12008,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array injected by the runtime"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -12289,6 +12331,13 @@
             "string"
           ],
           "description": "unit prop",
+          "required": true
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "data prop",
           "required": true
         },
         "maxPoints": {
@@ -12855,6 +12904,13 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "JSON data to display",
+          "required": true
+        },
         "label": {
           "types": [
             "string"
