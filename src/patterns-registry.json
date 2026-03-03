@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-02T17:16:47.841Z",
+  "exportedAt": "2026-03-03T11:14:06.592Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15,9 +15,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -183,9 +189,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -329,9 +341,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -474,9 +492,15 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Entity data object for display"
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -628,6 +652,24 @@
             "string"
           ],
           "description": "Panel width (CSS value, e.g., '400px', '50%')"
+        },
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity ID for fetching specific entity"
+        },
+        "displayFields": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Display fields (alias for fields)"
+        },
+        "showActions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show actions flag"
         }
       }
     },
@@ -787,7 +829,8 @@
         },
         "entity": {
           "types": [
-            "string"
+            "string",
+            "orbitalentity"
           ],
           "description": "Schema-based props"
         },
@@ -973,7 +1016,8 @@
         },
         "entity": {
           "types": [
-            "string"
+            "string",
+            "orbitalentity"
           ],
           "description": "Schema-based props"
         },
@@ -1947,9 +1991,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -6623,9 +6673,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -6875,9 +6931,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -7596,6 +7658,12 @@
           ],
           "description": "Data series"
         },
+        "data": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Simple data (single series shorthand)"
+        },
         "height": {
           "types": [
             "number"
@@ -7622,9 +7690,9 @@
         },
         "entity": {
           "types": [
-            "array"
+            "string"
           ],
-          "description": "Entity data array for display"
+          "description": "Entity name for schema-driven auto-fetch"
         },
         "isLoading": {
           "types": [
@@ -7765,9 +7833,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -7875,9 +7949,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -7975,11 +8055,11 @@
           ],
           "description": "Selected item IDs"
         },
-        "onSelectionChange": {
+        "selectionEvent": {
           "types": [
-            "function"
+            "string"
           ],
-          "description": "Selection change callback"
+          "description": "Event name emitted when selection changes (emitted as UI:{selectionEvent})"
         },
         "showUpload": {
           "types": [
@@ -11155,9 +11235,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11259,9 +11345,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11375,9 +11467,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11474,9 +11572,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11573,9 +11677,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11690,9 +11800,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11802,9 +11918,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -11906,9 +12028,15 @@
       "propsSchema": {
         "entity": {
           "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
             "array"
           ],
-          "description": "Entity data array for display"
+          "description": "Data array provided by the trait via render-ui"
         },
         "className": {
           "types": [
@@ -12223,6 +12351,13 @@
             "string"
           ],
           "description": "unit prop",
+          "required": true
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "data prop",
           "required": true
         },
         "maxPoints": {
@@ -12789,6 +12924,13 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "JSON data to display",
+          "required": true
+        },
         "label": {
           "types": [
             "string"
