@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-03T11:14:06.592Z",
+  "exportedAt": "2026-03-04T03:26:17.224Z",
   "contracts": {
     "form": {
       "emits": [
@@ -163,13 +163,6 @@
           }
         },
         {
-          "event": "VIEW",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
           "event": "NAVIGATE",
           "trigger": "action",
           "payload": {
@@ -199,13 +192,6 @@
         },
         {
           "event": "DESELECT",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "VIEW",
           "trigger": "action",
           "payload": {
             "type": "object"
@@ -539,7 +525,7 @@
     "dashboard-grid": {
       "emits": [],
       "requires": [],
-      "entityAware": false
+      "entityAware": true
     },
     "stats": {
       "emits": [],
@@ -627,19 +613,25 @@
     "dialogue-box": {
       "emits": [
         {
-          "event": "ADVANCE",
-          "trigger": "click",
+          "event": "COMPLETE",
+          "trigger": "action",
           "payload": {
-            "type": "void"
+            "type": "object"
           }
         },
         {
-          "event": "CHOOSE",
-          "trigger": "click",
+          "event": "CHOICE",
+          "trigger": "action",
           "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADVANCE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
         }
       ],
       "requires": [],
@@ -1073,6 +1065,127 @@
       "emits": [
         {
           "event": "BOOK_PAGE_CHANGE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "action-buttons": {
+      "emits": [
+        {
+          "event": "ACTION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "d-pad": {
+      "emits": [
+        {
+          "event": "DIRECTION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "isometric-canvas": {
+      "emits": [
+        {
+          "event": "TILE_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "UNIT_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TILE_HOVER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TILE_LEAVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "trait-slot": {
+      "emits": [
+        {
+          "event": "CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "REMOVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "world-map-board": {
+      "emits": [
+        {
+          "event": "HERO_SELECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "HERO_MOVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "BATTLE_ENCOUNTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "FEATURE_ENTER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TILE_CLICK",
           "trigger": "action",
           "payload": {
             "type": "object"
