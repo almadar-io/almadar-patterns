@@ -25,12 +25,35 @@ export const INTEGRATORS_REGISTRY = integratorsRegistry;
 export const COMPONENT_MAPPING = componentMapping;
 export const EVENT_CONTRACTS = eventContracts;
 
-export function getPatternDefinition(patternType: string) {
-  return (patternsRegistry as any).patterns?.[patternType] ?? null;
+type PatternEntry = {
+  type: string;
+  category: string;
+  description?: string;
+  suggestedFor?: string[];
+  typicalSize?: string;
+  propsSchema?: Record<string, { types?: string[]; required?: boolean }>;
+  entityAware?: boolean;
+};
+
+type PatternsRegistry = {
+  version?: string;
+  exportedAt?: string;
+  patterns: Record<string, PatternEntry>;
+  categories?: string[];
+};
+
+type ComponentMapping = {
+  version?: string;
+  exportedAt?: string;
+  mappings: Record<string, string>;
+};
+
+export function getPatternDefinition(patternType: string): PatternEntry | null {
+  return (patternsRegistry as PatternsRegistry).patterns?.[patternType] ?? null;
 }
 
-export function getComponentForPattern(patternType: string) {
-  return (componentMapping as any).mappings?.[patternType] ?? null;
+export function getComponentForPattern(patternType: string): string | null {
+  return (componentMapping as ComponentMapping).mappings?.[patternType] ?? null;
 }
 
 /**

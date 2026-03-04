@@ -14,6 +14,19 @@
 import { patternsRegistry } from '../index.js';
 import type { PatternType } from '../pattern-types.js';
 
+type PatternEntry = {
+  category?: string;
+  description?: string;
+  suggestedFor?: string[];
+  typicalSize?: string;
+  propsSchema?: Record<string, { types?: string[]; required?: boolean }>;
+  entityAware?: boolean;
+};
+
+type PatternsRegistryShape = {
+  patterns?: Record<string, PatternEntry>;
+};
+
 // ============================================================================
 // Types
 // ============================================================================
@@ -132,7 +145,7 @@ export function recommendPatterns(
   context: RecommendationContext,
   maxResults: number = 10,
 ): PatternRecommendation[] {
-  const patterns = (patternsRegistry as any).patterns || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   const scores: Map<string, { score: number; reasons: string[] }> = new Map();
 
   const domainKeywords = context.domainCategory

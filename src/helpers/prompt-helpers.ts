@@ -10,16 +10,27 @@
 import { patternsRegistry } from '../index.js';
 import type { PatternType } from '../pattern-types.js';
 
+type PatternEntry = {
+  category?: string;
+  description?: string;
+  propsSchema?: Record<string, { types?: string[]; required?: boolean }>;
+  entityAware?: boolean;
+};
+
+type PatternsRegistryShape = {
+  patterns?: Record<string, PatternEntry>;
+};
+
 /**
  * Get patterns grouped by category.
  * Categories are derived from pattern registry metadata.
  */
 export function getPatternsGroupedByCategory(): Record<string, PatternType[]> {
-  const patterns = patternsRegistry.patterns || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   const grouped: Record<string, PatternType[]> = {};
 
   for (const [patternName, patternDef] of Object.entries(patterns)) {
-    const category = (patternDef as any).category || 'uncategorized';
+    const category = patternDef.category || 'uncategorized';
     if (!grouped[category]) {
       grouped[category] = [];
     }
@@ -34,14 +45,14 @@ export function getPatternsGroupedByCategory(): Record<string, PatternType[]> {
  * Generates markdown table of pattern names and their key props.
  */
 export function getPatternPropsCompact(): string {
-  const patterns = patternsRegistry.patterns || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   const lines: string[] = [
     '| Pattern | Key Props |',
     '|---------|-----------|',
   ];
 
   for (const [patternName, patternDef] of Object.entries(patterns)) {
-    const propsSchema = (patternDef as any).propsSchema || {};
+    const propsSchema = patternDef.propsSchema || {};
     const requiredProps = Object.keys(propsSchema).filter(
       (key) => propsSchema[key]?.required === true
     );
@@ -60,7 +71,7 @@ export function getPatternPropsCompact(): string {
  * Lists patterns that have action/event props (buttons, forms, etc.).
  */
 export function getPatternActionsRef(): string {
-  const patterns = patternsRegistry.patterns || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   const lines: string[] = [
     '## Pattern Action Props',
     '',
@@ -69,7 +80,7 @@ export function getPatternActionsRef(): string {
   ];
 
   for (const [patternName, patternDef] of Object.entries(patterns)) {
-    const propsSchema = (patternDef as any).propsSchema || {};
+    const propsSchema = patternDef.propsSchema || {};
     const actionProps: string[] = [];
 
     // Check for common action prop patterns
@@ -87,7 +98,7 @@ export function getPatternActionsRef(): string {
     }
 
     if (actionProps.length > 0) {
-      const notes = (patternDef as any).description || '';
+      const notes = patternDef.description || '';
       lines.push(`| ${patternName} | ${actionProps.join(', ')} | ${notes.slice(0, 50)} |`);
     }
   }
@@ -100,7 +111,7 @@ export function getPatternActionsRef(): string {
  * Auto-generates human-readable description from pattern props schema.
  */
 export function generatePatternDescription(patternType: string): string {
-  const patterns = patternsRegistry.patterns as Record<string, any> || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   const patternDef = patterns[patternType];
   
   if (!patternDef) {
@@ -130,14 +141,14 @@ export function generatePatternDescription(patternType: string): string {
  * Get all pattern types as array.
  */
 export function getAllPatternTypes(): PatternType[] {
-  const patterns = patternsRegistry.patterns as Record<string, any> || {};
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   return Object.keys(patterns) as PatternType[];
 }
 
 /**
  * Get pattern metadata for a specific pattern.
  */
-export function getPatternMetadata(patternType: string) {
-  const patterns = patternsRegistry.patterns as Record<string, any> || {};
+export function getPatternMetadata(patternType: string): PatternEntry | null {
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   return patterns[patternType] || null;
 }
