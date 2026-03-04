@@ -53,7 +53,7 @@ export function getPatternDefinition(patternType: string): PatternEntry | null {
 }
 
 export function getComponentForPattern(patternType: string): string | null {
-  return (componentMapping as ComponentMapping).mappings?.[patternType] ?? null;
+  return (componentMapping as unknown as ComponentMapping).mappings?.[patternType] ?? null;
 }
 
 /**
