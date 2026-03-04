@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-04T03:26:17.224Z",
+  "exportedAt": "2026-03-04T08:00:18.417Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -476,6 +476,18 @@
             "boolean"
           ],
           "description": "Show total count in pagination"
+        },
+        "showAvatar": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show avatar/image field on cards"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual variant for the card grid"
         }
       }
     },
@@ -2153,6 +2165,12 @@
             "unknown"
           ],
           "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays"
+        },
+        "compact": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Compact display mode"
         }
       }
     },
@@ -3462,6 +3480,12 @@
             "badgesize"
           ],
           "description": "size prop"
+        },
+        "amount": {
+          "types": [
+            "number"
+          ],
+          "description": "Numeric count or amount to display in badge"
         }
       }
     },
@@ -3670,6 +3694,30 @@
             "string"
           ],
           "description": "Declarative event name — emits UI:{action} via eventBus on card click"
+        },
+        "isSelected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the card is selected (highlighted state)"
+        },
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Card name (alias for title)"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Level indicator"
+        },
+        "maxLevel": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum level"
         }
       }
     },
@@ -7546,6 +7594,12 @@
             "function"
           ],
           "description": "Callback when user clicks sign out (optional - uses auth context signOut if not provided)"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Page content rendered inside the main area"
         }
       }
     },
@@ -7691,6 +7745,12 @@
             "boolean"
           ],
           "description": "Whether to show the minimal top bar (default: true)"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Game content rendered inside the full-screen area"
         }
       }
     },
@@ -8700,11 +8760,23 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
         "className": {
           "types": [
             "string"
           ],
-          "description": "--- Closed-circuit props (MANDATORY) ---"
+          "description": "Additional CSS classes"
         },
         "isLoading": {
           "types": [
@@ -8714,21 +8786,63 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
-        "entity": {
+        "sortBy": {
           "types": [
             "string"
           ],
-          "description": "Entity name for schema-driven auto-fetch"
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
         },
         "tiles": {
           "types": [
             "array"
           ],
-          "description": "--- Grid data ---"
+          "description": "EntityDisplayProps provides: className, isLoading, error, entity,"
         },
         "units": {
           "types": [
@@ -8770,25 +8884,25 @@
           "types": [
             "function"
           ],
-          "description": "--- Event handlers ---"
+          "description": "--- Event handlers (legacy callbacks — prefer declarative event string props below) ---"
         },
         "onUnitClick": {
           "types": [
             "function"
           ],
-          "description": "Unit click handler"
+          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
         },
         "onTileHover": {
           "types": [
             "function"
           ],
-          "description": "Tile hover handler"
+          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
         },
         "onTileLeave": {
           "types": [
             "function"
           ],
-          "description": "Tile leave handler"
+          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
         },
         "tileClickEvent": {
           "types": [
@@ -8850,6 +8964,18 @@
           ],
           "description": "Extra scale multiplier for unit draw size. 1 = default."
         },
+        "boardWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Board width in tiles (overrides tile-derived size)"
+        },
+        "boardHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "Board height in tiles (overrides tile-derived size)"
+        },
         "diamondTopY": {
           "types": [
             "number"
@@ -8890,7 +9016,7 @@
           "types": [
             "function"
           ],
-          "description": "Callback to draw canvas effects after units"
+          "description": "Callback to draw canvas effects after units (canvas-specific: cannot be declarative)"
         },
         "hasActiveEffects": {
           "types": [
