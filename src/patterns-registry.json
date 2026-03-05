@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-04T08:00:18.417Z",
+  "exportedAt": "2026-03-05T06:51:24.222Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9655,10 +9655,81 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "worldmapentity"
+            "string"
           ],
-          "description": "World map entity data",
-          "required": true
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
         },
         "scale": {
           "types": [
@@ -9785,12 +9856,6 @@
             "function"
           ],
           "description": "resolveUnitFrame prop"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
         }
       }
     },
