@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-05T06:51:24.222Z",
+  "exportedAt": "2026-03-06T07:07:47.853Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -7492,6 +7492,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "onIncrement": {
           "types": [
             "function"
@@ -7614,6 +7627,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class name"
+        },
         "title": {
           "types": [
             "string"
@@ -7650,12 +7676,6 @@
             "object"
           ],
           "description": "Game controls"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class name"
         }
       }
     },
@@ -7671,6 +7691,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class name"
+        },
         "title": {
           "types": [
             "string"
@@ -7702,12 +7735,6 @@
             "node"
           ],
           "description": "Footer content"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class name"
         }
       }
     },
@@ -9049,6 +9076,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "scale": {
           "types": [
             "number"
@@ -9074,6 +9114,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "scale": {
           "types": [
             "number"
@@ -9094,6 +9147,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "scale": {
           "types": [
             "number"
@@ -10605,6 +10671,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "cameraMode": {
           "types": [
             "string"
@@ -10704,6 +10783,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "cameraMode": {
           "types": [
             "string"
@@ -10798,6 +10890,19 @@
       ],
       "typicalSize": "full",
       "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
         "cameraMode": {
           "types": [
             "string"
