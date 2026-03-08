@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-07T02:48:15.423Z",
+  "exportedAt": "2026-03-08T11:32:49.899Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -939,6 +939,56 @@
       "component": "VariablePanel",
       "importPath": "@/components/organisms/VariablePanel",
       "category": "display"
+    },
+    "day-cell": {
+      "component": "DayCell",
+      "importPath": "@/components/atoms/DayCell",
+      "category": "component"
+    },
+    "flip-container": {
+      "component": "FlipContainer",
+      "importPath": "@/components/atoms/FlipContainer",
+      "category": "layout"
+    },
+    "time-slot-cell": {
+      "component": "TimeSlotCell",
+      "importPath": "@/components/atoms/TimeSlotCell",
+      "category": "layout"
+    },
+    "calendar-grid": {
+      "component": "CalendarGrid",
+      "importPath": "@/components/molecules/CalendarGrid",
+      "category": "display"
+    },
+    "chart-legend": {
+      "component": "ChartLegend",
+      "importPath": "@/components/molecules/ChartLegend",
+      "category": "display"
+    },
+    "date-range-selector": {
+      "component": "DateRangeSelector",
+      "importPath": "@/components/molecules/DateRangeSelector",
+      "category": "form"
+    },
+    "flip-card": {
+      "component": "FlipCard",
+      "importPath": "@/components/molecules/FlipCard",
+      "category": "display"
+    },
+    "graph-view": {
+      "component": "GraphView",
+      "importPath": "@/components/molecules/GraphView",
+      "category": "component"
+    },
+    "line-chart": {
+      "component": "LineChart",
+      "importPath": "@/components/molecules/LineChart",
+      "category": "display"
+    },
+    "progress-dots": {
+      "component": "ProgressDots",
+      "importPath": "@/components/molecules/ProgressDots",
+      "category": "component"
     },
     "heading": {
       "component": "Typography",

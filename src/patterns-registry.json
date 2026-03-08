@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-07T02:48:15.423Z",
+  "exportedAt": "2026-03-08T11:32:49.899Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -95,7 +95,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields to display - accepts string[] or Column[] for unified interface. Alias for columns"
+          "description": "Fields to display - accepts string[] or Column[] for unified interface. Alias for columns",
+          "required": true
         },
         "columns": {
           "types": [
@@ -318,7 +319,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields to display - accepts string[] or {key, header}[] for unified interface"
+          "description": "Fields to display - accepts string[] or {key, header}[] for unified interface",
+          "required": true
         },
         "fieldNames": {
           "types": [
@@ -451,7 +453,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields to display - accepts string[] or {key, header}[] for unified interface"
+          "description": "Fields to display - required for schema-driven rendering",
+          "required": true
         },
         "fieldNames": {
           "types": [
@@ -488,6 +491,12 @@
             "string"
           ],
           "description": "Visual variant for the card grid"
+        },
+        "imageField": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity field name containing an image URL to display as card thumbnail"
         }
       }
     },
@@ -632,7 +641,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields to display - accepts string[], {key, header}[], or DetailField[]"
+          "description": "Fields to display - accepts string[], {key, header}[], or DetailField[]",
+          "required": true
         },
         "fieldNames": {
           "types": [
@@ -857,7 +867,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields definition (schema format) - accepts readonly for generated const arrays"
+          "description": "Fields definition (schema format) - accepts readonly for generated const arrays",
+          "required": true
         },
         "initialData": {
           "types": [
@@ -913,6 +924,12 @@
             "string"
           ],
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')"
+        },
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity ID binding for edit mode (triggers initialData from selectedEntity in compiled code)"
         },
         "relationsData": {
           "types": [
@@ -1045,7 +1062,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields definition (schema format) - accepts readonly for generated const arrays"
+          "description": "Fields definition (schema format) - accepts readonly for generated const arrays",
+          "required": true
         },
         "initialData": {
           "types": [
@@ -1101,6 +1119,12 @@
             "string"
           ],
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')"
+        },
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity ID binding for edit mode (triggers initialData from selectedEntity in compiled code)"
         },
         "relationsData": {
           "types": [
@@ -8086,7 +8110,8 @@
           "types": [
             "unknown"
           ],
-          "description": "Fields to display"
+          "description": "Fields to display",
+          "required": true
         },
         "itemActions": {
           "types": [
@@ -13505,6 +13530,492 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        }
+      }
+    },
+    "day-cell": {
+      "type": "day-cell",
+      "category": "component",
+      "description": "DayCell component",
+      "suggestedFor": [
+        "day",
+        "cell",
+        "day cell"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "date": {
+          "types": [
+            "date"
+          ],
+          "description": "The date this cell represents",
+          "required": true
+        },
+        "isToday": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this date is today"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the day is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "flip-container": {
+      "type": "flip-container",
+      "category": "layout",
+      "description": "FlipContainer component",
+      "suggestedFor": [
+        "flip",
+        "container",
+        "flip container"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "flipped": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the container is flipped (rotateY 180deg)",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional className for the outer wrapper"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "The two face elements (front and back)",
+          "required": true
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler on the outer wrapper"
+        }
+      }
+    },
+    "time-slot-cell": {
+      "type": "time-slot-cell",
+      "category": "layout",
+      "description": "TimeSlotCell component",
+      "suggestedFor": [
+        "time",
+        "slot",
+        "cell",
+        "time slot cell"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "time": {
+          "types": [
+            "string"
+          ],
+          "description": "Time label for this slot (e.g. \"09:00\")",
+          "required": true
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the slot is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Event content placed inside the slot"
+        },
+        "isOccupied": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this slot contains an event"
+        }
+      }
+    },
+    "calendar-grid": {
+      "type": "calendar-grid",
+      "category": "display",
+      "description": "CalendarGrid component",
+      "suggestedFor": [
+        "calendar",
+        "grid",
+        "calendar grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "weekStart": {
+          "types": [
+            "date"
+          ],
+          "description": "Start of the week (defaults to current week's Monday)"
+        },
+        "timeSlots": {
+          "types": [
+            "array"
+          ],
+          "description": "Time slot labels (defaults to 09:00-17:00)"
+        },
+        "events": {
+          "types": [
+            "array"
+          ],
+          "description": "Events to display on the grid"
+        },
+        "onSlotClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a time slot is clicked"
+        },
+        "onDayClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a day header is clicked"
+        },
+        "onEventClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when an event is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "chart-legend": {
+      "type": "chart-legend",
+      "category": "display",
+      "description": "ChartLegend component",
+      "suggestedFor": [
+        "chart",
+        "legend",
+        "chart legend"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Legend items with label and color",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "direction": {
+          "types": [
+            "string"
+          ],
+          "description": "Layout direction"
+        }
+      }
+    },
+    "date-range-selector": {
+      "type": "date-range-selector",
+      "category": "form",
+      "description": "DateRangeSelector component",
+      "suggestedFor": [
+        "date",
+        "range",
+        "selector",
+        "date range selector"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "options": {
+          "types": [
+            "array"
+          ],
+          "description": "Available range options"
+        },
+        "selected": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected value"
+        },
+        "onSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a range is selected"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "flip-card": {
+      "type": "flip-card",
+      "category": "display",
+      "description": "FlipCard component",
+      "suggestedFor": [
+        "flip",
+        "card",
+        "flip card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "front": {
+          "types": [
+            "node"
+          ],
+          "description": "Content rendered on the front face",
+          "required": true
+        },
+        "back": {
+          "types": [
+            "node"
+          ],
+          "description": "Content rendered on the back face",
+          "required": true
+        },
+        "flipped": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Controlled flip state"
+        },
+        "onFlip": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when the card is clicked to flip"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional className for the outer container"
+        },
+        "height": {
+          "types": [
+            "string"
+          ],
+          "description": "Card height as a Tailwind class (default: 'h-64')"
+        }
+      }
+    },
+    "graph-view": {
+      "type": "graph-view",
+      "category": "component",
+      "description": "GraphView component",
+      "suggestedFor": [
+        "graph",
+        "view",
+        "graph view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "nodes": {
+          "types": [
+            "array"
+          ],
+          "description": "Graph nodes",
+          "required": true
+        },
+        "edges": {
+          "types": [
+            "array"
+          ],
+          "description": "Graph edges",
+          "required": true
+        },
+        "onNodeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a node is clicked"
+        },
+        "onNodeHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a node is hovered (null on leave)"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Width in pixels"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Height in pixels"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "showLabels": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show node labels (default true)"
+        },
+        "zoomToFit": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Auto zoom-to-fit after layout settles (default true)"
+        }
+      }
+    },
+    "line-chart": {
+      "type": "line-chart",
+      "category": "display",
+      "description": "LineChart component",
+      "suggestedFor": [
+        "line",
+        "chart",
+        "line chart"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data points to plot",
+          "required": true
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "SVG viewBox width"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "SVG viewBox height"
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show horizontal grid lines at 25/50/75%"
+        },
+        "showValues": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show value labels near data points"
+        },
+        "showArea": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Fill area under line with gradient"
+        },
+        "lineColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Line stroke color"
+        },
+        "areaColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Area fill color (used for gradient)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "progress-dots": {
+      "type": "progress-dots",
+      "category": "component",
+      "description": "ProgressDots component",
+      "suggestedFor": [
+        "progress",
+        "dots",
+        "progress dots"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "count": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of dots",
+          "required": true
+        },
+        "currentIndex": {
+          "types": [
+            "number"
+          ],
+          "description": "Current active index (0-based)",
+          "required": true
+        },
+        "getState": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom state resolver per dot index"
+        },
+        "onDotClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a dot is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "size": {
+          "types": [
+            "dotsize"
+          ],
+          "description": "Dot size"
         }
       }
     },
