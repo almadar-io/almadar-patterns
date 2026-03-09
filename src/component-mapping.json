@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-08T11:32:49.899Z",
+  "exportedAt": "2026-03-09T08:08:00.655Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -979,6 +979,16 @@
       "component": "GraphView",
       "importPath": "@/components/molecules/GraphView",
       "category": "component"
+    },
+    "data-grid": {
+      "component": "DataGrid",
+      "importPath": "@/components/molecules/DataGrid",
+      "category": "display"
+    },
+    "data-list": {
+      "component": "DataList",
+      "importPath": "@/components/molecules/DataList",
+      "category": "display"
     },
     "line-chart": {
       "component": "LineChart",

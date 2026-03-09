@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-08T11:32:49.899Z",
+  "exportedAt": "2026-03-09T08:08:00.655Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -3454,15 +3454,17 @@
         },
         "icon": {
           "types": [
-            "icon"
+            "icon",
+            "string"
           ],
-          "description": "Left icon as Lucide icon component (convenience prop, renders with default size)"
+          "description": "Left icon as Lucide icon component or string name (e.g. \"plus\", \"trash\")"
         },
         "iconRight": {
           "types": [
-            "icon"
+            "icon",
+            "string"
           ],
-          "description": "Right icon as Lucide icon component (convenience prop)"
+          "description": "Right icon as Lucide icon component or string name"
         },
         "action": {
           "types": [
@@ -3512,6 +3514,12 @@
             "number"
           ],
           "description": "Numeric count or amount to display in badge"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Badge label text (alternative to children for schema-driven rendering)"
         }
       }
     },
@@ -14016,6 +14024,152 @@
             "dotsize"
           ],
           "description": "Dot size"
+        }
+      }
+    },
+    "data-grid": {
+      "type": "data-grid",
+      "category": "display",
+      "description": "DataGrid component",
+      "suggestedFor": [
+        "data",
+        "grid",
+        "data grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Entity data array"
+        },
+        "fields": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Field definitions for rendering each card"
+        },
+        "columns": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Alias for fields (compiler generates `columns` for field definitions)"
+        },
+        "itemActions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Per-item action buttons"
+        },
+        "cols": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of columns (uses auto-fit if omitted)"
+        },
+        "gap": {
+          "types": [
+            "string"
+          ],
+          "description": "Gap between cards"
+        },
+        "minCardWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Minimum card width in pixels (used when cols is not set, default 280)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
+        },
+        "imageField": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity field name containing an image URL for card thumbnails"
+        }
+      }
+    },
+    "data-list": {
+      "type": "data-list",
+      "category": "display",
+      "description": "DataList component",
+      "suggestedFor": [
+        "data",
+        "list",
+        "data list"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Entity data array"
+        },
+        "fields": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Field definitions for rendering each row"
+        },
+        "columns": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Alias for fields (compiler may generate `columns` for field definitions)"
+        },
+        "itemActions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Per-item action buttons"
+        },
+        "gap": {
+          "types": [
+            "string"
+          ],
+          "description": "Gap between rows"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
         }
       }
     },
