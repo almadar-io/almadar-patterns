@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-09T08:08:00.655Z",
+  "exportedAt": "2026-03-09T19:17:08.246Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2158,9 +2158,10 @@
         },
         "icon": {
           "types": [
-            "icon"
+            "icon",
+            "string"
           ],
-          "description": "Icon to display"
+          "description": "Icon to display (Lucide component or icon name string)"
         },
         "iconBg": {
           "types": [
@@ -3520,6 +3521,12 @@
             "string"
           ],
           "description": "Badge label text (alternative to children for schema-driven rendering)"
+        },
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Icon name (Lucide icon string) or React node"
         }
       }
     },
@@ -14170,6 +14177,188 @@
             "error"
           ],
           "description": "Error state"
+        }
+      }
+    },
+    "platformer-canvas": {
+      "type": "platformer-canvas",
+      "category": "form",
+      "description": "PlatformerCanvas component",
+      "suggestedFor": [
+        "platformer",
+        "canvas",
+        "platformer canvas"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "player": {
+          "types": [
+            "platformerplayer"
+          ],
+          "description": "Player entity data"
+        },
+        "platforms": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Static platforms / level geometry"
+        },
+        "worldWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "World dimensions"
+        },
+        "worldHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "worldHeight prop"
+        },
+        "canvasWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas display size"
+        },
+        "canvasHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "canvasHeight prop"
+        },
+        "followCamera": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Camera follows player"
+        },
+        "bgColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color"
+        },
+        "leftEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event names for keyboard controls"
+        },
+        "rightEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "rightEvent prop"
+        },
+        "jumpEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "jumpEvent prop"
+        },
+        "stopEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "stopEvent prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data (schema binding)"
+        }
+      }
+    },
+    "map-view": {
+      "type": "map-view",
+      "category": "component",
+      "description": "MapView component",
+      "suggestedFor": [
+        "map",
+        "view",
+        "map view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "markers": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of markers to display"
+        },
+        "centerLat": {
+          "types": [
+            "number"
+          ],
+          "description": "Map center latitude"
+        },
+        "centerLng": {
+          "types": [
+            "number"
+          ],
+          "description": "Map center longitude"
+        },
+        "zoom": {
+          "types": [
+            "number"
+          ],
+          "description": "Zoom level (1-18, default 13)"
+        },
+        "height": {
+          "types": [
+            "string"
+          ],
+          "description": "Height of the map container (default \"400px\")"
+        },
+        "onMarkerClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a marker is clicked (programmatic use)"
+        },
+        "onMapClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when the map is clicked (programmatic use)"
+        },
+        "mapClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the map is clicked. Payload: { latitude, longitude }"
+        },
+        "markerClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when a marker is clicked. Payload: marker data"
+        },
+        "showClickedPin": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show a pin at the clicked location"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "showAttribution": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show attribution (default true)"
         }
       }
     },

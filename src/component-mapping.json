@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-09T08:08:00.655Z",
+  "exportedAt": "2026-03-09T19:17:08.246Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -998,6 +998,16 @@
     "progress-dots": {
       "component": "ProgressDots",
       "importPath": "@/components/molecules/ProgressDots",
+      "category": "component"
+    },
+    "platformer-canvas": {
+      "component": "PlatformerCanvas",
+      "importPath": "@/components/organisms/PlatformerCanvas",
+      "category": "form"
+    },
+    "map-view": {
+      "component": "MapView",
+      "importPath": "@/components/molecules/MapView",
       "category": "component"
     },
     "heading": {
