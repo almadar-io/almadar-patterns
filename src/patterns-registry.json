@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-09T19:17:08.246Z",
+  "exportedAt": "2026-03-10T17:18:23.379Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2198,6 +2198,12 @@
             "boolean"
           ],
           "description": "Compact display mode"
+        },
+        "sparklineData": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Sparkline data points for an inline trend chart"
         }
       }
     },
@@ -2387,6 +2393,12 @@
             "string"
           ],
           "description": "Declarative close event — emits UI:{closeEvent} via eventBus when modal should close"
+        },
+        "swipeDownToClose": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable swipe-down-to-close on mobile bottom sheet (default: true)"
         }
       }
     },
@@ -3759,6 +3771,18 @@
             "number"
           ],
           "description": "Maximum level"
+        },
+        "longPressEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on long press: UI:{longPressEvent}"
+        },
+        "longPressPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Additional payload for long-press events"
         }
       }
     },
@@ -4861,6 +4885,12 @@
             "object"
           ],
           "description": "Payload to include with the action event"
+        },
+        "responsive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "When true, horizontal stacks flip to vertical below the md breakpoint (768px)"
         }
       }
     },
@@ -8493,7 +8523,7 @@
     },
     "graph-canvas": {
       "type": "graph-canvas",
-      "category": "visualization",
+      "category": "game",
       "description": "Force-directed graph visualization for node-link data with interactive zoom, pan, and layout",
       "suggestedFor": [
         "knowledge graphs",
@@ -12618,6 +12648,7 @@
       "propsSchema": {
         "preset": {
           "types": [
+            "string",
             "physicspreset"
           ],
           "description": "preset prop",
@@ -13722,6 +13753,30 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "longPressEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on long-press of a time slot: UI:{longPressEvent} with { date, time }"
+        },
+        "longPressPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Additional payload for long-press events"
+        },
+        "swipeLeftEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on swipe left (next week): UI:{swipeLeftEvent}"
+        },
+        "swipeRightEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on swipe right (prev week): UI:{swipeRightEvent}"
         }
       }
     },
@@ -14110,6 +14165,48 @@
             "string"
           ],
           "description": "Entity field name containing an image URL for card thumbnails"
+        },
+        "selectable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable multi-select with checkboxes"
+        },
+        "selectionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Selection change event name (emits UI:{selectionEvent} with { selectedIds: string[] })"
+        },
+        "infiniteScroll": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable infinite scroll loading"
+        },
+        "loadMoreEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted when more items needed: UI:{loadMoreEvent}"
+        },
+        "hasMore": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether more items are available for infinite scroll"
+        },
+        "children": {
+          "types": [
+            "function"
+          ],
+          "description": "Render prop for custom per-item content. When provided, `fields` and `itemActions` are ignored."
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Max items to show before \"Show More\" button. Defaults to 0 (disabled)."
         }
       }
     },
@@ -14160,6 +14257,24 @@
           ],
           "description": "Visual variant"
         },
+        "groupBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Group items by a field value (renders section headers between groups)"
+        },
+        "senderField": {
+          "types": [
+            "string"
+          ],
+          "description": "Field name identifying the sender (used with variant: \"message\")"
+        },
+        "currentUser": {
+          "types": [
+            "string"
+          ],
+          "description": "Current user identifier; messages matching this value align right (used with variant: \"message\")"
+        },
         "className": {
           "types": [
             "string"
@@ -14177,12 +14292,84 @@
             "error"
           ],
           "description": "Error state"
+        },
+        "reorderable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable drag-to-reorder with grip handles"
+        },
+        "reorderEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on reorder: UI:{reorderEvent} with { fromIndex, toIndex }"
+        },
+        "swipeLeftEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on left swipe: UI:{swipeLeftEvent} with { row }"
+        },
+        "swipeLeftActions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Actions revealed on left swipe"
+        },
+        "swipeRightEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on right swipe: UI:{swipeRightEvent} with { row }"
+        },
+        "swipeRightActions": {
+          "types": [
+            "unknown"
+          ],
+          "description": "Actions revealed on right swipe"
+        },
+        "longPressEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on long press: UI:{longPressEvent} with { row }"
+        },
+        "infiniteScroll": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable infinite scroll loading"
+        },
+        "loadMoreEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted when more items needed: UI:{loadMoreEvent}"
+        },
+        "hasMore": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether more items are available for infinite scroll"
+        },
+        "children": {
+          "types": [
+            "function"
+          ],
+          "description": "Render prop for custom per-item content. When provided, `fields` and `itemActions` are ignored."
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Max items to show before \"Show More\" button. Defaults to 5. Set to 0 to disable."
         }
       }
     },
     "platformer-canvas": {
       "type": "platformer-canvas",
-      "category": "form",
+      "category": "game",
       "description": "PlatformerCanvas component",
       "suggestedFor": [
         "platformer",
@@ -14238,6 +14425,30 @@
             "string"
           ],
           "description": "Background color"
+        },
+        "playerSprite": {
+          "types": [
+            "string"
+          ],
+          "description": "Player sprite image URL"
+        },
+        "tileSprites": {
+          "types": [
+            "object"
+          ],
+          "description": "Map of platform type to tile sprite URL"
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL"
+        },
+        "assetBaseUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "Base URL prefix for asset URLs"
         },
         "leftEvent": {
           "types": [
@@ -14359,6 +14570,965 @@
             "boolean"
           ],
           "description": "Show attribution (default true)"
+        }
+      }
+    },
+    "range-slider": {
+      "type": "range-slider",
+      "category": "component",
+      "description": "RangeSlider component",
+      "suggestedFor": [
+        "range",
+        "slider",
+        "range slider"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "min": {
+          "types": [
+            "number"
+          ],
+          "description": "Minimum value"
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum value"
+        },
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Current value"
+        },
+        "step": {
+          "types": [
+            "number"
+          ],
+          "description": "Step increment"
+        },
+        "showTooltip": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show tooltip with current value on drag"
+        },
+        "showTicks": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show tick marks at step intervals"
+        },
+        "buffered": {
+          "types": [
+            "number"
+          ],
+          "description": "Buffered range (0-100), for media seek bars"
+        },
+        "size": {
+          "types": [
+            "rangeslidersize"
+          ],
+          "description": "Slider size"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disabled state"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for value changes"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onChange callback"
+        },
+        "formatValue": {
+          "types": [
+            "function"
+          ],
+          "description": "Format function for tooltip display"
+        }
+      }
+    },
+    "status-dot": {
+      "type": "status-dot",
+      "category": "display",
+      "description": "StatusDot component",
+      "suggestedFor": [
+        "status",
+        "dot",
+        "status dot"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "status": {
+          "types": [
+            "statusdotstatus"
+          ],
+          "description": "Status determines the dot color"
+        },
+        "pulse": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable pulse animation for active/critical states"
+        },
+        "size": {
+          "types": [
+            "statusdotsize"
+          ],
+          "description": "Dot size"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label (rendered as sr-only text)"
+        }
+      }
+    },
+    "trend-indicator": {
+      "type": "trend-indicator",
+      "category": "component",
+      "description": "TrendIndicator component",
+      "suggestedFor": [
+        "trend",
+        "indicator",
+        "trend indicator"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Numeric value to display (e.g., 12.5 for +12.5%)"
+        },
+        "direction": {
+          "types": [
+            "trenddirection"
+          ],
+          "description": "Override automatic direction detection (positive=up, negative=down, zero=flat)"
+        },
+        "showValue": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show the formatted value text next to the arrow"
+        },
+        "invert": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Invert color logic (for metrics where down is good, e.g., error rate, bounce rate)"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label override"
+        },
+        "size": {
+          "types": [
+            "trendindicatorsize"
+          ],
+          "description": "Size of the indicator"
+        }
+      }
+    },
+    "lightbox": {
+      "type": "lightbox",
+      "category": "component",
+      "description": "Lightbox component",
+      "suggestedFor": [
+        "lightbox"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "images": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of images to display",
+          "required": true
+        },
+        "currentIndex": {
+          "types": [
+            "number"
+          ],
+          "description": "Current image index"
+        },
+        "isOpen": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the lightbox is open"
+        },
+        "showCounter": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show image counter (e.g., \"3 of 12\")"
+        },
+        "closeAction": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative close event name"
+        },
+        "onClose": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onClose callback"
+        },
+        "onIndexChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onIndexChange callback"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "number-stepper": {
+      "type": "number-stepper",
+      "category": "component",
+      "description": "NumberStepper component",
+      "suggestedFor": [
+        "number",
+        "stepper",
+        "number stepper"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Current value"
+        },
+        "min": {
+          "types": [
+            "number"
+          ],
+          "description": "Minimum value"
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum value"
+        },
+        "step": {
+          "types": [
+            "number"
+          ],
+          "description": "Step increment"
+        },
+        "size": {
+          "types": [
+            "numbersteppersize"
+          ],
+          "description": "Size variant"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disabled state"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onChange callback"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for value changes"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label"
+        }
+      }
+    },
+    "star-rating": {
+      "type": "star-rating",
+      "category": "component",
+      "description": "StarRating component",
+      "suggestedFor": [
+        "star",
+        "rating",
+        "star rating"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Current rating value"
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum number of stars"
+        },
+        "readOnly": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Read-only display mode"
+        },
+        "precision": {
+          "types": [
+            "starratingprecision"
+          ],
+          "description": "Full or half-star precision"
+        },
+        "size": {
+          "types": [
+            "starratingsize"
+          ],
+          "description": "Star size"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for rating changes"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onChange callback"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label"
+        }
+      }
+    },
+    "upload-drop-zone": {
+      "type": "upload-drop-zone",
+      "category": "component",
+      "description": "UploadDropZone component",
+      "suggestedFor": [
+        "upload",
+        "drop",
+        "zone",
+        "upload drop zone"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "accept": {
+          "types": [
+            "string"
+          ],
+          "description": "Accepted MIME types (e.g., \"image/*\", \"application/pdf\")"
+        },
+        "maxSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Max file size in bytes"
+        },
+        "maxFiles": {
+          "types": [
+            "number"
+          ],
+          "description": "Max number of files"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label text"
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "Description text below label"
+        },
+        "icon": {
+          "types": [
+            "string"
+          ],
+          "description": "Icon name (Lucide string)"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disabled state"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for file selection"
+        },
+        "actionPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the action event"
+        },
+        "onFiles": {
+          "types": [
+            "function"
+          ],
+          "description": "Direct onFiles callback"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "animated-counter": {
+      "type": "animated-counter",
+      "category": "component",
+      "description": "AnimatedCounter component",
+      "suggestedFor": [
+        "animated",
+        "counter",
+        "animated counter"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "The target number to animate to",
+          "required": true
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "Animation duration in milliseconds"
+        },
+        "prefix": {
+          "types": [
+            "string"
+          ],
+          "description": "Text to display before the number"
+        },
+        "suffix": {
+          "types": [
+            "string"
+          ],
+          "description": "Text to display after the number"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "confetti-effect": {
+      "type": "confetti-effect",
+      "category": "component",
+      "description": "ConfettiEffect component",
+      "suggestedFor": [
+        "confetti",
+        "effect",
+        "confetti effect"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "trigger": {
+          "types": [
+            "boolean"
+          ],
+          "description": "When this changes from false to true, a burst of particles is spawned",
+          "required": true
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "How long the animation lasts in milliseconds"
+        },
+        "particleCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of particles to spawn"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "infinite-scroll-sentinel": {
+      "type": "infinite-scroll-sentinel",
+      "category": "component",
+      "description": "InfiniteScrollSentinel component",
+      "suggestedFor": [
+        "infinite",
+        "scroll",
+        "sentinel",
+        "infinite scroll sentinel"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "loadMoreEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name to emit when load-more is triggered (emitted as UI:{loadMoreEvent})",
+          "required": true
+        },
+        "loadMorePayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Optional payload to include with the load-more event"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether a load operation is currently in progress"
+        },
+        "hasMore": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether there are more items to load"
+        },
+        "threshold": {
+          "types": [
+            "string"
+          ],
+          "description": "IntersectionObserver rootMargin for early trigger"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "typewriter-text": {
+      "type": "typewriter-text",
+      "category": "component",
+      "description": "TypewriterText component",
+      "suggestedFor": [
+        "typewriter",
+        "text",
+        "typewriter text"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "text": {
+          "types": [
+            "string"
+          ],
+          "description": "The full text to reveal",
+          "required": true
+        },
+        "speed": {
+          "types": [
+            "number"
+          ],
+          "description": "Milliseconds per character"
+        },
+        "startDelay": {
+          "types": [
+            "number"
+          ],
+          "description": "Delay before typing starts (ms)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        },
+        "onComplete": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the entire text has been revealed"
+        }
+      }
+    },
+    "carousel": {
+      "type": "carousel",
+      "category": "component",
+      "description": "Carousel component",
+      "suggestedFor": [
+        "carousel"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of items to display as slides",
+          "required": true
+        },
+        "renderItem": {
+          "types": [
+            "function"
+          ],
+          "description": "Render function for each slide",
+          "required": true
+        },
+        "autoPlay": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable auto-play rotation"
+        },
+        "autoPlayInterval": {
+          "types": [
+            "number"
+          ],
+          "description": "Auto-play interval in milliseconds (default: 5000)"
+        },
+        "showDots": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show dot indicators"
+        },
+        "showArrows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show prev/next arrow buttons"
+        },
+        "loop": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable infinite loop"
+        },
+        "slideChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for slide change"
+        },
+        "slideChangePayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the slide change event"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "pull-to-refresh": {
+      "type": "pull-to-refresh",
+      "category": "component",
+      "description": "PullToRefresh component",
+      "suggestedFor": [
+        "pull",
+        "refresh",
+        "pull to refresh"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "refreshEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name to emit on refresh (emitted as UI:{refreshEvent})",
+          "required": true
+        },
+        "refreshPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "Payload to include with the refresh event"
+        },
+        "threshold": {
+          "types": [
+            "number"
+          ],
+          "description": "Pull distance threshold to trigger refresh in px (default: 60)"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Content to wrap",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "sortable-list": {
+      "type": "sortable-list",
+      "category": "display",
+      "description": "SortableList component",
+      "suggestedFor": [
+        "sortable",
+        "list",
+        "sortable list"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "items prop",
+          "required": true
+        },
+        "renderItem": {
+          "types": [
+            "function"
+          ],
+          "description": "renderItem prop",
+          "required": true
+        },
+        "reorderEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "reorderEvent prop",
+          "required": true
+        },
+        "reorderPayload": {
+          "types": [
+            "object"
+          ],
+          "description": "reorderPayload prop"
+        },
+        "dragHandlePosition": {
+          "types": [
+            "string"
+          ],
+          "description": "dragHandlePosition prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "swipeable-row": {
+      "type": "swipeable-row",
+      "category": "component",
+      "description": "SwipeableRow component",
+      "suggestedFor": [
+        "swipeable",
+        "row",
+        "swipeable row"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "leftActions": {
+          "types": [
+            "array"
+          ],
+          "description": "leftActions prop"
+        },
+        "rightActions": {
+          "types": [
+            "array"
+          ],
+          "description": "rightActions prop"
+        },
+        "threshold": {
+          "types": [
+            "number"
+          ],
+          "description": "threshold prop"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop",
+          "required": true
+        },
+        "itemData": {
+          "types": [
+            "object"
+          ],
+          "description": "itemData prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "stat-display": {
+      "type": "stat-display",
+      "category": "display",
+      "description": "StatDisplay component",
+      "suggestedFor": [
+        "stat",
+        "display",
+        "stat display"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Display label (e.g., \"Total\", \"Remaining\")",
+          "required": true
+        },
+        "value": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Primary value (number or formatted string)"
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum value (renders as \"value / max\")"
+        },
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Lucide icon name or React node"
+        },
+        "iconBg": {
+          "types": [
+            "string"
+          ],
+          "description": "Icon background color class"
+        },
+        "iconColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Icon color class"
+        },
+        "format": {
+          "types": [
+            "string"
+          ],
+          "description": "Display format: \"number\", \"currency\", \"percent\""
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Color variant"
+        },
+        "compact": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Compact mode (inline, no card wrapper)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state"
+        },
+        "error": {
+          "types": [
+            "error"
+          ],
+          "description": "Error state"
         }
       }
     },

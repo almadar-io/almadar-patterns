@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-09T19:17:08.246Z",
+  "exportedAt": "2026-03-10T17:18:23.379Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -457,7 +457,12 @@
     },
     "stat-badge": {
       "component": "StatBadge",
-      "importPath": "@/components/molecules/StatBadge",
+      "importPath": "@/components/molecules/game/StatBadge",
+      "category": "game"
+    },
+    "stat-display": {
+      "component": "StatDisplay",
+      "importPath": "@/components/molecules/StatDisplay",
       "category": "display"
     },
     "button-pattern": {
@@ -577,7 +582,7 @@
     },
     "meter": {
       "component": "Meter",
-      "importPath": "@almadar/ui",
+      "importPath": "@/components/molecules/Meter",
       "category": "visualization"
     },
     "timeline": {
@@ -1008,6 +1013,81 @@
     "map-view": {
       "component": "MapView",
       "importPath": "@/components/molecules/MapView",
+      "category": "component"
+    },
+    "range-slider": {
+      "component": "RangeSlider",
+      "importPath": "@/components/atoms/RangeSlider",
+      "category": "component"
+    },
+    "status-dot": {
+      "component": "StatusDot",
+      "importPath": "@/components/atoms/StatusDot",
+      "category": "display"
+    },
+    "trend-indicator": {
+      "component": "TrendIndicator",
+      "importPath": "@/components/atoms/TrendIndicator",
+      "category": "component"
+    },
+    "lightbox": {
+      "component": "Lightbox",
+      "importPath": "@/components/molecules/Lightbox",
+      "category": "component"
+    },
+    "number-stepper": {
+      "component": "NumberStepper",
+      "importPath": "@/components/molecules/NumberStepper",
+      "category": "component"
+    },
+    "star-rating": {
+      "component": "StarRating",
+      "importPath": "@/components/molecules/StarRating",
+      "category": "component"
+    },
+    "upload-drop-zone": {
+      "component": "UploadDropZone",
+      "importPath": "@/components/molecules/UploadDropZone",
+      "category": "component"
+    },
+    "animated-counter": {
+      "component": "AnimatedCounter",
+      "importPath": "@/components/atoms/AnimatedCounter",
+      "category": "component"
+    },
+    "confetti-effect": {
+      "component": "ConfettiEffect",
+      "importPath": "@/components/atoms/ConfettiEffect",
+      "category": "component"
+    },
+    "infinite-scroll-sentinel": {
+      "component": "InfiniteScrollSentinel",
+      "importPath": "@/components/atoms/InfiniteScrollSentinel",
+      "category": "component"
+    },
+    "typewriter-text": {
+      "component": "TypewriterText",
+      "importPath": "@/components/atoms/TypewriterText",
+      "category": "component"
+    },
+    "carousel": {
+      "component": "Carousel",
+      "importPath": "@/components/molecules/Carousel",
+      "category": "component"
+    },
+    "pull-to-refresh": {
+      "component": "PullToRefresh",
+      "importPath": "@/components/molecules/PullToRefresh",
+      "category": "component"
+    },
+    "sortable-list": {
+      "component": "SortableList",
+      "importPath": "@/components/molecules/SortableList",
+      "category": "display"
+    },
+    "swipeable-row": {
+      "component": "SwipeableRow",
+      "importPath": "@/components/molecules/SwipeableRow",
       "category": "component"
     },
     "heading": {
