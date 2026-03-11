@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-10T17:18:23.379Z",
+  "exportedAt": "2026-03-11T04:10:55.563Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8859,18 +8859,6 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
@@ -8885,63 +8873,15 @@
         },
         "error": {
           "types": [
-            "object"
+            "error"
           ],
           "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "tiles": {
           "types": [
             "array"
           ],
-          "description": "EntityDisplayProps provides: className, isLoading, error, entity,"
+          "description": "--- Grid data ---"
         },
         "units": {
           "types": [
@@ -8989,19 +8929,19 @@
           "types": [
             "function"
           ],
-          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
+          "description": "onUnitClick prop"
         },
         "onTileHover": {
           "types": [
             "function"
           ],
-          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
+          "description": "onTileHover prop"
         },
         "onTileLeave": {
           "types": [
             "function"
           ],
-          "description": "eslint-disable-next-line almadar/organism-no-callback-props"
+          "description": "onTileLeave prop"
         },
         "tileClickEvent": {
           "types": [
@@ -14382,7 +14322,7 @@
           "types": [
             "platformerplayer"
           ],
-          "description": "Player entity data"
+          "description": "Player state data"
         },
         "platforms": {
           "types": [
@@ -14479,12 +14419,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "entity": {
-          "types": [
-            "object"
-          ],
-          "description": "Entity data (schema binding)"
         }
       }
     },
@@ -15529,6 +15463,1202 @@
             "error"
           ],
           "description": "Error state"
+        }
+      }
+    },
+    "action-button": {
+      "type": "action-button",
+      "category": "component",
+      "description": "ActionButton component",
+      "suggestedFor": [
+        "action",
+        "button",
+        "action button"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Button label text",
+          "required": true
+        },
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Icon displayed before the label"
+        },
+        "cooldown": {
+          "types": [
+            "number"
+          ],
+          "description": "Cooldown progress from 0 (ready) to 1 (full cooldown)"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the button is disabled"
+        },
+        "hotkey": {
+          "types": [
+            "string"
+          ],
+          "description": "Keyboard hotkey to display as a badge"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual variant"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "choice-button": {
+      "type": "choice-button",
+      "category": "component",
+      "description": "ChoiceButton component",
+      "suggestedFor": [
+        "choice",
+        "button",
+        "choice button"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "text": {
+          "types": [
+            "string"
+          ],
+          "description": "Choice text content",
+          "required": true
+        },
+        "index": {
+          "types": [
+            "number"
+          ],
+          "description": "Choice index number (displayed as prefix)"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the choice is disabled"
+        },
+        "selected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the choice is currently selected"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "combo-counter": {
+      "type": "combo-counter",
+      "category": "component",
+      "description": "ComboCounter component",
+      "suggestedFor": [
+        "combo",
+        "counter",
+        "combo counter"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "combo": {
+          "types": [
+            "number"
+          ],
+          "description": "Current combo count",
+          "required": true
+        },
+        "multiplier": {
+          "types": [
+            "number"
+          ],
+          "description": "Score multiplier"
+        },
+        "streak": {
+          "types": [
+            "number"
+          ],
+          "description": "Current streak"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "damage-number": {
+      "type": "damage-number",
+      "category": "component",
+      "description": "DamageNumber component",
+      "suggestedFor": [
+        "damage",
+        "number",
+        "damage number"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "The damage/heal value to display",
+          "required": true
+        },
+        "type": {
+          "types": [
+            "string"
+          ],
+          "description": "Type of number display"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "dialogue-bubble": {
+      "type": "dialogue-bubble",
+      "category": "game",
+      "description": "DialogueBubble component",
+      "suggestedFor": [
+        "dialogue",
+        "bubble",
+        "dialogue bubble"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "speaker": {
+          "types": [
+            "string"
+          ],
+          "description": "Speaker name displayed at the top"
+        },
+        "text": {
+          "types": [
+            "string"
+          ],
+          "description": "Dialogue text content",
+          "required": true
+        },
+        "portrait": {
+          "types": [
+            "string"
+          ],
+          "description": "URL for the speaker portrait image"
+        },
+        "position": {
+          "types": [
+            "string"
+          ],
+          "description": "Position of the bubble on screen"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "item-slot": {
+      "type": "item-slot",
+      "category": "layout",
+      "description": "ItemSlot component",
+      "suggestedFor": [
+        "item",
+        "slot",
+        "item slot"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Icon component or emoji"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Item label"
+        },
+        "quantity": {
+          "types": [
+            "number"
+          ],
+          "description": "Stack quantity"
+        },
+        "rarity": {
+          "types": [
+            "string"
+          ],
+          "description": "Rarity tier affecting border color"
+        },
+        "empty": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the slot is empty"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "selected": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the slot is selected"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "mini-map": {
+      "type": "mini-map",
+      "category": "component",
+      "description": "MiniMap component",
+      "suggestedFor": [
+        "mini",
+        "map",
+        "mini map"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "tiles": {
+          "types": [
+            "array"
+          ],
+          "description": "Tile data: each tile renders as a 1px dot at (x,y) with the given color"
+        },
+        "units": {
+          "types": [
+            "array"
+          ],
+          "description": "Unit positions: each unit renders as a 2px dot"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas display width in pixels"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas display height in pixels"
+        },
+        "mapWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Logical map width (for coordinate scaling)"
+        },
+        "mapHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "Logical map height (for coordinate scaling)"
+        },
+        "viewportRect": {
+          "types": [
+            "object"
+          ],
+          "description": "Viewport rectangle outline"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "resource-counter": {
+      "type": "resource-counter",
+      "category": "component",
+      "description": "ResourceCounter component",
+      "suggestedFor": [
+        "resource",
+        "counter",
+        "resource counter"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Icon component or emoji"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Resource label",
+          "required": true
+        },
+        "value": {
+          "types": [
+            "number"
+          ],
+          "description": "Current value",
+          "required": true
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum value"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Accent color class (e.g. 'text-yellow-400')"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "status-effect": {
+      "type": "status-effect",
+      "category": "display",
+      "description": "StatusEffect component",
+      "suggestedFor": [
+        "status",
+        "effect",
+        "status effect"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Icon to display for the effect",
+          "required": true
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label describing the effect"
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "Remaining duration in seconds"
+        },
+        "stacks": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of stacks"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Effect type"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "timer-display": {
+      "type": "timer-display",
+      "category": "component",
+      "description": "TimerDisplay component",
+      "suggestedFor": [
+        "timer",
+        "display",
+        "timer display"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "seconds": {
+          "types": [
+            "number"
+          ],
+          "description": "Time in seconds",
+          "required": true
+        },
+        "running": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the timer is running"
+        },
+        "format": {
+          "types": [
+            "string"
+          ],
+          "description": "Display format"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "lowThreshold": {
+          "types": [
+            "number"
+          ],
+          "description": "Seconds below which to pulse red"
+        }
+      }
+    },
+    "turn-indicator": {
+      "type": "turn-indicator",
+      "category": "component",
+      "description": "TurnIndicator component",
+      "suggestedFor": [
+        "turn",
+        "indicator",
+        "turn indicator"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "currentTurn": {
+          "types": [
+            "number"
+          ],
+          "description": "Current turn number",
+          "required": true
+        },
+        "maxTurns": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum number of turns"
+        },
+        "activeTeam": {
+          "types": [
+            "string"
+          ],
+          "description": "Name of the active team"
+        },
+        "phase": {
+          "types": [
+            "string"
+          ],
+          "description": "Current phase label"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "waypoint-marker": {
+      "type": "waypoint-marker",
+      "category": "component",
+      "description": "WaypointMarker component",
+      "suggestedFor": [
+        "waypoint",
+        "marker",
+        "waypoint marker"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label text below the marker"
+        },
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Custom icon to render inside the marker"
+        },
+        "active": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this waypoint is currently active"
+        },
+        "completed": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this waypoint has been completed"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "x-p-bar": {
+      "type": "x-p-bar",
+      "category": "component",
+      "description": "XPBar component",
+      "suggestedFor": [
+        "bar",
+        "x p bar"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "current": {
+          "types": [
+            "number"
+          ],
+          "description": "Current XP value",
+          "required": true
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "XP needed for next level",
+          "required": true
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Current level"
+        },
+        "showLabel": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show the XP label"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Animate the fill bar"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "crafting-recipe": {
+      "type": "crafting-recipe",
+      "category": "component",
+      "description": "CraftingRecipe component",
+      "suggestedFor": [
+        "crafting",
+        "recipe",
+        "crafting recipe"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "inputs": {
+          "types": [
+            "array"
+          ],
+          "description": "Input ingredients for the recipe",
+          "required": true
+        },
+        "output": {
+          "types": [
+            "object"
+          ],
+          "description": "Output item produced by the recipe",
+          "required": true
+        },
+        "canCraft": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the player has enough ingredients to craft"
+        },
+        "onCraft": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when the craft button is clicked"
+        },
+        "craftEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event bus event name for crafting"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "enemy-plate": {
+      "type": "enemy-plate",
+      "category": "component",
+      "description": "EnemyPlate component",
+      "suggestedFor": [
+        "enemy",
+        "plate",
+        "enemy plate"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Enemy name",
+          "required": true
+        },
+        "health": {
+          "types": [
+            "number"
+          ],
+          "description": "Current health",
+          "required": true
+        },
+        "maxHealth": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum health",
+          "required": true
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Enemy level"
+        },
+        "effects": {
+          "types": [
+            "array"
+          ],
+          "description": "Active status effects"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "game-canvas2-d": {
+      "type": "game-canvas2-d",
+      "category": "game",
+      "description": "GameCanvas2D component",
+      "suggestedFor": [
+        "game",
+        "canvas2",
+        "game canvas2 d"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas width in pixels"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas height in pixels"
+        },
+        "onDraw": {
+          "types": [
+            "function"
+          ],
+          "description": "Called each frame with the 2D context and current frame count"
+        },
+        "onTick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called each tick with delta time in seconds"
+        },
+        "fps": {
+          "types": [
+            "number"
+          ],
+          "description": "Target frames per second"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "health-panel": {
+      "type": "health-panel",
+      "category": "component",
+      "description": "HealthPanel component",
+      "suggestedFor": [
+        "health",
+        "panel",
+        "health panel"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "current": {
+          "types": [
+            "number"
+          ],
+          "description": "Current health value",
+          "required": true
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum health value",
+          "required": true
+        },
+        "shield": {
+          "types": [
+            "number"
+          ],
+          "description": "Shield/armor points"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label shown above the bar"
+        },
+        "effects": {
+          "types": [
+            "array"
+          ],
+          "description": "Active status effects displayed as small badges"
+        },
+        "showNumbers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to display numeric HP values"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "inventory-grid": {
+      "type": "inventory-grid",
+      "category": "game",
+      "description": "InventoryGrid component",
+      "suggestedFor": [
+        "inventory",
+        "grid",
+        "inventory grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of items to display in the grid",
+          "required": true
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of columns in the grid"
+        },
+        "totalSlots": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of slots (empty slots fill remaining space)"
+        },
+        "selectedId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected item ID"
+        },
+        "onSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when an item is selected"
+        },
+        "selectEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event bus event name for selection"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant for all item slots"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "powerup-slots": {
+      "type": "powerup-slots",
+      "category": "layout",
+      "description": "PowerupSlots component",
+      "suggestedFor": [
+        "powerup",
+        "slots",
+        "powerup slots"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "active": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of active powerups",
+          "required": true
+        },
+        "maxSlots": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum number of powerup slots"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "quest-tracker": {
+      "type": "quest-tracker",
+      "category": "component",
+      "description": "QuestTracker component",
+      "suggestedFor": [
+        "quest",
+        "tracker",
+        "quest tracker"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "quests": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of quests to display",
+          "required": true
+        },
+        "activeQuestId": {
+          "types": [
+            "string"
+          ],
+          "description": "ID of the currently active quest"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "resource-bar": {
+      "type": "resource-bar",
+      "category": "component",
+      "description": "ResourceBar component",
+      "suggestedFor": [
+        "resource",
+        "bar",
+        "resource bar"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "resources": {
+          "types": [
+            "array"
+          ],
+          "description": "Resources to display",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "score-board": {
+      "type": "score-board",
+      "category": "game",
+      "description": "ScoreBoard component",
+      "suggestedFor": [
+        "score",
+        "board",
+        "score board"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "score": {
+          "types": [
+            "number"
+          ],
+          "description": "Current score",
+          "required": true
+        },
+        "highScore": {
+          "types": [
+            "number"
+          ],
+          "description": "All-time high score"
+        },
+        "combo": {
+          "types": [
+            "number"
+          ],
+          "description": "Current combo count"
+        },
+        "multiplier": {
+          "types": [
+            "number"
+          ],
+          "description": "Score multiplier"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Current level"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "turn-panel": {
+      "type": "turn-panel",
+      "category": "component",
+      "description": "TurnPanel component",
+      "suggestedFor": [
+        "turn",
+        "panel",
+        "turn panel"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "currentTurn": {
+          "types": [
+            "number"
+          ],
+          "description": "Current turn number",
+          "required": true
+        },
+        "maxTurns": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum number of turns"
+        },
+        "phase": {
+          "types": [
+            "string"
+          ],
+          "description": "Current phase label"
+        },
+        "activeTeam": {
+          "types": [
+            "string"
+          ],
+          "description": "Active team name"
+        },
+        "actions": {
+          "types": [
+            "array"
+          ],
+          "description": "Action buttons to display"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "unit-command-bar": {
+      "type": "unit-command-bar",
+      "category": "component",
+      "description": "UnitCommandBar component",
+      "suggestedFor": [
+        "unit",
+        "command",
+        "bar",
+        "unit command bar"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "commands": {
+          "types": [
+            "array"
+          ],
+          "description": "Available commands",
+          "required": true
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "ID of the currently selected unit"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
         }
       }
     },

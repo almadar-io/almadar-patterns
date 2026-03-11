@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@almadar/eslint-plugin':
         specifier: '>=2.3.0'
-        version: 2.4.1(eslint@10.0.0)
+        version: 2.4.3(eslint@10.0.0)
       '@typescript-eslint/parser':
         specifier: 8.56.0
         version: 8.56.0(eslint@10.0.0)(typescript@5.9.3)
@@ -29,8 +29,8 @@ importers:
 
 packages:
 
-  '@almadar/eslint-plugin@2.4.1':
-    resolution: {integrity: sha512-dl5KSduodpbiWLYFvAK2y98MLheKTg/pz+fhn9Gx/cr0PsB6HHrCAIkaeZkVdsHZny51fjTFTfEsNKVH5yAhWw==}
+  '@almadar/eslint-plugin@2.4.3':
+    resolution: {integrity: sha512-K8L7LpoJRLObRy8ce5mwCvmtiyJzHfrOcolVQBrdiWPRSdibDmr/PvxeG6GsGzyoqJ3nvj0oi1hQYZKkPJO5xw==}
     peerDependencies:
       eslint: '>=8.0.0'
 
@@ -848,6 +848,10 @@ packages:
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
 
+  jsonc-eslint-parser@3.1.0:
+    resolution: {integrity: sha512-75EA7EWZExL/j+MDKQrRbdzcRI2HOkRlmUw8fZJc1ioqFEOvBsq7Rt+A6yCxOt9w/TYNpkt52gC6nm/g5tFIng==}
+    engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
@@ -1232,9 +1236,10 @@ packages:
 
 snapshots:
 
-  '@almadar/eslint-plugin@2.4.1(eslint@10.0.0)':
+  '@almadar/eslint-plugin@2.4.3(eslint@10.0.0)':
     dependencies:
       eslint: 10.0.0
+      jsonc-eslint-parser: 3.1.0
 
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
@@ -1895,6 +1900,12 @@ snapshots:
   json-schema-traverse@0.4.1: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
+
+  jsonc-eslint-parser@3.1.0:
+    dependencies:
+      acorn: 8.16.0
+      eslint-visitor-keys: 5.0.1
+      semver: 7.7.4
 
   keyv@4.5.4:
     dependencies:

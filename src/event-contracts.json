@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-10T17:18:23.379Z",
+  "exportedAt": "2026-03-11T04:10:55.563Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1132,7 +1132,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "trait-slot": {
       "emits": [

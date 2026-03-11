@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-10T17:18:23.379Z",
+  "exportedAt": "2026-03-11T04:10:55.563Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1088,6 +1088,126 @@
     "swipeable-row": {
       "component": "SwipeableRow",
       "importPath": "@/components/molecules/SwipeableRow",
+      "category": "component"
+    },
+    "action-button": {
+      "component": "ActionButton",
+      "importPath": "@/components/atoms/ActionButton",
+      "category": "component"
+    },
+    "choice-button": {
+      "component": "ChoiceButton",
+      "importPath": "@/components/atoms/ChoiceButton",
+      "category": "component"
+    },
+    "combo-counter": {
+      "component": "ComboCounter",
+      "importPath": "@/components/atoms/ComboCounter",
+      "category": "component"
+    },
+    "damage-number": {
+      "component": "DamageNumber",
+      "importPath": "@/components/atoms/DamageNumber",
+      "category": "component"
+    },
+    "dialogue-bubble": {
+      "component": "DialogueBubble",
+      "importPath": "@/components/atoms/DialogueBubble",
+      "category": "game"
+    },
+    "item-slot": {
+      "component": "ItemSlot",
+      "importPath": "@/components/atoms/ItemSlot",
+      "category": "layout"
+    },
+    "mini-map": {
+      "component": "MiniMap",
+      "importPath": "@/components/atoms/MiniMap",
+      "category": "component"
+    },
+    "resource-counter": {
+      "component": "ResourceCounter",
+      "importPath": "@/components/atoms/ResourceCounter",
+      "category": "component"
+    },
+    "status-effect": {
+      "component": "StatusEffect",
+      "importPath": "@/components/atoms/StatusEffect",
+      "category": "display"
+    },
+    "timer-display": {
+      "component": "TimerDisplay",
+      "importPath": "@/components/atoms/TimerDisplay",
+      "category": "component"
+    },
+    "turn-indicator": {
+      "component": "TurnIndicator",
+      "importPath": "@/components/atoms/TurnIndicator",
+      "category": "component"
+    },
+    "waypoint-marker": {
+      "component": "WaypointMarker",
+      "importPath": "@/components/atoms/WaypointMarker",
+      "category": "component"
+    },
+    "x-p-bar": {
+      "component": "XPBar",
+      "importPath": "@/components/atoms/XPBar",
+      "category": "component"
+    },
+    "crafting-recipe": {
+      "component": "CraftingRecipe",
+      "importPath": "@/components/molecules/CraftingRecipe",
+      "category": "component"
+    },
+    "enemy-plate": {
+      "component": "EnemyPlate",
+      "importPath": "@/components/molecules/EnemyPlate",
+      "category": "component"
+    },
+    "game-canvas2-d": {
+      "component": "GameCanvas2D",
+      "importPath": "@/components/molecules/GameCanvas2D",
+      "category": "game"
+    },
+    "health-panel": {
+      "component": "HealthPanel",
+      "importPath": "@/components/molecules/HealthPanel",
+      "category": "component"
+    },
+    "inventory-grid": {
+      "component": "InventoryGrid",
+      "importPath": "@/components/molecules/InventoryGrid",
+      "category": "game"
+    },
+    "powerup-slots": {
+      "component": "PowerupSlots",
+      "importPath": "@/components/molecules/PowerupSlots",
+      "category": "layout"
+    },
+    "quest-tracker": {
+      "component": "QuestTracker",
+      "importPath": "@/components/molecules/QuestTracker",
+      "category": "component"
+    },
+    "resource-bar": {
+      "component": "ResourceBar",
+      "importPath": "@/components/molecules/ResourceBar",
+      "category": "component"
+    },
+    "score-board": {
+      "component": "ScoreBoard",
+      "importPath": "@/components/molecules/ScoreBoard",
+      "category": "game"
+    },
+    "turn-panel": {
+      "component": "TurnPanel",
+      "importPath": "@/components/molecules/TurnPanel",
+      "category": "component"
+    },
+    "unit-command-bar": {
+      "component": "UnitCommandBar",
+      "importPath": "@/components/molecules/UnitCommandBar",
       "category": "component"
     },
     "heading": {
