@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-11T04:10:55.563Z",
+  "exportedAt": "2026-03-12T02:35:44.580Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -14044,13 +14044,15 @@
           "types": [
             "unknown"
           ],
-          "description": "Entity data array"
+          "description": "Entity data array",
+          "required": true
         },
         "fields": {
           "types": [
             "unknown"
           ],
-          "description": "Field definitions for rendering each card"
+          "description": "Field definitions for rendering each card",
+          "required": true
         },
         "columns": {
           "types": [
@@ -14165,13 +14167,15 @@
           "types": [
             "unknown"
           ],
-          "description": "Entity data array"
+          "description": "Entity data array",
+          "required": true
         },
         "fields": {
           "types": [
             "unknown"
           ],
-          "description": "Field definitions for rendering each row"
+          "description": "Field definitions for rendering each row",
+          "required": true
         },
         "columns": {
           "types": [
@@ -15396,7 +15400,8 @@
             "number",
             "string"
           ],
-          "description": "Primary value (number or formatted string)"
+          "description": "Primary value (number or formatted string)",
+          "required": true
         },
         "max": {
           "types": [
