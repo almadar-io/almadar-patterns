@@ -59,8 +59,10 @@ export function getComponentForPattern(patternType: string): string | null {
 /**
  * Check if a pattern is entity-aware (requires data injection).
  *
- * Entity-aware patterns have an `entity` prop typed as `array` or `object`
- * in the registry propsSchema. String-typed entity props are metadata only.
+ * A pattern is entity-aware when it declares an `entity` prop in its
+ * propsSchema, regardless of the declared type. Display patterns like
+ * DataGrid and Timeline declare entity as "string" or "unknown" but
+ * still need entity data injected at runtime.
  *
  * @param patternType - Pattern type to check
  * @returns true if the pattern is entity-aware
@@ -75,9 +77,8 @@ export function isEntityAwarePattern(patternType: string): boolean {
   const propsSchema = definition.propsSchema;
   if (!propsSchema) return false;
 
-  // Entity-aware = entity prop type is array or object (carries data, not a name string)
-  const entityTypes: string[] = propsSchema.entity?.types || [];
-  return entityTypes.includes('array') || entityTypes.includes('object');
+  // Any pattern with an entity prop needs data injection
+  return 'entity' in propsSchema;
 }
 
 // Export prompt helpers for @almadar/skills
