@@ -1,6 +1,6 @@
 {
   "name": "@almadar/patterns",
-  "version": "2.6.2",
+  "version": "2.6.3",
   "description": "Pattern registry and component mappings for Almadar",
   "type": "module",
   "main": "./dist/index.js",
@@ -8,8 +8,9 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./registry.json": "./dist/registry.json",
     "./patterns-registry.json": "./dist/patterns-registry.json",
