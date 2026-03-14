@@ -152,3 +152,84 @@ export function getPatternMetadata(patternType: string): PatternEntry | null {
   const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
   return patterns[patternType] || null;
 }
+
+/**
+ * Entity-aware patterns that are still allowed in .orb render-ui trees.
+ * These are the standard building blocks used across all golden behaviors
+ * despite having an `entity` prop.
+ */
+const ORB_ALLOWED_ENTITY_PATTERNS = new Set([
+  'data-list',
+  'data-grid',
+  'search-input',
+  'form-section',
+  'meter',
+]);
+
+/**
+ * Categories to exclude from .orb render-ui guidance (game-specific, debug, templates, 3D).
+ */
+const ORB_EXCLUDED_CATEGORIES = new Set([
+  'game', 'debug', 'template',
+]);
+
+/**
+ * Get patterns allowed in .orb render-ui trees.
+ *
+ * Returns all non-entity patterns (atoms/molecules) plus the allowed
+ * entity-aware exceptions (data-list, data-grid, search-input, form-section, meter).
+ * Excludes game-specific, debug, and template patterns.
+ *
+ * Grouped by registry category with description and key props.
+ */
+export function getOrbAllowedPatterns(): Record<string, Array<{
+  name: string;
+  description: string;
+  keyProps: string[];
+}>> {
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
+  const grouped: Record<string, Array<{ name: string; description: string; keyProps: string[] }>> = {};
+
+  for (const [name, def] of Object.entries(patterns)) {
+    const cat = def.category || 'uncategorized';
+    if (ORB_EXCLUDED_CATEGORIES.has(cat)) continue;
+    if (name.includes('3-d') || name.includes('3d')) continue;
+
+    const hasEntity = def.propsSchema && 'entity' in def.propsSchema;
+    if (hasEntity && !ORB_ALLOWED_ENTITY_PATTERNS.has(name)) continue;
+
+    const propsSchema = def.propsSchema || {};
+    const keyProps = Object.keys(propsSchema).slice(0, 5);
+
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({
+      name,
+      description: def.description || '',
+      keyProps,
+    });
+  }
+
+  return grouped;
+}
+
+/**
+ * Get compact markdown reference of .orb-allowed patterns.
+ * Derives everything from the registry. No hardcoded pattern lists.
+ */
+export function getOrbAllowedPatternsCompact(): string {
+  const grouped = getOrbAllowedPatterns();
+  const lines: string[] = [];
+
+  for (const [cat, items] of Object.entries(grouped).sort()) {
+    lines.push(`#### ${cat} (${items.length})`);
+    lines.push('| Pattern | Description | Key Props |');
+    lines.push('|---------|-------------|-----------|');
+    for (const item of items) {
+      const desc = item.description.split('\n')[0].slice(0, 60);
+      lines.push(`| \`${item.name}\` | ${desc} | ${item.keyProps.join(', ')} |`);
+    }
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}

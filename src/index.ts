@@ -89,6 +89,8 @@ export {
   generatePatternDescription,
   getAllPatternTypes,
   getPatternMetadata,
+  getOrbAllowedPatterns,
+  getOrbAllowedPatternsCompact,
 } from './helpers/prompt-helpers.js';
 
 // Export pattern recommender for @almadar/agent design tool
