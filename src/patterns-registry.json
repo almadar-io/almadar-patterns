@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-12T02:35:44.580Z",
+  "exportedAt": "2026-03-15T00:20:59.995Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -3421,6 +3421,24 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "mode": {
+          "types": [
+            "string"
+          ],
+          "description": "Display mode: floating (fixed overlay) or inline (block element)"
+        },
+        "defaultTab": {
+          "types": [
+            "string"
+          ],
+          "description": "Default active tab id"
+        },
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "description": "Raw schema for EventDispatcherTab payload extraction"
         }
       }
     },
@@ -6203,6 +6221,12 @@
           ],
           "description": "onClick prop"
         },
+        "event": {
+          "types": [
+            "string"
+          ],
+          "description": "event prop"
+        },
         "icon": {
           "types": [
             "string"
@@ -7350,6 +7374,12 @@
             "boolean"
           ],
           "description": "Include HUD slots"
+        },
+        "hudMode": {
+          "types": [
+            "string"
+          ],
+          "description": "HUD positioning mode: 'fixed' (default, viewport-relative) or 'inline' (container-relative, uses sticky)"
         },
         "includeFloating": {
           "types": [
