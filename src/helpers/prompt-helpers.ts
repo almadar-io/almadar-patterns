@@ -233,3 +233,62 @@ export function getOrbAllowedPatternsCompact(): string {
 
   return lines.join('\n');
 }
+
+/**
+ * Get a slim one-line-per-pattern catalog for Gate 3.5 pattern selection.
+ * Format: "- pattern-name: one-line description"
+ * Much smaller than the full compact reference (~800 tokens vs ~3,500).
+ */
+export function getOrbAllowedPatternsSlim(): string {
+  const grouped = getOrbAllowedPatterns();
+  const lines: string[] = [];
+
+  for (const [cat, items] of Object.entries(grouped).sort()) {
+    lines.push(`## ${cat}`);
+    for (const item of items) {
+      const desc = item.description.split('\n')[0].slice(0, 80);
+      lines.push(`- ${item.name}: ${desc}`);
+    }
+  }
+
+  return lines.join('\n');
+}
+
+/**
+ * Get compact markdown reference for a filtered subset of patterns.
+ * Used by Gate 4 after Gate 3.5 selects the relevant patterns.
+ * Includes all props (not just top 5) since we're showing fewer patterns.
+ */
+export function getOrbAllowedPatternsFiltered(patternNames: string[]): string {
+  const nameSet = new Set(patternNames);
+  const patterns = (patternsRegistry as PatternsRegistryShape).patterns || {};
+  const grouped: Record<string, Array<{ name: string; description: string; allProps: string[] }>> = {};
+
+  for (const [name, def] of Object.entries(patterns)) {
+    if (!nameSet.has(name)) continue;
+    const cat = def.category || 'uncategorized';
+    const propsSchema = def.propsSchema || {};
+    const allProps = Object.keys(propsSchema);
+
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push({
+      name,
+      description: def.description || '',
+      allProps,
+    });
+  }
+
+  const lines: string[] = [];
+  for (const [cat, items] of Object.entries(grouped).sort()) {
+    lines.push(`#### ${cat} (${items.length})`);
+    lines.push('| Pattern | Description | Props |');
+    lines.push('|---------|-------------|-------|');
+    for (const item of items) {
+      const desc = item.description.split('\n')[0].slice(0, 60);
+      lines.push(`| \`${item.name}\` | ${desc} | ${item.allProps.join(', ')} |`);
+    }
+    lines.push('');
+  }
+
+  return lines.join('\n');
+}
