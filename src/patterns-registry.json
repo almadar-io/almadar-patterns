@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-15T00:20:59.995Z",
+  "exportedAt": "2026-03-16T01:48:20.029Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -93,20 +93,20 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields to display - accepts string[] or Column[] for unified interface. Alias for columns",
           "required": true
         },
         "columns": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Columns can be Column objects or simple string field names"
         },
         "itemActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Item actions from generated code - maps to rowActions"
         },
@@ -154,7 +154,7 @@
         },
         "rowActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Row actions"
         },
@@ -281,7 +281,7 @@
         "itemActions": {
           "types": [
             "function",
-            "unknown"
+            "array"
           ],
           "description": "Item actions - schema-driven or function-based"
         },
@@ -317,14 +317,14 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields to display - accepts string[] or {key, header}[] for unified interface",
           "required": true
         },
         "fieldNames": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields - backwards compatibility"
         }
@@ -433,7 +433,7 @@
         },
         "gap": {
           "types": [
-            "cardgridgap"
+            "object"
           ],
           "description": "Gap between cards"
         },
@@ -451,26 +451,26 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields to display - required for schema-driven rendering",
           "required": true
         },
         "fieldNames": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields - backwards compatibility"
         },
         "columns": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields - backwards compatibility"
         },
         "itemActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions for each card item (schema-driven)"
         },
@@ -615,13 +615,13 @@
         },
         "sections": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "sections prop"
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Unified actions array - first action with variant='primary' is the main action"
         },
@@ -639,14 +639,14 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields to display - accepts string[], {key, header}[], or DetailField[]",
           "required": true
         },
         "fieldNames": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields - backwards compatibility"
         },
@@ -683,7 +683,7 @@
         },
         "displayFields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Display fields (alias for fields)"
         },
@@ -736,7 +736,7 @@
         },
         "breadcrumbs": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Breadcrumbs"
         },
@@ -748,7 +748,7 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions array - first action with variant='primary' (or first action) is the main action"
         },
@@ -760,7 +760,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -852,8 +852,8 @@
         "entity": {
           "types": [
             "string",
-            "orbitalentity",
-            "unknown"
+            "object",
+            "array"
           ],
           "description": "Schema-based props"
         },
@@ -865,7 +865,7 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields definition (schema format) - accepts readonly for generated const arrays",
           "required": true
@@ -885,7 +885,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -966,7 +966,6 @@
         },
         "evaluationContext": {
           "types": [
-            "formevaluationcontext",
             "object"
           ],
           "description": "Context for S-expression evaluation - accepts flexible types from generated code"
@@ -1047,8 +1046,8 @@
         "entity": {
           "types": [
             "string",
-            "orbitalentity",
-            "unknown"
+            "object",
+            "array"
           ],
           "description": "Schema-based props"
         },
@@ -1060,7 +1059,7 @@
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields definition (schema format) - accepts readonly for generated const arrays",
           "required": true
@@ -1080,7 +1079,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -1161,7 +1160,6 @@
         },
         "evaluationContext": {
           "types": [
-            "formevaluationcontext",
             "object"
           ],
           "description": "Context for S-expression evaluation - accepts flexible types from generated code"
@@ -1282,7 +1280,7 @@
         },
         "filters": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Filter definitions from schema",
           "required": true
@@ -1670,7 +1668,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -1943,7 +1941,7 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "toastvariant"
+            "object"
           ],
           "description": "Toast variant"
         },
@@ -2189,7 +2187,7 @@
         },
         "metrics": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays"
         },
@@ -2201,7 +2199,7 @@
         },
         "sparklineData": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Sparkline data points for an inline trend chart"
         }
@@ -2360,7 +2358,7 @@
         },
         "size": {
           "types": [
-            "modalsize"
+            "object"
           ],
           "description": "size prop"
         },
@@ -2445,14 +2443,14 @@
         },
         "position": {
           "types": [
-            "drawerposition"
+            "object"
           ],
           "description": "Position (left or right)"
         },
         "width": {
           "types": [
             "string",
-            "drawersize"
+            "object"
           ],
           "description": "Width (CSS value or preset size)"
         },
@@ -2563,13 +2561,13 @@
         },
         "variant": {
           "types": [
-            "confirmdialogvariant"
+            "object"
           ],
           "description": "Dialog variant"
         },
         "size": {
           "types": [
-            "modalsize"
+            "object"
           ],
           "description": "Dialog size"
         },
@@ -2581,7 +2579,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -2676,43 +2674,43 @@
       "propsSchema": {
         "padding": {
           "types": [
-            "boxpadding"
+            "object"
           ],
           "description": "Padding on all sides"
         },
         "paddingX": {
           "types": [
-            "boxpadding"
+            "object"
           ],
           "description": "Horizontal padding (overrides padding for x-axis)"
         },
         "paddingY": {
           "types": [
-            "boxpadding"
+            "object"
           ],
           "description": "Vertical padding (overrides padding for y-axis)"
         },
         "margin": {
           "types": [
-            "boxmargin"
+            "object"
           ],
           "description": "Margin on all sides"
         },
         "marginX": {
           "types": [
-            "boxmargin"
+            "object"
           ],
           "description": "Horizontal margin"
         },
         "marginY": {
           "types": [
-            "boxmargin"
+            "object"
           ],
           "description": "Vertical margin"
         },
         "bg": {
           "types": [
-            "boxbg"
+            "object"
           ],
           "description": "Background color"
         },
@@ -2724,13 +2722,13 @@
         },
         "rounded": {
           "types": [
-            "boxrounded"
+            "object"
           ],
           "description": "Border radius"
         },
         "shadow": {
           "types": [
-            "boxshadow"
+            "object"
           ],
           "description": "Box shadow"
         },
@@ -2766,7 +2764,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         },
@@ -2804,8 +2802,7 @@
       "propsSchema": {
         "cols": {
           "types": [
-            "gridcols",
-            "responsivegridcols"
+            "object"
           ],
           "description": "Number of columns (can be responsive object)"
         },
@@ -2817,31 +2814,31 @@
         },
         "gap": {
           "types": [
-            "gridgap"
+            "object"
           ],
           "description": "Gap between items"
         },
         "rowGap": {
           "types": [
-            "gridgap"
+            "object"
           ],
           "description": "Row gap (overrides gap for rows)"
         },
         "colGap": {
           "types": [
-            "gridgap"
+            "object"
           ],
           "description": "Column gap (overrides gap for columns)"
         },
         "alignItems": {
           "types": [
-            "gridalign"
+            "object"
           ],
           "description": "Align items on block axis"
         },
         "justifyItems": {
           "types": [
-            "gridjustify"
+            "object"
           ],
           "description": "Justify items on inline axis"
         },
@@ -2872,7 +2869,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         }
@@ -2948,7 +2945,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         }
@@ -2967,7 +2964,7 @@
       "propsSchema": {
         "size": {
           "types": [
-            "spacersize"
+            "object"
           ],
           "description": "Fixed size (auto = flex grow)"
         },
@@ -2998,7 +2995,7 @@
       "propsSchema": {
         "orientation": {
           "types": [
-            "dividerorientation"
+            "object"
           ],
           "description": "Orientation of the divider @default 'horizontal'"
         },
@@ -3010,7 +3007,7 @@
         },
         "variant": {
           "types": [
-            "dividervariant"
+            "object"
           ],
           "description": "Line style variant @default 'solid'"
         },
@@ -3040,19 +3037,19 @@
         },
         "stats": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Stats to display - accepts readonly for compatibility with generated const arrays"
         },
         "items": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for stats (schema compatibility)"
         },
         "elements": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Schema-style elements array (alternative to stats). Converted to stats internally for backwards compatibility."
         },
@@ -3101,13 +3098,13 @@
         },
         "options": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Menu options - accepts readonly for compatibility with generated const arrays"
         },
         "menuItems": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for options (schema compatibility)"
         },
@@ -3119,7 +3116,7 @@
         },
         "eventBus": {
           "types": [
-            "eventbuscontexttype"
+            "object"
           ],
           "description": "Event bus for emitting UI events (optional, uses hook if not provided)"
         },
@@ -3193,7 +3190,7 @@
         },
         "eventBus": {
           "types": [
-            "eventbuscontexttype"
+            "object"
           ],
           "description": "Event bus for emitting UI events (optional, uses hook if not provided)"
         },
@@ -3332,7 +3329,7 @@
       "propsSchema": {
         "dialogue": {
           "types": [
-            "dialoguenode"
+            "object"
           ],
           "description": "Current dialogue node to display",
           "required": true
@@ -3455,13 +3452,13 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "buttonvariant"
+            "object"
           ],
           "description": "variant prop"
         },
         "size": {
           "types": [
-            "buttonsize"
+            "object"
           ],
           "description": "size prop"
         },
@@ -3473,29 +3470,35 @@
         },
         "leftIcon": {
           "types": [
-            "node"
+            "node",
+            "icon",
+            "string"
           ],
-          "description": "Left icon as ReactNode (preferred)"
+          "description": "Left icon as ReactNode, Lucide component, or string name (e.g. \"plus\", \"trash\")"
         },
         "rightIcon": {
           "types": [
-            "node"
+            "node",
+            "icon",
+            "string"
           ],
-          "description": "Right icon as ReactNode (preferred)"
+          "description": "Right icon as ReactNode, Lucide component, or string name"
         },
         "icon": {
           "types": [
+            "node",
             "icon",
             "string"
           ],
-          "description": "Left icon as Lucide icon component or string name (e.g. \"plus\", \"trash\")"
+          "description": "Alias for leftIcon"
         },
         "iconRight": {
           "types": [
+            "node",
             "icon",
             "string"
           ],
-          "description": "Right icon as Lucide icon component or string name"
+          "description": "Alias for rightIcon"
         },
         "action": {
           "types": [
@@ -3530,13 +3533,13 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "badgevariant"
+            "object"
           ],
           "description": "variant prop"
         },
         "size": {
           "types": [
-            "badgesize"
+            "object"
           ],
           "description": "size prop"
         },
@@ -3603,13 +3606,13 @@
         },
         "size": {
           "types": [
-            "avatarsize"
+            "object"
           ],
           "description": "Size of the avatar @default 'md'"
         },
         "status": {
           "types": [
-            "avatarstatus"
+            "object"
           ],
           "description": "Status indicator"
         },
@@ -3671,7 +3674,7 @@
         },
         "size": {
           "types": [
-            "iconsize"
+            "object"
           ],
           "description": "Size of the icon"
         },
@@ -3683,7 +3686,7 @@
         },
         "animation": {
           "types": [
-            "iconanimation"
+            "object"
           ],
           "description": "Animation type"
         },
@@ -3828,15 +3831,21 @@
           ],
           "description": "Maximum value (for calculating percentage) @default 100"
         },
+        "progressType": {
+          "types": [
+            "object"
+          ],
+          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'"
+        },
         "variant": {
           "types": [
-            "progressbarvariant"
+            "object"
           ],
           "description": "Variant/color of the progress bar @default 'primary'"
         },
         "color": {
           "types": [
-            "progressbarcolor"
+            "object"
           ],
           "description": "Color variant (alias for variant) @default 'primary'"
         },
@@ -3875,12 +3884,6 @@
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "progressType": {
-          "types": [
-            "progressbartype"
-          ],
-          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'"
         }
       }
     },
@@ -3896,7 +3899,7 @@
       "propsSchema": {
         "size": {
           "types": [
-            "spinnersize"
+            "object"
           ],
           "description": "size prop"
         }
@@ -3913,6 +3916,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "inputType": {
+          "types": [
+            "string"
+          ],
+          "description": "Input type - supports 'select' and 'textarea' in addition to standard types"
+        },
         "error": {
           "types": [
             "string"
@@ -3963,15 +3972,9 @@
         },
         "onChange": {
           "types": [
-            "react.changeeventhandler"
+            "object"
           ],
           "description": "onChange handler - accepts events from input, select, or textarea"
-        },
-        "inputType": {
-          "types": [
-            "string"
-          ],
-          "description": "Input type - supports 'select' and 'textarea' in addition to standard types"
         }
       }
     },
@@ -4186,7 +4189,7 @@
         },
         "variant": {
           "types": [
-            "alertvariant"
+            "object"
           ],
           "description": "variant prop"
         },
@@ -4261,7 +4264,7 @@
         },
         "position": {
           "types": [
-            "tooltipposition"
+            "object"
           ],
           "description": "Tooltip position"
         },
@@ -4318,13 +4321,13 @@
         },
         "position": {
           "types": [
-            "popoverposition"
+            "object"
           ],
           "description": "Popover position @default 'bottom'"
         },
         "trigger": {
           "types": [
-            "popovertrigger"
+            "object"
           ],
           "description": "Trigger type @default 'click'"
         },
@@ -4369,7 +4372,7 @@
         },
         "position": {
           "types": [
-            "menuposition"
+            "object"
           ],
           "description": "Menu position"
         },
@@ -4455,19 +4458,19 @@
       "propsSchema": {
         "size": {
           "types": [
-            "containersize"
+            "object"
           ],
           "description": "Maximum width"
         },
         "maxWidth": {
           "types": [
-            "containersize"
+            "object"
           ],
           "description": "Alias for size (pattern compatibility)"
         },
         "padding": {
           "types": [
-            "containerpadding"
+            "object"
           ],
           "description": "Horizontal padding"
         },
@@ -4491,7 +4494,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         }
@@ -4529,7 +4532,7 @@
         },
         "gap": {
           "types": [
-            "simplegridgap"
+            "object"
           ],
           "description": "Gap between items"
         },
@@ -4680,13 +4683,13 @@
       "propsSchema": {
         "condition": {
           "types": [
-            "sexpr"
+            "object"
           ],
           "description": "The S-expression condition to evaluate"
         },
         "context": {
           "types": [
-            "conditionalcontext"
+            "object"
           ],
           "description": "Context for evaluating the condition",
           "required": true
@@ -4726,7 +4729,7 @@
       "propsSchema": {
         "reference": {
           "types": [
-            "lawreference"
+            "object"
           ],
           "description": "The law reference to display",
           "required": true
@@ -4804,25 +4807,25 @@
       "propsSchema": {
         "direction": {
           "types": [
-            "stackdirection"
+            "object"
           ],
           "description": "Stack direction"
         },
         "gap": {
           "types": [
-            "stackgap"
+            "object"
           ],
           "description": "Gap between children"
         },
         "align": {
           "types": [
-            "stackalign"
+            "object"
           ],
           "description": "Align items on the cross axis"
         },
         "justify": {
           "types": [
-            "stackjustify"
+            "object"
           ],
           "description": "Justify items on the main axis"
         },
@@ -4864,7 +4867,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         },
@@ -4925,7 +4928,7 @@
       "propsSchema": {
         "highlightType": {
           "types": [
-            "highlighttype"
+            "object"
           ],
           "description": "Type of highlight (determines color)",
           "required": true
@@ -5029,7 +5032,7 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "typographyvariant"
+            "object"
           ],
           "description": "Typography variant"
         },
@@ -5059,7 +5062,7 @@
         },
         "size": {
           "types": [
-            "typographysize"
+            "object"
           ],
           "description": "Font size override"
         },
@@ -5437,19 +5440,19 @@
         },
         "primary": {
           "types": [
-            "readonly"
+            "object"
           ],
           "description": "Primary action button config (for form-actions pattern) Accepts Readonly for compatibility with generated const objects"
         },
         "secondary": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Secondary action buttons config (for form-actions pattern) Accepts readonly array for compatibility with generated const arrays"
         },
         "variant": {
           "types": [
-            "buttongroupvariant"
+            "object"
           ],
           "description": "Visual variant @default 'default'"
         },
@@ -5473,7 +5476,7 @@
         },
         "filters": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Filter definitions for filter-group pattern"
         }
@@ -5490,31 +5493,31 @@
       "propsSchema": {
         "direction": {
           "types": [
-            "flexdirection"
+            "object"
           ],
           "description": "Flex direction"
         },
         "wrap": {
           "types": [
-            "flexwrap"
+            "object"
           ],
           "description": "Flex wrap"
         },
         "align": {
           "types": [
-            "flexalign"
+            "object"
           ],
           "description": "Align items"
         },
         "justify": {
           "types": [
-            "flexjustify"
+            "object"
           ],
           "description": "Justify content"
         },
         "gap": {
           "types": [
-            "flexgap"
+            "object"
           ],
           "description": "Gap between items"
         },
@@ -5560,7 +5563,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         }
@@ -5806,7 +5809,7 @@
         },
         "options": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Available options - accepts readonly for compatibility with generated const arrays",
           "required": true
@@ -5957,7 +5960,7 @@
       "propsSchema": {
         "violation": {
           "types": [
-            "violationrecord"
+            "object"
           ],
           "description": "Violation data",
           "required": true
@@ -6199,13 +6202,13 @@
         },
         "variant": {
           "types": [
-            "buttonvariant"
+            "object"
           ],
           "description": "variant prop"
         },
         "size": {
           "types": [
-            "buttonsize"
+            "object"
           ],
           "description": "size prop"
         },
@@ -6260,7 +6263,7 @@
       "propsSchema": {
         "component": {
           "types": [
-            "allowedcustomcomponent"
+            "object"
           ],
           "description": "Element type to render",
           "required": true
@@ -6346,7 +6349,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6383,13 +6386,13 @@
         },
         "position": {
           "types": [
-            "drawerposition"
+            "object"
           ],
           "description": "Drawer position"
         },
         "size": {
           "types": [
-            "drawersize"
+            "object"
           ],
           "description": "Drawer size"
         },
@@ -6407,7 +6410,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6544,7 +6547,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state (closed circuit)"
         },
@@ -6593,7 +6596,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6648,7 +6651,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6696,7 +6699,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6769,7 +6772,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -6810,13 +6813,13 @@
         },
         "padding": {
           "types": [
-            "sectionpadding"
+            "object"
           ],
           "description": "Padding amount"
         },
         "variant": {
           "types": [
-            "sectionvariant"
+            "object"
           ],
           "description": "Visual variant"
         },
@@ -6853,7 +6856,7 @@
         },
         "as": {
           "types": [
-            "react.elementtype"
+            "object"
           ],
           "description": "HTML element to render as"
         },
@@ -6865,7 +6868,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -7056,13 +7059,13 @@
       "propsSchema": {
         "ratio": {
           "types": [
-            "splitratio"
+            "object"
           ],
           "description": "Size ratio between left and right panels"
         },
         "gap": {
           "types": [
-            "splitgap"
+            "object"
           ],
           "description": "Gap between panels"
         },
@@ -7110,7 +7113,7 @@
         },
         "children": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Exactly two children: [left, right]",
           "required": true
@@ -7123,7 +7126,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -7182,7 +7185,7 @@
         },
         "sortDirection": {
           "types": [
-            "sortdirection"
+            "object"
           ],
           "description": "Current sort direction (display hint)"
         },
@@ -7316,7 +7319,7 @@
         },
         "variant": {
           "types": [
-            "toastvariant"
+            "object"
           ],
           "description": "Toast variant"
         },
@@ -7346,7 +7349,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -7401,7 +7404,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -7414,7 +7417,7 @@
         "suspense": {
           "types": [
             "boolean",
-            "suspenseconfig"
+            "object"
           ],
           "description": "Enable Suspense boundaries around each slot. When true, each inline slot is wrapped in `<ErrorBoundary><Suspense>` with Skeleton fallbacks. Opt-in — existing isLoading prop pattern still works."
         }
@@ -7638,13 +7641,13 @@
         },
         "size": {
           "types": [
-            "countersize"
+            "object"
           ],
           "description": "Counter display size"
         },
         "variant": {
           "types": [
-            "countervariant"
+            "object"
           ],
           "description": "Template variant"
         }
@@ -7908,19 +7911,19 @@
         },
         "chartType": {
           "types": [
-            "charttype"
+            "object"
           ],
           "description": "Chart type"
         },
         "series": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Data series"
         },
         "data": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Simple data (single series shorthand)"
         },
@@ -7944,7 +7947,7 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions for chart interactions"
         },
@@ -7962,7 +7965,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8019,13 +8022,13 @@
         },
         "variant": {
           "types": [
-            "metervariant"
+            "object"
           ],
           "description": "Display variant"
         },
         "thresholds": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Color thresholds"
         },
@@ -8049,7 +8052,7 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions"
         },
@@ -8067,7 +8070,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8177,20 +8180,20 @@
         },
         "items": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Timeline items"
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Fields to display",
           "required": true
         },
         "itemActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions per item"
         }
@@ -8294,7 +8297,7 @@
         },
         "items": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Media items"
         },
@@ -8312,7 +8315,7 @@
         },
         "selectedItems": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Selected item IDs"
         },
@@ -8330,7 +8333,7 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions"
         },
@@ -8428,7 +8431,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8472,7 +8475,7 @@
         },
         "documentType": {
           "types": [
-            "documenttype"
+            "object"
           ],
           "description": "Document type"
         },
@@ -8515,13 +8518,13 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions"
         },
         "documents": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Multiple documents (tabbed view)"
         },
@@ -8539,7 +8542,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8571,13 +8574,13 @@
         },
         "nodes": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Graph nodes"
         },
         "edges": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Graph edges"
         },
@@ -8607,7 +8610,7 @@
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions"
         },
@@ -8643,7 +8646,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8687,7 +8690,7 @@
         },
         "diff": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Diff lines (for diff mode)"
         },
@@ -8705,7 +8708,7 @@
         },
         "mode": {
           "types": [
-            "codeviewermode"
+            "object"
           ],
           "description": "Display mode"
         },
@@ -8736,13 +8739,13 @@
         },
         "files": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Multiple files (tabbed view)"
         },
         "actions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions"
         },
@@ -8760,7 +8763,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8785,7 +8788,7 @@
       "propsSchema": {
         "actionType": {
           "types": [
-            "combatactiontype"
+            "object"
           ],
           "description": "The type of combat action to visualise",
           "required": true
@@ -8842,7 +8845,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -8860,7 +8863,7 @@
         },
         "assetManifest": {
           "types": [
-            "effectassetmanifest"
+            "object"
           ],
           "description": "Full effect asset manifest for the sprite particle engine. When provided, enables the canvas-based particle system."
         },
@@ -8903,7 +8906,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -9241,7 +9244,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "battleentity"
+            "object"
           ],
           "description": "Entity containing all board data",
           "required": true
@@ -9399,7 +9402,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "castleentity"
+            "object"
           ],
           "description": "Castle entity data",
           "required": true
@@ -9551,13 +9554,13 @@
         },
         "orientation": {
           "types": [
-            "maporientation"
+            "object"
           ],
           "description": "Map orientation"
         },
         "cameraMode": {
           "types": [
-            "cameramode"
+            "object"
           ],
           "description": "Camera mode"
         },
@@ -9581,7 +9584,7 @@
         },
         "overlay": {
           "types": [
-            "overlaycontrol"
+            "object"
           ],
           "description": "Overlay control mode"
         },
@@ -9635,25 +9638,25 @@
         },
         "assetLoader": {
           "types": [
-            "assetloader"
+            "object"
           ],
           "description": "Asset loader instance (uses global singleton if not provided)"
         },
         "tileRenderer": {
           "types": [
-            "react.fc"
+            "object"
           ],
           "description": "Custom tile renderer component"
         },
         "unitRenderer": {
           "types": [
-            "react.fc"
+            "object"
           ],
           "description": "Custom unit renderer component"
         },
         "featureRenderer": {
           "types": [
-            "react.fc"
+            "object"
           ],
           "description": "Custom feature renderer component"
         },
@@ -10026,19 +10029,19 @@
       "propsSchema": {
         "mode": {
           "types": [
-            "cameramode"
+            "object"
           ],
           "description": "Camera mode"
         },
         "position": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Initial camera position"
         },
         "target": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Target to look at"
         },
@@ -10116,7 +10119,7 @@
         },
         "directionalPosition": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Directional light position"
         },
@@ -10291,20 +10294,20 @@
         },
         "position": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Position [x, y, z]"
         },
         "scale": {
           "types": [
             "number",
-            "unknown"
+            "array"
           ],
           "description": "Scale - either a single number or [x, y, z]"
         },
         "rotation": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Rotation in degrees [x, y, z]"
         },
@@ -10385,13 +10388,13 @@
         },
         "initialPosition": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Initial position [x, y, z]"
         },
         "initialVelocity": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Initial velocity [vx, vy, vz]"
         },
@@ -10416,7 +10419,7 @@
         "scale": {
           "types": [
             "number",
-            "unknown"
+            "array"
           ],
           "description": "Model scale"
         },
@@ -11143,7 +11146,7 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "skeletonvariant"
+            "object"
           ],
           "description": "The skeleton variant to render"
         },
@@ -11187,7 +11190,7 @@
       "propsSchema": {
         "manifest": {
           "types": [
-            "audiomanifest"
+            "object"
           ],
           "description": "Sound manifest — keys mapped to SoundEntry definitions",
           "required": true
@@ -11225,7 +11228,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "error prop"
         },
@@ -11269,7 +11272,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state (passed through)"
         },
@@ -11301,7 +11304,7 @@
         },
         "equippedItem": {
           "types": [
-            "slotitemdata"
+            "object"
           ],
           "description": "Currently equipped item, if any"
         },
@@ -11361,7 +11364,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -11435,7 +11438,7 @@
       "propsSchema": {
         "trait": {
           "types": [
-            "traitstatemachinedefinition"
+            "object"
           ],
           "description": "The trait / state machine to visualize",
           "required": true
@@ -11484,7 +11487,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -11833,13 +11836,13 @@
         },
         "schema": {
           "types": [
-            "smschema"
+            "object"
           ],
           "description": "Full schema — extracts first trait's state machine"
         },
         "trait": {
           "types": [
-            "smtrait"
+            "object"
           ],
           "description": "Or pass a single trait directly"
         },
@@ -11955,7 +11958,7 @@
         },
         "layoutData": {
           "types": [
-            "domlayoutdata"
+            "object"
           ],
           "description": "layoutData prop",
           "required": true
@@ -12060,7 +12063,7 @@
         },
         "chapter": {
           "types": [
-            "bookchapter"
+            "object"
           ],
           "description": "chapter prop",
           "required": true
@@ -12522,7 +12525,7 @@
         },
         "fieldMap": {
           "types": [
-            "bookfieldmap",
+            "object",
             "string"
           ],
           "description": "Field name translation map — a BookFieldMap object or locale key (\"ar\")"
@@ -12619,7 +12622,7 @@
         "preset": {
           "types": [
             "string",
-            "physicspreset"
+            "object"
           ],
           "description": "preset prop",
           "required": true
@@ -12816,7 +12819,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "builderpuzzleentity"
+            "object"
           ],
           "description": "entity prop",
           "required": true
@@ -12842,7 +12845,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "classifierpuzzleentity"
+            "object"
           ],
           "description": "entity prop",
           "required": true
@@ -12868,7 +12871,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "debuggerpuzzleentity"
+            "object"
           ],
           "description": "entity prop",
           "required": true
@@ -12895,7 +12898,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "eventhandlerpuzzleentity"
+            "object"
           ],
           "description": "Puzzle data",
           "required": true
@@ -12972,7 +12975,7 @@
       "propsSchema": {
         "object": {
           "types": [
-            "puzzleobjectdef"
+            "object"
           ],
           "description": "The selected object",
           "required": true
@@ -13011,7 +13014,7 @@
       "propsSchema": {
         "rule": {
           "types": [
-            "ruledefinition"
+            "object"
           ],
           "description": "The current rule",
           "required": true
@@ -13070,7 +13073,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "negotiatorpuzzleentity"
+            "object"
           ],
           "description": "entity prop",
           "required": true
@@ -13152,7 +13155,7 @@
       "propsSchema": {
         "action": {
           "types": [
-            "slotitemdata"
+            "object"
           ],
           "description": "The action data",
           "required": true
@@ -13267,7 +13270,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "sequencerpuzzleentity"
+            "object"
           ],
           "description": "Puzzle data",
           "required": true
@@ -13311,7 +13314,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "simulatorpuzzleentity"
+            "object"
           ],
           "description": "entity prop",
           "required": true
@@ -13376,7 +13379,7 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "statearchitectpuzzleentity"
+            "object"
           ],
           "description": "Puzzle data",
           "required": true
@@ -13562,7 +13565,7 @@
       "propsSchema": {
         "date": {
           "types": [
-            "date"
+            "object"
           ],
           "description": "The date this cell represents",
           "required": true
@@ -13684,7 +13687,7 @@
       "propsSchema": {
         "weekStart": {
           "types": [
-            "date"
+            "object"
           ],
           "description": "Start of the week (defaults to current week's Monday)"
         },
@@ -14053,7 +14056,7 @@
         },
         "size": {
           "types": [
-            "dotsize"
+            "object"
           ],
           "description": "Dot size"
         }
@@ -14072,27 +14075,28 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "unknown"
+            "unknown",
+            "array"
           ],
           "description": "Entity data array",
           "required": true
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Field definitions for rendering each card",
           "required": true
         },
         "columns": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields (compiler generates `columns` for field definitions)"
         },
         "itemActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Per-item action buttons"
         },
@@ -14128,7 +14132,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -14195,27 +14199,28 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "unknown"
+            "unknown",
+            "array"
           ],
           "description": "Entity data array",
           "required": true
         },
         "fields": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Field definitions for rendering each row",
           "required": true
         },
         "columns": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Alias for fields (compiler may generate `columns` for field definitions)"
         },
         "itemActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Per-item action buttons"
         },
@@ -14263,7 +14268,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         },
@@ -14287,7 +14292,7 @@
         },
         "swipeLeftActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions revealed on left swipe"
         },
@@ -14299,7 +14304,7 @@
         },
         "swipeRightActions": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Actions revealed on right swipe"
         },
@@ -14354,13 +14359,13 @@
       "propsSchema": {
         "player": {
           "types": [
-            "platformerplayer"
+            "object"
           ],
           "description": "Player state data"
         },
         "platforms": {
           "types": [
-            "unknown"
+            "array"
           ],
           "description": "Static platforms / level geometry"
         },
@@ -14596,7 +14601,7 @@
         },
         "size": {
           "types": [
-            "rangeslidersize"
+            "object"
           ],
           "description": "Slider size"
         },
@@ -14645,7 +14650,7 @@
       "propsSchema": {
         "status": {
           "types": [
-            "statusdotstatus"
+            "object"
           ],
           "description": "Status determines the dot color"
         },
@@ -14657,7 +14662,7 @@
         },
         "size": {
           "types": [
-            "statusdotsize"
+            "object"
           ],
           "description": "Dot size"
         },
@@ -14688,7 +14693,7 @@
         },
         "direction": {
           "types": [
-            "trenddirection"
+            "object"
           ],
           "description": "Override automatic direction detection (positive=up, negative=down, zero=flat)"
         },
@@ -14712,7 +14717,7 @@
         },
         "size": {
           "types": [
-            "trendindicatorsize"
+            "object"
           ],
           "description": "Size of the indicator"
         }
@@ -14815,7 +14820,7 @@
         },
         "size": {
           "types": [
-            "numbersteppersize"
+            "object"
           ],
           "description": "Size variant"
         },
@@ -14888,13 +14893,13 @@
         },
         "precision": {
           "types": [
-            "starratingprecision"
+            "object"
           ],
           "description": "Full or half-star precision"
         },
         "size": {
           "types": [
-            "starratingsize"
+            "object"
           ],
           "description": "Star size"
         },
@@ -15495,7 +15500,7 @@
         },
         "error": {
           "types": [
-            "error"
+            "object"
           ],
           "description": "Error state"
         }
@@ -16708,7 +16713,7 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "typographyvariant"
+            "object"
           ],
           "description": "Typography variant"
         },
@@ -16738,7 +16743,7 @@
         },
         "size": {
           "types": [
-            "typographysize"
+            "object"
           ],
           "description": "Font size override"
         },
@@ -16803,7 +16808,7 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "typographyvariant"
+            "object"
           ],
           "description": "Typography variant"
         },
@@ -16833,7 +16838,7 @@
         },
         "size": {
           "types": [
-            "typographysize"
+            "object"
           ],
           "description": "Font size override"
         },
