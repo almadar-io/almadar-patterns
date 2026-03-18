@@ -577,7 +577,7 @@
     },
     "chart": {
       "component": "Chart",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "visualization"
     },
     "meter": {
@@ -587,32 +587,32 @@
     },
     "timeline": {
       "component": "Timeline",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "display"
     },
     "media-gallery": {
       "component": "MediaGallery",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "media"
     },
     "signature-pad": {
       "component": "SignaturePad",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "form"
     },
     "document-viewer": {
       "component": "DocumentViewer",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "display"
     },
     "graph-canvas": {
       "component": "GraphCanvas",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "visualization"
     },
     "code-viewer": {
       "component": "CodeViewer",
-      "importPath": "@almadar/ui",
+      "importPath": "@almadar/ui/components",
       "category": "display"
     },
     "canvas-effect": {
