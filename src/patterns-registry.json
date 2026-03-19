@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-18T05:08:11.759Z",
+  "exportedAt": "2026-03-19T00:54:15.990Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15224,8 +15224,13 @@
           "types": [
             "function"
           ],
-          "description": "Render function for each slide",
-          "required": true
+          "description": "Render function for each slide"
+        },
+        "children": {
+          "types": [
+            "function"
+          ],
+          "description": "Children-as-function fallback for renderItem (compiler compatibility)"
         },
         "autoPlay": {
           "types": [
