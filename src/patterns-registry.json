@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-19T00:54:15.990Z",
+  "exportedAt": "2026-03-19T07:41:51.607Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -3916,6 +3916,31 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "placeholder": {
+          "types": [
+            "string"
+          ],
+          "description": "Placeholder text"
+        },
+        "value": {
+          "types": [
+            "string",
+            "number"
+          ],
+          "description": "Current value"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether input is disabled"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for trait dispatch"
+        },
         "inputType": {
           "types": [
             "string"
@@ -3989,11 +4014,29 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "placeholder": {
+          "types": [
+            "string"
+          ],
+          "description": "Placeholder text"
+        },
+        "rows": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of visible rows"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for trait dispatch"
+        },
         "error": {
           "types": [
             "string"
           ],
-          "description": "error prop"
+          "description": "Error message"
         }
       }
     },
@@ -4012,20 +4055,32 @@
           "types": [
             "array"
           ],
-          "description": "options prop",
+          "description": "Select options",
           "required": true
         },
         "placeholder": {
           "types": [
             "string"
           ],
-          "description": "placeholder prop"
+          "description": "Placeholder text"
+        },
+        "value": {
+          "types": [
+            "string"
+          ],
+          "description": "Current value"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for trait dispatch"
         },
         "error": {
           "types": [
             "string"
           ],
-          "description": "error prop"
+          "description": "Error message"
         }
       }
     },
@@ -4070,6 +4125,24 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "options": {
+          "types": [
+            "array"
+          ],
+          "description": "Radio options (string array or SelectOption array)"
+        },
+        "value": {
+          "types": [
+            "string"
+          ],
+          "description": "Current selected value"
+        },
+        "action": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event name for trait dispatch"
+        },
         "label": {
           "types": [
             "string"
@@ -4167,11 +4240,23 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "text": {
+          "types": [
+            "string"
+          ],
+          "description": "Label text content"
+        },
+        "htmlFor": {
+          "types": [
+            "string"
+          ],
+          "description": "Associated input element ID"
+        },
         "required": {
           "types": [
             "boolean"
           ],
-          "description": "required prop"
+          "description": "Show required indicator"
         }
       }
     },
