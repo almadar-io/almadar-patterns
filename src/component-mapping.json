@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-19T07:41:51.607Z",
+  "exportedAt": "2026-03-23T04:50:52.601Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1209,6 +1209,511 @@
       "component": "UnitCommandBar",
       "importPath": "@/components/molecules/UnitCommandBar",
       "category": "component"
+    },
+    "content-section": {
+      "component": "ContentSection",
+      "importPath": "@/components/atoms/ContentSection",
+      "category": "component"
+    },
+    "section-header": {
+      "component": "SectionHeader",
+      "importPath": "@/components/atoms/SectionHeader",
+      "category": "header"
+    },
+    "avl-application": {
+      "component": "AvlApplication",
+      "importPath": "@/components/atoms/AvlApplication",
+      "category": "component"
+    },
+    "avl-binding": {
+      "component": "AvlBinding",
+      "importPath": "@/components/atoms/AvlBinding",
+      "category": "component"
+    },
+    "avl-binding-ref": {
+      "component": "AvlBindingRef",
+      "importPath": "@/components/atoms/AvlBindingRef",
+      "category": "component"
+    },
+    "avl-effect": {
+      "component": "AvlEffect",
+      "importPath": "@/components/atoms/AvlEffect",
+      "category": "component"
+    },
+    "avl-entity": {
+      "component": "AvlEntity",
+      "importPath": "@/components/atoms/AvlEntity",
+      "category": "component"
+    },
+    "avl-event": {
+      "component": "AvlEvent",
+      "importPath": "@/components/atoms/AvlEvent",
+      "category": "component"
+    },
+    "avl-field": {
+      "component": "AvlField",
+      "importPath": "@/components/atoms/AvlField",
+      "category": "component"
+    },
+    "avl-field-type": {
+      "component": "AvlFieldType",
+      "importPath": "@/components/atoms/AvlFieldType",
+      "category": "component"
+    },
+    "avl-guard": {
+      "component": "AvlGuard",
+      "importPath": "@/components/atoms/AvlGuard",
+      "category": "component"
+    },
+    "avl-literal": {
+      "component": "AvlLiteral",
+      "importPath": "@/components/atoms/AvlLiteral",
+      "category": "component"
+    },
+    "avl-operator": {
+      "component": "AvlOperator",
+      "importPath": "@/components/atoms/AvlOperator",
+      "category": "component"
+    },
+    "avl-orbital": {
+      "component": "AvlOrbital",
+      "importPath": "@/components/atoms/AvlOrbital",
+      "category": "component"
+    },
+    "avl-page": {
+      "component": "AvlPage",
+      "importPath": "@/components/atoms/AvlPage",
+      "category": "component"
+    },
+    "avl-persistence": {
+      "component": "AvlPersistence",
+      "importPath": "@/components/atoms/AvlPersistence",
+      "category": "component"
+    },
+    "avl-s-expr": {
+      "component": "AvlSExpr",
+      "importPath": "@/components/atoms/AvlSExpr",
+      "category": "component"
+    },
+    "avl-state": {
+      "component": "AvlState",
+      "importPath": "@/components/atoms/AvlState",
+      "category": "display"
+    },
+    "avl-trait": {
+      "component": "AvlTrait",
+      "importPath": "@/components/atoms/AvlTrait",
+      "category": "component"
+    },
+    "avl-transition": {
+      "component": "AvlTransition",
+      "importPath": "@/components/atoms/AvlTransition",
+      "category": "component"
+    },
+    "svg-branch": {
+      "component": "SvgBranch",
+      "importPath": "@/components/atoms/SvgBranch",
+      "category": "component"
+    },
+    "svg-connection": {
+      "component": "SvgConnection",
+      "importPath": "@/components/atoms/SvgConnection",
+      "category": "component"
+    },
+    "svg-flow": {
+      "component": "SvgFlow",
+      "importPath": "@/components/atoms/SvgFlow",
+      "category": "component"
+    },
+    "svg-grid": {
+      "component": "SvgGrid",
+      "importPath": "@/components/atoms/SvgGrid",
+      "category": "display"
+    },
+    "svg-lobe": {
+      "component": "SvgLobe",
+      "importPath": "@/components/atoms/SvgLobe",
+      "category": "component"
+    },
+    "svg-mesh": {
+      "component": "SvgMesh",
+      "importPath": "@/components/atoms/SvgMesh",
+      "category": "component"
+    },
+    "svg-morph": {
+      "component": "SvgMorph",
+      "importPath": "@/components/atoms/SvgMorph",
+      "category": "component"
+    },
+    "svg-node": {
+      "component": "SvgNode",
+      "importPath": "@/components/atoms/SvgNode",
+      "category": "component"
+    },
+    "svg-pulse": {
+      "component": "SvgPulse",
+      "importPath": "@/components/atoms/SvgPulse",
+      "category": "component"
+    },
+    "svg-ring": {
+      "component": "SvgRing",
+      "importPath": "@/components/atoms/SvgRing",
+      "category": "component"
+    },
+    "svg-shield": {
+      "component": "SvgShield",
+      "importPath": "@/components/atoms/SvgShield",
+      "category": "component"
+    },
+    "svg-stack": {
+      "component": "SvgStack",
+      "importPath": "@/components/atoms/SvgStack",
+      "category": "component"
+    },
+    "article-section": {
+      "component": "ArticleSection",
+      "importPath": "@/components/molecules/ArticleSection",
+      "category": "component"
+    },
+    "c-t-a-banner": {
+      "component": "CTABanner",
+      "importPath": "@/components/molecules/CTABanner",
+      "category": "navigation"
+    },
+    "case-study-card": {
+      "component": "CaseStudyCard",
+      "importPath": "@/components/molecules/CaseStudyCard",
+      "category": "display"
+    },
+    "code-example": {
+      "component": "CodeExample",
+      "importPath": "@/components/molecules/CodeExample",
+      "category": "component"
+    },
+    "community-links": {
+      "component": "CommunityLinks",
+      "importPath": "@/components/molecules/CommunityLinks",
+      "category": "component"
+    },
+    "doc-breadcrumb": {
+      "component": "DocBreadcrumb",
+      "importPath": "@/components/molecules/DocBreadcrumb",
+      "category": "navigation"
+    },
+    "doc-code-block": {
+      "component": "DocCodeBlock",
+      "importPath": "@/components/molecules/DocCodeBlock",
+      "category": "component"
+    },
+    "doc-pagination": {
+      "component": "DocPagination",
+      "importPath": "@/components/molecules/DocPagination",
+      "category": "navigation"
+    },
+    "doc-search": {
+      "component": "DocSearch",
+      "importPath": "@/components/molecules/DocSearch",
+      "category": "filter"
+    },
+    "doc-sidebar": {
+      "component": "DocSidebar",
+      "importPath": "@/components/molecules/DocSidebar",
+      "category": "navigation"
+    },
+    "doc-t-o-c": {
+      "component": "DocTOC",
+      "importPath": "@/components/molecules/DocTOC",
+      "category": "component"
+    },
+    "feature-card": {
+      "component": "FeatureCard",
+      "importPath": "@/components/molecules/FeatureCard",
+      "category": "display"
+    },
+    "feature-grid": {
+      "component": "FeatureGrid",
+      "importPath": "@/components/molecules/FeatureGrid",
+      "category": "display"
+    },
+    "gradient-divider": {
+      "component": "GradientDivider",
+      "importPath": "@/components/molecules/GradientDivider",
+      "category": "component"
+    },
+    "hero-section": {
+      "component": "HeroSection",
+      "importPath": "@/components/molecules/HeroSection",
+      "category": "header"
+    },
+    "install-box": {
+      "component": "InstallBox",
+      "importPath": "@/components/molecules/InstallBox",
+      "category": "component"
+    },
+    "marketing-footer": {
+      "component": "MarketingFooter",
+      "importPath": "@/components/molecules/MarketingFooter",
+      "category": "component"
+    },
+    "pricing-card": {
+      "component": "PricingCard",
+      "importPath": "@/components/molecules/PricingCard",
+      "category": "display"
+    },
+    "pricing-grid": {
+      "component": "PricingGrid",
+      "importPath": "@/components/molecules/PricingGrid",
+      "category": "display"
+    },
+    "pull-quote": {
+      "component": "PullQuote",
+      "importPath": "@/components/molecules/PullQuote",
+      "category": "component"
+    },
+    "service-catalog": {
+      "component": "ServiceCatalog",
+      "importPath": "@/components/molecules/ServiceCatalog",
+      "category": "component"
+    },
+    "showcase-card": {
+      "component": "ShowcaseCard",
+      "importPath": "@/components/molecules/ShowcaseCard",
+      "category": "display"
+    },
+    "social-proof": {
+      "component": "SocialProof",
+      "importPath": "@/components/molecules/SocialProof",
+      "category": "component"
+    },
+    "split-section": {
+      "component": "SplitSection",
+      "importPath": "@/components/molecules/SplitSection",
+      "category": "layout"
+    },
+    "stats-grid": {
+      "component": "StatsGrid",
+      "importPath": "@/components/molecules/StatsGrid",
+      "category": "display"
+    },
+    "step-item": {
+      "component": "StepItem",
+      "importPath": "@/components/molecules/StepItem",
+      "category": "component"
+    },
+    "tag-cloud": {
+      "component": "TagCloud",
+      "importPath": "@/components/molecules/TagCloud",
+      "category": "component"
+    },
+    "team-card": {
+      "component": "TeamCard",
+      "importPath": "@/components/molecules/TeamCard",
+      "category": "display"
+    },
+    "avl-closed-circuit": {
+      "component": "AvlClosedCircuit",
+      "importPath": "@/components/molecules/AvlClosedCircuit",
+      "category": "component"
+    },
+    "avl-emit-listen": {
+      "component": "AvlEmitListen",
+      "importPath": "@/components/molecules/AvlEmitListen",
+      "category": "display"
+    },
+    "avl-expr-tree": {
+      "component": "AvlExprTree",
+      "importPath": "@/components/molecules/AvlExprTree",
+      "category": "component"
+    },
+    "avl-orbital-unit": {
+      "component": "AvlOrbitalUnit",
+      "importPath": "@/components/molecules/AvlOrbitalUnit",
+      "category": "component"
+    },
+    "avl-slot-map": {
+      "component": "AvlSlotMap",
+      "importPath": "@/components/molecules/AvlSlotMap",
+      "category": "layout"
+    },
+    "avl-state-machine": {
+      "component": "AvlStateMachine",
+      "importPath": "@/components/molecules/AvlStateMachine",
+      "category": "display"
+    },
+    "a-i-generates": {
+      "component": "AIGenerates",
+      "importPath": "@/components/molecules/AIGenerates",
+      "category": "component"
+    },
+    "closed-circuit": {
+      "component": "ClosedCircuit",
+      "importPath": "@/components/molecules/ClosedCircuit",
+      "category": "component"
+    },
+    "community-ownership": {
+      "component": "CommunityOwnership",
+      "importPath": "@/components/molecules/CommunityOwnership",
+      "category": "component"
+    },
+    "compile-anywhere": {
+      "component": "CompileAnywhere",
+      "importPath": "@/components/molecules/CompileAnywhere",
+      "category": "component"
+    },
+    "composable-models": {
+      "component": "ComposableModels",
+      "importPath": "@/components/molecules/ComposableModels",
+      "category": "component"
+    },
+    "describe-prove-deploy": {
+      "component": "DescribeProveDeploy",
+      "importPath": "@/components/molecules/DescribeProveDeploy",
+      "category": "component"
+    },
+    "domain-grid": {
+      "component": "DomainGrid",
+      "importPath": "@/components/molecules/DomainGrid",
+      "category": "display"
+    },
+    "event-bus": {
+      "component": "EventBus",
+      "importPath": "@/components/molecules/EventBus",
+      "category": "component"
+    },
+    "orbital-unit": {
+      "component": "OrbitalUnit",
+      "importPath": "@/components/molecules/OrbitalUnit",
+      "category": "component"
+    },
+    "plan-verify-remember": {
+      "component": "PlanVerifyRemember",
+      "importPath": "@/components/molecules/PlanVerifyRemember",
+      "category": "component"
+    },
+    "prove-correct": {
+      "component": "ProveCorrect",
+      "importPath": "@/components/molecules/ProveCorrect",
+      "category": "component"
+    },
+    "service-layers": {
+      "component": "ServiceLayers",
+      "importPath": "@/components/molecules/ServiceLayers",
+      "category": "component"
+    },
+    "shared-reality": {
+      "component": "SharedReality",
+      "importPath": "@/components/molecules/SharedReality",
+      "category": "component"
+    },
+    "standard-library": {
+      "component": "StandardLibrary",
+      "importPath": "@/components/molecules/StandardLibrary",
+      "category": "component"
+    },
+    "state-machine": {
+      "component": "StateMachine",
+      "importPath": "@/components/molecules/StateMachine",
+      "category": "display"
+    },
+    "world-model": {
+      "component": "WorldModel",
+      "importPath": "@/components/molecules/WorldModel",
+      "category": "component"
+    },
+    "case-study-organism": {
+      "component": "CaseStudyOrganism",
+      "importPath": "@/components/organisms/CaseStudyOrganism",
+      "category": "display"
+    },
+    "feature-grid-organism": {
+      "component": "FeatureGridOrganism",
+      "importPath": "@/components/organisms/FeatureGridOrganism",
+      "category": "display"
+    },
+    "hero-organism": {
+      "component": "HeroOrganism",
+      "importPath": "@/components/organisms/HeroOrganism",
+      "category": "header"
+    },
+    "pricing-organism": {
+      "component": "PricingOrganism",
+      "importPath": "@/components/organisms/PricingOrganism",
+      "category": "display"
+    },
+    "showcase-organism": {
+      "component": "ShowcaseOrganism",
+      "importPath": "@/components/organisms/ShowcaseOrganism",
+      "category": "display"
+    },
+    "stats-organism": {
+      "component": "StatsOrganism",
+      "importPath": "@/components/organisms/StatsOrganism",
+      "category": "display"
+    },
+    "step-flow-organism": {
+      "component": "StepFlowOrganism",
+      "importPath": "@/components/organisms/StepFlowOrganism",
+      "category": "display"
+    },
+    "team-organism": {
+      "component": "TeamOrganism",
+      "importPath": "@/components/organisms/TeamOrganism",
+      "category": "display"
+    },
+    "avl-application-scene": {
+      "component": "AvlApplicationScene",
+      "importPath": "@/components/organisms/AvlApplicationScene",
+      "category": "display"
+    },
+    "avl-click-target": {
+      "component": "AvlClickTarget",
+      "importPath": "@/components/organisms/AvlClickTarget",
+      "category": "display"
+    },
+    "avl-cosmic-zoom": {
+      "component": "AvlCosmicZoom",
+      "importPath": "@/components/organisms/AvlCosmicZoom",
+      "category": "display"
+    },
+    "avl-legend": {
+      "component": "AvlLegend",
+      "importPath": "@/components/organisms/AvlLegend",
+      "category": "display"
+    },
+    "avl-orbital-scene": {
+      "component": "AvlOrbitalScene",
+      "importPath": "@/components/organisms/AvlOrbitalScene",
+      "category": "display"
+    },
+    "avl-trait-scene": {
+      "component": "AvlTraitScene",
+      "importPath": "@/components/organisms/AvlTraitScene",
+      "category": "display"
+    },
+    "avl-transition-scene": {
+      "component": "AvlTransitionScene",
+      "importPath": "@/components/organisms/AvlTransitionScene",
+      "category": "display"
+    },
+    "about-page-template": {
+      "component": "AboutPageTemplate",
+      "importPath": "@/components/templates/AboutPageTemplate",
+      "category": "template"
+    },
+    "feature-detail-page-template": {
+      "component": "FeatureDetailPageTemplate",
+      "importPath": "@/components/templates/FeatureDetailPageTemplate",
+      "category": "template"
+    },
+    "landing-page-template": {
+      "component": "LandingPageTemplate",
+      "importPath": "@/components/templates/LandingPageTemplate",
+      "category": "template"
+    },
+    "pricing-page-template": {
+      "component": "PricingPageTemplate",
+      "importPath": "@/components/templates/PricingPageTemplate",
+      "category": "template"
     },
     "heading": {
       "component": "Typography",

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-19T07:41:51.607Z",
+  "exportedAt": "2026-03-23T04:50:52.601Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1186,6 +1186,39 @@
         },
         {
           "event": "TILE_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "feature-grid-organism": {
+      "emits": [
+        {
+          "event": "FEATURE_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "hero-organism": {
+      "emits": [
+        {
+          "event": "CTA_PRIMARY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CTA_SECONDARY",
           "trigger": "action",
           "payload": {
             "type": "object"

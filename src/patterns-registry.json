@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-19T07:41:51.607Z",
+  "exportedAt": "2026-03-23T04:50:52.601Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15125,28 +15125,23 @@
       "propsSchema": {
         "value": {
           "types": [
-            "number"
+            "string"
           ],
-          "description": "The target number to animate to",
+          "description": "Target value to count to (e.g. \"500+\", \"99.9%\", \"3x\")",
+          "required": true
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label displayed below the number",
           "required": true
         },
         "duration": {
           "types": [
             "number"
           ],
-          "description": "Animation duration in milliseconds"
-        },
-        "prefix": {
-          "types": [
-            "string"
-          ],
-          "description": "Text to display before the number"
-        },
-        "suffix": {
-          "types": [
-            "string"
-          ],
-          "description": "Text to display after the number"
+          "description": "Animation duration in ms"
         },
         "className": {
           "types": [
@@ -16801,6 +16796,4851 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        }
+      }
+    },
+    "content-section": {
+      "type": "content-section",
+      "category": "component",
+      "description": "ContentSection component",
+      "suggestedFor": [
+        "content",
+        "section",
+        "content section"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Section content",
+          "required": true
+        },
+        "background": {
+          "types": [
+            "object"
+          ],
+          "description": "Background style"
+        },
+        "padding": {
+          "types": [
+            "object"
+          ],
+          "description": "Vertical padding size"
+        },
+        "id": {
+          "types": [
+            "string"
+          ],
+          "description": "HTML id for anchor linking"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "section-header": {
+      "type": "section-header",
+      "category": "header",
+      "description": "SectionHeader component",
+      "suggestedFor": [
+        "section",
+        "header",
+        "section header"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Section title text",
+          "required": true
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional subtitle text"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "Text alignment"
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Heading level (1, 2, or 3)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "avl-application": {
+      "type": "avl-application",
+      "category": "component",
+      "description": "AvlApplication component",
+      "suggestedFor": [
+        "avl",
+        "application",
+        "avl application"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-binding": {
+      "type": "avl-binding",
+      "category": "component",
+      "description": "AvlBinding component",
+      "suggestedFor": [
+        "avl",
+        "binding",
+        "avl binding"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x1": {
+          "types": [
+            "number"
+          ],
+          "description": "x1 prop",
+          "required": true
+        },
+        "y1": {
+          "types": [
+            "number"
+          ],
+          "description": "y1 prop",
+          "required": true
+        },
+        "x2": {
+          "types": [
+            "number"
+          ],
+          "description": "x2 prop",
+          "required": true
+        },
+        "y2": {
+          "types": [
+            "number"
+          ],
+          "description": "y2 prop",
+          "required": true
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "avl-binding-ref": {
+      "type": "avl-binding-ref",
+      "category": "component",
+      "description": "AvlBindingRef component",
+      "suggestedFor": [
+        "avl",
+        "binding",
+        "ref",
+        "avl binding ref"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "path": {
+          "types": [
+            "string"
+          ],
+          "description": "path prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        }
+      }
+    },
+    "avl-effect": {
+      "type": "avl-effect",
+      "category": "component",
+      "description": "AvlEffect component",
+      "suggestedFor": [
+        "avl",
+        "effect",
+        "avl effect"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "effectType": {
+          "types": [
+            "object"
+          ],
+          "description": "effectType prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-entity": {
+      "type": "avl-entity",
+      "category": "component",
+      "description": "AvlEntity component",
+      "suggestedFor": [
+        "avl",
+        "entity",
+        "avl entity"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "r": {
+          "types": [
+            "number"
+          ],
+          "description": "r prop"
+        },
+        "fieldCount": {
+          "types": [
+            "number"
+          ],
+          "description": "fieldCount prop"
+        },
+        "persistence": {
+          "types": [
+            "object"
+          ],
+          "description": "persistence prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-event": {
+      "type": "avl-event",
+      "category": "component",
+      "description": "AvlEvent component",
+      "suggestedFor": [
+        "avl",
+        "event",
+        "avl event"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-field": {
+      "type": "avl-field",
+      "category": "component",
+      "description": "AvlField component",
+      "suggestedFor": [
+        "avl",
+        "field",
+        "avl field"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "angle": {
+          "types": [
+            "number"
+          ],
+          "description": "Angle in radians from entity center."
+        },
+        "length": {
+          "types": [
+            "number"
+          ],
+          "description": "length prop"
+        },
+        "required": {
+          "types": [
+            "boolean"
+          ],
+          "description": "required prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-field-type": {
+      "type": "avl-field-type",
+      "category": "component",
+      "description": "AvlFieldType component",
+      "suggestedFor": [
+        "avl",
+        "field",
+        "type",
+        "avl field type"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "kind": {
+          "types": [
+            "object"
+          ],
+          "description": "kind prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-guard": {
+      "type": "avl-guard",
+      "category": "component",
+      "description": "AvlGuard component",
+      "suggestedFor": [
+        "avl",
+        "guard",
+        "avl guard"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-literal": {
+      "type": "avl-literal",
+      "category": "component",
+      "description": "AvlLiteral component",
+      "suggestedFor": [
+        "avl",
+        "literal",
+        "avl literal"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "string"
+          ],
+          "description": "value prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        }
+      }
+    },
+    "avl-operator": {
+      "type": "avl-operator",
+      "category": "component",
+      "description": "AvlOperator component",
+      "suggestedFor": [
+        "avl",
+        "operator",
+        "avl operator"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop",
+          "required": true
+        },
+        "namespace": {
+          "types": [
+            "object"
+          ],
+          "description": "namespace prop"
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        }
+      }
+    },
+    "avl-orbital": {
+      "type": "avl-orbital",
+      "category": "component",
+      "description": "AvlOrbital component",
+      "suggestedFor": [
+        "avl",
+        "orbital",
+        "avl orbital"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop"
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop"
+        },
+        "r": {
+          "types": [
+            "number"
+          ],
+          "description": "r prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "avl-page": {
+      "type": "avl-page",
+      "category": "component",
+      "description": "AvlPage component",
+      "suggestedFor": [
+        "avl",
+        "page",
+        "avl page"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-persistence": {
+      "type": "avl-persistence",
+      "category": "component",
+      "description": "AvlPersistence component",
+      "suggestedFor": [
+        "avl",
+        "persistence",
+        "avl persistence"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "kind": {
+          "types": [
+            "object"
+          ],
+          "description": "kind prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-s-expr": {
+      "type": "avl-s-expr",
+      "category": "component",
+      "description": "AvlSExpr component",
+      "suggestedFor": [
+        "avl",
+        "expr",
+        "avl s expr"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "avl-state": {
+      "type": "avl-state",
+      "category": "display",
+      "description": "AvlState component",
+      "suggestedFor": [
+        "avl",
+        "state",
+        "avl state"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop"
+        },
+        "isInitial": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isInitial prop"
+        },
+        "isTerminal": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isTerminal prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        }
+      }
+    },
+    "avl-trait": {
+      "type": "avl-trait",
+      "category": "component",
+      "description": "AvlTrait component",
+      "suggestedFor": [
+        "avl",
+        "trait",
+        "avl trait"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop"
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop"
+        },
+        "rx": {
+          "types": [
+            "number"
+          ],
+          "description": "rx prop"
+        },
+        "ry": {
+          "types": [
+            "number"
+          ],
+          "description": "ry prop"
+        },
+        "rotation": {
+          "types": [
+            "number"
+          ],
+          "description": "rotation prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "avl-transition": {
+      "type": "avl-transition",
+      "category": "component",
+      "description": "AvlTransition component",
+      "suggestedFor": [
+        "avl",
+        "transition",
+        "avl transition"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x1": {
+          "types": [
+            "number"
+          ],
+          "description": "x1 prop",
+          "required": true
+        },
+        "y1": {
+          "types": [
+            "number"
+          ],
+          "description": "y1 prop",
+          "required": true
+        },
+        "x2": {
+          "types": [
+            "number"
+          ],
+          "description": "x2 prop",
+          "required": true
+        },
+        "y2": {
+          "types": [
+            "number"
+          ],
+          "description": "y2 prop",
+          "required": true
+        },
+        "curved": {
+          "types": [
+            "boolean"
+          ],
+          "description": "curved prop"
+        },
+        "curveAwayFrom": {
+          "types": [
+            "object"
+          ],
+          "description": "Center point to curve away from (curves outward if provided)."
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-branch": {
+      "type": "svg-branch",
+      "category": "component",
+      "description": "SvgBranch component",
+      "suggestedFor": [
+        "svg",
+        "branch",
+        "svg branch"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "branches": {
+          "types": [
+            "number"
+          ],
+          "description": "branches prop"
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-connection": {
+      "type": "svg-connection",
+      "category": "component",
+      "description": "SvgConnection component",
+      "suggestedFor": [
+        "svg",
+        "connection",
+        "svg connection"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x1": {
+          "types": [
+            "number"
+          ],
+          "description": "x1 prop",
+          "required": true
+        },
+        "y1": {
+          "types": [
+            "number"
+          ],
+          "description": "y1 prop",
+          "required": true
+        },
+        "x2": {
+          "types": [
+            "number"
+          ],
+          "description": "x2 prop",
+          "required": true
+        },
+        "y2": {
+          "types": [
+            "number"
+          ],
+          "description": "y2 prop",
+          "required": true
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "strokeWidth prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-flow": {
+      "type": "svg-flow",
+      "category": "component",
+      "description": "SvgFlow component",
+      "suggestedFor": [
+        "svg",
+        "flow",
+        "svg flow"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "points": {
+          "types": [
+            "array"
+          ],
+          "description": "points prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "strokeWidth prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-grid": {
+      "type": "svg-grid",
+      "category": "display",
+      "description": "SvgGrid component",
+      "suggestedFor": [
+        "svg",
+        "grid",
+        "svg grid"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "cols": {
+          "types": [
+            "number"
+          ],
+          "description": "cols prop"
+        },
+        "rows": {
+          "types": [
+            "number"
+          ],
+          "description": "rows prop"
+        },
+        "spacing": {
+          "types": [
+            "number"
+          ],
+          "description": "spacing prop"
+        },
+        "nodeRadius": {
+          "types": [
+            "number"
+          ],
+          "description": "nodeRadius prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "highlights": {
+          "types": [
+            "array"
+          ],
+          "description": "highlights prop"
+        }
+      }
+    },
+    "svg-lobe": {
+      "type": "svg-lobe",
+      "category": "component",
+      "description": "SvgLobe component",
+      "suggestedFor": [
+        "svg",
+        "lobe",
+        "svg lobe"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop",
+          "required": true
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop",
+          "required": true
+        },
+        "rx": {
+          "types": [
+            "number"
+          ],
+          "description": "rx prop"
+        },
+        "ry": {
+          "types": [
+            "number"
+          ],
+          "description": "ry prop"
+        },
+        "rotation": {
+          "types": [
+            "number"
+          ],
+          "description": "rotation prop"
+        },
+        "shells": {
+          "types": [
+            "number"
+          ],
+          "description": "shells prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-mesh": {
+      "type": "svg-mesh",
+      "category": "component",
+      "description": "SvgMesh component",
+      "suggestedFor": [
+        "svg",
+        "mesh",
+        "svg mesh"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop",
+          "required": true
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop",
+          "required": true
+        },
+        "nodes": {
+          "types": [
+            "number"
+          ],
+          "description": "nodes prop"
+        },
+        "radius": {
+          "types": [
+            "number"
+          ],
+          "description": "radius prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "connectionDensity": {
+          "types": [
+            "number"
+          ],
+          "description": "connectionDensity prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-morph": {
+      "type": "svg-morph",
+      "category": "component",
+      "description": "SvgMorph component",
+      "suggestedFor": [
+        "svg",
+        "morph",
+        "svg morph"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-node": {
+      "type": "svg-node",
+      "category": "component",
+      "description": "SvgNode component",
+      "suggestedFor": [
+        "svg",
+        "node",
+        "svg node"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "r": {
+          "types": [
+            "number"
+          ],
+          "description": "r prop"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "svg-pulse": {
+      "type": "svg-pulse",
+      "category": "component",
+      "description": "SvgPulse component",
+      "suggestedFor": [
+        "svg",
+        "pulse",
+        "svg pulse"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop",
+          "required": true
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop",
+          "required": true
+        },
+        "rings": {
+          "types": [
+            "number"
+          ],
+          "description": "rings prop"
+        },
+        "maxRadius": {
+          "types": [
+            "number"
+          ],
+          "description": "maxRadius prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-ring": {
+      "type": "svg-ring",
+      "category": "component",
+      "description": "SvgRing component",
+      "suggestedFor": [
+        "svg",
+        "ring",
+        "svg ring"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "cx": {
+          "types": [
+            "number"
+          ],
+          "description": "cx prop",
+          "required": true
+        },
+        "cy": {
+          "types": [
+            "number"
+          ],
+          "description": "cy prop",
+          "required": true
+        },
+        "r": {
+          "types": [
+            "number"
+          ],
+          "description": "r prop"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "strokeWidth prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "label prop"
+        }
+      }
+    },
+    "svg-shield": {
+      "type": "svg-shield",
+      "category": "component",
+      "description": "SvgShield component",
+      "suggestedFor": [
+        "svg",
+        "shield",
+        "svg shield"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "size prop"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "svg-stack": {
+      "type": "svg-stack",
+      "category": "component",
+      "description": "SvgStack component",
+      "suggestedFor": [
+        "svg",
+        "stack",
+        "svg stack"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "layers": {
+          "types": [
+            "number"
+          ],
+          "description": "layers prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "opacity prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "labels": {
+          "types": [
+            "array"
+          ],
+          "description": "labels prop"
+        }
+      }
+    },
+    "article-section": {
+      "type": "article-section",
+      "category": "component",
+      "description": "ArticleSection component",
+      "suggestedFor": [
+        "article",
+        "section",
+        "article section"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Section title",
+          "required": true
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Section content",
+          "required": true
+        },
+        "maxWidth": {
+          "types": [
+            "string"
+          ],
+          "description": "Maximum width constraint"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "c-t-a-banner": {
+      "type": "c-t-a-banner",
+      "category": "navigation",
+      "description": "CTABanner component",
+      "suggestedFor": [
+        "banner",
+        "c t a banner"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Banner headline",
+          "required": true
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "Supporting text below the title"
+        },
+        "primaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "Primary action button config"
+        },
+        "secondaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "Secondary action button config"
+        },
+        "background": {
+          "types": [
+            "object"
+          ],
+          "description": "Background style"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "Content alignment"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "case-study-card": {
+      "type": "case-study-card",
+      "category": "display",
+      "description": "CaseStudyCard component",
+      "suggestedFor": [
+        "case",
+        "study",
+        "card",
+        "case study card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Case study title",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "Short description of the case study",
+          "required": true
+        },
+        "category": {
+          "types": [
+            "string"
+          ],
+          "description": "Category label shown as a badge",
+          "required": true
+        },
+        "categoryColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Custom background color for the category badge (CSS value)"
+        },
+        "href": {
+          "types": [
+            "string"
+          ],
+          "description": "URL the card links to",
+          "required": true
+        },
+        "linkLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "Label for the link button"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "code-example": {
+      "type": "code-example",
+      "category": "component",
+      "description": "CodeExample component",
+      "suggestedFor": [
+        "code",
+        "example",
+        "code example"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "code": {
+          "types": [
+            "string"
+          ],
+          "description": "The code content to display",
+          "required": true
+        },
+        "language": {
+          "types": [
+            "string"
+          ],
+          "description": "Programming language label",
+          "required": true
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional title shown in the header bar"
+        },
+        "copyable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show a copy button"
+        },
+        "maxHeight": {
+          "types": [
+            "string"
+          ],
+          "description": "Maximum height of the code area (CSS value)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "community-links": {
+      "type": "community-links",
+      "category": "component",
+      "description": "CommunityLinks component",
+      "suggestedFor": [
+        "community",
+        "links",
+        "community links"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "github": {
+          "types": [
+            "object"
+          ],
+          "description": "github prop"
+        },
+        "discord": {
+          "types": [
+            "object"
+          ],
+          "description": "discord prop"
+        },
+        "twitter": {
+          "types": [
+            "object"
+          ],
+          "description": "twitter prop"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "doc-breadcrumb": {
+      "type": "doc-breadcrumb",
+      "category": "navigation",
+      "description": "DocBreadcrumb component",
+      "suggestedFor": [
+        "doc",
+        "breadcrumb",
+        "doc breadcrumb"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Breadcrumb path items, last item is treated as current page",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "doc-code-block": {
+      "type": "doc-code-block",
+      "category": "component",
+      "description": "DocCodeBlock component",
+      "suggestedFor": [
+        "doc",
+        "code",
+        "block",
+        "doc code block"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "code": {
+          "types": [
+            "string"
+          ],
+          "description": "Code content to display",
+          "required": true
+        },
+        "language": {
+          "types": [
+            "string"
+          ],
+          "description": "Programming language label"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional title/filename shown in the header bar"
+        },
+        "showLineNumbers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show line numbers in the gutter"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "doc-pagination": {
+      "type": "doc-pagination",
+      "category": "navigation",
+      "description": "DocPagination component",
+      "suggestedFor": [
+        "doc",
+        "pagination",
+        "doc pagination"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "prev": {
+          "types": [
+            "object"
+          ],
+          "description": "Previous page link"
+        },
+        "next": {
+          "types": [
+            "object"
+          ],
+          "description": "Next page link"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "doc-search": {
+      "type": "doc-search",
+      "category": "filter",
+      "description": "DocSearch component",
+      "suggestedFor": [
+        "doc",
+        "search",
+        "doc search"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "placeholder": {
+          "types": [
+            "string"
+          ],
+          "description": "Placeholder text for the input"
+        },
+        "onSearch": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback invoked with the search query, returns results"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "doc-sidebar": {
+      "type": "doc-sidebar",
+      "category": "navigation",
+      "description": "DocSidebar component",
+      "suggestedFor": [
+        "doc",
+        "sidebar",
+        "doc sidebar"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Sidebar navigation items",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "doc-t-o-c": {
+      "type": "doc-t-o-c",
+      "category": "component",
+      "description": "DocTOC component",
+      "suggestedFor": [
+        "doc",
+        "doc t o c"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Table of contents items",
+          "required": true
+        },
+        "activeId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently active section id"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "feature-card": {
+      "type": "feature-card",
+      "category": "display",
+      "description": "FeatureCard component",
+      "suggestedFor": [
+        "feature",
+        "card",
+        "feature card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "icon": {
+          "types": [
+            "string",
+            "node"
+          ],
+          "description": "Icon name (Lucide string) or ReactNode"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Feature title",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "Feature description",
+          "required": true
+        },
+        "href": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional link URL"
+        },
+        "linkLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "Label for the link button"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Card visual variant"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Card size affecting icon and spacing"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "feature-grid": {
+      "type": "feature-grid",
+      "category": "display",
+      "description": "FeatureGrid component",
+      "suggestedFor": [
+        "feature",
+        "grid",
+        "feature grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of feature card configurations",
+          "required": true
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of grid columns"
+        },
+        "gap": {
+          "types": [
+            "string"
+          ],
+          "description": "Gap between grid items"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "gradient-divider": {
+      "type": "gradient-divider",
+      "category": "component",
+      "description": "GradientDivider component",
+      "suggestedFor": [
+        "gradient",
+        "divider",
+        "gradient divider"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Override the center color (CSS value). Defaults to var(--color-primary)."
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "hero-section": {
+      "type": "hero-section",
+      "category": "header",
+      "description": "HeroSection component",
+      "suggestedFor": [
+        "hero",
+        "section",
+        "hero section"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "tag": {
+          "types": [
+            "string"
+          ],
+          "description": "tag prop"
+        },
+        "tagVariant": {
+          "types": [
+            "string"
+          ],
+          "description": "tagVariant prop"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "titleAccent": {
+          "types": [
+            "string"
+          ],
+          "description": "titleAccent prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop",
+          "required": true
+        },
+        "primaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "primaryAction prop"
+        },
+        "secondaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "secondaryAction prop"
+        },
+        "installCommand": {
+          "types": [
+            "string"
+          ],
+          "description": "installCommand prop"
+        },
+        "image": {
+          "types": [
+            "object"
+          ],
+          "description": "image prop"
+        },
+        "imagePosition": {
+          "types": [
+            "string"
+          ],
+          "description": "imagePosition prop"
+        },
+        "background": {
+          "types": [
+            "string"
+          ],
+          "description": "background prop"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "align prop"
+        },
+        "backgroundElement": {
+          "types": [
+            "node"
+          ],
+          "description": "Background element (SVG animation, etc.) rendered behind hero content"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "install-box": {
+      "type": "install-box",
+      "category": "component",
+      "description": "InstallBox component",
+      "suggestedFor": [
+        "install",
+        "box",
+        "install box"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "command": {
+          "types": [
+            "string"
+          ],
+          "description": "The command to display and copy",
+          "required": true
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional label above the command"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "marketing-footer": {
+      "type": "marketing-footer",
+      "category": "component",
+      "description": "MarketingFooter component",
+      "suggestedFor": [
+        "marketing",
+        "footer",
+        "marketing footer"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "description": "columns prop",
+          "required": true
+        },
+        "copyright": {
+          "types": [
+            "string"
+          ],
+          "description": "copyright prop"
+        },
+        "logo": {
+          "types": [
+            "object"
+          ],
+          "description": "logo prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "pricing-card": {
+      "type": "pricing-card",
+      "category": "display",
+      "description": "PricingCard component",
+      "suggestedFor": [
+        "pricing",
+        "card",
+        "pricing card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop",
+          "required": true
+        },
+        "price": {
+          "types": [
+            "string"
+          ],
+          "description": "price prop",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "description prop"
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "features prop",
+          "required": true
+        },
+        "action": {
+          "types": [
+            "object"
+          ],
+          "description": "action prop",
+          "required": true
+        },
+        "highlighted": {
+          "types": [
+            "boolean"
+          ],
+          "description": "highlighted prop"
+        },
+        "badge": {
+          "types": [
+            "string"
+          ],
+          "description": "badge prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "pricing-grid": {
+      "type": "pricing-grid",
+      "category": "display",
+      "description": "PricingGrid component",
+      "suggestedFor": [
+        "pricing",
+        "grid",
+        "pricing grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "plans": {
+          "types": [
+            "array"
+          ],
+          "description": "plans prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "pull-quote": {
+      "type": "pull-quote",
+      "category": "component",
+      "description": "PullQuote component",
+      "suggestedFor": [
+        "pull",
+        "quote",
+        "pull quote"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "children": {
+          "types": [
+            "string"
+          ],
+          "description": "The quote text",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "service-catalog": {
+      "type": "service-catalog",
+      "category": "component",
+      "description": "ServiceCatalog component",
+      "suggestedFor": [
+        "service",
+        "catalog",
+        "service catalog"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "services": {
+          "types": [
+            "array"
+          ],
+          "description": "List of services to display",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "showcase-card": {
+      "type": "showcase-card",
+      "category": "display",
+      "description": "ShowcaseCard component",
+      "suggestedFor": [
+        "showcase",
+        "card",
+        "showcase card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "description prop"
+        },
+        "image": {
+          "types": [
+            "object"
+          ],
+          "description": "image prop",
+          "required": true
+        },
+        "href": {
+          "types": [
+            "string"
+          ],
+          "description": "href prop"
+        },
+        "badge": {
+          "types": [
+            "string"
+          ],
+          "description": "badge prop"
+        },
+        "accentColor": {
+          "types": [
+            "string"
+          ],
+          "description": "accentColor prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "social-proof": {
+      "type": "social-proof",
+      "category": "component",
+      "description": "SocialProof component",
+      "suggestedFor": [
+        "social",
+        "proof",
+        "social proof"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "List of social proof items",
+          "required": true
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Display variant"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "split-section": {
+      "type": "split-section",
+      "category": "layout",
+      "description": "SplitSection component",
+      "suggestedFor": [
+        "split",
+        "section",
+        "split section"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string",
+            "node"
+          ],
+          "description": "description prop",
+          "required": true
+        },
+        "bullets": {
+          "types": [
+            "array"
+          ],
+          "description": "bullets prop"
+        },
+        "image": {
+          "types": [
+            "object"
+          ],
+          "description": "image prop"
+        },
+        "imagePosition": {
+          "types": [
+            "string"
+          ],
+          "description": "imagePosition prop"
+        },
+        "background": {
+          "types": [
+            "string"
+          ],
+          "description": "background prop"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "stats-grid": {
+      "type": "stats-grid",
+      "category": "display",
+      "description": "StatsGrid component",
+      "suggestedFor": [
+        "stats",
+        "grid",
+        "stats grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "stats": {
+          "types": [
+            "array"
+          ],
+          "description": "stats prop",
+          "required": true
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "columns prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "step-item": {
+      "type": "step-item",
+      "category": "component",
+      "description": "StepItem component",
+      "suggestedFor": [
+        "step",
+        "item",
+        "step item"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "number": {
+          "types": [
+            "number"
+          ],
+          "description": "number prop"
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "description prop",
+          "required": true
+        },
+        "icon": {
+          "types": [
+            "string"
+          ],
+          "description": "icon prop"
+        }
+      }
+    },
+    "tag-cloud": {
+      "type": "tag-cloud",
+      "category": "component",
+      "description": "TagCloud component",
+      "suggestedFor": [
+        "tag",
+        "cloud",
+        "tag cloud"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "tags": {
+          "types": [
+            "array"
+          ],
+          "description": "tags prop",
+          "required": true
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "team-card": {
+      "type": "team-card",
+      "category": "display",
+      "description": "TeamCard component",
+      "suggestedFor": [
+        "team",
+        "card",
+        "team card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "name prop",
+          "required": true
+        },
+        "nameAr": {
+          "types": [
+            "string"
+          ],
+          "description": "nameAr prop"
+        },
+        "role": {
+          "types": [
+            "string"
+          ],
+          "description": "role prop",
+          "required": true
+        },
+        "bio": {
+          "types": [
+            "string"
+          ],
+          "description": "bio prop",
+          "required": true
+        },
+        "avatar": {
+          "types": [
+            "string",
+            "object"
+          ],
+          "description": "avatar prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "avl-closed-circuit": {
+      "type": "avl-closed-circuit",
+      "category": "component",
+      "description": "AvlClosedCircuit component",
+      "suggestedFor": [
+        "avl",
+        "closed",
+        "circuit",
+        "avl closed circuit"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "states": {
+          "types": [
+            "array"
+          ],
+          "description": "states prop",
+          "required": true
+        },
+        "transitions": {
+          "types": [
+            "array"
+          ],
+          "description": "transitions prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "avl-emit-listen": {
+      "type": "avl-emit-listen",
+      "category": "display",
+      "description": "AvlEmitListen component",
+      "suggestedFor": [
+        "avl",
+        "emit",
+        "listen",
+        "avl emit listen"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "emitter": {
+          "types": [
+            "object"
+          ],
+          "description": "emitter prop",
+          "required": true
+        },
+        "listener": {
+          "types": [
+            "object"
+          ],
+          "description": "listener prop",
+          "required": true
+        },
+        "eventName": {
+          "types": [
+            "string"
+          ],
+          "description": "eventName prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "avl-expr-tree": {
+      "type": "avl-expr-tree",
+      "category": "component",
+      "description": "AvlExprTree component",
+      "suggestedFor": [
+        "avl",
+        "expr",
+        "tree",
+        "avl expr tree"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "expression": {
+          "types": [
+            "object"
+          ],
+          "description": "expression prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "avl-orbital-unit": {
+      "type": "avl-orbital-unit",
+      "category": "component",
+      "description": "AvlOrbitalUnit component",
+      "suggestedFor": [
+        "avl",
+        "orbital",
+        "unit",
+        "avl orbital unit"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "entityName": {
+          "types": [
+            "string"
+          ],
+          "description": "entityName prop",
+          "required": true
+        },
+        "fields": {
+          "types": [
+            "number"
+          ],
+          "description": "fields prop"
+        },
+        "persistence": {
+          "types": [
+            "object"
+          ],
+          "description": "persistence prop"
+        },
+        "traits": {
+          "types": [
+            "array"
+          ],
+          "description": "traits prop",
+          "required": true
+        },
+        "pages": {
+          "types": [
+            "array"
+          ],
+          "description": "pages prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "avl-slot-map": {
+      "type": "avl-slot-map",
+      "category": "layout",
+      "description": "AvlSlotMap component",
+      "suggestedFor": [
+        "avl",
+        "slot",
+        "map",
+        "avl slot map"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "slots": {
+          "types": [
+            "array"
+          ],
+          "description": "slots prop",
+          "required": true
+        },
+        "pageWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "pageWidth prop"
+        },
+        "pageHeight": {
+          "types": [
+            "number"
+          ],
+          "description": "pageHeight prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "avl-state-machine": {
+      "type": "avl-state-machine",
+      "category": "display",
+      "description": "AvlStateMachine component",
+      "suggestedFor": [
+        "avl",
+        "state",
+        "machine",
+        "avl state machine"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "states": {
+          "types": [
+            "array"
+          ],
+          "description": "states prop",
+          "required": true
+        },
+        "transitions": {
+          "types": [
+            "array"
+          ],
+          "description": "transitions prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "a-i-generates": {
+      "type": "a-i-generates",
+      "category": "component",
+      "description": "AIGenerates component",
+      "suggestedFor": [
+        "generates",
+        "a i generates"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "closed-circuit": {
+      "type": "closed-circuit",
+      "category": "component",
+      "description": "ClosedCircuit component",
+      "suggestedFor": [
+        "closed",
+        "circuit",
+        "closed circuit"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "community-ownership": {
+      "type": "community-ownership",
+      "category": "component",
+      "description": "CommunityOwnership component",
+      "suggestedFor": [
+        "community",
+        "ownership",
+        "community ownership"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "compile-anywhere": {
+      "type": "compile-anywhere",
+      "category": "component",
+      "description": "CompileAnywhere component",
+      "suggestedFor": [
+        "compile",
+        "anywhere",
+        "compile anywhere"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "composable-models": {
+      "type": "composable-models",
+      "category": "component",
+      "description": "ComposableModels component",
+      "suggestedFor": [
+        "composable",
+        "models",
+        "composable models"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "describe-prove-deploy": {
+      "type": "describe-prove-deploy",
+      "category": "component",
+      "description": "DescribeProveDeploy component",
+      "suggestedFor": [
+        "describe",
+        "prove",
+        "deploy",
+        "describe prove deploy"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "domain-grid": {
+      "type": "domain-grid",
+      "category": "display",
+      "description": "DomainGrid component",
+      "suggestedFor": [
+        "domain",
+        "grid",
+        "domain grid"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "event-bus": {
+      "type": "event-bus",
+      "category": "component",
+      "description": "EventBus component",
+      "suggestedFor": [
+        "event",
+        "bus",
+        "event bus"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "orbital-unit": {
+      "type": "orbital-unit",
+      "category": "component",
+      "description": "OrbitalUnit component",
+      "suggestedFor": [
+        "orbital",
+        "unit",
+        "orbital unit"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "plan-verify-remember": {
+      "type": "plan-verify-remember",
+      "category": "component",
+      "description": "PlanVerifyRemember component",
+      "suggestedFor": [
+        "plan",
+        "verify",
+        "remember",
+        "plan verify remember"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "prove-correct": {
+      "type": "prove-correct",
+      "category": "component",
+      "description": "ProveCorrect component",
+      "suggestedFor": [
+        "prove",
+        "correct",
+        "prove correct"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "service-layers": {
+      "type": "service-layers",
+      "category": "component",
+      "description": "ServiceLayers component",
+      "suggestedFor": [
+        "service",
+        "layers",
+        "service layers"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "shared-reality": {
+      "type": "shared-reality",
+      "category": "component",
+      "description": "SharedReality component",
+      "suggestedFor": [
+        "shared",
+        "reality",
+        "shared reality"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "standard-library": {
+      "type": "standard-library",
+      "category": "component",
+      "description": "StandardLibrary component",
+      "suggestedFor": [
+        "standard",
+        "library",
+        "standard library"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "state-machine": {
+      "type": "state-machine",
+      "category": "display",
+      "description": "StateMachine component",
+      "suggestedFor": [
+        "state",
+        "machine",
+        "state machine"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "world-model": {
+      "type": "world-model",
+      "category": "component",
+      "description": "WorldModel component",
+      "suggestedFor": [
+        "world",
+        "model",
+        "world model"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        }
+      }
+    },
+    "case-study-organism": {
+      "type": "case-study-organism",
+      "category": "display",
+      "description": "CaseStudyOrganism component",
+      "suggestedFor": [
+        "case",
+        "study",
+        "organism",
+        "case study organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "feature-grid-organism": {
+      "type": "feature-grid-organism",
+      "category": "display",
+      "description": "FeatureGridOrganism component",
+      "suggestedFor": [
+        "feature",
+        "grid",
+        "organism",
+        "feature grid organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "columns prop"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "hero-organism": {
+      "type": "hero-organism",
+      "category": "header",
+      "description": "HeroOrganism component",
+      "suggestedFor": [
+        "hero",
+        "organism",
+        "hero organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop"
+        }
+      }
+    },
+    "pricing-organism": {
+      "type": "pricing-organism",
+      "category": "display",
+      "description": "PricingOrganism component",
+      "suggestedFor": [
+        "pricing",
+        "organism",
+        "pricing organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "showcase-organism": {
+      "type": "showcase-organism",
+      "category": "display",
+      "description": "ShowcaseOrganism component",
+      "suggestedFor": [
+        "showcase",
+        "organism",
+        "showcase organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "columns prop"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "stats-organism": {
+      "type": "stats-organism",
+      "category": "display",
+      "description": "StatsOrganism component",
+      "suggestedFor": [
+        "stats",
+        "organism",
+        "stats organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "columns": {
+          "types": [
+            "number"
+          ],
+          "description": "columns prop"
+        }
+      }
+    },
+    "step-flow-organism": {
+      "type": "step-flow-organism",
+      "category": "display",
+      "description": "StepFlowOrganism component",
+      "suggestedFor": [
+        "step",
+        "flow",
+        "organism",
+        "step flow organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "orientation": {
+          "types": [
+            "string"
+          ],
+          "description": "orientation prop"
+        },
+        "showConnectors": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showConnectors prop"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "team-organism": {
+      "type": "team-organism",
+      "category": "display",
+      "description": "TeamOrganism component",
+      "suggestedFor": [
+        "team",
+        "organism",
+        "team organism"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven integration"
+        },
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Data array provided by the trait via render-ui"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction"
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs"
+        },
+        "heading": {
+          "types": [
+            "string"
+          ],
+          "description": "heading prop"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "subtitle prop"
+        }
+      }
+    },
+    "avl-application-scene": {
+      "type": "avl-application-scene",
+      "category": "display",
+      "description": "AvlApplicationScene component",
+      "suggestedFor": [
+        "avl",
+        "application",
+        "scene",
+        "avl application scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "onOrbitalClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onOrbitalClick prop"
+        }
+      }
+    },
+    "avl-click-target": {
+      "type": "avl-click-target",
+      "category": "display",
+      "description": "AvlClickTarget component",
+      "suggestedFor": [
+        "avl",
+        "click",
+        "target",
+        "avl click target"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "Bounding box position",
+          "required": true
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop",
+          "required": true
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "required": true
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "required": true
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler",
+          "required": true
+        },
+        "onHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Hover callback"
+        },
+        "cursor": {
+          "types": [
+            "string"
+          ],
+          "description": "Cursor style (default: pointer)"
+        },
+        "glowColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Glow color on hover"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children (the AVL atoms to render on top)",
+          "required": true
+        }
+      }
+    },
+    "avl-cosmic-zoom": {
+      "type": "avl-cosmic-zoom",
+      "category": "display",
+      "description": "AvlCosmicZoom component",
+      "suggestedFor": [
+        "avl",
+        "cosmic",
+        "zoom",
+        "avl cosmic zoom"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "schema": {
+          "types": [
+            "object",
+            "string"
+          ],
+          "description": "The orbital schema (parsed object or JSON string)",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for the outer container"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color for the visualization"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable animations (default: true)"
+        },
+        "initialOrbital": {
+          "types": [
+            "string"
+          ],
+          "description": "Pre-select an orbital on mount"
+        },
+        "initialTrait": {
+          "types": [
+            "string"
+          ],
+          "description": "Pre-select a trait on mount"
+        },
+        "onZoomChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when zoom level changes"
+        },
+        "width": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container width"
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container height"
+        },
+        "stateCoverage": {
+          "types": [
+            "object"
+          ],
+          "description": "Coverage data for verification overlay"
+        }
+      }
+    },
+    "avl-legend": {
+      "type": "avl-legend",
+      "category": "display",
+      "description": "AvlLegend component",
+      "suggestedFor": [
+        "avl",
+        "legend",
+        "avl legend"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "level": {
+          "types": [
+            "object"
+          ],
+          "description": "level prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop"
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop"
+        }
+      }
+    },
+    "avl-orbital-scene": {
+      "type": "avl-orbital-scene",
+      "category": "display",
+      "description": "AvlOrbitalScene component",
+      "suggestedFor": [
+        "avl",
+        "orbital",
+        "scene",
+        "avl orbital scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "highlightedTrait": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently highlighted trait (before zooming in)"
+        },
+        "onTraitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onTraitClick prop"
+        },
+        "onTraitHighlight": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a trait tab is hovered/selected (highlight without zoom)"
+        }
+      }
+    },
+    "avl-trait-scene": {
+      "type": "avl-trait-scene",
+      "category": "display",
+      "description": "AvlTraitScene component",
+      "suggestedFor": [
+        "avl",
+        "trait",
+        "scene",
+        "avl trait scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "onTransitionClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onTransitionClick prop"
+        }
+      }
+    },
+    "avl-transition-scene": {
+      "type": "avl-transition-scene",
+      "category": "display",
+      "description": "AvlTransitionScene component",
+      "suggestedFor": [
+        "avl",
+        "transition",
+        "scene",
+        "avl transition scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        }
+      }
+    },
+    "about-page-template": {
+      "type": "about-page-template",
+      "category": "template",
+      "description": "AboutPageTemplate  An about/company page template with hero, articles, team grid, case studies, and CTA. Pure function: no hooks, no callbacks, no local state.",
+      "suggestedFor": [
+        "about",
+        "page",
+        "template",
+        "about page template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        }
+      }
+    },
+    "feature-detail-page-template": {
+      "type": "feature-detail-page-template",
+      "category": "template",
+      "description": "FeatureDetailPageTemplate  A feature detail page with hero, alternating split sections, and CTA. Pure function: no hooks, no callbacks, no local state.",
+      "suggestedFor": [
+        "feature",
+        "detail",
+        "page",
+        "template",
+        "feature detail page template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        }
+      }
+    },
+    "landing-page-template": {
+      "type": "landing-page-template",
+      "category": "template",
+      "description": "LandingPageTemplate  A full marketing landing page template composing hero, features, stats, steps, showcase, CTA, and community sections from molecule components. Pure function: no hooks, no callbacks, no local state.",
+      "suggestedFor": [
+        "landing",
+        "page",
+        "template",
+        "landing page template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop"
+        },
+        "featureColumns": {
+          "types": [
+            "number"
+          ],
+          "description": "featureColumns prop"
+        }
+      }
+    },
+    "pricing-page-template": {
+      "type": "pricing-page-template",
+      "category": "template",
+      "description": "PricingPageTemplate  A pricing page template with hero, pricing grid, FAQ accordion, and CTA. Pure function: no hooks, no callbacks, no local state.",
+      "suggestedFor": [
+        "pricing",
+        "page",
+        "template",
+        "pricing page template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
         }
       }
     },
