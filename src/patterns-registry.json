@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-23T04:50:52.601Z",
+  "exportedAt": "2026-03-23T09:47:05.042Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -21641,6 +21641,598 @@
             "string"
           ],
           "description": "External styling override"
+        }
+      }
+    },
+    "avl3-d-label": {
+      "type": "avl3-d-label",
+      "category": "component",
+      "description": "Avl3DLabel component",
+      "suggestedFor": [
+        "avl3",
+        "label",
+        "avl3 d label"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "3D position [x, y, z]",
+          "required": true
+        },
+        "text": {
+          "types": [
+            "string"
+          ],
+          "description": "Label text",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Text color (CSS)"
+        },
+        "fontSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Font size in px"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        },
+        "occlude": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Hide label when behind other objects"
+        }
+      }
+    },
+    "avl3-d-cross-wire": {
+      "type": "avl3-d-cross-wire",
+      "category": "component",
+      "description": "Avl3DCrossWire component",
+      "suggestedFor": [
+        "avl3",
+        "cross",
+        "wire",
+        "avl3 d cross wire"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "from": {
+          "types": [
+            "array"
+          ],
+          "description": "Start position [x, y, z]",
+          "required": true
+        },
+        "to": {
+          "types": [
+            "array"
+          ],
+          "description": "End position [x, y, z]",
+          "required": true
+        },
+        "eventName": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name to display",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Wire color override"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        }
+      }
+    },
+    "avl3-d-entity-core": {
+      "type": "avl3-d-entity-core",
+      "category": "component",
+      "description": "Avl3DEntityCore component",
+      "suggestedFor": [
+        "avl3",
+        "entity",
+        "core",
+        "avl3 d entity core"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name",
+          "required": true
+        },
+        "fieldCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of fields",
+          "required": true
+        },
+        "persistence": {
+          "types": [
+            "string"
+          ],
+          "description": "Persistence type",
+          "required": true
+        },
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "3D position [x, y, z]",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Color override"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for label"
+        }
+      }
+    },
+    "avl3-d-expr-tree": {
+      "type": "avl3-d-expr-tree",
+      "category": "component",
+      "description": "Avl3DExprTree component",
+      "suggestedFor": [
+        "avl3",
+        "expr",
+        "tree",
+        "avl3 d expr tree"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "expression": {
+          "types": [
+            "object"
+          ],
+          "description": "The expression tree to render",
+          "required": true
+        },
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "Root position [x, y, z]",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Color override"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        }
+      }
+    },
+    "avl3-d-orbital-node": {
+      "type": "avl3-d-orbital-node",
+      "category": "component",
+      "description": "Avl3DOrbitalNode component",
+      "suggestedFor": [
+        "avl3",
+        "orbital",
+        "node",
+        "avl3 d orbital node"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Orbital name",
+          "required": true
+        },
+        "entityName": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name",
+          "required": true
+        },
+        "traitCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of traits (affects sphere size)",
+          "required": true
+        },
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "3D position [x, y, z]",
+          "required": true
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for label"
+        }
+      }
+    },
+    "avl3-d-state-node": {
+      "type": "avl3-d-state-node",
+      "category": "display",
+      "description": "Avl3DStateNode component",
+      "suggestedFor": [
+        "avl3",
+        "state",
+        "node",
+        "avl3 d state node"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "State name",
+          "required": true
+        },
+        "isInitial": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this is the initial state"
+        },
+        "isTerminal": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this is a terminal state"
+        },
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "3D position [x, y, z]",
+          "required": true
+        },
+        "active": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this state is currently active"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Color override"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for label"
+        }
+      }
+    },
+    "avl3-d-transition-arc": {
+      "type": "avl3-d-transition-arc",
+      "category": "component",
+      "description": "Avl3DTransitionArc component",
+      "suggestedFor": [
+        "avl3",
+        "transition",
+        "arc",
+        "avl3 d transition arc"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "from": {
+          "types": [
+            "array"
+          ],
+          "description": "Start position [x, y, z]",
+          "required": true
+        },
+        "to": {
+          "types": [
+            "array"
+          ],
+          "description": "End position [x, y, z]",
+          "required": true
+        },
+        "event": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name",
+          "required": true
+        },
+        "hasGuard": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this transition has a guard"
+        },
+        "effectCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of effects",
+          "required": true
+        },
+        "index": {
+          "types": [
+            "number"
+          ],
+          "description": "Index (for fanning parallel transitions)",
+          "required": true
+        },
+        "isSelf": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether this is a self-transition"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Color override"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        }
+      }
+    },
+    "avl3-d-application-scene": {
+      "type": "avl3-d-application-scene",
+      "category": "display",
+      "description": "Avl3DApplicationScene component",
+      "suggestedFor": [
+        "avl3",
+        "application",
+        "scene",
+        "avl3 d application scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "Parsed application-level data",
+          "required": true
+        },
+        "onOrbitalClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler for an orbital"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color"
+        }
+      }
+    },
+    "avl3-d-orbital-scene": {
+      "type": "avl3-d-orbital-scene",
+      "category": "display",
+      "description": "Avl3DOrbitalScene component",
+      "suggestedFor": [
+        "avl3",
+        "orbital",
+        "scene",
+        "avl3 d orbital scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "Parsed orbital-level data",
+          "required": true
+        },
+        "onTraitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler for a trait"
+        },
+        "highlightedTrait": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently highlighted trait"
+        },
+        "onTraitHighlight": {
+          "types": [
+            "function"
+          ],
+          "description": "Highlight change handler"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color"
+        }
+      }
+    },
+    "avl3-d-trait-scene": {
+      "type": "avl3-d-trait-scene",
+      "category": "display",
+      "description": "Avl3DTraitScene component",
+      "suggestedFor": [
+        "avl3",
+        "trait",
+        "scene",
+        "avl3 d trait scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "Parsed trait-level data",
+          "required": true
+        },
+        "onTransitionClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler for a transition"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color"
+        }
+      }
+    },
+    "avl3-d-transition-scene": {
+      "type": "avl3-d-transition-scene",
+      "category": "display",
+      "description": "Avl3DTransitionScene component",
+      "suggestedFor": [
+        "avl3",
+        "transition",
+        "scene",
+        "avl3 d transition scene"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "Parsed transition-level data",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color"
+        }
+      }
+    },
+    "avl3-d-viewer": {
+      "type": "avl3-d-viewer",
+      "category": "display",
+      "description": "Avl3DViewer component",
+      "suggestedFor": [
+        "avl3",
+        "viewer",
+        "avl3 d viewer"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "schema": {
+          "types": [
+            "object",
+            "string"
+          ],
+          "description": "The orbital schema (parsed object or JSON string)",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for the outer container"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable animations (default: true)"
+        },
+        "initialOrbital": {
+          "types": [
+            "string"
+          ],
+          "description": "Pre-select an orbital on mount"
+        },
+        "initialTrait": {
+          "types": [
+            "string"
+          ],
+          "description": "Pre-select a trait on mount"
+        },
+        "onZoomChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when zoom level changes"
+        },
+        "width": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container width"
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container height"
         }
       }
     },

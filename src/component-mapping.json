@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-23T04:50:52.601Z",
+  "exportedAt": "2026-03-23T09:47:05.042Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1714,6 +1714,66 @@
       "component": "PricingPageTemplate",
       "importPath": "@/components/templates/PricingPageTemplate",
       "category": "template"
+    },
+    "avl3-d-label": {
+      "component": "Avl3DLabel",
+      "importPath": "@/components/atoms/Avl3DLabel",
+      "category": "component"
+    },
+    "avl3-d-cross-wire": {
+      "component": "Avl3DCrossWire",
+      "importPath": "@/components/molecules/Avl3DCrossWire",
+      "category": "component"
+    },
+    "avl3-d-entity-core": {
+      "component": "Avl3DEntityCore",
+      "importPath": "@/components/molecules/Avl3DEntityCore",
+      "category": "component"
+    },
+    "avl3-d-expr-tree": {
+      "component": "Avl3DExprTree",
+      "importPath": "@/components/molecules/Avl3DExprTree",
+      "category": "component"
+    },
+    "avl3-d-orbital-node": {
+      "component": "Avl3DOrbitalNode",
+      "importPath": "@/components/molecules/Avl3DOrbitalNode",
+      "category": "component"
+    },
+    "avl3-d-state-node": {
+      "component": "Avl3DStateNode",
+      "importPath": "@/components/molecules/Avl3DStateNode",
+      "category": "display"
+    },
+    "avl3-d-transition-arc": {
+      "component": "Avl3DTransitionArc",
+      "importPath": "@/components/molecules/Avl3DTransitionArc",
+      "category": "component"
+    },
+    "avl3-d-application-scene": {
+      "component": "Avl3DApplicationScene",
+      "importPath": "@/components/organisms/Avl3DApplicationScene",
+      "category": "display"
+    },
+    "avl3-d-orbital-scene": {
+      "component": "Avl3DOrbitalScene",
+      "importPath": "@/components/organisms/Avl3DOrbitalScene",
+      "category": "display"
+    },
+    "avl3-d-trait-scene": {
+      "component": "Avl3DTraitScene",
+      "importPath": "@/components/organisms/Avl3DTraitScene",
+      "category": "display"
+    },
+    "avl3-d-transition-scene": {
+      "component": "Avl3DTransitionScene",
+      "importPath": "@/components/organisms/Avl3DTransitionScene",
+      "category": "display"
+    },
+    "avl3-d-viewer": {
+      "component": "Avl3DViewer",
+      "importPath": "@/components/organisms/Avl3DViewer",
+      "category": "display"
     },
     "heading": {
       "component": "Typography",
