@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-02-24T01:40:01.228Z",
+  "exportedAt": "2026-03-23T02:19:16.692Z",
   "services": {
     "llm": {
       "name": "llm",
@@ -139,6 +139,18 @@
             "keyPoints": "string[]"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "ANTHROPIC_API_KEY",
+          "required": false,
+          "description": "Anthropic API key (use this OR OPENAI_API_KEY)"
+        },
+        {
+          "envVar": "OPENAI_API_KEY",
+          "required": false,
+          "description": "OpenAI API key (use this OR ANTHROPIC_API_KEY)"
+        }
       ]
     },
     "data": {
@@ -252,7 +264,8 @@
             "deleted": "boolean"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "eventbus": {
       "name": "eventbus",
@@ -289,7 +302,8 @@
             "counts": "object"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "discovery": {
       "name": "discovery",
@@ -372,7 +386,8 @@
             "services": "DiscoveredService[]"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "session": {
       "name": "session",
@@ -447,7 +462,8 @@
             "cleared": "boolean"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "memory": {
       "name": "memory",
@@ -545,7 +561,8 @@
             "sessions": "array"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "agent": {
       "name": "agent",
@@ -603,7 +620,8 @@
             "cancelled": "boolean"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "skills": {
       "name": "skills",
@@ -676,7 +694,8 @@
             "skills": "array"
           }
         }
-      ]
+      ],
+      "credentials": []
     },
     "github": {
       "name": "github",
@@ -868,28 +887,23 @@
             "body": "string",
             "state": "string"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "GITHUB_TOKEN",
+          "required": true,
+          "description": "GitHub personal access token"
         },
         {
-          "name": "pull",
-          "description": "Pull latest changes from remote repository",
-          "params": [
-            {
-              "name": "repoPath",
-              "type": "string",
-              "required": true,
-              "description": "Local repository path"
-            },
-            {
-              "name": "branch",
-              "type": "string",
-              "required": false,
-              "description": "Branch to pull"
-            }
-          ],
-          "responseShape": {
-            "success": "boolean",
-            "output": "string"
-          }
+          "envVar": "GITHUB_OWNER",
+          "required": false,
+          "description": "Default repository owner"
+        },
+        {
+          "envVar": "GITHUB_REPO",
+          "required": false,
+          "description": "Default repository name"
         }
       ]
     },
@@ -968,6 +982,18 @@
             "status": "string",
             "amount": "number"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "STRIPE_SECRET_KEY",
+          "required": true,
+          "description": "Stripe secret API key"
+        },
+        {
+          "envVar": "STRIPE_WEBHOOK_SECRET",
+          "required": false,
+          "description": "Webhook endpoint signing secret"
         }
       ]
     },
@@ -1105,6 +1131,18 @@
             "keyPoints": "string[]"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "ANTHROPIC_API_KEY",
+          "required": false,
+          "description": "Anthropic API key"
+        },
+        {
+          "envVar": "OPENAI_API_KEY",
+          "required": false,
+          "description": "OpenAI API key"
+        }
       ]
     },
     "youtube": {
@@ -1173,6 +1211,13 @@
             "subscriberCount": "string"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "YOUTUBE_API_KEY",
+          "required": true,
+          "description": "YouTube Data API key"
+        }
       ]
     },
     "twilio": {
@@ -1225,6 +1270,23 @@
             "status": "string"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "TWILIO_ACCOUNT_SID",
+          "required": true,
+          "description": "Twilio account SID"
+        },
+        {
+          "envVar": "TWILIO_AUTH_TOKEN",
+          "required": true,
+          "description": "Twilio auth token"
+        },
+        {
+          "envVar": "TWILIO_PHONE_NUMBER",
+          "required": false,
+          "description": "Default sender phone number"
+        }
       ]
     },
     "email": {
@@ -1266,6 +1328,23 @@
             "id": "string",
             "status": "string"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "SENDGRID_API_KEY",
+          "required": false,
+          "description": "SendGrid API key (use this OR RESEND_API_KEY)"
+        },
+        {
+          "envVar": "RESEND_API_KEY",
+          "required": false,
+          "description": "Resend API key (use this OR SENDGRID_API_KEY)"
+        },
+        {
+          "envVar": "FROM_EMAIL",
+          "required": false,
+          "description": "Default sender email address"
         }
       ]
     },
@@ -1471,6 +1550,13 @@
             "total": "number"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "DOCKER_HOST",
+          "required": false,
+          "description": "Docker daemon host URL"
+        }
       ]
     },
     "storage": {
@@ -1628,6 +1714,18 @@
             "expiresAt": "number"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "STORAGE_BUCKET",
+          "required": true,
+          "description": "Cloud storage bucket name"
+        },
+        {
+          "envVar": "STORAGE_REGION",
+          "required": false,
+          "description": "Storage region"
+        }
       ]
     },
     "queue": {
@@ -1774,6 +1872,13 @@
             "pending": "number",
             "processing": "number"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "QUEUE_URL",
+          "required": true,
+          "description": "Message queue connection URL"
         }
       ]
     },
@@ -1961,6 +2066,13 @@
             "subscribed": "boolean"
           }
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "REDIS_URL",
+          "required": true,
+          "description": "Redis connection URL"
+        }
       ]
     },
     "oauth": {
@@ -2069,6 +2181,23 @@
             "name": "string",
             "picture": "string"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "OAUTH_CLIENT_ID",
+          "required": true,
+          "description": "OAuth2 client ID"
+        },
+        {
+          "envVar": "OAUTH_CLIENT_SECRET",
+          "required": true,
+          "description": "OAuth2 client secret"
+        },
+        {
+          "envVar": "OAUTH_REDIRECT_URI",
+          "required": false,
+          "description": "OAuth2 redirect URI"
         }
       ]
     },
@@ -2206,6 +2335,18 @@
           "params": [],
           "responseShape": {}
         }
+      ],
+      "credentials": [
+        {
+          "envVar": "OTEL_EXPORTER_OTLP_ENDPOINT",
+          "required": true,
+          "description": "OpenTelemetry collector endpoint"
+        },
+        {
+          "envVar": "OTEL_SERVICE_NAME",
+          "required": false,
+          "description": "Service name for traces"
+        }
       ]
     },
     "cli": {
@@ -2231,31 +2372,9 @@
             "warnings": "string[]",
             "summary": "string"
           }
-        },
-        {
-          "name": "compile",
-          "description": "Compile an orbital schema to target shell",
-          "params": [
-            {
-              "name": "schema",
-              "type": "string",
-              "required": true,
-              "description": "Path to .orb schema file"
-            },
-            {
-              "name": "shell",
-              "type": "string",
-              "required": false,
-              "description": "Target shell (typescript, python)"
-            }
-          ],
-          "responseShape": {
-            "success": "boolean",
-            "output": "string",
-            "errors": "string[]"
-          }
         }
-      ]
+      ],
+      "credentials": []
     },
     "deepagent": {
       "name": "deepagent",
@@ -2364,56 +2483,18 @@
           "responseShape": {
             "messages": "array"
           }
+        }
+      ],
+      "credentials": [
+        {
+          "envVar": "DEEPAGENT_API_URL",
+          "required": true,
+          "description": "DeepAgent server URL"
         },
         {
-          "name": "generate",
-          "description": "Generate code or content using DeepAgent",
-          "params": [
-            {
-              "name": "prompt",
-              "type": "string",
-              "required": true,
-              "description": "Generation prompt"
-            },
-            {
-              "name": "threadId",
-              "type": "string",
-              "required": false,
-              "description": "Thread ID for context"
-            },
-            {
-              "name": "mode",
-              "type": "string",
-              "required": false,
-              "description": "Generation mode"
-            }
-          ],
-          "responseShape": {
-            "result": "string",
-            "threadId": "string"
-          }
-        },
-        {
-          "name": "resume",
-          "description": "Resume a DeepAgent generation thread",
-          "params": [
-            {
-              "name": "threadId",
-              "type": "string",
-              "required": true,
-              "description": "Thread ID to resume"
-            },
-            {
-              "name": "input",
-              "type": "string",
-              "required": false,
-              "description": "Additional input"
-            }
-          ],
-          "responseShape": {
-            "result": "string",
-            "threadId": "string"
-          }
+          "envVar": "DEEPAGENT_API_KEY",
+          "required": false,
+          "description": "DeepAgent API key"
         }
       ]
     }
