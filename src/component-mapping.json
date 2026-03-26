@@ -652,7 +652,7 @@
     },
     "game-canvas3-d": {
       "component": "GameCanvas3D",
-      "importPath": "@/components/organisms/game/three",
+      "importPath": "@almadar/ui/components/organisms/game/three",
       "category": "game"
     },
     "world-map-board": {
