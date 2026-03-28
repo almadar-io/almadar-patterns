@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-23T09:47:05.042Z",
+  "exportedAt": "2026-03-28T13:39:00.733Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -530,11 +530,6 @@
       "importPath": "@/components/organisms/ToastSlot",
       "category": "layout"
     },
-    "u-i-slot-renderer": {
-      "component": "UISlotRenderer",
-      "importPath": "@/components/organisms/UISlotRenderer",
-      "category": "layout"
-    },
     "split-pane": {
       "component": "SplitPane",
       "importPath": "@/components/organisms/SplitPane",
@@ -650,11 +645,6 @@
       "importPath": "@/components/organisms/CastleBoard",
       "category": "game"
     },
-    "game-canvas3-d": {
-      "component": "GameCanvas3D",
-      "importPath": "@almadar/ui/components/organisms/game/three",
-      "category": "game"
-    },
     "world-map-board": {
       "component": "WorldMapBoard",
       "importPath": "@/components/organisms/WorldMapBoard",
@@ -665,49 +655,14 @@
       "importPath": "@/components/organisms/CollapsibleSection",
       "category": "display"
     },
-    "camera3-d": {
-      "component": "Camera3D",
-      "importPath": "@/components/organisms/Camera3D",
-      "category": "display"
-    },
-    "lighting3-d": {
-      "component": "Lighting3D",
-      "importPath": "@/components/organisms/Lighting3D",
-      "category": "display"
-    },
-    "scene3-d": {
-      "component": "Scene3D",
-      "importPath": "@/components/organisms/Scene3D",
-      "category": "display"
-    },
-    "canvas3-d-error-boundary": {
-      "component": "Canvas3DErrorBoundary",
-      "importPath": "@/components/organisms/Canvas3DErrorBoundary",
-      "category": "state"
-    },
-    "canvas3-d-loading-state": {
-      "component": "Canvas3DLoadingState",
-      "importPath": "@/components/organisms/Canvas3DLoadingState",
-      "category": "display"
-    },
     "model-loader": {
       "component": "ModelLoader",
       "importPath": "@/components/organisms/ModelLoader",
       "category": "display"
     },
-    "physics-object3-d": {
-      "component": "PhysicsObject3D",
-      "importPath": "@/components/organisms/PhysicsObject3D",
-      "category": "display"
-    },
     "feature-renderer": {
       "component": "FeatureRenderer",
       "importPath": "@/components/organisms/FeatureRenderer",
-      "category": "display"
-    },
-    "feature-renderer3-d": {
-      "component": "FeatureRenderer3D",
-      "importPath": "@/components/organisms/FeatureRenderer3D",
       "category": "display"
     },
     "tile-renderer": {
@@ -719,21 +674,6 @@
       "component": "UnitRenderer",
       "importPath": "@/components/organisms/UnitRenderer",
       "category": "display"
-    },
-    "game-canvas3-d-battle-template": {
-      "component": "GameCanvas3DBattleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
-      "category": "template"
-    },
-    "game-canvas3-d-castle-template": {
-      "component": "GameCanvas3DCastleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
-      "category": "template"
-    },
-    "game-canvas3-d-world-map-template": {
-      "component": "GameCanvas3DWorldMapTemplate",
-      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
-      "category": "template"
     },
     "state-indicator": {
       "component": "StateIndicator",
@@ -1150,11 +1090,6 @@
       "importPath": "@/components/atoms/WaypointMarker",
       "category": "component"
     },
-    "x-p-bar": {
-      "component": "XPBar",
-      "importPath": "@/components/atoms/XPBar",
-      "category": "component"
-    },
     "crafting-recipe": {
       "component": "CraftingRecipe",
       "importPath": "@/components/molecules/CraftingRecipe",
@@ -1164,11 +1099,6 @@
       "component": "EnemyPlate",
       "importPath": "@/components/molecules/EnemyPlate",
       "category": "component"
-    },
-    "game-canvas2-d": {
-      "component": "GameCanvas2D",
-      "importPath": "@/components/molecules/GameCanvas2D",
-      "category": "game"
     },
     "health-panel": {
       "component": "HealthPanel",
@@ -1375,11 +1305,6 @@
       "importPath": "@/components/molecules/ArticleSection",
       "category": "component"
     },
-    "c-t-a-banner": {
-      "component": "CTABanner",
-      "importPath": "@/components/molecules/CTABanner",
-      "category": "navigation"
-    },
     "case-study-card": {
       "component": "CaseStudyCard",
       "importPath": "@/components/molecules/CaseStudyCard",
@@ -1419,11 +1344,6 @@
       "component": "DocSidebar",
       "importPath": "@/components/molecules/DocSidebar",
       "category": "navigation"
-    },
-    "doc-t-o-c": {
-      "component": "DocTOC",
-      "importPath": "@/components/molecules/DocTOC",
-      "category": "component"
     },
     "feature-card": {
       "component": "FeatureCard",
@@ -1540,86 +1460,6 @@
       "importPath": "@/components/molecules/AvlStateMachine",
       "category": "display"
     },
-    "a-i-generates": {
-      "component": "AIGenerates",
-      "importPath": "@/components/molecules/AIGenerates",
-      "category": "component"
-    },
-    "closed-circuit": {
-      "component": "ClosedCircuit",
-      "importPath": "@/components/molecules/ClosedCircuit",
-      "category": "component"
-    },
-    "community-ownership": {
-      "component": "CommunityOwnership",
-      "importPath": "@/components/molecules/CommunityOwnership",
-      "category": "component"
-    },
-    "compile-anywhere": {
-      "component": "CompileAnywhere",
-      "importPath": "@/components/molecules/CompileAnywhere",
-      "category": "component"
-    },
-    "composable-models": {
-      "component": "ComposableModels",
-      "importPath": "@/components/molecules/ComposableModels",
-      "category": "component"
-    },
-    "describe-prove-deploy": {
-      "component": "DescribeProveDeploy",
-      "importPath": "@/components/molecules/DescribeProveDeploy",
-      "category": "component"
-    },
-    "domain-grid": {
-      "component": "DomainGrid",
-      "importPath": "@/components/molecules/DomainGrid",
-      "category": "display"
-    },
-    "event-bus": {
-      "component": "EventBus",
-      "importPath": "@/components/molecules/EventBus",
-      "category": "component"
-    },
-    "orbital-unit": {
-      "component": "OrbitalUnit",
-      "importPath": "@/components/molecules/OrbitalUnit",
-      "category": "component"
-    },
-    "plan-verify-remember": {
-      "component": "PlanVerifyRemember",
-      "importPath": "@/components/molecules/PlanVerifyRemember",
-      "category": "component"
-    },
-    "prove-correct": {
-      "component": "ProveCorrect",
-      "importPath": "@/components/molecules/ProveCorrect",
-      "category": "component"
-    },
-    "service-layers": {
-      "component": "ServiceLayers",
-      "importPath": "@/components/molecules/ServiceLayers",
-      "category": "component"
-    },
-    "shared-reality": {
-      "component": "SharedReality",
-      "importPath": "@/components/molecules/SharedReality",
-      "category": "component"
-    },
-    "standard-library": {
-      "component": "StandardLibrary",
-      "importPath": "@/components/molecules/StandardLibrary",
-      "category": "component"
-    },
-    "state-machine": {
-      "component": "StateMachine",
-      "importPath": "@/components/molecules/StateMachine",
-      "category": "display"
-    },
-    "world-model": {
-      "component": "WorldModel",
-      "importPath": "@/components/molecules/WorldModel",
-      "category": "component"
-    },
     "case-study-organism": {
       "component": "CaseStudyOrganism",
       "importPath": "@/components/organisms/CaseStudyOrganism",
@@ -1660,11 +1500,6 @@
       "importPath": "@/components/organisms/TeamOrganism",
       "category": "display"
     },
-    "avl-application-scene": {
-      "component": "AvlApplicationScene",
-      "importPath": "@/components/organisms/AvlApplicationScene",
-      "category": "display"
-    },
     "avl-click-target": {
       "component": "AvlClickTarget",
       "importPath": "@/components/organisms/AvlClickTarget",
@@ -1678,11 +1513,6 @@
     "avl-legend": {
       "component": "AvlLegend",
       "importPath": "@/components/organisms/AvlLegend",
-      "category": "display"
-    },
-    "avl-orbital-scene": {
-      "component": "AvlOrbitalScene",
-      "importPath": "@/components/organisms/AvlOrbitalScene",
       "category": "display"
     },
     "avl-trait-scene": {
@@ -1715,65 +1545,235 @@
       "importPath": "@/components/templates/PricingPageTemplate",
       "category": "template"
     },
-    "avl3-d-label": {
+    "animated-graphic": {
+      "component": "AnimatedGraphic",
+      "importPath": "@/components/atoms/AnimatedGraphic",
+      "category": "component"
+    },
+    "animated-reveal": {
+      "component": "AnimatedReveal",
+      "importPath": "@/components/atoms/AnimatedReveal",
+      "category": "component"
+    },
+    "pattern-tile": {
+      "component": "PatternTile",
+      "importPath": "@/components/atoms/PatternTile",
+      "category": "game"
+    },
+    "edge-decoration": {
+      "component": "EdgeDecoration",
+      "importPath": "@/components/molecules/EdgeDecoration",
+      "category": "component"
+    },
+    "geometric-pattern": {
+      "component": "GeometricPattern",
+      "importPath": "@/components/molecules/GeometricPattern",
+      "category": "component"
+    },
+    "avl-behavior-glyph": {
+      "component": "AvlBehaviorGlyph",
+      "importPath": "@/components/molecules/AvlBehaviorGlyph",
+      "category": "component"
+    },
+    "avl-swim-lane": {
+      "component": "AvlSwimLane",
+      "importPath": "@/components/molecules/AvlSwimLane",
+      "category": "component"
+    },
+    "avl-transition-lane": {
+      "component": "AvlTransitionLane",
+      "importPath": "@/components/molecules/AvlTransitionLane",
+      "category": "component"
+    },
+    "behavior-view": {
+      "component": "BehaviorView",
+      "importPath": "@/components/molecules/BehaviorView",
+      "category": "component"
+    },
+    "detail-view": {
+      "component": "DetailView",
+      "importPath": "@/components/molecules/DetailView",
+      "category": "display"
+    },
+    "mini-state-machine": {
+      "component": "MiniStateMachine",
+      "importPath": "@/components/molecules/MiniStateMachine",
+      "category": "display"
+    },
+    "module-card": {
+      "component": "ModuleCard",
+      "importPath": "@/components/molecules/ModuleCard",
+      "category": "display"
+    },
+    "system-node": {
+      "component": "SystemNode",
+      "importPath": "@/components/molecules/SystemNode",
+      "category": "component"
+    },
+    "flow-canvas": {
+      "component": "FlowCanvas",
+      "importPath": "@/components/organisms/FlowCanvas",
+      "category": "game"
+    },
+    "zoom-breadcrumb": {
+      "component": "ZoomBreadcrumb",
+      "importPath": "@/components/organisms/ZoomBreadcrumb",
+      "category": "navigation"
+    },
+    "zoom-legend": {
+      "component": "ZoomLegend",
+      "importPath": "@/components/organisms/ZoomLegend",
+      "category": "display"
+    },
+    "avl-3d-label": {
       "component": "Avl3DLabel",
       "importPath": "@/components/atoms/Avl3DLabel",
       "category": "component"
     },
-    "avl3-d-cross-wire": {
+    "avl-3d-tooltip": {
+      "component": "Avl3DTooltip",
+      "importPath": "@/components/atoms/Avl3DTooltip",
+      "category": "component"
+    },
+    "xp-bar": {
+      "component": "XPBar",
+      "importPath": "@/components/atoms/XPBar",
+      "category": "component"
+    },
+    "cta-banner": {
+      "component": "CTABanner",
+      "importPath": "@/components/molecules/CTABanner",
+      "category": "navigation"
+    },
+    "doc-toc": {
+      "component": "DocTOC",
+      "importPath": "@/components/molecules/DocTOC",
+      "category": "component"
+    },
+    "avl-3d-cross-wire": {
       "component": "Avl3DCrossWire",
       "importPath": "@/components/molecules/Avl3DCrossWire",
       "category": "component"
     },
-    "avl3-d-entity-core": {
+    "avl-3d-entity-core": {
       "component": "Avl3DEntityCore",
       "importPath": "@/components/molecules/Avl3DEntityCore",
       "category": "component"
     },
-    "avl3-d-expr-tree": {
+    "avl-3d-expr-tree": {
       "component": "Avl3DExprTree",
       "importPath": "@/components/molecules/Avl3DExprTree",
       "category": "component"
     },
-    "avl3-d-orbital-node": {
+    "avl-3d-orbital-node": {
       "component": "Avl3DOrbitalNode",
       "importPath": "@/components/molecules/Avl3DOrbitalNode",
       "category": "component"
     },
-    "avl3-d-state-node": {
+    "avl-3d-state-node": {
       "component": "Avl3DStateNode",
       "importPath": "@/components/molecules/Avl3DStateNode",
       "category": "display"
     },
-    "avl3-d-transition-arc": {
+    "avl-3d-transition-arc": {
       "component": "Avl3DTransitionArc",
       "importPath": "@/components/molecules/Avl3DTransitionArc",
       "category": "component"
     },
-    "avl3-d-application-scene": {
+    "game-canvas-2d": {
+      "component": "GameCanvas2D",
+      "importPath": "@/components/molecules/GameCanvas2D",
+      "category": "game"
+    },
+    "ui-slot-renderer": {
+      "component": "UISlotRenderer",
+      "importPath": "@/components/organisms/UISlotRenderer",
+      "category": "layout"
+    },
+    "avl-3d-application-scene": {
       "component": "Avl3DApplicationScene",
       "importPath": "@/components/organisms/Avl3DApplicationScene",
       "category": "display"
     },
-    "avl3-d-orbital-scene": {
+    "avl-3d-effects": {
+      "component": "Avl3DEffects",
+      "importPath": "@/components/organisms/Avl3DEffects",
+      "category": "display"
+    },
+    "avl-3d-orbital-scene": {
       "component": "Avl3DOrbitalScene",
       "importPath": "@/components/organisms/Avl3DOrbitalScene",
       "category": "display"
     },
-    "avl3-d-trait-scene": {
+    "avl-3d-trait-scene": {
       "component": "Avl3DTraitScene",
       "importPath": "@/components/organisms/Avl3DTraitScene",
       "category": "display"
     },
-    "avl3-d-transition-scene": {
+    "avl-3d-transition-scene": {
       "component": "Avl3DTransitionScene",
       "importPath": "@/components/organisms/Avl3DTransitionScene",
       "category": "display"
     },
-    "avl3-d-viewer": {
+    "avl-3d-viewer": {
       "component": "Avl3DViewer",
       "importPath": "@/components/organisms/Avl3DViewer",
       "category": "display"
+    },
+    "game-canvas-3d": {
+      "component": "GameCanvas3D",
+      "importPath": "@/components/organisms/GameCanvas3D",
+      "category": "game"
+    },
+    "camera-3d": {
+      "component": "Camera3D",
+      "importPath": "@/components/organisms/Camera3D",
+      "category": "display"
+    },
+    "lighting-3d": {
+      "component": "Lighting3D",
+      "importPath": "@/components/organisms/Lighting3D",
+      "category": "display"
+    },
+    "scene-3d": {
+      "component": "Scene3D",
+      "importPath": "@/components/organisms/Scene3D",
+      "category": "display"
+    },
+    "canvas-3d-error-boundary": {
+      "component": "Canvas3DErrorBoundary",
+      "importPath": "@/components/organisms/Canvas3DErrorBoundary",
+      "category": "game"
+    },
+    "canvas-3d-loading-state": {
+      "component": "Canvas3DLoadingState",
+      "importPath": "@/components/organisms/Canvas3DLoadingState",
+      "category": "game"
+    },
+    "physics-object-3d": {
+      "component": "PhysicsObject3D",
+      "importPath": "@/components/organisms/PhysicsObject3D",
+      "category": "display"
+    },
+    "feature-renderer-3d": {
+      "component": "FeatureRenderer3D",
+      "importPath": "@/components/organisms/FeatureRenderer3D",
+      "category": "display"
+    },
+    "game-canvas-3d-battle-template": {
+      "component": "GameCanvas3DBattleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
+      "category": "template"
+    },
+    "game-canvas-3d-castle-template": {
+      "component": "GameCanvas3DCastleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
+      "category": "template"
+    },
+    "game-canvas-3d-world-map-template": {
+      "component": "GameCanvas3DWorldMapTemplate",
+      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
+      "category": "template"
     },
     "heading": {
       "component": "Typography",

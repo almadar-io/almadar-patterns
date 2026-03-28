@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-23T09:47:05.042Z",
+  "exportedAt": "2026-03-28T13:39:00.733Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -7458,68 +7458,6 @@
         }
       }
     },
-    "u-i-slot-renderer": {
-      "type": "u-i-slot-renderer",
-      "category": "layout",
-      "description": "UISlotRenderer Component  Renders all UI slots. This is the central component that displays content rendered by traits via render_ui effects.  Slots are rendered as: - Layout slots: Inline in the page flow (main, sidebar) - Portal slots: Rendered via portals (modal, drawer, toast, etc.) - HUD slots: Fixed position overlays (hud-top, hud-bottom)",
-      "suggestedFor": [
-        "slot",
-        "renderer",
-        "u i slot renderer"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "includeHud": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Include HUD slots"
-        },
-        "hudMode": {
-          "types": [
-            "string"
-          ],
-          "description": "HUD positioning mode: 'fixed' (default, viewport-relative) or 'inline' (container-relative, uses sticky)"
-        },
-        "includeFloating": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Include floating slot"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class name for the container"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
-        },
-        "suspense": {
-          "types": [
-            "boolean",
-            "object"
-          ],
-          "description": "Enable Suspense boundaries around each slot. When true, each inline slot is wrapped in `<ErrorBoundary><Suspense>` with Skeleton fallbacks. Opt-in — existing isLoading prop pattern still works."
-        }
-      }
-    },
     "split-pane": {
       "type": "split-pane",
       "category": "layout",
@@ -9578,277 +9516,6 @@
         }
       }
     },
-    "game-canvas3-d": {
-      "type": "game-canvas3-d",
-      "category": "game",
-      "description": "Props for GameCanvas3D component",
-      "suggestedFor": [
-        "game",
-        "canvas3",
-        "game canvas3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "--- Closed-circuit props (MANDATORY) ---"
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Children to render inside the 3D canvas (e.g., physics objects, custom meshes)"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "string"
-          ],
-          "description": "Error state"
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
-        },
-        "tiles": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of tiles to render"
-        },
-        "units": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of units to render"
-        },
-        "features": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of features to render"
-        },
-        "events": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of events to display"
-        },
-        "fogOfWar": {
-          "types": [
-            "array"
-          ],
-          "description": "Fog of war data"
-        },
-        "orientation": {
-          "types": [
-            "object"
-          ],
-          "description": "Map orientation"
-        },
-        "cameraMode": {
-          "types": [
-            "object"
-          ],
-          "description": "Camera mode"
-        },
-        "showGrid": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show grid"
-        },
-        "showCoordinates": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show coordinates overlay"
-        },
-        "showTileInfo": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show tile information"
-        },
-        "overlay": {
-          "types": [
-            "object"
-          ],
-          "description": "Overlay control mode"
-        },
-        "shadows": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable shadows"
-        },
-        "backgroundColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color"
-        },
-        "onTileClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when a tile is clicked"
-        },
-        "onUnitClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when a unit is clicked"
-        },
-        "onFeatureClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when a feature is clicked"
-        },
-        "onCanvasClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when canvas is clicked (background)"
-        },
-        "onTileHover": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when mouse moves over a tile"
-        },
-        "onUnitAnimation": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback for unit animation state change"
-        },
-        "assetLoader": {
-          "types": [
-            "object"
-          ],
-          "description": "Asset loader instance (uses global singleton if not provided)"
-        },
-        "tileRenderer": {
-          "types": [
-            "object"
-          ],
-          "description": "Custom tile renderer component"
-        },
-        "unitRenderer": {
-          "types": [
-            "object"
-          ],
-          "description": "Custom unit renderer component"
-        },
-        "featureRenderer": {
-          "types": [
-            "object"
-          ],
-          "description": "Custom feature renderer component"
-        },
-        "preloadAssets": {
-          "types": [
-            "array"
-          ],
-          "description": "URLs to preload"
-        },
-        "tileClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: tile click"
-        },
-        "unitClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: unit click"
-        },
-        "featureClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: feature click"
-        },
-        "canvasClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: canvas click"
-        },
-        "tileHoverEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: tile hover"
-        },
-        "tileLeaveEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: tile leave"
-        },
-        "unitAnimationEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: unit animation"
-        },
-        "cameraChangeEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: camera change"
-        },
-        "loadingMessage": {
-          "types": [
-            "string"
-          ],
-          "description": "Loading message"
-        },
-        "useInstancing": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether to use instancing for tiles"
-        },
-        "validMoves": {
-          "types": [
-            "array"
-          ],
-          "description": "Valid move positions"
-        },
-        "attackTargets": {
-          "types": [
-            "array"
-          ],
-          "description": "Attack target positions"
-        },
-        "selectedTileIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Selected tile IDs"
-        },
-        "selectedUnitId": {
-          "types": [
-            "string"
-          ],
-          "description": "Selected unit ID"
-        }
-      }
-    },
     "world-map-board": {
       "type": "world-map-board",
       "category": "game",
@@ -10114,263 +9781,6 @@
         }
       }
     },
-    "camera3-d": {
-      "type": "camera3-d",
-      "category": "display",
-      "description": "Camera3D  Three.js camera component with orbit controls. Supports isometric, perspective, and top-down camera modes.",
-      "suggestedFor": [
-        "camera3",
-        "camera3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "mode": {
-          "types": [
-            "object"
-          ],
-          "description": "Camera mode"
-        },
-        "position": {
-          "types": [
-            "array"
-          ],
-          "description": "Initial camera position"
-        },
-        "target": {
-          "types": [
-            "array"
-          ],
-          "description": "Target to look at"
-        },
-        "zoom": {
-          "types": [
-            "number"
-          ],
-          "description": "Zoom level"
-        },
-        "fov": {
-          "types": [
-            "number"
-          ],
-          "description": "Field of view (perspective mode only)"
-        },
-        "enableOrbit": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable orbit controls"
-        },
-        "minDistance": {
-          "types": [
-            "number"
-          ],
-          "description": "Minimum zoom distance"
-        },
-        "maxDistance": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum zoom distance"
-        },
-        "onChange": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when camera changes"
-        }
-      }
-    },
-    "lighting3-d": {
-      "type": "lighting3-d",
-      "category": "display",
-      "description": "Lighting3D  Default lighting setup for 3D game scenes. Includes ambient, directional, and optional point lights.",
-      "suggestedFor": [
-        "lighting3",
-        "lighting3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "ambientIntensity": {
-          "types": [
-            "number"
-          ],
-          "description": "Ambient light intensity"
-        },
-        "ambientColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Ambient light color"
-        },
-        "directionalIntensity": {
-          "types": [
-            "number"
-          ],
-          "description": "Directional light intensity"
-        },
-        "directionalColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Directional light color"
-        },
-        "directionalPosition": {
-          "types": [
-            "array"
-          ],
-          "description": "Directional light position"
-        },
-        "shadows": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable shadows"
-        },
-        "shadowMapSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Shadow map size"
-        },
-        "shadowCameraSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Shadow camera size"
-        },
-        "showHelpers": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show helper for directional light"
-        }
-      }
-    },
-    "scene3-d": {
-      "type": "scene3-d",
-      "category": "display",
-      "description": "Scene3D  Three.js scene wrapper component for React Three Fiber. Manages the scene environment, fog, and background.",
-      "suggestedFor": [
-        "scene3",
-        "scene3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "background": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color or URL"
-        },
-        "fog": {
-          "types": [
-            "object"
-          ],
-          "description": "Fog configuration"
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Children to render in scene"
-        }
-      }
-    },
-    "canvas3-d-error-boundary": {
-      "type": "canvas3-d-error-boundary",
-      "category": "state",
-      "description": "Canvas3DErrorBoundary  Error boundary for 3D canvas components. Catches Three.js and React Three Fiber errors gracefully.",
-      "suggestedFor": [
-        "canvas3",
-        "error",
-        "boundary",
-        "canvas3 d error boundary"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Child components",
-          "required": true
-        },
-        "fallback": {
-          "types": [
-            "node"
-          ],
-          "description": "Custom fallback component"
-        },
-        "onError": {
-          "types": [
-            "function"
-          ],
-          "description": "Error callback"
-        },
-        "onReset": {
-          "types": [
-            "function"
-          ],
-          "description": "Reset callback"
-        }
-      }
-    },
-    "canvas3-d-loading-state": {
-      "type": "canvas3-d-loading-state",
-      "category": "display",
-      "description": "Canvas3DLoadingState  Loading state component for 3D canvas with progress indicator. Displays asset loading progress and estimated time remaining.",
-      "suggestedFor": [
-        "canvas3",
-        "loading",
-        "state",
-        "canvas3 d loading state"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "progress": {
-          "types": [
-            "number"
-          ],
-          "description": "Current loading progress (0-100)"
-        },
-        "loaded": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of assets loaded"
-        },
-        "total": {
-          "types": [
-            "number"
-          ],
-          "description": "Total assets to load"
-        },
-        "message": {
-          "types": [
-            "string"
-          ],
-          "description": "Loading message"
-        },
-        "details": {
-          "types": [
-            "string"
-          ],
-          "description": "Secondary details message"
-        },
-        "showSpinner": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether to show spinner"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Custom className"
-        }
-      }
-    },
     "model-loader": {
       "type": "model-loader",
       "category": "display",
@@ -10458,88 +9868,6 @@
         }
       }
     },
-    "physics-object3-d": {
-      "type": "physics-object3-d",
-      "category": "display",
-      "description": "PhysicsObject3D Component  Three.js component that syncs a 3D object's position with physics state. Use this to render physics-enabled entities in GameCanvas3D.  ```tsx <PhysicsObject3D entityId=\"player-1\" modelUrl=\"https://trait-wars-assets.web.app/3d/medieval/props/barrels.glb\" initialPosition={[0, 10, 0]} mass={1} /> ```",
-      "suggestedFor": [
-        "physics",
-        "object3",
-        "physics object3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "Unique entity ID",
-          "required": true
-        },
-        "modelUrl": {
-          "types": [
-            "string"
-          ],
-          "description": "GLB model URL",
-          "required": true
-        },
-        "initialPosition": {
-          "types": [
-            "array"
-          ],
-          "description": "Initial position [x, y, z]"
-        },
-        "initialVelocity": {
-          "types": [
-            "array"
-          ],
-          "description": "Initial velocity [vx, vy, vz]"
-        },
-        "mass": {
-          "types": [
-            "number"
-          ],
-          "description": "Mass for collision response"
-        },
-        "gravity": {
-          "types": [
-            "number"
-          ],
-          "description": "Gravity force (default: 9.8)"
-        },
-        "groundY": {
-          "types": [
-            "number"
-          ],
-          "description": "Ground plane Y position (default: 0)"
-        },
-        "scale": {
-          "types": [
-            "number",
-            "array"
-          ],
-          "description": "Model scale"
-        },
-        "onPhysicsUpdate": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when physics state updates"
-        },
-        "onGroundHit": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when object hits ground"
-        },
-        "onCollision": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when collision occurs"
-        }
-      }
-    },
     "feature-renderer": {
       "type": "feature-renderer",
       "category": "display",
@@ -10599,62 +9927,6 @@
             "object"
           ],
           "description": "Feature color overrides"
-        }
-      }
-    },
-    "feature-renderer3-d": {
-      "type": "feature-renderer3-d",
-      "category": "display",
-      "description": "FeatureRenderer3D  Renders 3D features with GLB model loading from CDN. Supports assetUrl property on features for external model loading.",
-      "suggestedFor": [
-        "feature",
-        "renderer3",
-        "feature renderer3 d"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "features": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of features to render",
-          "required": true
-        },
-        "cellSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Grid cell size"
-        },
-        "offsetX": {
-          "types": [
-            "number"
-          ],
-          "description": "Grid offset X"
-        },
-        "offsetZ": {
-          "types": [
-            "number"
-          ],
-          "description": "Grid offset Z"
-        },
-        "onFeatureClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when feature is clicked"
-        },
-        "onFeatureHover": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when feature is hovered"
-        },
-        "selectedFeatureIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Selected feature IDs"
         }
       }
     },
@@ -10797,349 +10069,6 @@
             "number"
           ],
           "description": "Animation speed multiplier"
-        }
-      }
-    },
-    "game-canvas3-d-battle-template": {
-      "type": "game-canvas3-d-battle-template",
-      "category": "template",
-      "description": "GameCanvas3DBattleTemplate  Pure declarative template wrapper for 3D battle scenes. Optimized for tactical combat view with turn indicators.  Page: Battle3DPage Entity: Battle3D ViewType: detail  Events Emitted: - TILE_SELECTED - When a tile is clicked - UNIT_SELECTED - When a unit is clicked - UNIT_ATTACK - When attacking a unit - UNIT_MOVE - When moving a unit - END_TURN - When ending turn - EXIT_BATTLE - When exiting battle",
-      "suggestedFor": [
-        "game",
-        "canvas3",
-        "battle",
-        "template",
-        "game canvas3 d battle template"
-      ],
-      "typicalSize": "full",
-      "propsSchema": {
-        "entity": {
-          "types": [
-            "object"
-          ],
-          "description": "Entity data, the sole source of runtime state",
-          "required": true
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "External styling override"
-        },
-        "cameraMode": {
-          "types": [
-            "string"
-          ],
-          "description": "3D camera mode - defaults to perspective for dramatic effect"
-        },
-        "showGrid": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show grid helper"
-        },
-        "shadows": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable shadows"
-        },
-        "backgroundColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color - darker for battle atmosphere"
-        },
-        "tileClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for tile clicks"
-        },
-        "unitClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for unit clicks"
-        },
-        "unitAttackEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for unit attack"
-        },
-        "unitMoveEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for unit move"
-        },
-        "endTurnEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for ending turn"
-        },
-        "exitEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for exiting battle"
-        },
-        "selectedUnitId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected unit ID"
-        },
-        "validMoves": {
-          "types": [
-            "array"
-          ],
-          "description": "Valid move positions"
-        },
-        "attackTargets": {
-          "types": [
-            "array"
-          ],
-          "description": "Valid attack targets"
-        },
-        "showTurnIndicator": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show turn indicator overlay"
-        }
-      }
-    },
-    "game-canvas3-d-castle-template": {
-      "type": "game-canvas3-d-castle-template",
-      "category": "template",
-      "description": "GameCanvas3DCastleTemplate  Pure declarative template wrapper for 3D castle/settlement view. Shows castle layout with buildings and garrisoned units.  Page: Castle3DPage, Settlement3DPage Entity: Castle3D, Settlement3D ViewType: detail  Events Emitted: - BUILDING_SELECTED - When a building is clicked - UNIT_SELECTED - When a garrison unit is clicked - BUILD - When building/upgrading - RECRUIT - When recruiting units - EXIT - When exiting castle view",
-      "suggestedFor": [
-        "game",
-        "canvas3",
-        "castle",
-        "template",
-        "game canvas3 d castle template"
-      ],
-      "typicalSize": "full",
-      "propsSchema": {
-        "entity": {
-          "types": [
-            "object"
-          ],
-          "description": "Entity data, the sole source of runtime state",
-          "required": true
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "External styling override"
-        },
-        "cameraMode": {
-          "types": [
-            "string"
-          ],
-          "description": "3D camera mode"
-        },
-        "showGrid": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show grid helper"
-        },
-        "shadows": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable shadows"
-        },
-        "backgroundColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color"
-        },
-        "buildingClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for building clicks"
-        },
-        "unitClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for unit clicks"
-        },
-        "buildEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for build action"
-        },
-        "recruitEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for recruit action"
-        },
-        "exitEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for exit"
-        },
-        "selectedBuildingId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected building ID"
-        },
-        "availableBuildSites": {
-          "types": [
-            "array"
-          ],
-          "description": "Available build positions"
-        },
-        "showHeader": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show castle name header"
-        },
-        "selectedTileIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Pre-computed selected tile IDs array"
-        }
-      }
-    },
-    "game-canvas3-d-world-map-template": {
-      "type": "game-canvas3-d-world-map-template",
-      "category": "template",
-      "description": "GameCanvas3DWorldMapTemplate  Pure declarative template wrapper for 3D world map. No hooks, no callbacks, no local state -- just entity data and config props.  Page: WorldMap3DPage Entity: WorldMap3D ViewType: detail  Events Emitted: - TILE_SELECTED - When a tile is clicked ({ tileId, x, z, type }) - UNIT_SELECTED - When a unit is clicked ({ unitId, x, z, name }) - FEATURE_SELECTED - When a feature is clicked ({ featureId, x, z, type }) - TILE_HOVERED - When hovering over a tile ({ tileId, x, z }) - TILE_LEAVE - When leaving a tile ({}) - CAMERA_CHANGED - When camera position changes ({ position })",
-      "suggestedFor": [
-        "game",
-        "canvas3",
-        "world",
-        "map",
-        "template",
-        "game canvas3 d world map template"
-      ],
-      "typicalSize": "full",
-      "propsSchema": {
-        "entity": {
-          "types": [
-            "object"
-          ],
-          "description": "Entity data, the sole source of runtime state",
-          "required": true
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "External styling override"
-        },
-        "cameraMode": {
-          "types": [
-            "string"
-          ],
-          "description": "3D camera mode"
-        },
-        "showGrid": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show grid helper"
-        },
-        "showCoordinates": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show coordinate overlay"
-        },
-        "showTileInfo": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show tile info on hover"
-        },
-        "shadows": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Enable shadows"
-        },
-        "backgroundColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color"
-        },
-        "tileClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for tile clicks"
-        },
-        "unitClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for unit clicks"
-        },
-        "featureClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for feature clicks"
-        },
-        "tileHoverEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for tile hover"
-        },
-        "tileLeaveEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for tile leave"
-        },
-        "cameraChangeEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event name for camera changes"
-        },
-        "exitEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Exit/back event name"
-        },
-        "selectedUnitId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected unit ID"
-        },
-        "validMoves": {
-          "types": [
-            "array"
-          ],
-          "description": "Valid move positions for selected unit"
-        },
-        "attackTargets": {
-          "types": [
-            "array"
-          ],
-          "description": "Attack target positions"
         }
       }
     },
@@ -16237,62 +15166,6 @@
         }
       }
     },
-    "x-p-bar": {
-      "type": "x-p-bar",
-      "category": "component",
-      "description": "XPBar component",
-      "suggestedFor": [
-        "bar",
-        "x p bar"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "current": {
-          "types": [
-            "number"
-          ],
-          "description": "Current XP value",
-          "required": true
-        },
-        "max": {
-          "types": [
-            "number"
-          ],
-          "description": "XP needed for next level",
-          "required": true
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Current level"
-        },
-        "showLabel": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether to show the XP label"
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Size variant"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Animate the fill bar"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
     "crafting-recipe": {
       "type": "crafting-recipe",
       "category": "component",
@@ -16387,55 +15260,6 @@
             "array"
           ],
           "description": "Active status effects"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "game-canvas2-d": {
-      "type": "game-canvas2-d",
-      "category": "game",
-      "description": "GameCanvas2D component",
-      "suggestedFor": [
-        "game",
-        "canvas2",
-        "game canvas2 d"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "width": {
-          "types": [
-            "number"
-          ],
-          "description": "Canvas width in pixels"
-        },
-        "height": {
-          "types": [
-            "number"
-          ],
-          "description": "Canvas height in pixels"
-        },
-        "onDraw": {
-          "types": [
-            "function"
-          ],
-          "description": "Called each frame with the 2D context and current frame count"
-        },
-        "onTick": {
-          "types": [
-            "function"
-          ],
-          "description": "Called each tick with delta time in seconds"
-        },
-        "fps": {
-          "types": [
-            "number"
-          ],
-          "description": "Target frames per second"
         },
         "className": {
           "types": [
@@ -17039,6 +15863,12 @@
             "string"
           ],
           "description": "label prop"
+        },
+        "showBackground": {
+          "types": [
+            "boolean"
+          ],
+          "description": "V2: Render a category-colored background circle behind the icon."
         }
       }
     },
@@ -17440,6 +16270,18 @@
             "number"
           ],
           "description": "height prop"
+        },
+        "role": {
+          "types": [
+            "object"
+          ],
+          "description": "V2: Role-based fill color. When set, overrides monochrome rendering."
+        },
+        "transitionCount": {
+          "types": [
+            "number"
+          ],
+          "description": "V2: Number of transitions touching this state. Drives proportional width."
         }
       }
     },
@@ -18395,61 +17237,6 @@
         }
       }
     },
-    "c-t-a-banner": {
-      "type": "c-t-a-banner",
-      "category": "navigation",
-      "description": "CTABanner component",
-      "suggestedFor": [
-        "banner",
-        "c t a banner"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Banner headline",
-          "required": true
-        },
-        "subtitle": {
-          "types": [
-            "string"
-          ],
-          "description": "Supporting text below the title"
-        },
-        "primaryAction": {
-          "types": [
-            "object"
-          ],
-          "description": "Primary action button config"
-        },
-        "secondaryAction": {
-          "types": [
-            "object"
-          ],
-          "description": "Secondary action button config"
-        },
-        "background": {
-          "types": [
-            "object"
-          ],
-          "description": "Background style"
-        },
-        "align": {
-          "types": [
-            "string"
-          ],
-          "description": "Content alignment"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class names"
-        }
-      }
-    },
     "case-study-card": {
       "type": "case-study-card",
       "category": "display",
@@ -18760,37 +17547,6 @@
           ],
           "description": "Sidebar navigation items",
           "required": true
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "doc-t-o-c": {
-      "type": "doc-t-o-c",
-      "category": "component",
-      "description": "DocTOC component",
-      "suggestedFor": [
-        "doc",
-        "doc t o c"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "items": {
-          "types": [
-            "array"
-          ],
-          "description": "Table of contents items",
-          "required": true
-        },
-        "activeId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently active section id"
         },
         "className": {
           "types": [
@@ -19853,503 +18609,6 @@
         }
       }
     },
-    "a-i-generates": {
-      "type": "a-i-generates",
-      "category": "component",
-      "description": "AIGenerates component",
-      "suggestedFor": [
-        "generates",
-        "a i generates"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "closed-circuit": {
-      "type": "closed-circuit",
-      "category": "component",
-      "description": "ClosedCircuit component",
-      "suggestedFor": [
-        "closed",
-        "circuit",
-        "closed circuit"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "community-ownership": {
-      "type": "community-ownership",
-      "category": "component",
-      "description": "CommunityOwnership component",
-      "suggestedFor": [
-        "community",
-        "ownership",
-        "community ownership"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "compile-anywhere": {
-      "type": "compile-anywhere",
-      "category": "component",
-      "description": "CompileAnywhere component",
-      "suggestedFor": [
-        "compile",
-        "anywhere",
-        "compile anywhere"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "composable-models": {
-      "type": "composable-models",
-      "category": "component",
-      "description": "ComposableModels component",
-      "suggestedFor": [
-        "composable",
-        "models",
-        "composable models"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "describe-prove-deploy": {
-      "type": "describe-prove-deploy",
-      "category": "component",
-      "description": "DescribeProveDeploy component",
-      "suggestedFor": [
-        "describe",
-        "prove",
-        "deploy",
-        "describe prove deploy"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "domain-grid": {
-      "type": "domain-grid",
-      "category": "display",
-      "description": "DomainGrid component",
-      "suggestedFor": [
-        "domain",
-        "grid",
-        "domain grid"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "event-bus": {
-      "type": "event-bus",
-      "category": "component",
-      "description": "EventBus component",
-      "suggestedFor": [
-        "event",
-        "bus",
-        "event bus"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "orbital-unit": {
-      "type": "orbital-unit",
-      "category": "component",
-      "description": "OrbitalUnit component",
-      "suggestedFor": [
-        "orbital",
-        "unit",
-        "orbital unit"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "plan-verify-remember": {
-      "type": "plan-verify-remember",
-      "category": "component",
-      "description": "PlanVerifyRemember component",
-      "suggestedFor": [
-        "plan",
-        "verify",
-        "remember",
-        "plan verify remember"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "prove-correct": {
-      "type": "prove-correct",
-      "category": "component",
-      "description": "ProveCorrect component",
-      "suggestedFor": [
-        "prove",
-        "correct",
-        "prove correct"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "service-layers": {
-      "type": "service-layers",
-      "category": "component",
-      "description": "ServiceLayers component",
-      "suggestedFor": [
-        "service",
-        "layers",
-        "service layers"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "shared-reality": {
-      "type": "shared-reality",
-      "category": "component",
-      "description": "SharedReality component",
-      "suggestedFor": [
-        "shared",
-        "reality",
-        "shared reality"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "standard-library": {
-      "type": "standard-library",
-      "category": "component",
-      "description": "StandardLibrary component",
-      "suggestedFor": [
-        "standard",
-        "library",
-        "standard library"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "state-machine": {
-      "type": "state-machine",
-      "category": "display",
-      "description": "StateMachine component",
-      "suggestedFor": [
-        "state",
-        "machine",
-        "state machine"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
-    "world-model": {
-      "type": "world-model",
-      "category": "component",
-      "description": "WorldModel component",
-      "suggestedFor": [
-        "world",
-        "model",
-        "world model"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
-        }
-      }
-    },
     "case-study-organism": {
       "type": "case-study-organism",
       "category": "display",
@@ -21189,39 +19448,6 @@
         }
       }
     },
-    "avl-application-scene": {
-      "type": "avl-application-scene",
-      "category": "display",
-      "description": "AvlApplicationScene component",
-      "suggestedFor": [
-        "avl",
-        "application",
-        "scene",
-        "avl application scene"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "data": {
-          "types": [
-            "object"
-          ],
-          "description": "data prop",
-          "required": true
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "onOrbitalClick": {
-          "types": [
-            "function"
-          ],
-          "description": "onOrbitalClick prop"
-        }
-      }
-    },
     "avl-click-target": {
       "type": "avl-click-target",
       "category": "display",
@@ -21377,6 +19603,12 @@
             "object"
           ],
           "description": "Coverage data for verification overlay"
+        },
+        "focusTarget": {
+          "types": [
+            "object"
+          ],
+          "description": "Dynamic focus target. Changes animate the zoom to the specified orbital/trait."
         }
       }
     },
@@ -21415,51 +19647,6 @@
             "number"
           ],
           "description": "y prop"
-        }
-      }
-    },
-    "avl-orbital-scene": {
-      "type": "avl-orbital-scene",
-      "category": "display",
-      "description": "AvlOrbitalScene component",
-      "suggestedFor": [
-        "avl",
-        "orbital",
-        "scene",
-        "avl orbital scene"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "data": {
-          "types": [
-            "object"
-          ],
-          "description": "data prop",
-          "required": true
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "highlightedTrait": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently highlighted trait (before zooming in)"
-        },
-        "onTraitClick": {
-          "types": [
-            "function"
-          ],
-          "description": "onTraitClick prop"
-        },
-        "onTraitHighlight": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when a trait tab is hovered/selected (highlight without zoom)"
         }
       }
     },
@@ -21644,8 +19831,814 @@
         }
       }
     },
-    "avl3-d-label": {
-      "type": "avl3-d-label",
+    "animated-graphic": {
+      "type": "animated-graphic",
+      "category": "component",
+      "description": "AnimatedGraphic component",
+      "suggestedFor": [
+        "animated",
+        "graphic",
+        "animated graphic"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "src": {
+          "types": [
+            "string"
+          ],
+          "description": "URL to an SVG file. Fetched and inlined to enable stroke/fill animations."
+        },
+        "svgContent": {
+          "types": [
+            "string"
+          ],
+          "description": "Inline SVG string. Takes precedence over src if both provided."
+        },
+        "animation": {
+          "types": [
+            "object"
+          ],
+          "description": "Animation type applied to SVG paths/shapes"
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to run the animation (default: false). Controlled externally or via AnimatedReveal."
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "Animation duration in ms (default: 1200)"
+        },
+        "delay": {
+          "types": [
+            "number"
+          ],
+          "description": "Delay before animation starts in ms (default: 0)"
+        },
+        "easing": {
+          "types": [
+            "string"
+          ],
+          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))"
+        },
+        "width": {
+          "types": [
+            "string",
+            "number"
+          ],
+          "description": "Width of the graphic container"
+        },
+        "height": {
+          "types": [
+            "string",
+            "number"
+          ],
+          "description": "Height of the graphic container"
+        },
+        "strokeColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color override for SVG paths"
+        },
+        "fillColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Fill color for the 'fill' animation end state"
+        },
+        "alt": {
+          "types": [
+            "string"
+          ],
+          "description": "Alt text for accessibility"
+        }
+      }
+    },
+    "animated-reveal": {
+      "type": "animated-reveal",
+      "category": "component",
+      "description": "AnimatedReveal component",
+      "suggestedFor": [
+        "animated",
+        "reveal",
+        "animated reveal"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "trigger": {
+          "types": [
+            "object"
+          ],
+          "description": "What triggers the animation"
+        },
+        "animation": {
+          "types": [
+            "object"
+          ],
+          "description": "Built-in animation preset"
+        },
+        "duration": {
+          "types": [
+            "number"
+          ],
+          "description": "Animation duration in ms (default: 600)"
+        },
+        "delay": {
+          "types": [
+            "number"
+          ],
+          "description": "Delay before animation starts in ms (default: 0)"
+        },
+        "threshold": {
+          "types": [
+            "number"
+          ],
+          "description": "How much of the element must be visible before triggering, 0-1 (default: 0.15)"
+        },
+        "once": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Animate only the first time the element enters the viewport (default: true)"
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Manual control: when trigger='manual', set this to true to animate"
+        },
+        "easing": {
+          "types": [
+            "string"
+          ],
+          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))"
+        },
+        "children": {
+          "types": [
+            "node",
+            "function"
+          ],
+          "description": "Children: ReactNode or render function receiving animated state",
+          "required": true
+        }
+      }
+    },
+    "pattern-tile": {
+      "type": "pattern-tile",
+      "category": "game",
+      "description": "PatternTile component",
+      "suggestedFor": [
+        "pattern",
+        "tile",
+        "pattern tile"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "object"
+          ],
+          "description": "Which geometric pattern to render"
+        },
+        "size": {
+          "types": [
+            "number"
+          ],
+          "description": "Tile unit size in SVG units"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color (CSS variable or hex)"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Line thickness"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "edge-decoration": {
+      "type": "edge-decoration",
+      "category": "component",
+      "description": "EdgeDecoration component",
+      "suggestedFor": [
+        "edge",
+        "decoration",
+        "edge decoration"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "object"
+          ],
+          "description": "Which decorative element"
+        },
+        "side": {
+          "types": [
+            "object"
+          ],
+          "description": "Which side(s) to place the decoration"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "Overall opacity (default: 0.15)"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Stroke width"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Width of the decoration area as percentage of container (default: 15)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "geometric-pattern": {
+      "type": "geometric-pattern",
+      "category": "component",
+      "description": "GeometricPattern component",
+      "suggestedFor": [
+        "geometric",
+        "pattern",
+        "geometric pattern"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "object"
+          ],
+          "description": "Which geometric tile design"
+        },
+        "mode": {
+          "types": [
+            "string"
+          ],
+          "description": "Layout mode"
+        },
+        "opacity": {
+          "types": [
+            "number"
+          ],
+          "description": "Overall opacity (default: 0.06)"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color passed to PatternTile"
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Tile scale multiplier (default: 1)"
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Stroke width passed to PatternTile"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Content to wrap (used in frame mode)"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "avl-behavior-glyph": {
+      "type": "avl-behavior-glyph",
+      "category": "component",
+      "description": "AvlBehaviorGlyph component",
+      "suggestedFor": [
+        "avl",
+        "behavior",
+        "glyph",
+        "avl behavior glyph"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Behavior name",
+          "required": true
+        },
+        "level": {
+          "types": [
+            "object"
+          ],
+          "description": "Composition level"
+        },
+        "domain": {
+          "types": [
+            "string"
+          ],
+          "description": "Domain for color coding"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Override color (otherwise derived from domain)"
+        },
+        "fieldCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Entity field count (drives spoke count)"
+        },
+        "stateCount": {
+          "types": [
+            "number"
+          ],
+          "description": "State count (drives ring count)"
+        },
+        "persistence": {
+          "types": [
+            "object"
+          ],
+          "description": "Persistence type (drives core shape)"
+        },
+        "effectTypes": {
+          "types": [
+            "array"
+          ],
+          "description": "Effect types used (drives markers on rings)"
+        },
+        "children": {
+          "types": [
+            "array"
+          ],
+          "description": "Child behaviors for molecule/organism composition"
+        },
+        "connections": {
+          "types": [
+            "array"
+          ],
+          "description": "Event connections between children (organism level)"
+        },
+        "size": {
+          "types": [
+            "object"
+          ],
+          "description": "Size preset"
+        },
+        "showLabels": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show text labels"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Animate orbital rings"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional className"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler"
+        }
+      }
+    },
+    "avl-swim-lane": {
+      "type": "avl-swim-lane",
+      "category": "component",
+      "description": "AvlSwimLane component",
+      "suggestedFor": [
+        "avl",
+        "swim",
+        "lane",
+        "avl swim lane"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "listenedEvents": {
+          "types": [
+            "array"
+          ],
+          "description": "listenedEvents prop",
+          "required": true
+        },
+        "emittedEvents": {
+          "types": [
+            "array"
+          ],
+          "description": "emittedEvents prop",
+          "required": true
+        },
+        "centerWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "centerWidth prop",
+          "required": true
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "required": true
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop",
+          "required": true
+        }
+      }
+    },
+    "avl-transition-lane": {
+      "type": "avl-transition-lane",
+      "category": "component",
+      "description": "AvlTransitionLane component",
+      "suggestedFor": [
+        "avl",
+        "transition",
+        "lane",
+        "avl transition lane"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "event": {
+          "types": [
+            "string"
+          ],
+          "description": "event prop",
+          "required": true
+        },
+        "guard": {
+          "types": [
+            "string"
+          ],
+          "description": "guard prop"
+        },
+        "effects": {
+          "types": [
+            "array"
+          ],
+          "description": "effects prop",
+          "required": true
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "required": true
+        },
+        "x": {
+          "types": [
+            "number"
+          ],
+          "description": "x prop"
+        },
+        "y": {
+          "types": [
+            "number"
+          ],
+          "description": "y prop"
+        },
+        "isBackward": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isBackward prop"
+        },
+        "isSelfLoop": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isSelfLoop prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "onTransitionClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onTransitionClick prop"
+        }
+      }
+    },
+    "behavior-view": {
+      "type": "behavior-view",
+      "category": "component",
+      "description": "BehaviorView component",
+      "suggestedFor": [
+        "behavior",
+        "view",
+        "behavior view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        }
+      }
+    },
+    "detail-view": {
+      "type": "detail-view",
+      "category": "display",
+      "description": "DetailView component",
+      "suggestedFor": [
+        "detail",
+        "view",
+        "detail view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        }
+      }
+    },
+    "mini-state-machine": {
+      "type": "mini-state-machine",
+      "category": "display",
+      "description": "MiniStateMachine component",
+      "suggestedFor": [
+        "mini",
+        "state",
+        "machine",
+        "mini state machine"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "module-card": {
+      "type": "module-card",
+      "category": "display",
+      "description": "ModuleCard component",
+      "suggestedFor": [
+        "module",
+        "card",
+        "module card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        }
+      }
+    },
+    "system-node": {
+      "type": "system-node",
+      "category": "component",
+      "description": "SystemNode component",
+      "suggestedFor": [
+        "system",
+        "node",
+        "system node"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "object"
+          ],
+          "description": "data prop",
+          "required": true
+        }
+      }
+    },
+    "flow-canvas": {
+      "type": "flow-canvas",
+      "category": "game",
+      "description": "FlowCanvas component",
+      "suggestedFor": [
+        "flow",
+        "canvas",
+        "flow canvas"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "schema": {
+          "types": [
+            "object",
+            "string"
+          ],
+          "description": "schema prop",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "color prop"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animated prop"
+        },
+        "width": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "height prop"
+        },
+        "onZoomChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onZoomChange prop"
+        },
+        "focusTarget": {
+          "types": [
+            "object"
+          ],
+          "description": "focusTarget prop"
+        },
+        "initialOrbital": {
+          "types": [
+            "string"
+          ],
+          "description": "initialOrbital prop"
+        },
+        "initialTrait": {
+          "types": [
+            "string"
+          ],
+          "description": "initialTrait prop"
+        },
+        "stateCoverage": {
+          "types": [
+            "object"
+          ],
+          "description": "stateCoverage prop"
+        }
+      }
+    },
+    "zoom-breadcrumb": {
+      "type": "zoom-breadcrumb",
+      "category": "navigation",
+      "description": "ZoomBreadcrumb component",
+      "suggestedFor": [
+        "zoom",
+        "breadcrumb",
+        "zoom breadcrumb"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "band": {
+          "types": [
+            "object"
+          ],
+          "description": "band prop",
+          "required": true
+        },
+        "applicationName": {
+          "types": [
+            "string"
+          ],
+          "description": "applicationName prop"
+        },
+        "orbitalName": {
+          "types": [
+            "string"
+          ],
+          "description": "orbitalName prop"
+        },
+        "traitName": {
+          "types": [
+            "string"
+          ],
+          "description": "traitName prop"
+        },
+        "eventName": {
+          "types": [
+            "string"
+          ],
+          "description": "eventName prop"
+        }
+      }
+    },
+    "zoom-legend": {
+      "type": "zoom-legend",
+      "category": "display",
+      "description": "ZoomLegend component",
+      "suggestedFor": [
+        "zoom",
+        "legend",
+        "zoom legend"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "band": {
+          "types": [
+            "object"
+          ],
+          "description": "band prop",
+          "required": true
+        }
+      }
+    },
+    "avl-3d-label": {
+      "type": "avl-3d-label",
       "category": "component",
       "description": "Avl3DLabel component",
       "suggestedFor": [
@@ -21695,8 +20688,196 @@
         }
       }
     },
-    "avl3-d-cross-wire": {
-      "type": "avl3-d-cross-wire",
+    "avl-3d-tooltip": {
+      "type": "avl-3d-tooltip",
+      "category": "component",
+      "description": "Avl3DTooltip component",
+      "suggestedFor": [
+        "avl3",
+        "tooltip",
+        "avl3 d tooltip"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "3D position [x, y, z]",
+          "required": true
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Tooltip title (bold, top line)",
+          "required": true
+        },
+        "rows": {
+          "types": [
+            "array"
+          ],
+          "description": "Key-value rows to display",
+          "required": true
+        },
+        "accentColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional accent color for the left border"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        }
+      }
+    },
+    "xp-bar": {
+      "type": "xp-bar",
+      "category": "component",
+      "description": "XPBar component",
+      "suggestedFor": [
+        "bar",
+        "x p bar"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "current": {
+          "types": [
+            "number"
+          ],
+          "description": "Current XP value",
+          "required": true
+        },
+        "max": {
+          "types": [
+            "number"
+          ],
+          "description": "XP needed for next level",
+          "required": true
+        },
+        "level": {
+          "types": [
+            "number"
+          ],
+          "description": "Current level"
+        },
+        "showLabel": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show the XP label"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Animate the fill bar"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "cta-banner": {
+      "type": "cta-banner",
+      "category": "navigation",
+      "description": "CTABanner component",
+      "suggestedFor": [
+        "banner",
+        "c t a banner"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Banner headline",
+          "required": true
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "Supporting text below the title"
+        },
+        "primaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "Primary action button config"
+        },
+        "secondaryAction": {
+          "types": [
+            "object"
+          ],
+          "description": "Secondary action button config"
+        },
+        "background": {
+          "types": [
+            "object"
+          ],
+          "description": "Background style"
+        },
+        "align": {
+          "types": [
+            "string"
+          ],
+          "description": "Content alignment"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "doc-toc": {
+      "type": "doc-toc",
+      "category": "component",
+      "description": "DocTOC component",
+      "suggestedFor": [
+        "doc",
+        "doc t o c"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "Table of contents items",
+          "required": true
+        },
+        "activeId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently active section id"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "avl-3d-cross-wire": {
+      "type": "avl-3d-cross-wire",
       "category": "component",
       "description": "Avl3DCrossWire component",
       "suggestedFor": [
@@ -21742,8 +20923,8 @@
         }
       }
     },
-    "avl3-d-entity-core": {
-      "type": "avl3-d-entity-core",
+    "avl-3d-entity-core": {
+      "type": "avl-3d-entity-core",
       "category": "component",
       "description": "Avl3DEntityCore component",
       "suggestedFor": [
@@ -21782,6 +20963,12 @@
           "description": "3D position [x, y, z]",
           "required": true
         },
+        "fields": {
+          "types": [
+            "array"
+          ],
+          "description": "Field type strings for V5 shape encoding (optional, falls back to spheres)"
+        },
         "color": {
           "types": [
             "string"
@@ -21796,8 +20983,8 @@
         }
       }
     },
-    "avl3-d-expr-tree": {
-      "type": "avl3-d-expr-tree",
+    "avl-3d-expr-tree": {
+      "type": "avl-3d-expr-tree",
       "category": "component",
       "description": "Avl3DExprTree component",
       "suggestedFor": [
@@ -21836,8 +21023,8 @@
         }
       }
     },
-    "avl3-d-orbital-node": {
-      "type": "avl3-d-orbital-node",
+    "avl-3d-orbital-node": {
+      "type": "avl-3d-orbital-node",
       "category": "component",
       "description": "Avl3DOrbitalNode component",
       "suggestedFor": [
@@ -21866,8 +21053,20 @@
           "types": [
             "number"
           ],
-          "description": "Number of traits (affects sphere size)",
+          "description": "Number of traits (affects ring size and scale)",
           "required": true
+        },
+        "pageCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of pages (affects glow brightness)"
+        },
+        "persistence": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity persistence type"
         },
         "position": {
           "types": [
@@ -21890,8 +21089,8 @@
         }
       }
     },
-    "avl3-d-state-node": {
-      "type": "avl3-d-state-node",
+    "avl-3d-state-node": {
+      "type": "avl-3d-state-node",
       "category": "display",
       "description": "Avl3DStateNode component",
       "suggestedFor": [
@@ -21940,6 +21139,18 @@
           ],
           "description": "Click handler"
         },
+        "incomingCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of incoming transitions"
+        },
+        "outgoingCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of outgoing transitions"
+        },
         "color": {
           "types": [
             "string"
@@ -21954,8 +21165,8 @@
         }
       }
     },
-    "avl3-d-transition-arc": {
-      "type": "avl3-d-transition-arc",
+    "avl-3d-transition-arc": {
+      "type": "avl-3d-transition-arc",
       "category": "component",
       "description": "Avl3DTransitionArc component",
       "suggestedFor": [
@@ -22000,6 +21211,12 @@
           "description": "Number of effects",
           "required": true
         },
+        "effectTypes": {
+          "types": [
+            "array"
+          ],
+          "description": "Effect type names for V4 micro-icons"
+        },
         "index": {
           "types": [
             "number"
@@ -22012,6 +21229,18 @@
             "boolean"
           ],
           "description": "Whether this is a self-transition"
+        },
+        "fromState": {
+          "types": [
+            "string"
+          ],
+          "description": "Source state name (for tooltip)"
+        },
+        "toState": {
+          "types": [
+            "string"
+          ],
+          "description": "Target state name (for tooltip)"
         },
         "onClick": {
           "types": [
@@ -22033,8 +21262,119 @@
         }
       }
     },
-    "avl3-d-application-scene": {
-      "type": "avl3-d-application-scene",
+    "game-canvas-2d": {
+      "type": "game-canvas-2d",
+      "category": "game",
+      "description": "GameCanvas2D component",
+      "suggestedFor": [
+        "game",
+        "canvas2",
+        "game canvas2 d"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas width in pixels"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas height in pixels"
+        },
+        "onDraw": {
+          "types": [
+            "function"
+          ],
+          "description": "Called each frame with the 2D context and current frame count"
+        },
+        "onTick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called each tick with delta time in seconds"
+        },
+        "fps": {
+          "types": [
+            "number"
+          ],
+          "description": "Target frames per second"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "ui-slot-renderer": {
+      "type": "ui-slot-renderer",
+      "category": "layout",
+      "description": "UISlotRenderer component",
+      "suggestedFor": [
+        "slot",
+        "renderer",
+        "u i slot renderer"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "includeHud": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Include HUD slots"
+        },
+        "hudMode": {
+          "types": [
+            "string"
+          ],
+          "description": "HUD positioning mode: 'fixed' (default, viewport-relative) or 'inline' (container-relative, uses sticky)"
+        },
+        "includeFloating": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Include floating slot"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class name for the container"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "suspense": {
+          "types": [
+            "boolean",
+            "object"
+          ],
+          "description": "Enable Suspense boundaries around each slot. When true, each inline slot is wrapped in `<ErrorBoundary><Suspense>` with Skeleton fallbacks. Opt-in — existing isLoading prop pattern still works."
+        }
+      }
+    },
+    "avl-3d-application-scene": {
+      "type": "avl-3d-application-scene",
       "category": "display",
       "description": "Avl3DApplicationScene component",
       "suggestedFor": [
@@ -22066,8 +21406,34 @@
         }
       }
     },
-    "avl3-d-orbital-scene": {
-      "type": "avl3-d-orbital-scene",
+    "avl-3d-effects": {
+      "type": "avl-3d-effects",
+      "category": "display",
+      "description": "Avl3DEffects component",
+      "suggestedFor": [
+        "avl3",
+        "effects",
+        "avl3 d effects"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "level": {
+          "types": [
+            "object"
+          ],
+          "description": "Current zoom level (effects vary by level)",
+          "required": true
+        },
+        "enabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable/disable all effects"
+        }
+      }
+    },
+    "avl-3d-orbital-scene": {
+      "type": "avl-3d-orbital-scene",
       "category": "display",
       "description": "Avl3DOrbitalScene component",
       "suggestedFor": [
@@ -22111,8 +21477,8 @@
         }
       }
     },
-    "avl3-d-trait-scene": {
-      "type": "avl3-d-trait-scene",
+    "avl-3d-trait-scene": {
+      "type": "avl-3d-trait-scene",
       "category": "display",
       "description": "Avl3DTraitScene component",
       "suggestedFor": [
@@ -22144,8 +21510,8 @@
         }
       }
     },
-    "avl3-d-transition-scene": {
-      "type": "avl3-d-transition-scene",
+    "avl-3d-transition-scene": {
+      "type": "avl-3d-transition-scene",
       "category": "display",
       "description": "Avl3DTransitionScene component",
       "suggestedFor": [
@@ -22171,8 +21537,8 @@
         }
       }
     },
-    "avl3-d-viewer": {
-      "type": "avl3-d-viewer",
+    "avl-3d-viewer": {
+      "type": "avl-3d-viewer",
       "category": "display",
       "description": "Avl3DViewer component",
       "suggestedFor": [
@@ -22233,6 +21599,1027 @@
             "string"
           ],
           "description": "Container height"
+        },
+        "effects": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable postprocessing effects (bloom, DOF, vignette). Default: true"
+        },
+        "modelOverrides": {
+          "types": [
+            "object"
+          ],
+          "description": "Custom 3D model URLs to replace default primitive geometry"
+        }
+      }
+    },
+    "game-canvas-3d": {
+      "type": "game-canvas-3d",
+      "category": "game",
+      "description": "Props for GameCanvas3D component",
+      "suggestedFor": [
+        "game",
+        "canvas3",
+        "game canvas3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "--- Closed-circuit props (MANDATORY) ---"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children to render inside the 3D canvas (e.g., physics objects, custom meshes)"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "string"
+          ],
+          "description": "Error state"
+        },
+        "entity": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name for schema-driven auto-fetch"
+        },
+        "tiles": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of tiles to render"
+        },
+        "units": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of units to render"
+        },
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of features to render"
+        },
+        "events": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of events to display"
+        },
+        "fogOfWar": {
+          "types": [
+            "array"
+          ],
+          "description": "Fog of war data"
+        },
+        "orientation": {
+          "types": [
+            "object"
+          ],
+          "description": "Map orientation"
+        },
+        "cameraMode": {
+          "types": [
+            "object"
+          ],
+          "description": "Camera mode"
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show grid"
+        },
+        "showCoordinates": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show coordinates overlay"
+        },
+        "showTileInfo": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show tile information"
+        },
+        "overlay": {
+          "types": [
+            "object"
+          ],
+          "description": "Overlay control mode"
+        },
+        "shadows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable shadows"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color"
+        },
+        "onTileClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a tile is clicked"
+        },
+        "onUnitClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a unit is clicked"
+        },
+        "onFeatureClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when a feature is clicked"
+        },
+        "onCanvasClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when canvas is clicked (background)"
+        },
+        "onTileHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback when mouse moves over a tile"
+        },
+        "onUnitAnimation": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback for unit animation state change"
+        },
+        "assetLoader": {
+          "types": [
+            "object"
+          ],
+          "description": "Asset loader instance (uses global singleton if not provided)"
+        },
+        "tileRenderer": {
+          "types": [
+            "object"
+          ],
+          "description": "Custom tile renderer component"
+        },
+        "unitRenderer": {
+          "types": [
+            "object"
+          ],
+          "description": "Custom unit renderer component"
+        },
+        "featureRenderer": {
+          "types": [
+            "object"
+          ],
+          "description": "Custom feature renderer component"
+        },
+        "preloadAssets": {
+          "types": [
+            "array"
+          ],
+          "description": "URLs to preload"
+        },
+        "tileClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: tile click"
+        },
+        "unitClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: unit click"
+        },
+        "featureClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: feature click"
+        },
+        "canvasClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: canvas click"
+        },
+        "tileHoverEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: tile hover"
+        },
+        "tileLeaveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: tile leave"
+        },
+        "unitAnimationEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: unit animation"
+        },
+        "cameraChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative event: camera change"
+        },
+        "loadingMessage": {
+          "types": [
+            "string"
+          ],
+          "description": "Loading message"
+        },
+        "useInstancing": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to use instancing for tiles"
+        },
+        "validMoves": {
+          "types": [
+            "array"
+          ],
+          "description": "Valid move positions"
+        },
+        "attackTargets": {
+          "types": [
+            "array"
+          ],
+          "description": "Attack target positions"
+        },
+        "selectedTileIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Selected tile IDs"
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "Selected unit ID"
+        }
+      }
+    },
+    "camera-3d": {
+      "type": "camera-3d",
+      "category": "display",
+      "description": "Camera3D component",
+      "suggestedFor": [
+        "camera3",
+        "camera3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "mode": {
+          "types": [
+            "object"
+          ],
+          "description": "Camera mode"
+        },
+        "position": {
+          "types": [
+            "array"
+          ],
+          "description": "Initial camera position"
+        },
+        "target": {
+          "types": [
+            "array"
+          ],
+          "description": "Target to look at"
+        },
+        "zoom": {
+          "types": [
+            "number"
+          ],
+          "description": "Zoom level"
+        },
+        "fov": {
+          "types": [
+            "number"
+          ],
+          "description": "Field of view (perspective mode only)"
+        },
+        "enableOrbit": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable orbit controls"
+        },
+        "minDistance": {
+          "types": [
+            "number"
+          ],
+          "description": "Minimum zoom distance"
+        },
+        "maxDistance": {
+          "types": [
+            "number"
+          ],
+          "description": "Maximum zoom distance"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when camera changes"
+        }
+      }
+    },
+    "lighting-3d": {
+      "type": "lighting-3d",
+      "category": "display",
+      "description": "Lighting3D  Default lighting setup for 3D game scenes. Includes ambient, directional, and optional point lights.",
+      "suggestedFor": [
+        "lighting3",
+        "lighting3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "ambientIntensity": {
+          "types": [
+            "number"
+          ],
+          "description": "Ambient light intensity"
+        },
+        "ambientColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Ambient light color"
+        },
+        "directionalIntensity": {
+          "types": [
+            "number"
+          ],
+          "description": "Directional light intensity"
+        },
+        "directionalColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Directional light color"
+        },
+        "directionalPosition": {
+          "types": [
+            "array"
+          ],
+          "description": "Directional light position"
+        },
+        "shadows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable shadows"
+        },
+        "shadowMapSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Shadow map size"
+        },
+        "shadowCameraSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Shadow camera size"
+        },
+        "showHelpers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show helper for directional light"
+        }
+      }
+    },
+    "scene-3d": {
+      "type": "scene-3d",
+      "category": "display",
+      "description": "Scene3D component",
+      "suggestedFor": [
+        "scene3",
+        "scene3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "background": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color or URL"
+        },
+        "fog": {
+          "types": [
+            "object"
+          ],
+          "description": "Fog configuration"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children to render in scene"
+        }
+      }
+    },
+    "canvas-3d-error-boundary": {
+      "type": "canvas-3d-error-boundary",
+      "category": "game",
+      "description": "Canvas3DErrorBoundary  Error boundary for 3D canvas components. Catches Three.js and React Three Fiber errors gracefully.",
+      "suggestedFor": [
+        "canvas3",
+        "error",
+        "boundary",
+        "canvas3 d error boundary"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Child components",
+          "required": true
+        },
+        "fallback": {
+          "types": [
+            "node"
+          ],
+          "description": "Custom fallback component"
+        },
+        "onError": {
+          "types": [
+            "function"
+          ],
+          "description": "Error callback"
+        },
+        "onReset": {
+          "types": [
+            "function"
+          ],
+          "description": "Reset callback"
+        }
+      }
+    },
+    "canvas-3d-loading-state": {
+      "type": "canvas-3d-loading-state",
+      "category": "game",
+      "description": "Canvas3DLoadingState  Loading state component for 3D canvas with progress indicator. Displays asset loading progress and estimated time remaining.",
+      "suggestedFor": [
+        "canvas3",
+        "loading",
+        "state",
+        "canvas3 d loading state"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "progress": {
+          "types": [
+            "number"
+          ],
+          "description": "Current loading progress (0-100)"
+        },
+        "loaded": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of assets loaded"
+        },
+        "total": {
+          "types": [
+            "number"
+          ],
+          "description": "Total assets to load"
+        },
+        "message": {
+          "types": [
+            "string"
+          ],
+          "description": "Loading message"
+        },
+        "details": {
+          "types": [
+            "string"
+          ],
+          "description": "Secondary details message"
+        },
+        "showSpinner": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether to show spinner"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Custom className"
+        }
+      }
+    },
+    "physics-object-3d": {
+      "type": "physics-object-3d",
+      "category": "display",
+      "description": "PhysicsObject3D component",
+      "suggestedFor": [
+        "physics",
+        "object3",
+        "physics object3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "entityId": {
+          "types": [
+            "string"
+          ],
+          "description": "Unique entity ID",
+          "required": true
+        },
+        "modelUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "GLB model URL",
+          "required": true
+        },
+        "initialPosition": {
+          "types": [
+            "array"
+          ],
+          "description": "Initial position [x, y, z]"
+        },
+        "initialVelocity": {
+          "types": [
+            "array"
+          ],
+          "description": "Initial velocity [vx, vy, vz]"
+        },
+        "mass": {
+          "types": [
+            "number"
+          ],
+          "description": "Mass for collision response"
+        },
+        "gravity": {
+          "types": [
+            "number"
+          ],
+          "description": "Gravity force (default: 9.8)"
+        },
+        "groundY": {
+          "types": [
+            "number"
+          ],
+          "description": "Ground plane Y position (default: 0)"
+        },
+        "scale": {
+          "types": [
+            "number",
+            "array"
+          ],
+          "description": "Model scale"
+        },
+        "onPhysicsUpdate": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when physics state updates"
+        },
+        "onGroundHit": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when object hits ground"
+        },
+        "onCollision": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when collision occurs"
+        }
+      }
+    },
+    "feature-renderer-3d": {
+      "type": "feature-renderer-3d",
+      "category": "display",
+      "description": "FeatureRenderer3D component",
+      "suggestedFor": [
+        "feature",
+        "renderer3",
+        "feature renderer3 d"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "features": {
+          "types": [
+            "array"
+          ],
+          "description": "Array of features to render",
+          "required": true
+        },
+        "cellSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Grid cell size"
+        },
+        "offsetX": {
+          "types": [
+            "number"
+          ],
+          "description": "Grid offset X"
+        },
+        "offsetZ": {
+          "types": [
+            "number"
+          ],
+          "description": "Grid offset Z"
+        },
+        "onFeatureClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when feature is clicked"
+        },
+        "onFeatureHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when feature is hovered"
+        },
+        "selectedFeatureIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Selected feature IDs"
+        }
+      }
+    },
+    "game-canvas-3d-battle-template": {
+      "type": "game-canvas-3d-battle-template",
+      "category": "template",
+      "description": "GameCanvas3DBattleTemplate  Pure declarative template wrapper for 3D battle scenes. Optimized for tactical combat view with turn indicators.  Page: Battle3DPage Entity: Battle3D ViewType: detail  Events Emitted: - TILE_SELECTED - When a tile is clicked - UNIT_SELECTED - When a unit is clicked - UNIT_ATTACK - When attacking a unit - UNIT_MOVE - When moving a unit - END_TURN - When ending turn - EXIT_BATTLE - When exiting battle",
+      "suggestedFor": [
+        "game",
+        "canvas3",
+        "battle",
+        "template",
+        "game canvas3 d battle template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
+        "cameraMode": {
+          "types": [
+            "string"
+          ],
+          "description": "3D camera mode - defaults to perspective for dramatic effect"
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show grid helper"
+        },
+        "shadows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable shadows"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color - darker for battle atmosphere"
+        },
+        "tileClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for tile clicks"
+        },
+        "unitClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for unit clicks"
+        },
+        "unitAttackEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for unit attack"
+        },
+        "unitMoveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for unit move"
+        },
+        "endTurnEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for ending turn"
+        },
+        "exitEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for exiting battle"
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected unit ID"
+        },
+        "validMoves": {
+          "types": [
+            "array"
+          ],
+          "description": "Valid move positions"
+        },
+        "attackTargets": {
+          "types": [
+            "array"
+          ],
+          "description": "Valid attack targets"
+        },
+        "showTurnIndicator": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show turn indicator overlay"
+        }
+      }
+    },
+    "game-canvas-3d-castle-template": {
+      "type": "game-canvas-3d-castle-template",
+      "category": "template",
+      "description": "GameCanvas3DCastleTemplate  Pure declarative template wrapper for 3D castle/settlement view. Shows castle layout with buildings and garrisoned units.  Page: Castle3DPage, Settlement3DPage Entity: Castle3D, Settlement3D ViewType: detail  Events Emitted: - BUILDING_SELECTED - When a building is clicked - UNIT_SELECTED - When a garrison unit is clicked - BUILD - When building/upgrading - RECRUIT - When recruiting units - EXIT - When exiting castle view",
+      "suggestedFor": [
+        "game",
+        "canvas3",
+        "castle",
+        "template",
+        "game canvas3 d castle template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
+        "cameraMode": {
+          "types": [
+            "string"
+          ],
+          "description": "3D camera mode"
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show grid helper"
+        },
+        "shadows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable shadows"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color"
+        },
+        "buildingClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for building clicks"
+        },
+        "unitClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for unit clicks"
+        },
+        "buildEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for build action"
+        },
+        "recruitEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for recruit action"
+        },
+        "exitEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for exit"
+        },
+        "selectedBuildingId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected building ID"
+        },
+        "availableBuildSites": {
+          "types": [
+            "array"
+          ],
+          "description": "Available build positions"
+        },
+        "showHeader": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show castle name header"
+        },
+        "selectedTileIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Pre-computed selected tile IDs array"
+        }
+      }
+    },
+    "game-canvas-3d-world-map-template": {
+      "type": "game-canvas-3d-world-map-template",
+      "category": "template",
+      "description": "GameCanvas3DWorldMapTemplate  Pure declarative template wrapper for 3D world map. No hooks, no callbacks, no local state -- just entity data and config props.  Page: WorldMap3DPage Entity: WorldMap3D ViewType: detail  Events Emitted: - TILE_SELECTED - When a tile is clicked ({ tileId, x, z, type }) - UNIT_SELECTED - When a unit is clicked ({ unitId, x, z, name }) - FEATURE_SELECTED - When a feature is clicked ({ featureId, x, z, type }) - TILE_HOVERED - When hovering over a tile ({ tileId, x, z }) - TILE_LEAVE - When leaving a tile ({}) - CAMERA_CHANGED - When camera position changes ({ position })",
+      "suggestedFor": [
+        "game",
+        "canvas3",
+        "world",
+        "map",
+        "template",
+        "game canvas3 d world map template"
+      ],
+      "typicalSize": "full",
+      "propsSchema": {
+        "entity": {
+          "types": [
+            "object"
+          ],
+          "description": "Entity data, the sole source of runtime state",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "External styling override"
+        },
+        "cameraMode": {
+          "types": [
+            "string"
+          ],
+          "description": "3D camera mode"
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show grid helper"
+        },
+        "showCoordinates": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show coordinate overlay"
+        },
+        "showTileInfo": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show tile info on hover"
+        },
+        "shadows": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable shadows"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color"
+        },
+        "tileClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for tile clicks"
+        },
+        "unitClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for unit clicks"
+        },
+        "featureClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for feature clicks"
+        },
+        "tileHoverEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for tile hover"
+        },
+        "tileLeaveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for tile leave"
+        },
+        "cameraChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name for camera changes"
+        },
+        "exitEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Exit/back event name"
+        },
+        "selectedUnitId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected unit ID"
+        },
+        "validMoves": {
+          "types": [
+            "array"
+          ],
+          "description": "Valid move positions for selected unit"
+        },
+        "attackTargets": {
+          "types": [
+            "array"
+          ],
+          "description": "Attack target positions"
         }
       }
     },
