@@ -1722,7 +1722,7 @@
     },
     "game-canvas-3d": {
       "component": "GameCanvas3D",
-      "importPath": "@/components/organisms/GameCanvas3D",
+      "importPath": "@almadar/ui/components/organisms/game/three",
       "category": "game"
     },
     "camera-3d": {
