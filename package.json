@@ -27,7 +27,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && tsc -p tsconfig.build.json",
     "build:watch": "tsup --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
