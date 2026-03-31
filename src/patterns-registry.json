@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-28T13:39:00.733Z",
+  "exportedAt": "2026-03-31T07:12:35.907Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2785,6 +2785,18 @@
             "string"
           ],
           "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false } on mouseEnter/mouseLeave"
+        },
+        "maxWidth": {
+          "types": [
+            "string"
+          ],
+          "description": "Maximum width (CSS value, e.g., \"550px\", \"80rem\")"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Children elements"
         }
       }
     },
@@ -10620,6 +10632,12 @@
             "string"
           ],
           "description": "Maximum height before scrolling"
+        },
+        "foldable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable JSON-style code folding (default: true for json/orb)"
         },
         "className": {
           "types": [
@@ -20509,23 +20527,17 @@
           "description": "schema prop",
           "required": true
         },
+        "mockData": {
+          "types": [
+            "object"
+          ],
+          "description": "mockData prop"
+        },
         "className": {
           "types": [
             "string"
           ],
           "description": "className prop"
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "color prop"
-        },
-        "animated": {
-          "types": [
-            "boolean"
-          ],
-          "description": "animated prop"
         },
         "width": {
           "types": [
@@ -20541,17 +20553,17 @@
           ],
           "description": "height prop"
         },
-        "onZoomChange": {
+        "onNodeClick": {
           "types": [
             "function"
           ],
-          "description": "onZoomChange prop"
+          "description": "onNodeClick prop"
         },
-        "focusTarget": {
+        "onLevelChange": {
           "types": [
-            "object"
+            "function"
           ],
-          "description": "focusTarget prop"
+          "description": "onLevelChange prop"
         },
         "initialOrbital": {
           "types": [
@@ -20559,17 +20571,113 @@
           ],
           "description": "initialOrbital prop"
         },
+        "initialLevel": {
+          "types": [
+            "object"
+          ],
+          "description": "Start at Level 2 (expanded) when initialOrbital is set. Default: 'overview'."
+        },
+        "initialSelectedNode": {
+          "types": [
+            "object"
+          ],
+          "description": "Pre-select a node on mount (opens OrbInspector)."
+        },
+        "editable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable editing in the inspector. When true, fields become inputs."
+        },
+        "onSchemaChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user edits the schema via the inspector."
+        },
+        "onPatternDelete": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user presses Delete/Backspace with a pattern selected."
+        },
+        "onEventWire": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user drags from a source handle to a target handle (event wiring)."
+        },
+        "behaviorMeta": {
+          "types": [
+            "object"
+          ],
+          "description": "Behavior layer metadata for node styling (layer color bands)."
+        },
+        "layoutHint": {
+          "types": [
+            "string"
+          ],
+          "description": "Layout hint: 'pipeline' renders nodes left-to-right, 'grid' (default) uses sqrt-based grid."
+        },
+        "onNodeSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user clicks a node in overview level (for composition hints)."
+        },
+        "composeLevel": {
+          "types": [
+            "object"
+          ],
+          "description": "When 'behavior', shows behavior-level glyph nodes instead of orbital previews."
+        },
+        "behaviorEntries": {
+          "types": [
+            "array"
+          ],
+          "description": "Behavior entries for compose mode (only when composeLevel='behavior')."
+        },
+        "behaviorWires": {
+          "types": [
+            "array"
+          ],
+          "description": "Event wires between behaviors (only when composeLevel='behavior')."
+        },
+        "onZoomChange": {
+          "types": [
+            "function"
+          ],
+          "description": "@deprecated Use onNodeClick instead. Kept for AvlCosmicZoom compat."
+        },
+        "focusTarget": {
+          "types": [
+            "object"
+          ],
+          "description": "@deprecated Not used in V3."
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "@deprecated Not used in V3."
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "@deprecated Not used in V3."
+        },
         "initialTrait": {
           "types": [
             "string"
           ],
-          "description": "initialTrait prop"
+          "description": "@deprecated Not used in V3."
         },
         "stateCoverage": {
           "types": [
             "object"
           ],
-          "description": "stateCoverage prop"
+          "description": "@deprecated Not used in V3."
         }
       }
     },
@@ -22620,6 +22728,52 @@
             "array"
           ],
           "description": "Attack target positions"
+        }
+      }
+    },
+    "orb-inspector": {
+      "type": "orb-inspector",
+      "category": "debug",
+      "description": "OrbInspector component",
+      "suggestedFor": [
+        "orb",
+        "inspector",
+        "orb inspector"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "node": {
+          "types": [
+            "object"
+          ],
+          "description": "node prop",
+          "required": true
+        },
+        "schema": {
+          "types": [
+            "object"
+          ],
+          "description": "schema prop",
+          "required": true
+        },
+        "editable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "editable prop"
+        },
+        "onSchemaChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onSchemaChange prop"
+        },
+        "onClose": {
+          "types": [
+            "function"
+          ],
+          "description": "onClose prop",
+          "required": true
         }
       }
     },

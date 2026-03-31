@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-28T13:39:00.733Z",
+  "exportedAt": "2026-03-31T07:12:35.907Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1774,6 +1774,11 @@
       "component": "GameCanvas3DWorldMapTemplate",
       "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
       "category": "template"
+    },
+    "orb-inspector": {
+      "component": "OrbInspector",
+      "importPath": "@/components/organisms/OrbInspector",
+      "category": "debug"
     },
     "heading": {
       "component": "Typography",
