@@ -46,10 +46,16 @@ type PatternsRegistry = {
   categories?: string[];
 };
 
+type ComponentMappingEntry = {
+  component: string;
+  importPath: string;
+  category: string;
+};
+
 type ComponentMapping = {
   version?: string;
   exportedAt?: string;
-  mappings: Record<string, string>;
+  mappings: Record<string, ComponentMappingEntry>;
 };
 
 export function getPatternDefinition(patternType: string): PatternEntry | null {
@@ -58,7 +64,7 @@ export function getPatternDefinition(patternType: string): PatternEntry | null {
 
 export function getComponentForPattern(patternType: string): string | null {
   const mapping = componentMapping as ComponentMapping;
-  return mapping.mappings?.[patternType] ?? null;
+  return mapping.mappings?.[patternType]?.component ?? null;
 }
 
 /**
