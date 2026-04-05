@@ -14,12 +14,15 @@
 import { patternsRegistry } from '../index.js';
 import type { PatternType } from '../pattern-types.js';
 
+/** Schema describing a single prop in a pattern's propsSchema */
+type PatternPropDef = { types?: string[]; required?: boolean };
+
 type PatternEntry = {
   category?: string;
   description?: string;
   suggestedFor?: string[];
   typicalSize?: string;
-  propsSchema?: Record<string, { types?: string[]; required?: boolean }>;
+  propsSchema?: Record<string, PatternPropDef>;
   entityAware?: boolean;
 };
 
@@ -161,7 +164,7 @@ export function recommendPatterns(
     ? STATE_CATEGORY_AFFINITY[context.state] || []
     : [];
 
-  for (const [patternName, patternDef] of Object.entries(patterns) as [string, any][]) {
+  for (const [patternName, patternDef] of Object.entries(patterns) as [string, PatternEntry][]) {
     const suggestedFor: string[] = patternDef.suggestedFor || [];
     const category: string = patternDef.category || '';
     let score = 0;

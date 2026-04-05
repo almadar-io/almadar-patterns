@@ -46,7 +46,7 @@ function mapType(types: string[]): string {
             case 'number': return 'number';
             case 'boolean': return 'boolean';
             case 'array': return 'unknown[]';
-            case 'object': return 'Record<string, unknown>';
+            case 'object': return 'PatternPropValue';
             case 'function': return '((...args: unknown[]) => unknown)';
             case 'null': return 'null';
             default: return 'unknown';
@@ -104,6 +104,14 @@ async function main() {
  * Generated: ${new Date().toISOString()}
  * Pattern count: ${patternNames.length}
  */
+
+import type { FieldValue } from '@almadar/core/types';
+
+/**
+ * Object-typed pattern prop value. Represents dynamic config objects
+ * within pattern props (e.g., style, assetManifest, payload).
+ */
+export type PatternPropValue = Record<string, FieldValue | undefined>;
 
 /**
  * All valid pattern type names from almadar-patterns registry.

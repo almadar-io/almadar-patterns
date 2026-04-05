@@ -10,10 +10,13 @@
 import { patternsRegistry } from '../index.js';
 import type { PatternType } from '../pattern-types.js';
 
+/** Schema describing a single prop in a pattern's propsSchema */
+type PatternPropDef = { types?: string[]; required?: boolean };
+
 type PatternEntry = {
   category?: string;
   description?: string;
-  propsSchema?: Record<string, { types?: string[]; required?: boolean }>;
+  propsSchema?: Record<string, PatternPropDef>;
   entityAware?: boolean;
 };
 

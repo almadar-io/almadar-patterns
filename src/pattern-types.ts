@@ -8,6 +8,14 @@
  * Pattern count: 120
  */
 
+import type { FieldValue } from '@almadar/core/types';
+
+/**
+ * Object-typed pattern prop value. Represents dynamic config objects
+ * within pattern props (e.g., style, assetManifest, payload).
+ */
+export type PatternPropValue = Record<string, FieldValue | undefined>;
+
 /**
  * All valid pattern type names from almadar-patterns registry.
  * Use this type in render-ui effects for compile-time validation.
@@ -248,7 +256,7 @@ export interface PatternPropsMap {
     /** Board height for bounds checking */
     boardHeight?: number | string;
     /** Asset manifest for IsometricCanvas */
-    assetManifest?: Record<string, unknown> | string;
+    assetManifest?: PatternPropValue | string;
     /** Background image URL for canvas */
     backgroundImage?: string;
     /** Unit draw-size multiplier */
@@ -425,7 +433,7 @@ export interface PatternPropsMap {
     /** Canvas render scale */
     scale?: number | string;
     /** Asset manifest for IsometricCanvas */
-    assetManifest?: Record<string, unknown> | string;
+    assetManifest?: PatternPropValue | string;
     /** Background image URL */
     backgroundImage?: string;
     /** -- Slots -- */
@@ -462,7 +470,7 @@ export interface PatternPropsMap {
     /** Custom class name */
     className?: string;
     /** Inline styles */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
     /** Children elements */
     children: unknown | string;
     /** HTML element to render as */
@@ -720,7 +728,7 @@ export interface PatternPropsMap {
     /** Event to emit on click (REQUIRED for interactive elements) */
     action?: string;
     /** Event payload */
-    payload?: Record<string, unknown> | string;
+    payload?: PatternPropValue | string;
     /** Nested children patterns */
     children?: unknown | string;
     /** Image source (for img elements) */
@@ -734,7 +742,7 @@ export interface PatternPropsMap {
     /** Disabled state */
     disabled?: boolean | string;
     /** Additional HTML attributes */
-    htmlProps?: Record<string, unknown> | string;
+    htmlProps?: PatternPropValue | string;
   };
   'd-pad': {
     type: 'd-pad';
@@ -769,7 +777,7 @@ export interface PatternPropsMap {
     /** Navigation items */
     navItems?: unknown[] | string;
     /** Current user info (optional - auto-populated from auth context if not provided) */
-    user?: Record<string, unknown> | string;
+    user?: PatternPropValue | string;
     /** Header actions (notifications, etc.) */
     headerActions?: unknown | string;
     /** Show search in header */
@@ -786,7 +794,7 @@ export interface PatternPropsMap {
     /** subtitle prop */
     subtitle?: string;
     /** status prop */
-    status?: Record<string, unknown> | string;
+    status?: PatternPropValue | string;
     /** avatar prop */
     avatar?: unknown | string;
     /** sections prop */
@@ -808,7 +816,7 @@ export interface PatternPropsMap {
     /** Alias for fields - backwards compatibility */
     fieldNames?: unknown | string;
     /** data prop */
-    data?: Record<string, unknown> | unknown | string;
+    data?: PatternPropValue | unknown | string;
     /** isLoading prop */
     isLoading?: boolean | string;
     /** error prop */
@@ -979,7 +987,7 @@ export interface PatternPropsMap {
     /** Show total count in pagination */
     showTotal?: boolean | string;
     /** Filter configuration for entity data */
-    filter?: Record<string, unknown> | string;
+    filter?: PatternPropValue | string;
     /** Query singleton binding for filter/sort state. When provided, syncs with the query singleton for filtering and sorting. Example: "@TaskQuery" */
     query?: string;
   };
@@ -1049,7 +1057,7 @@ export interface PatternPropsMap {
     /** emptyDescription prop */
     emptyDescription?: string;
     /** emptyAction prop */
-    emptyAction?: Record<string, unknown> | string;
+    emptyAction?: PatternPropValue | string;
     /** Selection */
     selectable?: boolean | string;
     /** selectedIds prop */
@@ -1063,7 +1071,7 @@ export interface PatternPropsMap {
     /** onSort prop */
     onSort?: ((...args: unknown[]) => unknown) | string;
     /** Pagination (manual control) */
-    pagination?: Record<string, unknown> | string;
+    pagination?: PatternPropValue | string;
     /** Server-side pagination (automatic when enabled) */
     enablePagination?: boolean | string;
     /** Items per page for automatic pagination (default: 20) */
@@ -1155,7 +1163,7 @@ export interface PatternPropsMap {
   'floating-action-button': {
     type: 'floating-action-button';
     /** Single action (if only one action, button will directly trigger onClick) */
-    action?: Record<string, unknown> | string;
+    action?: PatternPropValue | string;
     /** Multiple actions (if provided, button will expand to show all actions) */
     actions?: unknown[] | string;
     /** Icon name (simplified API for pattern compatibility) */
@@ -1190,7 +1198,7 @@ export interface PatternPropsMap {
     /** Fields definition (schema format) - accepts readonly for generated const arrays */
     fields?: unknown | string;
     /** Initial form data */
-    initialData?: Record<string, unknown> | unknown | string;
+    initialData?: PatternPropValue | unknown | string;
     /** Loading state */
     isLoading?: boolean | string;
     /** Error state */
@@ -1208,17 +1216,17 @@ export interface PatternPropsMap {
     /** Event to dispatch on cancel (defaults to 'CANCEL') */
     cancelEvent?: string;
     /** Relation data props */
-    relationsData?: Record<string, unknown> | string;
+    relationsData?: PatternPropValue | string;
     /** Loading state for relation data: { fieldName: boolean } */
-    relationsLoading?: Record<string, unknown> | string;
+    relationsLoading?: PatternPropValue | string;
     /** Inspection form extensions */
-    conditionalFields?: Record<string, unknown> | boolean | string;
+    conditionalFields?: PatternPropValue | boolean | string;
     /** Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately) */
     hiddenCalculations?: unknown[] | boolean | string;
     /** Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately) */
     violationTriggers?: unknown[] | boolean | string;
     /** Context for S-expression evaluation - accepts flexible types from generated code */
-    evaluationContext?: unknown | Record<string, unknown> | string;
+    evaluationContext?: unknown | PatternPropValue | string;
     /** Nested form sections with optional conditions */
     sections?: unknown[] | string;
     /** Callback when any field value changes */
@@ -1283,7 +1291,7 @@ export interface PatternPropsMap {
     /** Fields definition (schema format) - accepts readonly for generated const arrays */
     fields?: unknown | string;
     /** Initial form data */
-    initialData?: Record<string, unknown> | unknown | string;
+    initialData?: PatternPropValue | unknown | string;
     /** Loading state */
     isLoading?: boolean | string;
     /** Error state */
@@ -1301,17 +1309,17 @@ export interface PatternPropsMap {
     /** Event to dispatch on cancel (defaults to 'CANCEL') */
     cancelEvent?: string;
     /** Relation data props */
-    relationsData?: Record<string, unknown> | string;
+    relationsData?: PatternPropValue | string;
     /** Loading state for relation data: { fieldName: boolean } */
-    relationsLoading?: Record<string, unknown> | string;
+    relationsLoading?: PatternPropValue | string;
     /** Inspection form extensions */
-    conditionalFields?: Record<string, unknown> | boolean | string;
+    conditionalFields?: PatternPropValue | boolean | string;
     /** Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately) */
     hiddenCalculations?: unknown[] | boolean | string;
     /** Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately) */
     violationTriggers?: unknown[] | boolean | string;
     /** Context for S-expression evaluation - accepts flexible types from generated code */
-    evaluationContext?: unknown | Record<string, unknown> | string;
+    evaluationContext?: unknown | PatternPropValue | string;
     /** Nested form sections with optional conditions */
     sections?: unknown[] | string;
     /** Callback when any field value changes */
@@ -1347,7 +1355,7 @@ export interface PatternPropsMap {
   'form-template': {
     type: 'form-template';
     /** Current form field values */
-    formData: Record<string, unknown> | string;
+    formData: PatternPropValue | string;
     /** Whether form is being submitted */
     isSubmitting?: boolean | string;
     /** Whether submission was successful */
@@ -1355,7 +1363,7 @@ export interface PatternPropsMap {
     /** Error object if submission failed */
     error?: unknown | string;
     /** Field-level validation errors */
-    validationErrors?: Record<string, unknown> | string;
+    validationErrors?: PatternPropValue | string;
     /** Called when form is submitted */
     onSubmit?: ((...args: unknown[]) => unknown) | string;
     /** Called when a field value changes */
@@ -1468,7 +1476,7 @@ export interface PatternPropsMap {
     /** Whether the debug panel is visible */
     showDebugPanel?: boolean | string;
     /** Game controls */
-    controls?: Record<string, unknown> | string;
+    controls?: PatternPropValue | string;
     /** Additional class name */
     className?: string;
   };
@@ -1541,7 +1549,7 @@ export interface PatternPropsMap {
     /** Custom class name */
     className?: string;
     /** Inline styles */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
     /** Children elements */
     children: unknown | string;
     /** HTML element to render as */
@@ -1570,7 +1578,7 @@ export interface PatternPropsMap {
     /** Search callback */
     onSearch?: ((...args: unknown[]) => unknown) | string;
     /** User avatar configuration */
-    userAvatar?: Record<string, unknown> | string;
+    userAvatar?: PatternPropValue | string;
     /** User name (display name or email) */
     userName?: string;
     /** Callback when user avatar is clicked */
@@ -1618,7 +1626,7 @@ export interface PatternPropsMap {
     /** Icon stroke width - uses theme default if not specified */
     strokeWidth?: number | string;
     /** Inline style */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
   };
   'input': {
     type: 'input';
@@ -1698,7 +1706,7 @@ export interface PatternPropsMap {
     /** Attack target positions (shown as pulsing red highlights) */
     attackTargets?: unknown[] | string;
     /** Hovered tile position */
-    hoveredTile?: Record<string, unknown> | string;
+    hoveredTile?: PatternPropValue | string;
     /** --- Event handlers --- */
     onTileClick?: ((...args: unknown[]) => unknown) | string;
     /** Unit click handler */
@@ -1736,7 +1744,7 @@ export interface PatternPropsMap {
     /** --- Remote asset loading --- */
     assetBaseUrl?: string;
     /** Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve. */
-    assetManifest?: Record<string, unknown> | string;
+    assetManifest?: PatternPropValue | string;
   };
   'label': {
     type: 'label';
@@ -1761,7 +1769,7 @@ export interface PatternPropsMap {
     /** Additional CSS classes */
     className?: string;
     /** Inline styles */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
   };
   'list-template': {
     type: 'list-template';
@@ -1970,7 +1978,7 @@ export interface PatternPropsMap {
   'orbital-visualization': {
     type: 'orbital-visualization';
     /** Full KFlow schema object */
-    schema?: Record<string, unknown> | string;
+    schema?: PatternPropValue | string;
     /** Direct complexity override (1-100+) */
     complexity?: number | string;
     /** Size of the visualization */
@@ -2008,7 +2016,7 @@ export interface PatternPropsMap {
     /** Breadcrumbs */
     breadcrumbs?: unknown | string;
     /** Status badge */
-    status?: Record<string, unknown> | string;
+    status?: PatternPropValue | string;
     /** Actions array - first action with variant='primary' (or first action) is the main action */
     actions?: unknown | string;
     /** Loading state indicator */
@@ -2254,7 +2262,7 @@ export interface PatternPropsMap {
   'settings-template': {
     type: 'settings-template';
     /** Current settings values */
-    settings: Record<string, unknown> | string;
+    settings: PatternPropValue | string;
     /** Whether settings are being saved */
     isSaving?: boolean | string;
     /** Whether there are unsaved changes */
@@ -2490,7 +2498,7 @@ export interface PatternPropsMap {
     /** Custom class name */
     className?: string;
     /** Inline styles */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
     /** Children elements */
     children?: unknown | string;
     /** HTML element to render as */
@@ -2554,7 +2562,7 @@ export interface PatternPropsMap {
     /** Subtitle or description */
     subtitle?: string;
     /** Action button */
-    action?: Record<string, unknown> | string;
+    action?: PatternPropValue | string;
     /** className prop */
     className?: string;
     /** Schema-based props */
@@ -2773,7 +2781,7 @@ export interface PatternPropsMap {
     /** Additional class names */
     className?: string;
     /** Inline style */
-    style?: Record<string, unknown> | string;
+    style?: PatternPropValue | string;
     /** Text content (alternative to children) */
     content?: unknown | string;
     /** Children elements */
@@ -2893,7 +2901,7 @@ export interface PatternPropsMap {
     /** Unit draw-size multiplier */
     unitScale?: number | string;
     /** Asset manifest for IsometricCanvas */
-    assetManifest?: Record<string, unknown> | string;
+    assetManifest?: PatternPropValue | string;
     /** Background image URL */
     backgroundImage?: string;
     /** Allow selecting / moving ALL heroes (including enemy). For testing. */
@@ -2930,7 +2938,7 @@ export interface PatternPropsMap {
  * 
  * @example
  * type TableProps = PatternProps<'entity-table'>;
- * // { type: 'entity-table'; columns: unknown[]; data?: Record<string, unknown>; ... }
+ * // { type: 'entity-table'; columns: unknown[]; data?: PatternPropValue; ... }
  */
 export type PatternProps<T extends PatternType> = PatternPropsMap[T];
 
