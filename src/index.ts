@@ -25,8 +25,9 @@ export const INTEGRATORS_REGISTRY = integratorsRegistry;
 export const COMPONENT_MAPPING = componentMapping;
 export const EVENT_CONTRACTS = eventContracts;
 
-/** Schema describing a single prop in a pattern's propsSchema */
-type PatternPropDef = { types?: string[]; required?: boolean };
+import type { PatternPropDef } from './types.js';
+
+export type { PatternPropDef } from './types.js';
 
 type PatternEntry = {
   type: string;

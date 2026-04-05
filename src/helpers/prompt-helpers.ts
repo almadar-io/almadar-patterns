@@ -9,9 +9,7 @@
 
 import { patternsRegistry } from '../index.js';
 import type { PatternType } from '../pattern-types.js';
-
-/** Schema describing a single prop in a pattern's propsSchema */
-type PatternPropDef = { types?: string[]; required?: boolean };
+import type { PatternPropDef } from '../types.js';
 
 type PatternEntry = {
   category?: string;
