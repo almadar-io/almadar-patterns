@@ -8,7 +8,12 @@
  * Pattern count: 120
  */
 
-import type { FieldValue } from '@almadar/core/types';
+/**
+ * Primitive field value type — mirrors @almadar/core FieldValue.
+ * Inlined here to break the circular dependency: core → patterns → core.
+ * If FieldValue changes in core, update this too.
+ */
+type FieldValue = string | number | boolean | Date | null | string[] | FieldValue[] | { [key: string]: FieldValue };
 
 /**
  * Object-typed pattern prop value. Represents dynamic config objects
