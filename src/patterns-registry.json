@@ -102,7 +102,8 @@
           "types": [
             "array"
           ],
-          "description": "Columns can be Column objects or simple string field names"
+          "itemKind": "field-ref",
+          "description": "Columns can be Column objects or simple string field names. String elements must resolve to fields on the linked entity."
         },
         "itemActions": {
           "types": [
@@ -496,7 +497,8 @@
           "types": [
             "string"
           ],
-          "description": "Entity field name containing an image URL to display as card thumbnail"
+          "kind": "field-ref",
+          "description": "Entity field name containing an image URL to display as card thumbnail. Must resolve to a field on the linked entity."
         }
       }
     },
@@ -1282,7 +1284,8 @@
           "types": [
             "array"
           ],
-          "description": "Filter definitions from schema",
+          "itemKind": "field-ref",
+          "description": "Filter definitions from schema. String elements must resolve to fields on the linked entity.",
           "required": true
         },
         "onFilterChange": {
@@ -13184,7 +13187,8 @@
           "types": [
             "string"
           ],
-          "description": "Entity field name containing an image URL for card thumbnails"
+          "kind": "field-ref",
+          "description": "Entity field name containing an image URL for card thumbnails. Must resolve to a field on the linked entity."
         },
         "selectable": {
           "types": [
@@ -13290,7 +13294,8 @@
           "types": [
             "string"
           ],
-          "description": "Group items by a field value (renders section headers between groups)"
+          "kind": "field-ref",
+          "description": "Group items by a field value (renders section headers between groups). Must resolve to a field on the linked entity."
         },
         "senderField": {
           "types": [
