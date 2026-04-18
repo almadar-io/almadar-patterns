@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-03T05:25:58.152Z",
+  "exportedAt": "2026-04-18T11:44:35.778Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1779,6 +1779,21 @@
       "component": "OrbInspector",
       "importPath": "@/components/organisms/OrbInspector",
       "category": "debug"
+    },
+    "trait-frame": {
+      "component": "TraitFrame",
+      "importPath": "@/components/atoms/TraitFrame",
+      "category": "component"
+    },
+    "file-tree": {
+      "component": "FileTree",
+      "importPath": "@/components/molecules/FileTree",
+      "category": "component"
+    },
+    "avl-orbitals-cosmic-zoom": {
+      "component": "AvlOrbitalsCosmicZoom",
+      "importPath": "@/components/organisms/AvlOrbitalsCosmicZoom",
+      "category": "display"
     },
     "heading": {
       "component": "Typography",

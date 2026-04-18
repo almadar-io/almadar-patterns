@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-03T05:25:58.152Z",
+  "exportedAt": "2026-04-18T11:44:35.778Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -10647,6 +10647,24 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        },
+        "editable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "When true, render an editable surface that composes a transparent `Textarea` over a Prism-highlighted overlay. The overlay re-tokenizes on each keystroke (driven from a local mirror of the textarea value), so users see syntax-highlighted code while still being able to type. Folding is skipped in editable mode. History: GAP-51 first-cut shipped plain (no-highlighting) editable text; GAP-77 (2026-04-12) added the Prism overlay layer. Default: false (existing read-only behavior unchanged)."
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "GAP-51: called with the new code on every keystroke when `editable === true`. Consumers should debounce + parse downstream — `CodeBlock` does not."
+        },
+        "errorLines": {
+          "types": [
+            "object"
+          ],
+          "description": "GAP-80: line-level error/warning highlights for editable mode. Map of 1-based line number → severity. The overlay paints a colored background on each line: error = red, warning = yellow. Pass undefined (default) to disable. The consumer is responsible for computing the path → line map from the schema + validation results."
         }
       }
     },
@@ -20582,6 +20600,18 @@
           ],
           "description": "onLevelChange prop"
         },
+        "onOrbitalDoubleClick": {
+          "types": [
+            "function"
+          ],
+          "description": "GAP-52: fired when the user double-clicks an orbital. Consumers (e.g. the builder workspace) use this as the trigger to enter cosmic mode (`AvlOrbitalsCosmicZoom`) for the focused orbital. The level at which this fires is controlled by `cosmicEntryLevel` (default `'expanded'`). At `'expanded'` the existing overview→expanded drill is preserved — the callback fires only on the second double-click. At `'overview'` the callback fires on the FIRST double-click and the existing drill is suppressed for that interaction. `'both'` fires at either level. The callback runs unconditionally — persona / permission gating is the consumer's responsibility."
+        },
+        "cosmicEntryLevel": {
+          "types": [
+            "string"
+          ],
+          "description": "GAP-53: which level the `onOrbitalDoubleClick` callback fires at. - `'expanded'` (default, non-breaking) — fires only at L2 expanded; the first overview double-click still drills overview→expanded. - `'overview'` — fires at L1 overview on the FIRST double-click. The overview→expanded drill is suppressed when the callback is provided. - `'both'` — fires at either level."
+        },
         "initialOrbital": {
           "types": [
             "string"
@@ -22791,6 +22821,155 @@
           ],
           "description": "onClose prop",
           "required": true
+        }
+      }
+    },
+    "trait-frame": {
+      "type": "trait-frame",
+      "category": "component",
+      "description": "TraitFrame — renders the current frame of a referenced trait.  Resolves the `@trait.X[.slot]` binding at render time by looking up the referenced trait's last `render-ui` payload from the orbital's `UISlotManager`. Re-renders automatically when that trait transitions via the per-trait subscription channel (`subscribeTrait`).  This is the single rendering primitive both runtime paths converge on:  - **Interpreted path** — the trait-binding resolver in `renderer/trait-binding-resolver.ts` walks pattern trees at render time, substituting `\"@trait.X\"` string children with this component. - **Compiled path** — the TypeScript shell codegen in `orbital-shell-typescript/src/backend.rs::pattern_to_jsx_with_data` emits this component directly into generated JSX wherever a `@trait.*` string appears in a pattern tree.  Embedding is passive: the referenced trait's state machine runs unchanged; TraitFrame is only a read-only lens on its current frame. Event propagation happens over the shared event bus, not through this component.",
+      "suggestedFor": [
+        "trait",
+        "frame",
+        "trait frame"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "traitName": {
+          "types": [
+            "string"
+          ],
+          "description": "Name of the trait whose current frame to embed. Must match a trait declared in the current orbital. Compiler validates that the name exists at build time (see `ORB_BINDING_TRAIT_UNKNOWN`).",
+          "required": true
+        },
+        "fallback": {
+          "types": [
+            "node"
+          ],
+          "description": "Rendered when the referenced trait has not (yet) emitted any render-ui. Use a skeleton, spinner, or message. Defaults to `null` (renders nothing), so an unfulfilled reference drops cleanly out of a parent `children:` array."
+        }
+      }
+    },
+    "file-tree": {
+      "type": "file-tree",
+      "category": "component",
+      "description": "FileTree component",
+      "suggestedFor": [
+        "file",
+        "tree",
+        "file tree"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "tree": {
+          "types": [
+            "array"
+          ],
+          "description": "The tree data",
+          "required": true
+        },
+        "selectedPath": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected file path"
+        },
+        "onFileSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when a file is clicked"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class"
+        },
+        "indent": {
+          "types": [
+            "number"
+          ],
+          "description": "Indent size per level in px (default: 16)"
+        }
+      }
+    },
+    "avl-orbitals-cosmic-zoom": {
+      "type": "avl-orbitals-cosmic-zoom",
+      "category": "display",
+      "description": "AvlOrbitalsCosmicZoom component",
+      "suggestedFor": [
+        "avl",
+        "orbitals",
+        "cosmic",
+        "zoom",
+        "avl orbitals cosmic zoom"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "schema": {
+          "types": [
+            "object",
+            "string"
+          ],
+          "description": "The orbital schema (parsed object or JSON string)",
+          "required": true
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "CSS class for the outer container"
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Primary color for the visualization"
+        },
+        "animated": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable animations (default: true)"
+        },
+        "width": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container width"
+        },
+        "height": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Container height"
+        },
+        "highlightedOrbital": {
+          "types": [
+            "string"
+          ],
+          "description": "GAP-52: name of the orbital to highlight with a persistent ring/glow. Independent from user-driven selection (click). Used by the builder workspace when entering cosmic mode from a focused orbital — the focused orbital is highlighted while the user can still click any other orbital to select it."
+        },
+        "onOrbitalSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "GAP-55: fired when the user clicks an orbital tile. Consumers (e.g. the builder workspace) use this as the trigger to drill INTO the clicked orbital — typically by switching back to the canvas tab and opening the clicked orbital at L2 expanded. Local `selected` toggle (visual highlight + info panel) still fires regardless of whether the callback is provided."
+        },
+        "minZoom": {
+          "types": [
+            "number"
+          ],
+          "description": "GAP-54: minimum zoom factor when scroll-wheel zooming. Default 0.4."
+        },
+        "maxZoom": {
+          "types": [
+            "number"
+          ],
+          "description": "GAP-54: maximum zoom factor when scroll-wheel zooming. Default 3."
         }
       }
     },

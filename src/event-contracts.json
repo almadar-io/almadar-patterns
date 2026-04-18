@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-03T05:25:58.152Z",
+  "exportedAt": "2026-04-18T11:44:35.778Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1287,6 +1287,13 @@
         },
         {
           "event": "REMOVE_EFFECT",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CODE_CHANGE",
           "trigger": "action",
           "payload": {
             "type": "object"
