@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-19T17:59:56.830Z",
+  "exportedAt": "2026-04-21T13:35:57.135Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1033,7 +1033,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "book-nav-bar": {
       "emits": [
@@ -1046,7 +1046,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "book-table-of-contents": {
       "emits": [
@@ -1059,7 +1059,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "book-viewer": {
       "emits": [

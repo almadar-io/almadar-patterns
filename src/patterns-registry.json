@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-19T17:59:56.830Z",
+  "exportedAt": "2026-04-21T13:35:57.135Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -296,7 +296,11 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "default",
+            "card"
+          ]
         },
         "emptyMessage": {
           "types": [
@@ -434,15 +438,28 @@
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between cards"
+          "description": "Gap between cards",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "alignItems": {
           "types": [
             "string"
           ],
-          "description": "Align cards vertically in their cells"
+          "description": "Align cards vertically in their cells",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch"
+          ]
         },
         "children": {
           "types": [
@@ -497,8 +514,7 @@
           "types": [
             "string"
           ],
-          "kind": "field-ref",
-          "description": "Entity field name containing an image URL to display as card thumbnail. Must resolve to a field on the linked entity."
+          "description": "Entity field name containing an image URL to display as card thumbnail"
         }
       }
     },
@@ -669,7 +685,11 @@
           "types": [
             "string"
           ],
-          "description": "Panel position (for drawer/sidebar placement)"
+          "description": "Panel position (for drawer/sidebar placement)",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "width": {
           "types": [
@@ -837,13 +857,23 @@
           "types": [
             "string"
           ],
-          "description": "Form layout"
+          "description": "Form layout",
+          "enumValues": [
+            "vertical",
+            "horizontal",
+            "inline"
+          ]
         },
         "gap": {
           "types": [
             "string"
           ],
-          "description": "Gap between fields"
+          "description": "Gap between fields",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -863,7 +893,11 @@
           "types": [
             "string"
           ],
-          "description": "Form mode - 'create' for new records, 'edit' for updating existing"
+          "description": "Form mode - 'create' for new records, 'edit' for updating existing",
+          "enumValues": [
+            "create",
+            "edit"
+          ]
         },
         "fields": {
           "types": [
@@ -1031,13 +1065,23 @@
           "types": [
             "string"
           ],
-          "description": "Form layout"
+          "description": "Form layout",
+          "enumValues": [
+            "vertical",
+            "horizontal",
+            "inline"
+          ]
         },
         "gap": {
           "types": [
             "string"
           ],
-          "description": "Gap between fields"
+          "description": "Gap between fields",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -1057,7 +1101,11 @@
           "types": [
             "string"
           ],
-          "description": "Form mode - 'create' for new records, 'edit' for updating existing"
+          "description": "Form mode - 'create' for new records, 'edit' for updating existing",
+          "enumValues": [
+            "create",
+            "edit"
+          ]
         },
         "fields": {
           "types": [
@@ -1284,8 +1332,7 @@
           "types": [
             "array"
           ],
-          "itemKind": "field-ref",
-          "description": "Filter definitions from schema. String elements must resolve to fields on the linked entity.",
+          "description": "Filter definitions from schema",
           "required": true
         },
         "onFilterChange": {
@@ -1310,7 +1357,13 @@
           "types": [
             "string"
           ],
-          "description": "Variant style"
+          "description": "Variant style",
+          "enumValues": [
+            "default",
+            "compact",
+            "pills",
+            "vertical"
+          ]
         },
         "showIcon": {
           "types": [
@@ -1376,13 +1429,22 @@
           "types": [
             "string"
           ],
-          "description": "Tab variant"
+          "description": "Tab variant",
+          "enumValues": [
+            "default",
+            "pills",
+            "underline"
+          ]
         },
         "orientation": {
           "types": [
             "string"
           ],
-          "description": "Tab orientation"
+          "description": "Tab orientation",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "className": {
           "types": [
@@ -1844,7 +1906,14 @@
           "types": [
             "string"
           ],
-          "description": "Variant for color styling"
+          "description": "Variant for color styling",
+          "enumValues": [
+            "default",
+            "success",
+            "error",
+            "warning",
+            "info"
+          ]
         },
         "actionEvent": {
           "types": [
@@ -1944,9 +2013,15 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Toast variant"
+          "description": "Toast variant",
+          "enumValues": [
+            "success",
+            "error",
+            "info",
+            "warning"
+          ]
         },
         "message": {
           "types": [
@@ -2149,7 +2224,12 @@
           "types": [
             "string"
           ],
-          "description": "Trend direction (overrides calculation)"
+          "description": "Trend direction (overrides calculation)",
+          "enumValues": [
+            "up",
+            "down",
+            "neutral"
+          ]
         },
         "invertTrend": {
           "types": [
@@ -2307,7 +2387,12 @@
           "types": [
             "string"
           ],
-          "description": "Gap between cells"
+          "description": "Gap between cells",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "cells": {
           "types": [
@@ -2361,9 +2446,16 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "full"
+          ]
         },
         "showCloseButton": {
           "types": [
@@ -2446,14 +2538,17 @@
         },
         "position": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Position (left or right)"
+          "description": "Position (left or right)",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "width": {
           "types": [
-            "string",
-            "object"
+            "string"
           ],
           "description": "Width (CSS value or preset size)"
         },
@@ -2564,15 +2659,28 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Dialog variant"
+          "description": "Dialog variant",
+          "enumValues": [
+            "danger",
+            "warning",
+            "info",
+            "default"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Dialog size"
+          "description": "Dialog size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "full"
+          ]
         },
         "isLoading": {
           "types": [
@@ -2677,45 +2785,111 @@
       "propsSchema": {
         "padding": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Padding on all sides"
+          "description": "Padding on all sides",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "paddingX": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Horizontal padding (overrides padding for x-axis)"
+          "description": "Horizontal padding (overrides padding for x-axis)",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "paddingY": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Vertical padding (overrides padding for y-axis)"
+          "description": "Vertical padding (overrides padding for y-axis)",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "margin": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Margin on all sides"
+          "description": "Margin on all sides",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "auto"
+          ]
         },
         "marginX": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Horizontal margin"
+          "description": "Horizontal margin",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "auto"
+          ]
         },
         "marginY": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Vertical margin"
+          "description": "Vertical margin",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "auto"
+          ]
         },
         "bg": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Background color"
+          "description": "Background color",
+          "enumValues": [
+            "transparent",
+            "primary",
+            "secondary",
+            "muted",
+            "accent",
+            "surface",
+            "overlay"
+          ]
         },
         "border": {
           "types": [
@@ -2725,21 +2899,45 @@
         },
         "rounded": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Border radius"
+          "description": "Border radius",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "full"
+          ]
         },
         "shadow": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Box shadow"
+          "description": "Box shadow",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "display": {
           "types": [
             "string"
           ],
-          "description": "Display type"
+          "description": "Display type",
+          "enumValues": [
+            "block",
+            "inline",
+            "inline-block",
+            "flex",
+            "inline-flex",
+            "grid"
+          ]
         },
         "fullWidth": {
           "types": [
@@ -2757,13 +2955,25 @@
           "types": [
             "string"
           ],
-          "description": "Overflow behavior"
+          "description": "Overflow behavior",
+          "enumValues": [
+            "auto",
+            "hidden",
+            "visible",
+            "scroll"
+          ]
         },
         "position": {
           "types": [
             "string"
           ],
-          "description": "Position"
+          "description": "Position",
+          "enumValues": [
+            "relative",
+            "absolute",
+            "fixed",
+            "sticky"
+          ]
         },
         "as": {
           "types": [
@@ -2817,6 +3027,8 @@
       "propsSchema": {
         "cols": {
           "types": [
+            "number",
+            "string",
             "object"
           ],
           "description": "Number of columns (can be responsive object)"
@@ -2829,39 +3041,85 @@
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between items"
+          "description": "Gap between items",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "rowGap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Row gap (overrides gap for rows)"
+          "description": "Row gap (overrides gap for rows)",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "colGap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Column gap (overrides gap for columns)"
+          "description": "Column gap (overrides gap for columns)",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "alignItems": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Align items on block axis"
+          "description": "Align items on block axis",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch",
+            "baseline"
+          ]
         },
         "justifyItems": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Justify items on inline axis"
+          "description": "Justify items on inline axis",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch"
+          ]
         },
         "flow": {
           "types": [
             "string"
           ],
-          "description": "Auto-flow direction"
+          "description": "Auto-flow direction",
+          "enumValues": [
+            "row",
+            "col",
+            "row-dense",
+            "col-dense"
+          ]
         },
         "className": {
           "types": [
@@ -2979,15 +3237,28 @@
       "propsSchema": {
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Fixed size (auto = flex grow)"
+          "description": "Fixed size (auto = flex grow)",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "auto"
+          ]
         },
         "axis": {
           "types": [
             "string"
           ],
-          "description": "Orientation (for fixed sizes)"
+          "description": "Orientation (for fixed sizes)",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "className": {
           "types": [
@@ -3010,9 +3281,13 @@
       "propsSchema": {
         "orientation": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Orientation of the divider @default 'horizontal'"
+          "description": "Orientation of the divider @default 'horizontal'",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "label": {
           "types": [
@@ -3022,9 +3297,14 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Line style variant @default 'solid'"
+          "description": "Line style variant @default 'solid'",
+          "enumValues": [
+            "solid",
+            "dashed",
+            "dotted"
+          ]
         },
         "className": {
           "types": [
@@ -3072,7 +3352,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -3213,7 +3498,12 @@
           "types": [
             "string"
           ],
-          "description": "Victory or defeat variant"
+          "description": "Victory or defeat variant",
+          "enumValues": [
+            "victory",
+            "defeat",
+            "neutral"
+          ]
         },
         "highScore": {
           "types": [
@@ -3359,7 +3649,11 @@
           "types": [
             "string"
           ],
-          "description": "Position of dialogue box"
+          "description": "Position of dialogue box",
+          "enumValues": [
+            "top",
+            "bottom"
+          ]
         },
         "onComplete": {
           "types": [
@@ -3420,7 +3714,13 @@
           "types": [
             "string"
           ],
-          "description": "Initial position"
+          "description": "Initial position",
+          "enumValues": [
+            "bottom-right",
+            "bottom-left",
+            "top-right",
+            "top-left"
+          ]
         },
         "defaultCollapsed": {
           "types": [
@@ -3438,7 +3738,12 @@
           "types": [
             "string"
           ],
-          "description": "Display mode: floating (fixed overlay) or inline (block element)"
+          "description": "Display mode: floating (fixed overlay), inline (block element), or verify (always-visible compact overlay for verification runs)",
+          "enumValues": [
+            "floating",
+            "inline",
+            "verify"
+          ]
         },
         "defaultTab": {
           "types": [
@@ -3467,15 +3772,29 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "ghost",
+            "danger",
+            "success",
+            "warning",
+            "default"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "isLoading": {
           "types": [
@@ -3548,15 +3867,31 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "default",
+            "primary",
+            "secondary",
+            "success",
+            "warning",
+            "danger",
+            "error",
+            "info",
+            "neutral"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "amount": {
           "types": [
@@ -3621,15 +3956,28 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size of the avatar @default 'md'"
+          "description": "Size of the avatar @default 'md'",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "status": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Status indicator"
+          "description": "Status indicator",
+          "enumValues": [
+            "online",
+            "offline",
+            "away",
+            "busy"
+          ]
         },
         "badge": {
           "types": [
@@ -3689,9 +4037,16 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size of the icon"
+          "description": "Size of the icon",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "color": {
           "types": [
@@ -3701,9 +4056,14 @@
         },
         "animation": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Animation type"
+          "description": "Animation type",
+          "enumValues": [
+            "spin",
+            "pulse",
+            "none"
+          ]
         },
         "className": {
           "types": [
@@ -3848,21 +4208,40 @@
         },
         "progressType": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'"
+          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'",
+          "enumValues": [
+            "linear",
+            "circular",
+            "stepped"
+          ]
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Variant/color of the progress bar @default 'primary'"
+          "description": "Variant/color of the progress bar @default 'primary'",
+          "enumValues": [
+            "default",
+            "primary",
+            "success",
+            "warning",
+            "danger"
+          ]
         },
         "color": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Color variant (alias for variant) @default 'primary'"
+          "description": "Color variant (alias for variant) @default 'primary'",
+          "enumValues": [
+            "default",
+            "primary",
+            "success",
+            "warning",
+            "danger"
+          ]
         },
         "showPercentage": {
           "types": [
@@ -3886,7 +4265,12 @@
           "types": [
             "string"
           ],
-          "description": "Size (for circular variant) @default 'md'"
+          "description": "Size (for circular variant) @default 'md'",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "steps": {
           "types": [
@@ -3914,9 +4298,15 @@
       "propsSchema": {
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg"
+          ]
         }
       }
     },
@@ -3960,7 +4350,22 @@
           "types": [
             "string"
           ],
-          "description": "Input type - supports 'select' and 'textarea' in addition to standard types"
+          "description": "Input type - supports 'select' and 'textarea' in addition to standard types",
+          "enumValues": [
+            "text",
+            "email",
+            "password",
+            "number",
+            "tel",
+            "url",
+            "search",
+            "date",
+            "datetime-local",
+            "time",
+            "checkbox",
+            "select",
+            "textarea"
+          ]
         },
         "error": {
           "types": [
@@ -4180,7 +4585,12 @@
           "types": [
             "string"
           ],
-          "description": "Size of the radio button @default 'md'"
+          "description": "Size of the radio button @default 'md'",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         }
       }
     },
@@ -4301,9 +4711,15 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "info",
+            "success",
+            "warning",
+            "error"
+          ]
         },
         "title": {
           "types": [
@@ -4376,9 +4792,15 @@
         },
         "position": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Tooltip position"
+          "description": "Tooltip position",
+          "enumValues": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
         },
         "delay": {
           "types": [
@@ -4433,15 +4855,25 @@
         },
         "position": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Popover position @default 'bottom'"
+          "description": "Popover position @default 'bottom'",
+          "enumValues": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
         },
         "trigger": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Trigger type @default 'click'"
+          "description": "Trigger type @default 'click'",
+          "enumValues": [
+            "click",
+            "hover"
+          ]
         },
         "showArrow": {
           "types": [
@@ -4484,9 +4916,19 @@
         },
         "position": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Menu position"
+          "description": "Menu position",
+          "enumValues": [
+            "top-left",
+            "top-right",
+            "bottom-left",
+            "bottom-right",
+            "top-start",
+            "top-end",
+            "bottom-start",
+            "bottom-end"
+          ]
         },
         "className": {
           "types": [
@@ -4570,21 +5012,46 @@
       "propsSchema": {
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Maximum width"
+          "description": "Maximum width",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "full"
+          ]
         },
         "maxWidth": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Alias for size (pattern compatibility)"
+          "description": "Alias for size (pattern compatibility)",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "full"
+          ]
         },
         "padding": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Horizontal padding"
+          "description": "Horizontal padding",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "center": {
           "types": [
@@ -4644,9 +5111,17 @@
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between items"
+          "description": "Gap between items",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "className": {
           "types": [
@@ -4857,7 +5332,13 @@
           "types": [
             "string"
           ],
-          "description": "Tooltip position"
+          "description": "Tooltip position",
+          "enumValues": [
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
         },
         "className": {
           "types": [
@@ -4919,27 +5400,55 @@
       "propsSchema": {
         "direction": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Stack direction"
+          "description": "Stack direction",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between children"
+          "description": "Gap between children",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "align": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Align items on the cross axis"
+          "description": "Align items on the cross axis",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch",
+            "baseline"
+          ]
         },
         "justify": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Justify items on the main axis"
+          "description": "Justify items on the main axis",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "between",
+            "around",
+            "evenly"
+          ]
         },
         "wrap": {
           "types": [
@@ -5040,10 +5549,14 @@
       "propsSchema": {
         "highlightType": {
           "types": [
-            "object"
+            "string"
           ],
           "description": "Type of highlight (determines color)",
-          "required": true
+          "required": true,
+          "enumValues": [
+            "question",
+            "note"
+          ]
         },
         "isActive": {
           "types": [
@@ -5123,7 +5636,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "showLabel": {
           "types": [
@@ -5144,9 +5662,27 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Typography variant"
+          "description": "Typography variant",
+          "enumValues": [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "heading",
+            "subheading",
+            "body1",
+            "body2",
+            "body",
+            "caption",
+            "overline",
+            "small",
+            "large",
+            "label"
+          ]
         },
         "level": {
           "types": [
@@ -5158,25 +5694,55 @@
           "types": [
             "string"
           ],
-          "description": "Text color"
+          "description": "Text color",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "muted",
+            "error",
+            "success",
+            "warning",
+            "inherit"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "Text alignment"
+          "description": "Text alignment",
+          "enumValues": [
+            "left",
+            "center",
+            "right"
+          ]
         },
         "weight": {
           "types": [
             "string"
           ],
-          "description": "Font weight override"
+          "description": "Font weight override",
+          "enumValues": [
+            "light",
+            "normal",
+            "medium",
+            "semibold",
+            "bold"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Font size override"
+          "description": "Font size override",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "3xl"
+          ]
         },
         "truncate": {
           "types": [
@@ -5188,7 +5754,14 @@
           "types": [
             "string"
           ],
-          "description": "Overflow handling mode"
+          "description": "Overflow handling mode",
+          "enumValues": [
+            "visible",
+            "hidden",
+            "wrap",
+            "clamp-2",
+            "clamp-3"
+          ]
         },
         "as": {
           "types": [
@@ -5342,13 +5915,23 @@
           "types": [
             "string"
           ],
-          "description": "Display format"
+          "description": "Display format",
+          "enumValues": [
+            "hearts",
+            "bar",
+            "numeric"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -5398,7 +5981,13 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "className": {
           "types": [
@@ -5564,15 +6153,24 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Visual variant @default 'default'"
+          "description": "Visual variant @default 'default'",
+          "enumValues": [
+            "default",
+            "segmented",
+            "toggle"
+          ]
         },
         "orientation": {
           "types": [
             "string"
           ],
-          "description": "Orientation @default 'horizontal'"
+          "description": "Orientation @default 'horizontal'",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "className": {
           "types": [
@@ -5605,33 +6203,68 @@
       "propsSchema": {
         "direction": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Flex direction"
+          "description": "Flex direction",
+          "enumValues": [
+            "row",
+            "row-reverse",
+            "col",
+            "col-reverse"
+          ]
         },
         "wrap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Flex wrap"
+          "description": "Flex wrap",
+          "enumValues": [
+            "nowrap",
+            "wrap",
+            "wrap-reverse"
+          ]
         },
         "align": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Align items"
+          "description": "Align items",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch",
+            "baseline"
+          ]
         },
         "justify": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Justify content"
+          "description": "Justify content",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "between",
+            "around",
+            "evenly"
+          ]
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between items"
+          "description": "Gap between items",
+          "enumValues": [
+            "none",
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl"
+          ]
         },
         "inline": {
           "types": [
@@ -5721,7 +6354,14 @@
           "types": [
             "string"
           ],
-          "description": "Variant (simplified API for pattern compatibility)"
+          "description": "Variant (simplified API for pattern compatibility)",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "success",
+            "danger",
+            "warning"
+          ]
         },
         "position": {
           "types": [
@@ -5835,7 +6475,14 @@
           "types": [
             "string"
           ],
-          "description": "Badge variant"
+          "description": "Badge variant",
+          "enumValues": [
+            "default",
+            "primary",
+            "success",
+            "warning",
+            "danger"
+          ]
         },
         "icon": {
           "types": [
@@ -6037,7 +6684,11 @@
           "types": [
             "string"
           ],
-          "description": "Panel position @default 'right'"
+          "description": "Panel position @default 'right'",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "showOverlay": {
           "types": [
@@ -6081,7 +6732,11 @@
           "types": [
             "string"
           ],
-          "description": "Visual severity (derived from actionType if not specified)"
+          "description": "Visual severity (derived from actionType if not specified)",
+          "enumValues": [
+            "warning",
+            "error"
+          ]
         },
         "dismissible": {
           "types": [
@@ -6149,13 +6804,23 @@
           "types": [
             "string"
           ],
-          "description": "Layout variant"
+          "description": "Layout variant",
+          "enumValues": [
+            "horizontal",
+            "vertical",
+            "diamond"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -6197,7 +6862,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "includeDiagonals": {
           "types": [
@@ -6314,15 +6984,29 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "ghost",
+            "danger",
+            "success",
+            "warning",
+            "default"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "disabled": {
           "types": [
@@ -6352,7 +7036,11 @@
           "types": [
             "string"
           ],
-          "description": "iconPosition prop"
+          "description": "iconPosition prop",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "className": {
           "types": [
@@ -6375,7 +7063,7 @@
       "propsSchema": {
         "component": {
           "types": [
-            "object"
+            "unknown"
           ],
           "description": "Element type to render",
           "required": true
@@ -6498,15 +7186,26 @@
         },
         "position": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Drawer position"
+          "description": "Drawer position",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Drawer size"
+          "description": "Drawer size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "full"
+          ]
         },
         "className": {
           "types": [
@@ -6637,7 +7336,11 @@
           "types": [
             "string"
           ],
-          "description": "Variant - mobile shows menu toggle, desktop shows full nav @default 'mobile'"
+          "description": "Variant - mobile shows menu toggle, desktop shows full nav @default 'mobile'",
+          "enumValues": [
+            "mobile",
+            "desktop"
+          ]
         },
         "onLogoClick": {
           "types": [
@@ -6747,7 +7450,14 @@
           "types": [
             "string"
           ],
-          "description": "Modal size"
+          "description": "Modal size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "full"
+          ]
         },
         "className": {
           "types": [
@@ -6795,7 +7505,11 @@
           "types": [
             "string"
           ],
-          "description": "Navigation orientation @default 'horizontal'"
+          "description": "Navigation orientation @default 'horizontal'",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "className": {
           "types": [
@@ -6850,7 +7564,13 @@
           "types": [
             "string"
           ],
-          "description": "Size of the visualization"
+          "description": "Size of the visualization",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "showLabel": {
           "types": [
@@ -6925,15 +7645,28 @@
         },
         "padding": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Padding amount"
+          "description": "Padding amount",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Visual variant"
+          "description": "Visual variant",
+          "enumValues": [
+            "default",
+            "card",
+            "bordered",
+            "filled"
+          ]
         },
         "divider": {
           "types": [
@@ -7001,18 +7734,6 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
@@ -7030,54 +7751,6 @@
             "object"
           ],
           "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "logo": {
           "types": [
@@ -7171,15 +7844,33 @@
       "propsSchema": {
         "ratio": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size ratio between left and right panels"
+          "description": "Size ratio between left and right panels",
+          "enumValues": [
+            "1:1",
+            "1:2",
+            "2:1",
+            "1:3",
+            "3:1",
+            "1:4",
+            "4:1",
+            "2:3",
+            "3:2"
+          ]
         },
         "gap": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Gap between panels"
+          "description": "Gap between panels",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "reverse": {
           "types": [
@@ -7197,13 +7888,25 @@
           "types": [
             "string"
           ],
-          "description": "Breakpoint to switch from stacked to side-by-side"
+          "description": "Breakpoint to switch from stacked to side-by-side",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "Align items vertically"
+          "description": "Align items vertically",
+          "enumValues": [
+            "start",
+            "center",
+            "end",
+            "stretch"
+          ]
         },
         "className": {
           "types": [
@@ -7297,9 +8000,13 @@
         },
         "sortDirection": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Current sort direction (display hint)"
+          "description": "Current sort direction (display hint)",
+          "enumValues": [
+            "asc",
+            "desc"
+          ]
         },
         "searchValue": {
           "types": [
@@ -7431,9 +8138,15 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Toast variant"
+          "description": "Toast variant",
+          "enumValues": [
+            "success",
+            "error",
+            "info",
+            "warning"
+          ]
         },
         "title": {
           "types": [
@@ -7488,7 +8201,11 @@
           "types": [
             "string"
           ],
-          "description": "Direction of the split"
+          "description": "Direction of the split",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "ratio": {
           "types": [
@@ -7582,7 +8299,11 @@
           "types": [
             "string"
           ],
-          "description": "Tab position"
+          "description": "Tab position",
+          "enumValues": [
+            "top",
+            "left"
+          ]
         },
         "className": {
           "types": [
@@ -7691,15 +8412,25 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Counter display size"
+          "description": "Counter display size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Template variant"
+          "description": "Template variant",
+          "enumValues": [
+            "minimal",
+            "standard",
+            "full"
+          ]
         }
       }
     },
@@ -7961,9 +8692,16 @@
         },
         "chartType": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Chart type"
+          "description": "Chart type",
+          "enumValues": [
+            "bar",
+            "line",
+            "pie",
+            "area",
+            "donut"
+          ]
         },
         "series": {
           "types": [
@@ -8072,9 +8810,14 @@
         },
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Display variant"
+          "description": "Display variant",
+          "enumValues": [
+            "linear",
+            "radial",
+            "segmented"
+          ]
         },
         "thresholds": {
           "types": [
@@ -8098,7 +8841,12 @@
           "types": [
             "string"
           ],
-          "description": "Size (for radial variant)"
+          "description": "Size (for radial variant)",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "actions": {
           "types": [
@@ -8144,18 +8892,6 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
@@ -8174,53 +8910,12 @@
           ],
           "description": "Error state"
         },
-        "sortBy": {
+        "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Schema entity data typed against @almadar/core's EntityRow. Items from `entity` are normalised into `items` when `items` is omitted. UI-specific TimelineItem fields (`icon`, callbacks) cannot round-trip through the event bus, so decorative stories that need them pass `items` directly."
         },
         "title": {
           "types": [
@@ -8391,7 +9086,12 @@
           "types": [
             "string"
           ],
-          "description": "Aspect ratio for thumbnails"
+          "description": "Aspect ratio for thumbnails",
+          "enumValues": [
+            "square",
+            "landscape",
+            "portrait"
+          ]
         }
       }
     },
@@ -8525,9 +9225,15 @@
         },
         "documentType": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Document type"
+          "description": "Document type",
+          "enumValues": [
+            "pdf",
+            "text",
+            "html",
+            "markdown"
+          ]
         },
         "currentPage": {
           "types": [
@@ -8680,7 +9386,12 @@
           "types": [
             "string"
           ],
-          "description": "Layout algorithm"
+          "description": "Layout algorithm",
+          "enumValues": [
+            "force",
+            "circular",
+            "grid"
+          ]
         },
         "entity": {
           "types": [
@@ -8758,9 +9469,13 @@
         },
         "mode": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Display mode"
+          "description": "Display mode",
+          "enumValues": [
+            "code",
+            "diff"
+          ]
         },
         "showLineNumbers": {
           "types": [
@@ -9543,23 +10258,11 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
           ],
-          "description": "className prop"
+          "description": "Additional CSS classes"
         },
         "isLoading": {
           "types": [
@@ -9573,53 +10276,12 @@
           ],
           "description": "Error state"
         },
-        "sortBy": {
+        "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "World map entity data"
         },
         "scale": {
           "types": [
@@ -9861,7 +10523,13 @@
           "types": [
             "string"
           ],
-          "description": "Fallback geometry type"
+          "description": "Fallback geometry type",
+          "enumValues": [
+            "box",
+            "sphere",
+            "cylinder",
+            "none"
+          ]
         },
         "castShadow": {
           "types": [
@@ -10115,7 +10783,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "animated": {
           "types": [
@@ -10187,9 +10860,16 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "The skeleton variant to render"
+          "description": "The skeleton variant to render",
+          "enumValues": [
+            "header",
+            "table",
+            "form",
+            "card",
+            "text"
+          ]
         },
         "rows": {
           "types": [
@@ -10297,7 +10977,12 @@
           "types": [
             "string"
           ],
-          "description": "Button size"
+          "description": "Button size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -10371,7 +11056,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "showTooltip": {
           "types": [
@@ -10437,7 +11127,11 @@
           "types": [
             "string"
           ],
-          "description": "Per-slot correctness feedback after a failed attempt"
+          "description": "Per-slot correctness feedback after a failed attempt",
+          "enumValues": [
+            "correct",
+            "wrong"
+          ]
         },
         "onClick": {
           "types": [
@@ -10488,13 +11182,23 @@
           "types": [
             "string"
           ],
-          "description": "Display variant"
+          "description": "Display variant",
+          "enumValues": [
+            "linear",
+            "compact",
+            "full"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "showTransitions": {
           "types": [
@@ -10690,7 +11394,11 @@
           "types": [
             "string"
           ],
-          "description": "Text direction"
+          "description": "Text direction",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         },
         "className": {
           "types": [
@@ -10805,7 +11513,11 @@
           "types": [
             "string"
           ],
-          "description": "Text direction for markdown"
+          "description": "Text direction for markdown",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         }
       }
     },
@@ -10821,18 +11533,6 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
@@ -10850,54 +11550,6 @@
             "object"
           ],
           "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "schema": {
           "types": [
@@ -10927,7 +11579,11 @@
           "types": [
             "string"
           ],
-          "description": "Text direction (default: 'ltr')"
+          "description": "Text direction (default: 'ltr')",
+          "enumValues": [
+            "ltr",
+            "rtl"
+          ]
         }
       }
     },
@@ -10943,18 +11599,6 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
@@ -10972,54 +11616,6 @@
             "object"
           ],
           "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "layoutData": {
           "types": [
@@ -11048,83 +11644,11 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "chapter": {
           "types": [
@@ -11137,7 +11661,11 @@
           "types": [
             "string"
           ],
-          "description": "direction prop"
+          "description": "direction prop",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         }
       }
     },
@@ -11153,83 +11681,11 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "title": {
           "types": [
@@ -11260,7 +11716,11 @@
           "types": [
             "string"
           ],
-          "description": "direction prop"
+          "description": "direction prop",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         }
       }
     },
@@ -11276,83 +11736,11 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "currentPage": {
           "types": [
@@ -11378,7 +11766,11 @@
           "types": [
             "string"
           ],
-          "description": "direction prop"
+          "description": "direction prop",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         }
       }
     },
@@ -11394,83 +11786,11 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
         "className": {
           "types": [
             "string"
           ],
           "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
         },
         "parts": {
           "types": [
@@ -11489,7 +11809,11 @@
           "types": [
             "string"
           ],
-          "description": "direction prop"
+          "description": "direction prop",
+          "enumValues": [
+            "rtl",
+            "ltr"
+          ]
         }
       }
     },
@@ -12191,7 +12515,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "label": {
           "types": [
@@ -12229,7 +12558,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "disabled": {
           "types": [
@@ -12312,7 +12646,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -12846,7 +13185,11 @@
           "types": [
             "string"
           ],
-          "description": "Layout direction"
+          "description": "Layout direction",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         }
       }
     },
@@ -13121,9 +13464,14 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Dot size"
+          "description": "Dot size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         }
       }
     },
@@ -13175,7 +13523,14 @@
           "types": [
             "string"
           ],
-          "description": "Gap between cards"
+          "description": "Gap between cards",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "minCardWidth": {
           "types": [
@@ -13205,8 +13560,7 @@
           "types": [
             "string"
           ],
-          "kind": "field-ref",
-          "description": "Entity field name containing an image URL for card thumbnails. Must resolve to a field on the linked entity."
+          "description": "Entity field name containing an image URL for card thumbnails"
         },
         "selectable": {
           "types": [
@@ -13300,20 +13654,31 @@
           "types": [
             "string"
           ],
-          "description": "Gap between rows"
+          "description": "Gap between rows",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Visual variant"
+          "description": "Visual variant",
+          "enumValues": [
+            "default",
+            "card",
+            "compact",
+            "message"
+          ]
         },
         "groupBy": {
           "types": [
             "string"
           ],
-          "kind": "field-ref",
-          "description": "Group items by a field value (renders section headers between groups). Must resolve to a field on the linked entity."
+          "description": "Group items by a field value (renders section headers between groups)"
         },
         "senderField": {
           "types": [
@@ -13680,9 +14045,14 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Slider size"
+          "description": "Slider size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "disabled": {
           "types": [
@@ -13729,9 +14099,17 @@
       "propsSchema": {
         "status": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Status determines the dot color"
+          "description": "Status determines the dot color",
+          "enumValues": [
+            "online",
+            "offline",
+            "away",
+            "busy",
+            "warning",
+            "critical"
+          ]
         },
         "pulse": {
           "types": [
@@ -13741,9 +14119,14 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Dot size"
+          "description": "Dot size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "label": {
           "types": [
@@ -13772,9 +14155,14 @@
         },
         "direction": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Override automatic direction detection (positive=up, negative=down, zero=flat)"
+          "description": "Override automatic direction detection (positive=up, negative=down, zero=flat)",
+          "enumValues": [
+            "up",
+            "down",
+            "flat"
+          ]
         },
         "showValue": {
           "types": [
@@ -13796,9 +14184,14 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size of the indicator"
+          "description": "Size of the indicator",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         }
       }
     },
@@ -13899,9 +14292,14 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "disabled": {
           "types": [
@@ -13972,15 +14370,24 @@
         },
         "precision": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Full or half-star precision"
+          "description": "Full or half-star precision",
+          "enumValues": [
+            "full",
+            "half"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Star size"
+          "description": "Star size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "action": {
           "types": [
@@ -14431,7 +14838,11 @@
           "types": [
             "string"
           ],
-          "description": "dragHandlePosition prop"
+          "description": "dragHandlePosition prop",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "className": {
           "types": [
@@ -14551,13 +14962,26 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Color variant"
+          "description": "Color variant",
+          "enumValues": [
+            "default",
+            "primary",
+            "success",
+            "warning",
+            "error",
+            "info"
+          ]
         },
         "compact": {
           "types": [
@@ -14631,13 +15055,23 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Visual variant"
+          "description": "Visual variant",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "danger"
+          ]
         },
         "onClick": {
           "types": [
@@ -14737,7 +15171,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -14769,13 +15208,24 @@
           "types": [
             "string"
           ],
-          "description": "Type of number display"
+          "description": "Type of number display",
+          "enumValues": [
+            "damage",
+            "heal",
+            "crit",
+            "miss"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -14819,7 +15269,11 @@
           "types": [
             "string"
           ],
-          "description": "Position of the bubble on screen"
+          "description": "Position of the bubble on screen",
+          "enumValues": [
+            "top",
+            "bottom"
+          ]
         },
         "className": {
           "types": [
@@ -14862,7 +15316,14 @@
           "types": [
             "string"
           ],
-          "description": "Rarity tier affecting border color"
+          "description": "Rarity tier affecting border color",
+          "enumValues": [
+            "common",
+            "uncommon",
+            "rare",
+            "epic",
+            "legendary"
+          ]
         },
         "empty": {
           "types": [
@@ -14874,7 +15335,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "selected": {
           "types": [
@@ -15004,7 +15470,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15054,13 +15525,23 @@
           "types": [
             "string"
           ],
-          "description": "Effect type"
+          "description": "Effect type",
+          "enumValues": [
+            "buff",
+            "debuff",
+            "neutral"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15098,13 +15579,23 @@
           "types": [
             "string"
           ],
-          "description": "Display format"
+          "description": "Display format",
+          "enumValues": [
+            "mm:ss",
+            "ss",
+            "countdown"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15160,7 +15651,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15209,7 +15705,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15375,7 +15876,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15437,7 +15943,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant for all item slots"
+          "description": "Size variant for all item slots",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15533,7 +16044,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -15696,15 +16212,26 @@
         },
         "background": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Background style"
+          "description": "Background style",
+          "enumValues": [
+            "default",
+            "alt",
+            "dark",
+            "gradient"
+          ]
         },
         "padding": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Vertical padding size"
+          "description": "Vertical padding size",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "id": {
           "types": [
@@ -15748,7 +16275,12 @@
           "types": [
             "string"
           ],
-          "description": "Text alignment"
+          "description": "Text alignment",
+          "enumValues": [
+            "center",
+            "left",
+            "right"
+          ]
         },
         "level": {
           "types": [
@@ -16511,7 +17043,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "fork",
+            "merge",
+            "diamond"
+          ]
         },
         "branches": {
           "types": [
@@ -16588,7 +17125,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "solid",
+            "dashed",
+            "animated"
+          ]
         },
         "color": {
           "types": [
@@ -16908,7 +17450,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "text-to-code",
+            "code-to-app",
+            "generic"
+          ]
         },
         "color": {
           "types": [
@@ -16965,7 +17512,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "filled",
+            "stroked",
+            "pulse"
+          ]
         },
         "color": {
           "types": [
@@ -17091,7 +17643,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "solid",
+            "dashed",
+            "glow"
+          ]
         },
         "color": {
           "types": [
@@ -17160,7 +17717,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "outline",
+            "filled",
+            "check"
+          ]
         },
         "color": {
           "types": [
@@ -17280,7 +17842,12 @@
           "types": [
             "string"
           ],
-          "description": "Maximum width constraint"
+          "description": "Maximum width constraint",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -17657,13 +18224,24 @@
           "types": [
             "string"
           ],
-          "description": "Card visual variant"
+          "description": "Card visual variant",
+          "enumValues": [
+            "default",
+            "bordered",
+            "elevated",
+            "interactive"
+          ]
         },
         "size": {
           "types": [
             "string"
           ],
-          "description": "Card size affecting icon and spacing"
+          "description": "Card size affecting icon and spacing",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -17701,7 +18279,12 @@
           "types": [
             "string"
           ],
-          "description": "Gap between grid items"
+          "description": "Gap between grid items",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "className": {
           "types": [
@@ -17757,7 +18340,12 @@
           "types": [
             "string"
           ],
-          "description": "tagVariant prop"
+          "description": "tagVariant prop",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "accent"
+          ]
         },
         "title": {
           "types": [
@@ -17807,19 +18395,33 @@
           "types": [
             "string"
           ],
-          "description": "imagePosition prop"
+          "description": "imagePosition prop",
+          "enumValues": [
+            "below",
+            "right",
+            "background"
+          ]
         },
         "background": {
           "types": [
             "string"
           ],
-          "description": "background prop"
+          "description": "background prop",
+          "enumValues": [
+            "dark",
+            "gradient",
+            "subtle"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "align prop"
+          "description": "align prop",
+          "enumValues": [
+            "center",
+            "left"
+          ]
         },
         "backgroundElement": {
           "types": [
@@ -18133,7 +18735,12 @@
           "types": [
             "string"
           ],
-          "description": "Display variant"
+          "description": "Display variant",
+          "enumValues": [
+            "logos",
+            "quotes",
+            "badges"
+          ]
         },
         "className": {
           "types": [
@@ -18185,13 +18792,21 @@
           "types": [
             "string"
           ],
-          "description": "imagePosition prop"
+          "description": "imagePosition prop",
+          "enumValues": [
+            "left",
+            "right"
+          ]
         },
         "background": {
           "types": [
             "string"
           ],
-          "description": "background prop"
+          "description": "background prop",
+          "enumValues": [
+            "default",
+            "alt"
+          ]
         },
         "children": {
           "types": [
@@ -18300,7 +18915,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "default",
+            "primary",
+            "accent"
+          ]
         },
         "className": {
           "types": [
@@ -19376,7 +19996,11 @@
           "types": [
             "string"
           ],
-          "description": "orientation prop"
+          "description": "orientation prop",
+          "enumValues": [
+            "horizontal",
+            "vertical"
+          ]
         },
         "showConnectors": {
           "types": [
@@ -19847,7 +20471,12 @@
           "types": [
             "string"
           ],
-          "description": "variant prop"
+          "description": "variant prop",
+          "enumValues": [
+            "product",
+            "service",
+            "platform"
+          ]
         },
         "featureColumns": {
           "types": [
@@ -19909,9 +20538,15 @@
         },
         "animation": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Animation type applied to SVG paths/shapes"
+          "description": "Animation type applied to SVG paths/shapes",
+          "enumValues": [
+            "draw",
+            "fill",
+            "pulse",
+            "morph"
+          ]
         },
         "animate": {
           "types": [
@@ -19984,15 +20619,30 @@
       "propsSchema": {
         "trigger": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "What triggers the animation"
+          "description": "What triggers the animation",
+          "enumValues": [
+            "scroll",
+            "hover",
+            "manual"
+          ]
         },
         "animation": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Built-in animation preset"
+          "description": "Built-in animation preset",
+          "enumValues": [
+            "fade-up",
+            "fade-down",
+            "fade-in",
+            "fade-left",
+            "fade-right",
+            "scale",
+            "scale-up",
+            "none"
+          ]
         },
         "duration": {
           "types": [
@@ -20053,9 +20703,25 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Which geometric pattern to render"
+          "description": "Which geometric pattern to render",
+          "enumValues": [
+            "star8",
+            "star6",
+            "khatam",
+            "star10",
+            "star12",
+            "rosette-double",
+            "rosette-filled",
+            "seigaiha",
+            "greek-key",
+            "celtic-knot",
+            "kolam",
+            "arch",
+            "arabesque-vine",
+            "arabesque-net"
+          ]
         },
         "size": {
           "types": [
@@ -20096,15 +20762,25 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Which decorative element"
+          "description": "Which decorative element",
+          "enumValues": [
+            "arch",
+            "vine",
+            "lattice"
+          ]
         },
         "side": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Which side(s) to place the decoration"
+          "description": "Which side(s) to place the decoration",
+          "enumValues": [
+            "left",
+            "right",
+            "both"
+          ]
         },
         "opacity": {
           "types": [
@@ -20151,15 +20827,39 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Which geometric tile design"
+          "description": "Which geometric tile design",
+          "enumValues": [
+            "star8",
+            "star6",
+            "khatam",
+            "star10",
+            "star12",
+            "rosette-double",
+            "rosette-filled",
+            "seigaiha",
+            "greek-key",
+            "celtic-knot",
+            "kolam",
+            "arch",
+            "arabesque-vine",
+            "arabesque-net"
+          ]
         },
         "mode": {
           "types": [
             "string"
           ],
-          "description": "Layout mode"
+          "description": "Layout mode",
+          "enumValues": [
+            "background",
+            "left",
+            "right",
+            "dual",
+            "around",
+            "frame"
+          ]
         },
         "opacity": {
           "types": [
@@ -20220,9 +20920,14 @@
         },
         "level": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Composition level"
+          "description": "Composition level",
+          "enumValues": [
+            "atom",
+            "molecule",
+            "organism"
+          ]
         },
         "domain": {
           "types": [
@@ -20274,9 +20979,16 @@
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Size preset"
+          "description": "Size preset",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl"
+          ]
         },
         "showLabels": {
           "types": [
@@ -20610,7 +21322,12 @@
           "types": [
             "string"
           ],
-          "description": "GAP-53: which level the `onOrbitalDoubleClick` callback fires at. - `'expanded'` (default, non-breaking) — fires only at L2 expanded; the first overview double-click still drills overview→expanded. - `'overview'` — fires at L1 overview on the FIRST double-click. The overview→expanded drill is suppressed when the callback is provided. - `'both'` — fires at either level."
+          "description": "GAP-53: which level the `onOrbitalDoubleClick` callback fires at. - `'expanded'` (default, non-breaking) — fires only at L2 expanded; the first overview double-click still drills overview→expanded. - `'overview'` — fires at L1 overview on the FIRST double-click. The overview→expanded drill is suppressed when the callback is provided. - `'both'` — fires at either level.",
+          "enumValues": [
+            "expanded",
+            "overview",
+            "both"
+          ]
         },
         "initialOrbital": {
           "types": [
@@ -20664,7 +21381,11 @@
           "types": [
             "string"
           ],
-          "description": "Layout hint: 'pipeline' renders nodes left-to-right, 'grid' (default) uses sqrt-based grid."
+          "description": "Layout hint: 'pipeline' renders nodes left-to-right, 'grid' (default) uses sqrt-based grid.",
+          "enumValues": [
+            "pipeline",
+            "grid"
+          ]
         },
         "onNodeSelect": {
           "types": [
@@ -20929,7 +21650,12 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
         },
         "animated": {
           "types": [
@@ -20982,15 +21708,26 @@
         },
         "background": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Background style"
+          "description": "Background style",
+          "enumValues": [
+            "default",
+            "alt",
+            "dark",
+            "gradient",
+            "primary"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "Content alignment"
+          "description": "Content alignment",
+          "enumValues": [
+            "center",
+            "left"
+          ]
         },
         "className": {
           "types": [
@@ -21487,7 +22224,11 @@
           "types": [
             "string"
           ],
-          "description": "HUD positioning mode: 'fixed' (default, viewport-relative) or 'inline' (container-relative, uses sticky)"
+          "description": "HUD positioning mode: 'fixed' (default, viewport-relative) or 'inline' (container-relative, uses sticky)",
+          "enumValues": [
+            "fixed",
+            "inline"
+          ]
         },
         "includeFloating": {
           "types": [
@@ -21842,15 +22583,24 @@
         },
         "orientation": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Map orientation"
+          "description": "Map orientation",
+          "enumValues": [
+            "standard",
+            "rotated"
+          ]
         },
         "cameraMode": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Camera mode"
+          "description": "Camera mode",
+          "enumValues": [
+            "isometric",
+            "perspective",
+            "top-down"
+          ]
         },
         "showGrid": {
           "types": [
@@ -21872,9 +22622,14 @@
         },
         "overlay": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Overlay control mode"
+          "description": "Overlay control mode",
+          "enumValues": [
+            "default",
+            "hidden",
+            "minimap"
+          ]
         },
         "shadows": {
           "types": [
@@ -22052,9 +22807,14 @@
       "propsSchema": {
         "mode": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Camera mode"
+          "description": "Camera mode",
+          "enumValues": [
+            "isometric",
+            "perspective",
+            "top-down"
+          ]
         },
         "position": {
           "types": [
@@ -22465,7 +23225,12 @@
           "types": [
             "string"
           ],
-          "description": "3D camera mode - defaults to perspective for dramatic effect"
+          "description": "3D camera mode - defaults to perspective for dramatic effect",
+          "enumValues": [
+            "isometric",
+            "perspective",
+            "top-down"
+          ]
         },
         "showGrid": {
           "types": [
@@ -22577,7 +23342,12 @@
           "types": [
             "string"
           ],
-          "description": "3D camera mode"
+          "description": "3D camera mode",
+          "enumValues": [
+            "isometric",
+            "perspective",
+            "top-down"
+          ]
         },
         "showGrid": {
           "types": [
@@ -22684,7 +23454,12 @@
           "types": [
             "string"
           ],
-          "description": "3D camera mode"
+          "description": "3D camera mode",
+          "enumValues": [
+            "isometric",
+            "perspective",
+            "top-down"
+          ]
         },
         "showGrid": {
           "types": [
@@ -22984,9 +23759,27 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Typography variant"
+          "description": "Typography variant",
+          "enumValues": [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "heading",
+            "subheading",
+            "body1",
+            "body2",
+            "body",
+            "caption",
+            "overline",
+            "small",
+            "large",
+            "label"
+          ]
         },
         "level": {
           "types": [
@@ -22998,25 +23791,55 @@
           "types": [
             "string"
           ],
-          "description": "Text color"
+          "description": "Text color",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "muted",
+            "error",
+            "success",
+            "warning",
+            "inherit"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "Text alignment"
+          "description": "Text alignment",
+          "enumValues": [
+            "left",
+            "center",
+            "right"
+          ]
         },
         "weight": {
           "types": [
             "string"
           ],
-          "description": "Font weight override"
+          "description": "Font weight override",
+          "enumValues": [
+            "light",
+            "normal",
+            "medium",
+            "semibold",
+            "bold"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Font size override"
+          "description": "Font size override",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "3xl"
+          ]
         },
         "truncate": {
           "types": [
@@ -23028,7 +23851,14 @@
           "types": [
             "string"
           ],
-          "description": "Overflow handling mode"
+          "description": "Overflow handling mode",
+          "enumValues": [
+            "visible",
+            "hidden",
+            "wrap",
+            "clamp-2",
+            "clamp-3"
+          ]
         },
         "as": {
           "types": [
@@ -23079,9 +23909,27 @@
       "propsSchema": {
         "variant": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Typography variant"
+          "description": "Typography variant",
+          "enumValues": [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "heading",
+            "subheading",
+            "body1",
+            "body2",
+            "body",
+            "caption",
+            "overline",
+            "small",
+            "large",
+            "label"
+          ]
         },
         "level": {
           "types": [
@@ -23093,25 +23941,55 @@
           "types": [
             "string"
           ],
-          "description": "Text color"
+          "description": "Text color",
+          "enumValues": [
+            "primary",
+            "secondary",
+            "muted",
+            "error",
+            "success",
+            "warning",
+            "inherit"
+          ]
         },
         "align": {
           "types": [
             "string"
           ],
-          "description": "Text alignment"
+          "description": "Text alignment",
+          "enumValues": [
+            "left",
+            "center",
+            "right"
+          ]
         },
         "weight": {
           "types": [
             "string"
           ],
-          "description": "Font weight override"
+          "description": "Font weight override",
+          "enumValues": [
+            "light",
+            "normal",
+            "medium",
+            "semibold",
+            "bold"
+          ]
         },
         "size": {
           "types": [
-            "object"
+            "string"
           ],
-          "description": "Font size override"
+          "description": "Font size override",
+          "enumValues": [
+            "xs",
+            "sm",
+            "md",
+            "lg",
+            "xl",
+            "2xl",
+            "3xl"
+          ]
         },
         "truncate": {
           "types": [
@@ -23123,7 +24001,14 @@
           "types": [
             "string"
           ],
-          "description": "Overflow handling mode"
+          "description": "Overflow handling mode",
+          "enumValues": [
+            "visible",
+            "hidden",
+            "wrap",
+            "clamp-2",
+            "clamp-3"
+          ]
         },
         "as": {
           "types": [
