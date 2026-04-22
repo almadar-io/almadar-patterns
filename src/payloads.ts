@@ -27,7 +27,7 @@
  * @packageDocumentation
  */
 
-import type { EventPayloadValue, FieldValue } from '@almadar/core';
+import type { EventPayload, EventPayloadValue, FieldValue } from '@almadar/core';
 
 /**
  * Payload dispatched by per-item action buttons in data patterns
@@ -41,13 +41,17 @@ import type { EventPayloadValue, FieldValue } from '@almadar/core';
  *
  * Generic over the row shape. `DataGridItemAction` used on `CartItem[]`
  * gives the trait `ItemActionPayload<CartItem>`, not `unknown`.
+ *
+ * Intersected with `EventPayload` so the whole thing is structurally
+ * compatible with `eventBus.emit`'s typed parameter — interfaces alone
+ * aren't assignable to `EventPayload`'s index signature in strict mode.
  */
-export interface ItemActionPayload<T extends EventPayloadValue = EventPayloadValue> {
+export type ItemActionPayload<T extends EventPayloadValue = EventPayloadValue> = EventPayload & {
   /** Row primary key. */
   id: string | number;
   /** Full row data at click time. */
   row: T;
-}
+};
 
 /**
  * Payload dispatched when a selection-capable data pattern observes a
@@ -56,9 +60,9 @@ export interface ItemActionPayload<T extends EventPayloadValue = EventPayloadVal
  * reconcile against its row set to recompute derived state ("bulk
  * enabled", "3 items selected", etc.).
  */
-export interface SelectionChangePayload {
-  selectedIds: string[];
-}
+export type SelectionChangePayload = EventPayload & {
+  selectedIds: readonly string[];
+};
 
 /**
  * Payload dispatched when an infinite-scroll-enabled pattern's sentinel
@@ -66,10 +70,11 @@ export interface SelectionChangePayload {
  * InfiniteScrollSentinel).
  *
  * No fields required — the receiving trait knows its own cursor (last
- * loaded page, current offset). Declared as an empty record so consumers
- * can pattern-match on the event without checking payload shape.
+ * loaded page, current offset). Declared as `EventPayload` (the empty-
+ * object bound) so consumers can pass `{}` and listeners can
+ * destructure without runtime checks.
  */
-export type LoadMoreRequestPayload = Record<string, never>;
+export type LoadMoreRequestPayload = EventPayload;
 
 /**
  * Payload dispatched by a schema-driven `Form` on successful submit
@@ -80,8 +85,8 @@ export type LoadMoreRequestPayload = Record<string, never>;
  * handler, and a generic form falls back to the `FieldValue`-keyed
  * default.
  */
-export interface FormSubmitPayload<
+export type FormSubmitPayload<
   T extends Record<string, FieldValue | undefined> = Record<string, FieldValue | undefined>,
-> {
+> = EventPayload & {
   data: T;
-}
+};
