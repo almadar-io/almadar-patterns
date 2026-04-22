@@ -29,6 +29,17 @@ import type { PatternPropDef } from './types.js';
 
 export type { PatternPropDef, PropKind } from './types.js';
 
+// Canonical emit-payload shapes dispatched by framework data patterns.
+// Pattern-level contracts live alongside the pattern registry; the
+// framework-level primitives (EventPayloadValue, FieldValue) stay in
+// @almadar/core.
+export type {
+  ItemActionPayload,
+  SelectionChangePayload,
+  LoadMoreRequestPayload,
+  FormSubmitPayload,
+} from './payloads.js';
+
 export type PatternEntry = {
   type: string;
   category: string;
