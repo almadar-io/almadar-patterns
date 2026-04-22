@@ -27,9 +27,9 @@ export const EVENT_CONTRACTS = eventContracts;
 
 import type { PatternPropDef } from './types.js';
 
-export type { PatternPropDef } from './types.js';
+export type { PatternPropDef, PropKind } from './types.js';
 
-type PatternEntry = {
+export type PatternEntry = {
   type: string;
   category: string;
   description?: string;
