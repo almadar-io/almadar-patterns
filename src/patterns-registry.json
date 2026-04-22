@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-21T13:35:57.135Z",
+  "exportedAt": "2026-04-22T03:26:00.903Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -490,7 +490,9 @@
           "types": [
             "array"
           ],
-          "description": "Actions for each card item (schema-driven)"
+          "description": "Actions for each card item (schema-driven)",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "showTotal": {
           "types": [
@@ -953,13 +955,15 @@
           "types": [
             "string"
           ],
-          "description": "Event dispatch props (for trait state machine integration)"
+          "description": "Event dispatch props (for trait state machine integration)",
+          "kind": "event"
         },
         "cancelEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to dispatch on cancel (defaults to 'CANCEL')"
+          "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
+          "kind": "event"
         },
         "entityId": {
           "types": [
@@ -1161,13 +1165,15 @@
           "types": [
             "string"
           ],
-          "description": "Event dispatch props (for trait state machine integration)"
+          "description": "Event dispatch props (for trait state machine integration)",
+          "kind": "event"
         },
         "cancelEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to dispatch on cancel (defaults to 'CANCEL')"
+          "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
+          "kind": "event"
         },
         "entityId": {
           "types": [
@@ -2580,7 +2586,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when drawer should close"
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when drawer should close",
+          "kind": "event"
         }
       }
     },
@@ -2985,7 +2992,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -2997,7 +3005,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false } on mouseEnter/mouseLeave"
+          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false } on mouseEnter/mouseLeave",
+          "kind": "event"
         },
         "maxWidth": {
           "types": [
@@ -3838,7 +3847,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -4002,7 +4012,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -4142,7 +4153,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on card click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on card click",
+          "kind": "event"
         },
         "isSelected": {
           "types": [
@@ -4344,7 +4356,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for trait dispatch"
+          "description": "Declarative event name for trait dispatch",
+          "kind": "event"
         },
         "inputType": {
           "types": [
@@ -4450,7 +4463,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for trait dispatch"
+          "description": "Declarative event name for trait dispatch",
+          "kind": "event"
         },
         "error": {
           "types": [
@@ -4494,7 +4508,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for trait dispatch"
+          "description": "Declarative event name for trait dispatch",
+          "kind": "event"
         },
         "error": {
           "types": [
@@ -4561,7 +4576,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for trait dispatch"
+          "description": "Declarative event name for trait dispatch",
+          "kind": "event"
         },
         "label": {
           "types": [
@@ -4761,7 +4777,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when alert is dismissed"
+          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when alert is dismissed",
+          "kind": "event"
         }
       }
     },
@@ -5385,7 +5402,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         }
       }
     },
@@ -5520,7 +5538,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -5605,13 +5624,15 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on click"
+          "description": "Declarative event name — emits UI:{action} via eventBus on click",
+          "kind": "event"
         },
         "hoverEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false }"
+          "description": "Declarative hover event — emits UI:{hoverEvent} with { hovered: true/false }",
+          "kind": "event"
         }
       }
     },
@@ -5858,13 +5879,15 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name emitted on press via useEventBus"
+          "description": "Declarative event name emitted on press via useEventBus",
+          "kind": "event"
         },
         "releaseEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event name emitted on release via useEventBus"
+          "description": "Declarative event name emitted on release via useEventBus",
+          "kind": "event"
         },
         "pressed": {
           "types": [
@@ -6118,7 +6141,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name emitted on click via useEventBus"
+          "description": "Declarative event name emitted on click via useEventBus",
+          "kind": "event"
         }
       }
     },
@@ -7091,7 +7115,8 @@
           "types": [
             "string"
           ],
-          "description": "Event to emit on click (REQUIRED for interactive elements)"
+          "description": "Event to emit on click (REQUIRED for interactive elements)",
+          "kind": "event"
         },
         "payload": {
           "types": [
@@ -8940,7 +8965,9 @@
           "types": [
             "array"
           ],
-          "description": "Actions per item"
+          "description": "Actions per item",
+          "kind": "event-list",
+          "eventField": "event"
         }
       }
     },
@@ -13511,7 +13538,9 @@
           "types": [
             "array"
           ],
-          "description": "Per-item action buttons"
+          "description": "Per-item action buttons",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "cols": {
           "types": [
@@ -13572,7 +13601,8 @@
           "types": [
             "string"
           ],
-          "description": "Selection change event name (emits UI:{selectionEvent} with { selectedIds: string[] })"
+          "description": "Selection change event name (emits UI:{selectionEvent} with { selectedIds: string[] })",
+          "kind": "event"
         },
         "infiniteScroll": {
           "types": [
@@ -13584,7 +13614,8 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted when more items needed: UI:{loadMoreEvent}"
+          "description": "Event emitted when more items needed: UI:{loadMoreEvent}",
+          "kind": "event"
         },
         "hasMore": {
           "types": [
@@ -13648,7 +13679,9 @@
           "types": [
             "array"
           ],
-          "description": "Per-item action buttons"
+          "description": "Per-item action buttons",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "gap": {
           "types": [
@@ -13720,13 +13753,15 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted on reorder: UI:{reorderEvent} with { fromIndex, toIndex }"
+          "description": "Event emitted on reorder: UI:{reorderEvent} with { fromIndex, toIndex }",
+          "kind": "event"
         },
         "swipeLeftEvent": {
           "types": [
             "string"
           ],
-          "description": "Event emitted on left swipe: UI:{swipeLeftEvent} with { row }"
+          "description": "Event emitted on left swipe: UI:{swipeLeftEvent} with { row }",
+          "kind": "event"
         },
         "swipeLeftActions": {
           "types": [
@@ -13738,7 +13773,8 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted on right swipe: UI:{swipeRightEvent} with { row }"
+          "description": "Event emitted on right swipe: UI:{swipeRightEvent} with { row }",
+          "kind": "event"
         },
         "swipeRightActions": {
           "types": [
@@ -13750,7 +13786,8 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted on long press: UI:{longPressEvent} with { row }"
+          "description": "Event emitted on long press: UI:{longPressEvent} with { row }",
+          "kind": "event"
         },
         "infiniteScroll": {
           "types": [
@@ -13762,7 +13799,8 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted when more items needed: UI:{loadMoreEvent}"
+          "description": "Event emitted when more items needed: UI:{loadMoreEvent}",
+          "kind": "event"
         },
         "hasMore": {
           "types": [
@@ -14064,7 +14102,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for value changes"
+          "description": "Declarative event name for value changes",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -14317,7 +14356,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for value changes"
+          "description": "Declarative event name for value changes",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -14393,7 +14433,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for rating changes"
+          "description": "Declarative event name for rating changes",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -14479,7 +14520,8 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for file selection"
+          "description": "Declarative event name for file selection",
+          "kind": "event"
         },
         "actionPayload": {
           "types": [
@@ -14595,7 +14637,8 @@
             "string"
           ],
           "description": "Event name to emit when load-more is triggered (emitted as UI:{loadMoreEvent})",
-          "required": true
+          "required": true,
+          "kind": "event"
         },
         "loadMorePayload": {
           "types": [
@@ -14767,7 +14810,8 @@
             "string"
           ],
           "description": "Event name to emit on refresh (emitted as UI:{refreshEvent})",
-          "required": true
+          "required": true,
+          "kind": "event"
         },
         "refreshPayload": {
           "types": [
@@ -14826,7 +14870,8 @@
             "string"
           ],
           "description": "reorderEvent prop",
-          "required": true
+          "required": true,
+          "kind": "event"
         },
         "reorderPayload": {
           "types": [
@@ -14867,13 +14912,17 @@
           "types": [
             "array"
           ],
-          "description": "leftActions prop"
+          "description": "leftActions prop",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "rightActions": {
           "types": [
             "array"
           ],
-          "description": "rightActions prop"
+          "description": "rightActions prop",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "threshold": {
           "types": [
