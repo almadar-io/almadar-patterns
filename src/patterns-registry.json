@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-22T03:26:00.903Z",
+  "exportedAt": "2026-04-24T16:16:18.298Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -699,12 +699,6 @@
           ],
           "description": "Panel width (CSS value, e.g., '400px', '50%')"
         },
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity ID for fetching specific entity"
-        },
         "displayFields": {
           "types": [
             "array"
@@ -965,12 +959,6 @@
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
           "kind": "event"
         },
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity ID binding for edit mode (triggers initialData from selectedEntity in compiled code)"
-        },
         "relationsData": {
           "types": [
             "object"
@@ -1174,12 +1162,6 @@
           ],
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
           "kind": "event"
-        },
-        "entityId": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity ID binding for edit mode (triggers initialData from selectedEntity in compiled code)"
         },
         "relationsData": {
           "types": [
@@ -6999,78 +6981,29 @@
       ],
       "typicalSize": "large",
       "propsSchema": {
-        "label": {
-          "types": [
-            "string"
-          ],
-          "description": "label prop",
-          "required": true
-        },
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "variant prop",
-          "enumValues": [
-            "primary",
-            "secondary",
-            "ghost",
-            "danger",
-            "success",
-            "warning",
-            "default"
-          ]
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "size prop",
-          "enumValues": [
-            "sm",
-            "md",
-            "lg"
-          ]
-        },
-        "disabled": {
-          "types": [
-            "boolean"
-          ],
-          "description": "disabled prop"
-        },
         "onClick": {
           "types": [
             "string"
           ],
-          "description": "onClick prop"
+          "description": "Legacy alias for {@link ButtonProps.action} (string event name).",
+          "kind": "event"
         },
         "event": {
           "types": [
             "string"
           ],
-          "description": "event prop"
-        },
-        "icon": {
-          "types": [
-            "string"
-          ],
-          "description": "icon prop"
+          "description": "Legacy alias for {@link ButtonProps.action}.",
+          "kind": "event"
         },
         "iconPosition": {
           "types": [
             "string"
           ],
-          "description": "iconPosition prop",
+          "description": "Icon placement — maps to Button's `icon` (left) or `iconRight` (right).",
           "enumValues": [
             "left",
             "right"
           ]
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
         }
       }
     },
@@ -13515,10 +13448,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "unknown",
+            "object",
             "array"
           ],
-          "description": "Entity data array",
+          "description": "Schema entity data — single record or collection, typed against `@almadar/core`'s `EntityRow` so the narrow type declared on the emitting trait's `Event { data : [X] }` flows through to the prop without widening. The generic `T` lets consumers pass a narrower entity (e.g. `CartItem`) and have the `children` render function receive cards typed to that exact shape.",
           "required": true
         },
         "fields": {
@@ -13627,7 +13560,7 @@
           "types": [
             "function"
           ],
-          "description": "Render prop for custom per-item content. When provided, `fields` and `itemActions` are ignored."
+          "description": "Render prop for custom per-card content, typed to the grid's entity shape `T`. When provided, `fields` and `itemActions` are ignored."
         },
         "renderItem": {
           "types": [
@@ -13656,10 +13589,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "unknown",
+            "object",
             "array"
           ],
-          "description": "Entity data array",
+          "description": "Schema entity data — single record or collection, typed against `@almadar/core`'s `EntityRow` so the narrow type declared on the emitting trait's `Event { data : [X] }` flows through to the prop without widening. The generic `T` lets consumers pass a narrower entity (e.g. `CartItem`) and have the `children` render function receive items of that exact shape.",
           "required": true
         },
         "fields": {
