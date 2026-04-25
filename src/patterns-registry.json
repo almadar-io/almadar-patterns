@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-24T16:16:18.298Z",
+  "exportedAt": "2026-04-25T12:02:50.943Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -889,11 +889,7 @@
           "types": [
             "string"
           ],
-          "description": "Form mode - 'create' for new records, 'edit' for updating existing",
-          "enumValues": [
-            "create",
-            "edit"
-          ]
+          "description": "Form mode — 'create' for new records, 'edit' for updating existing. Accepts `string` so schema-driven callers (whose `config.mode` is typed as `string` per the trait's declared config block) compile cleanly. The runtime treats anything other than 'edit' as 'create'."
         },
         "fields": {
           "types": [
@@ -1093,11 +1089,7 @@
           "types": [
             "string"
           ],
-          "description": "Form mode - 'create' for new records, 'edit' for updating existing",
-          "enumValues": [
-            "create",
-            "edit"
-          ]
+          "description": "Form mode — 'create' for new records, 'edit' for updating existing. Accepts `string` so schema-driven callers (whose `config.mode` is typed as `string` per the trait's declared config block) compile cleanly. The runtime treats anything other than 'edit' as 'create'."
         },
         "fields": {
           "types": [
@@ -2091,188 +2083,36 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
-        "entity": {
+        "value": {
           "types": [
             "string"
           ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
-            "array"
-          ],
-          "description": "Data array provided by the trait via render-ui"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state"
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction"
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs"
+          "description": "The stat value to display prominently",
+          "required": true
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Main label"
+          "description": "Label describing the value",
+          "required": true
         },
-        "title": {
+        "size": {
           "types": [
             "string"
           ],
-          "description": "Title (alias for label)"
-        },
-        "value": {
-          "types": [
-            "string",
-            "number",
-            "array",
-            "unknown"
-          ],
-          "description": "Primary value - accepts array/unknown from generated code (will use first element or length)"
-        },
-        "previousValue": {
-          "types": [
-            "number"
-          ],
-          "description": "Previous value for comparison"
-        },
-        "currentValue": {
-          "types": [
-            "number"
-          ],
-          "description": "Current value as number for trend calculation"
-        },
-        "trend": {
-          "types": [
-            "number"
-          ],
-          "description": "Manual trend percentage (overrides calculation)"
-        },
-        "trendDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Trend direction (overrides calculation)",
+          "description": "Size of the value text",
           "enumValues": [
-            "up",
-            "down",
-            "neutral"
+            "sm",
+            "md",
+            "lg"
           ]
         },
-        "invertTrend": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether up is good (green) or bad (red)"
-        },
-        "icon": {
-          "types": [
-            "icon",
-            "string"
-          ],
-          "description": "Icon to display (Lucide component or icon name string)"
-        },
-        "iconBg": {
+        "className": {
           "types": [
             "string"
           ],
-          "description": "Icon background color"
-        },
-        "iconColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Icon color"
-        },
-        "subtitle": {
-          "types": [
-            "string"
-          ],
-          "description": "Subtitle or description"
-        },
-        "action": {
-          "types": [
-            "object"
-          ],
-          "description": "Action button"
-        },
-        "metrics": {
-          "types": [
-            "array"
-          ],
-          "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays"
-        },
-        "compact": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Compact display mode"
-        },
-        "sparklineData": {
-          "types": [
-            "array"
-          ],
-          "description": "Sparkline data points for an inline trend chart"
+          "description": "Additional class names"
         }
       }
     },
@@ -4089,90 +3929,53 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop",
+          "enumValues": [
+            "default",
+            "bordered",
+            "elevated",
+            "interactive"
+          ]
+        },
+        "padding": {
+          "types": [
+            "string"
+          ],
+          "description": "padding prop",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
         "title": {
           "types": [
             "string"
           ],
-          "description": "Card title"
+          "description": "Card title - renders in header if provided"
         },
         "subtitle": {
           "types": [
             "string"
           ],
-          "description": "Card subtitle or description"
+          "description": "Card subtitle - renders below title"
         },
-        "image": {
+        "shadow": {
           "types": [
             "string"
           ],
-          "description": "Image URL to display at top of card"
-        },
-        "actions": {
-          "types": [
-            "array"
-          ],
-          "description": "Action buttons to display in card footer"
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Card content"
-        },
-        "onClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Click handler for the entire card"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "action": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event name — emits UI:{action} via eventBus on card click",
-          "kind": "event"
-        },
-        "isSelected": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether the card is selected (highlighted state)"
-        },
-        "name": {
-          "types": [
-            "string"
-          ],
-          "description": "Card name (alias for title)"
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Level indicator"
-        },
-        "maxLevel": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum level"
-        },
-        "longPressEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event emitted on long press: UI:{longPressEvent}"
-        },
-        "longPressPayload": {
-          "types": [
-            "object"
-          ],
-          "description": "Additional payload for long-press events"
+          "description": "Shadow size override",
+          "enumValues": [
+            "none",
+            "sm",
+            "md",
+            "lg"
+          ]
         }
       }
     },
@@ -6334,33 +6137,40 @@
       "propsSchema": {
         "action": {
           "types": [
+            "string"
+          ],
+          "description": "Declarative event name. When set, clicking the FAB emits `UI:{action}` via the event bus and (if also provided) calls `onClick`. Mirrors the Button atom's `action` prop so schemas can write `{ type: \"floating-action-button\", action: \"INIT\" }` uniformly.",
+          "kind": "event"
+        },
+        "actionPayload": {
+          "types": [
             "object"
           ],
-          "description": "Single action (if only one action, button will directly trigger onClick)"
+          "description": "Payload to include with the dispatched action event."
         },
         "actions": {
           "types": [
             "array"
           ],
-          "description": "Multiple actions (if provided, button will expand to show all actions)"
+          "description": "Multiple actions. When provided, the button expands to show all of them."
         },
         "icon": {
           "types": [
             "string"
           ],
-          "description": "Icon name (simplified API for pattern compatibility)"
+          "description": "Icon name (resolves to a Lucide icon by PascalCase / kebab-case lookup)."
         },
         "onClick": {
           "types": [
             "function"
           ],
-          "description": "Click handler (simplified API for pattern compatibility)"
+          "description": "Optional direct click handler. Runs after the action emit when both are present."
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Variant (simplified API for pattern compatibility)",
+          "description": "Visual variant.",
           "enumValues": [
             "primary",
             "secondary",
@@ -6368,6 +6178,12 @@
             "danger",
             "warning"
           ]
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional label shown via `aria-label` (visually hidden in single-action mode; rendered as a tooltip beside expanded actions in multi-action mode)."
         },
         "position": {
           "types": [
@@ -8811,12 +8627,6 @@
             "array"
           ],
           "description": "Actions"
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         },
         "isLoading": {
           "types": [
@@ -14489,23 +14299,29 @@
       "propsSchema": {
         "value": {
           "types": [
+            "number",
             "string"
           ],
-          "description": "Target value to count to (e.g. \"500+\", \"99.9%\", \"3x\")",
-          "required": true
-        },
-        "label": {
-          "types": [
-            "string"
-          ],
-          "description": "Label displayed below the number",
+          "description": "The target value to animate to. Strings are parsed numerically (e.g. \"500\", \"99.9\").",
           "required": true
         },
         "duration": {
           "types": [
             "number"
           ],
-          "description": "Animation duration in ms"
+          "description": "Animation duration in milliseconds"
+        },
+        "prefix": {
+          "types": [
+            "string"
+          ],
+          "description": "Text to display before the number"
+        },
+        "suffix": {
+          "types": [
+            "string"
+          ],
+          "description": "Text to display after the number"
         },
         "className": {
           "types": [

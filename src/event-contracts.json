@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-24T16:16:18.298Z",
+  "exportedAt": "2026-04-25T12:02:50.943Z",
   "contracts": {
     "form": {
       "emits": [
@@ -530,7 +530,7 @@
     "stats": {
       "emits": [],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "card": {
       "emits": [
@@ -1309,6 +1309,26 @@
       ],
       "requires": [],
       "entityAware": false
+    },
+    "ui-slot-renderer": {
+      "emits": [
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
     }
   }
 }
