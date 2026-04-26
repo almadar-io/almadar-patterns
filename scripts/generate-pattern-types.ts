@@ -61,19 +61,28 @@ function mapType(types: string[]): string {
 }
 
 /**
- * Generate interface for a pattern's props
+ * Generate interface for a pattern's props.
+ *
+ * Skips any propsSchema entry named `type` — that name is reserved for
+ * the pattern discriminator (`type: '<patternName>'`). A colliding
+ * declared prop produces "Duplicate identifier 'type'" at compile
+ * time. Patterns whose underlying component genuinely needs a `type`
+ * prop should rename it (e.g. `variant`, `numberType`); the sync tool
+ * surfaces the conflict by dropping it from the typed surface.
  */
 function generatePropsInterface(patternName: string, propsSchema: Record<string, PropSchema> | undefined): string {
     if (!propsSchema || Object.keys(propsSchema).length === 0) {
         return `  '${patternName}': { type: '${patternName}'; };`;
     }
 
-    const props = Object.entries(propsSchema).map(([propName, schema]) => {
-        const optional = schema.required ? '' : '?';
-        const tsType = mapType(schema.types);
-        const comment = schema.description ? `/** ${schema.description} */\n    ` : '';
-        return `    ${comment}${propName}${optional}: ${tsType};`;
-    });
+    const props = Object.entries(propsSchema)
+        .filter(([propName]) => propName !== 'type')
+        .map(([propName, schema]) => {
+            const optional = schema.required ? '' : '?';
+            const tsType = mapType(schema.types);
+            const comment = schema.description ? `/** ${schema.description} */\n    ` : '';
+            return `    ${comment}${propName}${optional}: ${tsType};`;
+        });
 
     return `  '${patternName}': {\n    type: '${patternName}';\n${props.join('\n')}\n  };`;
 }
