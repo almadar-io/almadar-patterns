@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-04-29T03:10:17.299Z",
+  "exportedAt": "2026-04-30T01:05:00.343Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -13277,12 +13277,6 @@
           "description": "Field definitions for rendering each card",
           "required": true
         },
-        "columns": {
-          "types": [
-            "array"
-          ],
-          "description": "Alias for fields (compiler generates `columns` for field definitions)"
-        },
         "itemActions": {
           "types": [
             "array"
@@ -13417,12 +13411,6 @@
           ],
           "description": "Field definitions for rendering each row",
           "required": true
-        },
-        "columns": {
-          "types": [
-            "array"
-          ],
-          "description": "Alias for fields (compiler may generate `columns` for field definitions)"
         },
         "itemActions": {
           "types": [
