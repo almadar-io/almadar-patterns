@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-03T14:38:51.012Z",
+  "exportedAt": "2026-05-03T17:38:21.517Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -14724,7 +14724,31 @@
           "types": [
             "number"
           ],
-          "description": "Maximum value (renders as \"value / max\")"
+          "description": "Optional denominator. >0 renders \"value / max\"; 0 or omitted hides the divider."
+        },
+        "target": {
+          "types": [
+            "number"
+          ],
+          "description": "Optional progress target. >0 renders a progress bar at value/target."
+        },
+        "trend": {
+          "types": [
+            "number"
+          ],
+          "description": "Signed delta vs previous period. >0 renders ↑ green, <0 renders ↓ red, 0 hides."
+        },
+        "prefix": {
+          "types": [
+            "string"
+          ],
+          "description": "Prefix prepended to the formatted value (e.g. \"≈ \")."
+        },
+        "suffix": {
+          "types": [
+            "string"
+          ],
+          "description": "Suffix appended to the formatted value (e.g. \" /mo\", \" ms\")."
         },
         "icon": {
           "types": [
