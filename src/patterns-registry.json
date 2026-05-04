@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-04T04:46:21.886Z",
+  "exportedAt": "2026-05-04T08:21:23.048Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -3976,9 +3976,10 @@
         },
         "label": {
           "types": [
-            "string"
+            "string",
+            "number"
           ],
-          "description": "Badge label text (alternative to children for schema-driven rendering)"
+          "description": "Badge label text (alternative to children for schema-driven rendering). Numeric values are auto-coerced to string for rendering — common case is unread counts, error counts, status codes, etc."
         },
         "icon": {
           "types": [
@@ -14711,8 +14712,13 @@
           "types": [
             "array"
           ],
-          "description": "Field definitions for rendering each card",
-          "required": true
+          "description": "Field definitions for rendering each card. The pattern contract in `@almadar/patterns` documents `columns` as the wire-format alias the compiler emits — both names resolve to the same shape here. Pass either."
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "description": "Alias for `fields` — the compiler emits `columns` for field defs."
         },
         "itemActions": {
           "types": [
@@ -14868,8 +14874,13 @@
           "types": [
             "array"
           ],
-          "description": "Field definitions for rendering each row",
-          "required": true
+          "description": "Field definitions for rendering each row. The pattern contract in `@almadar/patterns` documents `columns` as the wire-format alias the compiler emits — both names resolve to the same shape here. Pass either."
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "description": "Alias for `fields` — the compiler emits `columns` for field defs."
         },
         "itemActions": {
           "types": [
