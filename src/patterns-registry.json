@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-04T08:21:23.048Z",
+  "exportedAt": "2026-05-04T18:38:26.384Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8711,7 +8711,7 @@
           "types": [
             "array"
           ],
-          "description": "Navigation items"
+          "description": "Navigation items. Apps that need a Settings page should add it as a navItems entry, not depend on baked-in chrome."
         },
         "user": {
           "types": [
@@ -8723,19 +8723,74 @@
           "types": [
             "node"
           ],
-          "description": "Header actions (notifications, etc.)"
+          "description": "Header actions (extra slots beyond bell/search/theme)."
         },
         "showSearch": {
           "types": [
             "boolean"
           ],
-          "description": "Show search in header"
+          "description": "Show the top-bar search box. Default `false` — opt in by setting `searchEvent` (any truthy value implies showSearch) or this flag."
+        },
+        "searchEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative search event — fires `UI:{searchEvent}` on the bus when the user submits the search box (Enter key). Setting this implies `showSearch=true`. Use `onSearchSubmit` for direct React usage instead.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "value",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "onSearchSubmit": {
+          "types": [
+            "function"
+          ],
+          "description": "React-side search submit callback. Used when the host wires the layout directly (not via render-ui pattern resolution).",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
+        },
+        "notifications": {
+          "types": [
+            "array"
+          ],
+          "description": "Notification list. Pass an empty array to show the bell with no badge; omit / pass null to hide the bell entirely."
+        },
+        "notificationClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Declarative bell click event — fires `UI:{notificationClickEvent}` on the bus with an empty payload when the user clicks the bell.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "onNotificationClick": {
+          "types": [
+            "function"
+          ],
+          "description": "React-side bell click callback.",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "showThemeToggle": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show the theme toggle button in the header. Default `true` — universally useful for a11y / dark mode."
         },
         "sidebarFooter": {
           "types": [
             "node"
           ],
-          "description": "Custom sidebar footer"
+          "description": "Custom sidebar footer (optional). When omitted, the sidebar has no footer — apps that need Settings/etc. add them via navItems."
         },
         "onSignOut": {
           "types": [
