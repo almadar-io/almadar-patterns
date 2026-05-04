@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-04T03:15:30.902Z",
+  "exportedAt": "2026-05-04T04:46:21.886Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -312,7 +312,18 @@
           "types": [
             "function"
           ],
-          "description": "renderItem prop"
+          "description": "renderItem prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "children": {
           "types": [
@@ -750,7 +761,9 @@
           "types": [
             "string"
           ],
-          "description": "Event to emit when back is clicked (default: BACK)"
+          "description": "Event to emit when back is clicked (default: BACK)",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "breadcrumbs": {
           "types": [
@@ -804,7 +817,14 @@
           "types": [
             "function"
           ],
-          "description": "onTabChange prop"
+          "description": "onTabChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "children": {
           "types": [
@@ -1004,7 +1024,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when any field value changes"
+          "description": "Callback when any field value changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "change",
+              "type": "object"
+            }
+          ]
         },
         "configPath": {
           "types": [
@@ -1204,7 +1231,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when any field value changes"
+          "description": "Callback when any field value changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "change",
+              "type": "object"
+            }
+          ]
         },
         "configPath": {
           "types": [
@@ -1240,7 +1274,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when search value changes"
+          "description": "Callback when search value changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "debounceMs": {
           "types": [
@@ -1319,13 +1360,26 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a filter changes - for EntityStore integration"
+          "description": "Callback when a filter changes - for EntityStore integration",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "field",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "onClearAll": {
           "types": [
             "function"
           ],
-          "description": "Callback to clear all filters"
+          "description": "Callback to clear all filters",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -1403,13 +1457,28 @@
           "types": [
             "function"
           ],
-          "description": "Callback when tab changes"
+          "description": "Callback when tab changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tabId",
+              "type": "string"
+            }
+          ]
         },
         "tabChangeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative tab change event — emits UI:{tabChangeEvent} with { tabId }"
+          "description": "Declarative tab change event — emits UI:{tabChangeEvent} with { tabId }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "tabId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "variant": {
           "types": [
@@ -1491,7 +1560,7 @@
           "types": [
             "array"
           ],
-          "description": "Step definitions (compatible with WizardContainer's WizardStep)",
+          "description": "Step definitions (compatible with WizardContainer's WizardStep). A string is shorthand for `{ id: str, title: str }`.",
           "required": true
         },
         "currentStep": {
@@ -1505,7 +1574,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a completed step is clicked"
+          "description": "Callback when a completed step is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "stepIndex",
+              "type": "number"
+            }
+          ]
         },
         "allowNavigation": {
           "types": [
@@ -1529,7 +1605,15 @@
           "types": [
             "string"
           ],
-          "description": "Declarative step click event — emits UI:{stepClickEvent} with { stepIndex }"
+          "description": "Declarative step click event — emits UI:{stepClickEvent} with { stepIndex }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "stepIndex",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -1621,19 +1705,25 @@
           "types": [
             "function"
           ],
-          "description": "Direct callback for Back (alternative to event)"
+          "description": "Direct callback for Back (alternative to event)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onNextClick": {
           "types": [
             "function"
           ],
-          "description": "Direct callback for Next (alternative to event)"
+          "description": "Direct callback for Next (alternative to event)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onCompleteClick": {
           "types": [
             "function"
           ],
-          "description": "Direct callback for Complete (alternative to event)"
+          "description": "Direct callback for Complete (alternative to event)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "compact": {
           "types": [
@@ -1679,13 +1769,22 @@
           "types": [
             "function"
           ],
-          "description": "Callback when step changes"
+          "description": "Callback when step changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "stepIndex",
+              "type": "number"
+            }
+          ]
         },
         "onComplete": {
           "types": [
             "function"
           ],
-          "description": "Callback when wizard is completed"
+          "description": "Callback when wizard is completed",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "showProgress": {
           "types": [
@@ -1759,7 +1858,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when page changes (optional - can be a no-op if not interactive)"
+          "description": "Callback when page changes (optional - can be a no-op if not interactive)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "page",
+              "type": "number"
+            }
+          ]
         },
         "showPageSize": {
           "types": [
@@ -1783,7 +1889,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when page size changes"
+          "description": "Callback when page size changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "size",
+              "type": "number"
+            }
+          ]
         },
         "showJumpToPage": {
           "types": [
@@ -1819,13 +1932,29 @@
           "types": [
             "string"
           ],
-          "description": "Declarative page change event — emits UI:{pageChangeEvent} with { page }"
+          "description": "Declarative page change event — emits UI:{pageChangeEvent} with { page }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "page",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "pageSizeChangeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative page size change event — emits UI:{pageSizeChangeEvent} with { pageSize }"
+          "description": "Declarative page size change event — emits UI:{pageSizeChangeEvent} with { pageSize }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "pageSize",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -1874,7 +2003,9 @@
           "types": [
             "function"
           ],
-          "description": "onAction prop"
+          "description": "onAction prop",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -1905,7 +2036,9 @@
           "types": [
             "string"
           ],
-          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
+          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -1970,7 +2103,9 @@
           "types": [
             "function"
           ],
-          "description": "onRetry prop"
+          "description": "onRetry prop",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -1982,7 +2117,9 @@
           "types": [
             "string"
           ],
-          "description": "Declarative retry event — emits UI:{retryEvent} via eventBus when retry button is clicked"
+          "description": "Declarative retry event — emits UI:{retryEvent} via eventBus when retry button is clicked",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -2038,7 +2175,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when toast is dismissed"
+          "description": "Callback when toast is dismissed",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "actionLabel": {
           "types": [
@@ -2050,7 +2189,9 @@
           "types": [
             "function"
           ],
-          "description": "Action button click handler"
+          "description": "Action button click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "badge": {
           "types": [
@@ -2069,13 +2210,17 @@
           "types": [
             "string"
           ],
-          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when toast is dismissed"
+          "description": "Declarative dismiss event — emits UI:{dismissEvent} via eventBus when toast is dismissed",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "actionEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked"
+          "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -2258,7 +2403,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when modal should close (injected by slot wrapper)"
+          "description": "Callback when modal should close (injected by slot wrapper)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "title": {
           "types": [
@@ -2319,7 +2466,9 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when modal should close"
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when modal should close",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "swipeDownToClose": {
           "types": [
@@ -2350,7 +2499,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when drawer should close (injected by slot wrapper)"
+          "description": "Callback when drawer should close (injected by slot wrapper)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "title": {
           "types": [
@@ -2439,13 +2590,17 @@
           "types": [
             "function"
           ],
-          "description": "Callback when dialog is closed (injected by slot wrapper)"
+          "description": "Callback when dialog is closed (injected by slot wrapper)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onConfirm": {
           "types": [
             "function"
           ],
-          "description": "Callback when action is confirmed (injected by slot wrapper)"
+          "description": "Callback when action is confirmed (injected by slot wrapper)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "title": {
           "types": [
@@ -3249,7 +3404,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when an option is selected (legacy callback, prefer event bus)"
+          "description": "Called when an option is selected (legacy callback, prefer event bus)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "option",
+              "type": "object"
+            }
+          ]
         },
         "eventBus": {
           "types": [
@@ -3323,7 +3485,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when an action is selected (legacy callback, prefer event bus)"
+          "description": "Called when an action is selected (legacy callback, prefer event bus)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "action",
+              "type": "object"
+            }
+          ]
         },
         "eventBus": {
           "types": [
@@ -3406,37 +3575,82 @@
           "types": [
             "function"
           ],
-          "description": "Called when a slot is selected"
+          "description": "Called when a slot is selected",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "onUseItem": {
           "types": [
             "function"
           ],
-          "description": "Called when an item is used (double-click or Enter)"
+          "description": "Called when an item is used (double-click or Enter)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            }
+          ]
         },
         "onDropItem": {
           "types": [
             "function"
           ],
-          "description": "Called when an item is dropped"
+          "description": "Called when an item is dropped",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            }
+          ]
         },
         "selectSlotEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{selectSlotEvent} with { index } when a slot is selected"
+          "description": "Declarative event: emits UI:{selectSlotEvent} with { index } when a slot is selected",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "index",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "useItemEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{useItemEvent} with { item } when an item is used"
+          "description": "Declarative event: emits UI:{useItemEvent} with { item: InventoryItem } when an item is used",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "item",
+              "type": "object",
+              "required": true
+            }
+          ]
         },
         "dropItemEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{dropItemEvent} with { item } when an item is dropped"
+          "description": "Declarative event: emits UI:{dropItemEvent} with { item: InventoryItem } when an item is dropped",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "item",
+              "type": "object",
+              "required": true
+            }
+          ]
         },
         "showTooltips": {
           "types": [
@@ -3496,37 +3710,60 @@
           "types": [
             "function"
           ],
-          "description": "Called when text animation completes"
+          "description": "Called when text animation completes",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onChoice": {
           "types": [
             "function"
           ],
-          "description": "Called when a choice is selected"
+          "description": "Called when a choice is selected",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "choice",
+              "type": "object"
+            }
+          ]
         },
         "onAdvance": {
           "types": [
             "function"
           ],
-          "description": "Called when dialogue is advanced (no choices)"
+          "description": "Called when dialogue is advanced (no choices)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "completeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{completeEvent} when text animation completes"
+          "description": "Declarative event: emits UI:{completeEvent} when text animation completes",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "choiceEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{choiceEvent} with { choice } when a choice is selected"
+          "description": "Declarative event: emits UI:{choiceEvent} with { choice: DialogueChoice } when a choice is selected",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "choice",
+              "type": "object",
+              "required": true
+            }
+          ]
         },
         "advanceEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{advanceEvent} when dialogue is advanced"
+          "description": "Declarative event: emits UI:{advanceEvent} when dialogue is advanced",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "className": {
           "types": [
@@ -3834,7 +4071,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "action": {
           "types": [
@@ -4211,7 +4450,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when clear button is clicked"
+          "description": "Callback when clear button is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "options": {
           "types": [
@@ -4434,7 +4675,14 @@
           "types": [
             "function"
           ],
-          "description": "onChange prop"
+          "description": "onChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "checked",
+              "type": "boolean"
+            }
+          ]
         },
         "disabled": {
           "types": [
@@ -4550,13 +4798,17 @@
           "types": [
             "function"
           ],
-          "description": "onDismiss prop"
+          "description": "onDismiss prop",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onClose": {
           "types": [
             "function"
           ],
-          "description": "onClose prop"
+          "description": "onClose prop",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "actions": {
           "types": [
@@ -4798,7 +5050,18 @@
           "types": [
             "function"
           ],
-          "description": "Callback when item opens/closes"
+          "description": "Callback when item opens/closes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "itemId",
+              "type": "string"
+            },
+            {
+              "name": "isOpen",
+              "type": "boolean"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -4810,7 +5073,20 @@
           "types": [
             "string"
           ],
-          "description": "Declarative toggle event — emits UI:{toggleEvent} with { itemId, isOpen }"
+          "description": "Declarative toggle event — emits UI:{toggleEvent} with { itemId, isOpen }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "itemId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "isOpen",
+              "type": "boolean",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -4989,7 +5265,18 @@
             "function"
           ],
           "description": "Render function for each item",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "minItems": {
           "types": [
@@ -5037,19 +5324,43 @@
           "types": [
             "function"
           ],
-          "description": "Add handler"
+          "description": "Add handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onRemove": {
           "types": [
             "function"
           ],
-          "description": "Remove handler"
+          "description": "Remove handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "itemId",
+              "type": "string"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "onReorder": {
           "types": [
             "function"
           ],
-          "description": "Reorder handler"
+          "description": "Reorder handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "fromIndex",
+              "type": "number"
+            },
+            {
+              "name": "toIndex",
+              "type": "number"
+            }
+          ]
         },
         "trackAddedInState": {
           "types": [
@@ -5181,7 +5492,14 @@
           "types": [
             "function"
           ],
-          "description": "onClick prop"
+          "description": "onClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "e",
+              "type": "object"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -5311,13 +5629,27 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "e",
+              "type": "object"
+            }
+          ]
         },
         "onKeyDown": {
           "types": [
             "function"
           ],
-          "description": "Keyboard handler"
+          "description": "Keyboard handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "e",
+              "type": "object"
+            }
+          ]
         },
         "role": {
           "types": [
@@ -5384,19 +5716,25 @@
           "types": [
             "function"
           ],
-          "description": "Callback when highlight is clicked"
+          "description": "Callback when highlight is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onMouseEnter": {
           "types": [
             "function"
           ],
-          "description": "Callback when highlight is hovered"
+          "description": "Callback when highlight is hovered",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onMouseLeave": {
           "types": [
             "function"
           ],
-          "description": "Callback when hover ends"
+          "description": "Callback when hover ends",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "annotationId": {
           "types": [
@@ -5664,13 +6002,17 @@
           "types": [
             "function"
           ],
-          "description": "Called when button is pressed"
+          "description": "Called when button is pressed",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onRelease": {
           "types": [
             "function"
           ],
-          "description": "Called when button is released"
+          "description": "Called when button is released",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "pressEvent": {
           "types": [
@@ -5932,7 +6274,9 @@
           "types": [
             "function"
           ],
-          "description": "Optional onClick handler"
+          "description": "Optional onClick handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "action": {
           "types": [
@@ -6176,7 +6520,9 @@
           "types": [
             "function"
           ],
-          "description": "Optional direct click handler. Runs after the action emit when both are present."
+          "description": "Optional direct click handler. Runs after the action emit when both are present.",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "variant": {
           "types": [
@@ -6297,7 +6643,9 @@
           "types": [
             "function"
           ],
-          "description": "Toggle collapse handler (makes header clickable)"
+          "description": "Toggle collapse handler (makes header clickable)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "badge": {
           "types": [
@@ -6398,7 +6746,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when value changes"
+          "description": "Callback when value changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "options": {
           "types": [
@@ -6506,7 +6861,9 @@
             "function"
           ],
           "description": "On close handler",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "width": {
           "types": [
@@ -6540,7 +6897,9 @@
           "types": [
             "string"
           ],
-          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when panel should close"
+          "description": "Declarative close event — emits UI:{closeEvent} via eventBus when panel should close",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -6582,13 +6941,22 @@
           "types": [
             "function"
           ],
-          "description": "Dismiss handler"
+          "description": "Dismiss handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onNavigateToField": {
           "types": [
             "function"
           ],
-          "description": "Navigate to the field that caused violation"
+          "description": "Navigate to the field that caused violation",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "fieldId",
+              "type": "string"
+            }
+          ]
         },
         "compact": {
           "types": [
@@ -6626,13 +6994,37 @@
           "types": [
             "function"
           ],
-          "description": "Called when a button is pressed/released"
+          "description": "Called when a button is pressed/released",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "pressed",
+              "type": "boolean"
+            }
+          ]
         },
         "actionEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event name emitted on action via useEventBus"
+          "description": "Declarative event name emitted on action via useEventBus",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "pressed",
+              "type": "boolean",
+              "required": true
+            }
+          ]
         },
         "layout": {
           "types": [
@@ -6684,13 +7076,37 @@
           "types": [
             "function"
           ],
-          "description": "Called when a direction is pressed/released"
+          "description": "Called when a direction is pressed/released",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "direction",
+              "type": "string"
+            },
+            {
+              "name": "pressed",
+              "type": "boolean"
+            }
+          ]
         },
         "directionEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event name emitted on direction press/release via useEventBus"
+          "description": "Declarative event name emitted on direction press/release via useEventBus",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "direction",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "pressed",
+              "type": "boolean",
+              "required": true
+            }
+          ]
         },
         "size": {
           "types": [
@@ -7068,7 +7484,9 @@
           "types": [
             "function"
           ],
-          "description": "Menu toggle callback"
+          "description": "Menu toggle callback",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "showSearch": {
           "types": [
@@ -7086,7 +7504,14 @@
           "types": [
             "function"
           ],
-          "description": "Search callback"
+          "description": "Search callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "userAvatar": {
           "types": [
@@ -7104,7 +7529,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when user avatar is clicked"
+          "description": "Callback when user avatar is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "actions": {
           "types": [
@@ -7132,7 +7559,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when logo/brand is clicked"
+          "description": "Callback when logo/brand is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -7374,7 +7803,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -7591,7 +8022,15 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted when collapse state changes, payload: { collapsed: boolean }"
+          "description": "Event emitted when collapse state changes, payload: { collapsed: boolean }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "collapsed",
+              "type": "boolean",
+              "required": true
+            }
+          ]
         },
         "hideCollapseButton": {
           "types": [
@@ -7609,13 +8048,17 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted when close button is clicked"
+          "description": "Event emitted when close button is clicked",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "logoClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event emitted when logo/brand is clicked"
+          "description": "Event emitted when logo/brand is clicked",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -7889,7 +8332,14 @@
           "types": [
             "function"
           ],
-          "description": "Row actions menu items"
+          "description": "Row actions menu items",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "row",
+              "type": "object"
+            }
+          ]
         },
         "emptyMessage": {
           "types": [
@@ -8079,7 +8529,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when tab changes"
+          "description": "Callback when tab changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tabId",
+              "type": "string"
+            }
+          ]
         },
         "position": {
           "types": [
@@ -8170,19 +8627,25 @@
           "types": [
             "function"
           ],
-          "description": "Called when increment is clicked"
+          "description": "Called when increment is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onDecrement": {
           "types": [
             "function"
           ],
-          "description": "Called when decrement is clicked"
+          "description": "Called when decrement is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onReset": {
           "types": [
             "function"
           ],
-          "description": "Called when reset is clicked"
+          "description": "Called when reset is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "title": {
           "types": [
@@ -8277,7 +8740,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when user clicks sign out (optional - uses auth context signOut if not provided)"
+          "description": "Callback when user clicks sign out (optional - uses auth context signOut if not provided)",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "children": {
           "types": [
@@ -8850,7 +9315,15 @@
           "types": [
             "string"
           ],
-          "description": "Event name emitted when selection changes (emitted as UI:{selectionEvent})"
+          "description": "Event name emitted when selection changes (emitted as UI:{selectionEvent})",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "selection",
+              "type": "array",
+              "required": true
+            }
+          ]
         },
         "showUpload": {
           "types": [
@@ -8935,19 +9408,36 @@
           "types": [
             "function"
           ],
-          "description": "Callback when signature changes"
+          "description": "Callback when signature changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "dataUrl",
+              "type": "string"
+            }
+          ]
         },
         "signEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on sign"
+          "description": "Event to emit on sign",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "signature",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "clearEvent": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on clear"
+          "description": "Event to emit on clear",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "entity": {
           "types": [
@@ -9156,13 +9646,28 @@
           "types": [
             "function"
           ],
-          "description": "On node click"
+          "description": "On node click",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "node",
+              "type": "object"
+            }
+          ]
         },
         "nodeClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Node click event"
+          "description": "Node click event",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "layout": {
           "types": [
@@ -9370,13 +9875,17 @@
           "types": [
             "function"
           ],
-          "description": "Callback when the effect animation completes"
+          "description": "Callback when the effect animation completes",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "completeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{completeEvent} when the effect animation completes"
+          "description": "Declarative event: emits UI:{completeEvent} when the effect animation completes",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "className": {
           "types": [
@@ -9503,49 +10012,116 @@
           "types": [
             "function"
           ],
-          "description": "--- Event handlers (legacy callbacks — prefer declarative event string props below) ---"
+          "description": "--- Event handlers (legacy callbacks — prefer declarative event string props below) ---",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            }
+          ]
         },
         "onUnitClick": {
           "types": [
             "function"
           ],
-          "description": "onUnitClick prop"
+          "description": "onUnitClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            }
+          ]
         },
         "onTileHover": {
           "types": [
             "function"
           ],
-          "description": "onTileHover prop"
+          "description": "onTileHover prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            }
+          ]
         },
         "onTileLeave": {
           "types": [
             "function"
           ],
-          "description": "onTileLeave prop"
+          "description": "onTileLeave prop",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "tileClickEvent": {
           "types": [
             "string"
           ],
-          "description": "--- Declarative event props ---"
+          "description": "--- Declarative event props ---",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "unitClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{unitClickEvent} with { unitId } on unit click"
+          "description": "Declarative event: emits UI:{unitClickEvent} with { unitId } on unit click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "unitId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "tileHoverEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{tileHoverEvent} with { x, y } on tile hover"
+          "description": "Declarative event: emits UI:{tileHoverEvent} with { x, y } on tile hover",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "tileLeaveEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: emits UI:{tileLeaveEvent} with {} on tile leave"
+          "description": "Declarative event: emits UI:{tileLeaveEvent} with {} on tile leave",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "scale": {
           "types": [
@@ -9605,25 +10181,53 @@
           "types": [
             "function"
           ],
-          "description": "--- Asset resolution (project-agnostic) ---"
+          "description": "--- Asset resolution (project-agnostic) ---",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "terrain",
+              "type": "string"
+            }
+          ]
         },
         "getFeatureSprite": {
           "types": [
             "function"
           ],
-          "description": "Resolve feature sprite URL from feature type key"
+          "description": "Resolve feature sprite URL from feature type key",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "featureType",
+              "type": "string"
+            }
+          ]
         },
         "getUnitSprite": {
           "types": [
             "function"
           ],
-          "description": "Resolve unit static sprite URL"
+          "description": "Resolve unit static sprite URL",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unit",
+              "type": "object"
+            }
+          ]
         },
         "resolveUnitFrame": {
           "types": [
             "function"
           ],
-          "description": "Resolve animated sprite sheet frame for a unit"
+          "description": "Resolve animated sprite sheet frame for a unit",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            }
+          ]
         },
         "effectSpriteUrls": {
           "types": [
@@ -9635,7 +10239,22 @@
           "types": [
             "function"
           ],
-          "description": "Callback to draw canvas effects after units (canvas-specific: cannot be declarative)"
+          "description": "Callback to draw canvas effects after units (canvas-specific: cannot be declarative)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            },
+            {
+              "name": "animTime",
+              "type": "number"
+            },
+            {
+              "name": "getImage",
+              "type": "function"
+            }
+          ]
         },
         "hasActiveEffects": {
           "types": [
@@ -9812,61 +10431,151 @@
           "types": [
             "function"
           ],
-          "description": "-- Slots --"
+          "description": "-- Slots --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "sidebar": {
           "types": [
             "function"
           ],
-          "description": "Sidebar content (combat log, unit roster, etc.)"
+          "description": "Sidebar content (combat log, unit roster, etc.)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "actions": {
           "types": [
             "function"
           ],
-          "description": "Floating action buttons"
+          "description": "Floating action buttons",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "overlay": {
           "types": [
             "function"
           ],
-          "description": "Floating overlays above the canvas (damage popups, tooltips)"
+          "description": "Floating overlays above the canvas (damage popups, tooltips)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "gameOverOverlay": {
           "types": [
             "function"
           ],
-          "description": "Game-over screen overlay"
+          "description": "Game-over screen overlay",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "onAttack": {
           "types": [
             "function"
           ],
-          "description": "-- Callbacks --"
+          "description": "-- Callbacks --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "attacker",
+              "type": "object"
+            },
+            {
+              "name": "target",
+              "type": "object"
+            },
+            {
+              "name": "damage",
+              "type": "number"
+            }
+          ]
         },
         "onGameEnd": {
           "types": [
             "function"
           ],
-          "description": "Called when battle ends"
+          "description": "Called when battle ends",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "result",
+              "type": "string"
+            }
+          ]
         },
         "onUnitMove": {
           "types": [
             "function"
           ],
-          "description": "Called after a unit moves"
+          "description": "Called after a unit moves",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unit",
+              "type": "object"
+            },
+            {
+              "name": "to",
+              "type": "object"
+            }
+          ]
         },
         "calculateDamage": {
           "types": [
             "function"
           ],
-          "description": "Custom combat damage calculator"
+          "description": "Custom combat damage calculator",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "attacker",
+              "type": "object"
+            },
+            {
+              "name": "target",
+              "type": "object"
+            }
+          ]
         },
         "onDrawEffects": {
           "types": [
             "function"
           ],
-          "description": "-- Canvas pass-through --"
+          "description": "-- Canvas pass-through --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            },
+            {
+              "name": "timestamp",
+              "type": "number"
+            }
+          ]
         },
         "hasActiveEffects": {
           "types": [
@@ -9884,49 +10593,109 @@
           "types": [
             "function"
           ],
-          "description": "resolveUnitFrame prop"
+          "description": "resolveUnitFrame prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            }
+          ]
         },
         "tileClickEvent": {
           "types": [
             "string"
           ],
-          "description": "-- Declarative event props --"
+          "description": "-- Declarative event props --",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "unitClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{unitClickEvent} with { unitId } on unit click"
+          "description": "Emits UI:{unitClickEvent} with { unitId } on unit click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "unitId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "endTurnEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{endTurnEvent} with {} on end turn"
+          "description": "Emits UI:{endTurnEvent} with {} on end turn",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "cancelEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{cancelEvent} with {} on cancel"
+          "description": "Emits UI:{cancelEvent} with {} on cancel",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "gameEndEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{gameEndEvent} with { result } on game end"
+          "description": "Emits UI:{gameEndEvent} with { result: 'victory' | 'defeat' } on game end",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "result",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "playAgainEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{playAgainEvent} with {} on play again / reset"
+          "description": "Emits UI:{playAgainEvent} with {} on play again / reset",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "attackEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{attackEvent} with { attackerId, targetId, damage } on attack"
+          "description": "Emits UI:{attackEvent} with { attackerId, targetId, damage } on attack",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "attackerId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "targetId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "damage",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "className": {
           "types": [
@@ -9964,61 +10733,158 @@
           "types": [
             "function"
           ],
-          "description": "-- Render-prop slots --"
+          "description": "-- Render-prop slots --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "sidePanel": {
           "types": [
             "function"
           ],
-          "description": "Side panel content (buildings list, recruit tab, garrison tab)"
+          "description": "Side panel content (buildings list, recruit tab, garrison tab)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "overlay": {
           "types": [
             "function"
           ],
-          "description": "Canvas overlay (hover tooltips, etc.)"
+          "description": "Canvas overlay (hover tooltips, etc.)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "footer": {
           "types": [
             "function"
           ],
-          "description": "Bottom bar (income summary, etc.)"
+          "description": "Bottom bar (income summary, etc.)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "onFeatureClick": {
           "types": [
             "function"
           ],
-          "description": "-- Callback overrides --"
+          "description": "-- Callback overrides --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            }
+          ]
         },
         "onUnitClick": {
           "types": [
             "function"
           ],
-          "description": "Called when a unit is clicked"
+          "description": "Called when a unit is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unit",
+              "type": "object"
+            }
+          ]
         },
         "onTileClick": {
           "types": [
             "function"
           ],
-          "description": "Called when any tile is clicked"
+          "description": "Called when any tile is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            }
+          ]
         },
         "featureClickEvent": {
           "types": [
             "string"
           ],
-          "description": "-- Declarative event props --"
+          "description": "-- Declarative event props --",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "featureId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "featureType",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "unitClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event name to emit via event bus when a unit is clicked (emits UI:{unitClickEvent})"
+          "description": "Event name to emit via event bus when a unit is clicked (emits UI:{unitClickEvent})",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "unitId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "tileClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event name to emit via event bus when a tile is clicked (emits UI:{tileClickEvent})"
+          "description": "Event name to emit via event bus when a tile is clicked (emits UI:{tileClickEvent})",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "className": {
           "types": [
@@ -10087,85 +10953,242 @@
           "types": [
             "function"
           ],
-          "description": "Custom movement range validator"
+          "description": "Custom movement range validator",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "from",
+              "type": "object"
+            },
+            {
+              "name": "to",
+              "type": "object"
+            },
+            {
+              "name": "range",
+              "type": "number"
+            }
+          ]
         },
         "heroSelectEvent": {
           "types": [
             "string"
           ],
-          "description": "-- Declarative event props --"
+          "description": "-- Declarative event props --",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "heroId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "heroMoveEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{heroMoveEvent} with { heroId, toX, toY }"
+          "description": "Emits UI:{heroMoveEvent} with { heroId, toX, toY }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "heroId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "toX",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "toY",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "battleEncounterEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{battleEncounterEvent} with { attackerId, defenderId }"
+          "description": "Emits UI:{battleEncounterEvent} with { attackerId, defenderId }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "attackerId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "defenderId",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "featureEnterEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{featureEnterEvent} with { heroId, feature, hex }"
+          "description": "Emits UI:{featureEnterEvent} with { heroId, feature, hex }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "heroId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "feature",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "hex",
+              "type": "object",
+              "required": true
+            }
+          ]
         },
         "tileClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{tileClickEvent} with { x, y }"
+          "description": "Emits UI:{tileClickEvent} with { x, y }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "header": {
           "types": [
             "function"
           ],
-          "description": "-- Slots --"
+          "description": "-- Slots --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "sidePanel": {
           "types": [
             "function"
           ],
-          "description": "Side panel (hero detail, hero lists, etc.)"
+          "description": "Side panel (hero detail, hero lists, etc.)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "overlay": {
           "types": [
             "function"
           ],
-          "description": "Canvas overlay (tooltips, popups)"
+          "description": "Canvas overlay (tooltips, popups)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "footer": {
           "types": [
             "function"
           ],
-          "description": "Footer"
+          "description": "Footer",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            }
+          ]
         },
         "onHeroSelect": {
           "types": [
             "function"
           ],
-          "description": "-- Callbacks --"
+          "description": "-- Callbacks --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "heroId",
+              "type": "string"
+            }
+          ]
         },
         "onHeroMove": {
           "types": [
             "function"
           ],
-          "description": "onHeroMove prop"
+          "description": "onHeroMove prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "heroId",
+              "type": "string"
+            },
+            {
+              "name": "toX",
+              "type": "number"
+            },
+            {
+              "name": "toY",
+              "type": "number"
+            }
+          ]
         },
         "onBattleEncounter": {
           "types": [
             "function"
           ],
-          "description": "Called when hero clicks an enemy hero tile"
+          "description": "Called when hero clicks an enemy hero tile",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "attackerId",
+              "type": "string"
+            },
+            {
+              "name": "defenderId",
+              "type": "string"
+            }
+          ]
         },
         "onFeatureEnter": {
           "types": [
             "function"
           ],
-          "description": "Called when hero enters a feature hex (castle, resource, etc.)"
+          "description": "Called when hero enters a feature hex (castle, resource, etc.)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "heroId",
+              "type": "string"
+            },
+            {
+              "name": "hex",
+              "type": "object"
+            }
+          ]
         },
         "diamondTopY": {
           "types": [
@@ -10189,7 +11212,14 @@
           "types": [
             "function"
           ],
-          "description": "resolveUnitFrame prop"
+          "description": "resolveUnitFrame prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            }
+          ]
         }
       }
     },
@@ -10223,7 +11253,9 @@
             "function"
           ],
           "description": "onToggle prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "children": {
           "types": [
@@ -10293,13 +11325,22 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onHover": {
           "types": [
             "function"
           ],
-          "description": "Hover handler"
+          "description": "Hover handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "hovered",
+              "type": "boolean"
+            }
+          ]
         },
         "fallbackGeometry": {
           "types": [
@@ -10373,13 +11414,27 @@
           "types": [
             "function"
           ],
-          "description": "Called when feature is clicked"
+          "description": "Called when feature is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            }
+          ]
         },
         "onFeatureHover": {
           "types": [
             "function"
           ],
-          "description": "Called when feature is hovered"
+          "description": "Called when feature is hovered",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            }
+          ]
         },
         "selectedFeatureIds": {
           "types": [
@@ -10447,13 +11502,27 @@
           "types": [
             "function"
           ],
-          "description": "Called when tile is clicked"
+          "description": "Called when tile is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tile",
+              "type": "object"
+            }
+          ]
         },
         "onTileHover": {
           "types": [
             "function"
           ],
-          "description": "Called when tile is hovered"
+          "description": "Called when tile is hovered",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tile",
+              "type": "object"
+            }
+          ]
         },
         "selectedTileIds": {
           "types": [
@@ -10521,13 +11590,31 @@
           "types": [
             "function"
           ],
-          "description": "Called when unit is clicked"
+          "description": "Called when unit is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unit",
+              "type": "object"
+            }
+          ]
         },
         "onAnimationStateChange": {
           "types": [
             "function"
           ],
-          "description": "Called when unit animation state changes"
+          "description": "Called when unit animation state changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": "string"
+            }
+          ]
         },
         "animationSpeed": {
           "types": [
@@ -10627,7 +11714,18 @@
           "types": [
             "function"
           ],
-          "description": "Called when an error is caught (for logging/telemetry)"
+          "description": "Called when an error is caught (for logging/telemetry)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "error",
+              "type": "object"
+            },
+            {
+              "name": "errorInfo",
+              "type": "object"
+            }
+          ]
         }
       }
     },
@@ -10891,7 +11989,14 @@
           "types": [
             "function"
           ],
-          "description": "-- Drag and drop --"
+          "description": "-- Drag and drop --",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            }
+          ]
         },
         "draggable": {
           "types": [
@@ -10903,7 +12008,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when drag starts from this slot"
+          "description": "Called when drag starts from this slot",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            }
+          ]
         },
         "feedback": {
           "types": [
@@ -10919,25 +12031,45 @@
           "types": [
             "function"
           ],
-          "description": "-- Callbacks --"
+          "description": "-- Callbacks --",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onRemove": {
           "types": [
             "function"
           ],
-          "description": "Remove handler"
+          "description": "Remove handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "clickEvent": {
           "types": [
             "string"
           ],
-          "description": "-- Declarative events --"
+          "description": "-- Declarative events --",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotNumber",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "removeEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{removeEvent} with { slotNumber }"
+          "description": "Emits UI:{removeEvent} with { slotNumber }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotNumber",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -10992,7 +12124,14 @@
           "types": [
             "function"
           ],
-          "description": "Click handler for states"
+          "description": "Click handler for states",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "state",
+              "type": "string"
+            }
+          ]
         },
         "stateStyles": {
           "types": [
@@ -11144,7 +12283,14 @@
           "types": [
             "function"
           ],
-          "description": "GAP-51: called with the new code on every keystroke when `editable === true`. Consumers should debounce + parse downstream — `CodeBlock` does not."
+          "description": "GAP-51: called with the new code on every keystroke when `editable === true`. Consumers should debounce + parse downstream — `CodeBlock` does not.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "code",
+              "type": "string"
+            }
+          ]
         },
         "errorLines": {
           "types": [
@@ -11410,7 +12556,18 @@
           "types": [
             "function"
           ],
-          "description": "Custom state node renderer — when provided, replaces the default circle nodes"
+          "description": "Custom state node renderer — when provided, replaces the default circle nodes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "state",
+              "type": "object"
+            },
+            {
+              "name": "config",
+              "type": "object"
+            }
+          ]
         }
       }
     },
@@ -11868,42 +13025,68 @@
             "function"
           ],
           "description": "onPlay prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onPause": {
           "types": [
             "function"
           ],
           "description": "onPause prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onStep": {
           "types": [
             "function"
           ],
           "description": "onStep prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onReset": {
           "types": [
             "function"
           ],
           "description": "onReset prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onSpeedChange": {
           "types": [
             "function"
           ],
           "description": "onSpeedChange prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "speed",
+              "type": "number"
+            }
+          ]
         },
         "onParameterChange": {
           "types": [
             "function"
           ],
           "description": "onParameterChange prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -11999,7 +13182,20 @@
           "types": [
             "string"
           ],
-          "description": "completeEvent prop"
+          "description": "completeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "attempts",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12025,7 +13221,20 @@
           "types": [
             "string"
           ],
-          "description": "completeEvent prop"
+          "description": "completeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "attempts",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12051,7 +13260,20 @@
           "types": [
             "string"
           ],
-          "description": "completeEvent prop"
+          "description": "completeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "attempts",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12084,13 +13306,23 @@
           "types": [
             "string"
           ],
-          "description": "Emits UI:{playEvent}"
+          "description": "Emits UI:{playEvent}",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "completeEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{completeEvent} with { success }"
+          "description": "Emits UI:{completeEvent} with { success }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12156,7 +13388,18 @@
             "function"
           ],
           "description": "Called when rules change",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "objectId",
+              "type": "string"
+            },
+            {
+              "name": "rules",
+              "type": "array"
+            }
+          ]
         },
         "disabled": {
           "types": [
@@ -12209,13 +13452,22 @@
             "function"
           ],
           "description": "Called when rule changes",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "rule",
+              "type": "object"
+            }
+          ]
         },
         "onRemove": {
           "types": [
             "function"
           ],
-          "description": "Called when rule is removed"
+          "description": "Called when rule is removed",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "disabled": {
           "types": [
@@ -12253,7 +13505,20 @@
           "types": [
             "string"
           ],
-          "description": "completeEvent prop"
+          "description": "completeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "score",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12391,14 +13656,32 @@
             "function"
           ],
           "description": "Called when an item is dropped into slot at index",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            },
+            {
+              "name": "item",
+              "type": "object"
+            }
+          ]
         },
         "onSlotRemove": {
           "types": [
             "function"
           ],
           "description": "Called when a slot is cleared",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "playing": {
           "types": [
@@ -12477,13 +13760,34 @@
           "types": [
             "string"
           ],
-          "description": "Emits UI:{playEvent} with { sequence: string[] }"
+          "description": "Emits UI:{playEvent} with { sequence: string[] }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "sequence",
+              "type": "array",
+              "required": true
+            }
+          ]
         },
         "completeEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{completeEvent} with { success: boolean }"
+          "description": "Emits UI:{completeEvent} with { success: boolean }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "sequence",
+              "type": "array",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12509,7 +13813,20 @@
           "types": [
             "string"
           ],
-          "description": "completeEvent prop"
+          "description": "completeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "attempts",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12580,13 +13897,28 @@
           "types": [
             "string"
           ],
-          "description": "Emits UI:{testEvent}"
+          "description": "Emits UI:{testEvent}",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "completeEvent": {
           "types": [
             "string"
           ],
-          "description": "Emits UI:{completeEvent} with { success, passedTests }"
+          "description": "Emits UI:{completeEvent} with { success, passedTests }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "success",
+              "type": "boolean",
+              "required": true
+            },
+            {
+              "name": "passedTests",
+              "type": "number",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -12637,7 +13969,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -12695,7 +14029,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -12766,7 +14102,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when the day is clicked"
+          "description": "Called when the day is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "date",
+              "type": "object"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -12811,7 +14154,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler on the outer wrapper"
+          "description": "Click handler on the outer wrapper",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -12838,7 +14183,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when the slot is clicked"
+          "description": "Called when the slot is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "time",
+              "type": "string"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -12893,19 +14245,44 @@
           "types": [
             "function"
           ],
-          "description": "Called when a time slot is clicked"
+          "description": "Called when a time slot is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "day",
+              "type": "object"
+            },
+            {
+              "name": "time",
+              "type": "string"
+            }
+          ]
         },
         "onDayClick": {
           "types": [
             "function"
           ],
-          "description": "Called when a day header is clicked"
+          "description": "Called when a day header is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "day",
+              "type": "object"
+            }
+          ]
         },
         "onEventClick": {
           "types": [
             "function"
           ],
-          "description": "Called when an event is clicked"
+          "description": "Called when an event is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -12917,7 +14294,20 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted on long-press of a time slot: UI:{longPressEvent} with { date, time }"
+          "description": "Event emitted on long-press of a time slot: UI:{longPressEvent} with { date, time, ...longPressPayload }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "date",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "time",
+              "type": "string",
+              "required": false
+            }
+          ]
         },
         "longPressPayload": {
           "types": [
@@ -12929,13 +14319,17 @@
           "types": [
             "string"
           ],
-          "description": "Event emitted on swipe left (next week): UI:{swipeLeftEvent}"
+          "description": "Event emitted on swipe left (next week): UI:{swipeLeftEvent}",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "swipeRightEvent": {
           "types": [
             "string"
           ],
-          "description": "Event emitted on swipe right (prev week): UI:{swipeRightEvent}"
+          "description": "Event emitted on swipe right (prev week): UI:{swipeRightEvent}",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -13003,7 +14397,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a range is selected"
+          "description": "Callback when a range is selected",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "string"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -13048,7 +14449,9 @@
           "types": [
             "function"
           ],
-          "description": "Callback when the card is clicked to flip"
+          "description": "Callback when the card is clicked to flip",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -13093,13 +14496,27 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a node is clicked"
+          "description": "Callback when a node is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "node",
+              "type": "object"
+            }
+          ]
         },
         "onNodeHover": {
           "types": [
             "function"
           ],
-          "description": "Callback when a node is hovered (null on leave)"
+          "description": "Callback when a node is hovered (null on leave)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "node",
+              "type": "object"
+            }
+          ]
         },
         "width": {
           "types": [
@@ -13230,13 +14647,27 @@
           "types": [
             "function"
           ],
-          "description": "Custom state resolver per dot index"
+          "description": "Custom state resolver per dot index",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "onDotClick": {
           "types": [
             "function"
           ],
-          "description": "Callback when a dot is clicked"
+          "description": "Callback when a dot is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -13376,13 +14807,35 @@
           "types": [
             "function"
           ],
-          "description": "Render prop for custom per-card content, typed to the grid's entity shape `T`. When provided, `fields` and `itemActions` are ignored."
+          "description": "Render prop for custom per-card content, typed to the grid's entity shape `T`. When provided, `fields` and `itemActions` are ignored.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "renderItem": {
           "types": [
             "function"
           ],
-          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync."
+          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "pageSize": {
           "types": [
@@ -13555,13 +15008,35 @@
           "types": [
             "function"
           ],
-          "description": "Render prop for custom per-item content. When provided, `fields` and `itemActions` are ignored."
+          "description": "Render prop for custom per-item content. When provided, `fields` and `itemActions` are ignored.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "renderItem": {
           "types": [
             "function"
           ],
-          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync."
+          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "pageSize": {
           "types": [
@@ -13658,25 +15133,45 @@
           "types": [
             "string"
           ],
-          "description": "Event names for keyboard controls"
+          "description": "Event names for keyboard controls",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "direction",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "rightEvent": {
           "types": [
             "string"
           ],
-          "description": "rightEvent prop"
+          "description": "rightEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "direction",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "jumpEvent": {
           "types": [
             "string"
           ],
-          "description": "jumpEvent prop"
+          "description": "jumpEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "stopEvent": {
           "types": [
             "string"
           ],
-          "description": "stopEvent prop"
+          "description": "stopEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "className": {
           "types": [
@@ -13731,25 +15226,84 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a marker is clicked (programmatic use)"
+          "description": "Callback when a marker is clicked (programmatic use)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "marker",
+              "type": "object"
+            }
+          ]
         },
         "onMapClick": {
           "types": [
             "function"
           ],
-          "description": "Callback when the map is clicked (programmatic use)"
+          "description": "Callback when the map is clicked (programmatic use)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "lat",
+              "type": "number"
+            },
+            {
+              "name": "lng",
+              "type": "number"
+            }
+          ]
         },
         "mapClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event name dispatched via event bus when the map is clicked. Payload: { latitude, longitude }"
+          "description": "Event name dispatched via event bus when the map is clicked. Payload: { latitude, longitude }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "latitude",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "longitude",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "markerClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Event name dispatched via event bus when a marker is clicked. Payload: marker data"
+          "description": "Event name dispatched via event bus when a marker is clicked. Payload: full MapMarkerData spread.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "lat",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "lng",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "label",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "category",
+              "type": "string",
+              "required": false
+            }
+          ]
         },
         "showClickedPin": {
           "types": [
@@ -13858,13 +15412,27 @@
           "types": [
             "function"
           ],
-          "description": "Direct onChange callback"
+          "description": "Direct onChange callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
         },
         "formatValue": {
           "types": [
             "function"
           ],
-          "description": "Format function for tooltip display"
+          "description": "Format function for tooltip display",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
         }
       }
     },
@@ -14021,13 +15589,22 @@
           "types": [
             "function"
           ],
-          "description": "Direct onClose callback"
+          "description": "Direct onClose callback",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onIndexChange": {
           "types": [
             "function"
           ],
-          "description": "Direct onIndexChange callback"
+          "description": "Direct onIndexChange callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -14093,7 +15670,14 @@
           "types": [
             "function"
           ],
-          "description": "Direct onChange callback"
+          "description": "Direct onChange callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
         },
         "action": {
           "types": [
@@ -14189,7 +15773,14 @@
           "types": [
             "function"
           ],
-          "description": "Direct onChange callback"
+          "description": "Direct onChange callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -14276,7 +15867,14 @@
           "types": [
             "function"
           ],
-          "description": "Direct onFiles callback"
+          "description": "Direct onFiles callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "files",
+              "type": "array"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -14461,7 +16059,9 @@
           "types": [
             "function"
           ],
-          "description": "Called when the entire text has been revealed"
+          "description": "Called when the entire text has been revealed",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -14485,13 +16085,35 @@
           "types": [
             "function"
           ],
-          "description": "Render function for each slide"
+          "description": "Render function for each slide",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "children": {
           "types": [
             "function"
           ],
-          "description": "Children-as-function fallback for renderItem (compiler compatibility)"
+          "description": "Children-as-function fallback for renderItem (compiler compatibility)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "autoPlay": {
           "types": [
@@ -14527,7 +16149,15 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event name for slide change"
+          "description": "Declarative event name for slide change",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "index",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "slideChangePayload": {
           "types": [
@@ -14612,7 +16242,18 @@
             "function"
           ],
           "description": "renderItem prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
         },
         "reorderEvent": {
           "types": [
@@ -14899,7 +16540,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -14949,7 +16592,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -15174,7 +16819,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -15577,13 +17224,23 @@
           "types": [
             "function"
           ],
-          "description": "Callback when the craft button is clicked"
+          "description": "Callback when the craft button is clicked",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "craftEvent": {
           "types": [
             "string"
           ],
-          "description": "Event bus event name for crafting"
+          "description": "Event bus event name for crafting",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "output",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "className": {
           "types": [
@@ -15753,13 +17410,28 @@
           "types": [
             "function"
           ],
-          "description": "Callback when an item is selected"
+          "description": "Callback when an item is selected",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
         },
         "selectEvent": {
           "types": [
             "string"
           ],
-          "description": "Event bus event name for selection"
+          "description": "Event bus event name for selection",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ]
         },
         "size": {
           "types": [
@@ -17962,7 +19634,14 @@
           "types": [
             "function"
           ],
-          "description": "Callback invoked with the search query, returns results"
+          "description": "Callback invoked with the search query, returns results",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "query",
+              "type": "string"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -19992,13 +21671,22 @@
             "function"
           ],
           "description": "Click handler",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onHover": {
           "types": [
             "function"
           ],
-          "description": "Hover callback"
+          "description": "Hover callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "hovering",
+              "type": "boolean"
+            }
+          ]
         },
         "cursor": {
           "types": [
@@ -20081,7 +21769,18 @@
           "types": [
             "function"
           ],
-          "description": "Callback when zoom level changes"
+          "description": "Callback when zoom level changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "level",
+              "type": "object"
+            },
+            {
+              "name": "context",
+              "type": "object"
+            }
+          ]
         },
         "width": {
           "types": [
@@ -20178,7 +21877,18 @@
           "types": [
             "function"
           ],
-          "description": "onTransitionClick prop"
+          "description": "onTransitionClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "transitionIndex",
+              "type": "number"
+            },
+            {
+              "name": "position",
+              "type": "object"
+            }
+          ]
         }
       }
     },
@@ -20834,7 +22544,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -20966,7 +22678,9 @@
           "types": [
             "function"
           ],
-          "description": "onTransitionClick prop"
+          "description": "onTransitionClick prop",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -21126,19 +22840,44 @@
           "types": [
             "function"
           ],
-          "description": "onNodeClick prop"
+          "description": "onNodeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "context",
+              "type": "object"
+            }
+          ]
         },
         "onLevelChange": {
           "types": [
             "function"
           ],
-          "description": "onLevelChange prop"
+          "description": "onLevelChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "level",
+              "type": "object"
+            },
+            {
+              "name": "orbital",
+              "type": "string"
+            }
+          ]
         },
         "onOrbitalDoubleClick": {
           "types": [
             "function"
           ],
-          "description": "GAP-52: fired when the user double-clicks an orbital. Consumers (e.g. the builder workspace) use this as the trigger to enter cosmic mode (`AvlOrbitalsCosmicZoom`) for the focused orbital. The level at which this fires is controlled by `cosmicEntryLevel` (default `'expanded'`). At `'expanded'` the existing overview→expanded drill is preserved — the callback fires only on the second double-click. At `'overview'` the callback fires on the FIRST double-click and the existing drill is suppressed for that interaction. `'both'` fires at either level. The callback runs unconditionally — persona / permission gating is the consumer's responsibility."
+          "description": "GAP-52: fired when the user double-clicks an orbital. Consumers (e.g. the builder workspace) use this as the trigger to enter cosmic mode (`AvlOrbitalsCosmicZoom`) for the focused orbital. The level at which this fires is controlled by `cosmicEntryLevel` (default `'expanded'`). At `'expanded'` the existing overview→expanded drill is preserved — the callback fires only on the second double-click. At `'overview'` the callback fires on the FIRST double-click and the existing drill is suppressed for that interaction. `'both'` fires at either level. The callback runs unconditionally — persona / permission gating is the consumer's responsibility.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "orbital",
+              "type": "string"
+            }
+          ]
         },
         "cosmicEntryLevel": {
           "types": [
@@ -21179,19 +22918,40 @@
           "types": [
             "function"
           ],
-          "description": "Called when the user edits the schema via the inspector."
+          "description": "Called when the user edits the schema via the inspector.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "schema",
+              "type": "object"
+            }
+          ]
         },
         "onPatternDelete": {
           "types": [
             "function"
           ],
-          "description": "Called when the user presses Delete/Backspace with a pattern selected."
+          "description": "Called when the user presses Delete/Backspace with a pattern selected.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "context",
+              "type": "object"
+            }
+          ]
         },
         "onEventWire": {
           "types": [
             "function"
           ],
-          "description": "Called when the user drags from a source handle to a target handle (event wiring)."
+          "description": "Called when the user drags from a source handle to a target handle (event wiring).",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "wire",
+              "type": "object"
+            }
+          ]
         },
         "behaviorMeta": {
           "types": [
@@ -21213,7 +22973,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when the user clicks a node in overview level (for composition hints)."
+          "description": "Called when the user clicks a node in overview level (for composition hints).",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "orbitalName",
+              "type": "string"
+            }
+          ]
         },
         "composeLevel": {
           "types": [
@@ -21237,7 +23004,18 @@
           "types": [
             "function"
           ],
-          "description": "@deprecated Use onNodeClick instead. Kept for AvlCosmicZoom compat."
+          "description": "@deprecated Use onNodeClick instead. Kept for AvlCosmicZoom compat.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "level",
+              "type": "string"
+            },
+            {
+              "name": "context",
+              "type": "object"
+            }
+          ]
         },
         "focusTarget": {
           "types": [
@@ -21793,7 +23571,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "className": {
           "types": [
@@ -21851,7 +23631,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "incomingCount": {
           "types": [
@@ -21960,7 +23742,9 @@
           "types": [
             "function"
           ],
-          "description": "Click handler"
+          "description": "Click handler",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "color": {
           "types": [
@@ -22003,13 +23787,31 @@
           "types": [
             "function"
           ],
-          "description": "Called each frame with the 2D context and current frame count"
+          "description": "Called each frame with the 2D context and current frame count",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "ctx",
+              "type": "object"
+            },
+            {
+              "name": "frame",
+              "type": "number"
+            }
+          ]
         },
         "onTick": {
           "types": [
             "function"
           ],
-          "description": "Called each tick with delta time in seconds"
+          "description": "Called each tick with delta time in seconds",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "dt",
+              "type": "number"
+            }
+          ]
         },
         "fps": {
           "types": [
@@ -22114,7 +23916,14 @@
           "types": [
             "function"
           ],
-          "description": "Click handler for an orbital"
+          "description": "Click handler for an orbital",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "orbitalName",
+              "type": "string"
+            }
+          ]
         },
         "color": {
           "types": [
@@ -22173,7 +23982,14 @@
           "types": [
             "function"
           ],
-          "description": "Click handler for a trait"
+          "description": "Click handler for a trait",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "traitName",
+              "type": "string"
+            }
+          ]
         },
         "highlightedTrait": {
           "types": [
@@ -22185,7 +24001,14 @@
           "types": [
             "function"
           ],
-          "description": "Highlight change handler"
+          "description": "Highlight change handler",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "traitName",
+              "type": "string"
+            }
+          ]
         },
         "color": {
           "types": [
@@ -22218,7 +24041,14 @@
           "types": [
             "function"
           ],
-          "description": "Click handler for a transition"
+          "description": "Click handler for a transition",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "transitionIndex",
+              "type": "number"
+            }
+          ]
         },
         "color": {
           "types": [
@@ -22302,7 +24132,18 @@
           "types": [
             "function"
           ],
-          "description": "Callback when zoom level changes"
+          "description": "Callback when zoom level changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "level",
+              "type": "object"
+            },
+            {
+              "name": "context",
+              "type": "object"
+            }
+          ]
         },
         "width": {
           "types": [
@@ -22469,37 +24310,99 @@
           "types": [
             "function"
           ],
-          "description": "Callback when a tile is clicked"
+          "description": "Callback when a tile is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tile",
+              "type": "object"
+            },
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "onUnitClick": {
           "types": [
             "function"
           ],
-          "description": "Callback when a unit is clicked"
+          "description": "Callback when a unit is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unit",
+              "type": "object"
+            },
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "onFeatureClick": {
           "types": [
             "function"
           ],
-          "description": "Callback when a feature is clicked"
+          "description": "Callback when a feature is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            },
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "onCanvasClick": {
           "types": [
             "function"
           ],
-          "description": "Callback when canvas is clicked (background)"
+          "description": "Callback when canvas is clicked (background)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "onTileHover": {
           "types": [
             "function"
           ],
-          "description": "Callback when mouse moves over a tile"
+          "description": "Callback when mouse moves over a tile",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "tile",
+              "type": "object"
+            },
+            {
+              "name": "event",
+              "type": "object"
+            }
+          ]
         },
         "onUnitAnimation": {
           "types": [
             "function"
           ],
-          "description": "Callback for unit animation state change"
+          "description": "Callback for unit animation state change",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "unitId",
+              "type": "string"
+            },
+            {
+              "name": "state",
+              "type": "string"
+            }
+          ]
         },
         "assetLoader": {
           "types": [
@@ -22535,49 +24438,232 @@
           "types": [
             "string"
           ],
-          "description": "Declarative event: tile click"
+          "description": "Declarative event: tile click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "tileId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "z",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "terrain",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "elevation",
+              "type": "number",
+              "required": false
+            }
+          ]
         },
         "unitClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: unit click"
+          "description": "Declarative event: unit click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "unitId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "z",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "unitType",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "name",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "team",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "faction",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "health",
+              "type": "number",
+              "required": false
+            },
+            {
+              "name": "maxHealth",
+              "type": "number",
+              "required": false
+            }
+          ]
         },
         "featureClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: feature click"
+          "description": "Declarative event: feature click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "featureId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "z",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "required": false
+            },
+            {
+              "name": "elevation",
+              "type": "number",
+              "required": false
+            }
+          ]
         },
         "canvasClickEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: canvas click"
+          "description": "Declarative event: canvas click",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "clientX",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "clientY",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "button",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "tileHoverEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: tile hover"
+          "description": "Declarative event: tile hover",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "tileId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "z",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "type",
+              "type": "string",
+              "required": false
+            }
+          ]
         },
         "tileLeaveEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: tile leave"
+          "description": "Declarative event: tile leave",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         },
         "unitAnimationEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: unit animation"
+          "description": "Declarative event: unit animation",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "unitId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "state",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "timestamp",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "cameraChangeEvent": {
           "types": [
             "string"
           ],
-          "description": "Declarative event: camera change"
+          "description": "Declarative event: camera change",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "position",
+              "type": "object",
+              "required": true
+            },
+            {
+              "name": "timestamp",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "loadingMessage": {
           "types": [
@@ -22684,7 +24770,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when camera changes"
+          "description": "Called when camera changes",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "camera",
+              "type": "object"
+            }
+          ]
         }
       }
     },
@@ -22813,13 +24906,26 @@
           "types": [
             "function"
           ],
-          "description": "Error callback"
+          "description": "Error callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "error",
+              "type": "object"
+            },
+            {
+              "name": "errorInfo",
+              "type": "object"
+            }
+          ]
         },
         "onReset": {
           "types": [
             "function"
           ],
-          "description": "Reset callback"
+          "description": "Reset callback",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -22945,19 +25051,35 @@
           "types": [
             "function"
           ],
-          "description": "Called when physics state updates"
+          "description": "Called when physics state updates",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "state",
+              "type": "object"
+            }
+          ]
         },
         "onGroundHit": {
           "types": [
             "function"
           ],
-          "description": "Called when object hits ground"
+          "description": "Called when object hits ground",
+          "kind": "callback",
+          "callbackArgs": []
         },
         "onCollision": {
           "types": [
             "function"
           ],
-          "description": "Called when collision occurs"
+          "description": "Called when collision occurs",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "otherEntityId",
+              "type": "string"
+            }
+          ]
         }
       }
     },
@@ -23001,13 +25123,27 @@
           "types": [
             "function"
           ],
-          "description": "Called when feature is clicked"
+          "description": "Called when feature is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            }
+          ]
         },
         "onFeatureHover": {
           "types": [
             "function"
           ],
-          "description": "Called when feature is hovered"
+          "description": "Called when feature is hovered",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "feature",
+              "type": "object"
+            }
+          ]
         },
         "selectedFeatureIds": {
           "types": [
@@ -23410,14 +25546,23 @@
           "types": [
             "function"
           ],
-          "description": "onSchemaChange prop"
+          "description": "onSchemaChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "schema",
+              "type": "object"
+            }
+          ]
         },
         "onClose": {
           "types": [
             "function"
           ],
           "description": "onClose prop",
-          "required": true
+          "required": true,
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -23475,7 +25620,14 @@
           "types": [
             "function"
           ],
-          "description": "Called when a file is clicked"
+          "description": "Called when a file is clicked",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "path",
+              "type": "string"
+            }
+          ]
         },
         "className": {
           "types": [
@@ -23554,7 +25706,14 @@
           "types": [
             "function"
           ],
-          "description": "GAP-55: fired when the user clicks an orbital tile. Consumers (e.g. the builder workspace) use this as the trigger to drill INTO the clicked orbital — typically by switching back to the canvas tab and opening the clicked orbital at L2 expanded. Local `selected` toggle (visual highlight + info panel) still fires regardless of whether the callback is provided."
+          "description": "GAP-55: fired when the user clicks an orbital tile. Consumers (e.g. the builder workspace) use this as the trigger to drill INTO the clicked orbital — typically by switching back to the canvas tab and opening the clicked orbital at L2 expanded. Local `selected` toggle (visual highlight + info panel) still fires regardless of whether the callback is provided.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "orbital",
+              "type": "string"
+            }
+          ]
         },
         "minZoom": {
           "types": [
