@@ -29,7 +29,35 @@
  * Reserved for future use: `"entity"`, `"config-binding"`. Add here
  * rather than inventing per-consumer markers.
  */
-export type PropKind = 'event' | 'event-list';
+export type PropKind =
+  | 'event'
+  | 'event-ref'
+  | 'event-listen'
+  | 'event-list'
+  | 'callback';
+
+/**
+ * One field of an emit/listen payload schema, mirrored into the registry
+ * by pattern-sync from a component's `EventEmit<P>` / `EventListen<P>`
+ * brand. Validator (L2.2) compares this against the trait's declared
+ * `emits { EVENT { ... } }` / `listens` payload shape.
+ */
+export interface PatternPayloadField {
+  name: string;
+  type: string;
+  required?: boolean;
+}
+
+/**
+ * One positional parameter of a React callback prop. Validator (L2.2)
+ * uses the names to verify name-and-type parity with the trait's declared
+ * event payload; codegen (C2) uses the same names to wrap the dispatch
+ * site as `(name) => dispatch('EVENT', { name })`.
+ */
+export interface PatternCallbackArg {
+  name: string;
+  type: string;
+}
 
 /**
  * Schema describing a single prop in a pattern's propsSchema. Emitted
@@ -59,4 +87,22 @@ export interface PatternPropDef {
    * omitted. Only meaningful alongside `kind: "event-list"`.
    */
   eventField?: string;
+  /**
+   * For `kind: "event-ref"` whose source is `EventEmit<P>`: the
+   * structural shape of `P` — the bus payload the component fires when
+   * the prop is bound. Validator compares against the trait's declared
+   * `emits { EVENT { ... } }` payload.
+   */
+  emitPayloadSchema?: PatternPayloadField[];
+  /**
+   * For `kind: "event-listen"` whose source is `EventListen<P>`: the
+   * structural shape of `P` — the payload the component subscribes to.
+   */
+  listenPayloadSchema?: PatternPayloadField[];
+  /**
+   * For `kind: "callback"`: positional parameter list of the function
+   * type. C2 uses these names to build the named-arg → object-payload
+   * wrapper at the dispatch site.
+   */
+  callbackArgs?: PatternCallbackArg[];
 }

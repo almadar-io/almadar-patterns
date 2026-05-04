@@ -27,7 +27,12 @@ export const EVENT_CONTRACTS = eventContracts;
 
 import type { PatternPropDef } from './types.js';
 
-export type { PatternPropDef, PropKind } from './types.js';
+export type {
+  PatternPropDef,
+  PropKind,
+  PatternPayloadField,
+  PatternCallbackArg,
+} from './types.js';
 
 // Canonical emit-payload shapes dispatched by framework data patterns.
 // Pattern-level contracts live alongside the pattern registry; the
