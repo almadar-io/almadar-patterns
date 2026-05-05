@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-04T18:38:26.384Z",
+  "exportedAt": "2026-05-05T13:33:44.073Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8757,6 +8757,14 @@
               "type": "string"
             }
           ]
+        },
+        "topBarActions": {
+          "types": [
+            "array"
+          ],
+          "description": "Generic top-bar action buttons rendered between the search bar and the notifications bell. Each entry: `{icon, label?, event, badge?, variant?}`. Domain-agnostic — consumers add a cart icon, profile button, help-bubble, or any other top-bar action by appending entries. Empty array (default) renders nothing.",
+          "kind": "event-list",
+          "eventField": "event"
         },
         "notifications": {
           "types": [
