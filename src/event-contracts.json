@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-05T13:33:44.073Z",
+  "exportedAt": "2026-05-05T16:04:13.902Z",
   "contracts": {
     "form": {
       "emits": [
@@ -20,6 +20,13 @@
         },
         {
           "event": "FIELD_CHANGED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VALIDATION_FAILED",
           "trigger": "action",
           "payload": {
             "type": "object"
@@ -57,6 +64,13 @@
         },
         {
           "event": "FIELD_CHANGED",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "VALIDATION_FAILED",
           "trigger": "action",
           "payload": {
             "type": "object"
