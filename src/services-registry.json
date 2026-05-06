@@ -887,6 +887,108 @@
             "body": "string",
             "state": "string"
           }
+        },
+        {
+          "name": "getFile",
+          "description": "Read a file from a repository at a given ref",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": "Repository owner"
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": "Repository name"
+            },
+            {
+              "name": "path",
+              "type": "string",
+              "required": true,
+              "description": "Path to file within the repo"
+            },
+            {
+              "name": "ref",
+              "type": "string",
+              "required": false,
+              "description": "Branch, tag, or commit SHA"
+            }
+          ],
+          "responseShape": {
+            "id": "string",
+            "result": "object"
+          }
+        },
+        {
+          "name": "listCommits",
+          "description": "List commits on a branch or path",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": "Repository owner"
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": "Repository name"
+            },
+            {
+              "name": "path",
+              "type": "string",
+              "required": false,
+              "description": "Restrict to commits touching this path"
+            },
+            {
+              "name": "ref",
+              "type": "string",
+              "required": false,
+              "description": "Branch or tag"
+            }
+          ],
+          "responseShape": {
+            "id": "string",
+            "result": "object"
+          }
+        },
+        {
+          "name": "createIssue",
+          "description": "Create a new issue",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": "Repository owner"
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": "Repository name"
+            },
+            {
+              "name": "path",
+              "type": "string",
+              "required": false,
+              "description": "Reserved for op uniformity"
+            },
+            {
+              "name": "ref",
+              "type": "string",
+              "required": false,
+              "description": "Reserved for op uniformity"
+            }
+          ],
+          "responseShape": {
+            "id": "string",
+            "result": "object"
+          }
         }
       ],
       "credentials": [
