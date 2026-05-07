@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-05T16:04:13.902Z",
+  "exportedAt": "2026-05-07T06:31:44.696Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -8799,6 +8799,12 @@
             "node"
           ],
           "description": "Custom sidebar footer (optional). When omitted, the sidebar has no footer — apps that need Settings/etc. add them via navItems."
+        },
+        "currentPath": {
+          "types": [
+            "string"
+          ],
+          "description": "Active path used to highlight the matching nav item. Falls back to `useCurrentPagePath()` (set by `CurrentPagePathProvider`), then to `useLocation().pathname`. Production deploys can omit it; the studio preview passes the in-frame `?page=` value so highlighting works inside the embedded playground where `pathname` would be the studio route."
         },
         "onSignOut": {
           "types": [
