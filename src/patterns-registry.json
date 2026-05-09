@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-07T06:31:44.696Z",
+  "exportedAt": "2026-05-09T16:52:32.798Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -25806,6 +25806,1805 @@
             "number"
           ],
           "description": "GAP-54: maximum zoom factor when scroll-wheel zooming. Default 3."
+        }
+      }
+    },
+    "filter-pill": {
+      "type": "filter-pill",
+      "category": "filter",
+      "description": "FilterPill component",
+      "suggestedFor": [
+        "filter",
+        "pill",
+        "filter pill"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop",
+          "enumValues": [
+            "default",
+            "primary",
+            "secondary",
+            "success",
+            "warning",
+            "danger",
+            "info",
+            "neutral"
+          ]
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "label": {
+          "types": [
+            "string",
+            "number"
+          ],
+          "description": "Pill label text (alternative to children for schema-driven rendering)."
+        },
+        "icon": {
+          "types": [
+            "node"
+          ],
+          "description": "Optional icon name (Lucide icon string) or React node"
+        },
+        "onRemove": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user clicks the remove (×) button",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "removable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disable the remove button (renders without × control)"
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Click handler for the body of the pill (filter toggle)",
+          "kind": "callback",
+          "callbackArgs": []
+        }
+      }
+    },
+    "dunning-banner": {
+      "type": "dunning-banner",
+      "category": "component",
+      "description": "DunningBanner component",
+      "suggestedFor": [
+        "dunning",
+        "banner",
+        "dunning banner"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "severity": {
+          "types": [
+            "string"
+          ],
+          "description": "severity prop",
+          "enumValues": [
+            "soft",
+            "urgent",
+            "final"
+          ]
+        },
+        "attemptNumber": {
+          "types": [
+            "number"
+          ],
+          "description": "attemptNumber prop"
+        },
+        "attemptsTotal": {
+          "types": [
+            "number"
+          ],
+          "description": "attemptsTotal prop"
+        },
+        "failedAt": {
+          "types": [
+            "string"
+          ],
+          "description": "failedAt prop"
+        },
+        "nextRetryAt": {
+          "types": [
+            "string"
+          ],
+          "description": "nextRetryAt prop"
+        },
+        "amountDue": {
+          "types": [
+            "number"
+          ],
+          "description": "amountDue prop"
+        },
+        "currency": {
+          "types": [
+            "string"
+          ],
+          "description": "currency prop"
+        },
+        "onUpdatePayment": {
+          "types": [
+            "function"
+          ],
+          "description": "onUpdatePayment prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onContactSupport": {
+          "types": [
+            "function"
+          ],
+          "description": "onContactSupport prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onDismiss": {
+          "types": [
+            "function"
+          ],
+          "description": "onDismiss prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "dismissible": {
+          "types": [
+            "boolean"
+          ],
+          "description": "dismissible prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "invoice": {
+      "type": "invoice",
+      "category": "component",
+      "description": "Invoice component",
+      "suggestedFor": [
+        "invoice"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "invoiceNumber": {
+          "types": [
+            "string"
+          ],
+          "description": "invoiceNumber prop",
+          "required": true
+        },
+        "status": {
+          "types": [
+            "string"
+          ],
+          "description": "status prop",
+          "enumValues": [
+            "draft",
+            "sent",
+            "paid",
+            "overdue",
+            "void"
+          ]
+        },
+        "issuedAt": {
+          "types": [
+            "string"
+          ],
+          "description": "issuedAt prop",
+          "required": true
+        },
+        "dueAt": {
+          "types": [
+            "string"
+          ],
+          "description": "dueAt prop",
+          "required": true
+        },
+        "from": {
+          "types": [
+            "object"
+          ],
+          "description": "from prop",
+          "required": true
+        },
+        "to": {
+          "types": [
+            "object"
+          ],
+          "description": "to prop",
+          "required": true
+        },
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "items prop",
+          "required": true
+        },
+        "currency": {
+          "types": [
+            "string"
+          ],
+          "description": "currency prop"
+        },
+        "taxRateDefault": {
+          "types": [
+            "number"
+          ],
+          "description": "taxRateDefault prop"
+        },
+        "notes": {
+          "types": [
+            "string"
+          ],
+          "description": "notes prop"
+        },
+        "paymentUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "paymentUrl prop"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "kitchen-display-strip": {
+      "type": "kitchen-display-strip",
+      "category": "component",
+      "description": "KitchenDisplayStrip component",
+      "suggestedFor": [
+        "kitchen",
+        "display",
+        "strip",
+        "kitchen display strip"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "orderId": {
+          "types": [
+            "string"
+          ],
+          "description": "orderId prop",
+          "required": true
+        },
+        "tableLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "tableLabel prop"
+        },
+        "serverName": {
+          "types": [
+            "string"
+          ],
+          "description": "serverName prop"
+        },
+        "items": {
+          "types": [
+            "array"
+          ],
+          "description": "items prop",
+          "required": true
+        },
+        "status": {
+          "types": [
+            "string"
+          ],
+          "description": "status prop",
+          "enumValues": [
+            "pending",
+            "preparing",
+            "ready",
+            "served"
+          ]
+        },
+        "receivedAt": {
+          "types": [
+            "number"
+          ],
+          "description": "receivedAt prop",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md"
+          ]
+        },
+        "onMarkReady": {
+          "types": [
+            "function"
+          ],
+          "description": "onMarkReady prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onMarkServed": {
+          "types": [
+            "function"
+          ],
+          "description": "onMarkServed prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "likert-scale": {
+      "type": "likert-scale",
+      "category": "component",
+      "description": "LikertScale component",
+      "suggestedFor": [
+        "likert",
+        "scale",
+        "likert scale"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "question": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional row prompt above the scale"
+        },
+        "options": {
+          "types": [
+            "array"
+          ],
+          "description": "Scale points (defaults to a 5-point agree/disagree set)"
+        },
+        "value": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Selected value (controlled)"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Change callback",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disabled state"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual variant: classic radios or pill segmented buttons",
+          "enumValues": [
+            "radios",
+            "buttons"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "listing-card": {
+      "type": "listing-card",
+      "category": "display",
+      "description": "ListingCard component",
+      "suggestedFor": [
+        "listing",
+        "card",
+        "listing card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "imageUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "imageUrl prop",
+          "required": true
+        },
+        "imageAlt": {
+          "types": [
+            "string"
+          ],
+          "description": "imageAlt prop"
+        },
+        "price": {
+          "types": [
+            "string"
+          ],
+          "description": "Pre-formatted price string (e.g. '$525,000', '$45/hr')"
+        },
+        "location": {
+          "types": [
+            "string"
+          ],
+          "description": "location prop"
+        },
+        "rating": {
+          "types": [
+            "number"
+          ],
+          "description": "Numeric rating 0-5"
+        },
+        "reviewCount": {
+          "types": [
+            "number"
+          ],
+          "description": "reviewCount prop"
+        },
+        "facts": {
+          "types": [
+            "array"
+          ],
+          "description": "2-4 quick stats with optional icons"
+        },
+        "badge": {
+          "types": [
+            "string"
+          ],
+          "description": "badge prop",
+          "enumValues": [
+            "new",
+            "featured",
+            "price-drop",
+            "sold",
+            "pending"
+          ]
+        },
+        "favorite": {
+          "types": [
+            "boolean"
+          ],
+          "description": "favorite prop"
+        },
+        "onFavoriteToggle": {
+          "types": [
+            "function"
+          ],
+          "description": "onFavoriteToggle prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onClick prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "href": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional link target. When provided, the card renders as an <a> wrapper."
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "layout": {
+          "types": [
+            "string"
+          ],
+          "description": "layout prop",
+          "enumValues": [
+            "vertical",
+            "horizontal"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "matrix-question": {
+      "type": "matrix-question",
+      "category": "component",
+      "description": "MatrixQuestion component",
+      "suggestedFor": [
+        "matrix",
+        "question",
+        "matrix question"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "Optional title rendered above the matrix"
+        },
+        "rows": {
+          "types": [
+            "array"
+          ],
+          "description": "Question rows",
+          "required": true
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "description": "Column definitions; defaults to 5-point Likert"
+        },
+        "values": {
+          "types": [
+            "object"
+          ],
+          "description": "Selected value per row, keyed by rowId"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Change handler invoked with rowId and selected column value",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "rowId",
+              "type": "string"
+            },
+            {
+              "name": "value",
+              "type": "number"
+            }
+          ]
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disable all inputs"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Visual size",
+          "enumValues": [
+            "sm",
+            "md"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "moderation-queue-row": {
+      "type": "moderation-queue-row",
+      "category": "component",
+      "description": "ModerationQueueRow component",
+      "suggestedFor": [
+        "moderation",
+        "queue",
+        "row",
+        "moderation queue row"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "contentId": {
+          "types": [
+            "string"
+          ],
+          "description": "contentId prop",
+          "required": true
+        },
+        "authorName": {
+          "types": [
+            "string"
+          ],
+          "description": "authorName prop",
+          "required": true
+        },
+        "authorAvatarUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "authorAvatarUrl prop"
+        },
+        "contentPreview": {
+          "types": [
+            "string"
+          ],
+          "description": "contentPreview prop",
+          "required": true
+        },
+        "contentType": {
+          "types": [
+            "string"
+          ],
+          "description": "contentType prop"
+        },
+        "flaggedAt": {
+          "types": [
+            "string"
+          ],
+          "description": "flaggedAt prop",
+          "required": true
+        },
+        "flagReason": {
+          "types": [
+            "string"
+          ],
+          "description": "flagReason prop",
+          "enumValues": [
+            "spam",
+            "abuse",
+            "off-topic",
+            "misinformation",
+            "nsfw",
+            "other"
+          ]
+        },
+        "flagCount": {
+          "types": [
+            "number"
+          ],
+          "description": "flagCount prop"
+        },
+        "reportedBy": {
+          "types": [
+            "string"
+          ],
+          "description": "reportedBy prop"
+        },
+        "onApprove": {
+          "types": [
+            "function"
+          ],
+          "description": "onApprove prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onReject": {
+          "types": [
+            "function"
+          ],
+          "description": "onReject prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onEscalate": {
+          "types": [
+            "function"
+          ],
+          "description": "onEscalate prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onView": {
+          "types": [
+            "function"
+          ],
+          "description": "onView prop",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "modifier-group": {
+      "type": "modifier-group",
+      "category": "component",
+      "description": "ModifierGroup Molecule Component  Restaurant POS item-customization selector with required/optional/multi constraints. Renders radio inputs for `single` constraint and checkboxes for `multi`. Reports validation errors inline when the current selection violates the constraint.  **Atomic Design**: Composed using Typography atom and native form controls.",
+      "suggestedFor": [
+        "modifier",
+        "group",
+        "modifier group"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "groupId": {
+          "types": [
+            "string"
+          ],
+          "description": "groupId prop",
+          "required": true
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop",
+          "required": true
+        },
+        "description": {
+          "types": [
+            "string"
+          ],
+          "description": "description prop"
+        },
+        "options": {
+          "types": [
+            "array"
+          ],
+          "description": "options prop",
+          "required": true
+        },
+        "constraint": {
+          "types": [
+            "object"
+          ],
+          "description": "constraint prop",
+          "required": true
+        },
+        "selected": {
+          "types": [
+            "array"
+          ],
+          "description": "selected prop"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "selected",
+              "type": "array"
+            }
+          ]
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "qr-scanner": {
+      "type": "qr-scanner",
+      "category": "component",
+      "description": "QrScanner component",
+      "suggestedFor": [
+        "scanner",
+        "qr scanner"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "onScan": {
+          "types": [
+            "function"
+          ],
+          "description": "onScan prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "result",
+              "type": "object"
+            }
+          ]
+        },
+        "onError": {
+          "types": [
+            "function"
+          ],
+          "description": "onError prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "error",
+              "type": "object"
+            }
+          ]
+        },
+        "facingMode": {
+          "types": [
+            "string"
+          ],
+          "description": "facingMode prop",
+          "enumValues": [
+            "environment",
+            "user"
+          ]
+        },
+        "paused": {
+          "types": [
+            "boolean"
+          ],
+          "description": "paused prop"
+        },
+        "showOverlay": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showOverlay prop"
+        },
+        "showCameraControls": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showCameraControls prop"
+        },
+        "fallback": {
+          "types": [
+            "node"
+          ],
+          "description": "fallback prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "ticket-stub": {
+      "type": "ticket-stub",
+      "category": "component",
+      "description": "TicketStub component",
+      "suggestedFor": [
+        "ticket",
+        "stub",
+        "ticket stub"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "eventName": {
+          "types": [
+            "string"
+          ],
+          "description": "eventName prop",
+          "required": true
+        },
+        "date": {
+          "types": [
+            "string"
+          ],
+          "description": "date prop"
+        },
+        "venue": {
+          "types": [
+            "string"
+          ],
+          "description": "venue prop"
+        },
+        "tier": {
+          "types": [
+            "string"
+          ],
+          "description": "tier prop",
+          "required": true
+        },
+        "price": {
+          "types": [
+            "string",
+            "number"
+          ],
+          "description": "price prop",
+          "required": true
+        },
+        "currency": {
+          "types": [
+            "string"
+          ],
+          "description": "currency prop"
+        },
+        "attendeeName": {
+          "types": [
+            "string"
+          ],
+          "description": "attendeeName prop"
+        },
+        "ticketCode": {
+          "types": [
+            "string"
+          ],
+          "description": "ticketCode prop",
+          "required": true
+        },
+        "qrValue": {
+          "types": [
+            "string"
+          ],
+          "description": "qrValue prop"
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "variant prop",
+          "enumValues": [
+            "general",
+            "vip",
+            "early-bird",
+            "student",
+            "custom"
+          ]
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "size prop",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "vote-stack": {
+      "type": "vote-stack",
+      "category": "component",
+      "description": "VoteStack component",
+      "suggestedFor": [
+        "vote",
+        "stack",
+        "vote stack"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "count": {
+          "types": [
+            "number"
+          ],
+          "description": "Current tally",
+          "required": true
+        },
+        "userVote": {
+          "types": [
+            "string"
+          ],
+          "description": "Current user's vote (null = no vote cast)",
+          "enumValues": [
+            "up",
+            "down"
+          ]
+        },
+        "onVote": {
+          "types": [
+            "function"
+          ],
+          "description": "Toggle handler. Clicking the same arrow clears (emits null).",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "next",
+              "type": "string"
+            }
+          ]
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disabled state"
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size variant",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "variant": {
+          "types": [
+            "string"
+          ],
+          "description": "Layout orientation. `vertical` = forum/Q&A column; `horizontal` = compact row.",
+          "enumValues": [
+            "vertical",
+            "horizontal"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Accessible label for the group"
+        }
+      }
+    },
+    "work-order-card": {
+      "type": "work-order-card",
+      "category": "display",
+      "description": "WorkOrderCard component",
+      "suggestedFor": [
+        "work",
+        "order",
+        "card",
+        "work order card"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "orderId": {
+          "types": [
+            "string"
+          ],
+          "description": "Work order identifier (e.g. \"WO-1042\")",
+          "required": true
+        },
+        "customerName": {
+          "types": [
+            "string"
+          ],
+          "description": "Customer name",
+          "required": true
+        },
+        "serviceType": {
+          "types": [
+            "string"
+          ],
+          "description": "Service type description (e.g. \"Plumbing repair\")",
+          "required": true
+        },
+        "address": {
+          "types": [
+            "string"
+          ],
+          "description": "Service address",
+          "required": true
+        },
+        "scheduledAt": {
+          "types": [
+            "string"
+          ],
+          "description": "Scheduled date/time, rendered as-is"
+        },
+        "etaMinutes": {
+          "types": [
+            "number"
+          ],
+          "description": "ETA in minutes; surfaced only when status is 'en-route'"
+        },
+        "assignedTo": {
+          "types": [
+            "string"
+          ],
+          "description": "Assigned technician name; rendered as \"Unassigned\" when omitted"
+        },
+        "status": {
+          "types": [
+            "string"
+          ],
+          "description": "Current dispatch status",
+          "enumValues": [
+            "created",
+            "assigned",
+            "en-route",
+            "on-site",
+            "completed",
+            "cancelled"
+          ]
+        },
+        "priority": {
+          "types": [
+            "string"
+          ],
+          "description": "Priority level",
+          "enumValues": [
+            "low",
+            "normal",
+            "high",
+            "urgent"
+          ]
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Card size affecting padding and typography",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ]
+        },
+        "onAssign": {
+          "types": [
+            "function"
+          ],
+          "description": "Handler for the Assign action",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onViewRoute": {
+          "types": [
+            "function"
+          ],
+          "description": "Handler for the View Route action",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "onMarkCompleted": {
+          "types": [
+            "function"
+          ],
+          "description": "Handler for the Mark Completed action",
+          "kind": "callback",
+          "callbackArgs": []
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
+        }
+      }
+    },
+    "branching-logic-builder": {
+      "type": "branching-logic-builder",
+      "category": "display",
+      "description": "BranchingLogicBuilder component",
+      "suggestedFor": [
+        "branching",
+        "logic",
+        "builder",
+        "branching logic builder"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "questions": {
+          "types": [
+            "array"
+          ],
+          "description": "questions prop",
+          "required": true
+        },
+        "rules": {
+          "types": [
+            "array"
+          ],
+          "description": "rules prop",
+          "required": true
+        },
+        "onRulesChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onRulesChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "rules",
+              "type": "array"
+            }
+          ]
+        },
+        "readOnly": {
+          "types": [
+            "boolean"
+          ],
+          "description": "readOnly prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "reply-tree": {
+      "type": "reply-tree",
+      "category": "display",
+      "description": "ReplyTree component",
+      "suggestedFor": [
+        "reply",
+        "tree",
+        "reply tree"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "nodes": {
+          "types": [
+            "array"
+          ],
+          "description": "nodes prop",
+          "required": true
+        },
+        "maxDepth": {
+          "types": [
+            "number"
+          ],
+          "description": "maxDepth prop"
+        },
+        "onVote": {
+          "types": [
+            "function"
+          ],
+          "description": "onVote prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "nodeId",
+              "type": "string"
+            },
+            {
+              "name": "vote",
+              "type": "string"
+            }
+          ]
+        },
+        "onReply": {
+          "types": [
+            "function"
+          ],
+          "description": "onReply prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "parentNodeId",
+              "type": "string"
+            }
+          ]
+        },
+        "onFlag": {
+          "types": [
+            "function"
+          ],
+          "description": "onFlag prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "nodeId",
+              "type": "string"
+            }
+          ]
+        },
+        "onContinueThread": {
+          "types": [
+            "function"
+          ],
+          "description": "onContinueThread prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "nodeId",
+              "type": "string"
+            }
+          ]
+        },
+        "showActions": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showActions prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "rich-block-editor": {
+      "type": "rich-block-editor",
+      "category": "display",
+      "description": "RichBlockEditor component",
+      "suggestedFor": [
+        "rich",
+        "block",
+        "editor",
+        "rich block editor"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "initialBlocks": {
+          "types": [
+            "array"
+          ],
+          "description": "initialBlocks prop"
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "blocks",
+              "type": "array"
+            }
+          ]
+        },
+        "readOnly": {
+          "types": [
+            "boolean"
+          ],
+          "description": "readOnly prop"
+        },
+        "placeholder": {
+          "types": [
+            "string"
+          ],
+          "description": "placeholder prop"
+        },
+        "showToolbar": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showToolbar prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "route-map": {
+      "type": "route-map",
+      "category": "display",
+      "description": "RouteMap component",
+      "suggestedFor": [
+        "route",
+        "map",
+        "route map"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "stops": {
+          "types": [
+            "array"
+          ],
+          "description": "stops prop",
+          "required": true
+        },
+        "origin": {
+          "types": [
+            "object"
+          ],
+          "description": "origin prop"
+        },
+        "selectedStopId": {
+          "types": [
+            "string"
+          ],
+          "description": "selectedStopId prop"
+        },
+        "editable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "editable prop"
+        },
+        "onSelectStop": {
+          "types": [
+            "function"
+          ],
+          "description": "onSelectStop prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "onReorderStops": {
+          "types": [
+            "function"
+          ],
+          "description": "onReorderStops prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "newOrder",
+              "type": "array"
+            }
+          ]
+        },
+        "onSkipStop": {
+          "types": [
+            "function"
+          ],
+          "description": "onSkipStop prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "totalDistanceKm": {
+          "types": [
+            "number"
+          ],
+          "description": "totalDistanceKm prop"
+        },
+        "totalDurationMinutes": {
+          "types": [
+            "number"
+          ],
+          "description": "totalDurationMinutes prop"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "table-floor-plan": {
+      "type": "table-floor-plan",
+      "category": "display",
+      "description": "TableFloorPlan component",
+      "suggestedFor": [
+        "table",
+        "floor",
+        "plan",
+        "table floor plan"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "tables": {
+          "types": [
+            "array"
+          ],
+          "description": "tables prop",
+          "required": true
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop"
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop"
+        },
+        "selectedId": {
+          "types": [
+            "string"
+          ],
+          "description": "selectedId prop"
+        },
+        "editable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "editable prop"
+        },
+        "onSelect": {
+          "types": [
+            "function"
+          ],
+          "description": "onSelect prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "onMove": {
+          "types": [
+            "function"
+          ],
+          "description": "onMove prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            },
+            {
+              "name": "x",
+              "type": "number"
+            },
+            {
+              "name": "y",
+              "type": "number"
+            }
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "vendor-onboarding-stepper": {
+      "type": "vendor-onboarding-stepper",
+      "category": "game",
+      "description": "VendorOnboardingStepper component",
+      "suggestedFor": [
+        "vendor",
+        "onboarding",
+        "stepper",
+        "vendor onboarding stepper"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "initialStep": {
+          "types": [
+            "string"
+          ],
+          "description": "initialStep prop",
+          "enumValues": [
+            "business-info",
+            "tax-id",
+            "bank-link",
+            "identity-verify",
+            "review",
+            "submitted"
+          ]
+        },
+        "initialState": {
+          "types": [
+            "object"
+          ],
+          "description": "initialState prop"
+        },
+        "onSubmit": {
+          "types": [
+            "function"
+          ],
+          "description": "onSubmit prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "state",
+              "type": "object"
+            }
+          ]
+        },
+        "onStepChange": {
+          "types": [
+            "function"
+          ],
+          "description": "onStepChange prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "step",
+              "type": "string"
+            }
+          ]
+        },
+        "onSaveDraft": {
+          "types": [
+            "function"
+          ],
+          "description": "onSaveDraft prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "state",
+              "type": "object"
+            }
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        }
+      }
+    },
+    "version-diff": {
+      "type": "version-diff",
+      "category": "display",
+      "description": "VersionDiff component",
+      "suggestedFor": [
+        "version",
+        "diff",
+        "version diff"
+      ],
+      "typicalSize": "large",
+      "propsSchema": {
+        "revisions": {
+          "types": [
+            "array"
+          ],
+          "description": "All available revisions (at least 2).",
+          "required": true
+        },
+        "beforeId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected \"before\" revision id."
+        },
+        "afterId": {
+          "types": [
+            "string"
+          ],
+          "description": "Currently selected \"after\" revision id."
+        },
+        "view": {
+          "types": [
+            "string"
+          ],
+          "description": "Display mode.",
+          "enumValues": [
+            "side-by-side",
+            "inline"
+          ]
+        },
+        "onSelectBefore": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user picks a different \"before\" revision.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "onSelectAfter": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user picks a different \"after\" revision.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "onRevert": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when the user clicks the revert button (passes the \"before\" id).",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "id",
+              "type": "string"
+            }
+          ]
+        },
+        "language": {
+          "types": [
+            "string"
+          ],
+          "description": "Language label (informational)."
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes."
         }
       }
     },
