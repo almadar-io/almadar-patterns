@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-09T16:52:32.798Z",
+  "exportedAt": "2026-05-10T00:51:00.079Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1800,44 +1800,14 @@
       "importPath": "@/components/atoms/FilterPill",
       "category": "filter"
     },
-    "dunning-banner": {
-      "component": "DunningBanner",
-      "importPath": "@/components/molecules/DunningBanner",
-      "category": "component"
-    },
-    "invoice": {
-      "component": "Invoice",
-      "importPath": "@/components/molecules/Invoice",
-      "category": "component"
-    },
-    "kitchen-display-strip": {
-      "component": "KitchenDisplayStrip",
-      "importPath": "@/components/molecules/KitchenDisplayStrip",
-      "category": "component"
-    },
     "likert-scale": {
       "component": "LikertScale",
       "importPath": "@/components/molecules/LikertScale",
       "category": "component"
     },
-    "listing-card": {
-      "component": "ListingCard",
-      "importPath": "@/components/molecules/ListingCard",
-      "category": "display"
-    },
     "matrix-question": {
       "component": "MatrixQuestion",
       "importPath": "@/components/molecules/MatrixQuestion",
-      "category": "component"
-    },
-    "moderation-queue-row": {
-      "component": "ModerationQueueRow",
-      "importPath": "@/components/molecules/ModerationQueueRow",
-      "category": "component"
-    },
-    "modifier-group": {
-      "component": "ModifierGroup",
-      "importPath": "@/components/molecules/ModifierGroup",
       "category": "component"
     },
     "qr-scanner": {
@@ -1845,20 +1815,10 @@
       "importPath": "@/components/molecules/QrScanner",
       "category": "component"
     },
-    "ticket-stub": {
-      "component": "TicketStub",
-      "importPath": "@/components/molecules/TicketStub",
-      "category": "component"
-    },
     "vote-stack": {
       "component": "VoteStack",
       "importPath": "@/components/molecules/VoteStack",
       "category": "component"
-    },
-    "work-order-card": {
-      "component": "WorkOrderCard",
-      "importPath": "@/components/molecules/WorkOrderCard",
-      "category": "display"
     },
     "branching-logic-builder": {
       "component": "BranchingLogicBuilder",
@@ -1875,25 +1835,20 @@
       "importPath": "@/components/organisms/RichBlockEditor",
       "category": "display"
     },
-    "route-map": {
-      "component": "RouteMap",
-      "importPath": "@/components/organisms/RouteMap",
-      "category": "display"
-    },
-    "table-floor-plan": {
-      "component": "TableFloorPlan",
-      "importPath": "@/components/organisms/TableFloorPlan",
-      "category": "display"
-    },
-    "vendor-onboarding-stepper": {
-      "component": "VendorOnboardingStepper",
-      "importPath": "@/components/organisms/VendorOnboardingStepper",
-      "category": "game"
-    },
     "version-diff": {
       "component": "VersionDiff",
       "importPath": "@/components/organisms/VersionDiff",
       "category": "display"
+    },
+    "option-constraint-group": {
+      "component": "OptionConstraintGroup",
+      "importPath": "@/components/molecules/OptionConstraintGroup",
+      "category": "component"
+    },
+    "positioned-canvas": {
+      "component": "PositionedCanvas",
+      "importPath": "@/components/molecules/PositionedCanvas",
+      "category": "game"
     },
     "heading": {
       "component": "Typography",
