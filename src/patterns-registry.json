@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-10T00:51:00.079Z",
+  "exportedAt": "2026-05-11T04:42:37.745Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -25887,6 +25887,34 @@
           "description": "Click handler for the body of the pill (filter toggle)",
           "kind": "callback",
           "callbackArgs": []
+        },
+        "clickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the pill body is clicked. Payload: { label }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "label",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "removeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the remove (×) button is clicked. Payload: { label }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "label",
+              "type": "string",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -25930,6 +25958,20 @@
             {
               "name": "value",
               "type": "number"
+            }
+          ]
+        },
+        "changeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus on change. Payload: { value: number | string }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "value",
+              "type": "number",
+              "required": true
             }
           ]
         },
@@ -26021,6 +26063,25 @@
             }
           ]
         },
+        "changeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when a row's value changes. Payload: { rowId, value }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "rowId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "value",
+              "type": "number",
+              "required": true
+            }
+          ]
+        },
         "disabled": {
           "types": [
             "boolean"
@@ -26065,6 +26126,30 @@
             {
               "name": "result",
               "type": "object"
+            }
+          ]
+        },
+        "scanEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "scanEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "text",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "format",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "timestamp",
+              "type": "number",
+              "required": true
             }
           ]
         },
@@ -26148,7 +26233,8 @@
           "description": "Current user's vote (null = no vote cast)",
           "enumValues": [
             "up",
-            "down"
+            "down",
+            "none"
           ]
         },
         "onVote": {
@@ -26161,6 +26247,20 @@
             {
               "name": "next",
               "type": "string"
+            }
+          ]
+        },
+        "voteEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched on the bus when a vote is cast. Payload: { next: VoteValue }.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "next",
+              "type": "string",
+              "required": true
             }
           ]
         },
@@ -26219,16 +26319,18 @@
       "propsSchema": {
         "questions": {
           "types": [
-            "array"
+            "array",
+            "object"
           ],
           "description": "questions prop",
           "required": true
         },
         "rules": {
           "types": [
-            "array"
+            "array",
+            "object"
           ],
-          "description": "rules prop",
+          "description": "Rules. Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.data`). Narrowed to `[]` internally when the value isn't an array.",
           "required": true
         },
         "onRulesChange": {
@@ -26241,6 +26343,20 @@
             {
               "name": "rules",
               "type": "array"
+            }
+          ]
+        },
+        "rulesChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when rules change. Payload: `{ rules }`.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "rules",
+              "type": "array",
+              "required": true
             }
           ]
         },
@@ -26338,6 +26454,67 @@
             }
           ]
         },
+        "voteEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "voteEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "nodeId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "vote",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "replyEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "replyEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "parentNodeId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "flagEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "flagEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "nodeId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "continueThreadEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "continueThreadEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "nodeId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
         "showActions": {
           "types": [
             "boolean"
@@ -26368,7 +26545,7 @@
           "types": [
             "array"
           ],
-          "description": "initialBlocks prop"
+          "description": "Initial block payload. Accepts strongly-typed RichBlock[] from native callers and the wider EntityRow[] shape that orb-bound traits emit (orb `[object]` lowers to `Record<string, FieldValue | undefined>[]`, which is structurally EntityRow[]). Items missing id/type are normalized into paragraph blocks at mount."
         },
         "onChange": {
           "types": [
@@ -26380,6 +26557,20 @@
             {
               "name": "blocks",
               "type": "array"
+            }
+          ]
+        },
+        "changeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "changeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "blocks",
+              "type": "array",
+              "required": true
             }
           ]
         },
@@ -26422,9 +26613,10 @@
       "propsSchema": {
         "revisions": {
           "types": [
-            "array"
+            "array",
+            "object"
           ],
-          "description": "All available revisions (at least 2).",
+          "description": "All available revisions (at least 2). Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.revisions`). Narrowed to `[]` internally when the value isn't an array.",
           "required": true
         },
         "beforeId": {
@@ -26485,6 +26677,48 @@
             {
               "name": "id",
               "type": "string"
+            }
+          ]
+        },
+        "selectBeforeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the \"before\" revision changes. Payload: { id }.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "selectAfterEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the \"after\" revision changes. Payload: { id }.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "revertEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name dispatched via event bus when the user clicks revert. Payload: { id }.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
             }
           ]
         },
@@ -26567,6 +26801,20 @@
             }
           ]
         },
+        "changeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "changeEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "selected",
+              "type": "array",
+              "required": true
+            }
+          ]
+        },
         "size": {
           "types": [
             "string"
@@ -26598,9 +26846,10 @@
       "propsSchema": {
         "items": {
           "types": [
-            "array"
+            "array",
+            "object"
           ],
-          "description": "items prop",
+          "description": "Items to render. Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.data`). The molecule narrows non-array values to `[]` and validates element shape at render time via the `id` / `x` / `y` guards.",
           "required": true
         },
         "width": {
@@ -26658,6 +26907,44 @@
             {
               "name": "y",
               "type": "number"
+            }
+          ]
+        },
+        "selectEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "selectEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "moveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "moveEvent prop",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "id",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "x",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "y",
+              "type": "number",
+              "required": true
             }
           ]
         },
