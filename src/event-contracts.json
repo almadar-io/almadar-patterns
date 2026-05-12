@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-11T06:21:21.522Z",
+  "exportedAt": "2026-05-12T04:13:35.549Z",
   "contracts": {
     "form": {
       "emits": [
@@ -534,11 +534,6 @@
         }
       ],
       "requires": [],
-      "entityAware": false
-    },
-    "dashboard-grid": {
-      "emits": [],
-      "requires": [],
       "entityAware": true
     },
     "stats": {
@@ -555,97 +550,6 @@
             "type": "void"
           },
           "optional": true
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "game-hud": {
-      "emits": [],
-      "requires": [],
-      "entityAware": false
-    },
-    "game-menu": {
-      "emits": [
-        {
-          "event": "NAVIGATE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false,
-      "configDriven": true
-    },
-    "game-over-screen": {
-      "emits": [
-        {
-          "event": "RESTART",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          }
-        },
-        {
-          "event": "QUIT",
-          "trigger": "click",
-          "payload": {
-            "type": "void"
-          },
-          "optional": true
-        }
-      ],
-      "requires": [
-        "RESTART"
-      ],
-      "entityAware": false
-    },
-    "inventory-panel": {
-      "emits": [
-        {
-          "event": "USE_ITEM",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        },
-        {
-          "event": "DROP_ITEM",
-          "trigger": "click",
-          "payload": {
-            "type": "EntityRow"
-          },
-          "optional": true
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "dialogue-box": {
-      "emits": [
-        {
-          "event": "COMPLETE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "CHOICE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "ADVANCE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
         }
       ],
       "requires": [],
@@ -1036,6 +940,159 @@
       "requires": [],
       "entityAware": false
     },
+    "feature-grid-organism": {
+      "emits": [
+        {
+          "event": "FEATURE_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "hero-organism": {
+      "emits": [
+        {
+          "event": "CTA_PRIMARY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CTA_SECONDARY",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "ui-slot-renderer": {
+      "emits": [
+        {
+          "event": "CLOSE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CANCEL",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": true
+    },
+    "action-buttons": {
+      "emits": [
+        {
+          "event": "ACTION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "d-pad": {
+      "emits": [
+        {
+          "event": "DIRECTION",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "dialogue-box": {
+      "emits": [
+        {
+          "event": "COMPLETE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "CHOICE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "ADVANCE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "game-menu": {
+      "emits": [
+        {
+          "event": "NAVIGATE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "isometric-canvas": {
+      "emits": [
+        {
+          "event": "TILE_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "UNIT_CLICK",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TILE_HOVER",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        },
+        {
+          "event": "TILE_LEAVE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
     "book-cover-page": {
       "emits": [
         {
@@ -1087,66 +1144,6 @@
       ],
       "requires": [],
       "entityAware": true
-    },
-    "action-buttons": {
-      "emits": [
-        {
-          "event": "ACTION",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "d-pad": {
-      "emits": [
-        {
-          "event": "DIRECTION",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "isometric-canvas": {
-      "emits": [
-        {
-          "event": "TILE_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "UNIT_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "TILE_HOVER",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "TILE_LEAVE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
     },
     "trait-slot": {
       "emits": [
@@ -1200,141 +1197,6 @@
         },
         {
           "event": "TILE_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "feature-grid-organism": {
-      "emits": [
-        {
-          "event": "FEATURE_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "hero-organism": {
-      "emits": [
-        {
-          "event": "CTA_PRIMARY",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "CTA_SECONDARY",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "flow-canvas": {
-      "emits": [
-        {
-          "event": "WIRE_VALIDATION_WARNING",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "orb-inspector": {
-      "emits": [
-        {
-          "event": "PROP_CHANGE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "ADD_FIELD",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "UPDATE_FIELD",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "REMOVE_FIELD",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "GUARD_CHANGE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "ADD_EFFECT",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "REMOVE_EFFECT",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "CODE_CHANGE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "SERVICE_MODE_TOGGLE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "ui-slot-renderer": {
-      "emits": [
-        {
-          "event": "CLOSE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "CANCEL",
           "trigger": "action",
           "payload": {
             "type": "object"

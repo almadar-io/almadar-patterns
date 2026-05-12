@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-11T06:21:21.522Z",
+  "exportedAt": "2026-05-12T04:13:35.549Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -24,7 +24,7 @@
     },
     "stats": {
       "component": "StatCard",
-      "importPath": "@/components/organisms/StatCard",
+      "importPath": "@/components/atoms/StatCard",
       "category": "display"
     },
     "detail-panel": {
@@ -109,7 +109,7 @@
     },
     "card": {
       "component": "Card",
-      "importPath": "@/components/molecules/Card",
+      "importPath": "@/components/atoms/Card",
       "category": "display"
     },
     "modal": {
@@ -129,133 +129,102 @@
     },
     "master-detail": {
       "component": "MasterDetail",
-      "importPath": "@/components/organisms/layout/MasterDetail",
+      "importPath": "@/components/organisms/MasterDetail",
       "category": "layout"
-    },
-    "dashboard-grid": {
-      "component": "DashboardGrid",
-      "importPath": "@/components/organisms/layout/DashboardGrid",
-      "category": "layout"
-    },
-    "game-hud": {
-      "component": "GameHud",
-      "importPath": "@/components/organisms/game/GameHud",
-      "category": "game"
-    },
-    "game-menu": {
-      "component": "GameMenu",
-      "importPath": "@/components/organisms/game/GameMenu",
-      "category": "game"
-    },
-    "game-over-screen": {
-      "component": "GameOverScreen",
-      "importPath": "@/components/organisms/game/GameOverScreen",
-      "category": "game"
-    },
-    "inventory-panel": {
-      "component": "InventoryPanel",
-      "importPath": "@/components/organisms/game/InventoryPanel",
-      "category": "game"
-    },
-    "dialogue-box": {
-      "component": "DialogueBox",
-      "importPath": "@/components/organisms/game/DialogueBox",
-      "category": "game"
     },
     "runtime-debugger": {
       "component": "RuntimeDebugger",
-      "importPath": "@/components/organisms/debug/RuntimeDebugger",
+      "importPath": "@/components/organisms/RuntimeDebugger",
       "category": "debug"
     },
     "repeatable-form-section": {
       "component": "RepeatableFormSection",
-      "importPath": "@/clients/inspection-system/molecules/RepeatableFormSection",
-      "category": "form",
-      "client": "inspection-system"
+      "importPath": "@/components/molecules/RepeatableFormSection",
+      "category": "form"
     },
     "box": {
       "component": "Box",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Box",
       "category": "layout"
     },
     "grid": {
       "component": "Grid",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/Grid",
       "category": "layout"
     },
     "center": {
       "component": "Center",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Center",
       "category": "layout"
     },
     "spacer": {
       "component": "Spacer",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Spacer",
       "category": "layout"
     },
     "divider": {
       "component": "Divider",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Divider",
       "category": "layout"
     },
     "button": {
       "component": "Button",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Button",
       "category": "atom"
     },
     "badge": {
       "component": "Badge",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Badge",
       "category": "atom"
     },
     "avatar": {
       "component": "Avatar",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Avatar",
       "category": "atom"
     },
     "icon": {
       "component": "Icon",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Icon",
       "category": "atom"
     },
     "spinner": {
       "component": "Spinner",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Spinner",
       "category": "atom"
     },
     "input": {
       "component": "Input",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Input",
       "category": "form"
     },
     "textarea": {
       "component": "Textarea",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Textarea",
       "category": "form"
     },
     "select": {
       "component": "Select",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Select",
       "category": "form"
     },
     "checkbox": {
       "component": "Checkbox",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Checkbox",
       "category": "form"
     },
     "radio": {
       "component": "Radio",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Radio",
       "category": "form"
     },
     "switch": {
       "component": "Switch",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Switch",
       "category": "form"
     },
     "label": {
       "component": "Label",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/Label",
       "category": "form"
     },
     "alert": {
@@ -270,32 +239,32 @@
     },
     "tooltip": {
       "component": "Tooltip",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/Tooltip",
       "category": "atom"
     },
     "popover": {
       "component": "Popover",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/Popover",
       "category": "atom"
     },
     "menu": {
       "component": "Menu",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/Menu",
       "category": "navigation"
     },
     "progress-bar": {
       "component": "ProgressBar",
-      "importPath": "@/components/atoms",
+      "importPath": "@/components/atoms/ProgressBar",
       "category": "display"
     },
     "container": {
       "component": "Container",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/Container",
       "category": "layout"
     },
     "simple-grid": {
       "component": "SimpleGrid",
-      "importPath": "@/components/molecules",
+      "importPath": "@/components/molecules/SimpleGrid",
       "category": "layout"
     },
     "studio-home-web": {
@@ -385,26 +354,6 @@
       "importPath": "@/components/atoms/Typography",
       "category": "component"
     },
-    "control-button": {
-      "component": "ControlButton",
-      "importPath": "@/components/atoms/ControlButton",
-      "category": "component"
-    },
-    "health-bar": {
-      "component": "HealthBar",
-      "importPath": "@/components/atoms/HealthBar",
-      "category": "component"
-    },
-    "score-display": {
-      "component": "ScoreDisplay",
-      "importPath": "@/components/atoms/ScoreDisplay",
-      "category": "component"
-    },
-    "sprite": {
-      "component": "Sprite",
-      "importPath": "@/components/atoms/Sprite",
-      "category": "game"
-    },
     "flex": {
       "component": "Flex",
       "importPath": "@/components/molecules/Flex",
@@ -445,34 +394,9 @@
       "importPath": "@/components/molecules/ViolationAlert",
       "category": "state"
     },
-    "action-buttons": {
-      "component": "ActionButtons",
-      "importPath": "@/components/molecules/ActionButtons",
-      "category": "component"
-    },
-    "d-pad": {
-      "component": "DPad",
-      "importPath": "@/components/molecules/DPad",
-      "category": "component"
-    },
-    "stat-badge": {
-      "component": "StatBadge",
-      "importPath": "@/components/molecules/game/StatBadge",
-      "category": "game"
-    },
     "stat-display": {
       "component": "StatDisplay",
       "importPath": "@/components/molecules/StatDisplay",
-      "category": "display"
-    },
-    "button-pattern": {
-      "component": "ButtonPattern",
-      "importPath": "@/components/organisms/ButtonPattern",
-      "category": "display"
-    },
-    "custom-pattern": {
-      "component": "CustomPattern",
-      "importPath": "@/components/organisms/CustomPattern",
       "category": "display"
     },
     "drawer-slot": {
@@ -484,11 +408,6 @@
       "component": "Header",
       "importPath": "@/components/organisms/Header",
       "category": "header"
-    },
-    "layout-pattern": {
-      "component": "LayoutPattern",
-      "importPath": "@/components/organisms/LayoutPattern",
-      "category": "layout"
     },
     "modal-slot": {
       "component": "ModalSlot",
@@ -530,16 +449,6 @@
       "importPath": "@/components/organisms/ToastSlot",
       "category": "layout"
     },
-    "split-pane": {
-      "component": "SplitPane",
-      "importPath": "@/components/organisms/SplitPane",
-      "category": "layout"
-    },
-    "tabbed-container": {
-      "component": "TabbedContainer",
-      "importPath": "@/components/organisms/TabbedContainer",
-      "category": "navigation"
-    },
     "auth-layout": {
       "component": "AuthLayout",
       "importPath": "@/components/templates/AuthLayout",
@@ -572,7 +481,7 @@
     },
     "chart": {
       "component": "Chart",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/Chart",
       "category": "visualization"
     },
     "meter": {
@@ -582,43 +491,33 @@
     },
     "timeline": {
       "component": "Timeline",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/Timeline",
       "category": "display"
     },
     "media-gallery": {
       "component": "MediaGallery",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/MediaGallery",
       "category": "media"
     },
     "signature-pad": {
       "component": "SignaturePad",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/SignaturePad",
       "category": "form"
     },
     "document-viewer": {
       "component": "DocumentViewer",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/DocumentViewer",
       "category": "display"
     },
     "graph-canvas": {
       "component": "GraphCanvas",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/GraphCanvas",
       "category": "visualization"
     },
     "code-viewer": {
       "component": "CodeViewer",
-      "importPath": "@almadar/ui/components",
+      "importPath": "@/components/organisms/CodeViewer",
       "category": "display"
-    },
-    "canvas-effect": {
-      "component": "CanvasEffect",
-      "importPath": "@/components/organisms/CanvasEffect",
-      "category": "game"
-    },
-    "isometric-canvas": {
-      "component": "IsometricCanvas",
-      "importPath": "@/components/organisms/IsometricCanvas",
-      "category": "game"
     },
     "battle-template": {
       "component": "BattleTemplate",
@@ -635,51 +534,6 @@
       "importPath": "@/components/templates/WorldMapTemplate",
       "category": "template"
     },
-    "battle-board": {
-      "component": "BattleBoard",
-      "importPath": "@/components/organisms/BattleBoard",
-      "category": "game"
-    },
-    "castle-board": {
-      "component": "CastleBoard",
-      "importPath": "@/components/organisms/CastleBoard",
-      "category": "game"
-    },
-    "world-map-board": {
-      "component": "WorldMapBoard",
-      "importPath": "@/components/organisms/WorldMapBoard",
-      "category": "game"
-    },
-    "collapsible-section": {
-      "component": "CollapsibleSection",
-      "importPath": "@/components/organisms/CollapsibleSection",
-      "category": "display"
-    },
-    "model-loader": {
-      "component": "ModelLoader",
-      "importPath": "@/components/organisms/ModelLoader",
-      "category": "display"
-    },
-    "feature-renderer": {
-      "component": "FeatureRenderer",
-      "importPath": "@/components/organisms/FeatureRenderer",
-      "category": "display"
-    },
-    "tile-renderer": {
-      "component": "TileRenderer",
-      "importPath": "@/components/organisms/TileRenderer",
-      "category": "game"
-    },
-    "unit-renderer": {
-      "component": "UnitRenderer",
-      "importPath": "@/components/organisms/UnitRenderer",
-      "category": "display"
-    },
-    "state-indicator": {
-      "component": "StateIndicator",
-      "importPath": "@/components/atoms/StateIndicator",
-      "category": "display"
-    },
     "error-boundary": {
       "component": "ErrorBoundary",
       "importPath": "@/components/molecules/ErrorBoundary",
@@ -689,31 +543,6 @@
       "component": "Skeleton",
       "importPath": "@/components/molecules/Skeleton",
       "category": "component"
-    },
-    "game-audio-provider": {
-      "component": "GameAudioProvider",
-      "importPath": "@/components/organisms/GameAudioProvider",
-      "category": "game"
-    },
-    "game-audio-toggle": {
-      "component": "GameAudioToggle",
-      "importPath": "@/components/organisms/GameAudioToggle",
-      "category": "game"
-    },
-    "trait-slot": {
-      "component": "TraitSlot",
-      "importPath": "@/components/organisms/TraitSlot",
-      "category": "layout"
-    },
-    "trait-state-viewer": {
-      "component": "TraitStateViewer",
-      "importPath": "@/components/organisms/TraitStateViewer",
-      "category": "display"
-    },
-    "uncontrolled-battle-board": {
-      "component": "UncontrolledBattleBoard",
-      "importPath": "@/components/organisms/UncontrolledBattleBoard",
-      "category": "game"
     },
     "quiz-block": {
       "component": "QuizBlock",
@@ -745,145 +574,10 @@
       "importPath": "@/components/organisms/StateMachineView",
       "category": "display"
     },
-    "book-chapter-view": {
-      "component": "BookChapterView",
-      "importPath": "@/components/organisms/BookChapterView",
-      "category": "display"
-    },
-    "book-cover-page": {
-      "component": "BookCoverPage",
-      "importPath": "@/components/organisms/BookCoverPage",
-      "category": "display"
-    },
-    "book-nav-bar": {
-      "component": "BookNavBar",
-      "importPath": "@/components/organisms/BookNavBar",
-      "category": "navigation"
-    },
-    "book-table-of-contents": {
-      "component": "BookTableOfContents",
-      "importPath": "@/components/organisms/BookTableOfContents",
-      "category": "display"
-    },
-    "book-viewer": {
-      "component": "BookViewer",
-      "importPath": "@/components/organisms/BookViewer",
-      "category": "display"
-    },
     "scaled-diagram": {
       "component": "ScaledDiagram",
       "importPath": "@/components/molecules/ScaledDiagram",
       "category": "component"
-    },
-    "combat-log": {
-      "component": "CombatLog",
-      "importPath": "@/components/organisms/CombatLog",
-      "category": "game"
-    },
-    "simulation-canvas": {
-      "component": "SimulationCanvas",
-      "importPath": "@/components/organisms/SimulationCanvas",
-      "category": "game"
-    },
-    "simulation-controls": {
-      "component": "SimulationControls",
-      "importPath": "@/components/organisms/SimulationControls",
-      "category": "display"
-    },
-    "simulation-graph": {
-      "component": "SimulationGraph",
-      "importPath": "@/components/organisms/SimulationGraph",
-      "category": "display"
-    },
-    "builder-board": {
-      "component": "BuilderBoard",
-      "importPath": "@/components/organisms/BuilderBoard",
-      "category": "game"
-    },
-    "classifier-board": {
-      "component": "ClassifierBoard",
-      "importPath": "@/components/organisms/ClassifierBoard",
-      "category": "game"
-    },
-    "debugger-board": {
-      "component": "DebuggerBoard",
-      "importPath": "@/components/organisms/DebuggerBoard",
-      "category": "game"
-    },
-    "event-handler-board": {
-      "component": "EventHandlerBoard",
-      "importPath": "@/components/organisms/EventHandlerBoard",
-      "category": "game"
-    },
-    "event-log": {
-      "component": "EventLog",
-      "importPath": "@/components/organisms/EventLog",
-      "category": "display"
-    },
-    "object-rule-panel": {
-      "component": "ObjectRulePanel",
-      "importPath": "@/components/organisms/ObjectRulePanel",
-      "category": "display"
-    },
-    "rule-editor": {
-      "component": "RuleEditor",
-      "importPath": "@/components/organisms/RuleEditor",
-      "category": "display"
-    },
-    "negotiator-board": {
-      "component": "NegotiatorBoard",
-      "importPath": "@/components/organisms/NegotiatorBoard",
-      "category": "game"
-    },
-    "action-palette": {
-      "component": "ActionPalette",
-      "importPath": "@/components/organisms/ActionPalette",
-      "category": "display"
-    },
-    "action-tile": {
-      "component": "ActionTile",
-      "importPath": "@/components/organisms/ActionTile",
-      "category": "game"
-    },
-    "sequence-bar": {
-      "component": "SequenceBar",
-      "importPath": "@/components/organisms/SequenceBar",
-      "category": "display"
-    },
-    "sequencer-board": {
-      "component": "SequencerBoard",
-      "importPath": "@/components/organisms/SequencerBoard",
-      "category": "game"
-    },
-    "simulator-board": {
-      "component": "SimulatorBoard",
-      "importPath": "@/components/organisms/SimulatorBoard",
-      "category": "game"
-    },
-    "code-view": {
-      "component": "CodeView",
-      "importPath": "@/components/organisms/CodeView",
-      "category": "display"
-    },
-    "state-architect-board": {
-      "component": "StateArchitectBoard",
-      "importPath": "@/components/organisms/StateArchitectBoard",
-      "category": "display"
-    },
-    "state-node": {
-      "component": "StateNode",
-      "importPath": "@/components/organisms/StateNode",
-      "category": "display"
-    },
-    "transition-arrow": {
-      "component": "TransitionArrow",
-      "importPath": "@/components/organisms/TransitionArrow",
-      "category": "display"
-    },
-    "variable-panel": {
-      "component": "VariablePanel",
-      "importPath": "@/components/organisms/VariablePanel",
-      "category": "display"
     },
     "day-cell": {
       "component": "DayCell",
@@ -944,11 +638,6 @@
       "component": "ProgressDots",
       "importPath": "@/components/molecules/ProgressDots",
       "category": "component"
-    },
-    "platformer-canvas": {
-      "component": "PlatformerCanvas",
-      "importPath": "@/components/organisms/PlatformerCanvas",
-      "category": "form"
     },
     "map-view": {
       "component": "MapView",
@@ -1030,116 +719,6 @@
       "importPath": "@/components/molecules/SwipeableRow",
       "category": "component"
     },
-    "action-button": {
-      "component": "ActionButton",
-      "importPath": "@/components/atoms/ActionButton",
-      "category": "component"
-    },
-    "choice-button": {
-      "component": "ChoiceButton",
-      "importPath": "@/components/atoms/ChoiceButton",
-      "category": "component"
-    },
-    "combo-counter": {
-      "component": "ComboCounter",
-      "importPath": "@/components/atoms/ComboCounter",
-      "category": "component"
-    },
-    "damage-number": {
-      "component": "DamageNumber",
-      "importPath": "@/components/atoms/DamageNumber",
-      "category": "component"
-    },
-    "dialogue-bubble": {
-      "component": "DialogueBubble",
-      "importPath": "@/components/atoms/DialogueBubble",
-      "category": "game"
-    },
-    "item-slot": {
-      "component": "ItemSlot",
-      "importPath": "@/components/atoms/ItemSlot",
-      "category": "layout"
-    },
-    "mini-map": {
-      "component": "MiniMap",
-      "importPath": "@/components/atoms/MiniMap",
-      "category": "component"
-    },
-    "resource-counter": {
-      "component": "ResourceCounter",
-      "importPath": "@/components/atoms/ResourceCounter",
-      "category": "component"
-    },
-    "status-effect": {
-      "component": "StatusEffect",
-      "importPath": "@/components/atoms/StatusEffect",
-      "category": "display"
-    },
-    "timer-display": {
-      "component": "TimerDisplay",
-      "importPath": "@/components/atoms/TimerDisplay",
-      "category": "component"
-    },
-    "turn-indicator": {
-      "component": "TurnIndicator",
-      "importPath": "@/components/atoms/TurnIndicator",
-      "category": "component"
-    },
-    "waypoint-marker": {
-      "component": "WaypointMarker",
-      "importPath": "@/components/atoms/WaypointMarker",
-      "category": "component"
-    },
-    "crafting-recipe": {
-      "component": "CraftingRecipe",
-      "importPath": "@/components/molecules/CraftingRecipe",
-      "category": "component"
-    },
-    "enemy-plate": {
-      "component": "EnemyPlate",
-      "importPath": "@/components/molecules/EnemyPlate",
-      "category": "component"
-    },
-    "health-panel": {
-      "component": "HealthPanel",
-      "importPath": "@/components/molecules/HealthPanel",
-      "category": "component"
-    },
-    "inventory-grid": {
-      "component": "InventoryGrid",
-      "importPath": "@/components/molecules/InventoryGrid",
-      "category": "game"
-    },
-    "powerup-slots": {
-      "component": "PowerupSlots",
-      "importPath": "@/components/molecules/PowerupSlots",
-      "category": "layout"
-    },
-    "quest-tracker": {
-      "component": "QuestTracker",
-      "importPath": "@/components/molecules/QuestTracker",
-      "category": "component"
-    },
-    "resource-bar": {
-      "component": "ResourceBar",
-      "importPath": "@/components/molecules/ResourceBar",
-      "category": "component"
-    },
-    "score-board": {
-      "component": "ScoreBoard",
-      "importPath": "@/components/molecules/ScoreBoard",
-      "category": "game"
-    },
-    "turn-panel": {
-      "component": "TurnPanel",
-      "importPath": "@/components/molecules/TurnPanel",
-      "category": "component"
-    },
-    "unit-command-bar": {
-      "component": "UnitCommandBar",
-      "importPath": "@/components/molecules/UnitCommandBar",
-      "category": "component"
-    },
     "content-section": {
       "component": "ContentSection",
       "importPath": "@/components/atoms/ContentSection",
@@ -1150,95 +729,345 @@
       "importPath": "@/components/atoms/SectionHeader",
       "category": "header"
     },
-    "avl-application": {
-      "component": "AvlApplication",
-      "importPath": "@/components/atoms/AvlApplication",
+    "article-section": {
+      "component": "ArticleSection",
+      "importPath": "@/components/molecules/ArticleSection",
       "category": "component"
     },
-    "avl-binding": {
-      "component": "AvlBinding",
-      "importPath": "@/components/atoms/AvlBinding",
-      "category": "component"
-    },
-    "avl-binding-ref": {
-      "component": "AvlBindingRef",
-      "importPath": "@/components/atoms/AvlBindingRef",
-      "category": "component"
-    },
-    "avl-effect": {
-      "component": "AvlEffect",
-      "importPath": "@/components/atoms/AvlEffect",
-      "category": "component"
-    },
-    "avl-entity": {
-      "component": "AvlEntity",
-      "importPath": "@/components/atoms/AvlEntity",
-      "category": "component"
-    },
-    "avl-event": {
-      "component": "AvlEvent",
-      "importPath": "@/components/atoms/AvlEvent",
-      "category": "component"
-    },
-    "avl-field": {
-      "component": "AvlField",
-      "importPath": "@/components/atoms/AvlField",
-      "category": "component"
-    },
-    "avl-field-type": {
-      "component": "AvlFieldType",
-      "importPath": "@/components/atoms/AvlFieldType",
-      "category": "component"
-    },
-    "avl-guard": {
-      "component": "AvlGuard",
-      "importPath": "@/components/atoms/AvlGuard",
-      "category": "component"
-    },
-    "avl-literal": {
-      "component": "AvlLiteral",
-      "importPath": "@/components/atoms/AvlLiteral",
-      "category": "component"
-    },
-    "avl-operator": {
-      "component": "AvlOperator",
-      "importPath": "@/components/atoms/AvlOperator",
-      "category": "component"
-    },
-    "avl-orbital": {
-      "component": "AvlOrbital",
-      "importPath": "@/components/atoms/AvlOrbital",
-      "category": "component"
-    },
-    "avl-page": {
-      "component": "AvlPage",
-      "importPath": "@/components/atoms/AvlPage",
-      "category": "component"
-    },
-    "avl-persistence": {
-      "component": "AvlPersistence",
-      "importPath": "@/components/atoms/AvlPersistence",
-      "category": "component"
-    },
-    "avl-s-expr": {
-      "component": "AvlSExpr",
-      "importPath": "@/components/atoms/AvlSExpr",
-      "category": "component"
-    },
-    "avl-state": {
-      "component": "AvlState",
-      "importPath": "@/components/atoms/AvlState",
+    "case-study-card": {
+      "component": "CaseStudyCard",
+      "importPath": "@/components/molecules/CaseStudyCard",
       "category": "display"
     },
-    "avl-trait": {
-      "component": "AvlTrait",
-      "importPath": "@/components/atoms/AvlTrait",
+    "code-example": {
+      "component": "CodeExample",
+      "importPath": "@/components/molecules/CodeExample",
       "category": "component"
     },
-    "avl-transition": {
-      "component": "AvlTransition",
-      "importPath": "@/components/atoms/AvlTransition",
+    "community-links": {
+      "component": "CommunityLinks",
+      "importPath": "@/components/molecules/CommunityLinks",
       "category": "component"
+    },
+    "feature-card": {
+      "component": "FeatureCard",
+      "importPath": "@/components/molecules/FeatureCard",
+      "category": "display"
+    },
+    "feature-grid": {
+      "component": "FeatureGrid",
+      "importPath": "@/components/molecules/FeatureGrid",
+      "category": "display"
+    },
+    "hero-section": {
+      "component": "HeroSection",
+      "importPath": "@/components/molecules/HeroSection",
+      "category": "header"
+    },
+    "install-box": {
+      "component": "InstallBox",
+      "importPath": "@/components/molecules/InstallBox",
+      "category": "component"
+    },
+    "pricing-card": {
+      "component": "PricingCard",
+      "importPath": "@/components/molecules/PricingCard",
+      "category": "display"
+    },
+    "pricing-grid": {
+      "component": "PricingGrid",
+      "importPath": "@/components/molecules/PricingGrid",
+      "category": "display"
+    },
+    "service-catalog": {
+      "component": "ServiceCatalog",
+      "importPath": "@/components/molecules/ServiceCatalog",
+      "category": "component"
+    },
+    "showcase-card": {
+      "component": "ShowcaseCard",
+      "importPath": "@/components/molecules/ShowcaseCard",
+      "category": "display"
+    },
+    "social-proof": {
+      "component": "SocialProof",
+      "importPath": "@/components/molecules/SocialProof",
+      "category": "component"
+    },
+    "split-section": {
+      "component": "SplitSection",
+      "importPath": "@/components/molecules/SplitSection",
+      "category": "layout"
+    },
+    "stats-grid": {
+      "component": "StatsGrid",
+      "importPath": "@/components/molecules/StatsGrid",
+      "category": "display"
+    },
+    "step-item": {
+      "component": "StepItem",
+      "importPath": "@/components/molecules/StepItem",
+      "category": "component"
+    },
+    "tag-cloud": {
+      "component": "TagCloud",
+      "importPath": "@/components/molecules/TagCloud",
+      "category": "component"
+    },
+    "team-card": {
+      "component": "TeamCard",
+      "importPath": "@/components/molecules/TeamCard",
+      "category": "display"
+    },
+    "case-study-organism": {
+      "component": "CaseStudyOrganism",
+      "importPath": "@/components/organisms/CaseStudyOrganism",
+      "category": "display"
+    },
+    "feature-grid-organism": {
+      "component": "FeatureGridOrganism",
+      "importPath": "@/components/organisms/FeatureGridOrganism",
+      "category": "display"
+    },
+    "hero-organism": {
+      "component": "HeroOrganism",
+      "importPath": "@/components/organisms/HeroOrganism",
+      "category": "header"
+    },
+    "pricing-organism": {
+      "component": "PricingOrganism",
+      "importPath": "@/components/organisms/PricingOrganism",
+      "category": "display"
+    },
+    "showcase-organism": {
+      "component": "ShowcaseOrganism",
+      "importPath": "@/components/organisms/ShowcaseOrganism",
+      "category": "display"
+    },
+    "stats-organism": {
+      "component": "StatsOrganism",
+      "importPath": "@/components/organisms/StatsOrganism",
+      "category": "display"
+    },
+    "step-flow-organism": {
+      "component": "StepFlowOrganism",
+      "importPath": "@/components/organisms/StepFlowOrganism",
+      "category": "display"
+    },
+    "team-organism": {
+      "component": "TeamOrganism",
+      "importPath": "@/components/organisms/TeamOrganism",
+      "category": "display"
+    },
+    "about-page-template": {
+      "component": "AboutPageTemplate",
+      "importPath": "@/components/templates/AboutPageTemplate",
+      "category": "template"
+    },
+    "feature-detail-page-template": {
+      "component": "FeatureDetailPageTemplate",
+      "importPath": "@/components/templates/FeatureDetailPageTemplate",
+      "category": "template"
+    },
+    "landing-page-template": {
+      "component": "LandingPageTemplate",
+      "importPath": "@/components/templates/LandingPageTemplate",
+      "category": "template"
+    },
+    "pricing-page-template": {
+      "component": "PricingPageTemplate",
+      "importPath": "@/components/templates/PricingPageTemplate",
+      "category": "template"
+    },
+    "animated-graphic": {
+      "component": "AnimatedGraphic",
+      "importPath": "@/components/atoms/AnimatedGraphic",
+      "category": "component"
+    },
+    "animated-reveal": {
+      "component": "AnimatedReveal",
+      "importPath": "@/components/atoms/AnimatedReveal",
+      "category": "component"
+    },
+    "pattern-tile": {
+      "component": "PatternTile",
+      "importPath": "@/components/atoms/PatternTile",
+      "category": "game"
+    },
+    "edge-decoration": {
+      "component": "EdgeDecoration",
+      "importPath": "@/components/molecules/EdgeDecoration",
+      "category": "component"
+    },
+    "geometric-pattern": {
+      "component": "GeometricPattern",
+      "importPath": "@/components/molecules/GeometricPattern",
+      "category": "component"
+    },
+    "cta-banner": {
+      "component": "CTABanner",
+      "importPath": "@/components/molecules/CTABanner",
+      "category": "navigation"
+    },
+    "ui-slot-renderer": {
+      "component": "UISlotRenderer",
+      "importPath": "@/components/organisms/UISlotRenderer",
+      "category": "layout"
+    },
+    "trait-frame": {
+      "component": "TraitFrame",
+      "importPath": "@/components/atoms/TraitFrame",
+      "category": "component"
+    },
+    "file-tree": {
+      "component": "FileTree",
+      "importPath": "@/components/molecules/FileTree",
+      "category": "component"
+    },
+    "filter-pill": {
+      "component": "FilterPill",
+      "importPath": "@/components/atoms/FilterPill",
+      "category": "filter"
+    },
+    "likert-scale": {
+      "component": "LikertScale",
+      "importPath": "@/components/molecules/LikertScale",
+      "category": "component"
+    },
+    "matrix-question": {
+      "component": "MatrixQuestion",
+      "importPath": "@/components/molecules/MatrixQuestion",
+      "category": "component"
+    },
+    "qr-scanner": {
+      "component": "QrScanner",
+      "importPath": "@/components/molecules/QrScanner",
+      "category": "component"
+    },
+    "vote-stack": {
+      "component": "VoteStack",
+      "importPath": "@/components/molecules/VoteStack",
+      "category": "component"
+    },
+    "branching-logic-builder": {
+      "component": "BranchingLogicBuilder",
+      "importPath": "@/components/molecules/BranchingLogicBuilder",
+      "category": "display"
+    },
+    "reply-tree": {
+      "component": "ReplyTree",
+      "importPath": "@/components/molecules/ReplyTree",
+      "category": "display"
+    },
+    "rich-block-editor": {
+      "component": "RichBlockEditor",
+      "importPath": "@/components/molecules/RichBlockEditor",
+      "category": "display"
+    },
+    "version-diff": {
+      "component": "VersionDiff",
+      "importPath": "@/components/molecules/VersionDiff",
+      "category": "display"
+    },
+    "option-constraint-group": {
+      "component": "OptionConstraintGroup",
+      "importPath": "@/components/molecules/OptionConstraintGroup",
+      "category": "component"
+    },
+    "positioned-canvas": {
+      "component": "PositionedCanvas",
+      "importPath": "@/components/molecules/PositionedCanvas",
+      "category": "game"
+    },
+    "action-button": {
+      "component": "ActionButton",
+      "importPath": "@/components/atoms/ActionButton",
+      "category": "game"
+    },
+    "choice-button": {
+      "component": "ChoiceButton",
+      "importPath": "@/components/atoms/ChoiceButton",
+      "category": "game"
+    },
+    "combo-counter": {
+      "component": "ComboCounter",
+      "importPath": "@/components/atoms/ComboCounter",
+      "category": "game"
+    },
+    "control-button": {
+      "component": "ControlButton",
+      "importPath": "@/components/atoms/ControlButton",
+      "category": "game"
+    },
+    "damage-number": {
+      "component": "DamageNumber",
+      "importPath": "@/components/atoms/DamageNumber",
+      "category": "game"
+    },
+    "dialogue-bubble": {
+      "component": "DialogueBubble",
+      "importPath": "@/components/atoms/DialogueBubble",
+      "category": "game"
+    },
+    "health-bar": {
+      "component": "HealthBar",
+      "importPath": "@/components/atoms/HealthBar",
+      "category": "game"
+    },
+    "item-slot": {
+      "component": "ItemSlot",
+      "importPath": "@/components/atoms/ItemSlot",
+      "category": "game"
+    },
+    "mini-map": {
+      "component": "MiniMap",
+      "importPath": "@/components/atoms/MiniMap",
+      "category": "game"
+    },
+    "resource-counter": {
+      "component": "ResourceCounter",
+      "importPath": "@/components/atoms/ResourceCounter",
+      "category": "game"
+    },
+    "score-display": {
+      "component": "ScoreDisplay",
+      "importPath": "@/components/atoms/ScoreDisplay",
+      "category": "game"
+    },
+    "sprite": {
+      "component": "Sprite",
+      "importPath": "@/components/atoms/Sprite",
+      "category": "game"
+    },
+    "state-indicator": {
+      "component": "StateIndicator",
+      "importPath": "@/components/atoms/StateIndicator",
+      "category": "game"
+    },
+    "status-effect": {
+      "component": "StatusEffect",
+      "importPath": "@/components/atoms/StatusEffect",
+      "category": "game"
+    },
+    "timer-display": {
+      "component": "TimerDisplay",
+      "importPath": "@/components/atoms/TimerDisplay",
+      "category": "game"
+    },
+    "turn-indicator": {
+      "component": "TurnIndicator",
+      "importPath": "@/components/atoms/TurnIndicator",
+      "category": "game"
+    },
+    "waypoint-marker": {
+      "component": "WaypointMarker",
+      "importPath": "@/components/atoms/WaypointMarker",
+      "category": "game"
+    },
+    "xp-bar": {
+      "component": "XPBar",
+      "importPath": "@/components/atoms/XPBar",
+      "category": "game"
     },
     "svg-branch": {
       "component": "SvgBranch",
@@ -1300,26 +1129,6 @@
       "importPath": "@/components/atoms/SvgStack",
       "category": "component"
     },
-    "article-section": {
-      "component": "ArticleSection",
-      "importPath": "@/components/molecules/ArticleSection",
-      "category": "component"
-    },
-    "case-study-card": {
-      "component": "CaseStudyCard",
-      "importPath": "@/components/molecules/CaseStudyCard",
-      "category": "display"
-    },
-    "code-example": {
-      "component": "CodeExample",
-      "importPath": "@/components/molecules/CodeExample",
-      "category": "component"
-    },
-    "community-links": {
-      "component": "CommunityLinks",
-      "importPath": "@/components/molecules/CommunityLinks",
-      "category": "component"
-    },
     "doc-breadcrumb": {
       "component": "DocBreadcrumb",
       "importPath": "@/components/molecules/DocBreadcrumb",
@@ -1345,244 +1154,19 @@
       "importPath": "@/components/molecules/DocSidebar",
       "category": "navigation"
     },
-    "feature-card": {
-      "component": "FeatureCard",
-      "importPath": "@/components/molecules/FeatureCard",
-      "category": "display"
-    },
-    "feature-grid": {
-      "component": "FeatureGrid",
-      "importPath": "@/components/molecules/FeatureGrid",
-      "category": "display"
+    "doc-toc": {
+      "component": "DocTOC",
+      "importPath": "@/components/molecules/DocTOC",
+      "category": "component"
     },
     "gradient-divider": {
       "component": "GradientDivider",
       "importPath": "@/components/molecules/GradientDivider",
       "category": "component"
     },
-    "hero-section": {
-      "component": "HeroSection",
-      "importPath": "@/components/molecules/HeroSection",
-      "category": "header"
-    },
-    "install-box": {
-      "component": "InstallBox",
-      "importPath": "@/components/molecules/InstallBox",
-      "category": "component"
-    },
-    "marketing-footer": {
-      "component": "MarketingFooter",
-      "importPath": "@/components/molecules/MarketingFooter",
-      "category": "component"
-    },
-    "pricing-card": {
-      "component": "PricingCard",
-      "importPath": "@/components/molecules/PricingCard",
-      "category": "display"
-    },
-    "pricing-grid": {
-      "component": "PricingGrid",
-      "importPath": "@/components/molecules/PricingGrid",
-      "category": "display"
-    },
     "pull-quote": {
       "component": "PullQuote",
       "importPath": "@/components/molecules/PullQuote",
-      "category": "component"
-    },
-    "service-catalog": {
-      "component": "ServiceCatalog",
-      "importPath": "@/components/molecules/ServiceCatalog",
-      "category": "component"
-    },
-    "showcase-card": {
-      "component": "ShowcaseCard",
-      "importPath": "@/components/molecules/ShowcaseCard",
-      "category": "display"
-    },
-    "social-proof": {
-      "component": "SocialProof",
-      "importPath": "@/components/molecules/SocialProof",
-      "category": "component"
-    },
-    "split-section": {
-      "component": "SplitSection",
-      "importPath": "@/components/molecules/SplitSection",
-      "category": "layout"
-    },
-    "stats-grid": {
-      "component": "StatsGrid",
-      "importPath": "@/components/molecules/StatsGrid",
-      "category": "display"
-    },
-    "step-item": {
-      "component": "StepItem",
-      "importPath": "@/components/molecules/StepItem",
-      "category": "component"
-    },
-    "tag-cloud": {
-      "component": "TagCloud",
-      "importPath": "@/components/molecules/TagCloud",
-      "category": "component"
-    },
-    "team-card": {
-      "component": "TeamCard",
-      "importPath": "@/components/molecules/TeamCard",
-      "category": "display"
-    },
-    "avl-closed-circuit": {
-      "component": "AvlClosedCircuit",
-      "importPath": "@/components/molecules/AvlClosedCircuit",
-      "category": "component"
-    },
-    "avl-emit-listen": {
-      "component": "AvlEmitListen",
-      "importPath": "@/components/molecules/AvlEmitListen",
-      "category": "display"
-    },
-    "avl-expr-tree": {
-      "component": "AvlExprTree",
-      "importPath": "@/components/molecules/AvlExprTree",
-      "category": "component"
-    },
-    "avl-orbital-unit": {
-      "component": "AvlOrbitalUnit",
-      "importPath": "@/components/molecules/AvlOrbitalUnit",
-      "category": "component"
-    },
-    "avl-slot-map": {
-      "component": "AvlSlotMap",
-      "importPath": "@/components/molecules/AvlSlotMap",
-      "category": "layout"
-    },
-    "avl-state-machine": {
-      "component": "AvlStateMachine",
-      "importPath": "@/components/molecules/AvlStateMachine",
-      "category": "display"
-    },
-    "case-study-organism": {
-      "component": "CaseStudyOrganism",
-      "importPath": "@/components/organisms/CaseStudyOrganism",
-      "category": "display"
-    },
-    "feature-grid-organism": {
-      "component": "FeatureGridOrganism",
-      "importPath": "@/components/organisms/FeatureGridOrganism",
-      "category": "display"
-    },
-    "hero-organism": {
-      "component": "HeroOrganism",
-      "importPath": "@/components/organisms/HeroOrganism",
-      "category": "header"
-    },
-    "pricing-organism": {
-      "component": "PricingOrganism",
-      "importPath": "@/components/organisms/PricingOrganism",
-      "category": "display"
-    },
-    "showcase-organism": {
-      "component": "ShowcaseOrganism",
-      "importPath": "@/components/organisms/ShowcaseOrganism",
-      "category": "display"
-    },
-    "stats-organism": {
-      "component": "StatsOrganism",
-      "importPath": "@/components/organisms/StatsOrganism",
-      "category": "display"
-    },
-    "step-flow-organism": {
-      "component": "StepFlowOrganism",
-      "importPath": "@/components/organisms/StepFlowOrganism",
-      "category": "display"
-    },
-    "team-organism": {
-      "component": "TeamOrganism",
-      "importPath": "@/components/organisms/TeamOrganism",
-      "category": "display"
-    },
-    "avl-click-target": {
-      "component": "AvlClickTarget",
-      "importPath": "@/components/organisms/AvlClickTarget",
-      "category": "display"
-    },
-    "avl-cosmic-zoom": {
-      "component": "AvlCosmicZoom",
-      "importPath": "@/components/organisms/AvlCosmicZoom",
-      "category": "display"
-    },
-    "avl-legend": {
-      "component": "AvlLegend",
-      "importPath": "@/components/organisms/AvlLegend",
-      "category": "display"
-    },
-    "avl-trait-scene": {
-      "component": "AvlTraitScene",
-      "importPath": "@/components/organisms/AvlTraitScene",
-      "category": "display"
-    },
-    "avl-transition-scene": {
-      "component": "AvlTransitionScene",
-      "importPath": "@/components/organisms/AvlTransitionScene",
-      "category": "display"
-    },
-    "about-page-template": {
-      "component": "AboutPageTemplate",
-      "importPath": "@/components/templates/AboutPageTemplate",
-      "category": "template"
-    },
-    "feature-detail-page-template": {
-      "component": "FeatureDetailPageTemplate",
-      "importPath": "@/components/templates/FeatureDetailPageTemplate",
-      "category": "template"
-    },
-    "landing-page-template": {
-      "component": "LandingPageTemplate",
-      "importPath": "@/components/templates/LandingPageTemplate",
-      "category": "template"
-    },
-    "pricing-page-template": {
-      "component": "PricingPageTemplate",
-      "importPath": "@/components/templates/PricingPageTemplate",
-      "category": "template"
-    },
-    "animated-graphic": {
-      "component": "AnimatedGraphic",
-      "importPath": "@/components/atoms/AnimatedGraphic",
-      "category": "component"
-    },
-    "animated-reveal": {
-      "component": "AnimatedReveal",
-      "importPath": "@/components/atoms/AnimatedReveal",
-      "category": "component"
-    },
-    "pattern-tile": {
-      "component": "PatternTile",
-      "importPath": "@/components/atoms/PatternTile",
-      "category": "game"
-    },
-    "edge-decoration": {
-      "component": "EdgeDecoration",
-      "importPath": "@/components/molecules/EdgeDecoration",
-      "category": "component"
-    },
-    "geometric-pattern": {
-      "component": "GeometricPattern",
-      "importPath": "@/components/molecules/GeometricPattern",
-      "category": "component"
-    },
-    "avl-behavior-glyph": {
-      "component": "AvlBehaviorGlyph",
-      "importPath": "@/components/molecules/AvlBehaviorGlyph",
-      "category": "component"
-    },
-    "avl-swim-lane": {
-      "component": "AvlSwimLane",
-      "importPath": "@/components/molecules/AvlSwimLane",
-      "category": "component"
-    },
-    "avl-transition-lane": {
-      "component": "AvlTransitionLane",
-      "importPath": "@/components/molecules/AvlTransitionLane",
       "category": "component"
     },
     "behavior-view": {
@@ -1590,265 +1174,320 @@
       "importPath": "@/components/molecules/BehaviorView",
       "category": "component"
     },
-    "detail-view": {
-      "component": "DetailView",
-      "importPath": "@/components/molecules/DetailView",
-      "category": "display"
-    },
-    "mini-state-machine": {
-      "component": "MiniStateMachine",
-      "importPath": "@/components/molecules/MiniStateMachine",
-      "category": "display"
-    },
     "module-card": {
       "component": "ModuleCard",
       "importPath": "@/components/molecules/ModuleCard",
       "category": "display"
     },
-    "system-node": {
-      "component": "SystemNode",
-      "importPath": "@/components/molecules/SystemNode",
-      "category": "component"
-    },
-    "flow-canvas": {
-      "component": "FlowCanvas",
-      "importPath": "@/components/organisms/FlowCanvas",
+    "action-buttons": {
+      "component": "ActionButtons",
+      "importPath": "@/components/molecules/ActionButtons",
       "category": "game"
     },
-    "zoom-breadcrumb": {
-      "component": "ZoomBreadcrumb",
-      "importPath": "@/components/organisms/ZoomBreadcrumb",
-      "category": "navigation"
+    "combat-log": {
+      "component": "CombatLog",
+      "importPath": "@/components/molecules/CombatLog",
+      "category": "game"
     },
-    "zoom-legend": {
-      "component": "ZoomLegend",
-      "importPath": "@/components/organisms/ZoomLegend",
-      "category": "display"
+    "crafting-recipe": {
+      "component": "CraftingRecipe",
+      "importPath": "@/components/molecules/CraftingRecipe",
+      "category": "game"
     },
-    "avl-3d-label": {
-      "component": "Avl3DLabel",
-      "importPath": "@/components/atoms/Avl3DLabel",
-      "category": "component"
+    "d-pad": {
+      "component": "DPad",
+      "importPath": "@/components/molecules/DPad",
+      "category": "game"
     },
-    "avl-3d-tooltip": {
-      "component": "Avl3DTooltip",
-      "importPath": "@/components/atoms/Avl3DTooltip",
-      "category": "component"
+    "dialogue-box": {
+      "component": "DialogueBox",
+      "importPath": "@/components/molecules/DialogueBox",
+      "category": "game"
     },
-    "xp-bar": {
-      "component": "XPBar",
-      "importPath": "@/components/atoms/XPBar",
-      "category": "component"
-    },
-    "cta-banner": {
-      "component": "CTABanner",
-      "importPath": "@/components/molecules/CTABanner",
-      "category": "navigation"
-    },
-    "doc-toc": {
-      "component": "DocTOC",
-      "importPath": "@/components/molecules/DocTOC",
-      "category": "component"
-    },
-    "avl-3d-cross-wire": {
-      "component": "Avl3DCrossWire",
-      "importPath": "@/components/molecules/Avl3DCrossWire",
-      "category": "component"
-    },
-    "avl-3d-entity-core": {
-      "component": "Avl3DEntityCore",
-      "importPath": "@/components/molecules/Avl3DEntityCore",
-      "category": "component"
-    },
-    "avl-3d-expr-tree": {
-      "component": "Avl3DExprTree",
-      "importPath": "@/components/molecules/Avl3DExprTree",
-      "category": "component"
-    },
-    "avl-3d-orbital-node": {
-      "component": "Avl3DOrbitalNode",
-      "importPath": "@/components/molecules/Avl3DOrbitalNode",
-      "category": "component"
-    },
-    "avl-3d-state-node": {
-      "component": "Avl3DStateNode",
-      "importPath": "@/components/molecules/Avl3DStateNode",
-      "category": "display"
-    },
-    "avl-3d-transition-arc": {
-      "component": "Avl3DTransitionArc",
-      "importPath": "@/components/molecules/Avl3DTransitionArc",
-      "category": "component"
+    "enemy-plate": {
+      "component": "EnemyPlate",
+      "importPath": "@/components/molecules/EnemyPlate",
+      "category": "game"
     },
     "game-canvas-2d": {
       "component": "GameCanvas2D",
       "importPath": "@/components/molecules/GameCanvas2D",
       "category": "game"
     },
-    "ui-slot-renderer": {
-      "component": "UISlotRenderer",
-      "importPath": "@/components/organisms/UISlotRenderer",
-      "category": "layout"
+    "game-hud": {
+      "component": "GameHud",
+      "importPath": "@/components/molecules/GameHud",
+      "category": "game"
     },
-    "avl-3d-application-scene": {
-      "component": "Avl3DApplicationScene",
-      "importPath": "@/components/organisms/Avl3DApplicationScene",
+    "game-menu": {
+      "component": "GameMenu",
+      "importPath": "@/components/molecules/GameMenu",
+      "category": "game"
+    },
+    "game-over-screen": {
+      "component": "GameOverScreen",
+      "importPath": "@/components/molecules/GameOverScreen",
+      "category": "game"
+    },
+    "health-panel": {
+      "component": "HealthPanel",
+      "importPath": "@/components/molecules/HealthPanel",
+      "category": "game"
+    },
+    "inventory-grid": {
+      "component": "InventoryGrid",
+      "importPath": "@/components/molecules/InventoryGrid",
+      "category": "game"
+    },
+    "inventory-panel": {
+      "component": "InventoryPanel",
+      "importPath": "@/components/molecules/InventoryPanel",
+      "category": "game"
+    },
+    "isometric-canvas": {
+      "component": "IsometricCanvas",
+      "importPath": "@/components/molecules/IsometricCanvas",
+      "category": "game"
+    },
+    "platformer-canvas": {
+      "component": "PlatformerCanvas",
+      "importPath": "@/components/molecules/PlatformerCanvas",
+      "category": "game"
+    },
+    "powerup-slots": {
+      "component": "PowerupSlots",
+      "importPath": "@/components/molecules/PowerupSlots",
+      "category": "game"
+    },
+    "quest-tracker": {
+      "component": "QuestTracker",
+      "importPath": "@/components/molecules/QuestTracker",
+      "category": "game"
+    },
+    "resource-bar": {
+      "component": "ResourceBar",
+      "importPath": "@/components/molecules/ResourceBar",
+      "category": "game"
+    },
+    "score-board": {
+      "component": "ScoreBoard",
+      "importPath": "@/components/molecules/ScoreBoard",
+      "category": "game"
+    },
+    "stat-badge": {
+      "component": "StatBadge",
+      "importPath": "@/components/molecules/StatBadge",
+      "category": "game"
+    },
+    "turn-panel": {
+      "component": "TurnPanel",
+      "importPath": "@/components/molecules/TurnPanel",
+      "category": "game"
+    },
+    "unit-command-bar": {
+      "component": "UnitCommandBar",
+      "importPath": "@/components/molecules/UnitCommandBar",
+      "category": "game"
+    },
+    "book-chapter-view": {
+      "component": "BookChapterView",
+      "importPath": "@/components/organisms/BookChapterView",
       "category": "display"
     },
-    "avl-3d-effects": {
-      "component": "Avl3DEffects",
-      "importPath": "@/components/organisms/Avl3DEffects",
+    "book-cover-page": {
+      "component": "BookCoverPage",
+      "importPath": "@/components/organisms/BookCoverPage",
       "category": "display"
     },
-    "avl-3d-orbital-scene": {
-      "component": "Avl3DOrbitalScene",
-      "importPath": "@/components/organisms/Avl3DOrbitalScene",
+    "book-nav-bar": {
+      "component": "BookNavBar",
+      "importPath": "@/components/organisms/BookNavBar",
+      "category": "navigation"
+    },
+    "book-table-of-contents": {
+      "component": "BookTableOfContents",
+      "importPath": "@/components/organisms/BookTableOfContents",
       "category": "display"
     },
-    "avl-3d-trait-scene": {
-      "component": "Avl3DTraitScene",
-      "importPath": "@/components/organisms/Avl3DTraitScene",
+    "book-viewer": {
+      "component": "BookViewer",
+      "importPath": "@/components/organisms/BookViewer",
       "category": "display"
     },
-    "avl-3d-transition-scene": {
-      "component": "Avl3DTransitionScene",
-      "importPath": "@/components/organisms/Avl3DTransitionScene",
-      "category": "display"
+    "battle-board": {
+      "component": "BattleBoard",
+      "importPath": "@/components/organisms/BattleBoard",
+      "category": "game"
     },
-    "avl-3d-viewer": {
-      "component": "Avl3DViewer",
-      "importPath": "@/components/organisms/Avl3DViewer",
-      "category": "display"
+    "canvas-effect": {
+      "component": "CanvasEffect",
+      "importPath": "@/components/organisms/CanvasEffect",
+      "category": "game"
     },
-    "game-canvas-3d": {
-      "component": "GameCanvas3D",
+    "castle-board": {
+      "component": "CastleBoard",
+      "importPath": "@/components/organisms/CastleBoard",
+      "category": "game"
+    },
+    "game-audio-provider": {
+      "component": "GameAudioProvider",
+      "importPath": "@/components/organisms/GameAudioProvider",
+      "category": "game"
+    },
+    "game-audio-toggle": {
+      "component": "GameAudioToggle",
+      "importPath": "@/components/organisms/GameAudioToggle",
+      "category": "game"
+    },
+    "trait-slot": {
+      "component": "TraitSlot",
+      "importPath": "@/components/organisms/TraitSlot",
+      "category": "game"
+    },
+    "trait-state-viewer": {
+      "component": "TraitStateViewer",
+      "importPath": "@/components/organisms/TraitStateViewer",
+      "category": "game"
+    },
+    "uncontrolled-battle-board": {
+      "component": "UncontrolledBattleBoard",
+      "importPath": "@/components/organisms/UncontrolledBattleBoard",
+      "category": "game"
+    },
+    "world-map-board": {
+      "component": "WorldMapBoard",
+      "importPath": "@/components/organisms/WorldMapBoard",
+      "category": "game"
+    },
+    "simulation-canvas": {
+      "component": "SimulationCanvas",
+      "importPath": "@/components/organisms/SimulationCanvas",
+      "category": "game"
+    },
+    "simulation-controls": {
+      "component": "SimulationControls",
+      "importPath": "@/components/organisms/SimulationControls",
+      "category": "game"
+    },
+    "simulation-graph": {
+      "component": "SimulationGraph",
+      "importPath": "@/components/organisms/SimulationGraph",
+      "category": "game"
+    },
+    "builder-board": {
+      "component": "BuilderBoard",
+      "importPath": "@/components/organisms/BuilderBoard",
+      "category": "game"
+    },
+    "classifier-board": {
+      "component": "ClassifierBoard",
+      "importPath": "@/components/organisms/ClassifierBoard",
+      "category": "game"
+    },
+    "debugger-board": {
+      "component": "DebuggerBoard",
+      "importPath": "@/components/organisms/DebuggerBoard",
+      "category": "game"
+    },
+    "event-handler-board": {
+      "component": "EventHandlerBoard",
+      "importPath": "@/components/organisms/EventHandlerBoard",
+      "category": "game"
+    },
+    "event-log": {
+      "component": "EventLog",
+      "importPath": "@/components/organisms/EventLog",
+      "category": "game"
+    },
+    "object-rule-panel": {
+      "component": "ObjectRulePanel",
+      "importPath": "@/components/organisms/ObjectRulePanel",
+      "category": "game"
+    },
+    "rule-editor": {
+      "component": "RuleEditor",
+      "importPath": "@/components/organisms/RuleEditor",
+      "category": "game"
+    },
+    "negotiator-board": {
+      "component": "NegotiatorBoard",
+      "importPath": "@/components/organisms/NegotiatorBoard",
+      "category": "game"
+    },
+    "action-palette": {
+      "component": "ActionPalette",
+      "importPath": "@/components/organisms/ActionPalette",
+      "category": "game"
+    },
+    "action-tile": {
+      "component": "ActionTile",
+      "importPath": "@/components/organisms/ActionTile",
+      "category": "game"
+    },
+    "sequence-bar": {
+      "component": "SequenceBar",
+      "importPath": "@/components/organisms/SequenceBar",
+      "category": "game"
+    },
+    "sequencer-board": {
+      "component": "SequencerBoard",
+      "importPath": "@/components/organisms/SequencerBoard",
+      "category": "game"
+    },
+    "simulator-board": {
+      "component": "SimulatorBoard",
+      "importPath": "@/components/organisms/SimulatorBoard",
+      "category": "game"
+    },
+    "code-view": {
+      "component": "CodeView",
+      "importPath": "@/components/organisms/CodeView",
+      "category": "game"
+    },
+    "state-architect-board": {
+      "component": "StateArchitectBoard",
+      "importPath": "@/components/organisms/StateArchitectBoard",
+      "category": "game"
+    },
+    "state-node": {
+      "component": "StateNode",
+      "importPath": "@/components/organisms/StateNode",
+      "category": "game"
+    },
+    "transition-arrow": {
+      "component": "TransitionArrow",
+      "importPath": "@/components/organisms/TransitionArrow",
+      "category": "game"
+    },
+    "variable-panel": {
+      "component": "VariablePanel",
+      "importPath": "@/components/organisms/VariablePanel",
+      "category": "game"
+    },
+    "feature-renderer": {
+      "component": "FeatureRenderer",
       "importPath": "@almadar/ui/components/organisms/game/three",
       "category": "game"
     },
-    "camera-3d": {
-      "component": "Camera3D",
-      "importPath": "@/components/organisms/Camera3D",
-      "category": "display"
-    },
-    "lighting-3d": {
-      "component": "Lighting3D",
-      "importPath": "@/components/organisms/Lighting3D",
-      "category": "display"
-    },
-    "scene-3d": {
-      "component": "Scene3D",
-      "importPath": "@/components/organisms/Scene3D",
-      "category": "display"
-    },
-    "canvas-3d-error-boundary": {
-      "component": "Canvas3DErrorBoundary",
-      "importPath": "@/components/organisms/Canvas3DErrorBoundary",
+    "dashboard-grid": {
+      "component": "DashboardGrid",
+      "importPath": "@/components/organisms/DashboardGrid",
       "category": "game"
     },
-    "canvas-3d-loading-state": {
-      "component": "Canvas3DLoadingState",
-      "importPath": "@/components/organisms/Canvas3DLoadingState",
-      "category": "game"
+    "split-pane": {
+      "component": "SplitPane",
+      "importPath": "@/components/organisms/SplitPane",
+      "category": "layout"
     },
-    "physics-object-3d": {
-      "component": "PhysicsObject3D",
-      "importPath": "@/components/organisms/PhysicsObject3D",
+    "tabbed-container": {
+      "component": "TabbedContainer",
+      "importPath": "@/components/organisms/TabbedContainer",
+      "category": "navigation"
+    },
+    "master-detail-layout": {
+      "component": "MasterDetailLayout",
+      "importPath": "@/components/organisms/MasterDetailLayout",
       "category": "display"
-    },
-    "feature-renderer-3d": {
-      "component": "FeatureRenderer3D",
-      "importPath": "@/components/organisms/FeatureRenderer3D",
-      "category": "display"
-    },
-    "game-canvas-3d-battle-template": {
-      "component": "GameCanvas3DBattleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
-      "category": "template"
-    },
-    "game-canvas-3d-castle-template": {
-      "component": "GameCanvas3DCastleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
-      "category": "template"
-    },
-    "game-canvas-3d-world-map-template": {
-      "component": "GameCanvas3DWorldMapTemplate",
-      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
-      "category": "template"
-    },
-    "orb-inspector": {
-      "component": "OrbInspector",
-      "importPath": "@/components/organisms/OrbInspector",
-      "category": "debug"
-    },
-    "trait-frame": {
-      "component": "TraitFrame",
-      "importPath": "@/components/atoms/TraitFrame",
-      "category": "component"
-    },
-    "file-tree": {
-      "component": "FileTree",
-      "importPath": "@/components/molecules/FileTree",
-      "category": "component"
-    },
-    "avl-orbitals-cosmic-zoom": {
-      "component": "AvlOrbitalsCosmicZoom",
-      "importPath": "@/components/organisms/AvlOrbitalsCosmicZoom",
-      "category": "display"
-    },
-    "filter-pill": {
-      "component": "FilterPill",
-      "importPath": "@/components/atoms/FilterPill",
-      "category": "filter"
-    },
-    "likert-scale": {
-      "component": "LikertScale",
-      "importPath": "@/components/molecules/LikertScale",
-      "category": "component"
-    },
-    "matrix-question": {
-      "component": "MatrixQuestion",
-      "importPath": "@/components/molecules/MatrixQuestion",
-      "category": "component"
-    },
-    "qr-scanner": {
-      "component": "QrScanner",
-      "importPath": "@/components/molecules/QrScanner",
-      "category": "component"
-    },
-    "vote-stack": {
-      "component": "VoteStack",
-      "importPath": "@/components/molecules/VoteStack",
-      "category": "component"
-    },
-    "branching-logic-builder": {
-      "component": "BranchingLogicBuilder",
-      "importPath": "@/components/organisms/BranchingLogicBuilder",
-      "category": "display"
-    },
-    "reply-tree": {
-      "component": "ReplyTree",
-      "importPath": "@/components/organisms/ReplyTree",
-      "category": "display"
-    },
-    "rich-block-editor": {
-      "component": "RichBlockEditor",
-      "importPath": "@/components/organisms/RichBlockEditor",
-      "category": "display"
-    },
-    "version-diff": {
-      "component": "VersionDiff",
-      "importPath": "@/components/organisms/VersionDiff",
-      "category": "display"
-    },
-    "option-constraint-group": {
-      "component": "OptionConstraintGroup",
-      "importPath": "@/components/molecules/OptionConstraintGroup",
-      "category": "component"
-    },
-    "positioned-canvas": {
-      "component": "PositionedCanvas",
-      "importPath": "@/components/molecules/PositionedCanvas",
-      "category": "game"
     },
     "heading": {
       "component": "Typography",
