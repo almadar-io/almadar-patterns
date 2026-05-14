@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-14T13:39:01.007Z",
+  "exportedAt": "2026-05-14T15:35:09.962Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -1206,6 +1206,12 @@
           ],
           "description": "Show cancel button (defaults to true for schema forms)"
         },
+        "showSubmit": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers)."
+        },
         "title": {
           "types": [
             "string"
@@ -1596,6 +1602,12 @@
             "boolean"
           ],
           "description": "Show cancel button (defaults to true for schema forms)"
+        },
+        "showSubmit": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers)."
         },
         "title": {
           "types": [
