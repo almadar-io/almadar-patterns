@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-14T12:35:55.693Z",
+  "exportedAt": "2026-05-14T13:39:01.007Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2367,7 +2367,6 @@
             "array"
           ],
           "description": "Step definitions (compatible with WizardContainer's WizardStep). A string is shorthand for `{ id: str, title: str }`.",
-          "required": true,
           "items": {
             "types": [
               "object",
@@ -2499,19 +2498,58 @@
           "types": [
             "string"
           ],
-          "description": "Event to emit on Back click"
+          "description": "Event to emit on Back click — emits UI:{onBack} with { currentStep, totalSteps }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "currentStep",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "totalSteps",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "onNext": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on Next click"
+          "description": "Event to emit on Next click — emits UI:{onNext} with { currentStep, totalSteps }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "currentStep",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "totalSteps",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "onComplete": {
           "types": [
             "string"
           ],
-          "description": "Event to emit on Complete click"
+          "description": "Event to emit on Complete click — emits UI:{onComplete} with { currentStep, totalSteps }",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "currentStep",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "totalSteps",
+              "type": "number",
+              "required": true
+            }
+          ]
         },
         "onBackClick": {
           "types": [
@@ -4664,6 +4702,12 @@
             "string"
           ],
           "description": "Button label text (alternative to children for schema-driven rendering)"
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Disable the button (greys out, blocks click events)"
         }
       }
     },
