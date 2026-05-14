@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-12T04:13:35.549Z",
+  "exportedAt": "2026-05-14T12:35:55.693Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -12371,6 +12371,54 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "dragGroup": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, items in this container are draggable and announce this group as their source"
+        },
+        "accepts": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, the container accepts drops whose dragGroup matches this value (or '*' for any group)"
+        },
+        "sortable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable in-container reorder; items can be dragged to new positions among siblings"
+        },
+        "dropEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired on cross-container drop. Payload: { id, sourceGroup, targetGroup, newIndex }"
+        },
+        "reorderEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired on in-container reorder. Payload: { id, oldIndex, newIndex }"
+        },
+        "positionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired N times per drop (one per item in affected zones) so the trait can persist new positions for the WHOLE zone, not just the moved item. Payload: { id, position }"
+        },
+        "dndItemIdField": {
+          "types": [
+            "string"
+          ],
+          "description": "Row field used as the @dnd-kit draggable id (default 'id')"
+        },
+        "dndRoot": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Mark this container as the DnD root for its subtree — descendant zones share one DndContext (cross-container drag). Use on an outer container whose own items are not draggable."
+        },
         "entity": {
           "types": [
             "object",
@@ -12682,6 +12730,55 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "dragGroup": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, items in this container are draggable and announce this group as their source"
+        },
+        "accepts": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, the container accepts drops whose dragGroup matches this value (or '*' for any group)"
+        },
+        "sortable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable in-container reorder; items can be dragged to new positions among siblings"
+        },
+        "dropEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired on cross-container drop. Payload: { id, sourceGroup, targetGroup, newIndex }"
+        },
+        "reorderEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on reorder: UI:{reorderEvent} with { fromIndex, toIndex }",
+          "kind": "event"
+        },
+        "positionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired N times per drop (one per item in affected zones) so the trait can persist new positions for the WHOLE zone, not just the moved item. Payload: { id, position }"
+        },
+        "dndItemIdField": {
+          "types": [
+            "string"
+          ],
+          "description": "Row field used as the @dnd-kit draggable id (default 'id')"
+        },
+        "dndRoot": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Mark this container as the DnD root for its subtree — descendant zones share one DndContext (cross-container drag). Use on an outer container whose own items are not draggable."
+        },
         "entity": {
           "types": [
             "object",
@@ -12914,13 +13011,6 @@
             "boolean"
           ],
           "description": "Enable drag-to-reorder with grip handles"
-        },
-        "reorderEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event emitted on reorder: UI:{reorderEvent} with { fromIndex, toIndex }",
-          "kind": "event"
         },
         "swipeLeftEvent": {
           "types": [
@@ -13537,10 +13627,7 @@
                   "string"
                 ]
               }
-            },
-            "required": [
-              "src"
-            ]
+            }
           }
         },
         "currentIndex": {
@@ -23273,8 +23360,7 @@
               }
             },
             "required": [
-              "label",
-              "value"
+              "label"
             ]
           }
         },
