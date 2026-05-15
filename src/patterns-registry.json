@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-14T15:35:09.962Z",
+  "exportedAt": "2026-05-15T14:20:05.990Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -35,7 +35,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -53,13 +54,15 @@
           "types": [
             "string"
           ],
-          "description": "Current sort direction"
+          "description": "Current sort direction",
+          "default": "asc"
         },
         "searchValue": {
           "types": [
             "string"
           ],
-          "description": "Current search query value"
+          "description": "Current search query value",
+          "default": ""
         },
         "page": {
           "types": [
@@ -89,7 +92,8 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "default": []
         },
         "fields": {
           "types": [
@@ -143,13 +147,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Selection"
+          "description": "Selection",
+          "default": false
         },
         "searchable": {
           "types": [
             "boolean"
           ],
-          "description": "Search"
+          "description": "Search",
+          "default": false
         },
         "searchPlaceholder": {
           "types": [
@@ -229,7 +235,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show total count in pagination"
+          "description": "Show total count in pagination",
+          "default": true
         }
       }
     },
@@ -265,7 +272,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -319,7 +327,8 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "default": []
         },
         "entityType": {
           "types": [
@@ -331,7 +340,8 @@
           "types": [
             "boolean"
           ],
-          "description": "selectable prop"
+          "description": "selectable prop",
+          "default": false
         },
         "itemActions": {
           "types": [
@@ -444,13 +454,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         },
         "sortBy": {
           "types": [
@@ -504,7 +516,8 @@
           "types": [
             "number"
           ],
-          "description": "Minimum width of each card (default: 280px)"
+          "description": "Minimum width of each card (default: 280px)",
+          "default": 280
         },
         "maxCols": {
           "types": [
@@ -523,7 +536,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "alignItems": {
           "types": [
@@ -535,7 +549,8 @@
             "center",
             "end",
             "stretch"
-          ]
+          ],
+          "default": "stretch"
         },
         "children": {
           "types": [
@@ -636,7 +651,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show total count in pagination"
+          "description": "Show total count in pagination",
+          "default": true
         },
         "showAvatar": {
           "types": [
@@ -691,7 +707,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -866,7 +883,8 @@
           "types": [
             "boolean"
           ],
-          "description": "slideOver prop"
+          "description": "slideOver prop",
+          "default": false
         },
         "fields": {
           "types": [
@@ -971,7 +989,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show back button"
+          "description": "Show back button",
+          "default": false
         },
         "backEvent": {
           "types": [
@@ -979,7 +998,8 @@
           ],
           "description": "Event to emit when back is clicked (default: BACK)",
           "kind": "event-ref",
-          "emitPayloadSchema": []
+          "emitPayloadSchema": [],
+          "default": "BACK"
         },
         "breadcrumbs": {
           "types": [
@@ -1124,7 +1144,8 @@
             "vertical",
             "horizontal",
             "inline"
-          ]
+          ],
+          "default": "vertical"
         },
         "gap": {
           "types": [
@@ -1135,7 +1156,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -1180,7 +1202,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -1210,7 +1233,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers)."
+          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers).",
+          "default": true
         },
         "title": {
           "types": [
@@ -1223,26 +1247,30 @@
             "string"
           ],
           "description": "Event dispatch props (for trait state machine integration)",
-          "kind": "event"
+          "kind": "event",
+          "default": "SAVE"
         },
         "cancelEvent": {
           "types": [
             "string"
           ],
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
-          "kind": "event"
+          "kind": "event",
+          "default": "CANCEL"
         },
         "relationsData": {
           "types": [
             "object"
           ],
-          "description": "Relation data props"
+          "description": "Relation data props",
+          "default": {}
         },
         "relationsLoading": {
           "types": [
             "object"
           ],
-          "description": "Loading state for relation data: { fieldName: boolean }"
+          "description": "Loading state for relation data: { fieldName: boolean }",
+          "default": {}
         },
         "conditionalFields": {
           "types": [
@@ -1454,7 +1482,8 @@
               "title",
               "fields"
             ]
-          }
+          },
+          "default": []
         },
         "onFieldChange": {
           "types": [
@@ -1521,7 +1550,8 @@
             "vertical",
             "horizontal",
             "inline"
-          ]
+          ],
+          "default": "vertical"
         },
         "gap": {
           "types": [
@@ -1532,7 +1562,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -1577,7 +1608,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -1607,7 +1639,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers)."
+          "description": "Show submit button (defaults to true for schema forms). Set false when a parent atom owns the submit action externally (e.g. wizard footers).",
+          "default": true
         },
         "title": {
           "types": [
@@ -1620,26 +1653,30 @@
             "string"
           ],
           "description": "Event dispatch props (for trait state machine integration)",
-          "kind": "event"
+          "kind": "event",
+          "default": "SAVE"
         },
         "cancelEvent": {
           "types": [
             "string"
           ],
           "description": "Event to dispatch on cancel (defaults to 'CANCEL')",
-          "kind": "event"
+          "kind": "event",
+          "default": "CANCEL"
         },
         "relationsData": {
           "types": [
             "object"
           ],
-          "description": "Relation data props"
+          "description": "Relation data props",
+          "default": {}
         },
         "relationsLoading": {
           "types": [
             "object"
           ],
-          "description": "Loading state for relation data: { fieldName: boolean }"
+          "description": "Loading state for relation data: { fieldName: boolean }",
+          "default": {}
         },
         "conditionalFields": {
           "types": [
@@ -1851,7 +1888,8 @@
               "title",
               "fields"
             ]
-          }
+          },
+          "default": []
         },
         "onFieldChange": {
           "types": [
@@ -1913,13 +1951,15 @@
           "types": [
             "number"
           ],
-          "description": "Debounce delay in milliseconds @default 300"
+          "description": "Debounce delay in milliseconds @default 300",
+          "default": 300
         },
         "isLoading": {
           "types": [
             "boolean"
           ],
-          "description": "Show loading state @default false"
+          "description": "Show loading state @default false",
+          "default": false
         },
         "placeholder": {
           "types": [
@@ -1931,7 +1971,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show clear button @default true"
+          "description": "Show clear button @default true",
+          "default": true
         },
         "className": {
           "types": [
@@ -2064,13 +2105,15 @@
             "compact",
             "pills",
             "vertical"
-          ]
+          ],
+          "default": "default"
         },
         "showIcon": {
           "types": [
             "boolean"
           ],
-          "description": "Show filter icon"
+          "description": "Show filter icon",
+          "default": true
         },
         "query": {
           "types": [
@@ -2262,7 +2305,8 @@
             "default",
             "pills",
             "underline"
-          ]
+          ],
+          "default": "default"
         },
         "orientation": {
           "types": [
@@ -2272,7 +2316,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "className": {
           "types": [
@@ -2410,13 +2455,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow clicking on completed steps to navigate back"
+          "description": "Allow clicking on completed steps to navigate back",
+          "default": true
         },
         "compact": {
           "types": [
             "boolean"
           ],
-          "description": "Compact mode (smaller, no titles)"
+          "description": "Compact mode (smaller, no titles)",
+          "default": false
         },
         "className": {
           "types": [
@@ -2468,25 +2515,29 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the current step is valid (enables Next/Complete)"
+          "description": "Whether the current step is valid (enables Next/Complete)",
+          "default": true
         },
         "showBack": {
           "types": [
             "boolean"
           ],
-          "description": "Show the Back button"
+          "description": "Show the Back button",
+          "default": true
         },
         "showNext": {
           "types": [
             "boolean"
           ],
-          "description": "Show the Next button"
+          "description": "Show the Next button",
+          "default": true
         },
         "showComplete": {
           "types": [
             "boolean"
           ],
-          "description": "Show the Complete button (on last step)"
+          "description": "Show the Complete button (on last step)",
+          "default": true
         },
         "backLabel": {
           "types": [
@@ -2523,7 +2574,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "WIZARD_BACK"
         },
         "onNext": {
           "types": [
@@ -2542,7 +2594,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "WIZARD_NEXT"
         },
         "onComplete": {
           "types": [
@@ -2561,7 +2614,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "WIZARD_COMPLETE"
         },
         "onBackClick": {
           "types": [
@@ -2591,7 +2645,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Compact mode (smaller padding)"
+          "description": "Compact mode (smaller padding)",
+          "default": false
         },
         "className": {
           "types": [
@@ -3098,19 +3153,22 @@
           "types": [
             "boolean"
           ],
-          "description": "Show progress indicator"
+          "description": "Show progress indicator",
+          "default": true
         },
         "allowBack": {
           "types": [
             "boolean"
           ],
-          "description": "Allow navigation to previous steps"
+          "description": "Allow navigation to previous steps",
+          "default": true
         },
         "compact": {
           "types": [
             "boolean"
           ],
-          "description": "Modal mode (compact header, no padding)"
+          "description": "Modal mode (compact header, no padding)",
+          "default": false
         },
         "className": {
           "types": [
@@ -3179,7 +3237,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show page size selector @default false"
+          "description": "Show page size selector @default false",
+          "default": false
         },
         "pageSizeOptions": {
           "types": [
@@ -3190,7 +3249,13 @@
             "types": [
               "number"
             ]
-          }
+          },
+          "default": [
+            10,
+            20,
+            50,
+            100
+          ]
         },
         "pageSize": {
           "types": [
@@ -3215,13 +3280,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Show jump to page input @default false"
+          "description": "Show jump to page input @default false",
+          "default": false
         },
         "showTotal": {
           "types": [
             "boolean"
           ],
-          "description": "Show total count @default false"
+          "description": "Show total count @default false",
+          "default": false
         },
         "totalItems": {
           "types": [
@@ -3233,7 +3300,8 @@
           "types": [
             "number"
           ],
-          "description": "Maximum number of page buttons to show @default 7"
+          "description": "Maximum number of page buttons to show @default 7",
+          "default": 7
         },
         "className": {
           "types": [
@@ -3457,7 +3525,8 @@
             "error",
             "info",
             "warning"
-          ]
+          ],
+          "default": "info"
         },
         "message": {
           "types": [
@@ -3476,13 +3545,15 @@
           "types": [
             "number"
           ],
-          "description": "Auto-dismiss duration in milliseconds (0 = no auto-dismiss)"
+          "description": "Auto-dismiss duration in milliseconds (0 = no auto-dismiss)",
+          "default": 5000
         },
         "dismissible": {
           "types": [
             "boolean"
           ],
-          "description": "Show dismiss button"
+          "description": "Show dismiss button",
+          "default": true
         },
         "onDismiss": {
           "types": [
@@ -3570,7 +3641,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -3595,7 +3667,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the modal is open (defaults to true when rendered by slot wrapper)"
+          "description": "Whether the modal is open (defaults to true when rendered by slot wrapper)",
+          "default": true
         },
         "onClose": {
           "types": [
@@ -3615,7 +3688,8 @@
           "types": [
             "node"
           ],
-          "description": "Modal content (can be empty if using slot content)"
+          "description": "Modal content (can be empty if using slot content)",
+          "default": null
         },
         "footer": {
           "types": [
@@ -3634,25 +3708,29 @@
             "lg",
             "xl",
             "full"
-          ]
+          ],
+          "default": "md"
         },
         "showCloseButton": {
           "types": [
             "boolean"
           ],
-          "description": "showCloseButton prop"
+          "description": "showCloseButton prop",
+          "default": true
         },
         "closeOnOverlayClick": {
           "types": [
             "boolean"
           ],
-          "description": "closeOnOverlayClick prop"
+          "description": "closeOnOverlayClick prop",
+          "default": true
         },
         "closeOnEscape": {
           "types": [
             "boolean"
           ],
-          "description": "closeOnEscape prop"
+          "description": "closeOnEscape prop",
+          "default": true
         },
         "className": {
           "types": [
@@ -3672,7 +3750,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable swipe-down-to-close on mobile bottom sheet (default: true)"
+          "description": "Enable swipe-down-to-close on mobile bottom sheet (default: true)",
+          "default": true
         }
       }
     },
@@ -3691,7 +3770,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the drawer is open (defaults to true when rendered by slot wrapper)"
+          "description": "Whether the drawer is open (defaults to true when rendered by slot wrapper)",
+          "default": true
         },
         "onClose": {
           "types": [
@@ -3711,7 +3791,8 @@
           "types": [
             "node"
           ],
-          "description": "Drawer content (can be empty if using slot content)"
+          "description": "Drawer content (can be empty if using slot content)",
+          "default": null
         },
         "footer": {
           "types": [
@@ -3727,31 +3808,36 @@
           "enumValues": [
             "left",
             "right"
-          ]
+          ],
+          "default": "right"
         },
         "width": {
           "types": [
             "string"
           ],
-          "description": "Width (CSS value or preset size)"
+          "description": "Width (CSS value or preset size)",
+          "default": "md"
         },
         "showCloseButton": {
           "types": [
             "boolean"
           ],
-          "description": "Show close button"
+          "description": "Show close button",
+          "default": true
         },
         "closeOnOverlayClick": {
           "types": [
             "boolean"
           ],
-          "description": "Close on overlay click"
+          "description": "Close on overlay click",
+          "default": true
         },
         "closeOnEscape": {
           "types": [
             "boolean"
           ],
-          "description": "Close on escape key"
+          "description": "Close on escape key",
+          "default": true
         },
         "className": {
           "types": [
@@ -3782,7 +3868,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the dialog is open (defaults to true when rendered by slot wrapper)"
+          "description": "Whether the dialog is open (defaults to true when rendered by slot wrapper)",
+          "default": true
         },
         "onClose": {
           "types": [
@@ -3855,7 +3942,8 @@
             "warning",
             "info",
             "default"
-          ]
+          ],
+          "default": "danger"
         },
         "size": {
           "types": [
@@ -3868,13 +3956,15 @@
             "lg",
             "xl",
             "full"
-          ]
+          ],
+          "default": "sm"
         },
         "isLoading": {
           "types": [
             "boolean"
           ],
-          "description": "Loading state for confirm button"
+          "description": "Loading state for confirm button",
+          "default": false
         },
         "error": {
           "types": [
@@ -4134,13 +4224,15 @@
             "accent",
             "surface",
             "overlay"
-          ]
+          ],
+          "default": "transparent"
         },
         "border": {
           "types": [
             "boolean"
           ],
-          "description": "Show border"
+          "description": "Show border",
+          "default": false
         },
         "rounded": {
           "types": [
@@ -4155,7 +4247,8 @@
             "xl",
             "2xl",
             "full"
-          ]
+          ],
+          "default": "none"
         },
         "shadow": {
           "types": [
@@ -4168,7 +4261,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "none"
         },
         "display": {
           "types": [
@@ -4188,13 +4282,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Fill available width"
+          "description": "Fill available width",
+          "default": false
         },
         "fullHeight": {
           "types": [
             "boolean"
           ],
-          "description": "Fill available height"
+          "description": "Fill available height",
+          "default": false
         },
         "overflow": {
           "types": [
@@ -4278,7 +4374,8 @@
             "string",
             "object"
           ],
-          "description": "Number of columns (can be responsive object)"
+          "description": "Number of columns (can be responsive object)",
+          "default": 1
         },
         "rows": {
           "types": [
@@ -4299,7 +4396,8 @@
             "lg",
             "xl",
             "2xl"
-          ]
+          ],
+          "default": "md"
         },
         "rowGap": {
           "types": [
@@ -4411,19 +4509,22 @@
           "types": [
             "boolean"
           ],
-          "description": "Center inline (width fits content) vs block (full width)"
+          "description": "Center inline (width fits content) vs block (full width)",
+          "default": false
         },
         "horizontal": {
           "types": [
             "boolean"
           ],
-          "description": "Center only horizontally"
+          "description": "Center only horizontally",
+          "default": true
         },
         "vertical": {
           "types": [
             "boolean"
           ],
-          "description": "Center only vertically"
+          "description": "Center only vertically",
+          "default": true
         },
         "minHeight": {
           "types": [
@@ -4436,13 +4537,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Fill available height"
+          "description": "Fill available height",
+          "default": false
         },
         "fullWidth": {
           "types": [
             "boolean"
           ],
-          "description": "Fill available width"
+          "description": "Fill available width",
+          "default": false
         },
         "className": {
           "types": [
@@ -4495,7 +4598,8 @@
             "xl",
             "2xl",
             "auto"
-          ]
+          ],
+          "default": "auto"
         },
         "axis": {
           "types": [
@@ -4505,7 +4609,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "className": {
           "types": [
@@ -4534,7 +4639,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "label": {
           "types": [
@@ -4551,7 +4657,8 @@
             "solid",
             "dashed",
             "dotted"
-          ]
+          ],
+          "default": "solid"
         },
         "className": {
           "types": [
@@ -4582,13 +4689,15 @@
             "bottom-left",
             "top-right",
             "top-left"
-          ]
+          ],
+          "default": "bottom-right"
         },
         "defaultCollapsed": {
           "types": [
             "boolean"
           ],
-          "description": "Initial collapsed state"
+          "description": "Initial collapsed state",
+          "default": true
         },
         "className": {
           "types": [
@@ -4605,7 +4714,8 @@
             "floating",
             "inline",
             "verify"
-          ]
+          ],
+          "default": "floating"
         },
         "defaultTab": {
           "types": [
@@ -4645,7 +4755,8 @@
             "success",
             "warning",
             "default"
-          ]
+          ],
+          "default": "primary"
         },
         "size": {
           "types": [
@@ -4656,13 +4767,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "isLoading": {
           "types": [
             "boolean"
           ],
-          "description": "isLoading prop"
+          "description": "isLoading prop",
+          "default": false
         },
         "leftIcon": {
           "types": [
@@ -4749,7 +4862,8 @@
             "error",
             "info",
             "neutral"
-          ]
+          ],
+          "default": "default"
         },
         "size": {
           "types": [
@@ -4760,7 +4874,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "sm"
         },
         "amount": {
           "types": [
@@ -4835,7 +4950,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "status": {
           "types": [
@@ -4919,7 +5035,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "color": {
           "types": [
@@ -4936,7 +5053,8 @@
             "spin",
             "pulse",
             "none"
-          ]
+          ],
+          "default": "none"
         },
         "className": {
           "types": [
@@ -4979,7 +5097,8 @@
             "bordered",
             "elevated",
             "interactive"
-          ]
+          ],
+          "default": "bordered"
         },
         "padding": {
           "types": [
@@ -4991,7 +5110,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "title": {
           "types": [
@@ -5047,7 +5167,8 @@
           "types": [
             "number"
           ],
-          "description": "Maximum value (for calculating percentage) @default 100"
+          "description": "Maximum value (for calculating percentage) @default 100",
+          "default": 100
         },
         "progressType": {
           "types": [
@@ -5058,7 +5179,8 @@
             "linear",
             "circular",
             "stepped"
-          ]
+          ],
+          "default": "linear"
         },
         "variant": {
           "types": [
@@ -5071,7 +5193,8 @@
             "success",
             "warning",
             "danger"
-          ]
+          ],
+          "default": "primary"
         },
         "color": {
           "types": [
@@ -5090,13 +5213,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Show percentage text @default false"
+          "description": "Show percentage text @default false",
+          "default": false
         },
         "showLabel": {
           "types": [
             "boolean"
           ],
-          "description": "Alias for showPercentage (pattern compatibility)"
+          "description": "Alias for showPercentage (pattern compatibility)",
+          "default": false
         },
         "label": {
           "types": [
@@ -5113,13 +5238,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "steps": {
           "types": [
             "number"
           ],
-          "description": "Number of steps (for stepped variant) @default 5"
+          "description": "Number of steps (for stepped variant) @default 5",
+          "default": 5
         },
         "className": {
           "types": [
@@ -5149,7 +5276,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         }
       }
     },
@@ -5280,7 +5408,8 @@
           "types": [
             "number"
           ],
-          "description": "Rows for textarea type"
+          "description": "Rows for textarea type",
+          "default": 3
         },
         "onChange": {
           "types": [
@@ -5486,7 +5615,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         }
       }
     },
@@ -5511,7 +5641,8 @@
           "types": [
             "boolean"
           ],
-          "description": "defaultChecked prop"
+          "description": "defaultChecked prop",
+          "default": false
         },
         "onChange": {
           "types": [
@@ -5530,7 +5661,8 @@
           "types": [
             "boolean"
           ],
-          "description": "disabled prop"
+          "description": "disabled prop",
+          "default": false
         },
         "label": {
           "types": [
@@ -5622,7 +5754,8 @@
             "success",
             "warning",
             "error"
-          ]
+          ],
+          "default": "info"
         },
         "title": {
           "types": [
@@ -5634,7 +5767,8 @@
           "types": [
             "boolean"
           ],
-          "description": "dismissible prop"
+          "description": "dismissible prop",
+          "default": false
         },
         "onDismiss": {
           "types": [
@@ -5708,25 +5842,29 @@
             "bottom",
             "left",
             "right"
-          ]
+          ],
+          "default": "top"
         },
         "delay": {
           "types": [
             "number"
           ],
-          "description": "Show delay in milliseconds"
+          "description": "Show delay in milliseconds",
+          "default": 200
         },
         "hideDelay": {
           "types": [
             "number"
           ],
-          "description": "Hide delay in milliseconds"
+          "description": "Hide delay in milliseconds",
+          "default": 0
         },
         "showArrow": {
           "types": [
             "boolean"
           ],
-          "description": "Show arrow"
+          "description": "Show arrow",
+          "default": true
         },
         "className": {
           "types": [
@@ -5771,7 +5909,8 @@
             "bottom",
             "left",
             "right"
-          ]
+          ],
+          "default": "bottom"
         },
         "trigger": {
           "types": [
@@ -5781,13 +5920,15 @@
           "enumValues": [
             "click",
             "hover"
-          ]
+          ],
+          "default": "click"
         },
         "showArrow": {
           "types": [
             "boolean"
           ],
-          "description": "Show arrow @default true"
+          "description": "Show arrow @default true",
+          "default": true
         },
         "className": {
           "types": [
@@ -5902,7 +6043,8 @@
             "top-end",
             "bottom-start",
             "bottom-end"
-          ]
+          ],
+          "default": "bottom-left"
         },
         "className": {
           "types": [
@@ -5974,7 +6116,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow multiple items open at once @default false"
+          "description": "Allow multiple items open at once @default false",
+          "default": false
         },
         "defaultOpenItems": {
           "types": [
@@ -6104,13 +6247,15 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "center": {
           "types": [
             "boolean"
           ],
-          "description": "Center horizontally"
+          "description": "Center horizontally",
+          "default": true
         },
         "className": {
           "types": [
@@ -6148,7 +6293,8 @@
             "number",
             "string"
           ],
-          "description": "Minimum width of each child (e.g., 200, \"200px\", \"15rem\")"
+          "description": "Minimum width of each child (e.g., 200, \"200px\", \"15rem\")",
+          "default": 250
         },
         "maxCols": {
           "types": [
@@ -6174,7 +6320,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -6270,7 +6417,8 @@
           "types": [
             "number"
           ],
-          "description": "Minimum items required"
+          "description": "Minimum items required",
+          "default": 0
         },
         "maxItems": {
           "types": [
@@ -6282,7 +6430,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow reordering"
+          "description": "Allow reordering",
+          "default": false
         },
         "addLabel": {
           "types": [
@@ -6300,7 +6449,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Read-only mode"
+          "description": "Read-only mode",
+          "default": false
         },
         "className": {
           "types": [
@@ -6354,7 +6504,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Inspection-specific enhancements"
+          "description": "Inspection-specific enhancements",
+          "default": false
         },
         "currentState": {
           "types": [
@@ -6366,7 +6517,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show audit metadata (addedInState, addedAt)"
+          "description": "Show audit metadata (addedInState, addedAt)",
+          "default": false
         }
       }
     },
@@ -6431,13 +6583,15 @@
           "types": [
             "node"
           ],
-          "description": "Optional fallback to render when condition is false"
+          "description": "Optional fallback to render when condition is false",
+          "default": null
         },
         "animate": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to animate the transition (uses CSS transitions)"
+          "description": "Whether to animate the transition (uses CSS transitions)",
+          "default": false
         }
       }
     },
@@ -6508,7 +6662,8 @@
             "bottom",
             "left",
             "right"
-          ]
+          ],
+          "default": "top"
         },
         "className": {
           "types": [
@@ -6531,7 +6686,8 @@
           "types": [
             "boolean"
           ],
-          "description": "isVisible prop"
+          "description": "isVisible prop",
+          "default": true
         },
         "onClick": {
           "types": [
@@ -6556,7 +6712,8 @@
           "types": [
             "boolean"
           ],
-          "description": "blur prop"
+          "description": "blur prop",
+          "default": false
         },
         "action": {
           "types": [
@@ -6584,7 +6741,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "vertical"
         },
         "gap": {
           "types": [
@@ -6599,7 +6757,8 @@
             "lg",
             "xl",
             "2xl"
-          ]
+          ],
+          "default": "md"
         },
         "align": {
           "types": [
@@ -6612,7 +6771,8 @@
             "end",
             "stretch",
             "baseline"
-          ]
+          ],
+          "default": "stretch"
         },
         "justify": {
           "types": [
@@ -6626,25 +6786,29 @@
             "between",
             "around",
             "evenly"
-          ]
+          ],
+          "default": "start"
         },
         "wrap": {
           "types": [
             "boolean"
           ],
-          "description": "Allow items to wrap"
+          "description": "Allow items to wrap",
+          "default": false
         },
         "reverse": {
           "types": [
             "boolean"
           ],
-          "description": "Reverse the order of children"
+          "description": "Reverse the order of children",
+          "default": false
         },
         "flex": {
           "types": [
             "boolean"
           ],
-          "description": "Fill available space (flex: 1)"
+          "description": "Fill available space (flex: 1)",
+          "default": false
         },
         "className": {
           "types": [
@@ -6725,7 +6889,8 @@
           "types": [
             "boolean"
           ],
-          "description": "When true, horizontal stacks flip to vertical below the md breakpoint (768px)"
+          "description": "When true, horizontal stacks flip to vertical below the md breakpoint (768px)",
+          "default": false
         }
       }
     },
@@ -6755,7 +6920,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the highlight is currently active/focused @default false"
+          "description": "Whether the highlight is currently active/focused @default false",
+          "default": false
         },
         "onClick": {
           "types": [
@@ -6842,13 +7008,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "showLabel": {
           "types": [
             "boolean"
           ],
-          "description": "Show label text"
+          "description": "Show label text",
+          "default": false
         }
       }
     },
@@ -6883,13 +7051,15 @@
             "small",
             "large",
             "label"
-          ]
+          ],
+          "default": "body"
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Heading level (1-6) - alternative to variant for headings"
+          "description": "Heading level (1-6) - alternative to variant for headings",
+          "default": 2
         },
         "color": {
           "types": [
@@ -6904,7 +7074,8 @@
             "success",
             "warning",
             "inherit"
-          ]
+          ],
+          "default": "primary"
         },
         "align": {
           "types": [
@@ -6949,7 +7120,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Truncate with ellipsis (single line)"
+          "description": "Truncate with ellipsis (single line)",
+          "default": false
         },
         "overflow": {
           "types": [
@@ -7045,7 +7217,8 @@
             "default",
             "segmented",
             "toggle"
-          ]
+          ],
+          "default": "default"
         },
         "orientation": {
           "types": [
@@ -7055,7 +7228,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "className": {
           "types": [
@@ -7137,7 +7311,8 @@
             "row-reverse",
             "col",
             "col-reverse"
-          ]
+          ],
+          "default": "row"
         },
         "wrap": {
           "types": [
@@ -7148,7 +7323,8 @@
             "nowrap",
             "wrap",
             "wrap-reverse"
-          ]
+          ],
+          "default": "nowrap"
         },
         "align": {
           "types": [
@@ -7161,7 +7337,8 @@
             "end",
             "stretch",
             "baseline"
-          ]
+          ],
+          "default": "stretch"
         },
         "justify": {
           "types": [
@@ -7175,7 +7352,8 @@
             "between",
             "around",
             "evenly"
-          ]
+          ],
+          "default": "start"
         },
         "gap": {
           "types": [
@@ -7190,13 +7368,15 @@
             "lg",
             "xl",
             "2xl"
-          ]
+          ],
+          "default": "none"
         },
         "inline": {
           "types": [
             "boolean"
           ],
-          "description": "Inline flex"
+          "description": "Inline flex",
+          "default": false
         },
         "grow": {
           "types": [
@@ -7357,7 +7537,8 @@
           "types": [
             "string"
           ],
-          "description": "Button position @default 'bottom-right'"
+          "description": "Button position @default 'bottom-right'",
+          "default": "bottom-right"
         },
         "className": {
           "types": [
@@ -7447,7 +7628,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether section is collapsed"
+          "description": "Whether section is collapsed",
+          "default": false
         },
         "onToggle": {
           "types": [
@@ -7474,7 +7656,8 @@
             "success",
             "warning",
             "danger"
-          ]
+          ],
+          "default": "default"
         },
         "icon": {
           "types": [
@@ -7486,13 +7669,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether section has validation errors"
+          "description": "Whether section has validation errors",
+          "default": false
         },
         "isComplete": {
           "types": [
             "boolean"
           ],
-          "description": "Whether section is complete"
+          "description": "Whether section is complete",
+          "default": false
         },
         "className": {
           "types": [
@@ -7601,31 +7786,36 @@
               "value",
               "label"
             ]
-          }
+          },
+          "default": []
         },
         "placeholder": {
           "types": [
             "string"
           ],
-          "description": "Placeholder text"
+          "description": "Placeholder text",
+          "default": "Select..."
         },
         "required": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the field is required"
+          "description": "Whether the field is required",
+          "default": false
         },
         "disabled": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the field is disabled"
+          "description": "Whether the field is disabled",
+          "default": false
         },
         "isLoading": {
           "types": [
             "boolean"
           ],
-          "description": "Whether data is loading"
+          "description": "Whether data is loading",
+          "default": false
         },
         "error": {
           "types": [
@@ -7637,7 +7827,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow clearing the selection"
+          "description": "Allow clearing the selection",
+          "default": true
         },
         "name": {
           "types": [
@@ -7710,7 +7901,8 @@
           "types": [
             "string"
           ],
-          "description": "Panel width @default 'w-96'"
+          "description": "Panel width @default 'w-96'",
+          "default": "w-96"
         },
         "position": {
           "types": [
@@ -7720,13 +7912,15 @@
           "enumValues": [
             "left",
             "right"
-          ]
+          ],
+          "default": "right"
         },
         "showOverlay": {
           "types": [
             "boolean"
           ],
-          "description": "Show overlay on mobile @default true"
+          "description": "Show overlay on mobile @default true",
+          "default": true
         },
         "className": {
           "types": [
@@ -7835,7 +8029,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Dismissible alert"
+          "description": "Dismissible alert",
+          "default": false
         },
         "onDismiss": {
           "types": [
@@ -7862,7 +8057,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Compact display mode"
+          "description": "Compact display mode",
+          "default": false
         },
         "className": {
           "types": [
@@ -7903,7 +8099,8 @@
           "enumValues": [
             "left",
             "right"
-          ]
+          ],
+          "default": "right"
         },
         "size": {
           "types": [
@@ -7916,7 +8113,8 @@
             "lg",
             "xl",
             "full"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -7969,7 +8167,8 @@
           "types": [
             "string"
           ],
-          "description": "Brand/App name"
+          "description": "Brand/App name",
+          "default": "KFlow"
         },
         "navigationItems": {
           "types": [
@@ -7986,13 +8185,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Show menu toggle button @default true"
+          "description": "Show menu toggle button @default true",
+          "default": true
         },
         "isMenuOpen": {
           "types": [
             "boolean"
           ],
-          "description": "Is menu open (for toggle icon)"
+          "description": "Is menu open (for toggle icon)",
+          "default": false
         },
         "onMenuToggle": {
           "types": [
@@ -8006,7 +8207,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show search input @default false"
+          "description": "Show search input @default false",
+          "default": false
         },
         "searchPlaceholder": {
           "types": [
@@ -8057,7 +8259,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Sticky header @default true"
+          "description": "Sticky header @default true",
+          "default": true
         },
         "variant": {
           "types": [
@@ -8067,7 +8270,8 @@
           "enumValues": [
             "mobile",
             "desktop"
-          ]
+          ],
+          "default": "mobile"
         },
         "onLogoClick": {
           "types": [
@@ -8137,7 +8341,8 @@
             "lg",
             "xl",
             "full"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -8251,7 +8456,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "className": {
           "types": [
@@ -8312,19 +8518,22 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "showLabel": {
           "types": [
             "boolean"
           ],
-          "description": "Show complexity label"
+          "description": "Show complexity label",
+          "default": true
         },
         "animated": {
           "types": [
             "boolean"
           ],
-          "description": "Animation enabled"
+          "description": "Animation enabled",
+          "default": true
         },
         "onClick": {
           "types": [
@@ -8338,7 +8547,8 @@
           "types": [
             "string"
           ],
-          "description": "Additional CSS classes"
+          "description": "Additional CSS classes",
+          "default": ""
         },
         "isLoading": {
           "types": [
@@ -8398,7 +8608,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -8410,13 +8621,15 @@
             "card",
             "bordered",
             "filled"
-          ]
+          ],
+          "default": "default"
         },
         "divider": {
           "types": [
             "boolean"
           ],
-          "description": "Show divider below header"
+          "description": "Show divider below header",
+          "default": false
         },
         "className": {
           "types": [
@@ -8512,7 +8725,8 @@
           "types": [
             "string"
           ],
-          "description": "Brand/App name"
+          "description": "Brand/App name",
+          "default": "KFlow"
         },
         "items": {
           "types": [
@@ -8605,7 +8819,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Default collapsed state"
+          "description": "Default collapsed state",
+          "default": false
         },
         "collapseChangeEvent": {
           "types": [
@@ -8625,13 +8840,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Hide the collapse/expand button"
+          "description": "Hide the collapse/expand button",
+          "default": false
         },
         "showCloseButton": {
           "types": [
             "boolean"
           ],
-          "description": "Show a close button (for mobile)"
+          "description": "Show a close button (for mobile)",
+          "default": false
         },
         "closeEvent": {
           "types": [
@@ -8675,7 +8892,8 @@
             "4:1",
             "2:3",
             "3:2"
-          ]
+          ],
+          "default": "1:1"
         },
         "gap": {
           "types": [
@@ -8688,19 +8906,22 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "reverse": {
           "types": [
             "boolean"
           ],
-          "description": "Reverse the order (right first)"
+          "description": "Reverse the order (right first)",
+          "default": false
         },
         "stackOnMobile": {
           "types": [
             "boolean"
           ],
-          "description": "Stack vertically on mobile"
+          "description": "Stack vertically on mobile",
+          "default": true
         },
         "stackBreakpoint": {
           "types": [
@@ -8712,7 +8933,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "align": {
           "types": [
@@ -8724,7 +8946,8 @@
             "center",
             "end",
             "stretch"
-          ]
+          ],
+          "default": "stretch"
         },
         "className": {
           "types": [
@@ -8909,13 +9132,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable row selection @default false"
+          "description": "Enable row selection @default false",
+          "default": false
         },
         "sortable": {
           "types": [
             "boolean"
           ],
-          "description": "Enable sorting @default false"
+          "description": "Enable sorting @default false",
+          "default": false
         },
         "sortColumn": {
           "types": [
@@ -8927,7 +9152,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable search/filter @default false"
+          "description": "Enable search/filter @default false",
+          "default": false
         },
         "searchPlaceholder": {
           "types": [
@@ -8939,7 +9165,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable pagination @default false"
+          "description": "Enable pagination @default false",
+          "default": false
         },
         "currentPage": {
           "types": [
@@ -8976,7 +9203,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state @default false"
+          "description": "Loading state @default false",
+          "default": false
         }
       }
     },
@@ -9019,7 +9247,8 @@
           "types": [
             "number"
           ],
-          "description": "Auto-dismiss duration in ms (0 = no auto-dismiss)"
+          "description": "Auto-dismiss duration in ms (0 = no auto-dismiss)",
+          "default": 5000
         },
         "className": {
           "types": [
@@ -9062,7 +9291,8 @@
           "types": [
             "string"
           ],
-          "description": "App name"
+          "description": "App name",
+          "default": "{{APP_TITLE}}"
         },
         "logo": {
           "types": [
@@ -9080,7 +9310,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show branding panel on the side"
+          "description": "Show branding panel on the side",
+          "default": true
         },
         "brandingContent": {
           "types": [
@@ -9142,13 +9373,15 @@
           "types": [
             "string"
           ],
-          "description": "Title displayed above the counter"
+          "description": "Title displayed above the counter",
+          "default": "Counter"
         },
         "showReset": {
           "types": [
             "boolean"
           ],
-          "description": "Show reset button"
+          "description": "Show reset button",
+          "default": true
         },
         "size": {
           "types": [
@@ -9159,7 +9392,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -9189,7 +9423,8 @@
           "types": [
             "string"
           ],
-          "description": "App name shown in sidebar"
+          "description": "App name shown in sidebar",
+          "default": "{{APP_TITLE}}"
         },
         "logo": {
           "types": [
@@ -9244,7 +9479,8 @@
               "label",
               "href"
             ]
-          }
+          },
+          "default": []
         },
         "user": {
           "types": [
@@ -9262,7 +9498,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show the top-bar search box. Default `false` — opt in by setting `searchEvent` (any truthy value implies showSearch) or this flag."
+          "description": "Show the top-bar search box. Default `false` — opt in by setting `searchEvent` (any truthy value implies showSearch) or this flag.",
+          "default": false
         },
         "searchEvent": {
           "types": [
@@ -9339,7 +9576,8 @@
               "icon",
               "event"
             ]
-          }
+          },
+          "default": []
         },
         "notifications": {
           "types": [
@@ -9367,7 +9605,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show the theme toggle button in the header. Default `true` — universally useful for a11y / dark mode."
+          "description": "Show the theme toggle button in the header. Default `true` — universally useful for a11y / dark mode.",
+          "default": true
         },
         "sidebarFooter": {
           "types": [
@@ -9425,7 +9664,8 @@
           "types": [
             "string"
           ],
-          "description": "Title of the game"
+          "description": "Title of the game",
+          "default": "Game"
         },
         "children": {
           "types": [
@@ -9450,7 +9690,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the debug panel is visible"
+          "description": "Whether the debug panel is visible",
+          "default": false
         },
         "controls": {
           "types": [
@@ -9534,7 +9775,8 @@
           "types": [
             "string"
           ],
-          "description": "Application / game title shown in the HUD bar"
+          "description": "Application / game title shown in the HUD bar",
+          "default": "Game"
         },
         "hud": {
           "types": [
@@ -9552,7 +9794,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to show the minimal top bar (default: true)"
+          "description": "Whether to show the minimal top bar (default: true)",
+          "default": true
         },
         "children": {
           "types": [
@@ -9596,14 +9839,17 @@
             "line",
             "pie",
             "area",
-            "donut"
-          ]
+            "donut",
+            "scatter",
+            "histogram"
+          ],
+          "default": "bar"
         },
         "series": {
           "types": [
             "array"
           ],
-          "description": "Data series",
+          "description": "Multi-series data",
           "items": {
             "types": [
               "object"
@@ -9650,6 +9896,11 @@
                 "types": [
                   "string"
                 ]
+              },
+              "dashed": {
+                "types": [
+                  "boolean"
+                ]
               }
             },
             "required": [
@@ -9662,7 +9913,7 @@
           "types": [
             "array"
           ],
-          "description": "Simple data (single series shorthand)",
+          "description": "Simple single-series shorthand (bar/line/pie/area/donut/histogram)",
           "items": {
             "types": [
               "object"
@@ -9691,29 +9942,99 @@
             ]
           }
         },
+        "scatterData": {
+          "types": [
+            "array"
+          ],
+          "description": "Raw {x,y} points for scatter",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "size": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Chart height in px"
+          "description": "Chart height in px",
+          "default": 200
         },
         "showLegend": {
           "types": [
             "boolean"
           ],
-          "description": "Show legend"
+          "description": "Show legend",
+          "default": true
         },
         "showValues": {
           "types": [
             "boolean"
           ],
-          "description": "Show values on chart"
+          "description": "Show values on chart",
+          "default": false
+        },
+        "stack": {
+          "types": [
+            "string"
+          ],
+          "description": "Stack mode for bar / area",
+          "enumValues": [
+            "none",
+            "stack",
+            "normalize"
+          ],
+          "default": "none"
+        },
+        "timeAxis": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Format X-axis labels as time (ISO date in → \"Mar 2026\"-style label out)",
+          "default": false
+        },
+        "drillEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name emitted as `UI:{drillEvent}` with `{ label, value, seriesLabel? }` on data-point click"
         },
         "actions": {
           "types": [
             "array"
           ],
-          "description": "Actions for chart interactions",
+          "description": "Top-level chart actions (export, refresh, etc.)",
           "items": {
             "types": [
               "object"
@@ -9760,7 +10081,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -9799,13 +10121,15 @@
           "types": [
             "number"
           ],
-          "description": "Minimum value"
+          "description": "Minimum value",
+          "default": 0
         },
         "max": {
           "types": [
             "number"
           ],
-          "description": "Maximum value"
+          "description": "Maximum value",
+          "default": 100
         },
         "label": {
           "types": [
@@ -9828,7 +10152,8 @@
             "linear",
             "radial",
             "segmented"
-          ]
+          ],
+          "default": "linear"
         },
         "thresholds": {
           "types": [
@@ -9866,13 +10191,15 @@
           "types": [
             "number"
           ],
-          "description": "Number of segments (for segmented variant)"
+          "description": "Number of segments (for segmented variant)",
+          "default": 5
         },
         "showValue": {
           "types": [
             "boolean"
           ],
-          "description": "Show value text"
+          "description": "Show value text",
+          "default": true
         },
         "size": {
           "types": [
@@ -9883,7 +10210,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "actions": {
           "types": [
@@ -9930,7 +10258,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -9968,7 +10297,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -10143,7 +10473,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -10220,13 +10551,15 @@
           "types": [
             "number"
           ],
-          "description": "Column count"
+          "description": "Column count",
+          "default": 3
         },
         "selectable": {
           "types": [
             "boolean"
           ],
-          "description": "Enable item selection"
+          "description": "Enable item selection",
+          "default": false
         },
         "selectedItems": {
           "types": [
@@ -10237,7 +10570,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "selectionEvent": {
           "types": [
@@ -10251,13 +10585,15 @@
               "type": "array",
               "required": true
             }
-          ]
+          ],
+          "default": "SELECTION_CHANGE"
         },
         "showUpload": {
           "types": [
             "boolean"
           ],
-          "description": "Show upload button"
+          "description": "Show upload button",
+          "default": false
         },
         "actions": {
           "types": [
@@ -10309,7 +10645,8 @@
             "square",
             "landscape",
             "portrait"
-          ]
+          ],
+          "default": "square"
         }
       }
     },
@@ -10329,13 +10666,15 @@
           "types": [
             "string"
           ],
-          "description": "Label above the pad"
+          "description": "Label above the pad",
+          "default": "Signature"
         },
         "helperText": {
           "types": [
             "string"
           ],
-          "description": "Helper text"
+          "description": "Helper text",
+          "default": "Draw your signature above"
         },
         "strokeColor": {
           "types": [
@@ -10347,19 +10686,22 @@
           "types": [
             "number"
           ],
-          "description": "Stroke width"
+          "description": "Stroke width",
+          "default": 2
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Pad height"
+          "description": "Pad height",
+          "default": 200
         },
         "readOnly": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the pad is read-only"
+          "description": "Whether the pad is read-only",
+          "default": false
         },
         "value": {
           "types": [
@@ -10412,7 +10754,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -10468,7 +10811,8 @@
             "text",
             "html",
             "markdown"
-          ]
+          ],
+          "default": "pdf"
         },
         "currentPage": {
           "types": [
@@ -10487,25 +10831,29 @@
             "number",
             "string"
           ],
-          "description": "Viewer height"
+          "description": "Viewer height",
+          "default": 600
         },
         "showToolbar": {
           "types": [
             "boolean"
           ],
-          "description": "Show toolbar"
+          "description": "Show toolbar",
+          "default": true
         },
         "showDownload": {
           "types": [
             "boolean"
           ],
-          "description": "Show download button"
+          "description": "Show download button",
+          "default": false
         },
         "showPrint": {
           "types": [
             "boolean"
           ],
-          "description": "Show print button"
+          "description": "Show print button",
+          "default": false
         },
         "actions": {
           "types": [
@@ -10569,7 +10917,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -10660,25 +11009,29 @@
           "types": [
             "number"
           ],
-          "description": "Canvas height"
+          "description": "Canvas height",
+          "default": 400
         },
         "showLabels": {
           "types": [
             "boolean"
           ],
-          "description": "Show node labels"
+          "description": "Show node labels",
+          "default": true
         },
         "interactive": {
           "types": [
             "boolean"
           ],
-          "description": "Enable zoom/pan"
+          "description": "Enable zoom/pan",
+          "default": true
         },
         "draggable": {
           "types": [
             "boolean"
           ],
-          "description": "Enable node dragging"
+          "description": "Enable node dragging",
+          "default": true
         },
         "actions": {
           "types": [
@@ -10757,7 +11110,8 @@
             "force",
             "circular",
             "grid"
-          ]
+          ],
+          "default": "force"
         },
         "entity": {
           "types": [
@@ -10769,7 +11123,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -10878,32 +11233,37 @@
           "enumValues": [
             "code",
             "diff"
-          ]
+          ],
+          "default": "code"
         },
         "showLineNumbers": {
           "types": [
             "boolean"
           ],
-          "description": "Show line numbers"
+          "description": "Show line numbers",
+          "default": true
         },
         "showCopy": {
           "types": [
             "boolean"
           ],
-          "description": "Show copy button"
+          "description": "Show copy button",
+          "default": true
         },
         "wordWrap": {
           "types": [
             "boolean"
           ],
-          "description": "Enable word wrap"
+          "description": "Enable word wrap",
+          "default": false
         },
         "maxHeight": {
           "types": [
             "number",
             "string"
           ],
-          "description": "Max height before scrolling"
+          "description": "Max height before scrolling",
+          "default": 500
         },
         "files": {
           "types": [
@@ -10967,7 +11327,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
@@ -11011,13 +11372,15 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.45
         },
         "unitScale": {
           "types": [
             "number"
           ],
-          "description": "Unit draw-size multiplier"
+          "description": "Unit draw-size multiplier",
+          "default": 1
         }
       }
     },
@@ -11049,7 +11412,8 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.45
         }
       }
     },
@@ -11082,13 +11446,15 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.4
         },
         "unitScale": {
           "types": [
             "number"
           ],
-          "description": "Unit draw-size multiplier"
+          "description": "Unit draw-size multiplier",
+          "default": 2.5
         },
         "diamondTopY": {
           "types": [
@@ -11100,7 +11466,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow selecting / moving ALL heroes (including enemy). For testing."
+          "description": "Allow selecting / moving ALL heroes (including enemy). For testing.",
+          "default": false
         }
       }
     },
@@ -11174,25 +11541,29 @@
             "form",
             "card",
             "text"
-          ]
+          ],
+          "default": "text"
         },
         "rows": {
           "types": [
             "number"
           ],
-          "description": "Number of rows for table/text variants"
+          "description": "Number of rows for table/text variants",
+          "default": 5
         },
         "columns": {
           "types": [
             "number"
           ],
-          "description": "Number of columns for table variant"
+          "description": "Number of columns for table variant",
+          "default": 4
         },
         "fields": {
           "types": [
             "number"
           ],
-          "description": "Number of fields for form variant"
+          "description": "Number of fields for form variant",
+          "default": 4
         },
         "className": {
           "types": [
@@ -11257,25 +11628,29 @@
           "types": [
             "string"
           ],
-          "description": "Programming language for syntax highlighting"
+          "description": "Programming language for syntax highlighting",
+          "default": "text"
         },
         "showCopyButton": {
           "types": [
             "boolean"
           ],
-          "description": "Show the copy button"
+          "description": "Show the copy button",
+          "default": true
         },
         "showLanguageBadge": {
           "types": [
             "boolean"
           ],
-          "description": "Show the language badge"
+          "description": "Show the language badge",
+          "default": true
         },
         "maxHeight": {
           "types": [
             "string"
           ],
-          "description": "Maximum height before scrolling"
+          "description": "Maximum height before scrolling",
+          "default": "60vh"
         },
         "foldable": {
           "types": [
@@ -11293,7 +11668,8 @@
           "types": [
             "boolean"
           ],
-          "description": "When true, render an editable surface that composes a transparent `Textarea` over a Prism-highlighted overlay. The overlay re-tokenizes on each keystroke (driven from a local mirror of the textarea value), so users see syntax-highlighted code while still being able to type. Folding is skipped in editable mode. History: GAP-51 first-cut shipped plain (no-highlighting) editable text; GAP-77 (2026-04-12) added the Prism overlay layer. Default: false (existing read-only behavior unchanged)."
+          "description": "When true, render an editable surface that composes a transparent `Textarea` over a Prism-highlighted overlay. The overlay re-tokenizes on each keystroke (driven from a local mirror of the textarea value), so users see syntax-highlighted code while still being able to type. Folding is skipped in editable mode. History: GAP-51 first-cut shipped plain (no-highlighting) editable text; GAP-77 (2026-04-12) added the Prism overlay layer. Default: false (existing read-only behavior unchanged).",
+          "default": false
         },
         "onChange": {
           "types": [
@@ -11492,13 +11868,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         },
         "schema": {
           "types": [
@@ -11516,7 +11894,8 @@
           "types": [
             "number"
           ],
-          "description": "Which trait to visualize (default: 0)"
+          "description": "Which trait to visualize (default: 0)",
+          "default": 0
         },
         "entityFields": {
           "types": [
@@ -11537,7 +11916,8 @@
           "enumValues": [
             "ltr",
             "rtl"
-          ]
+          ],
+          "default": "ltr"
         }
       }
     },
@@ -11557,7 +11937,8 @@
           "types": [
             "string"
           ],
-          "description": "Additional CSS classes"
+          "description": "Additional CSS classes",
+          "default": ""
         },
         "isLoading": {
           "types": [
@@ -11645,7 +12026,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this date is today"
+          "description": "Whether this date is today",
+          "default": false
         },
         "onClick": {
           "types": [
@@ -11757,7 +12139,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this slot contains an event"
+          "description": "Whether this slot contains an event",
+          "default": false
         }
       }
     },
@@ -11832,7 +12215,8 @@
               "title",
               "startTime"
             ]
-          }
+          },
+          "default": []
         },
         "onSlotClick": {
           "types": [
@@ -11979,7 +12363,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         }
       }
     },
@@ -12026,7 +12411,8 @@
           "types": [
             "string"
           ],
-          "description": "Currently selected value"
+          "description": "Currently selected value",
+          "default": "month"
         },
         "onSelect": {
           "types": [
@@ -12078,7 +12464,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Controlled flip state"
+          "description": "Controlled flip state",
+          "default": false
         },
         "onFlip": {
           "types": [
@@ -12098,7 +12485,8 @@
           "types": [
             "string"
           ],
-          "description": "Card height as a Tailwind class (default: 'h-64')"
+          "description": "Card height as a Tailwind class (default: 'h-64')",
+          "default": "h-64"
         }
       }
     },
@@ -12241,13 +12629,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Show node labels (default true)"
+          "description": "Show node labels (default true)",
+          "default": true
         },
         "zoomToFit": {
           "types": [
             "boolean"
           ],
-          "description": "Auto zoom-to-fit after layout settles (default true)"
+          "description": "Auto zoom-to-fit after layout settles (default true)",
+          "default": true
         }
       }
     },
@@ -12300,43 +12690,50 @@
           "types": [
             "number"
           ],
-          "description": "SVG viewBox width"
+          "description": "SVG viewBox width",
+          "default": 400
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "SVG viewBox height"
+          "description": "SVG viewBox height",
+          "default": 200
         },
         "showGrid": {
           "types": [
             "boolean"
           ],
-          "description": "Show horizontal grid lines at 25/50/75%"
+          "description": "Show horizontal grid lines at 25/50/75%",
+          "default": true
         },
         "showValues": {
           "types": [
             "boolean"
           ],
-          "description": "Show value labels near data points"
+          "description": "Show value labels near data points",
+          "default": false
         },
         "showArea": {
           "types": [
             "boolean"
           ],
-          "description": "Fill area under line with gradient"
+          "description": "Fill area under line with gradient",
+          "default": true
         },
         "lineColor": {
           "types": [
             "string"
           ],
-          "description": "Line stroke color"
+          "description": "Line stroke color",
+          "default": "var(--color-primary)"
         },
         "areaColor": {
           "types": [
             "string"
           ],
-          "description": "Area fill color (used for gradient)"
+          "description": "Area fill color (used for gradient)",
+          "default": "var(--color-primary)"
         },
         "className": {
           "types": [
@@ -12412,7 +12809,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         }
       }
     },
@@ -12669,13 +13067,15 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "minCardWidth": {
           "types": [
             "number"
           ],
-          "description": "Minimum card width in pixels (used when cols is not set, default 280)"
+          "description": "Minimum card width in pixels (used when cols is not set, default 280)",
+          "default": 280
         },
         "className": {
           "types": [
@@ -12687,13 +13087,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         },
         "imageField": {
           "types": [
@@ -12705,7 +13107,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable multi-select with checkboxes"
+          "description": "Enable multi-select with checkboxes",
+          "default": false
         },
         "selectionEvent": {
           "types": [
@@ -12771,7 +13174,8 @@
           "types": [
             "number"
           ],
-          "description": "Max items to show before \"Show More\" button. Defaults to 0 (disabled)."
+          "description": "Max items to show before \"Show More\" button. Defaults to 0 (disabled).",
+          "default": 0
         }
       }
     },
@@ -13012,7 +13416,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "none"
         },
         "variant": {
           "types": [
@@ -13024,7 +13429,8 @@
             "card",
             "compact",
             "message"
-          ]
+          ],
+          "default": "default"
         },
         "groupBy": {
           "types": [
@@ -13054,13 +13460,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         },
         "reorderable": {
           "types": [
@@ -13168,7 +13576,8 @@
           "types": [
             "number"
           ],
-          "description": "Max items to show before \"Show More\" button. Defaults to 5. Set to 0 to disable."
+          "description": "Max items to show before \"Show More\" button. Defaults to 5. Set to 0 to disable.",
+          "default": 5
         }
       }
     },
@@ -13225,7 +13634,8 @@
               "lat",
               "lng"
             ]
-          }
+          },
+          "default": []
         },
         "routes": {
           "types": [
@@ -13299,31 +13709,36 @@
               "id",
               "waypoints"
             ]
-          }
+          },
+          "default": []
         },
         "centerLat": {
           "types": [
             "number"
           ],
-          "description": "Map center latitude"
+          "description": "Map center latitude",
+          "default": 51.505
         },
         "centerLng": {
           "types": [
             "number"
           ],
-          "description": "Map center longitude"
+          "description": "Map center longitude",
+          "default": -0.09
         },
         "zoom": {
           "types": [
             "number"
           ],
-          "description": "Zoom level (1-18, default 13)"
+          "description": "Zoom level (1-18, default 13)",
+          "default": 13
         },
         "height": {
           "types": [
             "string"
           ],
-          "description": "Height of the map container (default \"400px\")"
+          "description": "Height of the map container (default \"400px\")",
+          "default": "400px"
         },
         "onMarkerClick": {
           "types": [
@@ -13412,7 +13827,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to show a pin at the clicked location"
+          "description": "Whether to show a pin at the clicked location",
+          "default": false
         },
         "className": {
           "types": [
@@ -13424,7 +13840,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show attribution (default true)"
+          "description": "Show attribution (default true)",
+          "default": true
         }
       }
     },
@@ -13443,37 +13860,43 @@
           "types": [
             "number"
           ],
-          "description": "Minimum value"
+          "description": "Minimum value",
+          "default": 0
         },
         "max": {
           "types": [
             "number"
           ],
-          "description": "Maximum value"
+          "description": "Maximum value",
+          "default": 100
         },
         "value": {
           "types": [
             "number"
           ],
-          "description": "Current value"
+          "description": "Current value",
+          "default": 0
         },
         "step": {
           "types": [
             "number"
           ],
-          "description": "Step increment"
+          "description": "Step increment",
+          "default": 1
         },
         "showTooltip": {
           "types": [
             "boolean"
           ],
-          "description": "Show tooltip with current value on drag"
+          "description": "Show tooltip with current value on drag",
+          "default": false
         },
         "showTicks": {
           "types": [
             "boolean"
           ],
-          "description": "Show tick marks at step intervals"
+          "description": "Show tick marks at step intervals",
+          "default": false
         },
         "buffered": {
           "types": [
@@ -13490,13 +13913,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "disabled": {
           "types": [
             "boolean"
           ],
-          "description": "Disabled state"
+          "description": "Disabled state",
+          "default": false
         },
         "action": {
           "types": [
@@ -13562,13 +13987,15 @@
             "busy",
             "warning",
             "critical"
-          ]
+          ],
+          "default": "offline"
         },
         "pulse": {
           "types": [
             "boolean"
           ],
-          "description": "Enable pulse animation for active/critical states"
+          "description": "Enable pulse animation for active/critical states",
+          "default": false
         },
         "size": {
           "types": [
@@ -13579,7 +14006,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "label": {
           "types": [
@@ -13621,13 +14049,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Show the formatted value text next to the arrow"
+          "description": "Show the formatted value text next to the arrow",
+          "default": true
         },
         "invert": {
           "types": [
             "boolean"
           ],
-          "description": "Invert color logic (for metrics where down is good, e.g., error rate, bounce rate)"
+          "description": "Invert color logic (for metrics where down is good, e.g., error rate, bounce rate)",
+          "default": false
         },
         "label": {
           "types": [
@@ -13644,7 +14074,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         }
       }
     },
@@ -13684,25 +14115,29 @@
                 ]
               }
             }
-          }
+          },
+          "default": []
         },
         "currentIndex": {
           "types": [
             "number"
           ],
-          "description": "Current image index"
+          "description": "Current image index",
+          "default": 0
         },
         "isOpen": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the lightbox is open"
+          "description": "Whether the lightbox is open",
+          "default": false
         },
         "showCounter": {
           "types": [
             "boolean"
           ],
-          "description": "Show image counter (e.g., \"3 of 12\")"
+          "description": "Show image counter (e.g., \"3 of 12\")",
+          "default": true
         },
         "closeAction": {
           "types": [
@@ -13754,7 +14189,8 @@
           "types": [
             "number"
           ],
-          "description": "Current value"
+          "description": "Current value",
+          "default": 0
         },
         "min": {
           "types": [
@@ -13772,7 +14208,8 @@
           "types": [
             "number"
           ],
-          "description": "Step increment"
+          "description": "Step increment",
+          "default": 1
         },
         "size": {
           "types": [
@@ -13783,13 +14220,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "disabled": {
           "types": [
             "boolean"
           ],
-          "description": "Disabled state"
+          "description": "Disabled state",
+          "default": false
         },
         "onChange": {
           "types": [
@@ -13846,19 +14285,22 @@
           "types": [
             "number"
           ],
-          "description": "Current rating value"
+          "description": "Current rating value",
+          "default": 0
         },
         "max": {
           "types": [
             "number"
           ],
-          "description": "Maximum number of stars"
+          "description": "Maximum number of stars",
+          "default": 5
         },
         "readOnly": {
           "types": [
             "boolean"
           ],
-          "description": "Read-only display mode"
+          "description": "Read-only display mode",
+          "default": false
         },
         "precision": {
           "types": [
@@ -13868,7 +14310,8 @@
           "enumValues": [
             "full",
             "half"
-          ]
+          ],
+          "default": "full"
         },
         "size": {
           "types": [
@@ -13879,7 +14322,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "action": {
           "types": [
@@ -13949,13 +14393,15 @@
           "types": [
             "number"
           ],
-          "description": "Max number of files"
+          "description": "Max number of files",
+          "default": 1
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Label text"
+          "description": "Label text",
+          "default": "Drop files here or click to browse"
         },
         "description": {
           "types": [
@@ -13973,7 +14419,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Disabled state"
+          "description": "Disabled state",
+          "default": false
         },
         "action": {
           "types": [
@@ -14032,7 +14479,8 @@
           "types": [
             "number"
           ],
-          "description": "Animation duration in milliseconds"
+          "description": "Animation duration in milliseconds",
+          "default": 600
         },
         "prefix": {
           "types": [
@@ -14076,13 +14524,15 @@
           "types": [
             "number"
           ],
-          "description": "How long the animation lasts in milliseconds"
+          "description": "How long the animation lasts in milliseconds",
+          "default": 2000
         },
         "particleCount": {
           "types": [
             "number"
           ],
-          "description": "Number of particles to spawn"
+          "description": "Number of particles to spawn",
+          "default": 30
         },
         "className": {
           "types": [
@@ -14122,19 +14572,22 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether a load operation is currently in progress"
+          "description": "Whether a load operation is currently in progress",
+          "default": false
         },
         "hasMore": {
           "types": [
             "boolean"
           ],
-          "description": "Whether there are more items to load"
+          "description": "Whether there are more items to load",
+          "default": true
         },
         "threshold": {
           "types": [
             "string"
           ],
-          "description": "IntersectionObserver rootMargin for early trigger"
+          "description": "IntersectionObserver rootMargin for early trigger",
+          "default": "200px"
         },
         "className": {
           "types": [
@@ -14166,13 +14619,15 @@
           "types": [
             "number"
           ],
-          "description": "Milliseconds per character"
+          "description": "Milliseconds per character",
+          "default": 40
         },
         "startDelay": {
           "types": [
             "number"
           ],
-          "description": "Delay before typing starts (ms)"
+          "description": "Delay before typing starts (ms)",
+          "default": 0
         },
         "className": {
           "types": [
@@ -14249,31 +14704,36 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable auto-play rotation"
+          "description": "Enable auto-play rotation",
+          "default": false
         },
         "autoPlayInterval": {
           "types": [
             "number"
           ],
-          "description": "Auto-play interval in milliseconds (default: 5000)"
+          "description": "Auto-play interval in milliseconds (default: 5000)",
+          "default": 5000
         },
         "showDots": {
           "types": [
             "boolean"
           ],
-          "description": "Show dot indicators"
+          "description": "Show dot indicators",
+          "default": true
         },
         "showArrows": {
           "types": [
             "boolean"
           ],
-          "description": "Show prev/next arrow buttons"
+          "description": "Show prev/next arrow buttons",
+          "default": true
         },
         "loop": {
           "types": [
             "boolean"
           ],
-          "description": "Enable infinite loop"
+          "description": "Enable infinite loop",
+          "default": false
         },
         "slideChangeEvent": {
           "types": [
@@ -14332,7 +14792,8 @@
           "types": [
             "number"
           ],
-          "description": "Pull distance threshold to trigger refresh in px (default: 60)"
+          "description": "Pull distance threshold to trigger refresh in px (default: 60)",
+          "default": 60
         },
         "children": {
           "types": [
@@ -14412,7 +14873,8 @@
           "enumValues": [
             "left",
             "right"
-          ]
+          ],
+          "default": "left"
         },
         "className": {
           "types": [
@@ -14481,7 +14943,8 @@
               "label",
               "event"
             ]
-          }
+          },
+          "default": []
         },
         "rightActions": {
           "types": [
@@ -14531,13 +14994,15 @@
               "label",
               "event"
             ]
-          }
+          },
+          "default": []
         },
         "threshold": {
           "types": [
             "number"
           ],
-          "description": "threshold prop"
+          "description": "threshold prop",
+          "default": 80
         },
         "children": {
           "types": [
@@ -14602,7 +15067,46 @@
           "types": [
             "number"
           ],
-          "description": "Signed delta vs previous period. >0 renders ↑ green, <0 renders ↓ red, 0 hides."
+          "description": "Signed delta vs previous period. >0 renders ↑ green, <0 renders ↓ red, 0 hides. Polarity reversal via `trendPolarity`."
+        },
+        "trendPolarity": {
+          "types": [
+            "string"
+          ],
+          "description": "Controls whether `trend > 0` is \"good\" (default) or \"bad\". `lower-is-better` inverts the color logic.",
+          "enumValues": [
+            "higher-is-better",
+            "lower-is-better"
+          ],
+          "default": "higher-is-better"
+        },
+        "trendFormat": {
+          "types": [
+            "string"
+          ],
+          "description": "When `'percent'`, renders trend with a `%` suffix (e.g. `↓ 3.3%`); default is `'absolute'`.",
+          "enumValues": [
+            "absolute",
+            "percent"
+          ],
+          "default": "absolute"
+        },
+        "sparklineData": {
+          "types": [
+            "array"
+          ],
+          "description": "Optional inline sparkline data appended to the trend row. Length < 2 renders nothing.",
+          "items": {
+            "types": [
+              "number"
+            ]
+          }
+        },
+        "clickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name emitted as `UI:{clickEvent}` with `{ metricLabel }` when the card is clicked."
         },
         "prefix": {
           "types": [
@@ -14626,13 +15130,15 @@
           "types": [
             "string"
           ],
-          "description": "Icon background color class"
+          "description": "Icon background color class",
+          "default": "bg-muted"
         },
         "iconColor": {
           "types": [
             "string"
           ],
-          "description": "Icon color class"
+          "description": "Icon color class",
+          "default": "text-foreground"
         },
         "format": {
           "types": [
@@ -14649,7 +15155,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -14663,13 +15170,15 @@
             "warning",
             "error",
             "info"
-          ]
+          ],
+          "default": "default"
         },
         "compact": {
           "types": [
             "boolean"
           ],
-          "description": "Compact mode (inline, no card wrapper)"
+          "description": "Compact mode (inline, no card wrapper)",
+          "default": false
         },
         "className": {
           "types": [
@@ -14681,13 +15190,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state"
+          "description": "Loading state",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         }
       }
     },
@@ -14719,7 +15230,8 @@
             "alt",
             "dark",
             "gradient"
-          ]
+          ],
+          "default": "default"
         },
         "padding": {
           "types": [
@@ -14730,7 +15242,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "lg"
         },
         "id": {
           "types": [
@@ -14779,13 +15292,15 @@
             "center",
             "left",
             "right"
-          ]
+          ],
+          "default": "center"
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Heading level (1, 2, or 3)"
+          "description": "Heading level (1, 2, or 3)",
+          "default": 2
         },
         "className": {
           "types": [
@@ -14829,7 +15344,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -14889,7 +15405,8 @@
           "types": [
             "string"
           ],
-          "description": "Label for the link button"
+          "description": "Label for the link button",
+          "default": "Read more"
         },
         "className": {
           "types": [
@@ -14934,7 +15451,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to show a copy button"
+          "description": "Whether to show a copy button",
+          "default": false
         },
         "maxHeight": {
           "types": [
@@ -15041,7 +15559,8 @@
           "types": [
             "string"
           ],
-          "description": "Label for the link button"
+          "description": "Label for the link button",
+          "default": "Learn more"
         },
         "variant": {
           "types": [
@@ -15053,7 +15572,8 @@
             "bordered",
             "elevated",
             "interactive"
-          ]
+          ],
+          "default": "bordered"
         },
         "size": {
           "types": [
@@ -15064,7 +15584,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -15159,7 +15680,8 @@
           "types": [
             "number"
           ],
-          "description": "Number of grid columns"
+          "description": "Number of grid columns",
+          "default": 3
         },
         "gap": {
           "types": [
@@ -15170,7 +15692,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -15206,7 +15729,8 @@
             "primary",
             "secondary",
             "accent"
-          ]
+          ],
+          "default": "primary"
         },
         "title": {
           "types": [
@@ -15261,7 +15785,8 @@
             "below",
             "right",
             "background"
-          ]
+          ],
+          "default": "below"
         },
         "background": {
           "types": [
@@ -15272,7 +15797,8 @@
             "dark",
             "gradient",
             "subtle"
-          ]
+          ],
+          "default": "subtle"
         },
         "align": {
           "types": [
@@ -15282,7 +15808,8 @@
           "enumValues": [
             "center",
             "left"
-          ]
+          ],
+          "default": "center"
         },
         "backgroundElement": {
           "types": [
@@ -15390,7 +15917,8 @@
           "types": [
             "boolean"
           ],
-          "description": "highlighted prop"
+          "description": "highlighted prop",
+          "default": false
         },
         "badge": {
           "types": [
@@ -15651,7 +16179,8 @@
             "logos",
             "quotes",
             "badges"
-          ]
+          ],
+          "default": "logos"
         },
         "className": {
           "types": [
@@ -15712,7 +16241,8 @@
           "enumValues": [
             "left",
             "right"
-          ]
+          ],
+          "default": "right"
         },
         "background": {
           "types": [
@@ -15722,7 +16252,8 @@
           "enumValues": [
             "default",
             "alt"
-          ]
+          ],
+          "default": "default"
         },
         "children": {
           "types": [
@@ -15765,7 +16296,8 @@
           "types": [
             "number"
           ],
-          "description": "columns prop"
+          "description": "columns prop",
+          "default": 3
         },
         "className": {
           "types": [
@@ -15841,7 +16373,8 @@
             "default",
             "primary",
             "accent"
-          ]
+          ],
+          "default": "default"
         },
         "className": {
           "types": [
@@ -15938,7 +16471,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16042,7 +16576,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16102,7 +16637,8 @@
           "types": [
             "number"
           ],
-          "description": "columns prop"
+          "description": "columns prop",
+          "default": 3
         },
         "heading": {
           "types": [
@@ -16151,7 +16687,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16248,7 +16785,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16351,7 +16889,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16411,7 +16950,8 @@
           "types": [
             "number"
           ],
-          "description": "columns prop"
+          "description": "columns prop",
+          "default": 3
         },
         "heading": {
           "types": [
@@ -16460,7 +17000,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16520,7 +17061,8 @@
           "types": [
             "number"
           ],
-          "description": "columns prop"
+          "description": "columns prop",
+          "default": 3
         }
       }
     },
@@ -16558,7 +17100,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16622,13 +17165,15 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "showConnectors": {
           "types": [
             "boolean"
           ],
-          "description": "showConnectors prop"
+          "description": "showConnectors prop",
+          "default": true
         },
         "heading": {
           "types": [
@@ -16677,7 +17222,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
@@ -16842,7 +17388,8 @@
           "types": [
             "number"
           ],
-          "description": "featureColumns prop"
+          "description": "featureColumns prop",
+          "default": 3
         }
       }
     },
@@ -16906,31 +17453,36 @@
             "fill",
             "pulse",
             "morph"
-          ]
+          ],
+          "default": "draw"
         },
         "animate": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to run the animation (default: false). Controlled externally or via AnimatedReveal."
+          "description": "Whether to run the animation (default: false). Controlled externally or via AnimatedReveal.",
+          "default": false
         },
         "duration": {
           "types": [
             "number"
           ],
-          "description": "Animation duration in ms (default: 1200)"
+          "description": "Animation duration in ms (default: 1200)",
+          "default": 1200
         },
         "delay": {
           "types": [
             "number"
           ],
-          "description": "Delay before animation starts in ms (default: 0)"
+          "description": "Delay before animation starts in ms (default: 0)",
+          "default": 0
         },
         "easing": {
           "types": [
             "string"
           ],
-          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))"
+          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))",
+          "default": "cubic-bezier(0.16, 1, 0.3, 1)"
         },
         "width": {
           "types": [
@@ -16986,7 +17538,8 @@
             "scroll",
             "hover",
             "manual"
-          ]
+          ],
+          "default": "scroll"
         },
         "animation": {
           "types": [
@@ -17002,31 +17555,36 @@
             "scale",
             "scale-up",
             "none"
-          ]
+          ],
+          "default": "fade-up"
         },
         "duration": {
           "types": [
             "number"
           ],
-          "description": "Animation duration in ms (default: 600)"
+          "description": "Animation duration in ms (default: 600)",
+          "default": 600
         },
         "delay": {
           "types": [
             "number"
           ],
-          "description": "Delay before animation starts in ms (default: 0)"
+          "description": "Delay before animation starts in ms (default: 0)",
+          "default": 0
         },
         "threshold": {
           "types": [
             "number"
           ],
-          "description": "How much of the element must be visible before triggering, 0-1 (default: 0.15)"
+          "description": "How much of the element must be visible before triggering, 0-1 (default: 0.15)",
+          "default": 0.15
         },
         "once": {
           "types": [
             "boolean"
           ],
-          "description": "Animate only the first time the element enters the viewport (default: true)"
+          "description": "Animate only the first time the element enters the viewport (default: true)",
+          "default": true
         },
         "animate": {
           "types": [
@@ -17038,7 +17596,8 @@
           "types": [
             "string"
           ],
-          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))"
+          "description": "Easing function (default: cubic-bezier(0.16, 1, 0.3, 1))",
+          "default": "cubic-bezier(0.16, 1, 0.3, 1)"
         },
         "children": {
           "types": [
@@ -17081,25 +17640,29 @@
             "arch",
             "arabesque-vine",
             "arabesque-net"
-          ]
+          ],
+          "default": "star8"
         },
         "size": {
           "types": [
             "number"
           ],
-          "description": "Tile unit size in SVG units"
+          "description": "Tile unit size in SVG units",
+          "default": 60
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "Stroke color (CSS variable or hex)"
+          "description": "Stroke color (CSS variable or hex)",
+          "default": "var(--color-primary)"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "Line thickness"
+          "description": "Line thickness",
+          "default": 0.5
         },
         "className": {
           "types": [
@@ -17129,7 +17692,8 @@
             "arch",
             "vine",
             "lattice"
-          ]
+          ],
+          "default": "arch"
         },
         "side": {
           "types": [
@@ -17140,31 +17704,36 @@
             "left",
             "right",
             "both"
-          ]
+          ],
+          "default": "both"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "Overall opacity (default: 0.15)"
+          "description": "Overall opacity (default: 0.15)",
+          "default": 0.15
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "Stroke color"
+          "description": "Stroke color",
+          "default": "var(--color-primary)"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "Stroke width"
+          "description": "Stroke width",
+          "default": 0.5
         },
         "width": {
           "types": [
             "number"
           ],
-          "description": "Width of the decoration area as percentage of container (default: 15)"
+          "description": "Width of the decoration area as percentage of container (default: 15)",
+          "default": 15
         },
         "className": {
           "types": [
@@ -17205,7 +17774,8 @@
             "arch",
             "arabesque-vine",
             "arabesque-net"
-          ]
+          ],
+          "default": "star8"
         },
         "mode": {
           "types": [
@@ -17219,31 +17789,36 @@
             "dual",
             "around",
             "frame"
-          ]
+          ],
+          "default": "background"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "Overall opacity (default: 0.06)"
+          "description": "Overall opacity (default: 0.06)",
+          "default": 0.06
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "Stroke color passed to PatternTile"
+          "description": "Stroke color passed to PatternTile",
+          "default": "var(--color-primary)"
         },
         "scale": {
           "types": [
             "number"
           ],
-          "description": "Tile scale multiplier (default: 1)"
+          "description": "Tile scale multiplier (default: 1)",
+          "default": 1
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "Stroke width passed to PatternTile"
+          "description": "Stroke width passed to PatternTile",
+          "default": 0.5
         },
         "children": {
           "types": [
@@ -17305,7 +17880,8 @@
             "dark",
             "gradient",
             "primary"
-          ]
+          ],
+          "default": "alt"
         },
         "align": {
           "types": [
@@ -17315,7 +17891,8 @@
           "enumValues": [
             "center",
             "left"
-          ]
+          ],
+          "default": "center"
         },
         "className": {
           "types": [
@@ -17340,7 +17917,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Include HUD slots"
+          "description": "Include HUD slots",
+          "default": false
         },
         "hudMode": {
           "types": [
@@ -17350,13 +17928,15 @@
           "enumValues": [
             "fixed",
             "inline"
-          ]
+          ],
+          "default": "fixed"
         },
         "includeFloating": {
           "types": [
             "boolean"
           ],
-          "description": "Include floating slot"
+          "description": "Include floating slot",
+          "default": false
         },
         "className": {
           "types": [
@@ -17515,7 +18095,8 @@
           "types": [
             "number"
           ],
-          "description": "Indent size per level in px (default: 16)"
+          "description": "Indent size per level in px (default: 16)",
+          "default": 16
         }
       }
     },
@@ -17544,7 +18125,8 @@
             "danger",
             "info",
             "neutral"
-          ]
+          ],
+          "default": "default"
         },
         "size": {
           "types": [
@@ -17555,7 +18137,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "sm"
         },
         "label": {
           "types": [
@@ -17582,7 +18165,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Disable the remove button (renders without × control)"
+          "description": "Disable the remove button (renders without × control)",
+          "default": true
         },
         "onClick": {
           "types": [
@@ -17672,7 +18256,8 @@
             "number",
             "string"
           ],
-          "description": "Selected value (controlled)"
+          "description": "Selected value (controlled)",
+          "default": null
         },
         "onChange": {
           "types": [
@@ -17705,7 +18290,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Disabled state"
+          "description": "Disabled state",
+          "default": false
         },
         "size": {
           "types": [
@@ -17716,7 +18302,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -17726,7 +18313,8 @@
           "enumValues": [
             "radios",
             "buttons"
-          ]
+          ],
+          "default": "radios"
         },
         "className": {
           "types": [
@@ -17855,7 +18443,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Disable all inputs"
+          "description": "Disable all inputs",
+          "default": false
         },
         "size": {
           "types": [
@@ -17865,7 +18454,8 @@
           "enumValues": [
             "sm",
             "md"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -17943,25 +18533,29 @@
           "enumValues": [
             "environment",
             "user"
-          ]
+          ],
+          "default": "environment"
         },
         "paused": {
           "types": [
             "boolean"
           ],
-          "description": "paused prop"
+          "description": "paused prop",
+          "default": false
         },
         "showOverlay": {
           "types": [
             "boolean"
           ],
-          "description": "showOverlay prop"
+          "description": "showOverlay prop",
+          "default": true
         },
         "showCameraControls": {
           "types": [
             "boolean"
           ],
-          "description": "showCameraControls prop"
+          "description": "showCameraControls prop",
+          "default": true
         },
         "fallback": {
           "types": [
@@ -18004,7 +18598,8 @@
             "up",
             "down",
             "none"
-          ]
+          ],
+          "default": null
         },
         "onVote": {
           "types": [
@@ -18037,7 +18632,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Disabled state"
+          "description": "Disabled state",
+          "default": false
         },
         "size": {
           "types": [
@@ -18048,7 +18644,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -18058,7 +18655,8 @@
           "enumValues": [
             "vertical",
             "horizontal"
-          ]
+          ],
+          "default": "vertical"
         },
         "className": {
           "types": [
@@ -18133,7 +18731,8 @@
           "types": [
             "boolean"
           ],
-          "description": "readOnly prop"
+          "description": "readOnly prop",
+          "default": false
         },
         "className": {
           "types": [
@@ -18233,7 +18832,8 @@
           "types": [
             "number"
           ],
-          "description": "maxDepth prop"
+          "description": "maxDepth prop",
+          "default": 6
         },
         "onVote": {
           "types": [
@@ -18356,7 +18956,8 @@
           "types": [
             "boolean"
           ],
-          "description": "showActions prop"
+          "description": "showActions prop",
+          "default": true
         },
         "className": {
           "types": [
@@ -18415,7 +19016,8 @@
           "types": [
             "boolean"
           ],
-          "description": "readOnly prop"
+          "description": "readOnly prop",
+          "default": false
         },
         "placeholder": {
           "types": [
@@ -18427,7 +19029,8 @@
           "types": [
             "boolean"
           ],
-          "description": "showToolbar prop"
+          "description": "showToolbar prop",
+          "default": true
         },
         "className": {
           "types": [
@@ -18476,7 +19079,8 @@
           "enumValues": [
             "side-by-side",
             "inline"
-          ]
+          ],
+          "default": "side-by-side"
         },
         "onSelectBefore": {
           "types": [
@@ -18664,7 +19268,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "onChange": {
           "types": [
@@ -18701,7 +19306,8 @@
           "enumValues": [
             "sm",
             "md"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -18734,25 +19340,29 @@
           "types": [
             "number"
           ],
-          "description": "width prop"
+          "description": "width prop",
+          "default": 800
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "height prop"
+          "description": "height prop",
+          "default": 600
         },
         "selectedId": {
           "types": [
             "string"
           ],
-          "description": "selectedId prop"
+          "description": "selectedId prop",
+          "default": null
         },
         "editable": {
           "types": [
             "boolean"
           ],
-          "description": "editable prop"
+          "description": "editable prop",
+          "default": false
         },
         "onSelect": {
           "types": [
@@ -18862,13 +19472,15 @@
           "types": [
             "number"
           ],
-          "description": "Cooldown progress from 0 (ready) to 1 (full cooldown)"
+          "description": "Cooldown progress from 0 (ready) to 1 (full cooldown)",
+          "default": 0
         },
         "disabled": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the button is disabled"
+          "description": "Whether the button is disabled",
+          "default": false
         },
         "hotkey": {
           "types": [
@@ -18885,7 +19497,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "variant": {
           "types": [
@@ -18896,7 +19509,8 @@
             "primary",
             "secondary",
             "danger"
-          ]
+          ],
+          "default": "primary"
         },
         "onClick": {
           "types": [
@@ -18942,13 +19556,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the choice is disabled"
+          "description": "Whether the choice is disabled",
+          "default": false
         },
         "selected": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the choice is currently selected"
+          "description": "Whether the choice is currently selected",
+          "default": false
         },
         "onClick": {
           "types": [
@@ -19005,7 +19621,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19042,19 +19659,22 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "default": "md"
         },
         "shape": {
           "types": [
             "string"
           ],
-          "description": "Shape variant"
+          "description": "Shape variant",
+          "default": "circle"
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Visual variant"
+          "description": "Visual variant",
+          "default": "secondary"
         },
         "onPress": {
           "types": [
@@ -19134,7 +19754,8 @@
             "heal",
             "crit",
             "miss"
-          ]
+          ],
+          "default": "damage"
         },
         "size": {
           "types": [
@@ -19145,7 +19766,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19193,7 +19815,8 @@
           "enumValues": [
             "top",
             "bottom"
-          ]
+          ],
+          "default": "bottom"
         },
         "className": {
           "types": [
@@ -19237,7 +19860,8 @@
             "hearts",
             "bar",
             "numeric"
-          ]
+          ],
+          "default": "hearts"
         },
         "size": {
           "types": [
@@ -19248,7 +19872,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19260,7 +19885,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Animation on change"
+          "description": "Animation on change",
+          "default": true
         }
       }
     },
@@ -19304,7 +19930,8 @@
             "rare",
             "epic",
             "legendary"
-          ]
+          ],
+          "default": "common"
         },
         "empty": {
           "types": [
@@ -19321,7 +19948,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "selected": {
           "types": [
@@ -19365,7 +19993,8 @@
             "types": [
               "object"
             ]
-          }
+          },
+          "default": []
         },
         "units": {
           "types": [
@@ -19376,31 +20005,36 @@
             "types": [
               "object"
             ]
-          }
+          },
+          "default": []
         },
         "width": {
           "types": [
             "number"
           ],
-          "description": "Canvas display width in pixels"
+          "description": "Canvas display width in pixels",
+          "default": 150
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Canvas display height in pixels"
+          "description": "Canvas display height in pixels",
+          "default": 150
         },
         "mapWidth": {
           "types": [
             "number"
           ],
-          "description": "Logical map width (for coordinate scaling)"
+          "description": "Logical map width (for coordinate scaling)",
+          "default": 100
         },
         "mapHeight": {
           "types": [
             "number"
           ],
-          "description": "Logical map height (for coordinate scaling)"
+          "description": "Logical map height (for coordinate scaling)",
+          "default": 100
         },
         "viewportRect": {
           "types": [
@@ -19468,7 +20102,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19518,7 +20153,8 @@
             "md",
             "lg",
             "xl"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19530,13 +20166,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Animation on value change"
+          "description": "Animation on value change",
+          "default": true
         },
         "locale": {
           "types": [
             "string"
           ],
-          "description": "Number formatting locale"
+          "description": "Number formatting locale",
+          "default": "en-US"
         }
       }
     },
@@ -19595,43 +20233,50 @@
           "types": [
             "number"
           ],
-          "description": "Scale factor (default: 1)"
+          "description": "Scale factor (default: 1)",
+          "default": 1
         },
         "flipX": {
           "types": [
             "boolean"
           ],
-          "description": "Flip horizontally"
+          "description": "Flip horizontally",
+          "default": false
         },
         "flipY": {
           "types": [
             "boolean"
           ],
-          "description": "Flip vertically"
+          "description": "Flip vertically",
+          "default": false
         },
         "rotation": {
           "types": [
             "number"
           ],
-          "description": "Rotation in degrees"
+          "description": "Rotation in degrees",
+          "default": 0
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "Opacity (0-1)"
+          "description": "Opacity (0-1)",
+          "default": 1
         },
         "zIndex": {
           "types": [
             "number"
           ],
-          "description": "Z-index for layering"
+          "description": "Z-index for layering",
+          "default": 0
         },
         "columns": {
           "types": [
             "number"
           ],
-          "description": "Number of columns in spritesheet (for frame calculation)"
+          "description": "Number of columns in spritesheet (for frame calculation)",
+          "default": 16
         },
         "className": {
           "types": [
@@ -19689,13 +20334,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "animated": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show pulse animation on non-idle states"
+          "description": "Whether to show pulse animation on non-idle states",
+          "default": true
         },
         "stateStyles": {
           "types": [
@@ -19756,7 +20403,8 @@
             "buff",
             "debuff",
             "neutral"
-          ]
+          ],
+          "default": "neutral"
         },
         "size": {
           "types": [
@@ -19767,7 +20415,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19810,7 +20459,8 @@
             "mm:ss",
             "ss",
             "countdown"
-          ]
+          ],
+          "default": "mm:ss"
         },
         "size": {
           "types": [
@@ -19821,7 +20471,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19882,7 +20533,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19919,13 +20571,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this waypoint is currently active"
+          "description": "Whether this waypoint is currently active",
+          "default": false
         },
         "completed": {
           "types": [
             "boolean"
           ],
-          "description": "Whether this waypoint has been completed"
+          "description": "Whether this waypoint has been completed",
+          "default": false
         },
         "size": {
           "types": [
@@ -19936,7 +20590,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -19980,7 +20635,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to show the XP label"
+          "description": "Whether to show the XP label",
+          "default": false
         },
         "size": {
           "types": [
@@ -19991,13 +20647,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "animated": {
           "types": [
             "boolean"
           ],
-          "description": "Animate the fill bar"
+          "description": "Animate the fill bar",
+          "default": true
         },
         "className": {
           "types": [
@@ -20041,31 +20699,36 @@
             "fork",
             "merge",
             "diamond"
-          ]
+          ],
+          "default": "fork"
         },
         "branches": {
           "types": [
             "number"
           ],
-          "description": "branches prop"
+          "description": "branches prop",
+          "default": 2
         },
         "size": {
           "types": [
             "number"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "default": 1
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20123,25 +20786,29 @@
             "solid",
             "dashed",
             "animated"
-          ]
+          ],
+          "default": "solid"
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "strokeWidth prop"
+          "description": "strokeWidth prop",
+          "default": 1.5
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20178,25 +20845,29 @@
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "strokeWidth prop"
+          "description": "strokeWidth prop",
+          "default": 1.5
         },
         "animated": {
           "types": [
             "boolean"
           ],
-          "description": "animated prop"
+          "description": "animated prop",
+          "default": false
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20235,37 +20906,43 @@
           "types": [
             "number"
           ],
-          "description": "cols prop"
+          "description": "cols prop",
+          "default": 4
         },
         "rows": {
           "types": [
             "number"
           ],
-          "description": "rows prop"
+          "description": "rows prop",
+          "default": 3
         },
         "spacing": {
           "types": [
             "number"
           ],
-          "description": "spacing prop"
+          "description": "spacing prop",
+          "default": 20
         },
         "nodeRadius": {
           "types": [
             "number"
           ],
-          "description": "nodeRadius prop"
+          "description": "nodeRadius prop",
+          "default": 3
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20282,7 +20959,8 @@
             "types": [
               "number"
             ]
-          }
+          },
+          "default": []
         }
       }
     },
@@ -20315,37 +20993,43 @@
           "types": [
             "number"
           ],
-          "description": "rx prop"
+          "description": "rx prop",
+          "default": 14
         },
         "ry": {
           "types": [
             "number"
           ],
-          "description": "ry prop"
+          "description": "ry prop",
+          "default": 20
         },
         "rotation": {
           "types": [
             "number"
           ],
-          "description": "rotation prop"
+          "description": "rotation prop",
+          "default": 0
         },
         "shells": {
           "types": [
             "number"
           ],
-          "description": "shells prop"
+          "description": "shells prop",
+          "default": 2
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20384,31 +21068,36 @@
           "types": [
             "number"
           ],
-          "description": "nodes prop"
+          "description": "nodes prop",
+          "default": 6
         },
         "radius": {
           "types": [
             "number"
           ],
-          "description": "radius prop"
+          "description": "radius prop",
+          "default": 50
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "connectionDensity": {
           "types": [
             "number"
           ],
-          "description": "connectionDensity prop"
+          "description": "connectionDensity prop",
+          "default": 0.5
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20447,7 +21136,8 @@
           "types": [
             "number"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "default": 1
         },
         "variant": {
           "types": [
@@ -20458,19 +21148,22 @@
             "text-to-code",
             "code-to-app",
             "generic"
-          ]
+          ],
+          "default": "generic"
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20509,7 +21202,8 @@
           "types": [
             "number"
           ],
-          "description": "r prop"
+          "description": "r prop",
+          "default": 6
         },
         "variant": {
           "types": [
@@ -20520,19 +21214,22 @@
             "filled",
             "stroked",
             "pulse"
-          ]
+          ],
+          "default": "filled"
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20577,31 +21274,36 @@
           "types": [
             "number"
           ],
-          "description": "rings prop"
+          "description": "rings prop",
+          "default": 3
         },
         "maxRadius": {
           "types": [
             "number"
           ],
-          "description": "maxRadius prop"
+          "description": "maxRadius prop",
+          "default": 60
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "animated": {
           "types": [
             "boolean"
           ],
-          "description": "animated prop"
+          "description": "animated prop",
+          "default": true
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20640,7 +21342,8 @@
           "types": [
             "number"
           ],
-          "description": "r prop"
+          "description": "r prop",
+          "default": 40
         },
         "variant": {
           "types": [
@@ -20651,25 +21354,29 @@
             "solid",
             "dashed",
             "glow"
-          ]
+          ],
+          "default": "solid"
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "strokeWidth": {
           "types": [
             "number"
           ],
-          "description": "strokeWidth prop"
+          "description": "strokeWidth prop",
+          "default": 1.5
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20714,7 +21421,8 @@
           "types": [
             "number"
           ],
-          "description": "size prop"
+          "description": "size prop",
+          "default": 1
         },
         "variant": {
           "types": [
@@ -20725,19 +21433,22 @@
             "outline",
             "filled",
             "check"
-          ]
+          ],
+          "default": "outline"
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20782,25 +21493,29 @@
           "types": [
             "number"
           ],
-          "description": "width prop"
+          "description": "width prop",
+          "default": 60
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "height prop"
+          "description": "height prop",
+          "default": 40
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "var(--color-primary)"
         },
         "opacity": {
           "types": [
             "number"
           ],
-          "description": "opacity prop"
+          "description": "opacity prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -20902,7 +21617,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show line numbers in the gutter"
+          "description": "Show line numbers in the gutter",
+          "default": false
         },
         "className": {
           "types": [
@@ -21000,7 +21716,8 @@
           "types": [
             "string"
           ],
-          "description": "Placeholder text for the input"
+          "description": "Placeholder text for the input",
+          "default": "Search documentation..."
         },
         "onSearch": {
           "types": [
@@ -21326,7 +22043,8 @@
             "horizontal",
             "vertical",
             "diamond"
-          ]
+          ],
+          "default": "horizontal"
         },
         "size": {
           "types": [
@@ -21337,7 +22055,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -21437,25 +22156,29 @@
           "types": [
             "number"
           ],
-          "description": "maxVisible prop"
+          "description": "maxVisible prop",
+          "default": 50
         },
         "autoScroll": {
           "types": [
             "boolean"
           ],
-          "description": "autoScroll prop"
+          "description": "autoScroll prop",
+          "default": true
         },
         "showTimestamps": {
           "types": [
             "boolean"
           ],
-          "description": "showTimestamps prop"
+          "description": "showTimestamps prop",
+          "default": false
         },
         "title": {
           "types": [
             "string"
           ],
-          "description": "title prop"
+          "description": "title prop",
+          "default": "Combat Log"
         },
         "className": {
           "types": [
@@ -21526,7 +22249,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the player has enough ingredients to craft"
+          "description": "Whether the player has enough ingredients to craft",
+          "default": false
         },
         "onCraft": {
           "types": [
@@ -21613,13 +22337,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "includeDiagonals": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to include diagonal buttons"
+          "description": "Whether to include diagonal buttons",
+          "default": false
         },
         "className": {
           "types": [
@@ -21698,7 +22424,8 @@
           "types": [
             "number"
           ],
-          "description": "Typewriter speed in ms per character (0 = instant)"
+          "description": "Typewriter speed in ms per character (0 = instant)",
+          "default": 30
         },
         "position": {
           "types": [
@@ -21708,7 +22435,8 @@
           "enumValues": [
             "top",
             "bottom"
-          ]
+          ],
+          "default": "bottom"
         },
         "onComplete": {
           "types": [
@@ -21874,13 +22602,15 @@
           "types": [
             "number"
           ],
-          "description": "Canvas width in pixels"
+          "description": "Canvas width in pixels",
+          "default": 800
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Canvas height in pixels"
+          "description": "Canvas height in pixels",
+          "default": 600
         },
         "onDraw": {
           "types": [
@@ -21916,7 +22646,8 @@
           "types": [
             "number"
           ],
-          "description": "Target frames per second"
+          "description": "Target frames per second",
+          "default": 60
         },
         "className": {
           "types": [
@@ -22052,7 +22783,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -22064,7 +22796,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to use a semi-transparent background"
+          "description": "Whether to use a semi-transparent background",
+          "default": true
         }
       }
     },
@@ -22223,7 +22956,8 @@
             "required": [
               "label"
             ]
-          }
+          },
+          "default": []
         },
         "actions": {
           "types": [
@@ -22275,7 +23009,8 @@
             "victory",
             "defeat",
             "neutral"
-          ]
+          ],
+          "default": "neutral"
         },
         "highScore": {
           "types": [
@@ -22351,7 +23086,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether to display numeric HP values"
+          "description": "Whether to display numeric HP values",
+          "default": true
         },
         "size": {
           "types": [
@@ -22362,7 +23098,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -22436,7 +23173,8 @@
           "types": [
             "number"
           ],
-          "description": "Number of columns in the grid"
+          "description": "Number of columns in the grid",
+          "default": 4
         },
         "totalSlots": {
           "types": [
@@ -22486,7 +23224,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -22624,7 +23363,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Show item tooltips on hover"
+          "description": "Show item tooltips on hover",
+          "default": true
         },
         "className": {
           "types": [
@@ -22636,7 +23376,8 @@
           "types": [
             "number"
           ],
-          "description": "Slot size in pixels"
+          "description": "Slot size in pixels",
+          "default": 48
         }
       }
     },
@@ -22661,13 +23402,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state indicator"
+          "description": "Loading state indicator",
+          "default": false
         },
         "error": {
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "default": null
         },
         "tiles": {
           "types": [
@@ -22706,7 +23449,8 @@
           "types": [
             "string"
           ],
-          "description": "--- Interaction state ---"
+          "description": "--- Interaction state ---",
+          "default": null
         },
         "validMoves": {
           "types": [
@@ -22717,7 +23461,8 @@
             "types": [
               "object"
             ]
-          }
+          },
+          "default": []
         },
         "attackTargets": {
           "types": [
@@ -22728,13 +23473,15 @@
             "types": [
               "object"
             ]
-          }
+          },
+          "default": []
         },
         "hoveredTile": {
           "types": [
             "object"
           ],
-          "description": "Hovered tile position"
+          "description": "Hovered tile position",
+          "default": null
         },
         "onTileClick": {
           "types": [
@@ -22855,13 +23602,15 @@
           "types": [
             "number"
           ],
-          "description": "--- Rendering options ---"
+          "description": "--- Rendering options ---",
+          "default": 0.4
         },
         "debug": {
           "types": [
             "boolean"
           ],
-          "description": "Show debug grid lines and coordinates"
+          "description": "Show debug grid lines and coordinates",
+          "default": false
         },
         "backgroundImage": {
           "types": [
@@ -22873,19 +23622,22 @@
           "types": [
             "boolean"
           ],
-          "description": "Toggle minimap overlay"
+          "description": "Toggle minimap overlay",
+          "default": true
         },
         "enableCamera": {
           "types": [
             "boolean"
           ],
-          "description": "Enable camera pan/zoom controls"
+          "description": "Enable camera pan/zoom controls",
+          "default": true
         },
         "unitScale": {
           "types": [
             "number"
           ],
-          "description": "Extra scale multiplier for unit draw size. 1 = default."
+          "description": "Extra scale multiplier for unit draw size. 1 = default.",
+          "default": 1
         },
         "boardWidth": {
           "types": [
@@ -22966,7 +23718,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "onDrawEffects": {
           "types": [
@@ -22993,7 +23746,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether there are active effects — keeps RAF loop alive"
+          "description": "Whether there are active effects — keeps RAF loop alive",
+          "default": false
         },
         "assetBaseUrl": {
           "types": [
@@ -23120,37 +23874,43 @@
               "width",
               "height"
             ]
-          }
+          },
+          "default": []
         },
         "worldWidth": {
           "types": [
             "number"
           ],
-          "description": "World dimensions"
+          "description": "World dimensions",
+          "default": 800
         },
         "worldHeight": {
           "types": [
             "number"
           ],
-          "description": "worldHeight prop"
+          "description": "worldHeight prop",
+          "default": 400
         },
         "canvasWidth": {
           "types": [
             "number"
           ],
-          "description": "Canvas display size"
+          "description": "Canvas display size",
+          "default": 800
         },
         "canvasHeight": {
           "types": [
             "number"
           ],
-          "description": "canvasHeight prop"
+          "description": "canvasHeight prop",
+          "default": 400
         },
         "followCamera": {
           "types": [
             "boolean"
           ],
-          "description": "Camera follows player"
+          "description": "Camera follows player",
+          "default": true
         },
         "bgColor": {
           "types": [
@@ -23180,7 +23940,8 @@
           "types": [
             "string"
           ],
-          "description": "Base URL prefix for asset URLs"
+          "description": "Base URL prefix for asset URLs",
+          "default": ""
         },
         "leftEvent": {
           "types": [
@@ -23194,7 +23955,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "MOVE_LEFT"
         },
         "rightEvent": {
           "types": [
@@ -23208,7 +23970,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "MOVE_RIGHT"
         },
         "jumpEvent": {
           "types": [
@@ -23216,7 +23979,8 @@
           ],
           "description": "jumpEvent prop",
           "kind": "event-ref",
-          "emitPayloadSchema": []
+          "emitPayloadSchema": [],
+          "default": "JUMP"
         },
         "stopEvent": {
           "types": [
@@ -23224,7 +23988,8 @@
           ],
           "description": "stopEvent prop",
           "kind": "event-ref",
-          "emitPayloadSchema": []
+          "emitPayloadSchema": [],
+          "default": "STOP"
         },
         "className": {
           "types": [
@@ -23287,7 +24052,8 @@
           "types": [
             "number"
           ],
-          "description": "Maximum number of powerup slots"
+          "description": "Maximum number of powerup slots",
+          "default": 4
         },
         "className": {
           "types": [
@@ -23429,7 +24195,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "className": {
           "types": [
@@ -23512,7 +24279,8 @@
             "number",
             "string"
           ],
-          "description": "Current value (defaults to 0 if not provided)"
+          "description": "Current value (defaults to 0 if not provided)",
+          "default": 0
         },
         "max": {
           "types": [
@@ -23536,7 +24304,8 @@
           "types": [
             "string"
           ],
-          "description": "Display format"
+          "description": "Display format",
+          "default": "number"
         },
         "icon": {
           "types": [
@@ -23548,13 +24317,15 @@
           "types": [
             "string"
           ],
-          "description": "Size variant"
+          "description": "Size variant",
+          "default": "md"
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Visual variant"
+          "description": "Visual variant",
+          "default": "default"
         },
         "className": {
           "types": [
@@ -23995,7 +24766,8 @@
           "types": [
             "number"
           ],
-          "description": "Initial page index (default: 0 = cover)"
+          "description": "Initial page index (default: 0 = cover)",
+          "default": 0
         },
         "fieldMap": {
           "types": [
@@ -24218,13 +24990,15 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.45
         },
         "unitScale": {
           "types": [
             "number"
           ],
-          "description": "Unit draw-size multiplier"
+          "description": "Unit draw-size multiplier",
+          "default": 1
         },
         "header": {
           "types": [
@@ -24380,7 +25154,8 @@
           "types": [
             "boolean"
           ],
-          "description": "hasActiveEffects prop"
+          "description": "hasActiveEffects prop",
+          "default": false
         },
         "effectSpriteUrls": {
           "types": [
@@ -24391,7 +25166,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "resolveUnitFrame": {
           "types": [
@@ -24545,13 +25321,15 @@
           "types": [
             "number"
           ],
-          "description": "Duration in ms before auto-dismiss (default 2000 for canvas, 800 for emoji)"
+          "description": "Duration in ms before auto-dismiss (default 2000 for canvas, 800 for emoji)",
+          "default": 2000
         },
         "intensity": {
           "types": [
             "number"
           ],
-          "description": "Optional intensity multiplier (1 = normal, 2 = double size/brightness)"
+          "description": "Optional intensity multiplier (1 = normal, 2 = double size/brightness)",
+          "default": 1
         },
         "onComplete": {
           "types": [
@@ -24609,13 +25387,15 @@
           "types": [
             "number"
           ],
-          "description": "Canvas width (default 400)"
+          "description": "Canvas width (default 400)",
+          "default": 400
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "Canvas height (default 300)"
+          "description": "Canvas height (default 300)",
+          "default": 300
         }
       }
     },
@@ -24692,7 +25472,8 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.45
         },
         "header": {
           "types": [
@@ -24882,7 +25663,8 @@
           "types": [
             "string"
           ],
-          "description": "Base URL prepended to all sound paths (default '')"
+          "description": "Base URL prepended to all sound paths (default '')",
+          "default": ""
         },
         "children": {
           "types": [
@@ -24895,7 +25677,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Initial muted state"
+          "description": "Initial muted state",
+          "default": false
         },
         "className": {
           "types": [
@@ -24944,7 +25727,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "sm"
         },
         "className": {
           "types": [
@@ -25112,7 +25896,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether slot is locked"
+          "description": "Whether slot is locked",
+          "default": false
         },
         "lockLabel": {
           "types": [
@@ -25124,7 +25909,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether slot is selected"
+          "description": "Whether slot is selected",
+          "default": false
         },
         "size": {
           "types": [
@@ -25135,13 +25921,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "showTooltip": {
           "types": [
             "boolean"
           ],
-          "description": "Show tooltip on hover"
+          "description": "Show tooltip on hover",
+          "default": true
         },
         "categoryColors": {
           "types": [
@@ -25196,7 +25984,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this slot's equipped item is draggable"
+          "description": "Whether this slot's equipped item is draggable",
+          "default": false
         },
         "onDragStart": {
           "types": [
@@ -25365,7 +26154,8 @@
             "linear",
             "compact",
             "full"
-          ]
+          ],
+          "default": "compact"
         },
         "size": {
           "types": [
@@ -25376,13 +26166,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "showTransitions": {
           "types": [
             "boolean"
           ],
-          "description": "Whether to show transition labels"
+          "description": "Whether to show transition labels",
+          "default": true
         },
         "onStateClick": {
           "types": [
@@ -25491,19 +26283,22 @@
           "types": [
             "number"
           ],
-          "description": "Canvas render scale"
+          "description": "Canvas render scale",
+          "default": 0.4
         },
         "unitScale": {
           "types": [
             "number"
           ],
-          "description": "Unit draw-size multiplier"
+          "description": "Unit draw-size multiplier",
+          "default": 2.5
         },
         "allowMoveAllHeroes": {
           "types": [
             "boolean"
           ],
-          "description": "Allow selecting / moving ALL heroes (including enemy). For testing."
+          "description": "Allow selecting / moving ALL heroes (including enemy). For testing.",
+          "default": false
         },
         "isInRange": {
           "types": [
@@ -25767,7 +26562,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "resolveUnitFrame": {
           "types": [
@@ -25807,13 +26603,15 @@
           "types": [
             "number"
           ],
-          "description": "width prop"
+          "description": "width prop",
+          "default": 600
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "height prop"
+          "description": "height prop",
+          "default": 400
         },
         "running": {
           "types": [
@@ -25826,7 +26624,8 @@
           "types": [
             "number"
           ],
-          "description": "speed prop"
+          "description": "speed prop",
+          "default": 1
         },
         "className": {
           "types": [
@@ -26001,25 +26800,29 @@
           "types": [
             "number"
           ],
-          "description": "maxPoints prop"
+          "description": "maxPoints prop",
+          "default": 200
         },
         "width": {
           "types": [
             "number"
           ],
-          "description": "width prop"
+          "description": "width prop",
+          "default": 300
         },
         "height": {
           "types": [
             "number"
           ],
-          "description": "height prop"
+          "description": "height prop",
+          "default": 120
         },
         "color": {
           "types": [
             "string"
           ],
-          "description": "color prop"
+          "description": "color prop",
+          "default": "#e94560"
         },
         "className": {
           "types": [
@@ -26196,7 +26999,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "PUZZLE_COMPLETE"
         }
       }
     },
@@ -26362,7 +27166,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "PUZZLE_COMPLETE"
         }
       }
     },
@@ -26497,7 +27302,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "PUZZLE_COMPLETE"
         }
       }
     },
@@ -26709,7 +27515,8 @@
           "types": [
             "number"
           ],
-          "description": "Playback speed in ms per event"
+          "description": "Playback speed in ms per event",
+          "default": 800
         },
         "playEvent": {
           "types": [
@@ -26802,7 +27609,8 @@
           "types": [
             "number"
           ],
-          "description": "Max visible height before scroll"
+          "description": "Max visible height before scroll",
+          "default": 200
         },
         "label": {
           "types": [
@@ -26964,7 +27772,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether editing is disabled"
+          "description": "Whether editing is disabled",
+          "default": false
         },
         "className": {
           "types": [
@@ -27064,7 +27873,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether editing is disabled (during playback)"
+          "description": "Whether editing is disabled (during playback)",
+          "default": false
         },
         "className": {
           "types": [
@@ -27245,7 +28055,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "PUZZLE_COMPLETE"
         }
       }
     },
@@ -27393,13 +28204,15 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "allowDuplicates": {
           "types": [
             "boolean"
           ],
-          "description": "Whether each action can be used multiple times"
+          "description": "Whether each action can be used multiple times",
+          "default": true
         },
         "categoryColors": {
           "types": [
@@ -27416,7 +28229,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "label": {
           "types": [
@@ -27571,13 +28385,15 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "disabled": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the tile is disabled / already used"
+          "description": "Whether the tile is disabled / already used",
+          "default": false
         },
         "categoryColors": {
           "types": [
@@ -27653,13 +28469,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the sequence is currently playing (disable interaction)"
+          "description": "Whether the sequence is currently playing (disable interaction)",
+          "default": false
         },
         "currentStep": {
           "types": [
             "number"
           ],
-          "description": "Current step index during playback (-1 = not playing)"
+          "description": "Current step index during playback (-1 = not playing)",
+          "default": -1
         },
         "categoryColors": {
           "types": [
@@ -27691,7 +28509,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "lg"
         },
         "className": {
           "types": [
@@ -27936,7 +28755,8 @@
           "types": [
             "number"
           ],
-          "description": "Playback speed in ms per step"
+          "description": "Playback speed in ms per step",
+          "default": 1000
         },
         "playEvent": {
           "types": [
@@ -28154,7 +28974,8 @@
               "type": "number",
               "required": true
             }
-          ]
+          ],
+          "default": "PUZZLE_COMPLETE"
         }
       }
     },
@@ -28186,7 +29007,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the code is expanded by default"
+          "description": "Whether the code is expanded by default",
+          "default": false
         },
         "className": {
           "types": [
@@ -28440,7 +29262,8 @@
           "types": [
             "number"
           ],
-          "description": "Playback speed"
+          "description": "Playback speed",
+          "default": 600
         },
         "testEvent": {
           "types": [
@@ -28493,19 +29316,22 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this is the current active state"
+          "description": "Whether this is the current active state",
+          "default": false
         },
         "isSelected": {
           "types": [
             "boolean"
           ],
-          "description": "Whether this node is selected for editing"
+          "description": "Whether this node is selected for editing",
+          "default": false
         },
         "isInitial": {
           "types": [
             "boolean"
           ],
-          "description": "Whether this is the initial state"
+          "description": "Whether this is the initial state",
+          "default": false
         },
         "position": {
           "types": [
@@ -28572,7 +29398,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether this transition is currently active"
+          "description": "Whether this transition is currently active",
+          "default": false
         },
         "onClick": {
           "types": [
@@ -28686,19 +29513,22 @@
           "types": [
             "number"
           ],
-          "description": "Grid cell size"
+          "description": "Grid cell size",
+          "default": 1
         },
         "offsetX": {
           "types": [
             "number"
           ],
-          "description": "Grid offset X"
+          "description": "Grid offset X",
+          "default": 0
         },
         "offsetZ": {
           "types": [
             "number"
           ],
-          "description": "Grid offset Z"
+          "description": "Grid offset Z",
+          "default": 0
         },
         "onFeatureClick": {
           "types": [
@@ -28735,7 +29565,8 @@
             "types": [
               "string"
             ]
-          }
+          },
+          "default": []
         },
         "featureColors": {
           "types": [
@@ -28838,7 +29669,8 @@
           "types": [
             "number"
           ],
-          "description": "Number of columns"
+          "description": "Number of columns",
+          "default": 3
         },
         "gap": {
           "types": [
@@ -28849,7 +29681,8 @@
             "sm",
             "md",
             "lg"
-          ]
+          ],
+          "default": "md"
         },
         "cells": {
           "types": [
@@ -28906,7 +29739,8 @@
           "enumValues": [
             "horizontal",
             "vertical"
-          ]
+          ],
+          "default": "horizontal"
         },
         "ratio": {
           "types": [
@@ -28918,13 +29752,15 @@
           "types": [
             "number"
           ],
-          "description": "Minimum size of either pane in pixels"
+          "description": "Minimum size of either pane in pixels",
+          "default": 100
         },
         "resizable": {
           "types": [
             "boolean"
           ],
-          "description": "Allow user resizing"
+          "description": "Allow user resizing",
+          "default": true
         },
         "left": {
           "types": [
@@ -29053,7 +29889,8 @@
           "enumValues": [
             "top",
             "left"
-          ]
+          ],
+          "default": "top"
         },
         "className": {
           "types": [
@@ -29099,13 +29936,15 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether an item is currently selected"
+          "description": "Whether an item is currently selected",
+          "default": false
         },
         "masterWidth": {
           "types": [
             "string"
           ],
-          "description": "Width of master panel (e.g., '350px', '30%')"
+          "description": "Width of master panel (e.g., '350px', '30%')",
+          "default": "350px"
         },
         "className": {
           "types": [
@@ -29124,6 +29963,190 @@
             "string"
           ],
           "description": "Class for detail pane"
+        }
+      }
+    },
+    "sparkline": {
+      "type": "sparkline",
+      "category": "component",
+      "description": "Sparkline Atom Component  Minimal inline trend chart. Pure SVG polyline over a numeric series. Extracted from StatCard's sparkline path so any KPI or list row can include a trend visualization without compositing the whole card.",
+      "suggestedFor": [
+        "sparkline"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "data": {
+          "types": [
+            "array"
+          ],
+          "description": "Numeric series to plot. Length < 2 renders nothing.",
+          "required": true,
+          "items": {
+            "types": [
+              "number"
+            ]
+          }
+        },
+        "color": {
+          "types": [
+            "string"
+          ],
+          "description": "Stroke color. `auto` (default): success when the series trends up (last ≥ first), error when it trends down.",
+          "enumValues": [
+            "auto",
+            "primary",
+            "success",
+            "warning",
+            "error",
+            "info",
+            "muted"
+          ],
+          "default": "auto"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "SVG width in px. Default 80.",
+          "default": 80
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "SVG height in px. Default 32.",
+          "default": 32
+        },
+        "strokeWidth": {
+          "types": [
+            "number"
+          ],
+          "description": "Stroke width in px. Default 2.",
+          "default": 2
+        },
+        "fill": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Fill the area under the line with the stroke color at low opacity.",
+          "default": false
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes."
+        }
+      }
+    },
+    "date-range-picker": {
+      "type": "date-range-picker",
+      "category": "component",
+      "description": "DateRangePicker component",
+      "suggestedFor": [
+        "date",
+        "range",
+        "picker",
+        "date range picker"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "from": {
+          "types": [
+            "string"
+          ],
+          "description": "Controlled `from` (ISO date YYYY-MM-DD)."
+        },
+        "to": {
+          "types": [
+            "string"
+          ],
+          "description": "Controlled `to` (ISO date YYYY-MM-DD)."
+        },
+        "event": {
+          "types": [
+            "string"
+          ],
+          "description": "Event name emitted as `UI:{event}` with payload `{ from, to }`. Optional — when omitted, only the `onChange` callback fires.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "from",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "to",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "onChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Callback fired alongside the bus emit.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "range",
+              "type": "object"
+            }
+          ]
+        },
+        "presets": {
+          "types": [
+            "array"
+          ],
+          "description": "Preset shortcuts. Defaults to the standard finance set (Last 7d / Last 30d / This Month / This Quarter / YTD). Pass an empty array to hide presets entirely.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "range": {
+                "types": [
+                  "function"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "value",
+              "range"
+            ]
+          }
+        },
+        "fromLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "From-input label.",
+          "default": "From"
+        },
+        "toLabel": {
+          "types": [
+            "string"
+          ],
+          "description": "To-input label.",
+          "default": "To"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes."
         }
       }
     },
@@ -29158,13 +30181,15 @@
             "small",
             "large",
             "label"
-          ]
+          ],
+          "default": "body"
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Heading level (1-6) - alternative to variant for headings"
+          "description": "Heading level (1-6) - alternative to variant for headings",
+          "default": 2
         },
         "color": {
           "types": [
@@ -29179,7 +30204,8 @@
             "success",
             "warning",
             "inherit"
-          ]
+          ],
+          "default": "primary"
         },
         "align": {
           "types": [
@@ -29224,7 +30250,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Truncate with ellipsis (single line)"
+          "description": "Truncate with ellipsis (single line)",
+          "default": false
         },
         "overflow": {
           "types": [
@@ -29308,13 +30335,15 @@
             "small",
             "large",
             "label"
-          ]
+          ],
+          "default": "body"
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Heading level (1-6) - alternative to variant for headings"
+          "description": "Heading level (1-6) - alternative to variant for headings",
+          "default": 2
         },
         "color": {
           "types": [
@@ -29329,7 +30358,8 @@
             "success",
             "warning",
             "inherit"
-          ]
+          ],
+          "default": "primary"
         },
         "align": {
           "types": [
@@ -29374,7 +30404,8 @@
           "types": [
             "boolean"
           ],
-          "description": "Truncate with ellipsis (single line)"
+          "description": "Truncate with ellipsis (single line)",
+          "default": false
         },
         "overflow": {
           "types": [

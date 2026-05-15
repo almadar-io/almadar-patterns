@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-14T15:35:09.962Z",
+  "exportedAt": "2026-05-15T14:20:05.990Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1488,6 +1488,16 @@
       "component": "MasterDetailLayout",
       "importPath": "@/components/organisms/MasterDetailLayout",
       "category": "display"
+    },
+    "sparkline": {
+      "component": "Sparkline",
+      "importPath": "@/components/atoms/Sparkline",
+      "category": "component"
+    },
+    "date-range-picker": {
+      "component": "DateRangePicker",
+      "importPath": "@/components/molecules/DateRangePicker",
+      "category": "component"
     },
     "heading": {
       "component": "Typography",

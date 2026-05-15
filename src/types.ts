@@ -4,6 +4,8 @@
  * @packageDocumentation
  */
 
+import type { EventPayloadValue } from '@almadar/core';
+
 /**
  * Semantic kind marker for a pattern prop. Complements the structural
  * `types` field (which declares "string" / "array" / "object" / ...)
@@ -105,4 +107,23 @@ export interface PatternPropDef {
    * wrapper at the dispatch site.
    */
   callbackArgs?: PatternCallbackArg[];
+  /**
+   * Default value extracted from the component's parameter destructuring
+   * (`function Button({ size = 'md', variant = 'primary' })`). Surfaces
+   * what the component would render in the absence of an explicit
+   * override. Consumers:
+   *
+   * - The Studio drop pipeline (`apps/builder` `useSchemaEditor.addPattern`)
+   *   seeds fresh SExpression nodes with these values so dropped patterns
+   *   carry sensible content immediately.
+   * - The Inspector reads it to hint at the implicit value when a prop
+   *   isn't set on the SExpression.
+   *
+   * Populated by `almadar-pattern-sync` from each component's TS source
+   * (initializer expressions on the first parameter's binding pattern).
+   * Function-valued defaults (lambdas, callbacks) are omitted — only
+   * JSON-serializable scalars / arrays / objects round-trip through the
+   * registry.
+   */
+  default?: EventPayloadValue;
 }
