@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-15T14:20:05.990Z",
+  "exportedAt": "2026-05-16T00:25:22.449Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2154,6 +2154,11 @@
                   "string"
                 ]
               },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
               "label": {
                 "types": [
                   "string"
@@ -2193,7 +2198,6 @@
               }
             },
             "required": [
-              "id",
               "label"
             ]
           }
@@ -2213,6 +2217,11 @@
                   "string"
                 ]
               },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
               "label": {
                 "types": [
                   "string"
@@ -2252,7 +2261,6 @@
               }
             },
             "required": [
-              "id",
               "label"
             ]
           }
@@ -7901,8 +7909,8 @@
           "types": [
             "string"
           ],
-          "description": "Panel width @default 'w-96'",
-          "default": "w-96"
+          "description": "Panel width as Tailwind class string. Default fills the viewport on mobile and snaps to `w-96` (384 px) at `sm:` and above so phones don't lose content to a fixed 384 px column. Consumers passing a custom value should include a `w-full` mobile fallback in the same string (e.g. `\"w-full sm:w-[480px]\"`) — Tailwind's JIT can't see dynamically-concatenated class names. @default 'w-full sm:w-96'",
+          "default": "w-full sm:w-96"
         },
         "position": {
           "types": [
@@ -12307,6 +12315,14 @@
           "description": "Event emitted on swipe right (prev week): UI:{swipeRightEvent}",
           "kind": "event-ref",
           "emitPayloadSchema": []
+        },
+        "dayWindow": {
+          "types": [
+            "number",
+            "string"
+          ],
+          "description": "Override the viewport-driven day window. `'auto'` (default) tracks `window.innerWidth` — 1 day on mobile, 3 on tablet, 7 on laptop+. Pass an explicit number to force a fixed window (useful for print layouts or screenshot tests).",
+          "default": "auto"
         }
       }
     },
@@ -30147,6 +30163,52 @@
             "string"
           ],
           "description": "Additional CSS classes."
+        }
+      }
+    },
+    "aside": {
+      "type": "aside",
+      "category": "component",
+      "description": "Aside Atom Component  Semantic wrapper for the native `<aside>` landmark. Owns raw HTML so molecules (SidePanel, navigation rails, callouts) can compose the semantic-aside primitive without falling back to a raw element.",
+      "suggestedFor": [
+        "aside"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Aside contents"
+        }
+      }
+    },
+    "dialog": {
+      "type": "dialog",
+      "category": "container",
+      "description": "Dialog Atom Component  Semantic wrapper for the native `<dialog>` element. Owns the raw HTML rendering so molecules (Modal, ConfirmDialog, etc.) can compose the dialog primitive without dropping back to raw HTML.  Defaults `role=\"dialog\"` and `aria-modal=\"true\"`; both overridable for non-modal use cases.",
+      "suggestedFor": [
+        "dialog"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "Dialog contents"
         }
       }
     },

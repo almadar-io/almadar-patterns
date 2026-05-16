@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-15T14:20:05.990Z",
+  "exportedAt": "2026-05-16T00:25:22.449Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1498,6 +1498,16 @@
       "component": "DateRangePicker",
       "importPath": "@/components/molecules/DateRangePicker",
       "category": "component"
+    },
+    "aside": {
+      "component": "Aside",
+      "importPath": "@/components/atoms/Aside",
+      "category": "component"
+    },
+    "dialog": {
+      "component": "Dialog",
+      "importPath": "@/components/atoms/Dialog",
+      "category": "container"
     },
     "heading": {
       "component": "Typography",
