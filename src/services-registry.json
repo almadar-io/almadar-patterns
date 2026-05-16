@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-03-23T02:19:16.692Z",
+  "exportedAt": "2026-05-16T15:27:35.167Z",
   "services": {
     "llm": {
       "name": "llm",
@@ -89,7 +89,7 @@
             },
             {
               "name": "schema",
-              "type": "object",
+              "type": "JsonSchemaDefinition",
               "required": true,
               "description": ""
             },
@@ -101,7 +101,7 @@
             }
           ],
           "responseShape": {
-            "data": "object",
+            "data": "ExtractedData",
             "confidence": "number"
           }
         },
@@ -171,7 +171,7 @@
             }
           ],
           "responseShape": {
-            "items": "unknown[]"
+            "items": "EntityRow[]"
           }
         },
         {
@@ -192,7 +192,7 @@
             }
           ],
           "responseShape": {
-            "item": "unknown | null"
+            "item": "EntityRow | null"
           }
         },
         {
@@ -207,13 +207,13 @@
             },
             {
               "name": "data",
-              "type": "object",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             }
           ],
           "responseShape": {
-            "item": "unknown"
+            "item": "EntityRow"
           }
         },
         {
@@ -234,13 +234,13 @@
             },
             {
               "name": "data",
-              "type": "object",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             }
           ],
           "responseShape": {
-            "item": "unknown | null"
+            "item": "EntityRow | null"
           }
         },
         {
@@ -285,7 +285,7 @@
             },
             {
               "name": "payload",
-              "type": "unknown",
+              "type": "ServiceParams",
               "required": false,
               "description": ""
             }
@@ -429,7 +429,7 @@
             }
           ],
           "responseShape": {
-            "session": "object | null"
+            "session": "EventPayload | null"
           }
         },
         {
@@ -483,7 +483,7 @@
             }
           ],
           "responseShape": {
-            "preferences": "object | null"
+            "preferences": "EventPayload | null"
           }
         },
         {
@@ -498,7 +498,7 @@
             },
             {
               "name": "preferences",
-              "type": "object",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             }
@@ -594,7 +594,7 @@
             },
             {
               "name": "context",
-              "type": "object",
+              "type": "ServiceParams",
               "required": false,
               "description": ""
             }
@@ -602,7 +602,7 @@
           "responseShape": {
             "response": "string",
             "threadId": "string",
-            "toolCalls": "unknown[]"
+            "toolCalls": "readonly EventPayloadValue[]"
           }
         },
         {
@@ -887,108 +887,6 @@
             "body": "string",
             "state": "string"
           }
-        },
-        {
-          "name": "getFile",
-          "description": "Read a file from a repository at a given ref",
-          "params": [
-            {
-              "name": "owner",
-              "type": "string",
-              "required": true,
-              "description": "Repository owner"
-            },
-            {
-              "name": "repo",
-              "type": "string",
-              "required": true,
-              "description": "Repository name"
-            },
-            {
-              "name": "path",
-              "type": "string",
-              "required": true,
-              "description": "Path to file within the repo"
-            },
-            {
-              "name": "ref",
-              "type": "string",
-              "required": false,
-              "description": "Branch, tag, or commit SHA"
-            }
-          ],
-          "responseShape": {
-            "id": "string",
-            "result": "object"
-          }
-        },
-        {
-          "name": "listCommits",
-          "description": "List commits on a branch or path",
-          "params": [
-            {
-              "name": "owner",
-              "type": "string",
-              "required": true,
-              "description": "Repository owner"
-            },
-            {
-              "name": "repo",
-              "type": "string",
-              "required": true,
-              "description": "Repository name"
-            },
-            {
-              "name": "path",
-              "type": "string",
-              "required": false,
-              "description": "Restrict to commits touching this path"
-            },
-            {
-              "name": "ref",
-              "type": "string",
-              "required": false,
-              "description": "Branch or tag"
-            }
-          ],
-          "responseShape": {
-            "id": "string",
-            "result": "object"
-          }
-        },
-        {
-          "name": "createIssue",
-          "description": "Create a new issue",
-          "params": [
-            {
-              "name": "owner",
-              "type": "string",
-              "required": true,
-              "description": "Repository owner"
-            },
-            {
-              "name": "repo",
-              "type": "string",
-              "required": true,
-              "description": "Repository name"
-            },
-            {
-              "name": "path",
-              "type": "string",
-              "required": false,
-              "description": "Reserved for op uniformity"
-            },
-            {
-              "name": "ref",
-              "type": "string",
-              "required": false,
-              "description": "Reserved for op uniformity"
-            }
-          ],
-          "responseShape": {
-            "id": "string",
-            "result": "object"
-          }
         }
       ],
       "credentials": [
@@ -1186,7 +1084,7 @@
             },
             {
               "name": "schema",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": true,
               "description": ""
             },
@@ -1685,7 +1583,7 @@
             },
             {
               "name": "content",
-              "type": "unknown",
+              "type": "string",
               "required": true,
               "description": ""
             },
@@ -1697,7 +1595,7 @@
             },
             {
               "name": "metadata",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": false,
               "description": ""
             }
@@ -1727,10 +1625,10 @@
             }
           ],
           "responseShape": {
-            "content": "unknown",
+            "content": "string",
             "contentType": "string",
             "size": "number",
-            "metadata": "object"
+            "metadata": "IntegrationParams"
           }
         },
         {
@@ -1848,7 +1746,7 @@
             },
             {
               "name": "payload",
-              "type": "unknown",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             },
@@ -1913,7 +1811,7 @@
             },
             {
               "name": "result",
-              "type": "unknown",
+              "type": "ServiceParams",
               "required": false,
               "description": ""
             }
@@ -2002,7 +1900,7 @@
             }
           ],
           "responseShape": {
-            "value": "unknown"
+            "value": "ServiceParams"
           }
         },
         {
@@ -2017,7 +1915,7 @@
             },
             {
               "name": "value",
-              "type": "unknown",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             },
@@ -2144,7 +2042,7 @@
             },
             {
               "name": "message",
-              "type": "unknown",
+              "type": "ServiceParams",
               "required": true,
               "description": ""
             }
@@ -2321,7 +2219,7 @@
             },
             {
               "name": "attributes",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": false,
               "description": ""
             },
@@ -2376,7 +2274,7 @@
             },
             {
               "name": "attributes",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": false,
               "description": ""
             }
@@ -2409,7 +2307,7 @@
             },
             {
               "name": "labels",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": false,
               "description": ""
             }
@@ -2508,7 +2406,7 @@
             },
             {
               "name": "context",
-              "type": "object",
+              "type": "IntegrationParams",
               "required": false,
               "description": ""
             }
