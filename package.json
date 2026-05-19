@@ -1,6 +1,6 @@
 {
   "name": "@almadar/patterns",
-  "version": "2.30.2",
+  "version": "2.30.3",
   "description": "Pattern registry and component mappings for Almadar",
   "type": "module",
   "main": "./dist/index.js",
@@ -56,6 +56,6 @@
   ],
   "homepage": "https://github.com/almadar-io/almadar#readme",
   "dependencies": {
-    "@almadar/core": ">=5.6.0"
+    "@almadar/core": ">=8.1.0"
   }
 }
