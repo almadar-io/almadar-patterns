@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-16T15:27:35.167Z",
+  "exportedAt": "2026-05-20T18:19:31.393Z",
   "services": {
     "llm": {
       "name": "llm",
@@ -886,6 +886,122 @@
             "title": "string",
             "body": "string",
             "state": "string"
+          }
+        },
+        {
+          "name": "getFile",
+          "description": "",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "path",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "ref",
+              "type": "string",
+              "required": false,
+              "description": ""
+            }
+          ],
+          "responseShape": {
+            "path": "string",
+            "content": "string",
+            "sha": "string",
+            "size": "number"
+          }
+        },
+        {
+          "name": "listCommits",
+          "description": "",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "path",
+              "type": "string",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "ref",
+              "type": "string",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "per_page",
+              "type": "number",
+              "required": false,
+              "description": ""
+            }
+          ],
+          "responseShape": {
+            "commits": "array"
+          }
+        },
+        {
+          "name": "createIssue",
+          "description": "",
+          "params": [
+            {
+              "name": "owner",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "repo",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "title",
+              "type": "string",
+              "required": true,
+              "description": ""
+            },
+            {
+              "name": "body",
+              "type": "string",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "labels",
+              "type": "string[]",
+              "required": false,
+              "description": ""
+            }
+          ],
+          "responseShape": {
+            "number": "number",
+            "title": "string",
+            "url": "string"
           }
         }
       ],
