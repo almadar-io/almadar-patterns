@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-20T18:19:31.393Z",
+  "exportedAt": "2026-05-20T19:26:16.363Z",
   "services": {
     "llm": {
       "name": "llm",
@@ -1694,18 +1694,36 @@
             {
               "name": "key",
               "type": "string",
-              "required": true,
+              "required": false,
               "description": ""
             },
             {
               "name": "content",
               "type": "string",
-              "required": true,
+              "required": false,
               "description": ""
             },
             {
               "name": "contentType",
               "type": "string",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "file",
+              "type": "IntegrationParams",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "acl",
+              "type": "'public' | 'private'",
+              "required": false,
+              "description": ""
+            },
+            {
+              "name": "maxSize",
+              "type": "number",
               "required": false,
               "description": ""
             },
