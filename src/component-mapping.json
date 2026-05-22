@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-22T00:36:20.394Z",
+  "exportedAt": "2026-05-22T00:42:28.331Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1513,6 +1513,11 @@
       "component": "TagInput",
       "importPath": "@/components/molecules/TagInput",
       "category": "form"
+    },
+    "marketing-footer": {
+      "component": "MarketingFooter",
+      "importPath": "@/components/molecules/MarketingFooter",
+      "category": "component"
     },
     "heading": {
       "component": "Typography",
