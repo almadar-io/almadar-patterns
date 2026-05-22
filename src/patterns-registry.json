@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-22T01:35:31.064Z",
+  "exportedAt": "2026-05-22T08:34:08.821Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -15,15 +15,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -252,15 +247,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -434,15 +424,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -687,15 +672,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -4007,15 +3987,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -9027,15 +9002,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -10488,15 +10458,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -11776,15 +11741,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -16494,15 +16454,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -16599,15 +16554,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -16710,15 +16660,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -16808,15 +16753,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -16912,15 +16852,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -17023,15 +16958,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -17123,15 +17053,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -17245,15 +17170,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -24729,15 +24649,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
@@ -29632,15 +29547,10 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven integration"
-        },
-        "data": {
-          "types": [
+            "object",
             "array"
           ],
-          "description": "Data array provided by the trait via render-ui"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
         },
         "className": {
           "types": [
