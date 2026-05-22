@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-22T08:34:08.821Z",
+  "exportedAt": "2026-05-22T09:19:11.577Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -18,7 +18,12 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -3990,7 +3995,12 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -9005,7 +9015,12 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -10461,7 +10476,12 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16457,7 +16477,56 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "category": {
+                "types": [
+                  "string"
+                ]
+              },
+              "categoryColor": {
+                "types": [
+                  "string"
+                ]
+              },
+              "href": {
+                "types": [
+                  "string"
+                ]
+              },
+              "linkLabel": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description",
+              "category",
+              "href"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16557,7 +16626,49 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "href": {
+                "types": [
+                  "string"
+                ]
+              },
+              "linkLabel": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16663,7 +16774,152 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "tag": {
+                "types": [
+                  "string"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "titleAccent": {
+                "types": [
+                  "string"
+                ]
+              },
+              "subtitle": {
+                "types": [
+                  "string"
+                ]
+              },
+              "primaryAction": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "label": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "href": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "variant": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "primary",
+                      "secondary",
+                      "ghost"
+                    ]
+                  }
+                },
+                "required": [
+                  "label",
+                  "href"
+                ]
+              },
+              "secondaryAction": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "label": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "href": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "variant": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "primary",
+                      "secondary",
+                      "ghost"
+                    ]
+                  }
+                },
+                "required": [
+                  "label",
+                  "href"
+                ]
+              },
+              "installCommand": {
+                "types": [
+                  "string"
+                ]
+              },
+              "image": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "src": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "alt": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "src",
+                  "alt"
+                ]
+              },
+              "imagePosition": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "below",
+                  "right",
+                  "background"
+                ]
+              },
+              "background": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "dark",
+                  "gradient",
+                  "subtle"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "subtitle"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16756,7 +17012,72 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "price": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "features": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              },
+              "actionLabel": {
+                "types": [
+                  "string"
+                ]
+              },
+              "actionHref": {
+                "types": [
+                  "string"
+                ]
+              },
+              "highlighted": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "badge": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "price",
+              "features",
+              "actionLabel",
+              "actionHref"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16855,7 +17176,70 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "image": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "src": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "alt": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "src",
+                  "alt"
+                ]
+              },
+              "href": {
+                "types": [
+                  "string"
+                ]
+              },
+              "badge": {
+                "types": [
+                  "string"
+                ]
+              },
+              "accentColor": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "image"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -16961,7 +17345,34 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "value",
+              "label"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -17056,7 +17467,44 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "number": {
+                "types": [
+                  "number"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "description"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -17173,7 +17621,50 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "nameAr": {
+                "types": [
+                  "string"
+                ]
+              },
+              "role": {
+                "types": [
+                  "string"
+                ]
+              },
+              "bio": {
+                "types": [
+                  "string"
+                ]
+              },
+              "avatar": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "role",
+              "bio"
+            ]
+          }
         },
         "className": {
           "types": [
@@ -21889,7 +22380,205 @@
             "object"
           ],
           "description": "data prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "orbitalName": {
+              "types": [
+                "string"
+              ]
+            },
+            "entityName": {
+              "types": [
+                "string"
+              ]
+            },
+            "persistence": {
+              "types": [
+                "string"
+              ]
+            },
+            "fields": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "required": {
+                    "types": [
+                      "boolean"
+                    ]
+                  },
+                  "hasDefault": {
+                    "types": [
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "type",
+                  "required",
+                  "hasDefault"
+                ]
+              }
+            },
+            "traits": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "stateCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "eventCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "transitionCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "emits": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "listens": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "name",
+                  "stateCount",
+                  "eventCount",
+                  "transitionCount",
+                  "emits",
+                  "listens"
+                ]
+              }
+            },
+            "pages": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "route": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "route"
+                ]
+              }
+            },
+            "traitDetails": {
+              "types": [
+                "object"
+              ]
+            },
+            "externalLinks": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "targetOrbital": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "eventName": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "direction": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "out",
+                      "in"
+                    ]
+                  },
+                  "traitName": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "targetOrbital",
+                  "eventName",
+                  "direction",
+                  "traitName"
+                ]
+              }
+            }
+          },
+          "propertyRequired": [
+            "orbitalName",
+            "entityName",
+            "persistence",
+            "fields",
+            "traits",
+            "pages",
+            "traitDetails",
+            "externalLinks"
+          ]
         }
       }
     },
@@ -21909,7 +22598,205 @@
             "object"
           ],
           "description": "data prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "orbitalName": {
+              "types": [
+                "string"
+              ]
+            },
+            "entityName": {
+              "types": [
+                "string"
+              ]
+            },
+            "persistence": {
+              "types": [
+                "string"
+              ]
+            },
+            "fields": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "required": {
+                    "types": [
+                      "boolean"
+                    ]
+                  },
+                  "hasDefault": {
+                    "types": [
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "type",
+                  "required",
+                  "hasDefault"
+                ]
+              }
+            },
+            "traits": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "stateCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "eventCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "transitionCount": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "emits": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "listens": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "name",
+                  "stateCount",
+                  "eventCount",
+                  "transitionCount",
+                  "emits",
+                  "listens"
+                ]
+              }
+            },
+            "pages": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "route": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "route"
+                ]
+              }
+            },
+            "traitDetails": {
+              "types": [
+                "object"
+              ]
+            },
+            "externalLinks": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "targetOrbital": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "eventName": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "direction": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "out",
+                      "in"
+                    ]
+                  },
+                  "traitName": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "targetOrbital",
+                  "eventName",
+                  "direction",
+                  "traitName"
+                ]
+              }
+            }
+          },
+          "propertyRequired": [
+            "orbitalName",
+            "entityName",
+            "persistence",
+            "fields",
+            "traits",
+            "pages",
+            "traitDetails",
+            "externalLinks"
+          ]
         }
       }
     },
@@ -23383,6 +24270,67 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "z": {
+                "types": [
+                  "number"
+                ]
+              },
+              "terrain": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "terrainSprite": {
+                "types": [
+                  "string"
+                ]
+              },
+              "passable": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "movementCost": {
+                "types": [
+                  "number"
+                ]
+              },
+              "tileType": {
+                "types": [
+                  "string"
+                ]
+              },
+              "elevation": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
             ]
           }
         },
@@ -23394,6 +24342,106 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "position": {
+                "types": [
+                  "object"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "z": {
+                "types": [
+                  "number"
+                ]
+              },
+              "sprite": {
+                "types": [
+                  "string"
+                ]
+              },
+              "unitType": {
+                "types": [
+                  "string"
+                ]
+              },
+              "heroId": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "team": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "player",
+                  "enemy",
+                  "neutral"
+                ]
+              },
+              "faction": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "player",
+                  "enemy",
+                  "neutral"
+                ]
+              },
+              "health": {
+                "types": [
+                  "number"
+                ]
+              },
+              "maxHealth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "traits": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ]
+                }
+              },
+              "previousPosition": {
+                "types": [
+                  "object"
+                ]
+              },
+              "elevation": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "id"
             ]
           }
         },
@@ -23405,6 +24453,58 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "z": {
+                "types": [
+                  "number"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sprite": {
+                "types": [
+                  "string"
+                ]
+              },
+              "assetUrl": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "elevation": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "type"
             ]
           }
         },
@@ -24469,7 +25569,34 @@
             "object"
           ],
           "description": "chapter prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "id": {
+              "types": [
+                "string"
+              ]
+            },
+            "title": {
+              "types": [
+                "string"
+              ]
+            },
+            "content": {
+              "types": [
+                "string"
+              ]
+            },
+            "orbitalSchema": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "id",
+            "title",
+            "content"
+          ]
         },
         "direction": {
           "types": [
@@ -24615,6 +25742,54 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "chapters": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "id": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "title": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "content": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "orbitalSchema": {
+                      "types": [
+                        "object"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "content"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "title",
+              "chapters"
             ]
           }
         },
@@ -24766,6 +25941,67 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "terrain": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "terrainSprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "passable": {
+                    "types": [
+                      "boolean"
+                    ]
+                  },
+                  "movementCost": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "tileType": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
                 ]
               }
             },
@@ -24776,6 +26012,58 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "assetUrl": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "color": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "type"
                 ]
               }
             },
@@ -25256,10 +26544,24 @@
       "propsSchema": {
         "actionType": {
           "types": [
-            "object"
+            "string"
           ],
           "description": "The type of combat action to visualise",
-          "required": true
+          "required": true,
+          "enumValues": [
+            "melee",
+            "ranged",
+            "magic",
+            "heal",
+            "defend",
+            "hit",
+            "death",
+            "buff",
+            "debuff",
+            "shield",
+            "aoe",
+            "critical"
+          ]
         },
         "x": {
           "types": [
@@ -25339,7 +26641,27 @@
           "types": [
             "object"
           ],
-          "description": "Full effect asset manifest for the sprite particle engine. When provided, enables the canvas-based particle system."
+          "description": "Full effect asset manifest for the sprite particle engine. When provided, enables the canvas-based particle system.",
+          "properties": {
+            "baseUrl": {
+              "types": [
+                "string"
+              ]
+            },
+            "particles": {
+              "types": [
+                "object"
+              ]
+            },
+            "animations": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "baseUrl"
+          ]
         },
         "width": {
           "types": [
@@ -25387,6 +26709,67 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "terrain": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "terrainSprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "passable": {
+                    "types": [
+                      "boolean"
+                    ]
+                  },
+                  "movementCost": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "tileType": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
                 ]
               }
             },
@@ -25397,6 +26780,58 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "assetUrl": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "color": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "type"
                 ]
               }
             },
@@ -25407,6 +26842,106 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "position": {
+                    "types": [
+                      "object"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "unitType": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "heroId": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "team": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "player",
+                      "enemy",
+                      "neutral"
+                    ]
+                  },
+                  "faction": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "player",
+                      "enemy",
+                      "neutral"
+                    ]
+                  },
+                  "health": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "maxHealth": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "traits": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "object"
+                      ]
+                    }
+                  },
+                  "previousPosition": {
+                    "types": [
+                      "object"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "id"
                 ]
               }
             },
@@ -29464,6 +30999,58 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "z": {
+                "types": [
+                  "number"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sprite": {
+                "types": [
+                  "string"
+                ]
+              },
+              "assetUrl": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "elevation": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "type"
             ]
           }
         },
