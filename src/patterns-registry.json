@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-26T02:09:01.071Z",
+  "exportedAt": "2026-05-26T02:27:33.609Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -237,6 +237,20 @@
           ],
           "description": "Show total count in pagination",
           "default": true
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — orthogonal to the semantic variant.",
+          "enumValues": [
+            "dense",
+            "spacious",
+            "striped",
+            "borderless",
+            "card-rows"
+          ],
+          "default": "dense"
         }
       }
     },
@@ -2111,6 +2125,20 @@
             "boolean"
           ],
           "description": "Loading state indicator"
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — orthogonal to the semantic variant.",
+          "enumValues": [
+            "toolbar",
+            "chips",
+            "pills",
+            "popover-trigger",
+            "inline-column-header"
+          ],
+          "default": "toolbar"
         }
       }
     },
@@ -3416,6 +3444,19 @@
           "description": "Declarative action event — emits UI:{actionEvent} via eventBus when action button is clicked",
           "kind": "event-ref",
           "emitPayloadSchema": []
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — orthogonal to the semantic variant (which carries status color).",
+          "enumValues": [
+            "illustrated",
+            "icon-only",
+            "text-only",
+            "mascot"
+          ],
+          "default": "icon-only"
         }
       }
     },
@@ -3748,6 +3789,19 @@
           ],
           "description": "Enable swipe-down-to-close on mobile bottom sheet (default: true)",
           "default": true
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — orthogonal to the semantic variant.",
+          "enumValues": [
+            "centered-card",
+            "top-sheet",
+            "side-drawer",
+            "full-screen"
+          ],
+          "default": "centered-card"
         }
       }
     },
@@ -7315,6 +7369,20 @@
               "label"
             ]
           }
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment for the action-cluster (form-actions) pattern. @default 'right-aligned-buttons'",
+          "enumValues": [
+            "right-aligned-buttons",
+            "floating-bar",
+            "inline-row",
+            "dropdown-menu",
+            "command-palette-trigger"
+          ],
+          "default": "right-aligned-buttons"
         }
       }
     },
@@ -8298,6 +8366,20 @@
             "desktop"
           ],
           "default": "mobile"
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — orthogonal to the structural variant (which currently flips mobile vs desktop).",
+          "enumValues": [
+            "hero",
+            "compact-bar",
+            "breadcrumb",
+            "contextual",
+            "editorial-banner"
+          ],
+          "default": "compact-bar"
         },
         "onLogoClick": {
           "types": [
@@ -9872,7 +9954,7 @@
           "types": [
             "string"
           ],
-          "description": "Chart type",
+          "description": "Chart type (legacy alias for `look`).",
           "enumValues": [
             "bar",
             "line",
@@ -9881,8 +9963,23 @@
             "donut",
             "scatter",
             "histogram"
+          ]
+        },
+        "look": {
+          "types": [
+            "string"
           ],
-          "default": "bar"
+          "description": "Layer 2 visual treatment — drives the chart sub-renderer (bar / line / pie / etc.).",
+          "enumValues": [
+            "bar-vertical",
+            "bar-horizontal",
+            "line",
+            "area",
+            "pie",
+            "donut",
+            "scatter",
+            "histogram"
+          ]
         },
         "series": {
           "types": [
@@ -10475,6 +10572,19 @@
               "label"
             ]
           }
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment.",
+          "enumValues": [
+            "vertical-compact",
+            "vertical-spacious",
+            "horizontal",
+            "swimlane"
+          ],
+          "default": "vertical-spacious"
         }
       }
     },
@@ -13218,6 +13328,19 @@
           ],
           "description": "Max items to show before \"Show More\" button. Defaults to 0 (disabled).",
           "default": 0
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — mirrors the `entity-table` look enum so data-grid / data-list / entity-table share one knob name from authors.",
+          "enumValues": [
+            "dense",
+            "spacious",
+            "striped",
+            "borderless",
+            "card-rows"
+          ]
         }
       }
     },
@@ -13620,6 +13743,19 @@
           ],
           "description": "Max items to show before \"Show More\" button. Defaults to 5. Set to 0 to disable.",
           "default": 5
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — mirrors the `entity-table` look enum so data-grid / data-list / entity-table share one knob name from authors.",
+          "enumValues": [
+            "dense",
+            "spacious",
+            "striped",
+            "borderless",
+            "card-rows"
+          ]
         }
       }
     },
@@ -15221,6 +15357,20 @@
           ],
           "description": "Compact mode (inline, no card wrapper)",
           "default": false
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment.",
+          "enumValues": [
+            "elevated",
+            "flat",
+            "progress-backed",
+            "gauge",
+            "sparkline"
+          ],
+          "default": "elevated"
         },
         "className": {
           "types": [
