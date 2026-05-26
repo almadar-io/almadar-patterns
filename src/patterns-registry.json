@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-22T09:19:11.577Z",
+  "exportedAt": "2026-05-26T02:09:01.071Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -2358,7 +2358,8 @@
               },
               "icon": {
                 "types": [
-                  "icon"
+                  "icon",
+                  "string"
                 ]
               },
               "onClick": {
@@ -2384,9 +2385,11 @@
         },
         "separator": {
           "types": [
-            "icon"
+            "icon",
+            "string"
           ],
-          "description": "Separator icon"
+          "description": "Separator icon (canonical kebab-case name or LucideIcon component)",
+          "default": "chevron-right"
         },
         "maxItems": {
           "types": [
@@ -5143,6 +5146,22 @@
             "md",
             "lg"
           ]
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment. Picks the chrome (border, shadow, radius, padding-intent) independently of the semantic variant. Resolution chain lives in the compiler — see docs/Almadar_Std_Variations.md §3.1.",
+          "enumValues": [
+            "elevated",
+            "flat-bordered",
+            "borderless-divider",
+            "ticket",
+            "invoice",
+            "chip",
+            "tile-image-first"
+          ],
+          "default": "elevated"
         },
         "children": {
           "types": [
