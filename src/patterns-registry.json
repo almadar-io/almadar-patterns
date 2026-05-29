@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-29T00:33:20.610Z",
+  "exportedAt": "2026-05-29T02:49:56.240Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -13638,6 +13638,13 @@
             ]
           }
         },
+        "itemClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, the whole row is clickable and emits UI:{itemClickEvent} with { id, row } (action-button clicks stopPropagation so they still win).",
+          "kind": "event"
+        },
         "gap": {
           "types": [
             "string"
@@ -19646,6 +19653,11 @@
           "emitPayloadSchema": [
             {
               "name": "parentNodeId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "content",
               "type": "string",
               "required": true
             }
