@@ -3446,6 +3446,10 @@ export interface PatternPropsMap {
     onDraw?: ((...args: unknown[]) => unknown) | string;
     /** Called each tick with delta time in seconds */
     onTick?: ((...args: unknown[]) => unknown) | string;
+    /** Event name emitted each tick with { dt, frame } — for closed-circuit .orb integration */
+    tickEvent?: string;
+    /** Event name emitted each draw frame with { frame } — for closed-circuit .orb integration */
+    drawEvent?: string;
     /** Target frames per second */
     fps?: number | string;
     /** Additional CSS classes */
