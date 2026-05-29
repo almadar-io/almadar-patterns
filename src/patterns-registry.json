@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-26T07:34:29.134Z",
+  "exportedAt": "2026-05-29T00:33:20.610Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -4168,6 +4168,12 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "padding": {
           "types": [
             "string"
@@ -4792,6 +4798,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "variant": {
           "types": [
             "string"
@@ -4897,6 +4909,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "variant": {
           "types": [
             "string"
@@ -5151,6 +5169,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "variant": {
           "types": [
             "string"
@@ -5205,7 +5229,7 @@
           "types": [
             "string"
           ],
-          "description": "Layer 2 visual treatment. Picks the chrome (border, shadow, radius, padding-intent) independently of the semantic variant. Resolution chain lives in the compiler — see docs/Almadar_Std_Variations.md §3.1.",
+          "description": "Layer 2 visual treatment — orthogonal to the semantic variant.",
           "enumValues": [
             "elevated",
             "flat-bordered",
@@ -5346,6 +5370,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "size": {
           "types": [
             "string"
@@ -5372,6 +5402,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "placeholder": {
           "types": [
             "string"
@@ -5510,6 +5546,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "placeholder": {
           "types": [
             "string"
@@ -5548,6 +5590,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "options": {
           "types": [
             "array"
@@ -5614,6 +5662,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "checked": {
           "types": [
             "boolean"
@@ -5644,6 +5698,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "options": {
           "types": [
             "array"
@@ -5780,6 +5840,12 @@
       ],
       "typicalSize": "tiny",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "text": {
           "types": [
             "string"
@@ -14036,6 +14102,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "min": {
           "types": [
             "number"
@@ -14155,6 +14227,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "status": {
           "types": [
             "string"
@@ -14208,6 +14286,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "value": {
           "types": [
             "number"
@@ -18056,6 +18140,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "src": {
           "types": [
             "string"
@@ -18154,6 +18244,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "trigger": {
           "types": [
             "string"
@@ -18736,6 +18832,12 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the root element."
+        },
         "variant": {
           "types": [
             "string"
@@ -32086,6 +32188,433 @@
             "string"
           ],
           "description": "className prop"
+        }
+      }
+    },
+    "table-view": {
+      "type": "table-view",
+      "category": "display",
+      "description": "TableView component",
+      "suggestedFor": [
+        "table",
+        "view",
+        "table view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "dragGroup": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, items in this container are draggable and announce this group as their source"
+        },
+        "accepts": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, the container accepts drops whose dragGroup matches this value (or '*' for any group)"
+        },
+        "sortable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable in-container reorder; items can be dragged to new positions among siblings"
+        },
+        "dropEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired on cross-container drop. Payload: { id, sourceGroup, targetGroup, newIndex }"
+        },
+        "reorderEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired on in-container reorder. Payload: { id, oldIndex, newIndex }"
+        },
+        "positionEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Bus event fired N times per drop (one per item in affected zones) so the trait can persist new positions for the WHOLE zone, not just the moved item. Payload: { id, position }"
+        },
+        "dndItemIdField": {
+          "types": [
+            "string"
+          ],
+          "description": "Row field used as the @dnd-kit draggable id (default 'id')"
+        },
+        "dndRoot": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Mark this container as the DnD root for its subtree — descendant zones share one DndContext (cross-container drag). Use on an outer container whose own items are not draggable."
+        },
+        "entity": {
+          "types": [
+            "object",
+            "array"
+          ],
+          "description": "Schema entity data — single record or collection.",
+          "required": true
+        },
+        "columns": {
+          "types": [
+            "array"
+          ],
+          "description": "Column definitions. The compiler emits `columns`; `fields` is the alias.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "field": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "width": {
+                "types": [
+                  "string"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "className": {
+                "types": [
+                  "string"
+                ]
+              },
+              "weight": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "normal",
+                  "medium",
+                  "semibold"
+                ]
+              },
+              "format": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "badge",
+                  "date",
+                  "currency",
+                  "number",
+                  "percent",
+                  "boolean"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sortable": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "key"
+            ]
+          }
+        },
+        "fields": {
+          "types": [
+            "array"
+          ],
+          "description": "Alias for `columns`.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "field": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "width": {
+                "types": [
+                  "string"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "className": {
+                "types": [
+                  "string"
+                ]
+              },
+              "weight": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "normal",
+                  "medium",
+                  "semibold"
+                ]
+              },
+              "format": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "badge",
+                  "date",
+                  "currency",
+                  "number",
+                  "percent",
+                  "boolean"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sortable": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "key"
+            ]
+          }
+        },
+        "itemActions": {
+          "types": [
+            "array"
+          ],
+          "description": "Per-row action buttons (trailing column).",
+          "kind": "event-list",
+          "eventField": "event",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "ghost",
+                  "danger"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "event"
+            ]
+          }
+        },
+        "selectable": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Render a leading checkbox column. Selection changes emit `selectEvent`.",
+          "default": false
+        },
+        "selectEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on selection change: UI:{selectEvent} with { ids, rows }.",
+          "kind": "event"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently-selected ids (controlled). Falls back to local state when omitted.",
+          "items": {
+            "types": [
+              "string"
+            ]
+          }
+        },
+        "sortEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Event emitted on sortable-header click: UI:{sortEvent} with { column, direction }.",
+          "kind": "event"
+        },
+        "sortColumn": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort column (display hint for the active header arrow)."
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction (display hint).",
+          "enumValues": [
+            "asc",
+            "desc"
+          ]
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes applied to the table root."
+        },
+        "emptyMessage": {
+          "types": [
+            "string"
+          ],
+          "description": "Message shown when there are no rows."
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state.",
+          "default": false
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state.",
+          "default": null
+        },
+        "groupBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Group rows under section headers by a field value."
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Max rows before a \"Show More\" button. Defaults to 0 (show all).",
+          "default": 0
+        },
+        "children": {
+          "types": [
+            "function"
+          ],
+          "description": "Custom per-row render. When provided, the whole row content is delegated to this function (columns are ignored for the body; the header still renders). Mirrors DataList's children render prop.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
+        },
+        "renderItem": {
+          "types": [
+            "function"
+          ],
+          "description": "Per-row render function (schema alias). In .orb: [\"fn\",\"item\",{...}]. The compiler converts this to the children render prop. @deprecated Use children in React code; exists for pattern registry sync.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "item",
+              "type": "object"
+            },
+            {
+              "name": "index",
+              "type": "number"
+            }
+          ]
+        },
+        "look": {
+          "types": [
+            "string"
+          ],
+          "description": "Layer 2 visual treatment — mirrors the data-list / entity-table look enum so authors share one knob name across row renderers.",
+          "enumValues": [
+            "dense",
+            "spacious",
+            "striped",
+            "borderless",
+            "bordered"
+          ],
+          "default": "dense"
         }
       }
     },

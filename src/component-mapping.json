@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-26T07:34:29.134Z",
+  "exportedAt": "2026-05-29T00:33:20.610Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1518,6 +1518,11 @@
       "component": "MarketingFooter",
       "importPath": "@/components/molecules/MarketingFooter",
       "category": "component"
+    },
+    "table-view": {
+      "component": "TableView",
+      "importPath": "@/components/molecules/TableView",
+      "category": "display"
     },
     "heading": {
       "component": "Typography",
