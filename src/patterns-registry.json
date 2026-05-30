@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-29T22:51:57.400Z",
+  "exportedAt": "2026-05-29T23:58:15.892Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -23777,19 +23777,6 @@
             }
           ]
         },
-        "fps": {
-          "types": [
-            "number"
-          ],
-          "description": "Target frames per second",
-          "default": 60
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
         "tickEvent": {
           "types": [
             "string"
@@ -23801,6 +23788,32 @@
             "string"
           ],
           "description": "Event name emitted each draw frame with { frame } — for closed-circuit .orb integration"
+        },
+        "fps": {
+          "types": [
+            "number"
+          ],
+          "description": "Target frames per second",
+          "default": 60
+        },
+        "backgroundImage": {
+          "types": [
+            "string"
+          ],
+          "description": "Background image URL"
+        },
+        "assetBaseUrl": {
+          "types": [
+            "string"
+          ],
+          "description": "Base URL prefix for asset URLs",
+          "default": ""
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
         }
       }
     },
