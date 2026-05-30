@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-29T23:58:15.892Z",
+  "exportedAt": "2026-05-30T09:48:34.522Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -13268,6 +13268,12 @@
             ]
           }
         },
+        "maxInlineActions": {
+          "types": [
+            "number"
+          ],
+          "description": "Max inline primary action buttons before the rest collapse into a \"⋯\" overflow menu. Omit = all inline."
+        },
         "cols": {
           "types": [
             "number"
@@ -13637,6 +13643,12 @@
               "event"
             ]
           }
+        },
+        "maxInlineActions": {
+          "types": [
+            "number"
+          ],
+          "description": "Max inline action buttons before the rest collapse into a \"⋯\" overflow menu. Omit = all inline."
         },
         "itemClickEvent": {
           "types": [
@@ -32517,6 +32529,12 @@
               "event"
             ]
           }
+        },
+        "maxInlineActions": {
+          "types": [
+            "number"
+          ],
+          "description": "Max inline action buttons before the rest collapse into a \"⋯\" overflow menu. Omit = all inline."
         },
         "selectable": {
           "types": [
