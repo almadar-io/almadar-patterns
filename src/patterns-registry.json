@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-30T09:48:34.522Z",
+  "exportedAt": "2026-05-30T10:04:19.715Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -13273,6 +13273,13 @@
             "number"
           ],
           "description": "Max inline primary action buttons before the rest collapse into a \"⋯\" overflow menu. Omit = all inline."
+        },
+        "scrollX": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Lay items in a single horizontally-scrolling row (kanban columns) sized to `minCardWidth` instead of a wrapping grid.",
+          "default": false
         },
         "cols": {
           "types": [
