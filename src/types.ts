@@ -27,16 +27,39 @@ import type { EventPayloadValue } from '@almadar/core';
  *                     Each item has a field (default `"event"`, override
  *                     with {@link PatternPropDef.eventField}) holding a
  *                     declared event key. Same rename applies per item.
+ * - `"entity"`     — the prop is the pattern's data INLET: the bound entity
+ *                     record(s) it renders. The inlet half of the circuit,
+ *                     symmetric with the event OUTLET kinds above. Source type:
+ *                     `EntityRecord<T>` / `EntityCollection<T>` from
+ *                     `@almadar/core`; {@link PatternPropDef.cardinality} says
+ *                     which. Consumers bind the domain entity to it without
+ *                     name-matching the prop (replacing the `'entity' in
+ *                     propsSchema` name check).
  *
- * Reserved for future use: `"entity"`, `"config-binding"`. Add here
- * rather than inventing per-consumer markers.
+ * Reserved for future use: `"config-binding"`. Add here rather than
+ * inventing per-consumer markers.
  */
 export type PropKind =
   | 'event'
   | 'event-ref'
   | 'event-listen'
   | 'event-list'
-  | 'callback';
+  | 'callback'
+  | 'entity';
+
+/**
+ * Recursive structural schema for array elements / nested objects, mirrored
+ * into the registry by pattern-sync. Mirrors a tiny subset of JSON Schema
+ * (and `PropTypeSchema` in the pattern-sync tool). Lets consumers make
+ * element-aware decisions instead of falling back to name-list heuristics.
+ */
+export interface PatternPropTypeSchema {
+  types: string[];
+  enumValues?: string[];
+  items?: PatternPropTypeSchema;
+  properties?: Record<string, PatternPropTypeSchema>;
+  required?: string[];
+}
 
 /**
  * One field of an emit/listen payload schema, mirrored into the registry
@@ -89,6 +112,26 @@ export interface PatternPropDef {
    * omitted. Only meaningful alongside `kind: "event-list"`.
    */
   eventField?: string;
+  /**
+   * For `kind: "entity"` (the data inlet): whether the prop binds a single
+   * entity record (`"record"`) or a collection of records (`"collection"`).
+   * Source: `EntityRecord<T>` vs `EntityCollection<T>` from `@almadar/core`.
+   * The structural switch a consumer reads to know list-render vs detail-render
+   * — declared, not inferred from `types: ["object"|"array"]`.
+   */
+  cardinality?: 'record' | 'collection';
+  /**
+   * Element schema for array-typed props (mirrors JSON Schema's `items`).
+   * Emitted by pattern-sync from the TS element type; present in the registry
+   * JSON but previously undeclared here (a typing gap fixed alongside the
+   * inlet work). For an `EntityCollection<T>` inlet, its `properties` are the
+   * fixed sub-slots when `T` is a concrete interface.
+   */
+  items?: PatternPropTypeSchema;
+  /** Per-key schemas for object-typed props sourced from a declared interface. */
+  properties?: Record<string, PatternPropTypeSchema>;
+  /** Required keys for object-typed props sourced from a declared interface. */
+  propertyRequired?: string[];
   /**
    * For `kind: "event-ref"` whose source is `EventEmit<P>`: the
    * structural shape of `P` — the bus payload the component fires when

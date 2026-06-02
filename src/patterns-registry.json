@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-05-30T10:04:19.715Z",
+  "exportedAt": "2026-06-02T04:23:24.655Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -19,6 +19,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -269,7 +271,9 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection"
         },
         "className": {
           "types": [
@@ -446,7 +450,9 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection"
         },
         "className": {
           "types": [
@@ -691,10 +697,11 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "object",
-            "array"
+            "object"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "RECORD-cardinality override: renders ONE record (see body collapse below).",
+          "kind": "entity",
+          "cardinality": "record"
         },
         "className": {
           "types": [
@@ -4053,6 +4060,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -9183,6 +9192,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -10513,7 +10524,14 @@
             "object",
             "array"
           ],
-          "description": "Schema entity data typed against @almadar/core's EntityRow. Items from `entity` are normalised into `items` when `items` is omitted. UI-specific TimelineItem fields (`icon`, callbacks) cannot round-trip through the event bus, so decorative stories that need them pass `items` directly."
+          "description": "Schema entity data typed against @almadar/core's EntityRow. Items from `entity` are normalised into `items` when `items` is omitted. UI-specific TimelineItem fields (`icon`, callbacks) cannot round-trip through the event bus, so decorative stories that need them pass `items` directly.",
+          "kind": "entity",
+          "cardinality": "collection",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "title": {
           "types": [
@@ -10672,6 +10690,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -11959,7 +11979,9 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection"
         },
         "className": {
           "types": [
@@ -12384,9 +12406,12 @@
         },
         "events": {
           "types": [
+            "object",
             "array"
           ],
           "description": "Events to display on the grid",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -13096,8 +13121,15 @@
             "object",
             "array"
           ],
-          "description": "Schema entity data — single record or collection, typed against `@almadar/core`'s `EntityRow` so the narrow type declared on the emitting trait's `Event { data : [X] }` flows through to the prop without widening. The generic `T` lets consumers pass a narrower entity (e.g. `CartItem`) and have the `children` render function receive cards typed to that exact shape.",
-          "required": true
+          "description": "Schema entity data — single record or collection, typed against `@almadar/core`'s `EntityRow` so the narrow type declared on the emitting trait's `Event { data : [X] }` flows through to the prop without widening. The generic `T` lets consumers pass a narrower entity (e.g. `CartItem`) and have the `children` render function receive cards typed to that exact shape. Declared as the pattern's data INLET via `EntityCollection<T>` (the inlet half of the circuit, symmetric with the `EventKey` outlet props below): pattern-sync tags it `kind:\"entity\", cardinality:\"collection\"` so consumers bind the domain entity without name-matching the prop. Structurally still `T | readonly T[]` — see the brand's doc.",
+          "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "fields": {
           "types": [
@@ -13490,7 +13522,14 @@
             "array"
           ],
           "description": "Schema entity data — single record or collection, typed against `@almadar/core`'s `EntityRow` so the narrow type declared on the emitting trait's `Event { data : [X] }` flows through to the prop without widening. The generic `T` lets consumers pass a narrower entity (e.g. `CartItem`) and have the `children` render function receive items of that exact shape.",
-          "required": true
+          "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "fields": {
           "types": [
@@ -15113,10 +15152,13 @@
       "propsSchema": {
         "items": {
           "types": [
+            "object",
             "array"
           ],
           "description": "items prop",
           "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -16759,6 +16801,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -16908,6 +16952,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -17052,155 +17098,151 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "object",
-            "array"
+            "object"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "tag": {
-                "types": [
-                  "string"
-                ]
-              },
-              "title": {
-                "types": [
-                  "string"
-                ]
-              },
-              "titleAccent": {
-                "types": [
-                  "string"
-                ]
-              },
-              "subtitle": {
-                "types": [
-                  "string"
-                ]
-              },
-              "primaryAction": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "label": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "href": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "variant": {
-                    "types": [
-                      "string"
-                    ],
-                    "enumValues": [
-                      "primary",
-                      "secondary",
-                      "ghost"
-                    ]
-                  }
-                },
-                "required": [
-                  "label",
-                  "href"
-                ]
-              },
-              "secondaryAction": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "label": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "href": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "variant": {
-                    "types": [
-                      "string"
-                    ],
-                    "enumValues": [
-                      "primary",
-                      "secondary",
-                      "ghost"
-                    ]
-                  }
-                },
-                "required": [
-                  "label",
-                  "href"
-                ]
-              },
-              "installCommand": {
-                "types": [
-                  "string"
-                ]
-              },
-              "image": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "src": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "alt": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "src",
-                  "alt"
-                ]
-              },
-              "imagePosition": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "below",
-                  "right",
-                  "background"
-                ]
-              },
-              "background": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "dark",
-                  "gradient",
-                  "subtle"
-                ]
-              }
+          "description": "entity prop",
+          "kind": "entity",
+          "cardinality": "record",
+          "properties": {
+            "id": {
+              "types": [
+                "string"
+              ]
             },
-            "required": [
-              "id",
-              "title",
-              "subtitle"
-            ]
-          }
+            "tag": {
+              "types": [
+                "string"
+              ]
+            },
+            "title": {
+              "types": [
+                "string"
+              ]
+            },
+            "titleAccent": {
+              "types": [
+                "string"
+              ]
+            },
+            "subtitle": {
+              "types": [
+                "string"
+              ]
+            },
+            "primaryAction": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "label": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "href": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "variant": {
+                  "types": [
+                    "string"
+                  ],
+                  "enumValues": [
+                    "primary",
+                    "secondary",
+                    "ghost"
+                  ]
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ]
+            },
+            "secondaryAction": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "label": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "href": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "variant": {
+                  "types": [
+                    "string"
+                  ],
+                  "enumValues": [
+                    "primary",
+                    "secondary",
+                    "ghost"
+                  ]
+                }
+              },
+              "required": [
+                "label",
+                "href"
+              ]
+            },
+            "installCommand": {
+              "types": [
+                "string"
+              ]
+            },
+            "image": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "src": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "alt": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              },
+              "required": [
+                "src",
+                "alt"
+              ]
+            },
+            "imagePosition": {
+              "types": [
+                "string"
+              ],
+              "enumValues": [
+                "below",
+                "right",
+                "background"
+              ]
+            },
+            "background": {
+              "types": [
+                "string"
+              ],
+              "enumValues": [
+                "dark",
+                "gradient",
+                "subtle"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "id",
+            "title",
+            "subtitle"
+          ]
         },
         "className": {
           "types": [
@@ -17294,6 +17336,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -17458,6 +17502,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -17627,6 +17673,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -17749,6 +17797,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -17903,6 +17953,8 @@
             "array"
           ],
           "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -19508,10 +19560,13 @@
       "propsSchema": {
         "nodes": {
           "types": [
+            "object",
             "array"
           ],
           "description": "nodes prop",
           "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
           "items": {
             "types": [
               "object"
@@ -20088,11 +20143,84 @@
       "propsSchema": {
         "items": {
           "types": [
-            "array",
-            "object"
+            "object",
+            "array"
           ],
           "description": "Items to render. Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.data`). The molecule narrows non-array values to `[]` and validates element shape at render time via the `id` / `x` / `y` guards.",
-          "required": true
+          "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "shape": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "round",
+                  "rectangle",
+                  "square"
+                ]
+              },
+              "capacity": {
+                "types": [
+                  "number"
+                ]
+              },
+              "status": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "empty",
+                  "seated",
+                  "ordered",
+                  "awaiting-bill",
+                  "cleaning"
+                ]
+              },
+              "partySize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "serverName": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "x",
+              "y",
+              "capacity"
+            ]
+          }
         },
         "width": {
           "types": [
@@ -26153,10 +26281,11 @@
       "propsSchema": {
         "entity": {
           "types": [
-            "object",
-            "array"
+            "object"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Renders ONE record (the book), not a collection",
+          "kind": "entity",
+          "cardinality": "record"
         },
         "className": {
           "types": [
@@ -31466,7 +31595,9 @@
             "object",
             "array"
           ],
-          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit"
+          "description": "Entity record or array of records — pre-resolved by the trait via render-ui after a fetch emit",
+          "kind": "entity",
+          "cardinality": "collection"
         },
         "className": {
           "types": [
@@ -32312,7 +32443,14 @@
             "array"
           ],
           "description": "Schema entity data — single record or collection.",
-          "required": true
+          "required": true,
+          "kind": "entity",
+          "cardinality": "collection",
+          "items": {
+            "types": [
+              "object"
+            ]
+          }
         },
         "columns": {
           "types": [
