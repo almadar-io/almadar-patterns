@@ -10011,7 +10011,17 @@
         "dashboards",
         "analytics",
         "data visualization",
-        "reporting"
+        "reporting",
+        "bar chart",
+        "line chart",
+        "pie chart",
+        "area chart",
+        "donut chart",
+        "bar",
+        "line",
+        "pie",
+        "area",
+        "donut"
       ],
       "typicalSize": "medium",
       "propsSchema": {
