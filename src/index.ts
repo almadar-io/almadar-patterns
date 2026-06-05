@@ -130,3 +130,11 @@ export {
   type RecommendationContext,
   type PatternRecommendation,
 } from './helpers/pattern-recommender.js';
+
+// Export pattern-swap shape gate (contextual edit: deterministic compatibility)
+export {
+  findCompatiblePatterns,
+  getEntityCardinality,
+  getEmittedEvents,
+  type PatternSwapGate,
+} from './helpers/pattern-swap.js';

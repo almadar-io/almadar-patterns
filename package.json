@@ -1,6 +1,6 @@
 {
   "name": "@almadar/patterns",
-  "version": "2.35.0",
+  "version": "2.36.0",
   "description": "Pattern registry and component mappings for Almadar",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,7 +27,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup && tsc -p tsconfig.build.json",
+    "build:pattern-embeddings": "tsx scripts/build-pattern-embeddings.ts",
+    "build": "pnpm run build:pattern-embeddings && tsup && tsc -p tsconfig.build.json",
     "build:watch": "tsup --watch",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
@@ -36,9 +37,11 @@
   },
   "devDependencies": {
     "@almadar/eslint-plugin": ">=2.3.0",
+    "@almadar/llm": ">=2.14.0",
     "@typescript-eslint/parser": "8.56.0",
     "eslint": "10.0.0",
     "tsup": "^8.0.0",
+    "tsx": "^4.7.0",
     "typescript": "^5.4.0",
     "vitest": "^1.4.0"
   },

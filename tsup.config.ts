@@ -30,6 +30,12 @@ export default defineConfig({
       path.join('src', 'patterns-registry.json'),
       path.join('dist', 'registry.json')
     );
+    // Pattern embeddings are baked by build:pattern-embeddings; copy when present
+    // (the bake skips without OPEN_ROUTER_API_KEY / @almadar/llm).
+    const embeddings = path.join('src', 'pattern-embeddings.json');
+    if (fs.existsSync(embeddings)) {
+      fs.copyFileSync(embeddings, path.join('dist', 'pattern-embeddings.json'));
+    }
     console.log('✓ Copied JSON files to dist');
   },
 });
