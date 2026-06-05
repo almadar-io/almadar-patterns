@@ -138,6 +138,3 @@ export {
   getEmittedEvents,
   type PatternSwapGate,
 } from './helpers/pattern-swap.js';
-
-// Export the baked pattern-embeddings loader (contextual edit: semantic rank)
-export { getPatternEmbeddings, type PatternEmbeddings } from './helpers/embeddings.js';
