@@ -1,6 +1,6 @@
 {
   "name": "@almadar/patterns",
-  "version": "2.37.0",
+  "version": "2.37.1",
   "description": "Pattern registry and component mappings for Almadar",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,7 +17,9 @@
     "./integrators-registry.json": "./dist/integrators-registry.json",
     "./component-mapping.json": "./dist/component-mapping.json",
     "./event-contracts.json": "./dist/event-contracts.json",
-    "./services-registry.json": "./dist/services-registry.json"
+    "./services-registry.json": "./dist/services-registry.json",
+    "./pattern-embeddings.json": "./dist/pattern-embeddings.json",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
