@@ -100,6 +100,18 @@ export interface PatternPropDef {
   /** Allowed literal values when the TS type is a string-literal union. */
   enumValues?: string[];
   /**
+   * Comma-separated intent words from a `@synonyms` JSDoc tag on the prop
+   * (parity with behaviors' knob `@synonyms`). Feeds the pattern embeddings +
+   * the contextual-edit agent's intent→prop mapping. Absent when untagged.
+   */
+  synonyms?: string;
+  /**
+   * The prop's facing, from a `@tier` JSDoc tag — same enum as behaviors:
+   * `domain` (user-meaningful) / `presentation` (styling) / `internal`
+   * (wiring). Lets consumers prioritize the props a user is likely to edit.
+   */
+  tier?: 'domain' | 'presentation' | 'internal';
+  /**
    * Semantic marker layered over {@link PatternPropDef.types}. Set by
    * the pattern-sync tool when the prop's TS type references a
    * semantic alias (e.g. `EventKey` from `@almadar/core`). Absent when

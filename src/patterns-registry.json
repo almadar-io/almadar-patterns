@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-04T18:07:03.548Z",
+  "exportedAt": "2026-06-06T01:35:55.147Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -10050,7 +10050,9 @@
             "donut",
             "scatter",
             "histogram"
-          ]
+          ],
+          "synonyms": "chart style, graph type, bar chart, line chart, pie chart, area chart, donut chart, scatter plot, histogram",
+          "tier": "domain"
         },
         "look": {
           "types": [
@@ -10066,7 +10068,9 @@
             "donut",
             "scatter",
             "histogram"
-          ]
+          ],
+          "synonyms": "chart style, render style, visual treatment",
+          "tier": "presentation"
         },
         "series": {
           "types": [

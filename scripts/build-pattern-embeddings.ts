@@ -32,12 +32,18 @@ const EMBEDDING_MODEL = 'baai/bge-base-en-v1.5';
 const EMBEDDING_DIMS = 768;
 const PRICE_PER_1M = 0.005;
 
+interface PropEntry {
+  description?: string;
+  enumValues?: string[];
+  synonyms?: string;
+}
+
 interface PatternEntry {
   type?: string;
   category?: string;
   description?: string;
   suggestedFor?: string[];
-  propsSchema?: Record<string, unknown>;
+  propsSchema?: Record<string, PropEntry>;
 }
 
 interface RegistryFile {
@@ -56,7 +62,21 @@ function buildPatternText(name: string, entry: PatternEntry): string {
     parts.push(`For: ${entry.suggestedFor.join(', ')}`);
   }
   if (entry.propsSchema) {
-    parts.push(`Props: ${Object.keys(entry.propsSchema).join(' ')}`);
+    const props = Object.entries(entry.propsSchema);
+    parts.push(`Props: ${props.map(([k]) => k).join(' ')}`);
+    // Per-prop semantics: the deliberate `@synonyms` + the declared variant
+    // `enumValues` (and the description of those signal-bearing props) enter the
+    // pattern's vector, so an intent word ("bar") pulls the pattern whose prop
+    // can express it — the swap-rank generalization of the suggestedFor seed.
+    for (const [prop, def] of props) {
+      const bits: string[] = [];
+      if (def.synonyms) bits.push(def.synonyms);
+      if (def.enumValues && def.enumValues.length > 0) bits.push(def.enumValues.join(', '));
+      if (bits.length > 0) {
+        if (def.description) bits.push(def.description);
+        parts.push(`${prop}: ${bits.join(' — ')}`);
+      }
+    }
   }
   return parts.join('\n');
 }
