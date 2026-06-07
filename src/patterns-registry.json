@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-07T08:37:03.410Z",
+  "exportedAt": "2026-06-07T13:05:19.017Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9833,7 +9833,28 @@
           "types": [
             "object"
           ],
-          "description": "Current user info (optional - auto-populated from auth context if not provided)"
+          "description": "Current user info (optional - auto-populated from auth context if not provided)",
+          "properties": {
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "email": {
+              "types": [
+                "string"
+              ]
+            },
+            "avatar": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "name",
+            "email"
+          ]
         },
         "headerActions": {
           "types": [
@@ -16121,19 +16142,64 @@
           "types": [
             "object"
           ],
-          "description": "github prop"
+          "description": "github prop",
+          "properties": {
+            "url": {
+              "types": [
+                "string"
+              ]
+            },
+            "stars": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "url"
+          ]
         },
         "discord": {
           "types": [
             "object"
           ],
-          "description": "discord prop"
+          "description": "discord prop",
+          "properties": {
+            "url": {
+              "types": [
+                "string"
+              ]
+            },
+            "members": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "url"
+          ]
         },
         "twitter": {
           "types": [
             "object"
           ],
-          "description": "twitter prop"
+          "description": "twitter prop",
+          "properties": {
+            "url": {
+              "types": [
+                "string"
+              ]
+            },
+            "followers": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "url"
+          ]
         },
         "heading": {
           "types": [
@@ -16400,13 +16466,45 @@
           "types": [
             "object"
           ],
-          "description": "primaryAction prop"
+          "description": "primaryAction prop",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label",
+            "href"
+          ]
         },
         "secondaryAction": {
           "types": [
             "object"
           ],
-          "description": "secondaryAction prop"
+          "description": "secondaryAction prop",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label",
+            "href"
+          ]
         },
         "installCommand": {
           "types": [
@@ -16418,7 +16516,23 @@
           "types": [
             "object"
           ],
-          "description": "image prop"
+          "description": "image prop",
+          "properties": {
+            "src": {
+              "types": [
+                "string"
+              ]
+            },
+            "alt": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "src",
+            "alt"
+          ]
         },
         "imagePosition": {
           "types": [
@@ -16559,7 +16673,23 @@
             "object"
           ],
           "description": "action prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label",
+            "href"
+          ]
         },
         "highlighted": {
           "types": [
@@ -16634,6 +16764,22 @@
               "action": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "label": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "href": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "label",
+                  "href"
                 ]
               },
               "highlighted": {
@@ -16753,7 +16899,23 @@
             "object"
           ],
           "description": "image prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "src": {
+              "types": [
+                "string"
+              ]
+            },
+            "alt": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "src",
+            "alt"
+          ]
         },
         "href": {
           "types": [
@@ -16889,7 +17051,23 @@
           "types": [
             "object"
           ],
-          "description": "image prop"
+          "description": "image prop",
+          "properties": {
+            "src": {
+              "types": [
+                "string"
+              ]
+            },
+            "alt": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "src",
+            "alt"
+          ]
         },
         "imagePosition": {
           "types": [
@@ -19016,13 +19194,45 @@
           "types": [
             "object"
           ],
-          "description": "Primary action button config"
+          "description": "Primary action button config",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label",
+            "href"
+          ]
         },
         "secondaryAction": {
           "types": [
             "object"
           ],
-          "description": "Secondary action button config"
+          "description": "Secondary action button config",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label",
+            "href"
+          ]
         },
         "background": {
           "types": [
@@ -21329,7 +21539,35 @@
           "types": [
             "object"
           ],
-          "description": "Viewport rectangle outline"
+          "description": "Viewport rectangle outline",
+          "properties": {
+            "x": {
+              "types": [
+                "number"
+              ]
+            },
+            "y": {
+              "types": [
+                "number"
+              ]
+            },
+            "w": {
+              "types": [
+                "number"
+              ]
+            },
+            "h": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "x",
+            "y",
+            "w",
+            "h"
+          ]
         },
         "className": {
           "types": [
@@ -31864,7 +32102,23 @@
             "object"
           ],
           "description": "Position on the graph canvas",
-          "required": true
+          "required": true,
+          "properties": {
+            "x": {
+              "types": [
+                "number"
+              ]
+            },
+            "y": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "x",
+            "y"
+          ]
         },
         "onClick": {
           "types": [
@@ -31900,14 +32154,46 @@
             "object"
           ],
           "description": "Start position (center of from-node)",
-          "required": true
+          "required": true,
+          "properties": {
+            "x": {
+              "types": [
+                "number"
+              ]
+            },
+            "y": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "x",
+            "y"
+          ]
         },
         "to": {
           "types": [
             "object"
           ],
           "description": "End position (center of to-node)",
-          "required": true
+          "required": true,
+          "properties": {
+            "x": {
+              "types": [
+                "number"
+              ]
+            },
+            "y": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "x",
+            "y"
+          ]
         },
         "eventLabel": {
           "types": [
@@ -32969,7 +33255,28 @@
           "types": [
             "object"
           ],
-          "description": "logo prop"
+          "description": "logo prop",
+          "properties": {
+            "src": {
+              "types": [
+                "string"
+              ]
+            },
+            "alt": {
+              "types": [
+                "string"
+              ]
+            },
+            "href": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "src",
+            "alt"
+          ]
         },
         "className": {
           "types": [
