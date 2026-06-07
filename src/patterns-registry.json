@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-07T14:01:29.476Z",
+  "exportedAt": "2026-06-07T14:31:02.319Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -26,7 +26,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "className": {
@@ -1702,7 +1703,13 @@
             "object",
             "array"
           ],
-          "description": "Schema-based props"
+          "description": "Schema-based props",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "freeform": true
+          }
         },
         "mode": {
           "types": [
@@ -1844,7 +1851,8 @@
               "validation": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "readonly": {
                 "types": [
@@ -1956,6 +1964,7 @@
             "object"
           ],
           "description": "Relation data props",
+          "freeform": true,
           "default": {}
         },
         "relationsLoading": {
@@ -1963,6 +1972,7 @@
             "object"
           ],
           "description": "Loading state for relation data: { fieldName: boolean }",
+          "freeform": true,
           "default": {}
         },
         "conditionalFields": {
@@ -1991,7 +2001,8 @@
               "expression": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "triggerFields": {
                 "types": [
@@ -2025,7 +2036,8 @@
               "condition": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "violation": {
                 "types": [
@@ -2086,22 +2098,26 @@
             "formValues": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "globalVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "localVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "entity": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -2132,7 +2148,8 @@
               "condition": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "fields": {
                 "types": [
@@ -2266,7 +2283,8 @@
                     "validation": {
                       "types": [
                         "object"
-                      ]
+                      ],
+                      "freeform": true
                     },
                     "readonly": {
                       "types": [
@@ -2389,7 +2407,13 @@
             "object",
             "array"
           ],
-          "description": "Schema-based props"
+          "description": "Schema-based props",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "freeform": true
+          }
         },
         "mode": {
           "types": [
@@ -2531,7 +2555,8 @@
               "validation": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "readonly": {
                 "types": [
@@ -2643,6 +2668,7 @@
             "object"
           ],
           "description": "Relation data props",
+          "freeform": true,
           "default": {}
         },
         "relationsLoading": {
@@ -2650,6 +2676,7 @@
             "object"
           ],
           "description": "Loading state for relation data: { fieldName: boolean }",
+          "freeform": true,
           "default": {}
         },
         "conditionalFields": {
@@ -2678,7 +2705,8 @@
               "expression": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "triggerFields": {
                 "types": [
@@ -2712,7 +2740,8 @@
               "condition": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "violation": {
                 "types": [
@@ -2773,22 +2802,26 @@
             "formValues": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "globalVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "localVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "entity": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -2819,7 +2852,8 @@
               "condition": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "fields": {
                 "types": [
@@ -2953,7 +2987,8 @@
                     "validation": {
                       "types": [
                         "object"
-                      ]
+                      ],
+                      "freeform": true
                     },
                     "readonly": {
                       "types": [
@@ -3996,7 +4031,8 @@
                           "dataSource": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "displayFields": {
                             "types": [
@@ -4011,7 +4047,8 @@
                           "searchConfig": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "hiddenCalculations": {
                             "types": [
@@ -4047,17 +4084,20 @@
                           "signatureConfig": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "displayTemplate": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "lawReference": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "contextMenu": {
                             "types": [
@@ -4072,7 +4112,8 @@
                           "calculated": {
                             "types": [
                               "object"
-                            ]
+                            ],
+                            "freeform": true
                           },
                           "readOnly": {
                             "types": [
@@ -4223,7 +4264,8 @@
                     "dataSource": {
                       "types": [
                         "object"
-                      ]
+                      ],
+                      "freeform": true
                     },
                     "readOnly": {
                       "types": [
@@ -5361,7 +5403,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "className": {
@@ -5702,7 +5745,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "hoverEvent": {
           "types": [
@@ -6138,7 +6182,8 @@
           "types": [
             "object"
           ],
-          "description": "Raw schema for EventDispatcherTab payload extraction"
+          "description": "Raw schema for EventDispatcherTab payload extraction",
+          "freeform": true
         }
       }
     },
@@ -6239,7 +6284,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "label": {
           "types": [
@@ -6440,7 +6486,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         }
       }
     },
@@ -6900,9 +6947,11 @@
         },
         "onChange": {
           "types": [
-            "object"
+            "function"
           ],
-          "description": "onChange handler - accepts events from input, select, or textarea"
+          "description": "onChange handler - accepts events from input, select, or textarea",
+          "kind": "callback",
+          "callbackArgs": []
         }
       }
     },
@@ -8085,7 +8134,8 @@
           "types": [
             "object"
           ],
-          "description": "The S-expression condition to evaluate"
+          "description": "The S-expression condition to evaluate",
+          "freeform": true
         },
         "context": {
           "types": [
@@ -8097,22 +8147,26 @@
             "formValues": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "globalVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "localVariables": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "entity": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -8437,7 +8491,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "responsive": {
           "types": [
@@ -9083,7 +9138,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the dispatched action event."
+          "description": "Payload to include with the dispatched action event.",
+          "freeform": true
         },
         "actions": {
           "types": [
@@ -10935,7 +10991,13 @@
             "array"
           ],
           "description": "Exactly two children: [left, right]",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "node"
+            ],
+            "freeform": true
+          }
         },
         "isLoading": {
           "types": [
@@ -11004,7 +11066,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "className": {
@@ -12034,7 +12097,8 @@
                       "types": [
                         "string",
                         "object"
-                      ]
+                      ],
+                      "dateLike": true
                     },
                     "value": {
                       "types": [
@@ -12084,7 +12148,8 @@
                 "types": [
                   "string",
                   "object"
-                ]
+                ],
+                "dateLike": true
               },
               "value": {
                 "types": [
@@ -12557,7 +12622,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "title": {
@@ -12724,7 +12790,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "className": {
@@ -14217,7 +14284,8 @@
           "types": [
             "object"
           ],
-          "description": "GAP-80: line-level error/warning highlights for editable mode. Map of 1-based line number → severity. The overlay paints a colored background on each line: error = red, warning = yellow. Pass undefined (default) to disable. The consumer is responsible for computing the path → line map from the schema + validation results."
+          "description": "GAP-80: line-level error/warning highlights for editable mode. Map of 1-based line number → severity. The overlay paints a colored background on each line: error = red, warning = yellow. Pass undefined (default) to disable. The consumer is responsible for computing the path → line map from the schema + validation results.",
+          "freeform": true
         }
       }
     },
@@ -14367,7 +14435,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "direction": {
@@ -14445,13 +14514,15 @@
           "types": [
             "object"
           ],
-          "description": "Full schema — extracts first trait's state machine"
+          "description": "Full schema — extracts first trait's state machine",
+          "freeform": true
         },
         "trait": {
           "types": [
             "object"
           ],
-          "description": "Or pass a single trait directly"
+          "description": "Or pass a single trait directly",
+          "freeform": true
         },
         "traitIndex": {
           "types": [
@@ -14547,7 +14618,8 @@
             "object"
           ],
           "description": "layoutData prop",
-          "required": true
+          "required": true,
+          "freeform": true
         },
         "renderStateNode": {
           "types": [
@@ -14614,7 +14686,8 @@
             "object"
           ],
           "description": "The date this cell represents",
-          "required": true
+          "required": true,
+          "dateLike": true
         },
         "isToday": {
           "types": [
@@ -14759,7 +14832,8 @@
           "types": [
             "object"
           ],
-          "description": "Start of the week (defaults to current week's Monday)"
+          "description": "Start of the week (defaults to current week's Monday)",
+          "dateLike": true
         },
         "timeSlots": {
           "types": [
@@ -14799,13 +14873,15 @@
                 "types": [
                   "string",
                   "object"
-                ]
+                ],
+                "dateLike": true
               },
               "endTime": {
                 "types": [
                   "string",
                   "object"
-                ]
+                ],
+                "dateLike": true
               },
               "color": {
                 "types": [
@@ -14893,7 +14969,8 @@
           "types": [
             "object"
           ],
-          "description": "Additional payload for long-press events"
+          "description": "Additional payload for long-press events",
+          "freeform": true
         },
         "swipeLeftEvent": {
           "types": [
@@ -15288,7 +15365,8 @@
                 "types": [
                   "string",
                   "object"
-                ]
+                ],
+                "dateLike": true
               },
               "value": {
                 "types": [
@@ -15510,7 +15588,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "fields": {
@@ -15567,7 +15646,8 @@
               "colorMap": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               }
             },
             "required": [
@@ -15629,7 +15709,8 @@
               "colorMap": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               }
             },
             "required": [
@@ -15937,7 +16018,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "fields": {
@@ -16741,7 +16823,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "onChange": {
           "types": [
@@ -17081,7 +17164,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "className": {
           "types": [
@@ -17165,7 +17249,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "onChange": {
           "types": [
@@ -17264,7 +17349,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the action event"
+          "description": "Payload to include with the action event",
+          "freeform": true
         },
         "onFiles": {
           "types": [
@@ -17403,7 +17489,8 @@
           "types": [
             "object"
           ],
-          "description": "Optional payload to include with the load-more event"
+          "description": "Optional payload to include with the load-more event",
+          "freeform": true
         },
         "isLoading": {
           "types": [
@@ -17504,7 +17591,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "renderItem": {
@@ -17594,7 +17682,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the slide change event"
+          "description": "Payload to include with the slide change event",
+          "freeform": true
         },
         "className": {
           "types": [
@@ -17629,7 +17718,8 @@
           "types": [
             "object"
           ],
-          "description": "Payload to include with the refresh event"
+          "description": "Payload to include with the refresh event",
+          "freeform": true
         },
         "threshold": {
           "types": [
@@ -17678,7 +17768,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "renderItem": {
@@ -17711,7 +17802,8 @@
           "types": [
             "object"
           ],
-          "description": "reorderPayload prop"
+          "description": "reorderPayload prop",
+          "freeform": true
         },
         "dragHandlePosition": {
           "types": [
@@ -17786,7 +17878,8 @@
               "eventPayload": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               }
             },
             "required": [
@@ -17837,7 +17930,8 @@
               "eventPayload": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               }
             },
             "required": [
@@ -17865,7 +17959,8 @@
           "types": [
             "object"
           ],
-          "description": "itemData prop"
+          "description": "itemData prop",
+          "freeform": true
         },
         "className": {
           "types": [
@@ -21712,7 +21807,8 @@
             "slotFallbacks": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -22169,7 +22265,8 @@
           "types": [
             "object"
           ],
-          "description": "Selected value per row, keyed by rowId"
+          "description": "Selected value per row, keyed by rowId",
+          "freeform": true
         },
         "onChange": {
           "types": [
@@ -22534,7 +22631,12 @@
                 "types": [
                   "string",
                   "array"
-                ]
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
               },
               "targetQuestionId": {
                 "types": [
@@ -22884,7 +22986,8 @@
               "metadata": {
                 "types": [
                   "object"
-                ]
+                ],
+                "freeform": true
               },
               "children": {
                 "types": [
@@ -24501,7 +24604,8 @@
           "types": [
             "object"
           ],
-          "description": "Custom state styles to extend/override defaults"
+          "description": "Custom state styles to extend/override defaults",
+          "freeform": true
         },
         "className": {
           "types": [
@@ -25007,7 +25111,12 @@
           "items": {
             "types": [
               "array"
-            ]
+            ],
+            "items": {
+              "types": [
+                "number"
+              ]
+            }
           }
         },
         "color": {
@@ -26276,7 +26385,8 @@
             "traitDetails": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "externalLinks": {
               "types": [
@@ -26496,7 +26606,8 @@
             "traitDetails": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "externalLinks": {
               "types": [
@@ -29029,22 +29140,26 @@
             "terrains": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "units": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "features": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             },
             "effects": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           }
         }
@@ -29217,7 +29332,8 @@
           "types": [
             "object"
           ],
-          "description": "Map of platform type to tile sprite URL"
+          "description": "Map of platform type to tile sprite URL",
+          "freeform": true
         },
         "backgroundImage": {
           "types": [
@@ -29831,7 +29947,8 @@
             "orbitalSchema": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -30024,7 +30141,8 @@
                     "orbitalSchema": {
                       "types": [
                         "object"
-                      ]
+                      ],
+                      "freeform": true
                     }
                   },
                   "required": [
@@ -30425,22 +30543,26 @@
                 "terrains": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "units": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "features": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "effects": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 }
               },
               "required": [
@@ -31722,17 +31844,20 @@
                 "terrains": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "units": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "features": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 }
               },
               "required": [
@@ -31941,7 +32066,8 @@
             "object"
           ],
           "description": "Sound manifest — keys mapped to SoundEntry definitions",
-          "required": true
+          "required": true,
+          "freeform": true
         },
         "baseUrl": {
           "types": [
@@ -32273,7 +32399,8 @@
           "types": [
             "object"
           ],
-          "description": "Category → color mapping"
+          "description": "Category → color mapping",
+          "freeform": true
         },
         "tooltipFrameUrl": {
           "types": [
@@ -32558,7 +32685,8 @@
           "types": [
             "object"
           ],
-          "description": "Custom state styles passed to StateIndicator"
+          "description": "Custom state styles passed to StateIndicator",
+          "freeform": true
         },
         "className": {
           "types": [
@@ -32923,7 +33051,8 @@
                   "featureData": {
                     "types": [
                       "object"
-                    ]
+                    ],
+                    "freeform": true
                   },
                   "passable": {
                     "types": [
@@ -33121,17 +33250,20 @@
                 "terrains": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "units": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 },
                 "features": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "freeform": true
                 }
               },
               "required": [
@@ -33632,7 +33764,8 @@
             "parameters": {
               "types": [
                 "object"
-              ]
+              ],
+              "freeform": true
             }
           },
           "propertyRequired": [
@@ -33712,7 +33845,8 @@
             "object"
           ],
           "description": "parameters prop",
-          "required": true
+          "required": true,
+          "freeform": true
         },
         "onPlay": {
           "types": [
@@ -35441,7 +35575,8 @@
           "types": [
             "object"
           ],
-          "description": "Category → color mapping"
+          "description": "Category → color mapping",
+          "freeform": true
         },
         "size": {
           "types": [
@@ -35624,7 +35759,8 @@
           "types": [
             "object"
           ],
-          "description": "Category → color mapping"
+          "description": "Category → color mapping",
+          "freeform": true
         }
       }
     },
@@ -35822,7 +35958,8 @@
           "types": [
             "object"
           ],
-          "description": "Category → color mapping"
+          "description": "Category → color mapping",
+          "freeform": true
         },
         "slotFeedback": {
           "types": [
@@ -36118,7 +36255,8 @@
           "types": [
             "object"
           ],
-          "description": "Category → color mapping"
+          "description": "Category → color mapping",
+          "freeform": true
         },
         "stepDurationMs": {
           "types": [
@@ -36380,7 +36518,8 @@
             "object"
           ],
           "description": "JSON data to display",
-          "required": true
+          "required": true,
+          "freeform": true
         },
         "label": {
           "types": [
@@ -37079,7 +37218,8 @@
           "types": [
             "object"
           ],
-          "description": "Feature color overrides"
+          "description": "Feature color overrides",
+          "freeform": true
         }
       }
     },
@@ -38002,7 +38142,8 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "freeform": true
           }
         },
         "columns": {
