@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-07T14:31:02.319Z",
+  "exportedAt": "2026-06-07T14:38:12.692Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -12096,9 +12096,8 @@
                     "date": {
                       "types": [
                         "string",
-                        "object"
-                      ],
-                      "dateLike": true
+                        "date"
+                      ]
                     },
                     "value": {
                       "types": [
@@ -12147,9 +12146,8 @@
               "date": {
                 "types": [
                   "string",
-                  "object"
-                ],
-                "dateLike": true
+                  "date"
+                ]
               },
               "value": {
                 "types": [
@@ -14683,11 +14681,10 @@
       "propsSchema": {
         "date": {
           "types": [
-            "object"
+            "date"
           ],
           "description": "The date this cell represents",
-          "required": true,
-          "dateLike": true
+          "required": true
         },
         "isToday": {
           "types": [
@@ -14705,7 +14702,7 @@
           "callbackArgs": [
             {
               "name": "date",
-              "type": "object"
+              "type": "date"
             }
           ]
         },
@@ -14830,10 +14827,9 @@
       "propsSchema": {
         "weekStart": {
           "types": [
-            "object"
+            "date"
           ],
-          "description": "Start of the week (defaults to current week's Monday)",
-          "dateLike": true
+          "description": "Start of the week (defaults to current week's Monday)"
         },
         "timeSlots": {
           "types": [
@@ -14872,16 +14868,14 @@
               "startTime": {
                 "types": [
                   "string",
-                  "object"
-                ],
-                "dateLike": true
+                  "date"
+                ]
               },
               "endTime": {
                 "types": [
                   "string",
-                  "object"
-                ],
-                "dateLike": true
+                  "date"
+                ]
               },
               "color": {
                 "types": [
@@ -14906,7 +14900,7 @@
           "callbackArgs": [
             {
               "name": "day",
-              "type": "object"
+              "type": "date"
             },
             {
               "name": "time",
@@ -14923,7 +14917,7 @@
           "callbackArgs": [
             {
               "name": "day",
-              "type": "object"
+              "type": "date"
             }
           ]
         },
@@ -15364,9 +15358,8 @@
               "date": {
                 "types": [
                   "string",
-                  "object"
-                ],
-                "dateLike": true
+                  "date"
+                ]
               },
               "value": {
                 "types": [
