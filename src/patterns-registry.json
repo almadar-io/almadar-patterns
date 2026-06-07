@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-07T13:05:19.017Z",
+  "exportedAt": "2026-06-07T14:01:29.476Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -97,6 +97,12 @@
             "array"
           ],
           "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          },
           "default": []
         },
         "fields": {
@@ -104,13 +110,105 @@
             "array"
           ],
           "description": "Fields to display - accepts string[] or Column[] for unified interface. Alias for columns",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "width": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sortable": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "render": {
+                "types": [
+                  "function"
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "header"
+            ]
+          }
         },
         "columns": {
           "types": [
             "array"
           ],
-          "description": "Columns can be Column objects or simple string field names"
+          "description": "Columns can be Column objects or simple string field names",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "width": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sortable": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "render": {
+                "types": [
+                  "function"
+                ]
+              }
+            },
+            "required": [
+              "key",
+              "header"
+            ]
+          }
         },
         "itemActions": {
           "types": [
@@ -120,6 +218,51 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "action": {
+                "types": [
+                  "string"
+                ]
+              },
+              "placement": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "icon"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ]
+              },
+              "onClick": {
+                "types": [
+                  "function"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -145,7 +288,22 @@
           "types": [
             "object"
           ],
-          "description": "emptyAction prop"
+          "description": "emptyAction prop",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "event": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
         },
         "selectable": {
           "types": [
@@ -226,6 +384,36 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "icon"
+                ]
+              },
+              "onClick": {
+                "types": [
+                  "function"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "default",
+                  "danger"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "onClick"
             ]
           }
         },
@@ -345,6 +533,12 @@
             "array"
           ],
           "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          },
           "default": []
         },
         "entityType": {
@@ -365,7 +559,59 @@
             "function",
             "array"
           ],
-          "description": "Item actions - schema-driven or function-based"
+          "description": "Item actions - schema-driven or function-based",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "placement": {
+                "types": [
+                  "string"
+                ]
+              },
+              "action": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "ghost",
+                  "danger",
+                  "default"
+                ]
+              },
+              "onClick": {
+                "types": [
+                  "function"
+                ]
+              }
+            },
+            "required": [
+              "label"
+            ]
+          }
         },
         "showDividers": {
           "types": [
@@ -422,7 +668,29 @@
             "types": [
               "string",
               "object"
-            ]
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            }
           }
         },
         "fieldNames": {
@@ -526,7 +794,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "minCardWidth": {
           "types": [
@@ -584,7 +858,29 @@
             "types": [
               "string",
               "object"
-            ]
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            }
           }
         },
         "fieldNames": {
@@ -607,7 +903,29 @@
             "types": [
               "string",
               "object"
-            ]
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            }
           }
         },
         "itemActions": {
@@ -776,7 +1094,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "title": {
           "types": [
@@ -794,7 +1118,29 @@
           "types": [
             "object"
           ],
-          "description": "status prop"
+          "description": "status prop",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "variant": {
+              "types": [
+                "string"
+              ],
+              "enumValues": [
+                "default",
+                "success",
+                "warning",
+                "danger",
+                "info"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
         },
         "avatar": {
           "types": [
@@ -825,6 +1171,32 @@
                   "types": [
                     "object",
                     "string"
+                  ],
+                  "properties": {
+                    "label": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "value": {
+                      "types": [
+                        "node"
+                      ]
+                    },
+                    "icon": {
+                      "types": [
+                        "icon"
+                      ]
+                    },
+                    "copyable": {
+                      "types": [
+                        "boolean"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "value"
                   ]
                 }
               }
@@ -910,7 +1282,29 @@
             "types": [
               "string",
               "object"
-            ]
+            ],
+            "properties": {
+              "key": {
+                "types": [
+                  "string"
+                ]
+              },
+              "header": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            }
           }
         },
         "fieldNames": {
@@ -1047,7 +1441,29 @@
           "types": [
             "object"
           ],
-          "description": "Status badge"
+          "description": "Status badge",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "variant": {
+              "types": [
+                "string"
+              ],
+              "enumValues": [
+                "default",
+                "success",
+                "warning",
+                "danger",
+                "info"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
         },
         "actions": {
           "types": [
@@ -1057,6 +1473,57 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "onClick": {
+                "types": [
+                  "function"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "ghost",
+                  "danger"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "icon"
+                ]
+              },
+              "loading": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "disabled": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -1070,7 +1537,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -1086,6 +1578,27 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "count": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "value"
             ]
           }
         },
@@ -1206,7 +1719,144 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "properties": {
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "field": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "inputType": {
+                "types": [
+                  "string"
+                ]
+              },
+              "placeholder": {
+                "types": [
+                  "string"
+                ]
+              },
+              "required": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "defaultValue": {
+                "types": [
+                  "unknown"
+                ]
+              },
+              "options": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "value": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "label": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "label"
+                  ]
+                }
+              },
+              "values": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              },
+              "relation": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "entity": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "displayField": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "cardinality": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "one",
+                      "many"
+                    ]
+                  }
+                },
+                "required": [
+                  "entity"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "pattern": {
+                "types": [
+                  "string"
+                ]
+              },
+              "validation": {
+                "types": [
+                  "object"
+                ]
+              },
+              "readonly": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "disabled": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            }
           }
         },
         "initialData": {
@@ -1227,7 +1877,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "submitLabel": {
           "types": [
@@ -1302,20 +1977,137 @@
             "array",
             "boolean"
           ],
-          "description": "Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately)"
+          "description": "Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately)",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "variableName": {
+                "types": [
+                  "string"
+                ]
+              },
+              "expression": {
+                "types": [
+                  "object"
+                ]
+              },
+              "triggerFields": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "variableName",
+              "expression",
+              "triggerFields"
+            ]
+          }
         },
         "violationTriggers": {
           "types": [
             "array",
             "boolean"
           ],
-          "description": "Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately)"
+          "description": "Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately)",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "condition": {
+                "types": [
+                  "object"
+                ]
+              },
+              "violation": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "law": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "article": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "actionType": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "measure",
+                      "admin",
+                      "penalty"
+                    ]
+                  },
+                  "message": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "law",
+                  "article",
+                  "actionType",
+                  "message"
+                ]
+              },
+              "fieldId": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "condition",
+              "violation"
+            ]
+          }
         },
         "evaluationContext": {
           "types": [
             "object"
           ],
-          "description": "Context for S-expression evaluation - accepts flexible types from generated code"
+          "description": "Context for S-expression evaluation - accepts flexible types from generated code",
+          "properties": {
+            "formValues": {
+              "types": [
+                "object"
+              ]
+            },
+            "globalVariables": {
+              "types": [
+                "object"
+              ]
+            },
+            "localVariables": {
+              "types": [
+                "object"
+              ]
+            },
+            "entity": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "formValues",
+            "globalVariables"
+          ]
         },
         "sections": {
           "types": [
@@ -1614,7 +2406,144 @@
           "items": {
             "types": [
               "object"
-            ]
+            ],
+            "properties": {
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "field": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "inputType": {
+                "types": [
+                  "string"
+                ]
+              },
+              "placeholder": {
+                "types": [
+                  "string"
+                ]
+              },
+              "required": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "defaultValue": {
+                "types": [
+                  "unknown"
+                ]
+              },
+              "options": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "value": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "label": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "value",
+                    "label"
+                  ]
+                }
+              },
+              "values": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              },
+              "relation": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "entity": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "displayField": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "cardinality": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "one",
+                      "many"
+                    ]
+                  }
+                },
+                "required": [
+                  "entity"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "pattern": {
+                "types": [
+                  "string"
+                ]
+              },
+              "validation": {
+                "types": [
+                  "object"
+                ]
+              },
+              "readonly": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "disabled": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            }
           }
         },
         "initialData": {
@@ -1635,7 +2564,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "submitLabel": {
           "types": [
@@ -1710,20 +2664,137 @@
             "array",
             "boolean"
           ],
-          "description": "Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately)"
+          "description": "Hidden calculations that emit GLOBAL_VARIABLE_SET on field change (boolean true means enabled but config loaded separately)",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "variableName": {
+                "types": [
+                  "string"
+                ]
+              },
+              "expression": {
+                "types": [
+                  "object"
+                ]
+              },
+              "triggerFields": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "variableName",
+              "expression",
+              "triggerFields"
+            ]
+          }
         },
         "violationTriggers": {
           "types": [
             "array",
             "boolean"
           ],
-          "description": "Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately)"
+          "description": "Violation conditions that emit VIOLATION_DETECTED when met (boolean true means enabled but config loaded separately)",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "condition": {
+                "types": [
+                  "object"
+                ]
+              },
+              "violation": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "law": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "article": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "actionType": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "measure",
+                      "admin",
+                      "penalty"
+                    ]
+                  },
+                  "message": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "law",
+                  "article",
+                  "actionType",
+                  "message"
+                ]
+              },
+              "fieldId": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "condition",
+              "violation"
+            ]
+          }
         },
         "evaluationContext": {
           "types": [
             "object"
           ],
-          "description": "Context for S-expression evaluation - accepts flexible types from generated code"
+          "description": "Context for S-expression evaluation - accepts flexible types from generated code",
+          "properties": {
+            "formValues": {
+              "types": [
+                "object"
+              ]
+            },
+            "globalVariables": {
+              "types": [
+                "object"
+              ]
+            },
+            "localVariables": {
+              "types": [
+                "object"
+              ]
+            },
+            "entity": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "formValues",
+            "globalVariables"
+          ]
         },
         "sections": {
           "types": [
@@ -2483,6 +3554,27 @@
             "types": [
               "object",
               "string"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "title": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "title"
             ]
           }
         },
@@ -2842,6 +3934,27 @@
                             "items": {
                               "types": [
                                 "object"
+                              ],
+                              "properties": {
+                                "value": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "label": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "isDefault": {
+                                  "types": [
+                                    "boolean"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "value",
+                                "label"
                               ]
                             }
                           },
@@ -2907,6 +4020,27 @@
                             "items": {
                               "types": [
                                 "object"
+                              ],
+                              "properties": {
+                                "variable": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "expression": {
+                                  "types": [
+                                    "unknown"
+                                  ]
+                                },
+                                "scope": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "variable",
+                                "expression"
                               ]
                             }
                           },
@@ -2957,6 +4091,27 @@
                             "items": {
                               "types": [
                                 "object"
+                              ],
+                              "properties": {
+                                "label": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "value": {
+                                  "types": [
+                                    "unknown"
+                                  ]
+                                },
+                                "icon": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "label",
+                                "value"
                               ]
                             }
                           },
@@ -2967,6 +4122,27 @@
                             "items": {
                               "types": [
                                 "object"
+                              ],
+                              "properties": {
+                                "id": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "label": {
+                                  "types": [
+                                    "string"
+                                  ]
+                                },
+                                "autoCheck": {
+                                  "types": [
+                                    "unknown"
+                                  ]
+                                }
+                              },
+                              "required": [
+                                "id",
+                                "label"
                               ]
                             }
                           }
@@ -2984,7 +4160,8 @@
                       "items": {
                         "types": [
                           "object"
-                        ]
+                        ],
+                        "cyclic": true
                       }
                     },
                     "condition": {
@@ -3019,6 +4196,27 @@
                       "items": {
                         "types": [
                           "object"
+                        ],
+                        "properties": {
+                          "variable": {
+                            "types": [
+                              "string"
+                            ]
+                          },
+                          "expression": {
+                            "types": [
+                              "unknown"
+                            ]
+                          },
+                          "scope": {
+                            "types": [
+                              "string"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "variable",
+                          "expression"
                         ]
                       }
                     },
@@ -3245,7 +4443,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -4073,7 +5296,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -4180,7 +5428,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "masterFields": {
           "types": [
@@ -4492,6 +5746,38 @@
             "object"
           ],
           "description": "Number of columns (can be responsive object)",
+          "properties": {
+            "base": {
+              "types": [
+                "number",
+                "string"
+              ]
+            },
+            "sm": {
+              "types": [
+                "number",
+                "string"
+              ]
+            },
+            "md": {
+              "types": [
+                "number",
+                "string"
+              ]
+            },
+            "lg": {
+              "types": [
+                "number",
+                "string"
+              ]
+            },
+            "xl": {
+              "types": [
+                "number",
+                "string"
+              ]
+            }
+          },
           "default": 1
         },
         "rows": {
@@ -6271,7 +7557,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               }
             },
@@ -7411,7 +8698,7 @@
         },
         "as": {
           "types": [
-            "unknown"
+            "string"
           ],
           "description": "Custom HTML element"
         },
@@ -7470,7 +8757,37 @@
           "types": [
             "object"
           ],
-          "description": "Primary action button config (for form-actions pattern) Accepts Readonly for compatibility with generated const objects"
+          "description": "Primary action button config (for form-actions pattern) Accepts Readonly for compatibility with generated const objects",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "actionType": {
+              "types": [
+                "string"
+              ]
+            },
+            "event": {
+              "types": [
+                "string"
+              ]
+            },
+            "navigatesTo": {
+              "types": [
+                "string"
+              ]
+            },
+            "variant": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
         },
         "secondary": {
           "types": [
@@ -7480,6 +8797,36 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "actionType": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -8439,7 +9786,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -8487,6 +9859,42 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "href": {
+                "types": [
+                  "string"
+                ]
+              },
+              "onClick": {
+                "types": [
+                  "function"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "icon"
+                ]
+              },
+              "badge": {
+                "types": [
+                  "string",
+                  "number"
+                ]
+              },
+              "active": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -8542,7 +9950,24 @@
           "types": [
             "object"
           ],
-          "description": "User avatar configuration"
+          "description": "User avatar configuration",
+          "properties": {
+            "src": {
+              "types": [
+                "string"
+              ]
+            },
+            "alt": {
+              "types": [
+                "string"
+              ]
+            },
+            "initials": {
+              "types": [
+                "string"
+              ]
+            }
+          }
         },
         "userName": {
           "types": [
@@ -8620,7 +10045,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state (closed circuit)"
+          "description": "Error state (closed circuit)",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -8685,7 +10135,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -8765,7 +10240,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               }
             },
@@ -8802,7 +10278,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -8829,7 +10330,58 @@
           "types": [
             "object"
           ],
-          "description": "Full KFlow schema object"
+          "description": "Full KFlow schema object",
+          "properties": {
+            "dataEntities": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "unknown"
+                ]
+              }
+            },
+            "ui": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "pages": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "object"
+                    ],
+                    "properties": {
+                      "sections": {
+                        "types": [
+                          "array"
+                        ],
+                        "items": {
+                          "types": [
+                            "unknown"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "traits": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "unknown"
+                ]
+              }
+            }
+          }
         },
         "complexity": {
           "types": [
@@ -8889,7 +10441,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -9003,7 +10580,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -9040,7 +10642,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "logo": {
           "types": [
@@ -9120,7 +10747,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               }
             },
@@ -9319,7 +10947,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -9422,7 +11075,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "columns": {
           "types": [
@@ -9607,7 +11266,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -9818,7 +11502,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               }
             },
@@ -9951,7 +11636,43 @@
           "types": [
             "array"
           ],
-          "description": "Notification list. Pass an empty array to show the bell with no badge; omit / pass null to hide the bell entirely."
+          "description": "Notification list. Pass an empty array to show the bell with no badge; omit / pass null to hide the bell entirely.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "message": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "createdAt": {
+                "types": [
+                  "string"
+                ]
+              },
+              "read": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "message"
+            ]
+          }
         },
         "notificationClickEvent": {
           "types": [
@@ -10080,7 +11801,29 @@
           "types": [
             "object"
           ],
-          "description": "Game controls"
+          "description": "Game controls",
+          "properties": {
+            "onPlay": {
+              "types": [
+                "function"
+              ]
+            },
+            "onPause": {
+              "types": [
+                "function"
+              ]
+            },
+            "onReset": {
+              "types": [
+                "function"
+              ]
+            },
+            "isPlaying": {
+              "types": [
+                "boolean"
+              ]
+            }
+          }
         }
       }
     },
@@ -10506,7 +12249,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -10685,7 +12453,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -10726,7 +12519,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -10974,7 +12792,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "title": {
           "types": [
@@ -10990,6 +12814,51 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "src": {
+                "types": [
+                  "string"
+                ]
+              },
+              "alt": {
+                "types": [
+                  "string"
+                ]
+              },
+              "thumbnail": {
+                "types": [
+                  "string"
+                ]
+              },
+              "mediaType": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "image",
+                  "video"
+                ]
+              },
+              "caption": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fileSize": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "src"
             ]
           }
         },
@@ -11209,7 +13078,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -11354,6 +13248,37 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "src": {
+                "types": [
+                  "string"
+                ]
+              },
+              "content": {
+                "types": [
+                  "string"
+                ]
+              },
+              "documentType": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "pdf",
+                  "text",
+                  "html",
+                  "markdown"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -11374,7 +13299,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -11412,6 +13362,46 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "group": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "size": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "id"
             ]
           }
         },
@@ -11582,7 +13572,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -11727,6 +13742,27 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "code": {
+                "types": [
+                  "string"
+                ]
+              },
+              "language": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "label",
+              "code"
             ]
           }
         },
@@ -11788,7 +13824,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "className": {
           "types": [
@@ -12284,7 +14345,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "content": {
           "types": [
@@ -12347,6 +14414,31 @@
             "object"
           ],
           "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         },
         "schema": {
@@ -12423,7 +14515,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "layoutData": {
           "types": [
@@ -13623,6 +15740,31 @@
             "object"
           ],
           "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         },
         "imageField": {
@@ -14032,6 +16174,31 @@
             "object"
           ],
           "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         },
         "reorderable": {
@@ -14055,6 +16222,32 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "danger",
+                  "ghost"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -14073,6 +16266,32 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "danger",
+                  "ghost"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -15845,6 +18064,31 @@
             "object"
           ],
           "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         }
       }
@@ -17127,6 +19371,22 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "label"
             ]
           }
         },
@@ -17204,7 +19464,32 @@
             "array"
           ],
           "description": "tags prop",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "href": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "label"
+            ]
+          }
         },
         "variant": {
           "types": [
@@ -17271,7 +19556,17 @@
             "string",
             "object"
           ],
-          "description": "avatar prop"
+          "description": "avatar prop",
+          "properties": {
+            "initials": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "initials"
+          ]
         },
         "className": {
           "types": [
@@ -17418,7 +19713,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "heading": {
           "types": [
@@ -17564,7 +19865,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "columns": {
           "types": [
@@ -17813,7 +20120,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "children": {
           "types": [
@@ -17975,7 +20288,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "heading": {
           "types": [
@@ -18141,7 +20460,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "columns": {
           "types": [
@@ -18278,7 +20603,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "columns": {
           "types": [
@@ -18414,7 +20745,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "orientation": {
           "types": [
@@ -18578,7 +20915,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "heading": {
           "types": [
@@ -19321,7 +21664,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -19334,7 +21702,22 @@
             "boolean",
             "object"
           ],
-          "description": "Enable Suspense boundaries around each slot. When true, each inline slot is wrapped in `<ErrorBoundary><Suspense>` with Skeleton fallbacks. Opt-in — existing isLoading prop pattern still works."
+          "description": "Enable Suspense boundaries around each slot. When true, each inline slot is wrapped in `<ErrorBoundary><Suspense>` with Skeleton fallbacks. Opt-in — existing isLoading prop pattern still works.",
+          "properties": {
+            "enabled": {
+              "types": [
+                "boolean"
+              ]
+            },
+            "slotFallbacks": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "enabled"
+          ]
         }
       }
     },
@@ -19417,7 +21800,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               },
               "size": {
@@ -20080,7 +22464,38 @@
             "object"
           ],
           "description": "questions prop",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "optionValues": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "id",
+              "label"
+            ]
+          }
         },
         "rules": {
           "types": [
@@ -20088,7 +22503,54 @@
             "object"
           ],
           "description": "Rules. Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.data`). Narrowed to `[]` internally when the value isn't an array.",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "sourceQuestionId": {
+                "types": [
+                  "string"
+                ]
+              },
+              "operator": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "equals",
+                  "not-equals",
+                  "contains",
+                  "in"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string",
+                  "array"
+                ]
+              },
+              "targetQuestionId": {
+                "types": [
+                  "string",
+                  "unknown"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "sourceQuestionId",
+              "operator",
+              "value",
+              "targetQuestionId"
+            ]
+          }
         },
         "onRulesChange": {
           "types": [
@@ -20206,7 +22668,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               },
               "collapsed": {
@@ -20385,7 +22848,61 @@
           "types": [
             "array"
           ],
-          "description": "Initial block payload. Accepts strongly-typed RichBlock[] from native callers and the wider EntityRow[] shape that orb-bound traits emit (orb `[object]` lowers to `Record<string, FieldValue | undefined>[]`, which is structurally EntityRow[]). Items missing id/type are normalized into paragraph blocks at mount."
+          "description": "Initial block payload. Accepts strongly-typed RichBlock[] from native callers and the wider EntityRow[] shape that orb-bound traits emit (orb `[object]` lowers to `Record<string, FieldValue | undefined>[]`, which is structurally EntityRow[]). Items missing id/type are normalized into paragraph blocks at mount.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "paragraph",
+                  "heading-1",
+                  "heading-2",
+                  "heading-3",
+                  "bullet-list",
+                  "numbered-list",
+                  "quote",
+                  "code",
+                  "divider",
+                  "image"
+                ]
+              },
+              "content": {
+                "types": [
+                  "string"
+                ]
+              },
+              "metadata": {
+                "types": [
+                  "object"
+                ]
+              },
+              "children": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "cyclic": true
+                }
+              }
+            },
+            "required": [
+              "id",
+              "type"
+            ]
+          }
         },
         "onChange": {
           "types": [
@@ -20461,7 +22978,44 @@
             "object"
           ],
           "description": "All available revisions (at least 2). Accepts either a typed array (direct consumers) or the runtime payload shape from a render-ui binding (`@payload.revisions`). Narrowed to `[]` internally when the value isn't an array.",
-          "required": true
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "author": {
+                "types": [
+                  "string"
+                ]
+              },
+              "timestamp": {
+                "types": [
+                  "string"
+                ]
+              },
+              "content": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "content"
+            ]
+          }
         },
         "beforeId": {
           "types": [
@@ -20663,7 +23217,22 @@
             "object"
           ],
           "description": "constraint prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "type": {
+              "types": [
+                "unknown"
+              ]
+            },
+            "required": {
+              "types": [
+                "boolean"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "type"
+          ]
         },
         "selected": {
           "types": [
@@ -21491,6 +24060,28 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "color"
             ]
           },
           "default": []
@@ -21503,6 +24094,33 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "isPlayer": {
+                "types": [
+                  "boolean"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "color"
             ]
           },
           "default": []
@@ -23358,7 +25976,8 @@
                 "items": {
                   "types": [
                     "object"
-                  ]
+                  ],
+                  "cyclic": true
                 }
               },
               "active": {
@@ -24234,7 +26853,27 @@
             "object"
           ],
           "description": "Output item produced by the recipe",
-          "required": true
+          "required": true,
+          "properties": {
+            "icon": {
+              "types": [
+                "node"
+              ]
+            },
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "rarity": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
         },
         "canCraft": {
           "types": [
@@ -24401,6 +27040,31 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "text": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "action": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "next": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "disabled": {
+                    "types": [
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "text"
                 ]
               }
             },
@@ -24861,6 +27525,51 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ]
+              },
+              "disabled": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "subLabel": {
+                "types": [
+                  "string"
+                ]
+              },
+              "action": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -24872,6 +27581,51 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ]
+              },
+              "disabled": {
+                "types": [
+                  "boolean"
+                ]
+              },
+              "subLabel": {
+                "types": [
+                  "string"
+                ]
+              },
+              "action": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -24997,6 +27751,36 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "ghost"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -25008,6 +27792,36 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "navigatesTo": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "primary",
+                  "secondary",
+                  "ghost"
+                ]
+              }
+            },
+            "required": [
+              "label"
             ]
           }
         },
@@ -25111,6 +27925,31 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "icon": {
+                "types": [
+                  "node"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "variant": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "buff",
+                  "debuff",
+                  "neutral"
+                ]
+              }
+            },
+            "required": [
+              "icon"
             ]
           }
         },
@@ -25291,6 +28130,43 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ]
+              },
+              "quantity": {
+                "types": [
+                  "number"
+                ]
+              },
+              "sprite": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "quantity"
             ]
           }
         },
@@ -25448,6 +28324,31 @@
             "object"
           ],
           "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         },
         "tiles": {
@@ -25540,6 +28441,22 @@
               "position": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
                 ]
               },
               "x": {
@@ -25614,12 +28531,61 @@
                 "items": {
                   "types": [
                     "object"
+                  ],
+                  "properties": {
+                    "name": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "currentState": {
+                      "types": [
+                        "string"
+                      ]
+                    },
+                    "states": {
+                      "types": [
+                        "array"
+                      ],
+                      "items": {
+                        "types": [
+                          "string"
+                        ]
+                      }
+                    },
+                    "cooldown": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "currentState",
+                    "states",
+                    "cooldown"
                   ]
                 }
               },
               "previousPosition": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
                 ]
               },
               "elevation": {
@@ -25711,6 +28677,22 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
             ]
           },
           "default": []
@@ -25723,6 +28705,22 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
             ]
           },
           "default": []
@@ -25732,6 +28730,22 @@
             "object"
           ],
           "description": "Hovered tile position",
+          "properties": {
+            "x": {
+              "types": [
+                "number"
+              ]
+            },
+            "y": {
+              "types": [
+                "number"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "x",
+            "y"
+          ],
           "default": null
         },
         "onTileClick": {
@@ -26010,7 +29024,29 @@
           "types": [
             "object"
           ],
-          "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve."
+          "description": "Manifest mapping entity keys to relative sprite paths. Combined with assetBaseUrl to produce full URLs. Used as a fallback when inline URLs and callbacks don't resolve.",
+          "properties": {
+            "terrains": {
+              "types": [
+                "object"
+              ]
+            },
+            "units": {
+              "types": [
+                "object"
+              ]
+            },
+            "features": {
+              "types": [
+                "object"
+              ]
+            },
+            "effects": {
+              "types": [
+                "object"
+              ]
+            }
+          }
         }
       }
     },
@@ -27108,7 +30144,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "initialPage": {
           "types": [
@@ -27122,7 +30164,83 @@
             "object",
             "string"
           ],
-          "description": "Field name translation map — a BookFieldMap object or locale key (\"ar\")"
+          "description": "Field name translation map — a BookFieldMap object or locale key (\"ar\")",
+          "properties": {
+            "title": {
+              "types": [
+                "string"
+              ]
+            },
+            "subtitle": {
+              "types": [
+                "string"
+              ]
+            },
+            "author": {
+              "types": [
+                "string"
+              ]
+            },
+            "coverImageUrl": {
+              "types": [
+                "string"
+              ]
+            },
+            "direction": {
+              "types": [
+                "string"
+              ]
+            },
+            "parts": {
+              "types": [
+                "string"
+              ]
+            },
+            "partTitle": {
+              "types": [
+                "string"
+              ]
+            },
+            "chapters": {
+              "types": [
+                "string"
+              ]
+            },
+            "chapterId": {
+              "types": [
+                "string"
+              ]
+            },
+            "chapterTitle": {
+              "types": [
+                "string"
+              ]
+            },
+            "chapterContent": {
+              "types": [
+                "string"
+              ]
+            },
+            "chapterOrbitalSchema": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "title",
+            "subtitle",
+            "author",
+            "coverImageUrl",
+            "direction",
+            "parts",
+            "partTitle",
+            "chapters",
+            "chapterId",
+            "chapterTitle",
+            "chapterContent",
+            "chapterOrbitalSchema"
+          ]
         }
       }
     },
@@ -27297,6 +30415,36 @@
             "assetManifest": {
               "types": [
                 "object"
+              ],
+              "properties": {
+                "baseUrl": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "terrains": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "units": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "features": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "effects": {
+                  "types": [
+                    "object"
+                  ]
+                }
+              },
+              "required": [
+                "baseUrl"
               ]
             },
             "backgroundImage": {
@@ -27341,6 +30489,34 @@
                   "spriteSheet": {
                     "types": [
                       "object"
+                    ],
+                    "properties": {
+                      "se": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "sw": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "frameWidth": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "frameHeight": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "se",
+                      "sw",
+                      "frameWidth",
+                      "frameHeight"
                     ]
                   },
                   "team": {
@@ -27355,6 +30531,22 @@
                   "position": {
                     "types": [
                       "object"
+                    ],
+                    "properties": {
+                      "x": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "y": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
                     ]
                   },
                   "health": {
@@ -27389,6 +30581,38 @@
                     "items": {
                       "types": [
                         "object"
+                      ],
+                      "properties": {
+                        "name": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "currentState": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "states": {
+                          "types": [
+                            "array"
+                          ],
+                          "items": {
+                            "types": [
+                              "string"
+                            ]
+                          }
+                        },
+                        "cooldown": {
+                          "types": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "currentState",
+                        "states"
                       ]
                     }
                   }
@@ -27842,7 +31066,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "effectSpriteUrl": {
           "types": [
@@ -27870,12 +31119,241 @@
             "particles": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "slash": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "magic": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "fire": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "flame": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "smoke": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "scorch": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "circle": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "flare": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "spark": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "muzzle": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "star": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "trace": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "twirl": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "light": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "dirt": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "scratch": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "symbol": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                }
+              }
             },
             "animations": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "explosion": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "smokePuff": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "flash": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "blackSmoke": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "gasSmoke": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "smokeExplosion": {
+                  "types": [
+                    "array"
+                  ],
+                  "items": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -28073,6 +31551,22 @@
                   "position": {
                     "types": [
                       "object"
+                    ],
+                    "properties": {
+                      "x": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "y": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
                     ]
                   },
                   "x": {
@@ -28147,12 +31641,61 @@
                     "items": {
                       "types": [
                         "object"
+                      ],
+                      "properties": {
+                        "name": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "currentState": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "states": {
+                          "types": [
+                            "array"
+                          ],
+                          "items": {
+                            "types": [
+                              "string"
+                            ]
+                          }
+                        },
+                        "cooldown": {
+                          "types": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "currentState",
+                        "states",
+                        "cooldown"
                       ]
                     }
                   },
                   "previousPosition": {
                     "types": [
                       "object"
+                    ],
+                    "properties": {
+                      "x": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "y": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
                     ]
                   },
                   "elevation": {
@@ -28169,6 +31712,31 @@
             "assetManifest": {
               "types": [
                 "object"
+              ],
+              "properties": {
+                "baseUrl": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "terrains": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "units": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "features": {
+                  "types": [
+                    "object"
+                  ]
+                }
+              },
+              "required": [
+                "baseUrl"
               ]
             },
             "backgroundImage": {
@@ -28412,7 +31980,32 @@
           "types": [
             "object"
           ],
-          "description": "error prop"
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -28464,7 +32057,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state (passed through)"
+          "description": "Error state (passed through)",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -28679,7 +32297,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -28933,7 +32576,32 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
@@ -28962,7 +32630,190 @@
             "object"
           ],
           "description": "entity prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "initialUnits": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "unitType": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "heroId": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "spriteSheet": {
+                    "types": [
+                      "object"
+                    ],
+                    "properties": {
+                      "se": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "sw": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "frameWidth": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "frameHeight": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "se",
+                      "sw",
+                      "frameWidth",
+                      "frameHeight"
+                    ]
+                  },
+                  "team": {
+                    "types": [
+                      "string"
+                    ],
+                    "enumValues": [
+                      "player",
+                      "enemy"
+                    ]
+                  },
+                  "position": {
+                    "types": [
+                      "object"
+                    ],
+                    "properties": {
+                      "x": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "y": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "health": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "maxHealth": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "movement": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "attack": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "defense": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "traits": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "object"
+                      ],
+                      "properties": {
+                        "name": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "currentState": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "states": {
+                          "types": [
+                            "array"
+                          ],
+                          "items": {
+                            "types": [
+                              "string"
+                            ]
+                          }
+                        },
+                        "cooldown": {
+                          "types": [
+                            "number"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "name",
+                        "currentState",
+                        "states"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "team",
+                  "position",
+                  "health",
+                  "maxHealth",
+                  "movement",
+                  "attack",
+                  "defense"
+                ]
+              }
+            }
+          },
+          "propertyRequired": [
+            "initialUnits"
+          ]
         }
       }
     },
@@ -28996,14 +32847,308 @@
           "types": [
             "object"
           ],
-          "description": "Error state"
+          "description": "Error state",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         },
         "entity": {
           "types": [
             "object",
             "array"
           ],
-          "description": "World map entity data"
+          "description": "World map entity data",
+          "properties": {
+            "id": {
+              "types": [
+                "string"
+              ]
+            },
+            "hexes": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "terrain": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "terrainSprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "feature": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "featureData": {
+                    "types": [
+                      "object"
+                    ]
+                  },
+                  "passable": {
+                    "types": [
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "terrain"
+                ]
+              }
+            },
+            "heroes": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "owner": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "position": {
+                    "types": [
+                      "object"
+                    ],
+                    "properties": {
+                      "x": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "y": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "x",
+                      "y"
+                    ]
+                  },
+                  "movement": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "spriteSheet": {
+                    "types": [
+                      "object"
+                    ],
+                    "properties": {
+                      "se": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "sw": {
+                        "types": [
+                          "string"
+                        ]
+                      },
+                      "frameWidth": {
+                        "types": [
+                          "number"
+                        ]
+                      },
+                      "frameHeight": {
+                        "types": [
+                          "number"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "se",
+                      "sw",
+                      "frameWidth",
+                      "frameHeight"
+                    ]
+                  },
+                  "level": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "name",
+                  "owner",
+                  "position",
+                  "movement"
+                ]
+              }
+            },
+            "features": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "z": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "sprite": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "assetUrl": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "color": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "elevation": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "type"
+                ]
+              }
+            },
+            "selectedHeroId": {
+              "types": [
+                "string"
+              ]
+            },
+            "assetManifest": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "baseUrl": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "terrains": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "units": {
+                  "types": [
+                    "object"
+                  ]
+                },
+                "features": {
+                  "types": [
+                    "object"
+                  ]
+                }
+              },
+              "required": [
+                "baseUrl"
+              ]
+            },
+            "backgroundImage": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "id",
+            "hexes",
+            "heroes"
+          ]
         },
         "scale": {
           "types": [
@@ -29325,7 +33470,179 @@
             "object"
           ],
           "description": "preset prop",
-          "required": true
+          "required": true,
+          "properties": {
+            "id": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "description": {
+              "types": [
+                "string"
+              ]
+            },
+            "domain": {
+              "types": [
+                "string"
+              ]
+            },
+            "gravity": {
+              "types": [
+                "object"
+              ],
+              "properties": {
+                "x": {
+                  "types": [
+                    "number"
+                  ]
+                },
+                "y": {
+                  "types": [
+                    "number"
+                  ]
+                }
+              },
+              "required": [
+                "x",
+                "y"
+              ]
+            },
+            "bodies": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "vx": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "vy": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "mass": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "radius": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "color": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "fixed": {
+                    "types": [
+                      "boolean"
+                    ]
+                  }
+                },
+                "required": [
+                  "id",
+                  "x",
+                  "y",
+                  "vx",
+                  "vy",
+                  "mass",
+                  "radius",
+                  "color",
+                  "fixed"
+                ]
+              }
+            },
+            "constraints": {
+              "types": [
+                "array"
+              ],
+              "items": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "bodyA": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "bodyB": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "length": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "stiffness": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "bodyA",
+                  "bodyB",
+                  "length",
+                  "stiffness"
+                ]
+              }
+            },
+            "backgroundColor": {
+              "types": [
+                "string"
+              ]
+            },
+            "showVelocity": {
+              "types": [
+                "boolean"
+              ]
+            },
+            "parameters": {
+              "types": [
+                "object"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "id",
+            "name",
+            "description",
+            "domain",
+            "bodies",
+            "parameters"
+          ]
         },
         "width": {
           "types": [
@@ -29705,7 +34022,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -29874,7 +34203,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -30012,7 +34353,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -30132,6 +34485,22 @@
                     "items": {
                       "types": [
                         "object"
+                      ],
+                      "properties": {
+                        "value": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "label": {
+                          "types": [
+                            "string"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
                       ]
                     }
                   },
@@ -30142,6 +34511,22 @@
                     "items": {
                       "types": [
                         "object"
+                      ],
+                      "properties": {
+                        "value": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "label": {
+                          "types": [
+                            "string"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "value",
+                        "label"
                       ]
                     }
                   },
@@ -30239,7 +34624,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -30431,6 +34828,22 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "value": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "label": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "value",
+                  "label"
                 ]
               }
             },
@@ -30441,6 +34854,22 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "value": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "label": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "value",
+                  "label"
                 ]
               }
             },
@@ -30578,6 +35007,22 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "label"
             ]
           }
         },
@@ -30590,6 +35035,22 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "value": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "value",
+              "label"
             ]
           }
         },
@@ -30772,7 +35233,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -31177,6 +35650,118 @@
           "items": {
             "types": [
               "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "category": {
+                "types": [
+                  "string"
+                ]
+              },
+              "description": {
+                "types": [
+                  "string"
+                ]
+              },
+              "iconEmoji": {
+                "types": [
+                  "string"
+                ]
+              },
+              "iconUrl": {
+                "types": [
+                  "string"
+                ]
+              },
+              "stateMachine": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "name": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "states": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "string"
+                      ]
+                    }
+                  },
+                  "currentState": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "transitions": {
+                    "types": [
+                      "array"
+                    ],
+                    "items": {
+                      "types": [
+                        "object"
+                      ],
+                      "properties": {
+                        "from": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "to": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "event": {
+                          "types": [
+                            "string"
+                          ]
+                        },
+                        "guardHint": {
+                          "types": [
+                            "string"
+                          ]
+                        }
+                      },
+                      "required": [
+                        "from",
+                        "to",
+                        "event"
+                      ]
+                    }
+                  },
+                  "description": {
+                    "types": [
+                      "string"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "states",
+                  "currentState",
+                  "transitions"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "category"
             ]
           }
         },
@@ -31478,6 +36063,22 @@
               "items": {
                 "types": [
                   "object"
+                ],
+                "properties": {
+                  "x": {
+                    "types": [
+                      "number"
+                    ]
+                  },
+                  "y": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
                 ]
               }
             },
@@ -31489,7 +36090,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -31700,7 +36313,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -32003,7 +36628,19 @@
             "theme": {
               "types": [
                 "object"
-              ]
+              ],
+              "properties": {
+                "background": {
+                  "types": [
+                    "string"
+                  ]
+                },
+                "accentColor": {
+                  "types": [
+                    "string"
+                  ]
+                }
+              }
             }
           },
           "propertyRequired": [
@@ -32532,7 +37169,13 @@
           "types": [
             "array"
           ],
-          "description": "Currently selected item IDs"
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
         },
         "columns": {
           "types": [
@@ -33663,6 +38306,31 @@
             "object"
           ],
           "description": "Error state.",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ],
           "default": null
         },
         "groupBy": {
@@ -33848,7 +38516,7 @@
         },
         "as": {
           "types": [
-            "unknown"
+            "string"
           ],
           "description": "Custom HTML element"
         },
@@ -34004,7 +38672,7 @@
         },
         "as": {
           "types": [
-            "unknown"
+            "string"
           ],
           "description": "Custom HTML element"
         },
