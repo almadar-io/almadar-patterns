@@ -1,10 +1,12 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-06T01:35:55.147Z",
+  "exportedAt": "2026-06-07T08:37:03.410Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Data table with columns and sorting",
       "suggestedFor": [
         "data-dense views",
@@ -259,6 +261,8 @@
     "entity-list": {
       "type": "entity-list",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Vertical list of items",
       "suggestedFor": [
         "mobile-friendly lists",
@@ -437,6 +441,8 @@
     "entity-cards": {
       "type": "entity-cards",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Grid of cards for visual content",
       "suggestedFor": [
         "visual items",
@@ -687,6 +693,8 @@
     "detail-panel": {
       "type": "detail-panel",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Detail view panel for drawers/sidebars",
       "suggestedFor": [
         "drawer content",
@@ -967,6 +975,8 @@
     "page-header": {
       "type": "page-header",
       "category": "header",
+      "tier": "organisms",
+      "family": "core",
       "description": "Page title with optional breadcrumb and action buttons",
       "suggestedFor": [
         "list pages",
@@ -1115,6 +1125,8 @@
     "form": {
       "type": "form",
       "category": "form",
+      "tier": "organisms",
+      "family": "core",
       "description": "Complete form with fields and actions",
       "suggestedFor": [
         "create forms",
@@ -1521,6 +1533,8 @@
     "form-section": {
       "type": "form-section",
       "category": "form",
+      "tier": "organisms",
+      "family": "core",
       "description": "Alias for form — Complete form with fields and actions",
       "suggestedFor": [
         "create forms",
@@ -1927,6 +1941,8 @@
     "search-input": {
       "type": "search-input",
       "category": "filter",
+      "tier": "molecules",
+      "family": "core",
       "description": "Search input with events",
       "suggestedFor": [
         "search functionality",
@@ -1957,27 +1973,27 @@
           "types": [
             "number"
           ],
-          "description": "Debounce delay in milliseconds @default 300",
+          "description": "Debounce delay in milliseconds",
           "default": 300
         },
         "isLoading": {
           "types": [
             "boolean"
           ],
-          "description": "Show loading state @default false",
+          "description": "Show loading state",
           "default": false
         },
         "placeholder": {
           "types": [
             "string"
           ],
-          "description": "Placeholder text @default 'Search...'"
+          "description": "Placeholder text"
         },
         "clearable": {
           "types": [
             "boolean"
           ],
-          "description": "Show clear button @default true",
+          "description": "Show clear button",
           "default": true
         },
         "className": {
@@ -2009,6 +2025,8 @@
     "filter-group": {
       "type": "filter-group",
       "category": "filter",
+      "tier": "molecules",
+      "family": "core",
       "description": "Multiple filter controls",
       "suggestedFor": [
         "list pages with filterable data"
@@ -2152,6 +2170,8 @@
     "tabs": {
       "type": "tabs",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "Tab navigation within page",
       "suggestedFor": [
         "pages with multiple views",
@@ -2358,6 +2378,8 @@
     "breadcrumb": {
       "type": "breadcrumb",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "Breadcrumb navigation",
       "suggestedFor": [
         "hierarchical navigation",
@@ -2443,6 +2465,8 @@
     "wizard-progress": {
       "type": "wizard-progress",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "Wizard step progress indicator",
       "suggestedFor": [
         "multi-step forms",
@@ -2521,6 +2545,8 @@
     "wizard-navigation": {
       "type": "wizard-navigation",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "Wizard navigation buttons",
       "suggestedFor": [
         "multi-step forms",
@@ -2690,6 +2716,8 @@
     "wizard-container": {
       "type": "wizard-container",
       "category": "navigation",
+      "tier": "organisms",
+      "family": "core",
       "description": "Multi-step wizard container",
       "suggestedFor": [
         "multi-step forms",
@@ -3230,6 +3258,8 @@
     "pagination": {
       "type": "pagination",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "Page navigation controls",
       "suggestedFor": [
         "paginated lists",
@@ -3268,7 +3298,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show page size selector @default false",
+          "description": "Show page size selector",
           "default": false
         },
         "pageSizeOptions": {
@@ -3311,14 +3341,14 @@
           "types": [
             "boolean"
           ],
-          "description": "Show jump to page input @default false",
+          "description": "Show jump to page input",
           "default": false
         },
         "showTotal": {
           "types": [
             "boolean"
           ],
-          "description": "Show total count @default false",
+          "description": "Show total count",
           "default": false
         },
         "totalItems": {
@@ -3331,7 +3361,7 @@
           "types": [
             "number"
           ],
-          "description": "Maximum number of page buttons to show @default 7",
+          "description": "Maximum number of page buttons to show",
           "default": 7
         },
         "className": {
@@ -3373,6 +3403,8 @@
     "empty-state": {
       "type": "empty-state",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "Message when no data exists",
       "suggestedFor": [
         "list pages",
@@ -3470,6 +3502,8 @@
     "loading-state": {
       "type": "loading-state",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "Loading indicator",
       "suggestedFor": [
         "any page with async data"
@@ -3499,6 +3533,8 @@
     "error-state": {
       "type": "error-state",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "Error message display",
       "suggestedFor": [
         "error handling",
@@ -3551,6 +3587,8 @@
     "notification": {
       "type": "notification",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "Toast notification message",
       "suggestedFor": [
         "success messages",
@@ -3655,6 +3693,8 @@
     "stats": {
       "type": "stats",
       "category": "dashboard",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "Key metrics and statistics",
       "suggestedFor": [
         "dashboards",
@@ -3699,6 +3739,8 @@
     "modal": {
       "type": "modal",
       "category": "container",
+      "tier": "molecules",
+      "family": "core",
       "description": "Modal dialog overlay",
       "suggestedFor": [
         "dialogs",
@@ -3815,6 +3857,8 @@
     "drawer": {
       "type": "drawer",
       "category": "container",
+      "tier": "molecules",
+      "family": "core",
       "description": "Side drawer panel",
       "suggestedFor": [
         "detail panels",
@@ -3914,6 +3958,8 @@
     "confirm-dialog": {
       "type": "confirm-dialog",
       "category": "container",
+      "tier": "organisms",
+      "family": "core",
       "description": "Confirmation dialog",
       "suggestedFor": [
         "destructive actions",
@@ -4046,6 +4092,8 @@
     "master-detail": {
       "type": "master-detail",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "List on left, selected item detail on right",
       "suggestedFor": [
         "entity management",
@@ -4168,6 +4216,8 @@
     "box": {
       "type": "box",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "Generic styled container with padding, borders, and backgrounds",
       "suggestedFor": [
         "card containers",
@@ -4424,6 +4474,8 @@
     "grid": {
       "type": "grid",
       "category": "layout",
+      "tier": "molecules",
+      "family": "core",
       "description": "CSS Grid layout for multi-column content",
       "suggestedFor": [
         "dashboards",
@@ -4561,6 +4613,8 @@
     "center": {
       "type": "center",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "Centers content horizontally and vertically",
       "suggestedFor": [
         "centered modals",
@@ -4642,6 +4696,8 @@
     "spacer": {
       "type": "spacer",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "Flexible space that expands to fill available room",
       "suggestedFor": [
         "pushing elements apart",
@@ -4688,6 +4744,8 @@
     "divider": {
       "type": "divider",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "Visual separator between content sections",
       "suggestedFor": [
         "section breaks",
@@ -4700,7 +4758,7 @@
           "types": [
             "string"
           ],
-          "description": "Orientation of the divider @default 'horizontal'",
+          "description": "Orientation of the divider",
           "enumValues": [
             "horizontal",
             "vertical"
@@ -4717,7 +4775,7 @@
           "types": [
             "string"
           ],
-          "description": "Line style variant @default 'solid'",
+          "description": "Line style variant",
           "enumValues": [
             "solid",
             "dashed",
@@ -4736,6 +4794,8 @@
     "runtime-debugger": {
       "type": "runtime-debugger",
       "category": "debug",
+      "tier": "organisms",
+      "family": "core",
       "description": "Debug overlay showing FPS, entity states, event logs",
       "suggestedFor": [
         "development",
@@ -4799,6 +4859,8 @@
     "button": {
       "type": "button",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Clickable button that emits events",
       "suggestedFor": [
         "actions",
@@ -4910,6 +4972,8 @@
     "badge": {
       "type": "badge",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Small label for status or count",
       "suggestedFor": [
         "status indicators",
@@ -4992,6 +5056,8 @@
     "avatar": {
       "type": "avatar",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "User avatar image or initials",
       "suggestedFor": [
         "user profiles",
@@ -5034,7 +5100,7 @@
           "types": [
             "string"
           ],
-          "description": "Size of the avatar @default 'md'",
+          "description": "Size of the avatar",
           "enumValues": [
             "xs",
             "sm",
@@ -5095,6 +5161,8 @@
     "icon": {
       "type": "icon",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Icon from Lucide icon set",
       "suggestedFor": [
         "decorative icons",
@@ -5170,6 +5238,8 @@
     "card": {
       "type": "card",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Card container with optional header and footer",
       "suggestedFor": [
         "content cards",
@@ -5261,6 +5331,8 @@
     "progress-bar": {
       "type": "progress-bar",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Progress indicator bar",
       "suggestedFor": [
         "progress tracking",
@@ -5280,14 +5352,14 @@
           "types": [
             "number"
           ],
-          "description": "Maximum value (for calculating percentage) @default 100",
+          "description": "Maximum value (for calculating percentage)",
           "default": 100
         },
         "progressType": {
           "types": [
             "string"
           ],
-          "description": "Type of the progress bar (linear, circular, stepped) @default 'linear'",
+          "description": "Type of the progress bar (linear, circular, stepped)",
           "enumValues": [
             "linear",
             "circular",
@@ -5299,7 +5371,7 @@
           "types": [
             "string"
           ],
-          "description": "Variant/color of the progress bar @default 'primary'",
+          "description": "Variant/color of the progress bar",
           "enumValues": [
             "default",
             "primary",
@@ -5313,7 +5385,7 @@
           "types": [
             "string"
           ],
-          "description": "Color variant (alias for variant) @default 'primary'",
+          "description": "Color variant (alias for variant)",
           "enumValues": [
             "default",
             "primary",
@@ -5326,7 +5398,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show percentage text @default false",
+          "description": "Show percentage text",
           "default": false
         },
         "showLabel": {
@@ -5346,7 +5418,7 @@
           "types": [
             "string"
           ],
-          "description": "Size (for circular variant) @default 'md'",
+          "description": "Size (for circular variant)",
           "enumValues": [
             "sm",
             "md",
@@ -5358,7 +5430,7 @@
           "types": [
             "number"
           ],
-          "description": "Number of steps (for stepped variant) @default 5",
+          "description": "Number of steps (for stepped variant)",
           "default": 5
         },
         "className": {
@@ -5372,6 +5444,8 @@
     "spinner": {
       "type": "spinner",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Loading spinner animation",
       "suggestedFor": [
         "loading states",
@@ -5403,6 +5477,8 @@
     "input": {
       "type": "input",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Text input field",
       "suggestedFor": [
         "forms",
@@ -5547,6 +5623,8 @@
     "textarea": {
       "type": "textarea",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Multi-line text input",
       "suggestedFor": [
         "long text",
@@ -5591,6 +5669,8 @@
     "select": {
       "type": "select",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Dropdown select input",
       "suggestedFor": [
         "option selection",
@@ -5663,6 +5743,8 @@
     "checkbox": {
       "type": "checkbox",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Checkbox input",
       "suggestedFor": [
         "boolean options",
@@ -5700,6 +5782,8 @@
     "radio": {
       "type": "radio",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Radio button input",
       "suggestedFor": [
         "single selection",
@@ -5759,7 +5843,7 @@
           "types": [
             "string"
           ],
-          "description": "Size of the radio button @default 'md'",
+          "description": "Size of the radio button",
           "enumValues": [
             "sm",
             "md",
@@ -5772,6 +5856,8 @@
     "switch": {
       "type": "switch",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Toggle switch input",
       "suggestedFor": [
         "on/off settings",
@@ -5842,6 +5928,8 @@
     "label": {
       "type": "label",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Form field label",
       "suggestedFor": [
         "form fields",
@@ -5878,6 +5966,8 @@
     "alert": {
       "type": "alert",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Alert message box",
       "suggestedFor": [
         "warnings",
@@ -5965,6 +6055,8 @@
     "tooltip": {
       "type": "tooltip",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Hover tooltip",
       "suggestedFor": [
         "hints",
@@ -6032,6 +6124,8 @@
     "popover": {
       "type": "popover",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Click-triggered popover",
       "suggestedFor": [
         "menus",
@@ -6058,7 +6152,7 @@
           "types": [
             "string"
           ],
-          "description": "Popover position @default 'bottom'",
+          "description": "Popover position",
           "enumValues": [
             "top",
             "bottom",
@@ -6071,7 +6165,7 @@
           "types": [
             "string"
           ],
-          "description": "Trigger type @default 'click'",
+          "description": "Trigger type",
           "enumValues": [
             "click",
             "hover"
@@ -6082,7 +6176,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show arrow @default true",
+          "description": "Show arrow",
           "default": true
         },
         "className": {
@@ -6096,6 +6190,8 @@
     "menu": {
       "type": "menu",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Dropdown menu",
       "suggestedFor": [
         "actions menu",
@@ -6212,6 +6308,8 @@
     "accordion": {
       "type": "accordion",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Collapsible accordion sections",
       "suggestedFor": [
         "FAQs",
@@ -6271,7 +6369,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Allow multiple items open at once @default false",
+          "description": "Allow multiple items open at once",
           "default": false
         },
         "defaultOpenItems": {
@@ -6354,6 +6452,8 @@
     "container": {
       "type": "container",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Centered max-width container",
       "suggestedFor": [
         "page content",
@@ -6435,6 +6535,8 @@
     "simple-grid": {
       "type": "simple-grid",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Simple responsive grid with auto columns",
       "suggestedFor": [
         "card grids",
@@ -6496,6 +6598,8 @@
     "repeatable-form-section": {
       "type": "repeatable-form-section",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "Repeatable form section for multiple entries",
       "suggestedFor": [
         "repeating fields",
@@ -6680,6 +6784,8 @@
     "conditional-wrapper": {
       "type": "conditional-wrapper",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "ConditionalWrapper Atom Component  A wrapper component that conditionally renders its children based on S-expression evaluation. Used for dynamic field visibility in inspection forms.",
       "suggestedFor": [
         "conditional",
@@ -6753,6 +6859,8 @@
     "law-reference-tooltip": {
       "type": "law-reference-tooltip",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "LawReferenceTooltip Atom Component  A specialized tooltip for displaying law references in inspection forms. Shows law name, article number, and relevant clause text.",
       "suggestedFor": [
         "law",
@@ -6831,6 +6939,8 @@
     "overlay": {
       "type": "overlay",
       "category": "container",
+      "tier": "atoms",
+      "family": "core",
       "description": "Overlay Atom Component  A fixed backdrop for modals and drawers.",
       "suggestedFor": [
         "overlay"
@@ -6882,6 +6992,8 @@
     "stack": {
       "type": "stack",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Stack Component  A layout primitive for arranging children in a vertical or horizontal stack with consistent spacing. Includes convenience exports VStack and HStack for common use cases.",
       "suggestedFor": [
         "stack"
@@ -7052,6 +7164,8 @@
     "text-highlight": {
       "type": "text-highlight",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "TextHighlight Atom Component  A styled span component for highlighting text with annotations (questions or notes). Uses different colors for different annotation types: - Questions: Blue highlight - Notes: Yellow highlight",
       "suggestedFor": [
         "text",
@@ -7075,7 +7189,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Whether the highlight is currently active/focused @default false",
+          "description": "Whether the highlight is currently active/focused",
           "default": false
         },
         "onClick": {
@@ -7140,6 +7254,8 @@
     "theme-toggle": {
       "type": "theme-toggle",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "ThemeToggle Atom Component  A button that toggles between light and dark themes. Uses Sun and Moon icons to indicate current/target theme.",
       "suggestedFor": [
         "theme",
@@ -7178,6 +7294,8 @@
     "typography": {
       "type": "typography",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
       "suggestedFor": [
         "typography"
@@ -7332,6 +7450,8 @@
     "form-actions": {
       "type": "form-actions",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "ButtonGroup Molecule Component  A component for grouping buttons together with connected styling. Supports both children-based and form-actions pattern (primary/secondary) usage. Uses Button atoms.",
       "suggestedFor": [
         "button",
@@ -7367,7 +7487,7 @@
           "types": [
             "string"
           ],
-          "description": "Visual variant @default 'default'",
+          "description": "Visual variant",
           "enumValues": [
             "default",
             "segmented",
@@ -7379,7 +7499,7 @@
           "types": [
             "string"
           ],
-          "description": "Orientation @default 'horizontal'",
+          "description": "Orientation",
           "enumValues": [
             "horizontal",
             "vertical"
@@ -7449,7 +7569,7 @@
           "types": [
             "string"
           ],
-          "description": "Layer 2 visual treatment for the action-cluster (form-actions) pattern. @default 'right-aligned-buttons'",
+          "description": "Layer 2 visual treatment for the action-cluster (form-actions) pattern.",
           "enumValues": [
             "right-aligned-buttons",
             "floating-bar",
@@ -7464,6 +7584,8 @@
     "flex": {
       "type": "flex",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Flex Component  A flexbox wrapper with all common flex properties exposed as props. More explicit than Stack for when you need full flex control.",
       "suggestedFor": [
         "flex"
@@ -7592,6 +7714,8 @@
     "floating-action-button": {
       "type": "floating-action-button",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "FloatingActionButton Molecule Component  A floating action button that can expand into multiple actions vertically. Uses Button atom.",
       "suggestedFor": [
         "floating",
@@ -7706,7 +7830,7 @@
           "types": [
             "string"
           ],
-          "description": "Button position @default 'bottom-right'",
+          "description": "Button position",
           "default": "bottom-right"
         },
         "className": {
@@ -7720,6 +7844,8 @@
     "form-field": {
       "type": "form-field",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "FormField Molecule Component  A form field wrapper with label, hint, and error message support. **Atomic Design**: Composed using Label and Typography atoms.",
       "suggestedFor": [
         "form",
@@ -7771,6 +7897,8 @@
     "form-section-header": {
       "type": "form-section-header",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "FormSectionHeader  Header component for collapsible form sections. Provides consistent styling and interaction for section headers.",
       "suggestedFor": [
         "form",
@@ -7859,6 +7987,8 @@
     "input-group": {
       "type": "input-group",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "InputGroup Molecule Component  A component for grouping input with addons (icons, buttons, text). Uses Input, Button, Icon, and Typography atoms.",
       "suggestedFor": [
         "input",
@@ -7892,6 +8022,8 @@
     "relation-select": {
       "type": "relation-select",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "RelationSelect Molecule Component  A searchable select component for relation fields. Allows users to search and select from related entities.  Composed from: Box, HStack, VStack, Input, Button, Spinner, Typography atoms",
       "suggestedFor": [
         "relation",
@@ -8028,6 +8160,8 @@
     "side-panel": {
       "type": "side-panel",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "SidePanel Molecule Component  A side panel that slides in from the right (or left) with header and content. Uses Button, Typography atoms.",
       "suggestedFor": [
         "side",
@@ -8070,14 +8204,14 @@
           "types": [
             "string"
           ],
-          "description": "Panel width as Tailwind class string. Default fills the viewport on mobile and snaps to `w-96` (384 px) at `sm:` and above so phones don't lose content to a fixed 384 px column. Consumers passing a custom value should include a `w-full` mobile fallback in the same string (e.g. `\"w-full sm:w-[480px]\"`) — Tailwind's JIT can't see dynamically-concatenated class names. @default 'w-full sm:w-96'",
+          "description": "Panel width as Tailwind class string. Default fills the viewport on mobile and snaps to `w-96` (384 px) at `sm:` and above so phones don't lose content to a fixed 384 px column. Consumers passing a custom value should include a `w-full` mobile fallback in the same string (e.g. `\"w-full sm:w-[480px]\"`) — Tailwind's JIT can't see dynamically-concatenated class names.",
           "default": "w-full sm:w-96"
         },
         "position": {
           "types": [
             "string"
           ],
-          "description": "Panel position @default 'right'",
+          "description": "Panel position",
           "enumValues": [
             "left",
             "right"
@@ -8088,7 +8222,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show overlay on mobile @default true",
+          "description": "Show overlay on mobile",
           "default": true
         },
         "className": {
@@ -8110,6 +8244,8 @@
     "violation-alert": {
       "type": "violation-alert",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "ViolationAlert  Displays inspection violations with law references and action types. Used in inspection forms to show detected compliance violations.  Action Types: - measure: Corrective measure required (warning) - admin: Administrative action (error) - penalty: Penalty proceedings (error, severe)",
       "suggestedFor": [
         "violation",
@@ -8240,6 +8376,8 @@
     "drawer-slot": {
       "type": "drawer-slot",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "DrawerSlot Component  Wraps drawer slot content in a proper Drawer component. Used by trait-driven pages to display drawer UI from render_ui effects.  Handles: - Auto-open when content is present - Dispatches CLOSE/CANCEL events when closed - Extracts title from Form or DetailPanel components - Configurable position and size",
       "suggestedFor": [
         "drawer",
@@ -8314,6 +8452,8 @@
     "header": {
       "type": "header",
       "category": "header",
+      "tier": "organisms",
+      "family": "core",
       "description": "Header Organism Component  A header component for mobile/responsive layouts with menu toggle, brand, and user avatar. Styled to match the main Layout component's mobile header.",
       "suggestedFor": [
         "header"
@@ -8354,7 +8494,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show menu toggle button @default true",
+          "description": "Show menu toggle button",
           "default": true
         },
         "isMenuOpen": {
@@ -8376,7 +8516,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Show search input @default false",
+          "description": "Show search input",
           "default": false
         },
         "searchPlaceholder": {
@@ -8428,14 +8568,14 @@
           "types": [
             "boolean"
           ],
-          "description": "Sticky header @default true",
+          "description": "Sticky header",
           "default": true
         },
         "variant": {
           "types": [
             "string"
           ],
-          "description": "Variant - mobile shows menu toggle, desktop shows full nav @default 'mobile'",
+          "description": "Variant - mobile shows menu toggle, desktop shows full nav",
           "enumValues": [
             "mobile",
             "desktop"
@@ -8493,6 +8633,8 @@
     "modal-slot": {
       "type": "modal-slot",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "ModalSlot Component  Wraps modal slot content in a proper Modal component. Used by trait-driven pages to display modal UI from render_ui effects.  Handles: - Auto-open when content is present - Dispatches CLOSE/CANCEL events when closed - Extracts title from Form components",
       "suggestedFor": [
         "modal",
@@ -8556,6 +8698,8 @@
     "navigation": {
       "type": "navigation",
       "category": "navigation",
+      "tier": "organisms",
+      "family": "core",
       "description": "Navigation Organism Component  A navigation component with items, active indicators, icons, and badges. Uses Menu, ButtonGroup molecules and Button, Icon, Badge, Typography, Divider atoms.",
       "suggestedFor": [
         "navigation"
@@ -8635,7 +8779,7 @@
           "types": [
             "string"
           ],
-          "description": "Navigation orientation @default 'horizontal'",
+          "description": "Navigation orientation",
           "enumValues": [
             "horizontal",
             "vertical"
@@ -8671,6 +8815,8 @@
     "orbital-visualization": {
       "type": "orbital-visualization",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "OrbitalVisualization Component  Visualizes KFlow schemas as atomic orbitals based on complexity. Uses CSS 3D transforms for lightweight rendering without Three.js.  Orbital Types (based on complexity score): - 1s (1-3): Simple sphere - Red - 2s (4-8): Larger sphere - Orange - 2p (9-15): Dumbbell shape - Yellow - 3s (16-25): Sphere with node - Green - 3p (26-40): Complex dumbbell - Blue - 3d (41-60): Cloverleaf - Indigo - 4f (61+): Multi-lobe - Violet",
       "suggestedFor": [
         "orbital",
@@ -8756,6 +8902,8 @@
     "section": {
       "type": "section",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Section Component  A semantic section wrapper with optional title, description, and action. Perfect for grouping related content with consistent spacing.",
       "suggestedFor": [
         "section"
@@ -8868,6 +9016,8 @@
     "sidebar": {
       "type": "sidebar",
       "category": "navigation",
+      "tier": "organisms",
+      "family": "core",
       "description": "Sidebar Organism Component  A sidebar component with logo, navigation items, user section, and collapse/expand. Styled to match the main Layout component with theme-aware CSS variables.",
       "suggestedFor": [
         "sidebar"
@@ -9054,6 +9204,8 @@
     "split": {
       "type": "split",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "Split Component  A two-column layout with configurable ratios. Perfect for sidebar/content layouts or side-by-side comparisons.",
       "suggestedFor": [
         "split"
@@ -9180,6 +9332,8 @@
     "table": {
       "type": "table",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Table Organism Component  A table component with header row, data rows, pagination, sorting, and filters. Uses Pagination, SearchInput, ButtonGroup, Card, Menu molecules and Button, Icon, Checkbox, Typography, Badge, Divider atoms.",
       "suggestedFor": [
         "table"
@@ -9317,14 +9471,14 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable row selection @default false",
+          "description": "Enable row selection",
           "default": false
         },
         "sortable": {
           "types": [
             "boolean"
           ],
-          "description": "Enable sorting @default false",
+          "description": "Enable sorting",
           "default": false
         },
         "sortColumn": {
@@ -9337,7 +9491,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable search/filter @default false",
+          "description": "Enable search/filter",
           "default": false
         },
         "searchPlaceholder": {
@@ -9350,7 +9504,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable pagination @default false",
+          "description": "Enable pagination",
           "default": false
         },
         "currentPage": {
@@ -9388,7 +9542,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Loading state @default false",
+          "description": "Loading state",
           "default": false
         }
       }
@@ -9396,6 +9550,8 @@
     "toast-slot": {
       "type": "toast-slot",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "ToastSlot Component  Wraps toast slot content in a proper Toast component with positioning. Used by trait-driven pages to display toast UI from render_ui effects.  Handles: - Auto-show when content is present - Dispatches DISMISS event when dismissed - Fixed positioning in corner of screen",
       "suggestedFor": [
         "toast",
@@ -9464,6 +9620,8 @@
     "auth-layout": {
       "type": "auth-layout",
       "category": "template",
+      "tier": "templates",
+      "family": "core",
       "description": "AuthLayout component",
       "suggestedFor": [
         "auth",
@@ -9509,6 +9667,8 @@
     "counter-template": {
       "type": "counter-template",
       "category": "template",
+      "tier": "templates",
+      "family": "core",
       "description": "CounterTemplate  A presentational template for counter/incrementer features. Supports increment, decrement, and reset operations.",
       "suggestedFor": [
         "counter",
@@ -9596,6 +9756,8 @@
     "dashboard-layout": {
       "type": "dashboard-layout",
       "category": "template",
+      "tier": "templates",
+      "family": "core",
       "description": "DashboardLayout component",
       "suggestedFor": [
         "dashboard",
@@ -9837,6 +9999,8 @@
     "game-template": {
       "type": "game-template",
       "category": "template",
+      "tier": "templates",
+      "family": "game",
       "description": "GameTemplate  A presentational template for game applications. Includes a main game canvas/area, HUD overlay, and an optional debug sidebar. **Atomic Design**: Composed using Box, Typography, and Layout molecules/atoms.",
       "suggestedFor": [
         "game",
@@ -9902,6 +10066,8 @@
     "generic-app-template": {
       "type": "generic-app-template",
       "category": "template",
+      "tier": "templates",
+      "family": "core",
       "description": "GenericAppTemplate  A simple, generic template for any application. Includes a header with title and actions, and a main content area. **Atomic Design**: Composed using Box, Typography, and Button atoms.",
       "suggestedFor": [
         "generic",
@@ -9961,6 +10127,8 @@
     "game-shell": {
       "type": "game-shell",
       "category": "template",
+      "tier": "templates",
+      "family": "game",
       "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients — no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
       "suggestedFor": [
         "game",
@@ -10006,6 +10174,8 @@
     "chart": {
       "type": "chart",
       "category": "visualization",
+      "tier": "organisms",
+      "family": "core",
       "description": "Data visualization chart supporting bar, line, pie, area, and donut types",
       "suggestedFor": [
         "dashboards",
@@ -10328,6 +10498,8 @@
     "meter": {
       "type": "meter",
       "category": "visualization",
+      "tier": "molecules",
+      "family": "core",
       "description": "Gauge/meter component for displaying a value within a range with thresholds",
       "suggestedFor": [
         "dashboards",
@@ -10505,6 +10677,8 @@
     "timeline": {
       "type": "timeline",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Vertical timeline for displaying chronological events with status indicators",
       "suggestedFor": [
         "activity logs",
@@ -10689,6 +10863,8 @@
     "media-gallery": {
       "type": "media-gallery",
       "category": "media",
+      "tier": "organisms",
+      "family": "core",
       "description": "Grid gallery for images and media with lightbox, selection, and upload",
       "suggestedFor": [
         "photo galleries",
@@ -10902,6 +11078,8 @@
     "signature-pad": {
       "type": "signature-pad",
       "category": "form",
+      "tier": "organisms",
+      "family": "core",
       "description": "Canvas-based signature capture pad with draw, clear, and confirm actions",
       "suggestedFor": [
         "form signing",
@@ -11023,6 +11201,8 @@
     "document-viewer": {
       "type": "document-viewer",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Document viewer for PDFs, text, HTML, and markdown with zoom and pagination",
       "suggestedFor": [
         "document management",
@@ -11186,6 +11366,8 @@
     "graph-canvas": {
       "type": "graph-canvas",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "Force-directed graph visualization for node-link data with interactive zoom, pan, and layout",
       "suggestedFor": [
         "knowledge graphs",
@@ -11392,6 +11574,8 @@
     "code-viewer": {
       "type": "code-viewer",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "Code and diff viewer with line numbers, copy, word-wrap, and multi-file tabs",
       "suggestedFor": [
         "code display",
@@ -11596,6 +11780,8 @@
     "battle-template": {
       "type": "battle-template",
       "category": "template",
+      "tier": "templates",
+      "family": "game",
       "description": "BattleTemplate  Generalized tactical battle template composing IsometricCanvas from almadar-ui. Provides turn-based phase management, movement animation, valid-move/attack-target calculation, screen shake/flash, and a game-over overlay.  Game-specific UI (combat log, trait viewer, damage popups, etc.) is injected via render-prop slots so this template remains project-agnostic.",
       "suggestedFor": [
         "battle",
@@ -11636,6 +11822,8 @@
     "castle-template": {
       "type": "castle-template",
       "category": "template",
+      "tier": "templates",
+      "family": "game",
       "description": "CastleTemplate  Generalized castle / base-management template composing IsometricCanvas from almadar-ui. Renders an isometric courtyard/base view and exposes a side-panel area via slots for game-specific UI (building details, recruitment, garrison).",
       "suggestedFor": [
         "castle",
@@ -11669,6 +11857,8 @@
     "world-map-template": {
       "type": "world-map-template",
       "category": "template",
+      "tier": "templates",
+      "family": "game",
       "description": "WorldMapTemplate  Generalized strategic world-map template composing IsometricCanvas from almadar-ui. Renders an isometric hex/iso map with hero selection, movement animation, and encounter callbacks. Game-specific panels (hero detail, hero lists, resource bars) are injected via render-prop slots.",
       "suggestedFor": [
         "world",
@@ -11723,6 +11913,8 @@
     "error-boundary": {
       "type": "error-boundary",
       "category": "state",
+      "tier": "molecules",
+      "family": "core",
       "description": "ErrorBoundary component",
       "suggestedFor": [
         "error",
@@ -11773,6 +11965,8 @@
     "skeleton": {
       "type": "skeleton",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Skeleton component",
       "suggestedFor": [
         "skeleton"
@@ -11825,6 +12019,8 @@
     "quiz-block": {
       "type": "quiz-block",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "QuizBlock Molecule Component  A collapsible Q&A block for embedded quiz questions in content. Shows the question with a reveal button for the answer.  Event Contract: - No events emitted (self-contained interaction) - entityAware: false",
       "suggestedFor": [
         "quiz",
@@ -11858,6 +12054,8 @@
     "code-block": {
       "type": "code-block",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "CodeBlock Molecule Component  A syntax-highlighted code block with copy-to-clipboard functionality. Preserves scroll position during re-renders.  Event Contract: - Emits: UI:COPY_CODE { language, success }",
       "suggestedFor": [
         "code",
@@ -11905,7 +12103,7 @@
           "types": [
             "boolean"
           ],
-          "description": "Enable JSON-style code folding (default: true for json/orb)"
+          "description": "Enable brace-based code folding of multi-line `{}`/`[]` blocks (default: true)."
         },
         "className": {
           "types": [
@@ -11944,6 +12142,8 @@
     "markdown-content": {
       "type": "markdown-content",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "MarkdownContent Molecule Component  Renders markdown content with support for GFM (GitHub Flavored Markdown), math equations (KaTeX), and raw HTML. Handles inline code only — fenced code blocks should be parsed out and rendered with CodeBlock component.  Event Contract: - No events emitted (display-only component) - entityAware: false  NOTE: react-markdown's `components` override API requires native HTML elements — this is the same library-boundary exception as `<iframe>` in DocumentViewer and `<svg>` in JazariStateMachine/StateMachineView.",
       "suggestedFor": [
         "markdown",
@@ -11980,6 +12180,8 @@
     "content-renderer": {
       "type": "content-renderer",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "ContentRenderer Organism  Renders rich content as a sequence of typed segments: markdown, code, orbital diagrams (via JazariStateMachine), and quiz blocks. Accepts either raw content string (auto-parsed) or pre-parsed segments.  Event Contract: - Delegates to child components (CodeBlock -> UI:COPY_CODE) - entityAware: false",
       "suggestedFor": [
         "content",
@@ -12095,6 +12297,8 @@
     "jazari-state-machine": {
       "type": "jazari-state-machine",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "JazariStateMachine component",
       "suggestedFor": [
         "jazari",
@@ -12170,6 +12374,8 @@
     "state-machine-view": {
       "type": "state-machine-view",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "StateMachineView component",
       "suggestedFor": [
         "state",
@@ -12227,6 +12433,8 @@
     "scaled-diagram": {
       "type": "scaled-diagram",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "ScaledDiagram Molecule  Wraps a fixed-size diagram (like JazariStateMachine / StateMachineView) and CSS-scales it to fit the parent container width.  The diagram renders at its natural (large) size. We observe the content element and once the diagram is measured we apply transform:scale() with a corrected container height so surrounding layout flows correctly.  Event Contract: - No events emitted (layout-only wrapper) - entityAware: false",
       "suggestedFor": [
         "scaled",
@@ -12253,6 +12461,8 @@
     "day-cell": {
       "type": "day-cell",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "DayCell component",
       "suggestedFor": [
         "day",
@@ -12299,6 +12509,8 @@
     "flip-container": {
       "type": "flip-container",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "FlipContainer component",
       "suggestedFor": [
         "flip",
@@ -12340,6 +12552,8 @@
     "time-slot-cell": {
       "type": "time-slot-cell",
       "category": "layout",
+      "tier": "atoms",
+      "family": "core",
       "description": "TimeSlotCell component",
       "suggestedFor": [
         "time",
@@ -12393,6 +12607,8 @@
     "calendar-grid": {
       "type": "calendar-grid",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "CalendarGrid component",
       "suggestedFor": [
         "calendar",
@@ -12570,6 +12786,8 @@
     "chart-legend": {
       "type": "chart-legend",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "ChartLegend component",
       "suggestedFor": [
         "chart",
@@ -12628,6 +12846,8 @@
     "date-range-selector": {
       "type": "date-range-selector",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "DateRangeSelector component",
       "suggestedFor": [
         "date",
@@ -12695,6 +12915,8 @@
     "flip-card": {
       "type": "flip-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "FlipCard component",
       "suggestedFor": [
         "flip",
@@ -12750,6 +12972,8 @@
     "graph-view": {
       "type": "graph-view",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "GraphView component",
       "suggestedFor": [
         "graph",
@@ -12901,6 +13125,8 @@
     "line-chart": {
       "type": "line-chart",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "LineChart component",
       "suggestedFor": [
         "line",
@@ -13003,6 +13229,8 @@
     "progress-dots": {
       "type": "progress-dots",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "ProgressDots component",
       "suggestedFor": [
         "progress",
@@ -13074,6 +13302,8 @@
     "data-grid": {
       "type": "data-grid",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "DataGrid component",
       "suggestedFor": [
         "data",
@@ -13434,7 +13664,7 @@
           "types": [
             "function"
           ],
-          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync.",
+          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop.",
           "kind": "callback",
           "callbackArgs": [
             {
@@ -13473,6 +13703,8 @@
     "data-list": {
       "type": "data-list",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "DataList component",
       "suggestedFor": [
         "data",
@@ -13870,7 +14102,7 @@
           "types": [
             "function"
           ],
-          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop. @deprecated Use children render prop in React code. This prop exists for pattern registry sync.",
+          "description": "Per-item render function (schema-level alias for children render prop). In .orb schemas: [\"fn\", \"item\", { pattern tree with @item.field bindings }] The compiler converts this to the children render prop.",
           "kind": "callback",
           "callbackArgs": [
             {
@@ -13909,6 +14141,8 @@
     "map-view": {
       "type": "map-view",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "MapView component",
       "suggestedFor": [
         "map",
@@ -14173,6 +14407,8 @@
     "range-slider": {
       "type": "range-slider",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "RangeSlider component",
       "suggestedFor": [
         "range",
@@ -14298,6 +14534,8 @@
     "status-dot": {
       "type": "status-dot",
       "category": "display",
+      "tier": "atoms",
+      "family": "core",
       "description": "StatusDot component",
       "suggestedFor": [
         "status",
@@ -14357,6 +14595,8 @@
     "trend-indicator": {
       "type": "trend-indicator",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "TrendIndicator component",
       "suggestedFor": [
         "trend",
@@ -14425,6 +14665,8 @@
     "lightbox": {
       "type": "lightbox",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Lightbox component",
       "suggestedFor": [
         "lightbox"
@@ -14520,6 +14762,8 @@
     "number-stepper": {
       "type": "number-stepper",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "NumberStepper component",
       "suggestedFor": [
         "number",
@@ -14616,6 +14860,8 @@
     "star-rating": {
       "type": "star-rating",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "StarRating component",
       "suggestedFor": [
         "star",
@@ -14711,6 +14957,8 @@
     "upload-drop-zone": {
       "type": "upload-drop-zone",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "UploadDropZone component",
       "suggestedFor": [
         "upload",
@@ -14802,6 +15050,8 @@
     "animated-counter": {
       "type": "animated-counter",
       "category": "component",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "AnimatedCounter component",
       "suggestedFor": [
         "animated",
@@ -14848,6 +15098,8 @@
     "confetti-effect": {
       "type": "confetti-effect",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "ConfettiEffect component",
       "suggestedFor": [
         "confetti",
@@ -14888,6 +15140,8 @@
     "infinite-scroll-sentinel": {
       "type": "infinite-scroll-sentinel",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "InfiniteScrollSentinel component",
       "suggestedFor": [
         "infinite",
@@ -14943,6 +15197,8 @@
     "typewriter-text": {
       "type": "typewriter-text",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "TypewriterText component",
       "suggestedFor": [
         "typewriter",
@@ -14991,6 +15247,8 @@
     "carousel": {
       "type": "carousel",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "Carousel component",
       "suggestedFor": [
         "carousel"
@@ -15109,6 +15367,8 @@
     "pull-to-refresh": {
       "type": "pull-to-refresh",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "PullToRefresh component",
       "suggestedFor": [
         "pull",
@@ -15156,6 +15416,8 @@
     "sortable-list": {
       "type": "sortable-list",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "SortableList component",
       "suggestedFor": [
         "sortable",
@@ -15233,6 +15495,8 @@
     "swipeable-row": {
       "type": "swipeable-row",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "SwipeableRow component",
       "suggestedFor": [
         "swipeable",
@@ -15374,6 +15638,8 @@
     "stat-display": {
       "type": "stat-display",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "StatDisplay component",
       "suggestedFor": [
         "stat",
@@ -15565,6 +15831,8 @@
     "content-section": {
       "type": "content-section",
       "category": "component",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "ContentSection component",
       "suggestedFor": [
         "content",
@@ -15622,6 +15890,8 @@
     "section-header": {
       "type": "section-header",
       "category": "header",
+      "tier": "atoms",
+      "family": "core",
       "description": "SectionHeader component",
       "suggestedFor": [
         "section",
@@ -15673,6 +15943,8 @@
     "article-section": {
       "type": "article-section",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "ArticleSection component",
       "suggestedFor": [
         "article",
@@ -15718,6 +15990,8 @@
     "case-study-card": {
       "type": "case-study-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "CaseStudyCard component",
       "suggestedFor": [
         "case",
@@ -15779,6 +16053,8 @@
     "code-example": {
       "type": "code-example",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "CodeExample component",
       "suggestedFor": [
         "code",
@@ -15831,6 +16107,8 @@
     "community-links": {
       "type": "community-links",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "CommunityLinks component",
       "suggestedFor": [
         "community",
@@ -15880,6 +16158,8 @@
     "feature-card": {
       "type": "feature-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "FeatureCard component",
       "suggestedFor": [
         "feature",
@@ -15958,6 +16238,8 @@
     "feature-grid": {
       "type": "feature-grid",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "FeatureGrid component",
       "suggestedFor": [
         "feature",
@@ -16066,6 +16348,8 @@
     "hero-section": {
       "type": "hero-section",
       "category": "header",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "HeroSection component",
       "suggestedFor": [
         "hero",
@@ -16194,6 +16478,8 @@
     "install-box": {
       "type": "install-box",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "InstallBox component",
       "suggestedFor": [
         "install",
@@ -16226,6 +16512,8 @@
     "pricing-card": {
       "type": "pricing-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "PricingCard component",
       "suggestedFor": [
         "pricing",
@@ -16297,6 +16585,8 @@
     "pricing-grid": {
       "type": "pricing-grid",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "PricingGrid component",
       "suggestedFor": [
         "pricing",
@@ -16381,6 +16671,8 @@
     "service-catalog": {
       "type": "service-catalog",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "ServiceCatalog component",
       "suggestedFor": [
         "service",
@@ -16433,6 +16725,8 @@
     "showcase-card": {
       "type": "showcase-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "ShowcaseCard component",
       "suggestedFor": [
         "showcase",
@@ -16490,6 +16784,8 @@
     "social-proof": {
       "type": "social-proof",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "SocialProof component",
       "suggestedFor": [
         "social",
@@ -16553,6 +16849,8 @@
     "split-section": {
       "type": "split-section",
       "category": "layout",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "SplitSection component",
       "suggestedFor": [
         "split",
@@ -16632,6 +16930,8 @@
     "stats-grid": {
       "type": "stats-grid",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "StatsGrid component",
       "suggestedFor": [
         "stats",
@@ -16670,6 +16970,8 @@
     "step-item": {
       "type": "step-item",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "StepItem component",
       "suggestedFor": [
         "step",
@@ -16709,6 +17011,8 @@
     "tag-cloud": {
       "type": "tag-cloud",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "TagCloud component",
       "suggestedFor": [
         "tag",
@@ -16747,6 +17051,8 @@
     "team-card": {
       "type": "team-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "TeamCard component",
       "suggestedFor": [
         "team",
@@ -16800,6 +17106,8 @@
     "case-study-organism": {
       "type": "case-study-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "CaseStudyOrganism component",
       "suggestedFor": [
         "case",
@@ -16951,6 +17259,8 @@
     "feature-grid-organism": {
       "type": "feature-grid-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "FeatureGridOrganism component",
       "suggestedFor": [
         "feature",
@@ -17102,6 +17412,8 @@
     "hero-organism": {
       "type": "hero-organism",
       "category": "header",
+      "tier": "organisms",
+      "family": "core",
       "description": "HeroOrganism component",
       "suggestedFor": [
         "hero",
@@ -17336,6 +17648,8 @@
     "pricing-organism": {
       "type": "pricing-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "PricingOrganism component",
       "suggestedFor": [
         "pricing",
@@ -17502,6 +17816,8 @@
     "showcase-organism": {
       "type": "showcase-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "ShowcaseOrganism component",
       "suggestedFor": [
         "showcase",
@@ -17673,6 +17989,8 @@
     "stats-organism": {
       "type": "stats-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "StatsOrganism component",
       "suggestedFor": [
         "stats",
@@ -17796,6 +18114,8 @@
     "step-flow-organism": {
       "type": "step-flow-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "StepFlowOrganism component",
       "suggestedFor": [
         "step",
@@ -17953,6 +18273,8 @@
     "team-organism": {
       "type": "team-organism",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "TeamOrganism component",
       "suggestedFor": [
         "team",
@@ -18097,6 +18419,8 @@
     "about-page-template": {
       "type": "about-page-template",
       "category": "template",
+      "tier": "templates",
+      "family": "marketing",
       "description": "AboutPageTemplate  An about/company page template with hero, articles, team grid, case studies, and CTA. Pure function: no hooks, no callbacks, no local state.",
       "suggestedFor": [
         "about",
@@ -18124,6 +18448,8 @@
     "feature-detail-page-template": {
       "type": "feature-detail-page-template",
       "category": "template",
+      "tier": "templates",
+      "family": "marketing",
       "description": "FeatureDetailPageTemplate  A feature detail page with hero, alternating split sections, and CTA. Pure function: no hooks, no callbacks, no local state.",
       "suggestedFor": [
         "feature",
@@ -18152,6 +18478,8 @@
     "landing-page-template": {
       "type": "landing-page-template",
       "category": "template",
+      "tier": "templates",
+      "family": "marketing",
       "description": "LandingPageTemplate  A full marketing landing page template composing hero, features, stats, steps, showcase, CTA, and community sections from molecule components. Pure function: no hooks, no callbacks, no local state.",
       "suggestedFor": [
         "landing",
@@ -18197,6 +18525,8 @@
     "pricing-page-template": {
       "type": "pricing-page-template",
       "category": "template",
+      "tier": "templates",
+      "family": "marketing",
       "description": "PricingPageTemplate  A pricing page template with hero, pricing grid, FAQ accordion, and CTA. Pure function: no hooks, no callbacks, no local state.",
       "suggestedFor": [
         "pricing",
@@ -18224,6 +18554,8 @@
     "animated-graphic": {
       "type": "animated-graphic",
       "category": "component",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "AnimatedGraphic component",
       "suggestedFor": [
         "animated",
@@ -18328,6 +18660,8 @@
     "animated-reveal": {
       "type": "animated-reveal",
       "category": "component",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "AnimatedReveal component",
       "suggestedFor": [
         "animated",
@@ -18425,6 +18759,8 @@
     "pattern-tile": {
       "type": "pattern-tile",
       "category": "game",
+      "tier": "atoms",
+      "family": "marketing",
       "description": "PatternTile component",
       "suggestedFor": [
         "pattern",
@@ -18488,6 +18824,8 @@
     "edge-decoration": {
       "type": "edge-decoration",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "EdgeDecoration component",
       "suggestedFor": [
         "edge",
@@ -18559,6 +18897,8 @@
     "geometric-pattern": {
       "type": "geometric-pattern",
       "category": "component",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "GeometricPattern component",
       "suggestedFor": [
         "geometric",
@@ -18650,6 +18990,8 @@
     "cta-banner": {
       "type": "cta-banner",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "marketing",
       "description": "CTABanner component",
       "suggestedFor": [
         "banner",
@@ -18718,6 +19060,8 @@
     "ui-slot-renderer": {
       "type": "ui-slot-renderer",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "UISlotRenderer component",
       "suggestedFor": [
         "slot",
@@ -18787,6 +19131,8 @@
     "trait-frame": {
       "type": "trait-frame",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "TraitFrame — renders the current frame of a referenced trait.  Resolves the `@trait.X[.slot]` binding at render time by looking up the referenced trait's last `render-ui` payload from the orbital's `UISlotManager`. Re-renders automatically when that trait transitions via the per-trait subscription channel (`subscribeTrait`).  This is the single rendering primitive both runtime paths converge on:  - **Interpreted path** — the trait-binding resolver in `renderer/trait-binding-resolver.ts` walks pattern trees at render time, substituting `\"@trait.X\"` string children with this component. - **Compiled path** — the TypeScript shell codegen in `orbital-shell-typescript/src/backend.rs::pattern_to_jsx_with_data` emits this component directly into generated JSX wherever a `@trait.*` string appears in a pattern tree.  Embedding is passive: the referenced trait's state machine runs unchanged; TraitFrame is only a read-only lens on its current frame. Event propagation happens over the shared event bus, not through this component.",
       "suggestedFor": [
         "trait",
@@ -18806,13 +19152,16 @@
           "types": [
             "node"
           ],
-          "description": "Rendered when the referenced trait has not (yet) emitted any render-ui. Use a skeleton, spinner, or message. Defaults to `null` (renders nothing), so an unfulfilled reference drops cleanly out of a parent `children:` array."
+          "description": "Rendered when the referenced trait has not (yet) emitted any render-ui. Use a skeleton, spinner, or message. Defaults to `null` (renders nothing), so an unfulfilled reference drops cleanly out of a parent `children:` array.",
+          "default": null
         }
       }
     },
     "file-tree": {
       "type": "file-tree",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "FileTree component",
       "suggestedFor": [
         "file",
@@ -18916,6 +19265,8 @@
     "filter-pill": {
       "type": "filter-pill",
       "category": "filter",
+      "tier": "atoms",
+      "family": "core",
       "description": "FilterPill component",
       "suggestedFor": [
         "filter",
@@ -19028,6 +19379,8 @@
     "likert-scale": {
       "type": "likert-scale",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "LikertScale component",
       "suggestedFor": [
         "likert",
@@ -19146,6 +19499,8 @@
     "matrix-question": {
       "type": "matrix-question",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "MatrixQuestion component",
       "suggestedFor": [
         "matrix",
@@ -19287,6 +19642,8 @@
     "qr-scanner": {
       "type": "qr-scanner",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "QrScanner component",
       "suggestedFor": [
         "scanner",
@@ -19393,6 +19750,8 @@
     "vote-stack": {
       "type": "vote-stack",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "VoteStack component",
       "suggestedFor": [
         "vote",
@@ -19494,6 +19853,8 @@
     "branching-logic-builder": {
       "type": "branching-logic-builder",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "BranchingLogicBuilder component",
       "suggestedFor": [
         "branching",
@@ -19564,6 +19925,8 @@
     "reply-tree": {
       "type": "reply-tree",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "ReplyTree component",
       "suggestedFor": [
         "reply",
@@ -19797,6 +20160,8 @@
     "rich-block-editor": {
       "type": "rich-block-editor",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "RichBlockEditor component",
       "suggestedFor": [
         "rich",
@@ -19870,6 +20235,8 @@
     "version-diff": {
       "type": "version-diff",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "VersionDiff component",
       "suggestedFor": [
         "version",
@@ -20007,6 +20374,8 @@
     "option-constraint-group": {
       "type": "option-constraint-group",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "OptionConstraintGroup Molecule Component  Generic constrained option selector (radio for \"single\", checkbox for \"multi\") with required/optional/multi constraints. Renders radio inputs for `single` constraint and checkboxes for `multi`. Reports validation errors inline when the current selection violates the constraint.  **Atomic Design**: Composed using Typography atom and native form controls.",
       "suggestedFor": [
         "option",
@@ -20147,6 +20516,8 @@
     "positioned-canvas": {
       "type": "positioned-canvas",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "PositionedCanvas component",
       "suggestedFor": [
         "positioned",
@@ -20347,6 +20718,8 @@
     "action-button": {
       "type": "action-button",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ActionButton component",
       "suggestedFor": [
         "action",
@@ -20431,6 +20804,8 @@
     "choice-button": {
       "type": "choice-button",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ChoiceButton component",
       "suggestedFor": [
         "choice",
@@ -20485,6 +20860,8 @@
     "combo-counter": {
       "type": "combo-counter",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ComboCounter component",
       "suggestedFor": [
         "combo",
@@ -20535,6 +20912,8 @@
     "control-button": {
       "type": "control-button",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ControlButton component",
       "suggestedFor": [
         "control",
@@ -20629,6 +21008,8 @@
     "damage-number": {
       "type": "damage-number",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "DamageNumber component",
       "suggestedFor": [
         "damage",
@@ -20680,6 +21061,8 @@
     "dialogue-bubble": {
       "type": "dialogue-bubble",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "DialogueBubble component",
       "suggestedFor": [
         "dialogue",
@@ -20729,6 +21112,8 @@
     "health-bar": {
       "type": "health-bar",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "HealthBar component",
       "suggestedFor": [
         "health",
@@ -20793,6 +21178,8 @@
     "item-slot": {
       "type": "item-slot",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ItemSlot component",
       "suggestedFor": [
         "item",
@@ -20876,6 +21263,8 @@
     "mini-map": {
       "type": "mini-map",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "MiniMap component",
       "suggestedFor": [
         "mini",
@@ -20953,6 +21342,8 @@
     "resource-counter": {
       "type": "resource-counter",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ResourceCounter component",
       "suggestedFor": [
         "resource",
@@ -21016,6 +21407,8 @@
     "score-display": {
       "type": "score-display",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "ScoreDisplay component",
       "suggestedFor": [
         "score",
@@ -21081,6 +21474,8 @@
     "sprite": {
       "type": "sprite",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "Sprite component",
       "suggestedFor": [
         "sprite"
@@ -21204,6 +21599,8 @@
     "state-indicator": {
       "type": "state-indicator",
       "category": "game",
+      "tier": "atoms",
+      "family": "game",
       "description": "StateIndicator Component  Displays a visual indicator for a game entity's current state. Generic — not tied to any specific game. Projects can extend the state styles via the `stateStyles` prop.",
       "suggestedFor": [
         "state",
@@ -21261,6 +21658,8 @@
     "status-effect": {
       "type": "status-effect",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "StatusEffect component",
       "suggestedFor": [
         "status",
@@ -21329,6 +21728,8 @@
     "timer-display": {
       "type": "timer-display",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "TimerDisplay component",
       "suggestedFor": [
         "timer",
@@ -21391,6 +21792,8 @@
     "turn-indicator": {
       "type": "turn-indicator",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "TurnIndicator component",
       "suggestedFor": [
         "turn",
@@ -21447,6 +21850,8 @@
     "waypoint-marker": {
       "type": "waypoint-marker",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "WaypointMarker component",
       "suggestedFor": [
         "waypoint",
@@ -21504,6 +21909,8 @@
     "xp-bar": {
       "type": "xp-bar",
       "category": "game",
+      "tier": "atoms",
+      "family": "core",
       "description": "XPBar component",
       "suggestedFor": [
         "bar",
@@ -21568,6 +21975,8 @@
     "svg-branch": {
       "type": "svg-branch",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgBranch component",
       "suggestedFor": [
         "svg",
@@ -21641,6 +22050,8 @@
     "svg-connection": {
       "type": "svg-connection",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgConnection component",
       "suggestedFor": [
         "svg",
@@ -21721,6 +22132,8 @@
     "svg-flow": {
       "type": "svg-flow",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgFlow component",
       "suggestedFor": [
         "svg",
@@ -21780,6 +22193,8 @@
     "svg-grid": {
       "type": "svg-grid",
       "category": "display",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgGrid component",
       "suggestedFor": [
         "svg",
@@ -21867,6 +22282,8 @@
     "svg-lobe": {
       "type": "svg-lobe",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgLobe component",
       "suggestedFor": [
         "svg",
@@ -21942,6 +22359,8 @@
     "svg-mesh": {
       "type": "svg-mesh",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgMesh component",
       "suggestedFor": [
         "svg",
@@ -22010,6 +22429,8 @@
     "svg-morph": {
       "type": "svg-morph",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgMorph component",
       "suggestedFor": [
         "svg",
@@ -22076,6 +22497,8 @@
     "svg-node": {
       "type": "svg-node",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgNode component",
       "suggestedFor": [
         "svg",
@@ -22148,6 +22571,8 @@
     "svg-pulse": {
       "type": "svg-pulse",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgPulse component",
       "suggestedFor": [
         "svg",
@@ -22216,6 +22641,8 @@
     "svg-ring": {
       "type": "svg-ring",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgRing component",
       "suggestedFor": [
         "svg",
@@ -22295,6 +22722,8 @@
     "svg-shield": {
       "type": "svg-shield",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgShield component",
       "suggestedFor": [
         "svg",
@@ -22361,6 +22790,8 @@
     "svg-stack": {
       "type": "svg-stack",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "SvgStack component",
       "suggestedFor": [
         "svg",
@@ -22439,6 +22870,8 @@
     "doc-breadcrumb": {
       "type": "doc-breadcrumb",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocBreadcrumb component",
       "suggestedFor": [
         "doc",
@@ -22485,6 +22918,8 @@
     "doc-code-block": {
       "type": "doc-code-block",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocCodeBlock component",
       "suggestedFor": [
         "doc",
@@ -22531,6 +22966,8 @@
     "doc-pagination": {
       "type": "doc-pagination",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocPagination component",
       "suggestedFor": [
         "doc",
@@ -22604,6 +23041,8 @@
     "doc-search": {
       "type": "doc-search",
       "category": "filter",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocSearch component",
       "suggestedFor": [
         "doc",
@@ -22643,6 +23082,8 @@
     "doc-sidebar": {
       "type": "doc-sidebar",
       "category": "navigation",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocSidebar component",
       "suggestedFor": [
         "doc",
@@ -22704,6 +23145,8 @@
     "doc-toc": {
       "type": "doc-toc",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "DocTOC component",
       "suggestedFor": [
         "doc",
@@ -22762,6 +23205,8 @@
     "gradient-divider": {
       "type": "gradient-divider",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "GradientDivider component",
       "suggestedFor": [
         "gradient",
@@ -22787,6 +23232,8 @@
     "pull-quote": {
       "type": "pull-quote",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "PullQuote component",
       "suggestedFor": [
         "pull",
@@ -22813,6 +23260,8 @@
     "behavior-view": {
       "type": "behavior-view",
       "category": "component",
+      "tier": "molecules",
+      "family": "avl",
       "description": "BehaviorView component",
       "suggestedFor": [
         "behavior",
@@ -23031,6 +23480,8 @@
     "module-card": {
       "type": "module-card",
       "category": "display",
+      "tier": "molecules",
+      "family": "avl",
       "description": "ModuleCard component",
       "suggestedFor": [
         "module",
@@ -23249,6 +23700,8 @@
     "action-buttons": {
       "type": "action-buttons",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "Event Contract: Emits: UI:ACTION",
       "suggestedFor": [
         "action",
@@ -23371,6 +23824,8 @@
     "combat-log": {
       "type": "combat-log",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "CombatLog Component  Scrollable log of combat events with icons and colors. Generalized from Trait Wars — removed asset manifest coupling.",
       "suggestedFor": [
         "combat",
@@ -23487,6 +23942,8 @@
     "crafting-recipe": {
       "type": "crafting-recipe",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "CraftingRecipe component",
       "suggestedFor": [
         "crafting",
@@ -23581,6 +24038,8 @@
     "d-pad": {
       "type": "d-pad",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "Event Contract: Emits: UI:DIRECTION",
       "suggestedFor": [
         "pad",
@@ -23660,6 +24119,8 @@
     "dialogue-box": {
       "type": "dialogue-box",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "Event Contract: Emits: UI:COMPLETE Emits: UI:CHOICE Emits: UI:ADVANCE",
       "suggestedFor": [
         "dialogue",
@@ -23804,6 +24265,8 @@
     "enemy-plate": {
       "type": "enemy-plate",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "EnemyPlate component",
       "suggestedFor": [
         "enemy",
@@ -23886,6 +24349,8 @@
     "game-canvas-2d": {
       "type": "game-canvas-2d",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "GameCanvas2D component",
       "suggestedFor": [
         "game",
@@ -23981,6 +24446,8 @@
     "game-hud": {
       "type": "game-hud",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "GameHud component",
       "suggestedFor": [
         "game",
@@ -24125,6 +24592,8 @@
     "game-menu": {
       "type": "game-menu",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "GameMenu component",
       "suggestedFor": [
         "game",
@@ -24210,6 +24679,8 @@
     "game-over-screen": {
       "type": "game-over-screen",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "GameOverScreen component",
       "suggestedFor": [
         "game",
@@ -24358,6 +24829,8 @@
     "health-panel": {
       "type": "health-panel",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "HealthPanel component",
       "suggestedFor": [
         "health",
@@ -24433,6 +24906,8 @@
     "inventory-grid": {
       "type": "inventory-grid",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "InventoryGrid component",
       "suggestedFor": [
         "inventory",
@@ -24559,6 +25034,8 @@
     "inventory-panel": {
       "type": "inventory-panel",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "InventoryPanel component",
       "suggestedFor": [
         "inventory",
@@ -24705,6 +25182,8 @@
     "isometric-canvas": {
       "type": "isometric-canvas",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "Event Contract: Emits: UI:TILE_CLICK Emits: UI:UNIT_CLICK Emits: UI:TILE_HOVER Emits: UI:TILE_LEAVE",
       "suggestedFor": [
         "isometric",
@@ -25300,6 +25779,8 @@
     "platformer-canvas": {
       "type": "platformer-canvas",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "PlatformerCanvas component",
       "suggestedFor": [
         "platformer",
@@ -25536,6 +26017,8 @@
     "powerup-slots": {
       "type": "powerup-slots",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "PowerupSlots component",
       "suggestedFor": [
         "powerup",
@@ -25600,6 +26083,8 @@
     "quest-tracker": {
       "type": "quest-tracker",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "QuestTracker component",
       "suggestedFor": [
         "quest",
@@ -25675,6 +26160,8 @@
     "resource-bar": {
       "type": "resource-bar",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "ResourceBar component",
       "suggestedFor": [
         "resource",
@@ -25743,6 +26230,8 @@
     "score-board": {
       "type": "score-board",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "ScoreBoard component",
       "suggestedFor": [
         "score",
@@ -25793,6 +26282,8 @@
     "stat-badge": {
       "type": "stat-badge",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "StatBadge component",
       "suggestedFor": [
         "stat",
@@ -25872,6 +26363,8 @@
     "turn-panel": {
       "type": "turn-panel",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "TurnPanel component",
       "suggestedFor": [
         "turn",
@@ -25952,6 +26445,8 @@
     "unit-command-bar": {
       "type": "unit-command-bar",
       "category": "game",
+      "tier": "molecules",
+      "family": "core",
       "description": "UnitCommandBar component",
       "suggestedFor": [
         "unit",
@@ -26020,6 +26515,8 @@
     "book-chapter-view": {
       "type": "book-chapter-view",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "BookChapterView Organism  Renders a single chapter: title + optional orbital diagram + rich content via ContentRenderer.  Event Contract: - Delegates to ContentRenderer children",
       "suggestedFor": [
         "book",
@@ -26084,6 +26581,8 @@
     "book-cover-page": {
       "type": "book-cover-page",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "BookCoverPage Molecule  Renders a book cover with title, subtitle, author, and optional image. Centered layout suitable for the first \"page\" of a BookViewer.  Event Contract: - Emits: UI:BOOK_START",
       "suggestedFor": [
         "book",
@@ -26139,6 +26638,8 @@
     "book-nav-bar": {
       "type": "book-nav-bar",
       "category": "navigation",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "BookNavBar Molecule  Navigation bar for the BookViewer with prev/next, page indicator, print button, and TOC toggle.  Event Contract: - Emits: UI:BOOK_PAGE_PREV, UI:BOOK_PAGE_NEXT, UI:BOOK_PRINT, UI:BOOK_SHOW_TOC",
       "suggestedFor": [
         "book",
@@ -26189,6 +26690,8 @@
     "book-table-of-contents": {
       "type": "book-table-of-contents",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "BookTableOfContents Molecule  Renders a clickable table of contents grouped by parts. Highlights the current chapter.  Event Contract: - Emits: UI:BOOK_NAVIGATE { chapterId }",
       "suggestedFor": [
         "book",
@@ -26285,6 +26788,8 @@
     "book-viewer": {
       "type": "book-viewer",
       "category": "display",
+      "tier": "organisms",
+      "family": "marketing",
       "description": "BookViewer Organism  Flippable book reader with cover, TOC, chapter views, and navigation. Supports RTL layout (Arabic), CSS slide transitions, and print mode.  Page model: 0 = cover, 1 = TOC, 2+ = chapters (flattened from parts)  Field mapping: Entity data may use non-English field names (e.g. Arabic .orb schemas). Pass a `fieldMap` prop to translate entity fields to canonical BookData. Default: IDENTITY_BOOK_FIELDS (English field names, no translation).  Event Contract: - Emits: UI:BOOK_PAGE_CHANGE { pageIndex, chapterId? } - Listens: UI:BOOK_START, UI:BOOK_NAVIGATE, UI:BOOK_PAGE_PREV/NEXT, UI:BOOK_PRINT, UI:BOOK_SHOW_TOC",
       "suggestedFor": [
         "book",
@@ -26386,6 +26891,8 @@
     "battle-board": {
       "type": "battle-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "BattleBoard component",
       "suggestedFor": [
         "battle",
@@ -27006,6 +27513,8 @@
     "canvas-effect": {
       "type": "canvas-effect",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "CanvasEffect component",
       "suggestedFor": [
         "canvas",
@@ -27154,6 +27663,8 @@
     "castle-board": {
       "type": "castle-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "CastleBoard component",
       "suggestedFor": [
         "castle",
@@ -27608,6 +28119,8 @@
     "game-audio-provider": {
       "type": "game-audio-provider",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "GameAudioProvider component",
       "suggestedFor": [
         "game",
@@ -27674,6 +28187,8 @@
     "game-audio-toggle": {
       "type": "game-audio-toggle",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "GameAudioToggle component",
       "suggestedFor": [
         "game",
@@ -27724,6 +28239,8 @@
     "trait-slot": {
       "type": "trait-slot",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "Event Contract: Emits: UI:CLICK Emits: UI:REMOVE",
       "suggestedFor": [
         "trait",
@@ -28024,6 +28541,8 @@
     "trait-state-viewer": {
       "type": "trait-state-viewer",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "TraitStateViewer component",
       "suggestedFor": [
         "trait",
@@ -28189,6 +28708,8 @@
     "uncontrolled-battle-board": {
       "type": "uncontrolled-battle-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "UncontrolledBattleBoard  Thin wrapper that composes `useBattleState` + `BattleBoard` for self-managing game state.  Accepts `initialUnits` instead of the controlled-mode fields and manages units, phase, turn, gameResult, and selectedUnitId internally via the hook.  Use this component when you want the BattleBoard to manage its own game logic (e.g. in Storybook, prototypes, or simple integrations). For Orbital trait integration, use `BattleBoard` directly in controlled mode.",
       "suggestedFor": [
         "uncontrolled",
@@ -28210,6 +28731,8 @@
     "world-map-board": {
       "type": "world-map-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "Event Contract: Emits: UI:HERO_SELECT Emits: UI:HERO_MOVE Emits: UI:BATTLE_ENCOUNTER Emits: UI:FEATURE_ENTER Emits: UI:TILE_CLICK",
       "suggestedFor": [
         "world",
@@ -28548,6 +29071,8 @@
     "simulation-canvas": {
       "type": "simulation-canvas",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "SimulationCanvas  Self-contained 2D physics canvas for educational presets. Runs its own Euler integration loop — no external physics hook needed.",
       "suggestedFor": [
         "simulation",
@@ -28603,6 +29128,8 @@
     "simulation-controls": {
       "type": "simulation-controls",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "SimulationControls  Play/pause/step/reset controls with speed and parameter sliders.",
       "suggestedFor": [
         "simulation",
@@ -28711,6 +29238,8 @@
     "simulation-graph": {
       "type": "simulation-graph",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "SimulationGraph  Real-time measurement graph for physics simulations. Renders measurement data as a simple line chart on canvas.",
       "suggestedFor": [
         "simulation",
@@ -28800,6 +29329,8 @@
     "builder-board": {
       "type": "builder-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "BuilderBoard  Component-snapping game board. The player places components onto slots in a blueprint. Correct placement completes the build.  Good for: architecture, circuits, molecules, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "builder",
@@ -28972,6 +29503,8 @@
     "classifier-board": {
       "type": "classifier-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "ClassifierBoard  Drag-and-drop classification game. The player sorts items into the correct category buckets. All items must be correctly classified to win.  Good for: taxonomy, pattern recognition, sorting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "classifier",
@@ -29139,6 +29672,8 @@
     "debugger-board": {
       "type": "debugger-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "DebuggerBoard  Error-finding game board. The player reviews a code/system listing and identifies lines or elements that contain bugs.  Good for: programming, logic, troubleshooting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "debugger",
@@ -29275,6 +29810,8 @@
     "event-handler-board": {
       "type": "event-handler-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "EventHandlerBoard Organism  Contains ALL game logic for the Event Handler tier (ages 9-12). Kids click on world objects, set WHEN/THEN rules, and watch event chains cascade during playback.  Encourages experimentation: on failure, resets to editing so the kid can try different rules. After 3 failures, shows a progressive hint.",
       "suggestedFor": [
         "event",
@@ -29510,6 +30047,8 @@
     "event-log": {
       "type": "event-log",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "EventLog Component  Scrolling log of events during playback in the Event Handler tier. Shows the chain reaction as events cascade through objects.",
       "suggestedFor": [
         "event",
@@ -29594,6 +30133,8 @@
     "object-rule-panel": {
       "type": "object-rule-panel",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "ObjectRulePanel Component  Shows the rules panel for a selected world object in the Event Handler tier. Displays object info, its current state (via TraitStateViewer), and a list of WHEN/THEN rules the kid has set.",
       "suggestedFor": [
         "object",
@@ -29751,6 +30292,8 @@
     "rule-editor": {
       "type": "rule-editor",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "RuleEditor Component  A single WHEN/THEN rule row for the Event Handler tier (ages 9-12). Kid picks an event trigger and an action from dropdowns.",
       "suggestedFor": [
         "rule",
@@ -29852,6 +30395,8 @@
     "negotiator-board": {
       "type": "negotiator-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "NegotiatorBoard  Turn-based decision matrix game. The player makes choices over multiple rounds against an AI opponent. Each round both sides pick an action, and payoffs are determined by the combination.  Good for: ethics, business, game theory, economics stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "negotiator",
@@ -30028,6 +30573,8 @@
     "action-palette": {
       "type": "action-palette",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "ActionPalette Component  Grid of draggable ActionTile components for the Sequencer tier. Kids pick from these to build their sequence.",
       "suggestedFor": [
         "action",
@@ -30214,6 +30761,8 @@
     "action-tile": {
       "type": "action-tile",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "ActionTile Component  A draggable action tile for the Sequencer tier (ages 5-8). Kids drag these from the ActionPalette into SequenceBar slots. Sets SlotItemData on dataTransfer for TraitSlot compatibility.",
       "suggestedFor": [
         "action",
@@ -30371,6 +30920,8 @@
     "sequence-bar": {
       "type": "sequence-bar",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "SequenceBar Component  A row of TraitSlot components forming the action sequence for the Sequencer tier (ages 5-8). Kids drag ActionTiles from the palette into these slots to build their sequence.",
       "suggestedFor": [
         "sequence",
@@ -30488,6 +31039,8 @@
     "sequencer-board": {
       "type": "sequencer-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "SequencerBoard Organism  Contains ALL game logic for the Sequencer tier (ages 5-8). Manages the action sequence, validates it, and animates Kekec executing each step on the puzzle scene.  Feedback-first UX: - On failure: slots stay in place, each slot gets a green or red ring showing exactly which steps are correct and which need to change. - Modifying a slot clears its individual feedback so the kid can re-try. - After 3 failures a persistent hint appears above the sequence bar. - \"Reset\" clears everything including attempts / hint.  TraitStateViewer states use indexed labels (\"1. Walk\", \"2. Jump\") so that repeated actions are correctly highlighted during playback.",
       "suggestedFor": [
         "sequencer",
@@ -30761,6 +31314,8 @@
     "simulator-board": {
       "type": "simulator-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "SimulatorBoard  Parameter-slider game board. The player adjusts parameters and observes real-time output. Correct parameter values must bring the output within a target range to win.  Good for: physics, economics, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "simulator",
@@ -30947,6 +31502,8 @@
     "code-view": {
       "type": "code-view",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "CodeView Component  Shows the JSON code representation of a state machine. Toggle between visual and code view in State Architect tier.",
       "suggestedFor": [
         "code",
@@ -30986,6 +31543,8 @@
     "state-architect-board": {
       "type": "state-architect-board",
       "category": "game",
+      "tier": "organisms",
+      "family": "game",
       "description": "StateArchitectBoard Organism  Contains ALL game logic for the State Architect tier (ages 13+). Kids design state machines via a visual graph editor, then run them to see if the behavior matches the puzzle goal.",
       "suggestedFor": [
         "state",
@@ -31262,6 +31821,8 @@
     "state-node": {
       "type": "state-node",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "StateNode Component  A draggable state circle for the graph editor in the State Architect tier (ages 13+). Shows state name, highlights when current, and supports click to select.",
       "suggestedFor": [
         "state",
@@ -31324,6 +31885,8 @@
     "transition-arrow": {
       "type": "transition-arrow",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "TransitionArrow Component  An SVG arrow connecting two state nodes in the graph editor. Shows the event name as a label on the arrow.",
       "suggestedFor": [
         "transition",
@@ -31385,6 +31948,8 @@
     "variable-panel": {
       "type": "variable-panel",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "VariablePanel Component  Shows entity variables and their current values during State Architect playback.",
       "suggestedFor": [
         "variable",
@@ -31454,6 +32019,8 @@
     "feature-renderer": {
       "type": "feature-renderer",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "FeatureRenderer component",
       "suggestedFor": [
         "feature",
@@ -31596,6 +32163,8 @@
     "dashboard-grid": {
       "type": "dashboard-grid",
       "category": "game",
+      "tier": "organisms",
+      "family": "core",
       "description": "DashboardGrid Component  Multi-column grid for widgets and stats cards. Supports cell spanning for flexible dashboard layouts.  Uses wireframe theme styling (high contrast, sharp edges).",
       "suggestedFor": [
         "dashboard",
@@ -31737,6 +32306,8 @@
     "split-pane": {
       "type": "split-pane",
       "category": "layout",
+      "tier": "organisms",
+      "family": "core",
       "description": "SplitPane component",
       "suggestedFor": [
         "split",
@@ -31813,6 +32384,8 @@
     "tabbed-container": {
       "type": "tabbed-container",
       "category": "navigation",
+      "tier": "organisms",
+      "family": "core",
       "description": "TabbedContainer component",
       "suggestedFor": [
         "tabbed",
@@ -31917,6 +32490,8 @@
     "master-detail-layout": {
       "type": "master-detail-layout",
       "category": "display",
+      "tier": "organisms",
+      "family": "core",
       "description": "MasterDetail Component  Classic master-detail pattern with a list on the left and selected item detail on the right.  Uses wireframe theme styling (high contrast, sharp edges).",
       "suggestedFor": [
         "master",
@@ -31983,6 +32558,8 @@
     "sparkline": {
       "type": "sparkline",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Sparkline Atom Component  Minimal inline trend chart. Pure SVG polyline over a numeric series. Extracted from StatCard's sparkline path so any KPI or list row can include a trend visualization without compositing the whole card.",
       "suggestedFor": [
         "sparkline"
@@ -32056,6 +32633,8 @@
     "date-range-picker": {
       "type": "date-range-picker",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "DateRangePicker component",
       "suggestedFor": [
         "date",
@@ -32167,6 +32746,8 @@
     "aside": {
       "type": "aside",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Aside Atom Component  Semantic wrapper for the native `<aside>` landmark. Owns raw HTML so molecules (SidePanel, navigation rails, callouts) can compose the semantic-aside primitive without falling back to a raw element.",
       "suggestedFor": [
         "aside"
@@ -32190,6 +32771,8 @@
     "dialog": {
       "type": "dialog",
       "category": "container",
+      "tier": "atoms",
+      "family": "core",
       "description": "Dialog Atom Component  Semantic wrapper for the native `<dialog>` element. Owns the raw HTML rendering so molecules (Modal, ConfirmDialog, etc.) can compose the dialog primitive without dropping back to raw HTML.  Defaults `role=\"dialog\"` and `aria-modal=\"true\"`; both overridable for non-modal use cases.",
       "suggestedFor": [
         "dialog"
@@ -32213,6 +32796,8 @@
     "tag-input": {
       "type": "tag-input",
       "category": "form",
+      "tier": "molecules",
+      "family": "core",
       "description": "TagInput component",
       "suggestedFor": [
         "tag",
@@ -32315,6 +32900,8 @@
     "marketing-footer": {
       "type": "marketing-footer",
       "category": "component",
+      "tier": "molecules",
+      "family": "core",
       "description": "MarketingFooter component",
       "suggestedFor": [
         "marketing",
@@ -32395,6 +32982,8 @@
     "table-view": {
       "type": "table-view",
       "category": "display",
+      "tier": "molecules",
+      "family": "core",
       "description": "TableView component",
       "suggestedFor": [
         "table",
@@ -32803,7 +33392,7 @@
           "types": [
             "function"
           ],
-          "description": "Per-row render function (schema alias). In .orb: [\"fn\",\"item\",{...}]. The compiler converts this to the children render prop. @deprecated Use children in React code; exists for pattern registry sync.",
+          "description": "Per-row render function (schema alias). In .orb: [\"fn\",\"item\",{...}]. The compiler converts this to the children render prop.",
           "kind": "callback",
           "callbackArgs": [
             {
@@ -32835,6 +33424,8 @@
     "heading": {
       "type": "heading",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
       "suggestedFor": [
         "typography"
@@ -32989,6 +33580,8 @@
     "text": {
       "type": "text",
       "category": "component",
+      "tier": "atoms",
+      "family": "core",
       "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
       "suggestedFor": [
         "typography"
