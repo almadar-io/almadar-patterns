@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-07T18:38:16.149Z",
+  "exportedAt": "2026-06-08T19:05:53.459Z",
   "contracts": {
     "form": {
       "emits": [
@@ -535,11 +535,6 @@
       ],
       "requires": [],
       "entityAware": true
-    },
-    "stats": {
-      "emits": [],
-      "requires": [],
-      "entityAware": false
     },
     "card": {
       "emits": [
