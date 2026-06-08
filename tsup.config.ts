@@ -17,7 +17,8 @@ export default defineConfig({
       'event-contracts.json',
       'integrators-registry.json',
       'patterns-registry.json',
-      'services-registry.json'
+      'services-registry.json',
+      'ml-registry.json'
     ];
     for (const file of jsonFiles) {
       fs.copyFileSync(
