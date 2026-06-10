@@ -48,6 +48,10 @@ export type {
 export type PatternEntry = {
   type: string;
   category: string;
+  /** Atomic-design tier of the mapped component: 'atoms' | 'molecules' | 'organisms' | 'templates'. */
+  tier?: string;
+  /** Component family from the @almadar/ui family-first layout: 'core' | 'game' | 'marketing' | 'avl'. */
+  family?: string;
   description?: string;
   suggestedFor?: string[];
   typicalSize?: string;
