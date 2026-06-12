@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-12T07:36:27.707Z",
+  "exportedAt": "2026-06-12T08:35:33.532Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -13125,51 +13125,6 @@
           "items": {
             "types": [
               "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "src": {
-                "types": [
-                  "string"
-                ]
-              },
-              "alt": {
-                "types": [
-                  "string"
-                ]
-              },
-              "thumbnail": {
-                "types": [
-                  "string"
-                ]
-              },
-              "mediaType": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "image",
-                  "video"
-                ]
-              },
-              "caption": {
-                "types": [
-                  "string"
-                ]
-              },
-              "fileSize": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "src"
             ]
           }
         },
@@ -15160,6 +15115,11 @@
           "description": "Events to display on the grid",
           "kind": "entity",
           "cardinality": "collection",
+          "requiredFields": [
+            "id",
+            "title",
+            "startTime"
+          ],
           "default": []
         },
         "onSlotClick": {
@@ -20097,7 +20057,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "title"
+          ]
         },
         "heading": {
           "types": [
@@ -20236,7 +20199,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "title"
+          ]
         },
         "columns": {
           "types": [
@@ -20386,7 +20352,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "record"
+          "cardinality": "record",
+          "requiredFields": [
+            "title"
+          ]
         },
         "children": {
           "types": [
@@ -20518,7 +20487,11 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "name",
+            "price"
+          ]
         },
         "heading": {
           "types": [
@@ -20656,7 +20629,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "title"
+          ]
         },
         "columns": {
           "types": [
@@ -20806,7 +20782,11 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "value",
+            "label"
+          ]
         },
         "columns": {
           "types": [
@@ -20946,7 +20926,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "title"
+          ]
         },
         "orientation": {
           "types": [
@@ -21102,7 +21085,10 @@
           ],
           "description": "entity prop",
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "name"
+          ]
         },
         "heading": {
           "types": [
@@ -22836,7 +22822,12 @@
           "description": "nodes prop",
           "required": true,
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "id",
+            "authorName",
+            "content"
+          ]
         },
         "maxDepth": {
           "types": [
@@ -23417,7 +23408,13 @@
           "description": "Items to render. The molecule narrows non-array values to `[]` and reads each row's `id` / `x` / `y` / `label` fields at render time.",
           "required": true,
           "kind": "entity",
-          "cardinality": "collection"
+          "cardinality": "collection",
+          "requiredFields": [
+            "id",
+            "label",
+            "x",
+            "y"
+          ]
         },
         "width": {
           "types": [
