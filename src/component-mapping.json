@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T06:23:39.790Z",
+  "exportedAt": "2026-06-16T10:02:47.077Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1513,36 +1513,6 @@
       "component": "StatCard",
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
-    },
-    "asset-picker": {
-      "component": "AssetPicker",
-      "importPath": "@/components/molecules/AssetPicker",
-      "category": "component"
-    },
-    "grid-picker": {
-      "component": "GridPicker",
-      "importPath": "@/components/molecules/GridPicker",
-      "category": "display"
-    },
-    "icon-picker": {
-      "component": "IconPicker",
-      "importPath": "@/components/molecules/IconPicker",
-      "category": "component"
-    },
-    "property-inspector": {
-      "component": "PropertyInspector",
-      "importPath": "@/components/molecules/PropertyInspector",
-      "category": "debug"
-    },
-    "heading": {
-      "component": "Typography",
-      "importPath": "@/components/atoms/Typography",
-      "category": "component"
-    },
-    "text": {
-      "component": "Typography",
-      "importPath": "@/components/atoms/Typography",
-      "category": "component"
     }
   }
 }

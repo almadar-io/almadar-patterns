@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T06:23:39.790Z",
+  "exportedAt": "2026-06-16T10:02:47.077Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9107,8 +9107,7 @@
             "small",
             "large",
             "label"
-          ],
-          "default": "body"
+          ]
         },
         "level": {
           "types": [
@@ -9122,8 +9121,7 @@
             4,
             5,
             6
-          ],
-          "default": 2
+          ]
         },
         "color": {
           "types": [
@@ -11599,7 +11597,7 @@
       "type": "auth-layout",
       "category": "template",
       "tier": "templates",
-      "family": "core",
+      "family": "marketing",
       "description": "AuthLayout component",
       "suggestedFor": [
         "auth",
@@ -19938,7 +19936,7 @@
       "type": "case-study-organism",
       "category": "display",
       "tier": "organisms",
-      "family": "core",
+      "family": "marketing",
       "description": "CaseStudyOrganism component",
       "suggestedFor": [
         "case",
@@ -20080,7 +20078,7 @@
       "type": "feature-grid-organism",
       "category": "display",
       "tier": "organisms",
-      "family": "core",
+      "family": "marketing",
       "description": "FeatureGridOrganism component",
       "suggestedFor": [
         "feature",
@@ -20235,7 +20233,7 @@
       "type": "hero-organism",
       "category": "header",
       "tier": "organisms",
-      "family": "core",
+      "family": "marketing",
       "description": "HeroOrganism component",
       "suggestedFor": [
         "hero",
@@ -20511,7 +20509,7 @@
       "type": "showcase-organism",
       "category": "display",
       "tier": "organisms",
-      "family": "core",
+      "family": "marketing",
       "description": "ShowcaseOrganism component",
       "suggestedFor": [
         "showcase",
@@ -20807,7 +20805,7 @@
       "type": "step-flow-organism",
       "category": "display",
       "tier": "organisms",
-      "family": "core",
+      "family": "marketing",
       "description": "StepFlowOrganism component",
       "suggestedFor": [
         "step",
@@ -23918,9 +23916,10 @@
         },
         "portrait": {
           "types": [
-            "string"
+            "asset"
           ],
-          "description": "URL for the speaker portrait image"
+          "description": "URL for the speaker portrait image",
+          "default": "https://almadar-kflow-assets.web.app/shared/characters/archetypes/00_base_model.png"
         },
         "position": {
           "types": [
@@ -24393,10 +24392,11 @@
       "propsSchema": {
         "spritesheet": {
           "types": [
-            "string"
+            "asset"
           ],
           "description": "Spritesheet image URL",
-          "required": true
+          "required": true,
+          "default": "https://almadar-kflow-assets.web.app/shared/isometric-blocks/Spritesheet/allTiles_sheet.png"
         },
         "frameWidth": {
           "types": [
@@ -26169,7 +26169,7 @@
       "type": "pull-quote",
       "category": "component",
       "tier": "molecules",
-      "family": "core",
+      "family": "marketing",
       "description": "PullQuote component",
       "suggestedFor": [
         "pull",
@@ -40284,7 +40284,7 @@
       "type": "marketing-footer",
       "category": "component",
       "tier": "molecules",
-      "family": "core",
+      "family": "marketing",
       "description": "MarketingFooter component",
       "suggestedFor": [
         "marketing",
@@ -40968,740 +40968,6 @@
             "string"
           ],
           "description": "Additional class names"
-        }
-      }
-    },
-    "asset-picker": {
-      "type": "asset-picker",
-      "category": "component",
-      "tier": "molecules",
-      "family": "core",
-      "description": "AssetPicker component",
-      "suggestedFor": [
-        "asset",
-        "picker",
-        "asset picker"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "assets": {
-          "types": [
-            "object"
-          ],
-          "description": "Browsable asset catalog supplied by the host.",
-          "required": true,
-          "freeform": true
-        },
-        "value": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected asset url (controlled highlight)."
-        },
-        "onChange": {
-          "types": [
-            "function"
-          ],
-          "description": "Fired with the chosen asset's url.",
-          "required": true,
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "url",
-              "type": "string"
-            }
-          ]
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes applied to the root."
-        }
-      }
-    },
-    "grid-picker": {
-      "type": "grid-picker",
-      "category": "display",
-      "tier": "molecules",
-      "family": "core",
-      "description": "GridPicker component",
-      "suggestedFor": [
-        "grid",
-        "picker",
-        "grid picker"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "items": {
-          "types": [
-            "array"
-          ],
-          "description": "Items to render as grid cells.",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "category": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "label",
-              "category"
-            ]
-          }
-        },
-        "value": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected item id (controlled highlight)."
-        },
-        "onChange": {
-          "types": [
-            "function"
-          ],
-          "description": "Fired with the clicked/selected item's id.",
-          "required": true,
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "value",
-              "type": "string"
-            }
-          ]
-        },
-        "categories": {
-          "types": [
-            "array"
-          ],
-          "description": "Category keys for the filter chip row. When omitted, the categories are derived from the items. An \"All\" chip is always prepended.",
-          "items": {
-            "types": [
-              "string"
-            ]
-          }
-        },
-        "searchPlaceholder": {
-          "types": [
-            "string"
-          ],
-          "description": "Placeholder for the search input."
-        },
-        "renderThumbnail": {
-          "types": [
-            "function"
-          ],
-          "description": "Renders the visual content of a cell (e.g. an emoji glyph or an image).",
-          "required": true,
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "item",
-              "type": "object",
-              "schema": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "id": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "label": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "category": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "id",
-                  "label",
-                  "category"
-                ]
-              }
-            }
-          ],
-          "renderCallback": true
-        },
-        "cellSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Cell edge length in px.",
-          "numericEnumValues": [
-            16,
-            32,
-            48
-          ],
-          "default": 32
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes applied to the root."
-        }
-      }
-    },
-    "icon-picker": {
-      "type": "icon-picker",
-      "category": "component",
-      "tier": "molecules",
-      "family": "core",
-      "description": "IconPicker component",
-      "suggestedFor": [
-        "icon",
-        "picker",
-        "icon picker"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "value": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected icon name (kebab-case)."
-        },
-        "onChange": {
-          "types": [
-            "function"
-          ],
-          "description": "Fired with the chosen icon's kebab-case name.",
-          "required": true,
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "name",
-              "type": "string"
-            }
-          ]
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes applied to the root."
-        }
-      }
-    },
-    "property-inspector": {
-      "type": "property-inspector",
-      "category": "debug",
-      "tier": "molecules",
-      "family": "core",
-      "description": "PropertyInspector — Storybook-style controls panel for a trait's `config`.  Derives one control per declared config field directly from the schema (`@almadar/core` `DeclaredTraitConfig`): `boolean → Switch`, `string` with `values → Select`, `number → numeric Input`, `string → Input`. Non-scalar fields (array/object/node/SExpr) are shown read-only. Fields group + collapse by `@tier`. The component is controlled — it emits `onChange(field, value)`; text/number commit on blur (so the host can re-render without hammering it).",
-      "suggestedFor": [
-        "property",
-        "inspector",
-        "property inspector"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Loading state indicator"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "Error state (UiError)",
-          "properties": {
-            "message": {
-              "types": [
-                "string"
-              ]
-            },
-            "name": {
-              "types": [
-                "string"
-              ]
-            },
-            "code": {
-              "types": [
-                "string"
-              ]
-            },
-            "stack": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "message"
-          ]
-        },
-        "sortBy": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort field"
-        },
-        "sortDirection": {
-          "types": [
-            "string"
-          ],
-          "description": "Current sort direction",
-          "enumValues": [
-            "asc",
-            "desc"
-          ]
-        },
-        "searchValue": {
-          "types": [
-            "string"
-          ],
-          "description": "Current search query value"
-        },
-        "page": {
-          "types": [
-            "number"
-          ],
-          "description": "Current page number"
-        },
-        "pageSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of items per page"
-        },
-        "totalCount": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of items"
-        },
-        "activeFilters": {
-          "types": [
-            "object"
-          ],
-          "description": "Active filters"
-        },
-        "selectedIds": {
-          "types": [
-            "array"
-          ],
-          "description": "Currently selected item IDs",
-          "items": {
-            "types": [
-              "string",
-              "number"
-            ]
-          }
-        },
-        "config": {
-          "types": [
-            "object"
-          ],
-          "description": "The trait's declared config schema (field name → declaration).",
-          "required": true,
-          "freeform": true
-        },
-        "values": {
-          "types": [
-            "object"
-          ],
-          "description": "Current override values keyed by field name (falls back to each field's `default`).",
-          "freeform": true
-        },
-        "onChange": {
-          "types": [
-            "function"
-          ],
-          "description": "Fired when a control commits a new value.",
-          "required": true,
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "field",
-              "type": "string"
-            },
-            {
-              "name": "value",
-              "type": "object"
-            }
-          ]
-        },
-        "onReset": {
-          "types": [
-            "function"
-          ],
-          "description": "Optional reset-to-defaults handler.",
-          "kind": "callback",
-          "callbackArgs": []
-        },
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Panel heading (e.g. the trait name)."
-        },
-        "assets": {
-          "types": [
-            "object"
-          ],
-          "description": "Browsable asset catalog supplied to `control: 'asset'` fields.",
-          "freeform": true
-        }
-      }
-    },
-    "heading": {
-      "type": "heading",
-      "category": "component",
-      "tier": "atoms",
-      "family": "core",
-      "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
-      "suggestedFor": [
-        "typography"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "Typography variant",
-          "enumValues": [
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6",
-            "heading",
-            "subheading",
-            "body1",
-            "body2",
-            "body",
-            "caption",
-            "overline",
-            "small",
-            "large",
-            "label"
-          ],
-          "default": "body"
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Heading level (1-6) - alternative to variant for headings",
-          "numericEnumValues": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "default": 2
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "Text color",
-          "enumValues": [
-            "primary",
-            "secondary",
-            "muted",
-            "error",
-            "success",
-            "warning",
-            "inherit"
-          ],
-          "default": "primary"
-        },
-        "align": {
-          "types": [
-            "string"
-          ],
-          "description": "Text alignment",
-          "enumValues": [
-            "left",
-            "center",
-            "right"
-          ]
-        },
-        "weight": {
-          "types": [
-            "string"
-          ],
-          "description": "Font weight override",
-          "enumValues": [
-            "light",
-            "normal",
-            "medium",
-            "semibold",
-            "bold"
-          ]
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Font size override",
-          "enumValues": [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-            "2xl",
-            "3xl"
-          ]
-        },
-        "truncate": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Truncate with ellipsis (single line)",
-          "default": false
-        },
-        "overflow": {
-          "types": [
-            "string"
-          ],
-          "description": "Overflow handling mode",
-          "enumValues": [
-            "visible",
-            "hidden",
-            "wrap",
-            "clamp-2",
-            "clamp-3"
-          ]
-        },
-        "as": {
-          "types": [
-            "component"
-          ],
-          "description": "Custom HTML element"
-        },
-        "id": {
-          "types": [
-            "string"
-          ],
-          "description": "HTML id attribute"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class names"
-        },
-        "style": {
-          "types": [
-            "object"
-          ],
-          "description": "Inline style"
-        },
-        "content": {
-          "types": [
-            "node"
-          ],
-          "description": "Text content (alternative to children)"
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Children elements"
-        }
-      }
-    },
-    "text": {
-      "type": "text",
-      "category": "component",
-      "tier": "atoms",
-      "family": "core",
-      "description": "Alias for typography — Typography Atom Component  Text elements following the KFlow design system with theme-aware styling.",
-      "suggestedFor": [
-        "typography"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "Typography variant",
-          "enumValues": [
-            "h1",
-            "h2",
-            "h3",
-            "h4",
-            "h5",
-            "h6",
-            "heading",
-            "subheading",
-            "body1",
-            "body2",
-            "body",
-            "caption",
-            "overline",
-            "small",
-            "large",
-            "label"
-          ],
-          "default": "body"
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Heading level (1-6) - alternative to variant for headings",
-          "numericEnumValues": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6
-          ],
-          "default": 2
-        },
-        "color": {
-          "types": [
-            "string"
-          ],
-          "description": "Text color",
-          "enumValues": [
-            "primary",
-            "secondary",
-            "muted",
-            "error",
-            "success",
-            "warning",
-            "inherit"
-          ],
-          "default": "primary"
-        },
-        "align": {
-          "types": [
-            "string"
-          ],
-          "description": "Text alignment",
-          "enumValues": [
-            "left",
-            "center",
-            "right"
-          ]
-        },
-        "weight": {
-          "types": [
-            "string"
-          ],
-          "description": "Font weight override",
-          "enumValues": [
-            "light",
-            "normal",
-            "medium",
-            "semibold",
-            "bold"
-          ]
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Font size override",
-          "enumValues": [
-            "xs",
-            "sm",
-            "md",
-            "lg",
-            "xl",
-            "2xl",
-            "3xl"
-          ]
-        },
-        "truncate": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Truncate with ellipsis (single line)",
-          "default": false
-        },
-        "overflow": {
-          "types": [
-            "string"
-          ],
-          "description": "Overflow handling mode",
-          "enumValues": [
-            "visible",
-            "hidden",
-            "wrap",
-            "clamp-2",
-            "clamp-3"
-          ]
-        },
-        "as": {
-          "types": [
-            "component"
-          ],
-          "description": "Custom HTML element"
-        },
-        "id": {
-          "types": [
-            "string"
-          ],
-          "description": "HTML id attribute"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional class names"
-        },
-        "style": {
-          "types": [
-            "object"
-          ],
-          "description": "Inline style"
-        },
-        "content": {
-          "types": [
-            "node"
-          ],
-          "description": "Text content (alternative to children)"
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Children elements"
         }
       }
     }
