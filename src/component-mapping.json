@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T13:40:20.131Z",
+  "exportedAt": "2026-06-16T13:55:25.201Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1498,11 +1498,6 @@
       "component": "StatCard",
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
-    },
-    "state-json-view": {
-      "component": "StateJsonView",
-      "importPath": "@/components/organisms/StateJsonView",
-      "category": "game"
     }
   }
 }

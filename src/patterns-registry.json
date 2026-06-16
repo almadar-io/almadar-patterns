@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T13:40:20.131Z",
+  "exportedAt": "2026-06-16T13:55:25.201Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -41243,49 +41243,6 @@
             "string"
           ],
           "description": "Additional class names"
-        }
-      }
-    },
-    "state-json-view": {
-      "type": "state-json-view",
-      "category": "game",
-      "tier": "organisms",
-      "family": "game",
-      "description": "StateJsonView component",
-      "suggestedFor": [
-        "state",
-        "json",
-        "view",
-        "state json view"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "data": {
-          "types": [
-            "object"
-          ],
-          "description": "JSON data to display",
-          "required": true,
-          "freeform": true
-        },
-        "label": {
-          "types": [
-            "string"
-          ],
-          "description": "Label"
-        },
-        "defaultExpanded": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether the code is expanded by default",
-          "default": false
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
         }
       }
     }
