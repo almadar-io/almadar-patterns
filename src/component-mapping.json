@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-12T08:35:33.532Z",
+  "exportedAt": "2026-06-16T06:23:39.790Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1513,6 +1513,26 @@
       "component": "StatCard",
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
+    },
+    "asset-picker": {
+      "component": "AssetPicker",
+      "importPath": "@/components/molecules/AssetPicker",
+      "category": "component"
+    },
+    "grid-picker": {
+      "component": "GridPicker",
+      "importPath": "@/components/molecules/GridPicker",
+      "category": "display"
+    },
+    "icon-picker": {
+      "component": "IconPicker",
+      "importPath": "@/components/molecules/IconPicker",
+      "category": "component"
+    },
+    "property-inspector": {
+      "component": "PropertyInspector",
+      "importPath": "@/components/molecules/PropertyInspector",
+      "category": "debug"
     },
     "heading": {
       "component": "Typography",
