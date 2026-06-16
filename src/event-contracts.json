@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T10:02:47.077Z",
+  "exportedAt": "2026-06-16T13:40:20.131Z",
   "contracts": {
     "form": {
       "emits": [
@@ -819,19 +819,6 @@
         },
         {
           "event": "CLOSE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "code-viewer": {
-      "emits": [
-        {
-          "event": "CODE_COPY",
           "trigger": "action",
           "payload": {
             "type": "object"

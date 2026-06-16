@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-16T10:02:47.077Z",
+  "exportedAt": "2026-06-16T13:40:20.131Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -503,11 +503,6 @@
       "component": "GraphCanvas",
       "importPath": "@/components/molecules/GraphCanvas",
       "category": "visualization"
-    },
-    "code-viewer": {
-      "component": "CodeViewer",
-      "importPath": "@/components/molecules/CodeViewer",
-      "category": "display"
     },
     "battle-template": {
       "component": "BattleTemplate",
@@ -1114,11 +1109,6 @@
       "importPath": "@/components/molecules/DocBreadcrumb",
       "category": "navigation"
     },
-    "doc-code-block": {
-      "component": "DocCodeBlock",
-      "importPath": "@/components/molecules/DocCodeBlock",
-      "category": "component"
-    },
     "doc-pagination": {
       "component": "DocPagination",
       "importPath": "@/components/molecules/DocPagination",
@@ -1419,11 +1409,6 @@
       "importPath": "@/components/organisms/SimulatorBoard",
       "category": "game"
     },
-    "code-view": {
-      "component": "CodeView",
-      "importPath": "@/components/organisms/CodeView",
-      "category": "game"
-    },
     "state-architect-board": {
       "component": "StateArchitectBoard",
       "importPath": "@/components/organisms/StateArchitectBoard",
@@ -1513,6 +1498,11 @@
       "component": "StatCard",
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
+    },
+    "state-json-view": {
+      "component": "StateJsonView",
+      "importPath": "@/components/organisms/StateJsonView",
+      "category": "game"
     }
   }
 }
