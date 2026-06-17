@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-17T08:23:54.917Z",
+  "exportedAt": "2026-06-17T11:00:54.689Z",
   "contracts": {
     "form": {
       "emits": [
@@ -247,7 +247,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true,
+      "entityAware": false,
       "configDriven": true
     },
     "filter-group": {
@@ -853,7 +853,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "media-gallery": {
       "emits": [

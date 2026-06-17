@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-17T08:23:54.917Z",
+  "exportedAt": "2026-06-17T11:00:54.689Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -1803,12 +1803,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         },
         "tabs": {
           "types": [
@@ -10627,12 +10621,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch (closed circuit)"
         }
       }
     },
@@ -10861,12 +10849,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         }
       }
     },
@@ -13642,12 +13624,6 @@
             ]
           }
         },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
-        },
         "isLoading": {
           "types": [
             "boolean"
@@ -14116,6 +14092,11 @@
                 "types": [
                   "number"
                 ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
+                ]
               }
             },
             "required": [
@@ -14467,6 +14448,11 @@
               "elevation": {
                 "types": [
                   "number"
+                ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
                 ]
               }
             },
@@ -14840,6 +14826,11 @@
               "elevation": {
                 "types": [
                   "number"
+                ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
                 ]
               }
             },
@@ -30359,6 +30350,11 @@
                 "types": [
                   "number"
                 ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
+                ]
               }
             },
             "required": [
@@ -32564,6 +32560,11 @@
                 "types": [
                   "number"
                 ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
+                ]
               }
             },
             "required": [
@@ -34257,6 +34258,11 @@
               "elevation": {
                 "types": [
                   "number"
+                ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
                 ]
               }
             },
@@ -36724,7 +36730,8 @@
           "types": [
             "asset"
           ],
-          "description": "Optional tooltip frame image URL"
+          "description": "Optional tooltip frame image URL",
+          "default": ""
         },
         "className": {
           "types": [
@@ -37399,6 +37406,11 @@
                 "types": [
                   "number"
                 ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
+                ]
               }
             },
             "required": [
@@ -37783,6 +37795,11 @@
               "elevation": {
                 "types": [
                   "number"
+                ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
                 ]
               }
             },
@@ -43779,6 +43796,11 @@
                 "types": [
                   "number"
                 ]
+              },
+              "modelUrl": {
+                "types": [
+                  "asset"
+                ]
               }
             },
             "required": [
@@ -44233,6 +44255,11 @@
                     "types": [
                       "number"
                     ]
+                  },
+                  "modelUrl": {
+                    "types": [
+                      "asset"
+                    ]
                   }
                 },
                 "required": [
@@ -44593,6 +44620,11 @@
                   "elevation": {
                     "types": [
                       "number"
+                    ]
+                  },
+                  "modelUrl": {
+                    "types": [
+                      "asset"
                     ]
                   }
                 },
