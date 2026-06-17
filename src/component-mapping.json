@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-17T02:56:15.601Z",
+  "exportedAt": "2026-06-17T07:55:20.897Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1431,7 +1431,7 @@
     },
     "feature-renderer": {
       "component": "FeatureRenderer",
-      "importPath": "@/components/organisms/FeatureRenderer",
+      "importPath": "@/components/molecules/FeatureRenderer",
       "category": "game"
     },
     "dashboard-grid": {
@@ -1498,6 +1498,26 @@
       "component": "StatCard",
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
+    },
+    "game-canvas-3d": {
+      "component": "GameCanvas3D",
+      "importPath": "@almadar/ui/components/organisms/game/three",
+      "category": "game"
+    },
+    "game-canvas-3d-battle-template": {
+      "component": "GameCanvas3DBattleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
+      "category": "game"
+    },
+    "game-canvas-3d-castle-template": {
+      "component": "GameCanvas3DCastleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
+      "category": "game"
+    },
+    "game-canvas-3d-world-map-template": {
+      "component": "GameCanvas3DWorldMapTemplate",
+      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
+      "category": "game"
     }
   }
 }
