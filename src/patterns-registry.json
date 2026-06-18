@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-18T09:49:37.603Z",
+  "exportedAt": "2026-06-18T10:28:38.516Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -7596,16 +7596,10 @@
         },
         "onValueChange": {
           "types": [
-            "function"
+            "function",
+            "string"
           ],
-          "description": "Value-based callback — receives the selected string (or string[] for multiple).",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "value",
-              "type": "string"
-            }
-          ]
+          "description": "Value-based change: a React callback (internal use) OR a declarative event key that emits `{ value }` on the bus (render-ui / lolo authoring). Mirrors the `onChange` handler|event convention so it's an event-emitting prop, not a bare callback."
         }
       }
     },
