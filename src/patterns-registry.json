@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-19T09:54:53.846Z",
+  "exportedAt": "2026-06-19T12:30:13.337Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -39627,7 +39627,7 @@
             "object",
             "array"
           ],
-          "description": "Puzzle board-state entity (single row or array). The board reads `components` / `slots` arrays plus title/description/hint off the row.",
+          "description": "Puzzle board-state entity (single row or array). The board reads `components` / `slots` arrays plus `attempts` / `result` off the row — the state machine is the single source of truth for placements.",
           "kind": "entity",
           "cardinality": "collection"
         },
@@ -39650,6 +39650,41 @@
             }
           ],
           "default": "PUZZLE_COMPLETE"
+        },
+        "placeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{placeEvent} with { slotId, componentId } on component placement.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "componentId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "checkEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{checkEvent} with {} when the player checks the build.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "playAgainEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playAgainEvent} with {} on play again / reset.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -39772,7 +39807,7 @@
             "object",
             "array"
           ],
-          "description": "Puzzle board-state entity (single row or array). The board reads `items` / `categories` arrays plus title/description/hint off the row.",
+          "description": "Puzzle board-state entity (single row or array). The board reads `items` / `categories` arrays plus title/description/hint off the row. Items may carry `assignedCategory`; the row may carry `result` and `attempts` — all machine-owned.",
           "kind": "entity",
           "cardinality": "collection"
         },
@@ -39795,6 +39830,41 @@
             }
           ],
           "default": "PUZZLE_COMPLETE"
+        },
+        "assignEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{assignEvent} with { itemId, categoryId } when an item is sorted.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "itemId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "categoryId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "checkEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{checkEvent} with {} when the player submits/checks.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "playAgainEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playAgainEvent} with {} on reset / play again.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -39917,7 +39987,7 @@
             "object",
             "array"
           ],
-          "description": "Puzzle board-state entity (single row or array). The board reads `lines` array plus title/description/bugCount/hint off the row.",
+          "description": "Puzzle board-state entity (single row or array). The board reads `lines` array (each with `isFlagged`), `result`, `attempts`, plus title/description/bugCount/hint off the row.",
           "kind": "entity",
           "cardinality": "collection"
         },
@@ -39940,6 +40010,36 @@
             }
           ],
           "default": "PUZZLE_COMPLETE"
+        },
+        "toggleFlagEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{toggleFlagEvent} with { lineId } when a line's bug-flag is toggled.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "lineId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "checkEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{checkEvent} with {} when the player checks/submits.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "playAgainEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playAgainEvent} with {} on play again / reset.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -40521,7 +40621,7 @@
             "object",
             "array"
           ],
-          "description": "Puzzle board-state entity (single row or array). The board reads `actions` / `payoffMatrix` arrays plus title/description/rounds/hint off the row.",
+          "description": "Puzzle board-state entity (single row or array). The board reads `score` / `round` / `result` / `targetScore` / `maxRounds` plus the `actions` / `payoffMatrix` arrays and title/description/hint off the row. Score accumulation + win/lose are owned by the gameplay machine.",
           "kind": "entity",
           "cardinality": "collection"
         },
@@ -40544,6 +40644,41 @@
             }
           ],
           "default": "PUZZLE_COMPLETE"
+        },
+        "playRoundEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playRoundEvent} with the picked action + the UI-resolved payoff.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "playerAction",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "payoff",
+              "type": "number",
+              "required": true
+            }
+          ]
+        },
+        "finishEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{finishEvent} with {} when all rounds are spent.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "playAgainEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playAgainEvent} with {} on play again / reset.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
@@ -41717,7 +41852,7 @@
             "object",
             "array"
           ],
-          "description": "Puzzle board-state entity (single row or array). The board reads the `parameters` array plus title/description/target/hint off the row.",
+          "description": "Puzzle board-state entity (single row or array). The board reads the `parameters` slider descriptors plus the machine-owned `paramA`/`paramB`/ `output`/`target`/`tolerance`/`attempts`/`result` fields off the row.",
           "kind": "entity",
           "cardinality": "collection"
         },
@@ -41740,6 +41875,50 @@
             }
           ],
           "default": "PUZZLE_COMPLETE"
+        },
+        "setAEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{setAEvent} with { value } when parameter A's slider changes.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "value",
+              "type": "number",
+              "required": true
+            }
+          ]
+        },
+        "setBEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{setBEvent} with { value } when parameter B's slider changes.",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "value",
+              "type": "number",
+              "required": true
+            }
+          ]
+        },
+        "checkEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{checkEvent} with {} on simulate / check.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
+        },
+        "playAgainEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{playAgainEvent} with {} on reset / play again.",
+          "kind": "event-ref",
+          "emitPayloadSchema": []
         }
       }
     },
