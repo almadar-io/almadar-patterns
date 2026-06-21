@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-21T08:07:51.735Z",
+  "exportedAt": "2026-06-21T09:36:29.838Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -25252,12 +25252,18 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
+        "assetUrl": {
+          "types": [
+            "asset"
+          ],
+          "description": "Sprite image URL — takes precedence over icon when provided"
+        },
         "icon": {
           "types": [
             "icon",
             "string"
           ],
-          "description": "Icon component or emoji",
+          "description": "Icon component or emoji — shown only when assetUrl is absent",
           "default": "sword"
         },
         "label": {
