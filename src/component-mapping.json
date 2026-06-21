@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-21T10:54:31.159Z",
+  "exportedAt": "2026-06-21T19:10:19.285Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1508,6 +1508,41 @@
       "component": "SegmentRenderer",
       "importPath": "@/components/organisms/SegmentRenderer",
       "category": "display"
+    },
+    "game-board-3d": {
+      "component": "GameBoard3D",
+      "importPath": "@/components/organisms/GameBoard3D",
+      "category": "game"
+    },
+    "platformer-board": {
+      "component": "PlatformerBoard",
+      "importPath": "@/components/organisms/PlatformerBoard",
+      "category": "game"
+    },
+    "roguelike-board": {
+      "component": "RoguelikeBoard",
+      "importPath": "@/components/organisms/RoguelikeBoard",
+      "category": "game"
+    },
+    "tower-defense-board": {
+      "component": "TowerDefenseBoard",
+      "importPath": "@/components/organisms/TowerDefenseBoard",
+      "category": "game"
+    },
+    "platformer-template": {
+      "component": "PlatformerTemplate",
+      "importPath": "@/components/templates/PlatformerTemplate",
+      "category": "game"
+    },
+    "roguelike-template": {
+      "component": "RoguelikeTemplate",
+      "importPath": "@/components/templates/RoguelikeTemplate",
+      "category": "game"
+    },
+    "tower-defense-template": {
+      "component": "TowerDefenseTemplate",
+      "importPath": "@/components/templates/TowerDefenseTemplate",
+      "category": "game"
     }
   }
 }
