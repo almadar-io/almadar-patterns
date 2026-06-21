@@ -2942,6 +2942,10 @@ export interface PatternPropsMap {
     playEvent?: string;
     /** Emits UI:{completeEvent} with { success } */
     completeEvent?: string;
+    /** Emits UI:{editRuleEvent} with { objectId, rules } when the player saves rules for an object */
+    editRuleEvent?: string;
+    /** Emits UI:{playAgainEvent} on play-again / reset */
+    playAgainEvent?: string;
   };
   'event-log': {
     type: 'event-log';
@@ -5942,6 +5946,12 @@ export interface PatternPropsMap {
     testEvent?: string;
     /** Emits UI:{completeEvent} with { success, passedTests } */
     completeEvent?: string;
+    /** Emits UI:{addTransitionEvent} with { id, from, to, event } when the player adds a graph edge */
+    addTransitionEvent?: string;
+    /** Emits UI:{removeTransitionEvent} with { id } when the player removes a graph edge */
+    removeTransitionEvent?: string;
+    /** Emits UI:{playAgainEvent} on play-again / reset */
+    playAgainEvent?: string;
   };
   'state-indicator': {
     type: 'state-indicator';
