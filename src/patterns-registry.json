@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-21T02:38:04.421Z",
+  "exportedAt": "2026-06-21T08:07:51.735Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -14878,7 +14878,8 @@
           "types": [
             "number"
           ],
-          "description": "Override for the diamond-top Y offset within tile sprites (default: 374)."
+          "description": "Override for the diamond-top Y offset within tile sprites (default: 374).",
+          "default": 374
         },
         "allowMoveAllHeroes": {
           "types": [
@@ -24769,7 +24770,8 @@
             "string"
           ],
           "description": "Button label text",
-          "required": true
+          "required": true,
+          "default": "Attack"
         },
         "icon": {
           "types": [
@@ -24856,7 +24858,8 @@
             "string"
           ],
           "description": "Choice text content",
-          "required": true
+          "required": true,
+          "default": "Charge forward into the fray"
         },
         "index": {
           "types": [
@@ -24912,7 +24915,8 @@
             "number"
           ],
           "description": "Current combo count",
-          "required": true
+          "required": true,
+          "default": 5
         },
         "multiplier": {
           "types": [
@@ -25077,7 +25081,8 @@
             "number"
           ],
           "description": "The damage/heal value to display",
-          "required": true
+          "required": true,
+          "default": 42
         },
         "type": {
           "types": [
@@ -25129,14 +25134,16 @@
           "types": [
             "string"
           ],
-          "description": "Speaker name displayed at the top"
+          "description": "Speaker name displayed at the top",
+          "default": "Hero"
         },
         "text": {
           "types": [
             "string"
           ],
           "description": "Dialogue text content",
-          "required": true
+          "required": true,
+          "default": "The dungeon awaits. Choose your path wisely."
         },
         "portrait": {
           "types": [
@@ -25182,14 +25189,16 @@
             "number"
           ],
           "description": "Current health value",
-          "required": true
+          "required": true,
+          "default": 3
         },
         "max": {
           "types": [
             "number"
           ],
           "description": "Maximum health value",
-          "required": true
+          "required": true,
+          "default": 5
         },
         "format": {
           "types": [
@@ -25248,13 +25257,15 @@
             "icon",
             "string"
           ],
-          "description": "Icon component or emoji"
+          "description": "Icon component or emoji",
+          "default": "sword"
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Item label"
+          "description": "Item label",
+          "default": "Iron Sword"
         },
         "quantity": {
           "types": [
@@ -25274,7 +25285,7 @@
             "epic",
             "legendary"
           ],
-          "default": "common"
+          "default": "uncommon"
         },
         "empty": {
           "types": [
@@ -25360,8 +25371,7 @@
               "y",
               "color"
             ]
-          },
-          "default": []
+          }
         },
         "units": {
           "types": [
@@ -25399,8 +25409,7 @@
               "y",
               "color"
             ]
-          },
-          "default": []
+          }
         },
         "width": {
           "types": [
@@ -25497,14 +25506,16 @@
             "string"
           ],
           "description": "Resource label",
-          "required": true
+          "required": true,
+          "default": "Gold"
         },
         "value": {
           "types": [
             "number"
           ],
           "description": "Current value",
-          "required": true
+          "required": true,
+          "default": 250
         },
         "max": {
           "types": [
@@ -25638,35 +25649,40 @@
             "number"
           ],
           "description": "Width of each frame in pixels",
-          "required": true
+          "required": true,
+          "default": 64
         },
         "frameHeight": {
           "types": [
             "number"
           ],
           "description": "Height of each frame in pixels",
-          "required": true
+          "required": true,
+          "default": 64
         },
         "frame": {
           "types": [
             "number"
           ],
           "description": "Frame index to display (0-based, left-to-right, top-to-bottom)",
-          "required": true
+          "required": true,
+          "default": 0
         },
         "x": {
           "types": [
             "number"
           ],
           "description": "X position in pixels",
-          "required": true
+          "required": true,
+          "default": 0
         },
         "y": {
           "types": [
             "number"
           ],
           "description": "Y position in pixels",
-          "required": true
+          "required": true,
+          "default": 0
         },
         "scale": {
           "types": [
@@ -25758,7 +25774,8 @@
             "string"
           ],
           "description": "The current state name",
-          "required": true
+          "required": true,
+          "default": "idle"
         },
         "label": {
           "types": [
@@ -25840,19 +25857,22 @@
             "string"
           ],
           "description": "Lucide icon name or component",
-          "required": true
+          "required": true,
+          "default": "shield"
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Label describing the effect"
+          "description": "Label describing the effect",
+          "default": "Shield"
         },
         "duration": {
           "types": [
             "number"
           ],
-          "description": "Remaining duration in seconds"
+          "description": "Remaining duration in seconds",
+          "default": 30
         },
         "stacks": {
           "types": [
@@ -25870,7 +25890,7 @@
             "debuff",
             "neutral"
           ],
-          "default": "neutral"
+          "default": "buff"
         },
         "size": {
           "types": [
@@ -25910,13 +25930,15 @@
             "number"
           ],
           "description": "Time in seconds",
-          "required": true
+          "required": true,
+          "default": 90
         },
         "running": {
           "types": [
             "boolean"
           ],
-          "description": "Whether the timer is running"
+          "description": "Whether the timer is running",
+          "default": true
         },
         "format": {
           "types": [
@@ -25974,7 +25996,8 @@
             "number"
           ],
           "description": "Current turn number",
-          "required": true
+          "required": true,
+          "default": 1
         },
         "maxTurns": {
           "types": [
@@ -26045,7 +26068,7 @@
             "boolean"
           ],
           "description": "Whether this waypoint is currently active",
-          "default": false
+          "default": true
         },
         "completed": {
           "types": [
@@ -26091,27 +26114,30 @@
             "number"
           ],
           "description": "Current XP value",
-          "required": true
+          "required": true,
+          "default": 350
         },
         "max": {
           "types": [
             "number"
           ],
           "description": "XP needed for next level",
-          "required": true
+          "required": true,
+          "default": 1000
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Current level"
+          "description": "Current level",
+          "default": 5
         },
         "showLabel": {
           "types": [
             "boolean"
           ],
           "description": "Whether to show the XP label",
-          "default": false
+          "default": true
         },
         "size": {
           "types": [
@@ -28716,7 +28742,7 @@
             "boolean"
           ],
           "description": "Whether the player has enough ingredients to craft",
-          "default": false
+          "default": true
         },
         "onCraft": {
           "types": [
@@ -29048,27 +29074,31 @@
             "string"
           ],
           "description": "Enemy name",
-          "required": true
+          "required": true,
+          "default": "Shadow Guard"
         },
         "health": {
           "types": [
             "number"
           ],
           "description": "Current health",
-          "required": true
+          "required": true,
+          "default": 80
         },
         "maxHealth": {
           "types": [
             "number"
           ],
           "description": "Maximum health",
-          "required": true
+          "required": true,
+          "default": 100
         },
         "level": {
           "types": [
             "number"
           ],
-          "description": "Enemy level"
+          "description": "Enemy level",
+          "default": 5
         },
         "effects": {
           "types": [
@@ -29197,7 +29227,7 @@
             "asset"
           ],
           "description": "Background image URL",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
+          "default": ""
         },
         "assetBaseUrl": {
           "types": [
@@ -29384,7 +29414,8 @@
             "string"
           ],
           "description": "Menu title",
-          "required": true
+          "required": true,
+          "default": "Epic Quest"
         },
         "subtitle": {
           "types": [
@@ -29599,7 +29630,8 @@
           "types": [
             "string"
           ],
-          "description": "Logo image URL"
+          "description": "Logo image URL",
+          "default": ""
         },
         "className": {
           "types": [
@@ -29628,7 +29660,8 @@
             "string"
           ],
           "description": "Screen title (e.g., \"Game Over\", \"Victory!\")",
-          "required": true
+          "required": true,
+          "default": "Game Over"
         },
         "message": {
           "types": [
@@ -29682,8 +29715,7 @@
             "required": [
               "label"
             ]
-          },
-          "default": []
+          }
         },
         "actions": {
           "types": [
@@ -29832,21 +29864,23 @@
             "defeat",
             "neutral"
           ],
-          "default": "neutral"
+          "default": "defeat"
         },
         "highScore": {
           "types": [
             "number",
             "string"
           ],
-          "description": "High score (optional, shows \"NEW HIGH SCORE!\" if exceeded)"
+          "description": "High score (optional, shows \"NEW HIGH SCORE!\" if exceeded)",
+          "default": 2000
         },
         "currentScore": {
           "types": [
             "number",
             "string"
           ],
-          "description": "Current score for high score comparison (accepts string for schema bindings)"
+          "description": "Current score for high score comparison (accepts string for schema bindings)",
+          "default": 1240
         },
         "className": {
           "types": [
@@ -29874,26 +29908,30 @@
             "number"
           ],
           "description": "Current health value",
-          "required": true
+          "required": true,
+          "default": 75
         },
         "max": {
           "types": [
             "number"
           ],
           "description": "Maximum health value",
-          "required": true
+          "required": true,
+          "default": 100
         },
         "shield": {
           "types": [
             "number"
           ],
-          "description": "Shield/armor points"
+          "description": "Shield/armor points",
+          "default": 20
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Label shown above the bar"
+          "description": "Label shown above the bar",
+          "default": "Player HP"
         },
         "effects": {
           "types": [
@@ -30033,13 +30071,15 @@
           "types": [
             "number"
           ],
-          "description": "Total number of slots (empty slots fill remaining space)"
+          "description": "Total number of slots (empty slots fill remaining space)",
+          "default": 12
         },
         "selectedId": {
           "types": [
             "string"
           ],
-          "description": "Currently selected item ID"
+          "description": "Currently selected item ID",
+          "default": ""
         },
         "onSelect": {
           "types": [
@@ -30155,14 +30195,16 @@
             "number"
           ],
           "description": "Total number of slots",
-          "required": true
+          "required": true,
+          "default": 12
         },
         "columns": {
           "types": [
             "number"
           ],
           "description": "Number of columns in grid",
-          "required": true
+          "required": true,
+          "default": 4
         },
         "selectedSlot": {
           "types": [
@@ -30956,7 +30998,7 @@
             "asset"
           ],
           "description": "Background image URL tiled behind the isometric grid",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
+          "default": ""
         },
         "showMinimap": {
           "types": [
@@ -31440,7 +31482,36 @@
               "height"
             ]
           },
-          "default": []
+          "default": [
+            {
+              "x": 0,
+              "y": 368,
+              "width": 800,
+              "height": 32,
+              "type": "ground"
+            },
+            {
+              "x": 150,
+              "y": 280,
+              "width": 160,
+              "height": 16,
+              "type": "platform"
+            },
+            {
+              "x": 420,
+              "y": 220,
+              "width": 160,
+              "height": 16,
+              "type": "platform"
+            },
+            {
+              "x": 620,
+              "y": 300,
+              "width": 140,
+              "height": 16,
+              "type": "platform"
+            }
+          ]
         },
         "worldWidth": {
           "types": [
@@ -31481,7 +31552,8 @@
           "types": [
             "string"
           ],
-          "description": "Background color"
+          "description": "Background color",
+          "default": "#5c94fc"
         },
         "playerSprite": {
           "types": [
@@ -31506,7 +31578,7 @@
             "asset"
           ],
           "description": "Background image URL",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
+          "default": ""
         },
         "assetBaseUrl": {
           "types": [
@@ -31705,7 +31777,8 @@
           "types": [
             "string"
           ],
-          "description": "ID of the currently active quest"
+          "description": "ID of the currently active quest",
+          "default": "q2"
         },
         "className": {
           "types": [
@@ -31956,25 +32029,29 @@
             "number"
           ],
           "description": "Current turn number",
-          "required": true
+          "required": true,
+          "default": 3
         },
         "maxTurns": {
           "types": [
             "number"
           ],
-          "description": "Maximum number of turns"
+          "description": "Maximum number of turns",
+          "default": 10
         },
         "phase": {
           "types": [
             "string"
           ],
-          "description": "Current phase label"
+          "description": "Current phase label",
+          "default": "Attack"
         },
         "activeTeam": {
           "types": [
             "string"
           ],
-          "description": "Active team name"
+          "description": "Active team name",
+          "default": "Heroes"
         },
         "actions": {
           "types": [
@@ -32082,7 +32159,8 @@
           "types": [
             "string"
           ],
-          "description": "ID of the currently selected unit"
+          "description": "ID of the currently selected unit",
+          "default": "unit-1"
         },
         "className": {
           "types": [
