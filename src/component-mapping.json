@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-21T10:11:30.957Z",
+  "exportedAt": "2026-06-21T10:54:31.159Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1314,11 +1314,6 @@
       "importPath": "@/components/organisms/TraitSlot",
       "category": "game"
     },
-    "trait-state-viewer": {
-      "component": "TraitStateViewer",
-      "importPath": "@/components/organisms/TraitStateViewer",
-      "category": "game"
-    },
     "uncontrolled-battle-board": {
       "component": "UncontrolledBattleBoard",
       "importPath": "@/components/organisms/UncontrolledBattleBoard",
@@ -1332,16 +1327,6 @@
     "simulation-canvas": {
       "component": "SimulationCanvas",
       "importPath": "@/components/organisms/SimulationCanvas",
-      "category": "game"
-    },
-    "simulation-controls": {
-      "component": "SimulationControls",
-      "importPath": "@/components/organisms/SimulationControls",
-      "category": "game"
-    },
-    "simulation-graph": {
-      "component": "SimulationGraph",
-      "importPath": "@/components/organisms/SimulationGraph",
       "category": "game"
     },
     "builder-board": {
@@ -1367,16 +1352,6 @@
     "event-log": {
       "component": "EventLog",
       "importPath": "@/components/organisms/EventLog",
-      "category": "game"
-    },
-    "object-rule-panel": {
-      "component": "ObjectRulePanel",
-      "importPath": "@/components/organisms/ObjectRulePanel",
-      "category": "game"
-    },
-    "rule-editor": {
-      "component": "RuleEditor",
-      "importPath": "@/components/organisms/RuleEditor",
       "category": "game"
     },
     "negotiator-board": {
@@ -1412,21 +1387,6 @@
     "state-architect-board": {
       "component": "StateArchitectBoard",
       "importPath": "@/components/organisms/StateArchitectBoard",
-      "category": "game"
-    },
-    "state-node": {
-      "component": "StateNode",
-      "importPath": "@/components/organisms/StateNode",
-      "category": "game"
-    },
-    "transition-arrow": {
-      "component": "TransitionArrow",
-      "importPath": "@/components/organisms/TransitionArrow",
-      "category": "game"
-    },
-    "variable-panel": {
-      "component": "VariablePanel",
-      "importPath": "@/components/organisms/VariablePanel",
       "category": "game"
     },
     "feature-renderer": {
