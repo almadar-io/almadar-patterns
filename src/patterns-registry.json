@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-19T12:30:13.337Z",
+  "exportedAt": "2026-06-21T02:38:04.421Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -29197,7 +29197,7 @@
             "asset"
           ],
           "description": "Background image URL",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/resonators.jpeg"
+          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
         },
         "assetBaseUrl": {
           "types": [
@@ -30956,7 +30956,7 @@
             "asset"
           ],
           "description": "Background image URL tiled behind the isometric grid",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/court.png"
+          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
         },
         "showMinimap": {
           "types": [
@@ -31506,7 +31506,7 @@
             "asset"
           ],
           "description": "Background image URL",
-          "default": "https://almadar-kflow-assets.web.app/shared/scenes/court.png"
+          "default": "https://almadar-kflow-assets.web.app/shared/scenes/dark_clouds_from_above.png"
         },
         "assetBaseUrl": {
           "types": [
