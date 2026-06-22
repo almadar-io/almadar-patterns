@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-22T12:36:44.208Z",
+  "exportedAt": "2026-06-22T16:01:55.932Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -31113,6 +31113,20 @@
           "description": "Extra scale multiplier for unit draw size. 1 = default.",
           "default": 1
         },
+        "spriteHeightRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Ratio of unit draw height to scaledFloorHeight. Default 1.5.",
+          "default": 1.5
+        },
+        "spriteMaxWidthRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Max unit draw width as a ratio of scaledTileWidth. Default 0.6.",
+          "default": 0.6
+        },
         "boardWidth": {
           "types": [
             "number"
@@ -33200,7 +33214,7 @@
             "number"
           ],
           "description": "Canvas render scale",
-          "default": 0.45
+          "default": 0.25
         },
         "unitScale": {
           "types": [
@@ -33208,6 +33222,20 @@
           ],
           "description": "Unit draw-size multiplier",
           "default": 1
+        },
+        "spriteHeightRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Ratio of unit draw height to scaledFloorHeight. Default 1.5.",
+          "default": 1.5
+        },
+        "spriteMaxWidthRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Max unit draw width as a ratio of scaledTileWidth. Default 0.6.",
+          "default": 0.6
         },
         "header": {
           "types": [
@@ -38314,7 +38342,7 @@
             "number"
           ],
           "description": "Canvas render scale",
-          "default": 0.4
+          "default": 0.25
         },
         "unitScale": {
           "types": [
@@ -38322,6 +38350,20 @@
           ],
           "description": "Unit draw-size multiplier",
           "default": 2.5
+        },
+        "spriteHeightRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Ratio of unit draw height to scaledFloorHeight. Default 1.5.",
+          "default": 1.5
+        },
+        "spriteMaxWidthRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "Max unit draw width as a ratio of scaledTileWidth. Default 0.6.",
+          "default": 0.6
         },
         "allowMoveAllHeroes": {
           "types": [
@@ -44757,6 +44799,19 @@
           ],
           "description": "Selected unit ID",
           "default": null
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier. 1 = default tile-proportional size.",
+          "default": 1
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Board zoom/group scale. Applied to the scene group. Default 0.45."
         }
       }
     },
@@ -45012,6 +45067,18 @@
             "boolean"
           ],
           "description": "Show turn indicator overlay"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier forwarded to GameBoard3D. Default 1."
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Board zoom/group scale forwarded to GameBoard3D. Default 0.45."
         }
       }
     },
@@ -45280,6 +45347,18 @@
           ],
           "description": "Show castle name header",
           "default": true
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier forwarded to GameBoard3D. Default 1."
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Board zoom/group scale forwarded to GameBoard3D. Default 0.45."
         }
       }
     },
@@ -45566,6 +45645,18 @@
             "string"
           ],
           "description": "Exit/back event name"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier forwarded to GameBoard3D. Default 1."
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Board zoom/group scale forwarded to GameBoard3D. Default 0.45."
         }
       }
     },
@@ -46130,6 +46221,20 @@
           ],
           "description": "Background color forwarded to GameCanvas3D.",
           "default": "#2a1a1a"
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "Unit draw-size multiplier forwarded to GameCanvas3D. Default 1.",
+          "default": 1
+        },
+        "scale": {
+          "types": [
+            "number"
+          ],
+          "description": "Board zoom/group scale forwarded to GameCanvas3D. Default 0.45.",
+          "default": 0.45
         },
         "tileClickEvent": {
           "types": [
@@ -46945,7 +47050,7 @@
             "number"
           ],
           "description": "scale prop",
-          "default": 0.45
+          "default": 0.25
         },
         "unitScale": {
           "types": [
@@ -46953,6 +47058,20 @@
           ],
           "description": "unitScale prop",
           "default": 1
+        },
+        "spriteHeightRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "spriteHeightRatio prop",
+          "default": 1.5
+        },
+        "spriteMaxWidthRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "spriteMaxWidthRatio prop",
+          "default": 0.6
         },
         "moveEvent": {
           "types": [
@@ -47356,7 +47475,28 @@
             "number"
           ],
           "description": "scale prop",
-          "default": 0.45
+          "default": 0.25
+        },
+        "unitScale": {
+          "types": [
+            "number"
+          ],
+          "description": "unitScale prop",
+          "default": 1
+        },
+        "spriteHeightRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "spriteHeightRatio prop",
+          "default": 1.5
+        },
+        "spriteMaxWidthRatio": {
+          "types": [
+            "number"
+          ],
+          "description": "spriteMaxWidthRatio prop",
+          "default": 0.6
         },
         "placeTowerEvent": {
           "types": [
