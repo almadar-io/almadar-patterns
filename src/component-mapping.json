@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-24T10:06:25.336Z",
+  "exportedAt": "2026-06-24T15:53:51.685Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1587,6 +1587,11 @@
     "visual-novel-template": {
       "component": "VisualNovelTemplate",
       "importPath": "@/components/templates/VisualNovelTemplate",
+      "category": "game"
+    },
+    "hex-strategy-board": {
+      "component": "HexStrategyBoard",
+      "importPath": "@/components/organisms/HexStrategyBoard",
       "category": "game"
     }
   }
