@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-24T01:58:01.306Z",
+  "exportedAt": "2026-06-24T10:06:25.336Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -21871,7 +21871,7 @@
               "properties": {
                 "src": {
                   "types": [
-                    "string"
+                    "asset"
                   ]
                 },
                 "alt": {
@@ -22244,7 +22244,7 @@
               "properties": {
                 "src": {
                   "types": [
-                    "string"
+                    "asset"
                   ]
                 },
                 "alt": {
@@ -22783,7 +22783,7 @@
             },
             "avatar": {
               "types": [
-                "string"
+                "asset"
               ]
             }
           }
