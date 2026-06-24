@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-22T16:01:55.932Z",
+  "exportedAt": "2026-06-23T23:53:55.657Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1542,6 +1542,51 @@
     "tower-defense-template": {
       "component": "TowerDefenseTemplate",
       "importPath": "@/components/templates/TowerDefenseTemplate",
+      "category": "game"
+    },
+    "city-builder-board": {
+      "component": "CityBuilderBoard",
+      "importPath": "@/components/organisms/CityBuilderBoard",
+      "category": "game"
+    },
+    "top-down-shooter-board": {
+      "component": "TopDownShooterBoard",
+      "importPath": "@/components/organisms/TopDownShooterBoard",
+      "category": "game"
+    },
+    "city-builder-template": {
+      "component": "CityBuilderTemplate",
+      "importPath": "@/components/templates/CityBuilderTemplate",
+      "category": "game"
+    },
+    "top-down-shooter-template": {
+      "component": "TopDownShooterTemplate",
+      "importPath": "@/components/templates/TopDownShooterTemplate",
+      "category": "game"
+    },
+    "card-hand": {
+      "component": "CardHand",
+      "importPath": "@/components/molecules/CardHand",
+      "category": "game"
+    },
+    "card-battler-board": {
+      "component": "CardBattlerBoard",
+      "importPath": "@/components/organisms/CardBattlerBoard",
+      "category": "game"
+    },
+    "visual-novel-board": {
+      "component": "VisualNovelBoard",
+      "importPath": "@/components/organisms/VisualNovelBoard",
+      "category": "game"
+    },
+    "card-battler-template": {
+      "component": "CardBattlerTemplate",
+      "importPath": "@/components/templates/CardBattlerTemplate",
+      "category": "game"
+    },
+    "visual-novel-template": {
+      "component": "VisualNovelTemplate",
+      "importPath": "@/components/templates/VisualNovelTemplate",
       "category": "game"
     }
   }
