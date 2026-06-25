@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-24T15:53:51.685Z",
+  "exportedAt": "2026-06-25T10:12:47.487Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1231,6 +1231,19 @@
       "emits": [
         {
           "event": "RUN_CODE",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "chat-bar": {
+      "emits": [
+        {
+          "event": "CHAT_SEND",
           "trigger": "action",
           "payload": {
             "type": "object"

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-24T15:53:51.685Z",
+  "exportedAt": "2026-06-25T10:12:47.487Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1592,6 +1592,81 @@
     "hex-strategy-board": {
       "component": "HexStrategyBoard",
       "importPath": "@/components/organisms/HexStrategyBoard",
+      "category": "game"
+    },
+    "chat-bar": {
+      "component": "ChatBar",
+      "importPath": "@/components/organisms/ChatBar",
+      "category": "display"
+    },
+    "subagent-trace-panel": {
+      "component": "SubagentTracePanel",
+      "importPath": "@/components/organisms/SubagentTracePanel",
+      "category": "display"
+    },
+    "boardgame-board": {
+      "component": "BoardgameBoard",
+      "importPath": "@/components/organisms/BoardgameBoard",
+      "category": "game"
+    },
+    "fishing-board": {
+      "component": "FishingBoard",
+      "importPath": "@/components/organisms/FishingBoard",
+      "category": "game"
+    },
+    "holiday-runner-board": {
+      "component": "HolidayRunnerBoard",
+      "importPath": "@/components/organisms/HolidayRunnerBoard",
+      "category": "game"
+    },
+    "match-puzzle-board": {
+      "component": "MatchPuzzleBoard",
+      "importPath": "@/components/organisms/MatchPuzzleBoard",
+      "category": "game"
+    },
+    "minigolf-board": {
+      "component": "MinigolfBoard",
+      "importPath": "@/components/organisms/MinigolfBoard",
+      "category": "game"
+    },
+    "pinball-board": {
+      "component": "PinballBoard",
+      "importPath": "@/components/organisms/PinballBoard",
+      "category": "game"
+    },
+    "pirate-board": {
+      "component": "PirateBoard",
+      "importPath": "@/components/organisms/PirateBoard",
+      "category": "game"
+    },
+    "racing-board": {
+      "component": "RacingBoard",
+      "importPath": "@/components/organisms/RacingBoard",
+      "category": "game"
+    },
+    "sokoban-board": {
+      "component": "SokobanBoard",
+      "importPath": "@/components/organisms/SokobanBoard",
+      "category": "game"
+    },
+    "space-shmup-board": {
+      "component": "SpaceShmupBoard",
+      "importPath": "@/components/organisms/SpaceShmupBoard",
+      "category": "game"
+    },
+    "space-station-board": {
+      "component": "SpaceStationBoard",
+      "importPath": "@/components/organisms/SpaceStationBoard",
+      "category": "game"
+    },
+    "sports-board": {
+      "component": "SportsBoard",
+      "importPath": "@/components/organisms/SportsBoard",
+      "category": "game"
+    },
+    "tanks-board": {
+      "component": "TanksBoard",
+      "importPath": "@/components/organisms/TanksBoard",
       "category": "game"
     }
   }
