@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-27T03:08:11.994Z",
+  "exportedAt": "2026-06-27T15:26:54.780Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1039,11 +1039,6 @@
       "importPath": "@/components/atoms/WaypointMarker",
       "category": "game"
     },
-    "xp-bar": {
-      "component": "XPBar",
-      "importPath": "@/components/atoms/XPBar",
-      "category": "game"
-    },
     "svg-branch": {
       "component": "SvgBranch",
       "importPath": "@/components/atoms/SvgBranch",
@@ -1149,11 +1144,6 @@
       "importPath": "@/components/molecules/ModuleCard",
       "category": "display"
     },
-    "action-buttons": {
-      "component": "ActionButtons",
-      "importPath": "@/components/molecules/ActionButtons",
-      "category": "game"
-    },
     "combat-log": {
       "component": "CombatLog",
       "importPath": "@/components/molecules/CombatLog",
@@ -1162,11 +1152,6 @@
     "crafting-recipe": {
       "component": "CraftingRecipe",
       "importPath": "@/components/molecules/CraftingRecipe",
-      "category": "game"
-    },
-    "d-pad": {
-      "component": "DPad",
-      "importPath": "@/components/molecules/DPad",
       "category": "game"
     },
     "dialogue-box": {
@@ -1667,6 +1652,21 @@
     "tanks-board": {
       "component": "TanksBoard",
       "importPath": "@/components/organisms/TanksBoard",
+      "category": "game"
+    },
+    "canvas-2d": {
+      "component": "Canvas2D",
+      "importPath": "@/components/molecules/Canvas2D",
+      "category": "game"
+    },
+    "control-grid": {
+      "component": "ControlGrid",
+      "importPath": "@/components/molecules/ControlGrid",
+      "category": "game"
+    },
+    "game-card": {
+      "component": "GameCard",
+      "importPath": "@/components/atoms/GameCard",
       "category": "game"
     }
   }
