@@ -55,8 +55,8 @@ packages:
   '@almadar/logger@1.4.0':
     resolution: {integrity: sha512-S/D7ltwYTOH8j4k/rj+O2gI7dtWxHXnHdzoigdnKHE0KfJAj7YfuZG2pErjzv7BhOvWuhnSSmSRvXeeKMHMeZQ==}
 
-  '@almadar/patterns@2.67.0':
-    resolution: {integrity: sha512-49pzPKViM7WtrtWE1dt7AFOn6ddRsrrUM4z0cMLIHXp3AOmk1IZrZTItOwYP09LYJhM7yfc97wqPxAdo2KOU3g==}
+  '@almadar/patterns@2.68.0':
+    resolution: {integrity: sha512-jYZjvIYsvHfo843d9CmS+M0wGD42VJVlKoSUydwPXRP0xeAqR2DqDow86CYvqYmcgwW0bTu5Qzexm9o8vekhoQ==}
 
   '@anthropic-ai/sdk@0.103.0':
     resolution: {integrity: sha512-1uG7RNgoHTUxzOXqSCODKt0UTVlxWiHk/2Tt2/uQJiPW7XzBeKVuJyd3Aw6T3LPyvZV/jDTnPLX7SaM70WLLjA==}
@@ -1102,8 +1102,8 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
-  langsmith@0.7.11:
-    resolution: {integrity: sha512-kK7tjvLo3KbyrXonZDJJMvX6jE5Ek9uwqtS2WX8AEGc5IwLoMrJlGR8wWk1UD8H/x0goiJDMsRht4qZd7Ijvcg==}
+  langsmith@0.7.12:
+    resolution: {integrity: sha512-ujO2voSkYmGi6aImF3SsD/dKlBo+gu/bcmCrI5CJ7JFnagWxCeE12VsWha421AaAPehaB00w6EGfHgzTs/LD3g==}
     peerDependencies:
       '@opentelemetry/api': '*'
       '@opentelemetry/exporter-trace-otlp-proto': '*'
@@ -1555,7 +1555,7 @@ snapshots:
 
   '@almadar/core@10.6.0':
     dependencies:
-      '@almadar/patterns': 2.67.0
+      '@almadar/patterns': 2.68.0
       zod: 3.25.76
 
   '@almadar/eslint-plugin@2.8.2(eslint@10.0.0)':
@@ -1586,7 +1586,7 @@ snapshots:
     dependencies:
       '@almadar/core': 10.6.0
 
-  '@almadar/patterns@2.67.0':
+  '@almadar/patterns@2.68.0':
     dependencies:
       '@almadar/core': 10.6.0
 
@@ -1903,7 +1903,7 @@ snapshots:
       '@cfworker/json-schema': 4.1.1
       '@standard-schema/spec': 1.1.0
       js-tiktoken: 1.0.21
-      langsmith: 0.7.11(openai@6.45.0(zod@3.25.76))
+      langsmith: 0.7.12(openai@6.45.0(zod@3.25.76))
       mustache: 4.2.0
       p-queue: 6.6.2
       zod: 3.25.76
@@ -2438,7 +2438,7 @@ snapshots:
     dependencies:
       json-buffer: 3.0.1
 
-  langsmith@0.7.11(openai@6.45.0(zod@3.25.76)):
+  langsmith@0.7.12(openai@6.45.0(zod@3.25.76)):
     dependencies:
       p-queue: 6.6.2
     optionalDependencies:
