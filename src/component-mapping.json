@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-27T15:26:54.780Z",
+  "exportedAt": "2026-06-27T19:37:52.715Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -456,7 +456,7 @@
     },
     "game-template": {
       "component": "GameTemplate",
-      "importPath": "@/components/templates/GameTemplate",
+      "importPath": "@/components/molecules/GameTemplate",
       "category": "game"
     },
     "generic-app-template": {
@@ -466,7 +466,7 @@
     },
     "game-shell": {
       "component": "GameShell",
-      "importPath": "@/components/templates/GameShell",
+      "importPath": "@/components/molecules/GameShell",
       "category": "game"
     },
     "chart": {
@@ -506,17 +506,17 @@
     },
     "battle-template": {
       "component": "BattleTemplate",
-      "importPath": "@/components/templates/BattleTemplate",
+      "importPath": "@/components/molecules/BattleTemplate",
       "category": "game"
     },
     "castle-template": {
       "component": "CastleTemplate",
-      "importPath": "@/components/templates/CastleTemplate",
+      "importPath": "@/components/molecules/CastleTemplate",
       "category": "game"
     },
     "world-map-template": {
       "component": "WorldMapTemplate",
-      "importPath": "@/components/templates/WorldMapTemplate",
+      "importPath": "@/components/molecules/WorldMapTemplate",
       "category": "game"
     },
     "error-boundary": {
@@ -956,87 +956,87 @@
     },
     "action-button": {
       "component": "ActionButton",
-      "importPath": "@/components/atoms/ActionButton",
+      "importPath": "@/components/molecules/ActionButton",
       "category": "game"
     },
     "choice-button": {
       "component": "ChoiceButton",
-      "importPath": "@/components/atoms/ChoiceButton",
+      "importPath": "@/components/molecules/ChoiceButton",
       "category": "game"
     },
     "combo-counter": {
       "component": "ComboCounter",
-      "importPath": "@/components/atoms/ComboCounter",
+      "importPath": "@/components/molecules/ComboCounter",
       "category": "game"
     },
     "control-button": {
       "component": "ControlButton",
-      "importPath": "@/components/atoms/ControlButton",
+      "importPath": "@/components/molecules/ControlButton",
       "category": "game"
     },
     "damage-number": {
       "component": "DamageNumber",
-      "importPath": "@/components/atoms/DamageNumber",
+      "importPath": "@/components/molecules/DamageNumber",
       "category": "game"
     },
     "dialogue-bubble": {
       "component": "DialogueBubble",
-      "importPath": "@/components/atoms/DialogueBubble",
+      "importPath": "@/components/molecules/DialogueBubble",
       "category": "game"
     },
     "health-bar": {
       "component": "HealthBar",
-      "importPath": "@/components/atoms/HealthBar",
+      "importPath": "@/components/molecules/HealthBar",
       "category": "game"
     },
     "item-slot": {
       "component": "ItemSlot",
-      "importPath": "@/components/atoms/ItemSlot",
+      "importPath": "@/components/molecules/ItemSlot",
       "category": "game"
     },
     "mini-map": {
       "component": "MiniMap",
-      "importPath": "@/components/atoms/MiniMap",
+      "importPath": "@/components/molecules/MiniMap",
       "category": "game"
     },
     "resource-counter": {
       "component": "ResourceCounter",
-      "importPath": "@/components/atoms/ResourceCounter",
+      "importPath": "@/components/molecules/ResourceCounter",
       "category": "game"
     },
     "score-display": {
       "component": "ScoreDisplay",
-      "importPath": "@/components/atoms/ScoreDisplay",
+      "importPath": "@/components/molecules/ScoreDisplay",
       "category": "game"
     },
     "sprite": {
       "component": "Sprite",
-      "importPath": "@/components/atoms/Sprite",
+      "importPath": "@/components/molecules/Sprite",
       "category": "game"
     },
     "state-indicator": {
       "component": "StateIndicator",
-      "importPath": "@/components/atoms/StateIndicator",
+      "importPath": "@/components/molecules/StateIndicator",
       "category": "game"
     },
     "status-effect": {
       "component": "StatusEffect",
-      "importPath": "@/components/atoms/StatusEffect",
+      "importPath": "@/components/molecules/StatusEffect",
       "category": "game"
     },
     "timer-display": {
       "component": "TimerDisplay",
-      "importPath": "@/components/atoms/TimerDisplay",
+      "importPath": "@/components/molecules/TimerDisplay",
       "category": "game"
     },
     "turn-indicator": {
       "component": "TurnIndicator",
-      "importPath": "@/components/atoms/TurnIndicator",
+      "importPath": "@/components/molecules/TurnIndicator",
       "category": "game"
     },
     "waypoint-marker": {
       "component": "WaypointMarker",
-      "importPath": "@/components/atoms/WaypointMarker",
+      "importPath": "@/components/molecules/WaypointMarker",
       "category": "game"
     },
     "svg-branch": {
@@ -1271,112 +1271,107 @@
     },
     "battle-board": {
       "component": "BattleBoard",
-      "importPath": "@/components/organisms/BattleBoard",
+      "importPath": "@/components/molecules/BattleBoard",
       "category": "game"
     },
     "canvas-effect": {
       "component": "CanvasEffect",
-      "importPath": "@/components/organisms/CanvasEffect",
+      "importPath": "@/components/molecules/CanvasEffect",
       "category": "game"
     },
     "castle-board": {
       "component": "CastleBoard",
-      "importPath": "@/components/organisms/CastleBoard",
+      "importPath": "@/components/molecules/CastleBoard",
       "category": "game"
     },
     "game-audio-provider": {
       "component": "GameAudioProvider",
-      "importPath": "@/components/organisms/GameAudioProvider",
+      "importPath": "@/components/molecules/GameAudioProvider",
       "category": "game"
     },
     "game-audio-toggle": {
       "component": "GameAudioToggle",
-      "importPath": "@/components/organisms/GameAudioToggle",
+      "importPath": "@/components/molecules/GameAudioToggle",
       "category": "game"
     },
     "trait-slot": {
       "component": "TraitSlot",
-      "importPath": "@/components/organisms/TraitSlot",
+      "importPath": "@/components/molecules/TraitSlot",
       "category": "game"
     },
     "uncontrolled-battle-board": {
       "component": "UncontrolledBattleBoard",
-      "importPath": "@/components/organisms/UncontrolledBattleBoard",
+      "importPath": "@/components/molecules/UncontrolledBattleBoard",
       "category": "game"
     },
     "world-map-board": {
       "component": "WorldMapBoard",
-      "importPath": "@/components/organisms/WorldMapBoard",
+      "importPath": "@/components/molecules/WorldMapBoard",
       "category": "game"
     },
     "simulation-canvas": {
       "component": "SimulationCanvas",
-      "importPath": "@/components/organisms/SimulationCanvas",
+      "importPath": "@/components/molecules/SimulationCanvas",
       "category": "game"
     },
     "builder-board": {
       "component": "BuilderBoard",
-      "importPath": "@/components/organisms/BuilderBoard",
+      "importPath": "@/components/molecules/BuilderBoard",
       "category": "game"
     },
     "classifier-board": {
       "component": "ClassifierBoard",
-      "importPath": "@/components/organisms/ClassifierBoard",
+      "importPath": "@/components/molecules/ClassifierBoard",
       "category": "game"
     },
     "debugger-board": {
       "component": "DebuggerBoard",
-      "importPath": "@/components/organisms/DebuggerBoard",
+      "importPath": "@/components/molecules/DebuggerBoard",
       "category": "game"
     },
     "event-handler-board": {
       "component": "EventHandlerBoard",
-      "importPath": "@/components/organisms/EventHandlerBoard",
+      "importPath": "@/components/molecules/EventHandlerBoard",
       "category": "game"
     },
     "event-log": {
       "component": "EventLog",
-      "importPath": "@/components/organisms/EventLog",
+      "importPath": "@/components/molecules/EventLog",
       "category": "game"
     },
     "negotiator-board": {
       "component": "NegotiatorBoard",
-      "importPath": "@/components/organisms/NegotiatorBoard",
+      "importPath": "@/components/molecules/NegotiatorBoard",
       "category": "game"
     },
     "action-palette": {
       "component": "ActionPalette",
-      "importPath": "@/components/organisms/ActionPalette",
+      "importPath": "@/components/molecules/ActionPalette",
       "category": "game"
     },
     "action-tile": {
       "component": "ActionTile",
-      "importPath": "@/components/organisms/ActionTile",
+      "importPath": "@/components/molecules/ActionTile",
       "category": "game"
     },
     "sequence-bar": {
       "component": "SequenceBar",
-      "importPath": "@/components/organisms/SequenceBar",
+      "importPath": "@/components/molecules/SequenceBar",
       "category": "game"
     },
     "sequencer-board": {
       "component": "SequencerBoard",
-      "importPath": "@/components/organisms/SequencerBoard",
+      "importPath": "@/components/molecules/SequencerBoard",
       "category": "game"
     },
     "simulator-board": {
       "component": "SimulatorBoard",
-      "importPath": "@/components/organisms/SimulatorBoard",
+      "importPath": "@/components/molecules/SimulatorBoard",
       "category": "game"
     },
     "state-architect-board": {
       "component": "StateArchitectBoard",
-      "importPath": "@/components/organisms/StateArchitectBoard",
-      "category": "game"
-    },
-    "feature-renderer": {
-      "component": "FeatureRenderer",
-      "importPath": "@/components/molecules/FeatureRenderer",
+      "importPath": "@/components/molecules/StateArchitectBoard",
       "category": "game"
     },
     "dashboard-grid": {
@@ -1444,26 +1439,6 @@
       "importPath": "@/components/atoms/StatCard",
       "category": "display"
     },
-    "game-canvas-3d": {
-      "component": "GameCanvas3D",
-      "importPath": "@almadar/ui/components/organisms/game/three",
-      "category": "game"
-    },
-    "game-canvas-3d-battle-template": {
-      "component": "GameCanvas3DBattleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
-      "category": "game"
-    },
-    "game-canvas-3d-castle-template": {
-      "component": "GameCanvas3DCastleTemplate",
-      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
-      "category": "game"
-    },
-    "game-canvas-3d-world-map-template": {
-      "component": "GameCanvas3DWorldMapTemplate",
-      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
-      "category": "game"
-    },
     "activation-block": {
       "component": "ActivationBlock",
       "importPath": "@/components/molecules/ActivationBlock",
@@ -1494,59 +1469,54 @@
       "importPath": "@/components/organisms/SegmentRenderer",
       "category": "display"
     },
-    "game-board-3d": {
-      "component": "GameBoard3D",
-      "importPath": "@/components/organisms/GameBoard3D",
-      "category": "game"
-    },
     "platformer-board": {
       "component": "PlatformerBoard",
-      "importPath": "@/components/organisms/PlatformerBoard",
+      "importPath": "@/components/molecules/PlatformerBoard",
       "category": "game"
     },
     "roguelike-board": {
       "component": "RoguelikeBoard",
-      "importPath": "@/components/organisms/RoguelikeBoard",
+      "importPath": "@/components/molecules/RoguelikeBoard",
       "category": "game"
     },
     "tower-defense-board": {
       "component": "TowerDefenseBoard",
-      "importPath": "@/components/organisms/TowerDefenseBoard",
+      "importPath": "@/components/molecules/TowerDefenseBoard",
       "category": "game"
     },
     "platformer-template": {
       "component": "PlatformerTemplate",
-      "importPath": "@/components/templates/PlatformerTemplate",
+      "importPath": "@/components/molecules/PlatformerTemplate",
       "category": "game"
     },
     "roguelike-template": {
       "component": "RoguelikeTemplate",
-      "importPath": "@/components/templates/RoguelikeTemplate",
+      "importPath": "@/components/molecules/RoguelikeTemplate",
       "category": "game"
     },
     "tower-defense-template": {
       "component": "TowerDefenseTemplate",
-      "importPath": "@/components/templates/TowerDefenseTemplate",
+      "importPath": "@/components/molecules/TowerDefenseTemplate",
       "category": "game"
     },
     "city-builder-board": {
       "component": "CityBuilderBoard",
-      "importPath": "@/components/organisms/CityBuilderBoard",
+      "importPath": "@/components/molecules/CityBuilderBoard",
       "category": "game"
     },
     "top-down-shooter-board": {
       "component": "TopDownShooterBoard",
-      "importPath": "@/components/organisms/TopDownShooterBoard",
+      "importPath": "@/components/molecules/TopDownShooterBoard",
       "category": "game"
     },
     "city-builder-template": {
       "component": "CityBuilderTemplate",
-      "importPath": "@/components/templates/CityBuilderTemplate",
+      "importPath": "@/components/molecules/CityBuilderTemplate",
       "category": "game"
     },
     "top-down-shooter-template": {
       "component": "TopDownShooterTemplate",
-      "importPath": "@/components/templates/TopDownShooterTemplate",
+      "importPath": "@/components/molecules/TopDownShooterTemplate",
       "category": "game"
     },
     "card-hand": {
@@ -1556,27 +1526,27 @@
     },
     "card-battler-board": {
       "component": "CardBattlerBoard",
-      "importPath": "@/components/organisms/CardBattlerBoard",
+      "importPath": "@/components/molecules/CardBattlerBoard",
       "category": "game"
     },
     "visual-novel-board": {
       "component": "VisualNovelBoard",
-      "importPath": "@/components/organisms/VisualNovelBoard",
+      "importPath": "@/components/molecules/VisualNovelBoard",
       "category": "game"
     },
     "card-battler-template": {
       "component": "CardBattlerTemplate",
-      "importPath": "@/components/templates/CardBattlerTemplate",
+      "importPath": "@/components/molecules/CardBattlerTemplate",
       "category": "game"
     },
     "visual-novel-template": {
       "component": "VisualNovelTemplate",
-      "importPath": "@/components/templates/VisualNovelTemplate",
+      "importPath": "@/components/molecules/VisualNovelTemplate",
       "category": "game"
     },
     "hex-strategy-board": {
       "component": "HexStrategyBoard",
-      "importPath": "@/components/organisms/HexStrategyBoard",
+      "importPath": "@/components/molecules/HexStrategyBoard",
       "category": "game"
     },
     "chat-bar": {
@@ -1591,67 +1561,67 @@
     },
     "boardgame-board": {
       "component": "BoardgameBoard",
-      "importPath": "@/components/organisms/BoardgameBoard",
+      "importPath": "@/components/molecules/BoardgameBoard",
       "category": "game"
     },
     "fishing-board": {
       "component": "FishingBoard",
-      "importPath": "@/components/organisms/FishingBoard",
+      "importPath": "@/components/molecules/FishingBoard",
       "category": "game"
     },
     "holiday-runner-board": {
       "component": "HolidayRunnerBoard",
-      "importPath": "@/components/organisms/HolidayRunnerBoard",
+      "importPath": "@/components/molecules/HolidayRunnerBoard",
       "category": "game"
     },
     "match-puzzle-board": {
       "component": "MatchPuzzleBoard",
-      "importPath": "@/components/organisms/MatchPuzzleBoard",
+      "importPath": "@/components/molecules/MatchPuzzleBoard",
       "category": "game"
     },
     "minigolf-board": {
       "component": "MinigolfBoard",
-      "importPath": "@/components/organisms/MinigolfBoard",
+      "importPath": "@/components/molecules/MinigolfBoard",
       "category": "game"
     },
     "pinball-board": {
       "component": "PinballBoard",
-      "importPath": "@/components/organisms/PinballBoard",
+      "importPath": "@/components/molecules/PinballBoard",
       "category": "game"
     },
     "pirate-board": {
       "component": "PirateBoard",
-      "importPath": "@/components/organisms/PirateBoard",
+      "importPath": "@/components/molecules/PirateBoard",
       "category": "game"
     },
     "racing-board": {
       "component": "RacingBoard",
-      "importPath": "@/components/organisms/RacingBoard",
+      "importPath": "@/components/molecules/RacingBoard",
       "category": "game"
     },
     "sokoban-board": {
       "component": "SokobanBoard",
-      "importPath": "@/components/organisms/SokobanBoard",
+      "importPath": "@/components/molecules/SokobanBoard",
       "category": "game"
     },
     "space-shmup-board": {
       "component": "SpaceShmupBoard",
-      "importPath": "@/components/organisms/SpaceShmupBoard",
+      "importPath": "@/components/molecules/SpaceShmupBoard",
       "category": "game"
     },
     "space-station-board": {
       "component": "SpaceStationBoard",
-      "importPath": "@/components/organisms/SpaceStationBoard",
+      "importPath": "@/components/molecules/SpaceStationBoard",
       "category": "game"
     },
     "sports-board": {
       "component": "SportsBoard",
-      "importPath": "@/components/organisms/SportsBoard",
+      "importPath": "@/components/molecules/SportsBoard",
       "category": "game"
     },
     "tanks-board": {
       "component": "TanksBoard",
-      "importPath": "@/components/organisms/TanksBoard",
+      "importPath": "@/components/molecules/TanksBoard",
       "category": "game"
     },
     "canvas-2d": {
@@ -1666,7 +1636,7 @@
     },
     "game-card": {
       "component": "GameCard",
-      "importPath": "@/components/atoms/GameCard",
+      "importPath": "@/components/molecules/GameCard",
       "category": "game"
     }
   }

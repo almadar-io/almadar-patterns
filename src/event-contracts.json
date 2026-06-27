@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-27T15:26:54.780Z",
+  "exportedAt": "2026-06-27T19:37:52.715Z",
   "contracts": {
     "form": {
       "emits": [
@@ -974,32 +974,6 @@
       ],
       "requires": [],
       "entityAware": true
-    },
-    "action-buttons": {
-      "emits": [
-        {
-          "event": "ACTION",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "d-pad": {
-      "emits": [
-        {
-          "event": "DIRECTION",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
     },
     "dialogue-box": {
       "emits": [
