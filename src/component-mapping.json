@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T04:41:39.680Z",
+  "exportedAt": "2026-06-28T09:21:10.400Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1144,26 +1144,6 @@
       "importPath": "@/components/molecules/ModuleCard",
       "category": "display"
     },
-    "combat-log": {
-      "component": "CombatLog",
-      "importPath": "@/components/molecules/CombatLog",
-      "category": "game"
-    },
-    "crafting-recipe": {
-      "component": "CraftingRecipe",
-      "importPath": "@/components/molecules/CraftingRecipe",
-      "category": "game"
-    },
-    "dialogue-box": {
-      "component": "DialogueBox",
-      "importPath": "@/components/molecules/DialogueBox",
-      "category": "game"
-    },
-    "enemy-plate": {
-      "component": "EnemyPlate",
-      "importPath": "@/components/molecules/EnemyPlate",
-      "category": "game"
-    },
     "game-hud": {
       "component": "GameHud",
       "importPath": "@/components/molecules/GameHud",
@@ -1174,24 +1154,9 @@
       "importPath": "@/components/molecules/GameMenu",
       "category": "game"
     },
-    "game-over-screen": {
-      "component": "GameOverScreen",
-      "importPath": "@/components/molecules/GameOverScreen",
-      "category": "game"
-    },
-    "health-panel": {
-      "component": "HealthPanel",
-      "importPath": "@/components/molecules/HealthPanel",
-      "category": "game"
-    },
     "inventory-grid": {
       "component": "InventoryGrid",
       "importPath": "@/components/molecules/InventoryGrid",
-      "category": "game"
-    },
-    "inventory-panel": {
-      "component": "InventoryPanel",
-      "importPath": "@/components/molecules/InventoryPanel",
       "category": "game"
     },
     "platformer-canvas": {
@@ -1199,39 +1164,14 @@
       "importPath": "@/components/molecules/PlatformerCanvas",
       "category": "game"
     },
-    "powerup-slots": {
-      "component": "PowerupSlots",
-      "importPath": "@/components/molecules/PowerupSlots",
-      "category": "game"
-    },
-    "quest-tracker": {
-      "component": "QuestTracker",
-      "importPath": "@/components/molecules/QuestTracker",
-      "category": "game"
-    },
     "resource-bar": {
       "component": "ResourceBar",
       "importPath": "@/components/molecules/ResourceBar",
       "category": "game"
     },
-    "score-board": {
-      "component": "ScoreBoard",
-      "importPath": "@/components/molecules/ScoreBoard",
-      "category": "game"
-    },
     "stat-badge": {
       "component": "StatBadge",
       "importPath": "@/components/molecules/StatBadge",
-      "category": "game"
-    },
-    "turn-panel": {
-      "component": "TurnPanel",
-      "importPath": "@/components/molecules/TurnPanel",
-      "category": "game"
-    },
-    "unit-command-bar": {
-      "component": "UnitCommandBar",
-      "importPath": "@/components/molecules/UnitCommandBar",
       "category": "game"
     },
     "book-chapter-view": {
@@ -1502,11 +1442,6 @@
     "top-down-shooter-template": {
       "component": "TopDownShooterTemplate",
       "importPath": "@/components/templates/TopDownShooterTemplate",
-      "category": "game"
-    },
-    "card-hand": {
-      "component": "CardHand",
-      "importPath": "@/components/molecules/CardHand",
       "category": "game"
     },
     "card-battler-board": {

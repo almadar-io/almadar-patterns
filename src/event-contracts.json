@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T04:41:39.680Z",
+  "exportedAt": "2026-06-28T09:21:10.400Z",
   "contracts": {
     "form": {
       "emits": [
@@ -974,33 +974,6 @@
       ],
       "requires": [],
       "entityAware": true
-    },
-    "dialogue-box": {
-      "emits": [
-        {
-          "event": "COMPLETE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "CHOICE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "ADVANCE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
     },
     "game-menu": {
       "emits": [

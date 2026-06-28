@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T04:41:39.680Z",
+  "exportedAt": "2026-06-28T09:21:10.400Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -12235,6 +12235,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "GameTemplate  A presentational template for game applications. Includes a main game canvas/area, HUD overlay, and an optional debug sidebar. **Atomic Design**: Composed using Box, Typography, and Layout molecules/atoms.",
       "suggestedFor": [
         "game",
@@ -12385,6 +12386,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients — no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
       "suggestedFor": [
         "game",
@@ -14206,6 +14208,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "BattleTemplate  Generalized tactical battle template composing IsometricCanvas from almadar-ui. Provides turn-based phase management, movement animation, valid-move/attack-target calculation, screen shake/flash, and a game-over overlay.  Game-specific UI (combat log, trait viewer, damage popups, etc.) is injected via render-prop slots so this template remains project-agnostic.",
       "suggestedFor": [
         "battle",
@@ -14287,6 +14290,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "CastleTemplate  Generalized castle / base-management template composing IsometricCanvas from almadar-ui. Renders an isometric courtyard/base view and exposes a side-panel area via slots for game-specific UI (building details, recruitment, garrison).",
       "suggestedFor": [
         "castle",
@@ -14361,6 +14365,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "WorldMapTemplate  Generalized strategic world-map template composing IsometricCanvas from almadar-ui. Renders an isometric hex/iso map with hero selection, movement animation, and encounter callbacks. Game-specific panels (hero detail, hero lists, resource bars) are injected via render-prop slots.",
       "suggestedFor": [
         "world",
@@ -25429,6 +25434,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ActionButton component",
       "suggestedFor": [
         "action",
@@ -25578,6 +25584,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ChoiceButton component",
       "suggestedFor": [
         "choice",
@@ -25703,6 +25710,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ComboCounter component",
       "suggestedFor": [
         "combo",
@@ -25817,6 +25825,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ControlButton component",
       "suggestedFor": [
         "control",
@@ -25991,6 +26000,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "DamageNumber component",
       "suggestedFor": [
         "damage",
@@ -26106,6 +26116,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "DialogueBubble component",
       "suggestedFor": [
         "dialogue",
@@ -26214,6 +26225,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "HealthBar component",
       "suggestedFor": [
         "health",
@@ -26302,6 +26314,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ItemSlot component",
       "suggestedFor": [
         "item",
@@ -26451,6 +26464,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "MiniMap component",
       "suggestedFor": [
         "mini",
@@ -26605,6 +26619,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ResourceCounter component",
       "suggestedFor": [
         "resource",
@@ -26742,6 +26757,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "ScoreDisplay component",
       "suggestedFor": [
         "score",
@@ -26870,6 +26886,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "Sprite component",
       "suggestedFor": [
         "sprite"
@@ -27067,6 +27084,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "StateIndicator Component  Displays a visual indicator for a game entity's current state. Generic — not tied to any specific game. Projects can extend the state styles via the `stateStyles` prop.",
       "suggestedFor": [
         "state",
@@ -27210,6 +27228,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "StatusEffect component",
       "suggestedFor": [
         "status",
@@ -27345,6 +27364,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "TimerDisplay component",
       "suggestedFor": [
         "timer",
@@ -27411,6 +27431,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "TurnIndicator component",
       "suggestedFor": [
         "turn",
@@ -27531,6 +27552,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "WaypointMarker component",
       "suggestedFor": [
         "waypoint",
@@ -29167,201 +29189,7 @@
             "object"
           ],
           "description": "data prop",
-          "required": true,
-          "properties": {
-            "orbitalName": {
-              "types": [
-                "string"
-              ]
-            },
-            "entityName": {
-              "types": [
-                "string"
-              ]
-            },
-            "persistence": {
-              "types": [
-                "string"
-              ]
-            },
-            "fields": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "type": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "required": {
-                    "types": [
-                      "boolean"
-                    ]
-                  },
-                  "hasDefault": {
-                    "types": [
-                      "boolean"
-                    ]
-                  }
-                },
-                "required": [
-                  "name",
-                  "type",
-                  "required",
-                  "hasDefault"
-                ]
-              }
-            },
-            "traits": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "stateCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "eventCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "transitionCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "emits": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "listens": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "name",
-                  "stateCount",
-                  "eventCount",
-                  "transitionCount",
-                  "emits",
-                  "listens"
-                ]
-              }
-            },
-            "pages": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "route": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "name",
-                  "route"
-                ]
-              }
-            },
-            "traitDetails": {
-              "types": [
-                "object"
-              ]
-            },
-            "externalLinks": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "targetOrbital": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "eventName": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "direction": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "traitName": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "targetOrbital",
-                  "eventName",
-                  "direction",
-                  "traitName"
-                ]
-              }
-            }
-          },
-          "propertyRequired": [
-            "orbitalName",
-            "entityName",
-            "persistence",
-            "fields",
-            "traits",
-            "pages",
-            "traitDetails",
-            "externalLinks"
-          ]
+          "required": true
         }
       }
     },
@@ -29383,917 +29211,7 @@
             "object"
           ],
           "description": "data prop",
-          "required": true,
-          "properties": {
-            "orbitalName": {
-              "types": [
-                "string"
-              ]
-            },
-            "entityName": {
-              "types": [
-                "string"
-              ]
-            },
-            "persistence": {
-              "types": [
-                "string"
-              ]
-            },
-            "fields": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "type": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "required": {
-                    "types": [
-                      "boolean"
-                    ]
-                  },
-                  "hasDefault": {
-                    "types": [
-                      "boolean"
-                    ]
-                  }
-                },
-                "required": [
-                  "name",
-                  "type",
-                  "required",
-                  "hasDefault"
-                ]
-              }
-            },
-            "traits": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "stateCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "eventCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "transitionCount": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "emits": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "listens": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  }
-                },
-                "required": [
-                  "name",
-                  "stateCount",
-                  "eventCount",
-                  "transitionCount",
-                  "emits",
-                  "listens"
-                ]
-              }
-            },
-            "pages": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "route": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "name",
-                  "route"
-                ]
-              }
-            },
-            "traitDetails": {
-              "types": [
-                "object"
-              ]
-            },
-            "externalLinks": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "targetOrbital": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "eventName": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "direction": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "traitName": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "targetOrbital",
-                  "eventName",
-                  "direction",
-                  "traitName"
-                ]
-              }
-            }
-          },
-          "propertyRequired": [
-            "orbitalName",
-            "entityName",
-            "persistence",
-            "fields",
-            "traits",
-            "pages",
-            "traitDetails",
-            "externalLinks"
-          ]
-        }
-      }
-    },
-    "combat-log": {
-      "type": "combat-log",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "CombatLog Component  Scrollable log of combat events with icons and colors. Generalized from Trait Wars — removed asset manifest coupling.",
-      "suggestedFor": [
-        "combat",
-        "log",
-        "combat log"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "events": {
-          "types": [
-            "array"
-          ],
-          "description": "events prop",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "type": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "attack",
-                  "defend",
-                  "heal",
-                  "move",
-                  "special",
-                  "death",
-                  "spawn"
-                ]
-              },
-              "message": {
-                "types": [
-                  "string"
-                ]
-              },
-              "timestamp": {
-                "types": [
-                  "number"
-                ]
-              },
-              "actorName": {
-                "types": [
-                  "string"
-                ]
-              },
-              "targetName": {
-                "types": [
-                  "string"
-                ]
-              },
-              "value": {
-                "types": [
-                  "number"
-                ]
-              },
-              "turn": {
-                "types": [
-                  "number"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "type",
-              "message",
-              "timestamp"
-            ]
-          }
-        },
-        "maxVisible": {
-          "types": [
-            "number"
-          ],
-          "description": "maxVisible prop",
-          "default": 50
-        },
-        "autoScroll": {
-          "types": [
-            "boolean"
-          ],
-          "description": "autoScroll prop",
-          "default": true
-        },
-        "showTimestamps": {
-          "types": [
-            "boolean"
-          ],
-          "description": "showTimestamps prop",
-          "default": false
-        },
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "title prop",
-          "default": "Combat Log"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        }
-      }
-    },
-    "crafting-recipe": {
-      "type": "crafting-recipe",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "CraftingRecipe component",
-      "suggestedFor": [
-        "crafting",
-        "recipe",
-        "crafting recipe"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "inputs": {
-          "types": [
-            "array"
-          ],
-          "description": "Input ingredients for the recipe",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "required": {
-                "types": [
-                  "number"
-                ]
-              },
-              "available": {
-                "types": [
-                  "number"
-                ]
-              }
-            },
-            "required": [
-              "label",
-              "required",
-              "available"
-            ]
-          }
-        },
-        "output": {
-          "types": [
-            "object"
-          ],
-          "description": "Output item produced by the recipe",
-          "required": true,
-          "properties": {
-            "icon": {
-              "types": [
-                "icon",
-                "string"
-              ]
-            },
-            "label": {
-              "types": [
-                "string"
-              ]
-            },
-            "rarity": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "label"
-          ]
-        },
-        "canCraft": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether the player has enough ingredients to craft",
-          "default": true
-        },
-        "onCraft": {
-          "types": [
-            "function"
-          ],
-          "description": "Callback when the craft button is clicked",
-          "kind": "callback",
-          "callbackArgs": []
-        },
-        "craftEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event bus event name for crafting",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "output",
-              "type": "string",
-              "required": true
-            }
-          ]
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "dialogue-box": {
-      "type": "dialogue-box",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "Event Contract: Emits: UI:COMPLETE Emits: UI:CHOICE Emits: UI:ADVANCE",
-      "suggestedFor": [
-        "dialogue",
-        "box",
-        "dialogue box"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "dialogue": {
-          "types": [
-            "object"
-          ],
-          "description": "Current dialogue node to display",
-          "required": true,
-          "properties": {
-            "id": {
-              "types": [
-                "string"
-              ]
-            },
-            "speaker": {
-              "types": [
-                "string"
-              ]
-            },
-            "text": {
-              "types": [
-                "string"
-              ]
-            },
-            "portrait": {
-              "types": [
-                "string"
-              ]
-            },
-            "choices": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "text": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "action": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "next": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "disabled": {
-                    "types": [
-                      "boolean"
-                    ]
-                  }
-                },
-                "required": [
-                  "text"
-                ]
-              }
-            },
-            "autoAdvance": {
-              "types": [
-                "number"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "speaker",
-            "text"
-          ]
-        },
-        "typewriterSpeed": {
-          "types": [
-            "number"
-          ],
-          "description": "Typewriter speed in ms per character (0 = instant)",
-          "default": 30
-        },
-        "position": {
-          "types": [
-            "string"
-          ],
-          "description": "Position of dialogue box",
-          "enumValues": [
-            "top",
-            "bottom"
-          ],
-          "default": "bottom"
-        },
-        "onComplete": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when text animation completes",
-          "kind": "callback",
-          "callbackArgs": []
-        },
-        "onChoice": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when a choice is selected",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "choice",
-              "type": "object",
-              "schema": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "text": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "action": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "next": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "disabled": {
-                    "types": [
-                      "boolean"
-                    ]
-                  }
-                },
-                "required": [
-                  "text"
-                ]
-              }
-            }
-          ]
-        },
-        "onAdvance": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when dialogue is advanced (no choices)",
-          "kind": "callback",
-          "callbackArgs": []
-        },
-        "completeEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{completeEvent} when text animation completes",
-          "kind": "event-ref",
-          "emitPayloadSchema": []
-        },
-        "choiceEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{choiceEvent} with { choice: DialogueChoice } when a choice is selected",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "choice",
-              "type": "object",
-              "required": true
-            }
-          ]
-        },
-        "advanceEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{advanceEvent} when dialogue is advanced",
-          "kind": "event-ref",
-          "emitPayloadSchema": []
-        },
-        "backgroundImage": {
-          "types": [
-            "object"
-          ],
-          "description": "Optional full-frame scene image rendered behind the dialogue (visual-novel mode).",
-          "properties": {
-            "url": {
-              "types": [
-                "asset"
-              ]
-            },
-            "role": {
-              "types": [
-                "string"
-              ]
-            },
-            "category": {
-              "types": [
-                "string"
-              ]
-            },
-            "animations": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "style": {
-              "types": [
-                "string"
-              ]
-            },
-            "dimension": {
-              "types": [
-                "string"
-              ]
-            },
-            "aspect": {
-              "types": [
-                "string"
-              ]
-            },
-            "name": {
-              "types": [
-                "string"
-              ]
-            },
-            "thumbnailUrl": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "url"
-          ]
-        },
-        "portraitUrl": {
-          "types": [
-            "object"
-          ],
-          "description": "Optional larger character portrait rendered standing over the scene (visual-novel mode).",
-          "properties": {
-            "url": {
-              "types": [
-                "asset"
-              ]
-            },
-            "role": {
-              "types": [
-                "string"
-              ]
-            },
-            "category": {
-              "types": [
-                "string"
-              ]
-            },
-            "animations": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "style": {
-              "types": [
-                "string"
-              ]
-            },
-            "dimension": {
-              "types": [
-                "string"
-              ]
-            },
-            "aspect": {
-              "types": [
-                "string"
-              ]
-            },
-            "name": {
-              "types": [
-                "string"
-              ]
-            },
-            "thumbnailUrl": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "url"
-          ]
-        },
-        "portraitScale": {
-          "types": [
-            "number"
-          ],
-          "description": "Multiplier for the large `portraitUrl` height relative to its default (default 1).",
-          "default": 1
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Optional className"
-        }
-      }
-    },
-    "enemy-plate": {
-      "type": "enemy-plate",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "EnemyPlate component",
-      "suggestedFor": [
-        "enemy",
-        "plate",
-        "enemy plate"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "assetUrl": {
-          "types": [
-            "object"
-          ],
-          "description": "Portrait sprite asset — takes precedence over the default avatar slot",
-          "properties": {
-            "url": {
-              "types": [
-                "asset"
-              ]
-            },
-            "role": {
-              "types": [
-                "string"
-              ]
-            },
-            "category": {
-              "types": [
-                "string"
-              ]
-            },
-            "animations": {
-              "types": [
-                "array"
-              ],
-              "items": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "style": {
-              "types": [
-                "string"
-              ]
-            },
-            "dimension": {
-              "types": [
-                "string"
-              ]
-            },
-            "aspect": {
-              "types": [
-                "string"
-              ]
-            },
-            "name": {
-              "types": [
-                "string"
-              ]
-            },
-            "thumbnailUrl": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "url"
-          ]
-        },
-        "name": {
-          "types": [
-            "string"
-          ],
-          "description": "Enemy name",
-          "required": true,
-          "default": "Shadow Guard"
-        },
-        "health": {
-          "types": [
-            "number"
-          ],
-          "description": "Current health",
-          "required": true,
-          "default": 80
-        },
-        "maxHealth": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum health",
-          "required": true,
-          "default": 100
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Enemy level",
-          "default": 5
-        },
-        "effects": {
-          "types": [
-            "array"
-          ],
-          "description": "Active status effects",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "variant": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "buff",
-                  "debuff",
-                  "neutral"
-                ]
-              }
-            },
-            "required": [
-              "icon"
-            ]
-          }
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
+          "required": true
         }
       }
     },
@@ -30302,6 +29220,7 @@
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "GameHud component",
       "suggestedFor": [
         "game",
@@ -30454,6 +29373,7 @@
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "GameMenu component",
       "suggestedFor": [
         "game",
@@ -30694,427 +29614,12 @@
         }
       }
     },
-    "game-over-screen": {
-      "type": "game-over-screen",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "GameOverScreen component",
-      "suggestedFor": [
-        "game",
-        "over",
-        "screen",
-        "game over screen"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "title": {
-          "types": [
-            "string"
-          ],
-          "description": "Screen title (e.g., \"Game Over\", \"Victory!\")",
-          "required": true,
-          "default": "Game Over"
-        },
-        "message": {
-          "types": [
-            "string"
-          ],
-          "description": "Optional message"
-        },
-        "stats": {
-          "types": [
-            "array"
-          ],
-          "description": "Stats to display",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "value": {
-                "types": [
-                  "number",
-                  "string"
-                ]
-              },
-              "bind": {
-                "types": [
-                  "string"
-                ]
-              },
-              "format": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "number",
-                  "time",
-                  "text"
-                ]
-              },
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "actions": {
-          "types": [
-            "array"
-          ],
-          "description": "Action buttons",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "event": {
-                "types": [
-                  "string"
-                ]
-              },
-              "navigatesTo": {
-                "types": [
-                  "string"
-                ]
-              },
-              "variant": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "primary",
-                  "secondary",
-                  "ghost"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "menuItems": {
-          "types": [
-            "array"
-          ],
-          "description": "Alias for actions (schema compatibility)",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "event": {
-                "types": [
-                  "string"
-                ]
-              },
-              "navigatesTo": {
-                "types": [
-                  "string"
-                ]
-              },
-              "variant": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "primary",
-                  "secondary",
-                  "ghost"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "onAction": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when an action is selected (legacy callback, prefer event bus)",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "action",
-              "type": "object",
-              "schema": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "label": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "event": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "navigatesTo": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "variant": {
-                    "types": [
-                      "string"
-                    ],
-                    "enumValues": [
-                      "primary",
-                      "secondary",
-                      "ghost"
-                    ]
-                  }
-                },
-                "required": [
-                  "label"
-                ]
-              }
-            }
-          ]
-        },
-        "eventBus": {
-          "types": [
-            "object"
-          ],
-          "description": "Event bus for emitting UI events (optional, uses hook if not provided)",
-          "nonAuthorable": true
-        },
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "Victory or defeat variant",
-          "enumValues": [
-            "victory",
-            "defeat",
-            "neutral"
-          ],
-          "default": "defeat"
-        },
-        "highScore": {
-          "types": [
-            "number",
-            "string"
-          ],
-          "description": "High score (optional, shows \"NEW HIGH SCORE!\" if exceeded)",
-          "default": 2000
-        },
-        "currentScore": {
-          "types": [
-            "number",
-            "string"
-          ],
-          "description": "Current score for high score comparison (accepts string for schema bindings)",
-          "default": 1240
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "health-panel": {
-      "type": "health-panel",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "HealthPanel component",
-      "suggestedFor": [
-        "health",
-        "panel",
-        "health panel"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "current": {
-          "types": [
-            "number"
-          ],
-          "description": "Current health value",
-          "required": true,
-          "default": 75
-        },
-        "max": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum health value",
-          "required": true,
-          "default": 100
-        },
-        "shield": {
-          "types": [
-            "number"
-          ],
-          "description": "Shield/armor points",
-          "default": 20
-        },
-        "label": {
-          "types": [
-            "string"
-          ],
-          "description": "Label shown above the bar",
-          "default": "Player HP"
-        },
-        "effects": {
-          "types": [
-            "array"
-          ],
-          "description": "Active status effects displayed as small badges",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "assetUrl": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "url": {
-                    "types": [
-                      "asset"
-                    ]
-                  },
-                  "role": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "category": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "animations": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "style": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "dimension": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "aspect": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "thumbnailUrl": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "url"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "variant": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "buff",
-                  "debuff",
-                  "neutral"
-                ]
-              }
-            },
-            "required": [
-              "icon"
-            ]
-          }
-        },
-        "showNumbers": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Whether to display numeric HP values",
-          "default": true
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Size variant",
-          "enumValues": [
-            "sm",
-            "md",
-            "lg"
-          ],
-          "default": "md"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
     "inventory-grid": {
       "type": "inventory-grid",
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "InventoryGrid component",
       "suggestedFor": [
         "inventory",
@@ -31241,282 +29746,12 @@
         }
       }
     },
-    "inventory-panel": {
-      "type": "inventory-panel",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "InventoryPanel component",
-      "suggestedFor": [
-        "inventory",
-        "panel",
-        "inventory panel"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "items": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of items in inventory",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "type": {
-                "types": [
-                  "string"
-                ]
-              },
-              "quantity": {
-                "types": [
-                  "number"
-                ]
-              },
-              "sprite": {
-                "types": [
-                  "string"
-                ]
-              },
-              "name": {
-                "types": [
-                  "string"
-                ]
-              },
-              "description": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "type",
-              "quantity"
-            ]
-          }
-        },
-        "slots": {
-          "types": [
-            "number"
-          ],
-          "description": "Total number of slots",
-          "required": true,
-          "default": 12
-        },
-        "columns": {
-          "types": [
-            "number"
-          ],
-          "description": "Number of columns in grid",
-          "required": true,
-          "default": 4
-        },
-        "selectedSlot": {
-          "types": [
-            "number"
-          ],
-          "description": "Currently selected slot index"
-        },
-        "onSelectSlot": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when a slot is selected",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "index",
-              "type": "number"
-            }
-          ]
-        },
-        "onUseItem": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when an item is used (double-click or Enter)",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "item",
-              "type": "object",
-              "schema": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "id": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "type": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "quantity": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "sprite": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "description": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "id",
-                  "type",
-                  "quantity"
-                ]
-              }
-            }
-          ]
-        },
-        "onDropItem": {
-          "types": [
-            "function"
-          ],
-          "description": "Called when an item is dropped",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "item",
-              "type": "object",
-              "schema": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "id": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "type": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "quantity": {
-                    "types": [
-                      "number"
-                    ]
-                  },
-                  "sprite": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "description": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "id",
-                  "type",
-                  "quantity"
-                ]
-              }
-            }
-          ]
-        },
-        "selectSlotEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{selectSlotEvent} with { index } when a slot is selected",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "index",
-              "type": "number",
-              "required": true
-            }
-          ]
-        },
-        "useItemEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{useItemEvent} with { item: InventoryItem } when an item is used",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "item",
-              "type": "object",
-              "required": true
-            }
-          ]
-        },
-        "dropItemEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Declarative event: emits UI:{dropItemEvent} with { item: InventoryItem } when an item is dropped",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "item",
-              "type": "object",
-              "required": true
-            }
-          ]
-        },
-        "showTooltips": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Show item tooltips on hover",
-          "default": true
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Optional className"
-        },
-        "slotSize": {
-          "types": [
-            "number"
-          ],
-          "description": "Slot size in pixels",
-          "default": 48
-        }
-      }
-    },
     "platformer-canvas": {
       "type": "platformer-canvas",
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "PlatformerCanvas component",
       "suggestedFor": [
         "platformer",
@@ -31797,216 +30032,12 @@
         }
       }
     },
-    "powerup-slots": {
-      "type": "powerup-slots",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "PowerupSlots component",
-      "suggestedFor": [
-        "powerup",
-        "slots",
-        "powerup slots"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "active": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of active powerups",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "assetUrl": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "url": {
-                    "types": [
-                      "asset"
-                    ]
-                  },
-                  "role": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "category": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "animations": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "style": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "dimension": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "aspect": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "thumbnailUrl": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "url"
-                ]
-              },
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "remainingTime": {
-                "types": [
-                  "number"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "label"
-            ]
-          }
-        },
-        "maxSlots": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum number of powerup slots",
-          "default": 4
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "quest-tracker": {
-      "type": "quest-tracker",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "QuestTracker component",
-      "suggestedFor": [
-        "quest",
-        "tracker",
-        "quest tracker"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "quests": {
-          "types": [
-            "array"
-          ],
-          "description": "Array of quests to display",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "title": {
-                "types": [
-                  "string"
-                ]
-              },
-              "progress": {
-                "types": [
-                  "number"
-                ]
-              },
-              "maxProgress": {
-                "types": [
-                  "number"
-                ]
-              },
-              "active": {
-                "types": [
-                  "boolean"
-                ]
-              },
-              "completed": {
-                "types": [
-                  "boolean"
-                ]
-              }
-            },
-            "required": [
-              "id",
-              "title",
-              "progress",
-              "maxProgress"
-            ]
-          }
-        },
-        "activeQuestId": {
-          "types": [
-            "string"
-          ],
-          "description": "ID of the currently active quest",
-          "default": "q2"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
     "resource-bar": {
       "type": "resource-bar",
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "ResourceBar component",
       "suggestedFor": [
         "resource",
@@ -32073,63 +30104,12 @@
         }
       }
     },
-    "score-board": {
-      "type": "score-board",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "ScoreBoard component",
-      "suggestedFor": [
-        "score",
-        "board",
-        "score board"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "score": {
-          "types": [
-            "number"
-          ],
-          "description": "Current score",
-          "required": true
-        },
-        "highScore": {
-          "types": [
-            "number"
-          ],
-          "description": "All-time high score"
-        },
-        "combo": {
-          "types": [
-            "number"
-          ],
-          "description": "Current combo count"
-        },
-        "multiplier": {
-          "types": [
-            "number"
-          ],
-          "description": "Score multiplier"
-        },
-        "level": {
-          "types": [
-            "number"
-          ],
-          "description": "Current level"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
     "stat-badge": {
       "type": "stat-badge",
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "StatBadge component",
       "suggestedFor": [
         "stat",
@@ -32338,225 +30318,6 @@
             "danger"
           ],
           "default": "default"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "turn-panel": {
-      "type": "turn-panel",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "TurnPanel component",
-      "suggestedFor": [
-        "turn",
-        "panel",
-        "turn panel"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "currentTurn": {
-          "types": [
-            "number"
-          ],
-          "description": "Current turn number",
-          "required": true,
-          "default": 3
-        },
-        "maxTurns": {
-          "types": [
-            "number"
-          ],
-          "description": "Maximum number of turns",
-          "default": 10
-        },
-        "phase": {
-          "types": [
-            "string"
-          ],
-          "description": "Current phase label",
-          "default": "Attack"
-        },
-        "activeTeam": {
-          "types": [
-            "string"
-          ],
-          "description": "Active team name",
-          "default": "Heroes"
-        },
-        "actions": {
-          "types": [
-            "array"
-          ],
-          "description": "Action buttons to display",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "assetUrl": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "url": {
-                    "types": [
-                      "asset"
-                    ]
-                  },
-                  "role": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "category": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "animations": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "style": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "dimension": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "aspect": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "thumbnailUrl": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "url"
-                ]
-              },
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "event": {
-                "types": [
-                  "string"
-                ]
-              },
-              "disabled": {
-                "types": [
-                  "boolean"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "unit-command-bar": {
-      "type": "unit-command-bar",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "UnitCommandBar component",
-      "suggestedFor": [
-        "unit",
-        "command",
-        "bar",
-        "unit command bar"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "commands": {
-          "types": [
-            "array"
-          ],
-          "description": "Available commands",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "icon": {
-                "types": [
-                  "icon",
-                  "string"
-                ]
-              },
-              "event": {
-                "types": [
-                  "string"
-                ]
-              },
-              "disabled": {
-                "types": [
-                  "boolean"
-                ]
-              },
-              "hotkey": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "selectedUnitId": {
-          "types": [
-            "string"
-          ],
-          "description": "ID of the currently selected unit",
-          "default": "unit-1"
         },
         "className": {
           "types": [
@@ -32991,6 +30752,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "BattleBoard component",
       "suggestedFor": [
         "battle",
@@ -34331,6 +32093,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "CanvasEffect component",
       "suggestedFor": [
         "canvas",
@@ -34472,6 +32235,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "CastleBoard component",
       "suggestedFor": [
         "castle",
@@ -35374,6 +33138,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "GameAudioToggle component",
       "suggestedFor": [
         "game",
@@ -35445,6 +33210,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "Event Contract: Emits: UI:CLICK Emits: UI:REMOVE",
       "suggestedFor": [
         "trait",
@@ -35818,6 +33584,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "UncontrolledBattleBoard  Thin wrapper that composes `useBattleState` + `BattleBoard` for self-managing game state.  Accepts `initialUnits` instead of the controlled-mode fields and manages units, phase, turn, gameResult, and selectedUnitId internally via the hook.  Use this component when you want the BattleBoard to manage its own game logic (e.g. in Storybook, prototypes, or simple integrations). For Orbital trait integration, use `BattleBoard` directly in controlled mode.",
       "suggestedFor": [
         "uncontrolled",
@@ -35914,6 +33681,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "Event Contract: Emits: UI:HERO_SELECT Emits: UI:HERO_MOVE Emits: UI:BATTLE_ENCOUNTER Emits: UI:FEATURE_ENTER Emits: UI:TILE_CLICK",
       "suggestedFor": [
         "world",
@@ -36955,6 +34723,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SimulationCanvas  Self-contained 2D physics canvas for educational presets. Runs its own Euler integration loop — no external physics hook needed.",
       "suggestedFor": [
         "simulation",
@@ -37023,6 +34792,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "BuilderBoard  Component-snapping game board. The player places components onto slots in a blueprint. Correct placement completes the build.  Good for: architecture, circuits, molecules, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "builder",
@@ -37203,6 +34973,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "ClassifierBoard  Drag-and-drop classification game. The player sorts items into the correct category buckets. All items must be correctly classified to win.  Good for: taxonomy, pattern recognition, sorting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "classifier",
@@ -37383,6 +35154,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "DebuggerBoard  Error-finding game board. The player reviews a code/system listing and identifies lines or elements that contain bugs.  Good for: programming, logic, troubleshooting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "debugger",
@@ -37659,6 +35431,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "EventHandlerBoard Organism  Contains ALL game logic for the Event Handler tier (ages 9-12). Kids click on world objects, set WHEN/THEN rules, and watch event chains cascade during playback.  Encourages experimentation: on failure, resets to editing so the kid can try different rules. After 3 failures, shows a progressive hint.",
       "suggestedFor": [
         "event",
@@ -37841,6 +35614,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "EventLog Component  Scrolling log of events during playback in the Event Handler tier. Shows the chain reaction as events cascade through objects.",
       "suggestedFor": [
         "event",
@@ -37927,6 +35701,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "NegotiatorBoard  Turn-based decision matrix game. The player makes choices over multiple rounds against an AI opponent. Each round both sides pick an action, and payoffs are determined by the combination.  Good for: ethics, business, game theory, economics stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "negotiator",
@@ -38107,6 +35882,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "ActionPalette Component  Grid of draggable ActionTile components for the Sequencer tier. Kids pick from these to build their sequence.",
       "suggestedFor": [
         "action",
@@ -38246,6 +36022,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "ActionTile Component  A draggable action tile for the Sequencer tier (ages 5-8). Kids drag these from the ActionPalette into SequenceBar slots. Sets SlotItemData on dataTransfer for TraitSlot compatibility.",
       "suggestedFor": [
         "action",
@@ -38457,6 +36234,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SequenceBar Component  A row of TraitSlot components forming the action sequence for the Sequencer tier (ages 5-8). Kids drag ActionTiles from the palette into these slots to build their sequence.",
       "suggestedFor": [
         "sequence",
@@ -38686,6 +36464,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SequencerBoard Organism  Contains ALL game logic for the Sequencer tier (ages 5-8). Manages the action sequence, validates it, and animates Kekec executing each step on the puzzle scene.  Feedback-first UX: - On failure: slots stay in place, each slot gets a green or red ring showing exactly which steps are correct and which need to change. - Modifying a slot clears its individual feedback so the kid can re-try. - After 3 failures a persistent hint appears above the sequence bar. - \"Reset\" clears everything including attempts / hint.  TraitStateViewer states use indexed labels (\"1. Walk\", \"2. Jump\") so that repeated actions are correctly highlighted during playback.",
       "suggestedFor": [
         "sequencer",
@@ -38933,6 +36712,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SimulatorBoard  Parameter-slider game board. The player adjusts parameters and observes real-time output. Correct parameter values must bring the output within a target range to win.  Good for: physics, economics, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
         "simulator",
@@ -39122,6 +36902,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "StateArchitectBoard Organism  Contains ALL game logic for the State Architect tier (ages 13+). Kids design state machines via a visual graph editor, then run them to see if the behavior matches the puzzle goal.",
       "suggestedFor": [
         "state",
@@ -41206,6 +38987,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "PlatformerBoard component",
       "suggestedFor": [
         "platformer",
@@ -41565,6 +39347,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "RoguelikeBoard component",
       "suggestedFor": [
         "roguelike",
@@ -42137,6 +39920,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "TowerDefenseBoard component",
       "suggestedFor": [
         "tower",
@@ -42826,6 +40610,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "PlatformerTemplate component",
       "suggestedFor": [
         "platformer",
@@ -43029,6 +40814,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "RoguelikeTemplate component",
       "suggestedFor": [
         "roguelike",
@@ -43126,6 +40912,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "TowerDefenseTemplate  Thin template wrapper: titled header + TowerDefenseBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
         "tower",
@@ -43402,6 +41189,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "CityBuilderBoard component",
       "suggestedFor": [
         "city",
@@ -44016,6 +41804,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "TopDownShooterBoard component",
       "suggestedFor": [
         "top",
@@ -44464,6 +42253,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "CityBuilderTemplate  Thin template wrapper: titled header + CityBuilderBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
         "city",
@@ -44769,6 +42559,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "TopDownShooterTemplate  Thin template wrapper: titled header + TopDownShooterBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
         "top",
@@ -45020,192 +42811,12 @@
         }
       }
     },
-    "card-hand": {
-      "type": "card-hand",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "CardHand component",
-      "suggestedFor": [
-        "card",
-        "hand",
-        "card hand"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "cards": {
-          "types": [
-            "array"
-          ],
-          "description": "Cards to lay out as a horizontal hand (or grid when wrapped).",
-          "required": true,
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "id": {
-                "types": [
-                  "string"
-                ]
-              },
-              "iconUrl": {
-                "types": [
-                  "object"
-                ],
-                "properties": {
-                  "url": {
-                    "types": [
-                      "asset"
-                    ]
-                  },
-                  "role": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "category": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "animations": {
-                    "types": [
-                      "array"
-                    ],
-                    "items": {
-                      "types": [
-                        "string"
-                      ]
-                    }
-                  },
-                  "style": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "dimension": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "aspect": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "name": {
-                    "types": [
-                      "string"
-                    ]
-                  },
-                  "thumbnailUrl": {
-                    "types": [
-                      "string"
-                    ]
-                  }
-                },
-                "required": [
-                  "url"
-                ]
-              },
-              "title": {
-                "types": [
-                  "string"
-                ]
-              },
-              "cost": {
-                "types": [
-                  "number"
-                ]
-              },
-              "attack": {
-                "types": [
-                  "number"
-                ]
-              },
-              "defense": {
-                "types": [
-                  "number"
-                ]
-              },
-              "disabled": {
-                "types": [
-                  "boolean"
-                ]
-              }
-            },
-            "required": [
-              "id"
-            ]
-          }
-        },
-        "selectedId": {
-          "types": [
-            "string"
-          ],
-          "description": "Currently selected card id.",
-          "default": ""
-        },
-        "size": {
-          "types": [
-            "string"
-          ],
-          "description": "Card-art size variant.",
-          "enumValues": [
-            "sm",
-            "md",
-            "lg"
-          ],
-          "default": "md"
-        },
-        "onCardClick": {
-          "types": [
-            "function"
-          ],
-          "description": "Direct callback when a (non-disabled) card is clicked.",
-          "kind": "callback",
-          "callbackArgs": [
-            {
-              "name": "id",
-              "type": "string"
-            }
-          ]
-        },
-        "cardClickEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event-bus event emitted with `{ cardId }` on click.",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "cardId",
-              "type": "string",
-              "required": true
-            }
-          ]
-        },
-        "emptyLabel": {
-          "types": [
-            "string"
-          ],
-          "description": "Empty-state label when there are no cards.",
-          "default": "No cards in hand"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        }
-      }
-    },
     "card-battler-board": {
       "type": "card-battler-board",
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "CardBattlerBoard component",
       "suggestedFor": [
         "card",
@@ -45616,6 +43227,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "VisualNovelBoard component",
       "suggestedFor": [
         "visual",
@@ -45999,6 +43611,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "CardBattlerTemplate  Thin template wrapper: titled header + CardBattlerBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
         "card",
@@ -46252,6 +43865,7 @@
       "category": "game",
       "tier": "templates",
       "family": "game",
+      "dimension": "2d",
       "description": "VisualNovelTemplate  Thin template wrapper: titled header + VisualNovelBoard. All scene state is driven by the entity/props passed through from the orbital trait.",
       "suggestedFor": [
         "visual",
@@ -46405,6 +44019,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "HexStrategyBoard component",
       "suggestedFor": [
         "hex",
@@ -46974,6 +44589,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "BoardgameBoard component",
       "suggestedFor": [
         "boardgame",
@@ -47189,6 +44805,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "FishingBoard component",
       "suggestedFor": [
         "fishing",
@@ -47432,6 +45049,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "HolidayRunnerBoard component",
       "suggestedFor": [
         "holiday",
@@ -47648,6 +45266,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "MatchPuzzleBoard component",
       "suggestedFor": [
         "match",
@@ -47864,6 +45483,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "MinigolfBoard component",
       "suggestedFor": [
         "minigolf",
@@ -48079,6 +45699,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "PinballBoard component",
       "suggestedFor": [
         "pinball",
@@ -48287,6 +45908,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "PirateBoard component",
       "suggestedFor": [
         "pirate",
@@ -48502,6 +46124,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "RacingBoard component",
       "suggestedFor": [
         "racing",
@@ -48717,6 +46340,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SokobanBoard component",
       "suggestedFor": [
         "sokoban",
@@ -48932,6 +46556,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SpaceShmupBoard component",
       "suggestedFor": [
         "space",
@@ -49148,6 +46773,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SpaceStationBoard component",
       "suggestedFor": [
         "space",
@@ -49364,6 +46990,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "SportsBoard component",
       "suggestedFor": [
         "sports",
@@ -49579,6 +47206,7 @@
       "category": "game",
       "tier": "organisms",
       "family": "game",
+      "dimension": "2d",
       "description": "TanksBoard component",
       "suggestedFor": [
         "tanks",
@@ -49794,6 +47422,7 @@
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "Canvas2D component",
       "suggestedFor": [
         "canvas2",
@@ -50816,6 +48445,7 @@
       "category": "game",
       "tier": "molecules",
       "family": "game",
+      "dimension": "2d",
       "description": "ControlGrid component",
       "suggestedFor": [
         "control",
@@ -50999,6 +48629,7 @@
       "category": "game",
       "tier": "atoms",
       "family": "game",
+      "dimension": "2d",
       "description": "GameCard component",
       "suggestedFor": [
         "game",
