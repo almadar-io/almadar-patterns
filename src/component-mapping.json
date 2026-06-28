@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T09:21:10.400Z",
+  "exportedAt": "2026-06-28T09:30:34.297Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1157,11 +1157,6 @@
     "inventory-grid": {
       "component": "InventoryGrid",
       "importPath": "@/components/molecules/InventoryGrid",
-      "category": "game"
-    },
-    "platformer-canvas": {
-      "component": "PlatformerCanvas",
-      "importPath": "@/components/molecules/PlatformerCanvas",
       "category": "game"
     },
     "resource-bar": {

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T09:21:10.400Z",
+  "exportedAt": "2026-06-28T09:30:34.297Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -27158,15 +27158,29 @@
           "types": [
             "string"
           ],
-          "description": "The current state name",
+          "description": "The current state — known values get a styled indicator, unknown values fall back to default",
           "required": true,
+          "enumValues": [
+            "idle",
+            "active",
+            "sleeping",
+            "moving",
+            "eating",
+            "waiting",
+            "happy",
+            "scared",
+            "done",
+            "error",
+            "ready",
+            "cooldown"
+          ],
           "default": "idle"
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Optional label override (defaults to capitalized state name)"
+          "description": "Optional label override"
         },
         "size": {
           "types": [
@@ -29737,292 +29751,6 @@
             "lg"
           ],
           "default": "md"
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Additional CSS classes"
-        }
-      }
-    },
-    "platformer-canvas": {
-      "type": "platformer-canvas",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "dimension": "2d",
-      "description": "PlatformerCanvas component",
-      "suggestedFor": [
-        "platformer",
-        "canvas",
-        "platformer canvas"
-      ],
-      "typicalSize": "medium",
-      "propsSchema": {
-        "player": {
-          "types": [
-            "object"
-          ],
-          "description": "Player state data",
-          "properties": {
-            "x": {
-              "types": [
-                "number"
-              ]
-            },
-            "y": {
-              "types": [
-                "number"
-              ]
-            },
-            "width": {
-              "types": [
-                "number"
-              ]
-            },
-            "height": {
-              "types": [
-                "number"
-              ]
-            },
-            "vx": {
-              "types": [
-                "number"
-              ]
-            },
-            "vy": {
-              "types": [
-                "number"
-              ]
-            },
-            "grounded": {
-              "types": [
-                "boolean"
-              ]
-            },
-            "facingRight": {
-              "types": [
-                "boolean"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "x",
-            "y"
-          ]
-        },
-        "platforms": {
-          "types": [
-            "array"
-          ],
-          "description": "Static platforms / level geometry",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "x": {
-                "types": [
-                  "number"
-                ]
-              },
-              "y": {
-                "types": [
-                  "number"
-                ]
-              },
-              "width": {
-                "types": [
-                  "number"
-                ]
-              },
-              "height": {
-                "types": [
-                  "number"
-                ]
-              },
-              "type": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "ground",
-                  "platform",
-                  "hazard",
-                  "goal"
-                ]
-              }
-            },
-            "required": [
-              "x",
-              "y",
-              "width",
-              "height"
-            ]
-          },
-          "default": [
-            {
-              "x": 0,
-              "y": 368,
-              "width": 800,
-              "height": 32,
-              "type": "ground"
-            },
-            {
-              "x": 150,
-              "y": 280,
-              "width": 160,
-              "height": 16,
-              "type": "platform"
-            },
-            {
-              "x": 420,
-              "y": 220,
-              "width": 160,
-              "height": 16,
-              "type": "platform"
-            },
-            {
-              "x": 620,
-              "y": 300,
-              "width": 140,
-              "height": 16,
-              "type": "platform"
-            }
-          ]
-        },
-        "worldWidth": {
-          "types": [
-            "number"
-          ],
-          "description": "World dimensions",
-          "default": 800
-        },
-        "worldHeight": {
-          "types": [
-            "number"
-          ],
-          "description": "worldHeight prop",
-          "default": 400
-        },
-        "canvasWidth": {
-          "types": [
-            "number"
-          ],
-          "description": "Canvas display size",
-          "default": 800
-        },
-        "canvasHeight": {
-          "types": [
-            "number"
-          ],
-          "description": "canvasHeight prop",
-          "default": 400
-        },
-        "followCamera": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Camera follows player",
-          "default": true
-        },
-        "bgColor": {
-          "types": [
-            "string"
-          ],
-          "description": "Background color",
-          "default": "#5c94fc"
-        },
-        "playerSprite": {
-          "types": [
-            "asset"
-          ],
-          "description": "Player sprite image URL"
-        },
-        "tileSprites": {
-          "types": [
-            "object"
-          ],
-          "description": "Map of platform type to tile sprite URL",
-          "mapValue": {
-            "types": [
-              "asset"
-            ]
-          }
-        },
-        "backgroundImage": {
-          "types": [
-            "asset"
-          ],
-          "description": "Background image URL",
-          "default": ""
-        },
-        "assetBaseUrl": {
-          "types": [
-            "asset"
-          ],
-          "description": "Base URL prefix for asset URLs"
-        },
-        "leftEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "Event names for keyboard controls",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "direction",
-              "type": "number",
-              "required": true
-            }
-          ],
-          "default": "MOVE_LEFT"
-        },
-        "rightEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "rightEvent prop",
-          "kind": "event-ref",
-          "emitPayloadSchema": [
-            {
-              "name": "direction",
-              "type": "number",
-              "required": true
-            }
-          ],
-          "default": "MOVE_RIGHT"
-        },
-        "jumpEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "jumpEvent prop",
-          "kind": "event-ref",
-          "emitPayloadSchema": [],
-          "default": "JUMP"
-        },
-        "stopEvent": {
-          "types": [
-            "string"
-          ],
-          "description": "stopEvent prop",
-          "kind": "event-ref",
-          "emitPayloadSchema": [],
-          "default": "STOP"
-        },
-        "effects": {
-          "types": [
-            "array"
-          ],
-          "description": "Active visual effects (key, world x/y, ttl) — drawn after the player",
-          "items": {
-            "types": [
-              "object"
-            ]
-          },
-          "default": []
         },
         "className": {
           "types": [
@@ -34738,7 +34466,12 @@
             "object"
           ],
           "description": "preset prop",
-          "required": true
+          "required": true,
+          "enumValues": [
+            "mechanics-projectile",
+            "mechanics-pendulum",
+            "mechanics-spring"
+          ]
         },
         "width": {
           "types": [
