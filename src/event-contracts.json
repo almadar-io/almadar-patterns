@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T03:44:52.366Z",
+  "exportedAt": "2026-06-28T04:01:13.805Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1006,40 +1006,6 @@
       "emits": [
         {
           "event": "NAVIGATE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": false
-    },
-    "isometric-canvas": {
-      "emits": [
-        {
-          "event": "TILE_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "UNIT_CLICK",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "TILE_HOVER",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "TILE_LEAVE",
           "trigger": "action",
           "payload": {
             "type": "object"
