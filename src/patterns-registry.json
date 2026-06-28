@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-27T19:37:52.715Z",
+  "exportedAt": "2026-06-28T03:44:52.366Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -4925,12 +4925,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity type name (schema-driven)"
         }
       }
     },
@@ -5739,12 +5733,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         },
         "className": {
           "types": [
@@ -11163,12 +11151,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         }
       }
     },
@@ -11302,12 +11284,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         }
       }
     },
@@ -11676,12 +11652,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         }
       }
     },
@@ -12263,7 +12233,7 @@
     "game-template": {
       "type": "game-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "GameTemplate  A presentational template for game applications. Includes a main game canvas/area, HUD overlay, and an optional debug sidebar. **Atomic Design**: Composed using Box, Typography, and Layout molecules/atoms.",
       "suggestedFor": [
@@ -12413,7 +12383,7 @@
     "game-shell": {
       "type": "game-shell",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "GameShell  A full-screen layout wrapper for game applications. Replaces DashboardLayout for game clients — no sidebar nav, just full-viewport rendering with an optional HUD overlay bar.  Used as a React Router layout route element: <Route element={<GameShell appName=\"TraitWars\" />}> <Route index element={<WorldMapPage />} /> ... </Route>",
       "suggestedFor": [
@@ -12751,12 +12721,6 @@
               "label"
             ]
           }
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         },
         "isLoading": {
           "types": [
@@ -13572,12 +13536,6 @@
           "kind": "event-ref",
           "emitPayloadSchema": []
         },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven context"
-        },
         "isLoading": {
           "types": [
             "boolean"
@@ -14197,12 +14155,6 @@
           ],
           "default": "force"
         },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
-        },
         "isLoading": {
           "types": [
             "boolean"
@@ -14252,7 +14204,7 @@
     "battle-template": {
       "type": "battle-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "BattleTemplate  Generalized tactical battle template composing IsometricCanvas from almadar-ui. Provides turn-based phase management, movement animation, valid-move/attack-target calculation, screen shake/flash, and a game-over overlay.  Game-specific UI (combat log, trait viewer, damage popups, etc.) is injected via render-prop slots so this template remains project-agnostic.",
       "suggestedFor": [
@@ -14333,7 +14285,7 @@
     "castle-template": {
       "type": "castle-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "CastleTemplate  Generalized castle / base-management template composing IsometricCanvas from almadar-ui. Renders an isometric courtyard/base view and exposes a side-panel area via slots for game-specific UI (building details, recruitment, garrison).",
       "suggestedFor": [
@@ -14407,7 +14359,7 @@
     "world-map-template": {
       "type": "world-map-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "WorldMapTemplate  Generalized strategic world-map template composing IsometricCanvas from almadar-ui. Renders an isometric hex/iso map with hero selection, movement animation, and encounter callbacks. Game-specific panels (hero detail, hero lists, resource bars) are injected via render-prop slots.",
       "suggestedFor": [
@@ -25475,7 +25427,7 @@
     "action-button": {
       "type": "action-button",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ActionButton component",
       "suggestedFor": [
@@ -25624,7 +25576,7 @@
     "choice-button": {
       "type": "choice-button",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ChoiceButton component",
       "suggestedFor": [
@@ -25749,7 +25701,7 @@
     "combo-counter": {
       "type": "combo-counter",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ComboCounter component",
       "suggestedFor": [
@@ -25863,7 +25815,7 @@
     "control-button": {
       "type": "control-button",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ControlButton component",
       "suggestedFor": [
@@ -26037,7 +25989,7 @@
     "damage-number": {
       "type": "damage-number",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "DamageNumber component",
       "suggestedFor": [
@@ -26152,7 +26104,7 @@
     "dialogue-bubble": {
       "type": "dialogue-bubble",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "DialogueBubble component",
       "suggestedFor": [
@@ -26260,7 +26212,7 @@
     "health-bar": {
       "type": "health-bar",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "HealthBar component",
       "suggestedFor": [
@@ -26348,7 +26300,7 @@
     "item-slot": {
       "type": "item-slot",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ItemSlot component",
       "suggestedFor": [
@@ -26497,7 +26449,7 @@
     "mini-map": {
       "type": "mini-map",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "MiniMap component",
       "suggestedFor": [
@@ -26651,7 +26603,7 @@
     "resource-counter": {
       "type": "resource-counter",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ResourceCounter component",
       "suggestedFor": [
@@ -26788,7 +26740,7 @@
     "score-display": {
       "type": "score-display",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "ScoreDisplay component",
       "suggestedFor": [
@@ -26916,7 +26868,7 @@
     "sprite": {
       "type": "sprite",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "Sprite component",
       "suggestedFor": [
@@ -27113,7 +27065,7 @@
     "state-indicator": {
       "type": "state-indicator",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "StateIndicator Component  Displays a visual indicator for a game entity's current state. Generic — not tied to any specific game. Projects can extend the state styles via the `stateStyles` prop.",
       "suggestedFor": [
@@ -27256,7 +27208,7 @@
     "status-effect": {
       "type": "status-effect",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "StatusEffect component",
       "suggestedFor": [
@@ -27391,7 +27343,7 @@
     "timer-display": {
       "type": "timer-display",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "TimerDisplay component",
       "suggestedFor": [
@@ -27457,7 +27409,7 @@
     "turn-indicator": {
       "type": "turn-indicator",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "TurnIndicator component",
       "suggestedFor": [
@@ -27577,7 +27529,7 @@
     "waypoint-marker": {
       "type": "waypoint-marker",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "WaypointMarker component",
       "suggestedFor": [
@@ -33939,7 +33891,7 @@
     "battle-board": {
       "type": "battle-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "BattleBoard component",
       "suggestedFor": [
@@ -35279,7 +35231,7 @@
     "canvas-effect": {
       "type": "canvas-effect",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "CanvasEffect component",
       "suggestedFor": [
@@ -35420,7 +35372,7 @@
     "castle-board": {
       "type": "castle-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "CastleBoard component",
       "suggestedFor": [
@@ -36322,7 +36274,7 @@
     "game-audio-provider": {
       "type": "game-audio-provider",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "GameAudioProvider component",
       "suggestedFor": [
@@ -36466,7 +36418,7 @@
     "game-audio-toggle": {
       "type": "game-audio-toggle",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "GameAudioToggle component",
       "suggestedFor": [
@@ -36543,7 +36495,7 @@
     "trait-slot": {
       "type": "trait-slot",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "Event Contract: Emits: UI:CLICK Emits: UI:REMOVE",
       "suggestedFor": [
@@ -36916,7 +36868,7 @@
     "uncontrolled-battle-board": {
       "type": "uncontrolled-battle-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "UncontrolledBattleBoard  Thin wrapper that composes `useBattleState` + `BattleBoard` for self-managing game state.  Accepts `initialUnits` instead of the controlled-mode fields and manages units, phase, turn, gameResult, and selectedUnitId internally via the hook.  Use this component when you want the BattleBoard to manage its own game logic (e.g. in Storybook, prototypes, or simple integrations). For Orbital trait integration, use `BattleBoard` directly in controlled mode.",
       "suggestedFor": [
@@ -37012,7 +36964,7 @@
     "world-map-board": {
       "type": "world-map-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "Event Contract: Emits: UI:HERO_SELECT Emits: UI:HERO_MOVE Emits: UI:BATTLE_ENCOUNTER Emits: UI:FEATURE_ENTER Emits: UI:TILE_CLICK",
       "suggestedFor": [
@@ -38053,7 +38005,7 @@
     "simulation-canvas": {
       "type": "simulation-canvas",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SimulationCanvas  Self-contained 2D physics canvas for educational presets. Runs its own Euler integration loop — no external physics hook needed.",
       "suggestedFor": [
@@ -38332,7 +38284,7 @@
     "builder-board": {
       "type": "builder-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "BuilderBoard  Component-snapping game board. The player places components onto slots in a blueprint. Correct placement completes the build.  Good for: architecture, circuits, molecules, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
@@ -38512,7 +38464,7 @@
     "classifier-board": {
       "type": "classifier-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "ClassifierBoard  Drag-and-drop classification game. The player sorts items into the correct category buckets. All items must be correctly classified to win.  Good for: taxonomy, pattern recognition, sorting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
@@ -38692,7 +38644,7 @@
     "debugger-board": {
       "type": "debugger-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "DebuggerBoard  Error-finding game board. The player reviews a code/system listing and identifies lines or elements that contain bugs.  Good for: programming, logic, troubleshooting stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
@@ -38968,7 +38920,7 @@
     "event-handler-board": {
       "type": "event-handler-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "EventHandlerBoard Organism  Contains ALL game logic for the Event Handler tier (ages 9-12). Kids click on world objects, set WHEN/THEN rules, and watch event chains cascade during playback.  Encourages experimentation: on failure, resets to editing so the kid can try different rules. After 3 failures, shows a progressive hint.",
       "suggestedFor": [
@@ -39150,7 +39102,7 @@
     "event-log": {
       "type": "event-log",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "EventLog Component  Scrolling log of events during playback in the Event Handler tier. Shows the chain reaction as events cascade through objects.",
       "suggestedFor": [
@@ -39236,7 +39188,7 @@
     "negotiator-board": {
       "type": "negotiator-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "NegotiatorBoard  Turn-based decision matrix game. The player makes choices over multiple rounds against an AI opponent. Each round both sides pick an action, and payoffs are determined by the combination.  Good for: ethics, business, game theory, economics stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
@@ -39416,7 +39368,7 @@
     "action-palette": {
       "type": "action-palette",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "ActionPalette Component  Grid of draggable ActionTile components for the Sequencer tier. Kids pick from these to build their sequence.",
       "suggestedFor": [
@@ -39555,7 +39507,7 @@
     "action-tile": {
       "type": "action-tile",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "ActionTile Component  A draggable action tile for the Sequencer tier (ages 5-8). Kids drag these from the ActionPalette into SequenceBar slots. Sets SlotItemData on dataTransfer for TraitSlot compatibility.",
       "suggestedFor": [
@@ -39766,7 +39718,7 @@
     "sequence-bar": {
       "type": "sequence-bar",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SequenceBar Component  A row of TraitSlot components forming the action sequence for the Sequencer tier (ages 5-8). Kids drag ActionTiles from the palette into these slots to build their sequence.",
       "suggestedFor": [
@@ -39995,7 +39947,7 @@
     "sequencer-board": {
       "type": "sequencer-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SequencerBoard Organism  Contains ALL game logic for the Sequencer tier (ages 5-8). Manages the action sequence, validates it, and animates Kekec executing each step on the puzzle scene.  Feedback-first UX: - On failure: slots stay in place, each slot gets a green or red ring showing exactly which steps are correct and which need to change. - Modifying a slot clears its individual feedback so the kid can re-try. - After 3 failures a persistent hint appears above the sequence bar. - \"Reset\" clears everything including attempts / hint.  TraitStateViewer states use indexed labels (\"1. Walk\", \"2. Jump\") so that repeated actions are correctly highlighted during playback.",
       "suggestedFor": [
@@ -40242,7 +40194,7 @@
     "simulator-board": {
       "type": "simulator-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SimulatorBoard  Parameter-slider game board. The player adjusts parameters and observes real-time output. Correct parameter values must bring the output within a target range to win.  Good for: physics, economics, system design stories.  Events emitted via completeEvent (default UI:PUZZLE_COMPLETE).",
       "suggestedFor": [
@@ -40431,7 +40383,7 @@
     "state-architect-board": {
       "type": "state-architect-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "StateArchitectBoard Organism  Contains ALL game logic for the State Architect tier (ages 13+). Kids design state machines via a visual graph editor, then run them to see if the behavior matches the puzzle goal.",
       "suggestedFor": [
@@ -42515,7 +42467,7 @@
     "platformer-board": {
       "type": "platformer-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "PlatformerBoard component",
       "suggestedFor": [
@@ -42874,7 +42826,7 @@
     "roguelike-board": {
       "type": "roguelike-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "RoguelikeBoard component",
       "suggestedFor": [
@@ -43446,7 +43398,7 @@
     "tower-defense-board": {
       "type": "tower-defense-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "TowerDefenseBoard component",
       "suggestedFor": [
@@ -44135,7 +44087,7 @@
     "platformer-template": {
       "type": "platformer-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "PlatformerTemplate component",
       "suggestedFor": [
@@ -44338,7 +44290,7 @@
     "roguelike-template": {
       "type": "roguelike-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "RoguelikeTemplate component",
       "suggestedFor": [
@@ -44435,7 +44387,7 @@
     "tower-defense-template": {
       "type": "tower-defense-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "TowerDefenseTemplate  Thin template wrapper: titled header + TowerDefenseBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
@@ -44711,7 +44663,7 @@
     "city-builder-board": {
       "type": "city-builder-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "CityBuilderBoard component",
       "suggestedFor": [
@@ -45325,7 +45277,7 @@
     "top-down-shooter-board": {
       "type": "top-down-shooter-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "TopDownShooterBoard component",
       "suggestedFor": [
@@ -45773,7 +45725,7 @@
     "city-builder-template": {
       "type": "city-builder-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "CityBuilderTemplate  Thin template wrapper: titled header + CityBuilderBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
@@ -46078,7 +46030,7 @@
     "top-down-shooter-template": {
       "type": "top-down-shooter-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "TopDownShooterTemplate  Thin template wrapper: titled header + TopDownShooterBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
@@ -46515,7 +46467,7 @@
     "card-battler-board": {
       "type": "card-battler-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "CardBattlerBoard component",
       "suggestedFor": [
@@ -46925,7 +46877,7 @@
     "visual-novel-board": {
       "type": "visual-novel-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "VisualNovelBoard component",
       "suggestedFor": [
@@ -47308,7 +47260,7 @@
     "card-battler-template": {
       "type": "card-battler-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "CardBattlerTemplate  Thin template wrapper: titled header + CardBattlerBoard. All game state is driven by the entity prop (passed through from the orbital trait).",
       "suggestedFor": [
@@ -47561,7 +47513,7 @@
     "visual-novel-template": {
       "type": "visual-novel-template",
       "category": "game",
-      "tier": "molecules",
+      "tier": "templates",
       "family": "game",
       "description": "VisualNovelTemplate  Thin template wrapper: titled header + VisualNovelBoard. All scene state is driven by the entity/props passed through from the orbital trait.",
       "suggestedFor": [
@@ -47714,7 +47666,7 @@
     "hex-strategy-board": {
       "type": "hex-strategy-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "HexStrategyBoard component",
       "suggestedFor": [
@@ -48283,7 +48235,7 @@
     "boardgame-board": {
       "type": "boardgame-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "BoardgameBoard component",
       "suggestedFor": [
@@ -48498,7 +48450,7 @@
     "fishing-board": {
       "type": "fishing-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "FishingBoard component",
       "suggestedFor": [
@@ -48741,7 +48693,7 @@
     "holiday-runner-board": {
       "type": "holiday-runner-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "HolidayRunnerBoard component",
       "suggestedFor": [
@@ -48957,7 +48909,7 @@
     "match-puzzle-board": {
       "type": "match-puzzle-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "MatchPuzzleBoard component",
       "suggestedFor": [
@@ -49173,7 +49125,7 @@
     "minigolf-board": {
       "type": "minigolf-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "MinigolfBoard component",
       "suggestedFor": [
@@ -49388,7 +49340,7 @@
     "pinball-board": {
       "type": "pinball-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "PinballBoard component",
       "suggestedFor": [
@@ -49596,7 +49548,7 @@
     "pirate-board": {
       "type": "pirate-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "PirateBoard component",
       "suggestedFor": [
@@ -49811,7 +49763,7 @@
     "racing-board": {
       "type": "racing-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "RacingBoard component",
       "suggestedFor": [
@@ -50026,7 +49978,7 @@
     "sokoban-board": {
       "type": "sokoban-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SokobanBoard component",
       "suggestedFor": [
@@ -50241,7 +50193,7 @@
     "space-shmup-board": {
       "type": "space-shmup-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SpaceShmupBoard component",
       "suggestedFor": [
@@ -50457,7 +50409,7 @@
     "space-station-board": {
       "type": "space-station-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SpaceStationBoard component",
       "suggestedFor": [
@@ -50673,7 +50625,7 @@
     "sports-board": {
       "type": "sports-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "SportsBoard component",
       "suggestedFor": [
@@ -50888,7 +50840,7 @@
     "tanks-board": {
       "type": "tanks-board",
       "category": "game",
-      "tier": "molecules",
+      "tier": "organisms",
       "family": "game",
       "description": "TanksBoard component",
       "suggestedFor": [
@@ -52308,7 +52260,7 @@
     "game-card": {
       "type": "game-card",
       "category": "game",
-      "tier": "molecules",
+      "tier": "atoms",
       "family": "game",
       "description": "GameCard component",
       "suggestedFor": [

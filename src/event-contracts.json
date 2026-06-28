@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-27T19:37:52.715Z",
+  "exportedAt": "2026-06-28T03:44:52.366Z",
   "contracts": {
     "form": {
       "emits": [
@@ -407,7 +407,7 @@
       "requires": [
         "WIZARD_COMPLETE"
       ],
-      "entityAware": true
+      "entityAware": false
     },
     "wizard-progress": {
       "emits": [
@@ -521,7 +521,7 @@
         "CONFIRM",
         "CANCEL"
       ],
-      "entityAware": true
+      "entityAware": false
     },
     "master-detail": {
       "emits": [
