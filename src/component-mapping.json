@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-28T09:30:34.297Z",
+  "exportedAt": "2026-06-29T02:15:38.861Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1552,6 +1552,41 @@
     "game-card": {
       "component": "GameCard",
       "importPath": "@/components/atoms/GameCard",
+      "category": "game"
+    },
+    "game-icon": {
+      "component": "GameIcon",
+      "importPath": "@/components/atoms/GameIcon",
+      "category": "game"
+    },
+    "game-audio-provider": {
+      "component": "GameAudioProvider",
+      "importPath": "@/components/molecules/GameAudioProvider",
+      "category": "game"
+    },
+    "game-canvas-3d": {
+      "component": "GameCanvas3D",
+      "importPath": "@almadar/ui/components/organisms/game/three",
+      "category": "game"
+    },
+    "game-board-3d": {
+      "component": "GameBoard3D",
+      "importPath": "@/components/organisms/GameBoard3D",
+      "category": "game"
+    },
+    "game-canvas-3d-battle-template": {
+      "component": "GameCanvas3DBattleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DBattleTemplate",
+      "category": "game"
+    },
+    "game-canvas-3d-castle-template": {
+      "component": "GameCanvas3DCastleTemplate",
+      "importPath": "@/components/templates/GameCanvas3DCastleTemplate",
+      "category": "game"
+    },
+    "game-canvas-3d-world-map-template": {
+      "component": "GameCanvas3DWorldMapTemplate",
+      "importPath": "@/components/templates/GameCanvas3DWorldMapTemplate",
       "category": "game"
     }
   }
