@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-29T08:58:19.869Z",
+  "exportedAt": "2026-06-29T11:28:29.437Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -9421,184 +9421,133 @@
       ],
       "typicalSize": "medium",
       "propsSchema": {
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Button group content (Button components) - use this OR primary/secondary"
-        },
-        "primary": {
-          "types": [
-            "object"
-          ],
-          "description": "Primary action button config (for form-actions pattern) Accepts Readonly for compatibility with generated const objects",
-          "properties": {
-            "label": {
-              "types": [
-                "string"
-              ]
-            },
-            "actionType": {
-              "types": [
-                "string"
-              ]
-            },
-            "event": {
-              "types": [
-                "string"
-              ]
-            },
-            "navigatesTo": {
-              "types": [
-                "string"
-              ]
-            },
-            "variant": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "label"
-          ]
-        },
-        "secondary": {
-          "types": [
-            "array"
-          ],
-          "description": "Secondary action buttons config (for form-actions pattern) Accepts readonly array for compatibility with generated const arrays",
-          "items": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "actionType": {
-                "types": [
-                  "string"
-                ]
-              },
-              "event": {
-                "types": [
-                  "string"
-                ]
-              },
-              "navigatesTo": {
-                "types": [
-                  "string"
-                ]
-              },
-              "variant": {
-                "types": [
-                  "string"
-                ]
-              }
-            },
-            "required": [
-              "label"
-            ]
-          }
-        },
-        "variant": {
-          "types": [
-            "string"
-          ],
-          "description": "Visual variant",
-          "enumValues": [
-            "default",
-            "segmented",
-            "toggle"
-          ],
-          "default": "default"
-        },
-        "orientation": {
-          "types": [
-            "string"
-          ],
-          "description": "Orientation",
-          "enumValues": [
-            "horizontal",
-            "vertical"
-          ],
-          "default": "horizontal"
-        },
         "className": {
           "types": [
             "string"
           ],
           "description": "Additional CSS classes"
         },
-        "entity": {
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state (UiError)",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        },
+        "sortBy": {
           "types": [
             "string"
           ],
-          "description": "Entity type for filter-group pattern (schema metadata)"
+          "description": "Current sort field"
         },
-        "filters": {
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction",
+          "enumValues": [
+            "asc",
+            "desc"
+          ]
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
           "types": [
             "array"
           ],
-          "description": "Filter definitions for filter-group pattern",
+          "description": "Currently selected item IDs",
           "items": {
             "types": [
-              "object"
-            ],
-            "properties": {
-              "field": {
-                "types": [
-                  "string"
-                ]
-              },
-              "label": {
-                "types": [
-                  "string"
-                ]
-              },
-              "type": {
-                "types": [
-                  "string"
-                ],
-                "enumValues": [
-                  "checkbox",
-                  "select",
-                  "toggle"
-                ]
-              },
-              "options": {
-                "types": [
-                  "array"
-                ],
-                "items": {
-                  "types": [
-                    "string"
-                  ]
-                }
-              }
-            },
-            "required": [
-              "field",
-              "label"
+              "string",
+              "number"
             ]
           }
         },
-        "look": {
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop",
+          "required": true
+        },
+        "sticky": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Sticky at bottom",
+          "default": false
+        },
+        "align": {
           "types": [
             "string"
           ],
-          "description": "Layer 2 visual treatment for the action-cluster (form-actions) pattern.",
+          "description": "Alignment",
           "enumValues": [
-            "right-aligned-buttons",
-            "floating-bar",
-            "inline-row",
-            "dropdown-menu",
-            "command-palette-trigger"
+            "left",
+            "right",
+            "between",
+            "center"
           ],
-          "default": "right-aligned-buttons"
+          "default": "right"
         }
       }
     },
@@ -47549,144 +47498,6 @@
         }
       }
     },
-    "game-audio-provider": {
-      "type": "game-audio-provider",
-      "category": "game",
-      "tier": "molecules",
-      "family": "game",
-      "description": "GameAudioProvider component",
-      "suggestedFor": [
-        "game",
-        "audio",
-        "provider",
-        "game audio provider"
-      ],
-      "typicalSize": "small",
-      "propsSchema": {
-        "manifest": {
-          "types": [
-            "object"
-          ],
-          "description": "Sound manifest — keys mapped to SoundEntry definitions",
-          "required": true,
-          "mapValue": {
-            "types": [
-              "object"
-            ],
-            "properties": {
-              "path": {
-                "types": [
-                  "string",
-                  "array"
-                ],
-                "items": {
-                  "types": [
-                    "string"
-                  ]
-                }
-              },
-              "volume": {
-                "types": [
-                  "number"
-                ]
-              },
-              "loop": {
-                "types": [
-                  "boolean"
-                ]
-              },
-              "poolSize": {
-                "types": [
-                  "number"
-                ]
-              },
-              "autostart": {
-                "types": [
-                  "boolean"
-                ]
-              },
-              "crossfade": {
-                "types": [
-                  "boolean"
-                ]
-              },
-              "crossfadeDurationMs": {
-                "types": [
-                  "number"
-                ]
-              }
-            },
-            "required": [
-              "path"
-            ]
-          }
-        },
-        "baseUrl": {
-          "types": [
-            "string"
-          ],
-          "description": "Base URL prepended to all sound paths (default '')",
-          "default": ""
-        },
-        "children": {
-          "types": [
-            "node"
-          ],
-          "description": "Children to render",
-          "required": true
-        },
-        "initialMuted": {
-          "types": [
-            "boolean"
-          ],
-          "description": "Initial muted state",
-          "default": false
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "Closed-circuit props (unused, accepted for runtime compatibility)"
-        },
-        "isLoading": {
-          "types": [
-            "boolean"
-          ],
-          "description": "isLoading prop"
-        },
-        "error": {
-          "types": [
-            "object"
-          ],
-          "description": "error prop",
-          "properties": {
-            "message": {
-              "types": [
-                "string"
-              ]
-            },
-            "name": {
-              "types": [
-                "string"
-              ]
-            },
-            "code": {
-              "types": [
-                "string"
-              ]
-            },
-            "stack": {
-              "types": [
-                "string"
-              ]
-            }
-          },
-          "propertyRequired": [
-            "message"
-          ]
-        }
-      }
-    },
     "game-canvas-3d": {
       "type": "game-canvas-3d",
       "category": "game",
@@ -49076,6 +48887,162 @@
             "number"
           ],
           "description": "Board zoom/group scale forwarded to GameBoard3D. Default 0.45."
+        }
+      }
+    },
+    "vstack": {
+      "type": "vstack",
+      "category": "component",
+      "tier": "atoms",
+      "family": "core",
+      "description": "VStack - Vertical stack shorthand",
+      "suggestedFor": [
+        "stack",
+        "v stack"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {}
+    },
+    "hstack": {
+      "type": "hstack",
+      "category": "component",
+      "tier": "atoms",
+      "family": "core",
+      "description": "HStack - Horizontal stack shorthand",
+      "suggestedFor": [
+        "stack",
+        "h stack"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {}
+    },
+    "form-layout": {
+      "type": "form-layout",
+      "category": "form",
+      "tier": "molecules",
+      "family": "core",
+      "description": "Form layout with multiple sections",
+      "suggestedFor": [
+        "form",
+        "layout",
+        "form layout"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state (UiError)",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction",
+          "enumValues": [
+            "asc",
+            "desc"
+          ]
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "children": {
+          "types": [
+            "node"
+          ],
+          "description": "children prop",
+          "required": true
+        },
+        "dividers": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Show section dividers",
+          "default": true
         }
       }
     }

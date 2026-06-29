@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-29T08:58:19.869Z",
+  "exportedAt": "2026-06-29T11:28:29.437Z",
   "contracts": {
     "form": {
       "emits": [
@@ -93,14 +93,7 @@
     "form-actions": {
       "emits": [
         {
-          "event": "DISPATCH",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "NAVIGATE",
+          "event": "TOGGLE_COLLAPSE",
           "trigger": "action",
           "payload": {
             "type": "object"
@@ -108,7 +101,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true,
+      "entityAware": false,
       "configDriven": true
     },
     "entity-table": {
@@ -1157,6 +1150,19 @@
       "emits": [
         {
           "event": "CHAT_SEND",
+          "trigger": "action",
+          "payload": {
+            "type": "object"
+          }
+        }
+      ],
+      "requires": [],
+      "entityAware": false
+    },
+    "form-layout": {
+      "emits": [
+        {
+          "event": "TOGGLE_COLLAPSE",
           "trigger": "action",
           "payload": {
             "type": "object"
