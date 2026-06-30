@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-30T04:10:18.217Z",
+  "exportedAt": "2026-06-30T06:27:41.345Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1356,7 +1356,7 @@
     },
     "stat-card": {
       "component": "StatCard",
-      "importPath": "@/components/marketing/atoms/MarketingStatCard",
+      "importPath": "@/components/core/organisms/StatCard",
       "category": "display"
     },
     "activation-block": {
@@ -1588,6 +1588,36 @@
       "component": "FormLayout",
       "importPath": "@/components/core/molecules/FormSection",
       "category": "form"
+    },
+    "learning-canvas": {
+      "component": "LearningCanvas",
+      "importPath": "@/components/learning/atoms/LearningCanvas",
+      "category": "learning"
+    },
+    "biology-canvas": {
+      "component": "BiologyCanvas",
+      "importPath": "@/components/learning/molecules/BiologyCanvas",
+      "category": "learning"
+    },
+    "chemistry-canvas": {
+      "component": "ChemistryCanvas",
+      "importPath": "@/components/learning/molecules/ChemistryCanvas",
+      "category": "learning"
+    },
+    "math-canvas": {
+      "component": "MathCanvas",
+      "importPath": "@/components/learning/molecules/MathCanvas",
+      "category": "learning"
+    },
+    "physics-canvas": {
+      "component": "PhysicsCanvas",
+      "importPath": "@/components/learning/molecules/PhysicsCanvas",
+      "category": "learning"
+    },
+    "marketing-stat-card": {
+      "component": "MarketingStatCard",
+      "importPath": "@/components/marketing/atoms/MarketingStatCard",
+      "category": "display"
     }
   }
 }

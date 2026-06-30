@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-30T04:10:18.217Z",
+  "exportedAt": "2026-06-30T06:27:41.345Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -38155,8 +38155,8 @@
     "stat-card": {
       "type": "stat-card",
       "category": "display",
-      "tier": "atoms",
-      "family": "marketing",
+      "tier": "organisms",
+      "family": "core",
       "description": "StatCard component",
       "suggestedFor": [
         "stat",
@@ -38165,37 +38165,300 @@
       ],
       "typicalSize": "small",
       "propsSchema": {
-        "value": {
+        "className": {
           "types": [
             "string"
           ],
-          "description": "The stat value to display prominently",
-          "required": true
+          "description": "Additional CSS classes"
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state indicator"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state (UiError)",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        },
+        "sortBy": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort field"
+        },
+        "sortDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Current sort direction",
+          "enumValues": [
+            "asc",
+            "desc"
+          ]
+        },
+        "searchValue": {
+          "types": [
+            "string"
+          ],
+          "description": "Current search query value"
+        },
+        "page": {
+          "types": [
+            "number"
+          ],
+          "description": "Current page number"
+        },
+        "pageSize": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of items per page"
+        },
+        "totalCount": {
+          "types": [
+            "number"
+          ],
+          "description": "Total number of items"
+        },
+        "activeFilters": {
+          "types": [
+            "object"
+          ],
+          "description": "Active filters"
+        },
+        "selectedIds": {
+          "types": [
+            "array"
+          ],
+          "description": "Currently selected item IDs",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "entity": {
+          "types": [
+            "object",
+            "array"
+          ],
+          "description": "Entity data (single record or collection) used to compute metrics.",
+          "kind": "entity",
+          "cardinality": "collection"
         },
         "label": {
           "types": [
             "string"
           ],
-          "description": "Label describing the value",
-          "required": true
+          "description": "Main label"
         },
-        "size": {
+        "title": {
           "types": [
             "string"
           ],
-          "description": "Size of the value text",
+          "description": "Title (alias for label)"
+        },
+        "value": {
+          "types": [
+            "string",
+            "number",
+            "array"
+          ],
+          "description": "Primary value - accepts array from generated code (will use first element or length)",
+          "items": {
+            "types": [
+              "string",
+              "number"
+            ]
+          }
+        },
+        "previousValue": {
+          "types": [
+            "number"
+          ],
+          "description": "Previous value for comparison"
+        },
+        "currentValue": {
+          "types": [
+            "number"
+          ],
+          "description": "Current value as number for trend calculation"
+        },
+        "trend": {
+          "types": [
+            "number"
+          ],
+          "description": "Manual trend percentage (overrides calculation)"
+        },
+        "trendDirection": {
+          "types": [
+            "string"
+          ],
+          "description": "Trend direction (overrides calculation)",
           "enumValues": [
-            "sm",
-            "md",
-            "lg"
-          ],
-          "default": "md"
+            "up",
+            "down",
+            "neutral"
+          ]
         },
-        "className": {
+        "invertTrend": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether up is good (green) or bad (red)",
+          "default": false
+        },
+        "icon": {
+          "types": [
+            "icon",
+            "string"
+          ],
+          "description": "Icon to display (Lucide component or icon name string)"
+        },
+        "iconBg": {
           "types": [
             "string"
           ],
-          "description": "Additional class names"
+          "description": "Icon background color",
+          "default": "bg-muted"
+        },
+        "iconColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Icon color",
+          "default": "text-foreground"
+        },
+        "subtitle": {
+          "types": [
+            "string"
+          ],
+          "description": "Subtitle or description"
+        },
+        "action": {
+          "types": [
+            "object"
+          ],
+          "description": "Action button",
+          "properties": {
+            "label": {
+              "types": [
+                "string"
+              ]
+            },
+            "event": {
+              "types": [
+                "string"
+              ]
+            },
+            "navigatesTo": {
+              "types": [
+                "string"
+              ]
+            },
+            "onClick": {
+              "types": [
+                "function"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "label"
+          ]
+        },
+        "metrics": {
+          "types": [
+            "array"
+          ],
+          "description": "Metrics to display (schema format) - accepts readonly for compatibility with generated const arrays",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "field": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string",
+                  "number"
+                ]
+              },
+              "icon": {
+                "types": [
+                  "icon",
+                  "string"
+                ]
+              },
+              "format": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "currency",
+                  "percent",
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "label"
+            ]
+          }
+        },
+        "compact": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Compact display mode"
+        },
+        "sparklineData": {
+          "types": [
+            "array"
+          ],
+          "description": "Sparkline data points for an inline trend chart",
+          "items": {
+            "types": [
+              "number"
+            ]
+          }
         }
       }
     },
@@ -49043,6 +49306,2235 @@
           ],
           "description": "Show section dividers",
           "default": true
+        }
+      }
+    },
+    "learning-canvas": {
+      "type": "learning-canvas",
+      "category": "learning",
+      "tier": "atoms",
+      "family": "learning",
+      "description": "LearningCanvas component",
+      "suggestedFor": [
+        "learning",
+        "canvas",
+        "learning canvas"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes."
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas width in CSS pixels.",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Canvas height in CSS pixels.",
+          "default": 400
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "Background color (default transparent)."
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Declarative shapes to draw.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable pointer interaction (click/hover).",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Enable continuous redraw loop.",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "Clicked shape payload: { id?, type?, index }.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "onShapeHover": {
+          "types": [
+            "function"
+          ],
+          "description": "Hovered shape payload: { id?, type?, index }.",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Loading state."
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "Error state.",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        }
+      }
+    },
+    "biology-canvas": {
+      "type": "biology-canvas",
+      "category": "learning",
+      "tier": "molecules",
+      "family": "learning",
+      "description": "BiologyCanvas component",
+      "suggestedFor": [
+        "biology",
+        "canvas",
+        "biology canvas"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "default": 400
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "backgroundColor prop"
+        },
+        "nodes": {
+          "types": [
+            "array"
+          ],
+          "description": "nodes prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "kind": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "cell",
+                  "organelle",
+                  "molecule",
+                  "organism"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "default": []
+        },
+        "edges": {
+          "types": [
+            "array"
+          ],
+          "description": "edges prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "from": {
+                "types": [
+                  "string"
+                ]
+              },
+              "to": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ]
+          },
+          "default": []
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Extra declarative shapes in canvas pixel coordinates.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "interactive prop",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animate prop",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onShapeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isLoading prop"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        }
+      }
+    },
+    "chemistry-canvas": {
+      "type": "chemistry-canvas",
+      "category": "learning",
+      "tier": "molecules",
+      "family": "learning",
+      "description": "ChemistryCanvas component",
+      "suggestedFor": [
+        "chemistry",
+        "canvas",
+        "chemistry canvas"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "default": 400
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "backgroundColor prop"
+        },
+        "atoms": {
+          "types": [
+            "array"
+          ],
+          "description": "atoms prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "element": {
+                "types": [
+                  "string"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "default": []
+        },
+        "bonds": {
+          "types": [
+            "array"
+          ],
+          "description": "bonds prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "from": {
+                "types": [
+                  "string"
+                ]
+              },
+              "to": {
+                "types": [
+                  "string"
+                ]
+              },
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "single",
+                  "double",
+                  "triple"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ]
+          },
+          "default": []
+        },
+        "arrows": {
+          "types": [
+            "array"
+          ],
+          "description": "arrows prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "angle": {
+                "types": [
+                  "number"
+                ]
+              },
+              "length": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "default": []
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Extra declarative shapes in canvas pixel coordinates.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "interactive prop",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animate prop",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onShapeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isLoading prop"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        }
+      }
+    },
+    "math-canvas": {
+      "type": "math-canvas",
+      "category": "learning",
+      "tier": "molecules",
+      "family": "learning",
+      "description": "MathCanvas component",
+      "suggestedFor": [
+        "math",
+        "canvas",
+        "math canvas"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "default": 400
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "xMin": {
+          "types": [
+            "number"
+          ],
+          "description": "xMin prop",
+          "default": -10
+        },
+        "xMax": {
+          "types": [
+            "number"
+          ],
+          "description": "xMax prop",
+          "default": 10
+        },
+        "yMin": {
+          "types": [
+            "number"
+          ],
+          "description": "yMin prop",
+          "default": -10
+        },
+        "yMax": {
+          "types": [
+            "number"
+          ],
+          "description": "yMax prop",
+          "default": 10
+        },
+        "showAxes": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showAxes prop",
+          "default": true
+        },
+        "showGrid": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showGrid prop",
+          "default": true
+        },
+        "gridStep": {
+          "types": [
+            "number"
+          ],
+          "description": "gridStep prop",
+          "default": 1
+        },
+        "curves": {
+          "types": [
+            "array"
+          ],
+          "description": "curves prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "samples": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "samples"
+            ]
+          },
+          "default": []
+        },
+        "points": {
+          "types": [
+            "array"
+          ],
+          "description": "points prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "default": []
+        },
+        "vectors": {
+          "types": [
+            "array"
+          ],
+          "description": "vectors prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "vx": {
+                "types": [
+                  "number"
+                ]
+              },
+              "vy": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "vx",
+              "vy"
+            ]
+          },
+          "default": []
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Extra declarative shapes in canvas pixel coordinates.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "interactive prop",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animate prop",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onShapeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isLoading prop"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        }
+      }
+    },
+    "physics-canvas": {
+      "type": "physics-canvas",
+      "category": "learning",
+      "tier": "molecules",
+      "family": "learning",
+      "description": "PhysicsCanvas component",
+      "suggestedFor": [
+        "physics",
+        "canvas",
+        "physics canvas"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "default": 400
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "backgroundColor prop"
+        },
+        "bodies": {
+          "types": [
+            "array"
+          ],
+          "description": "bodies prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "vx": {
+                "types": [
+                  "number"
+                ]
+              },
+              "vy": {
+                "types": [
+                  "number"
+                ]
+              },
+              "fx": {
+                "types": [
+                  "number"
+                ]
+              },
+              "fy": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          },
+          "default": []
+        },
+        "constraints": {
+          "types": [
+            "array"
+          ],
+          "description": "constraints prop",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "from": {
+                "types": [
+                  "string"
+                ]
+              },
+              "to": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to"
+            ]
+          },
+          "default": []
+        },
+        "showVelocity": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showVelocity prop",
+          "default": true
+        },
+        "showForces": {
+          "types": [
+            "boolean"
+          ],
+          "description": "showForces prop",
+          "default": false
+        },
+        "velocityScale": {
+          "types": [
+            "number"
+          ],
+          "description": "velocityScale prop",
+          "default": 20
+        },
+        "forceScale": {
+          "types": [
+            "number"
+          ],
+          "description": "forceScale prop",
+          "default": 20
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Extra declarative shapes in canvas pixel coordinates.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "interactive prop",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animate prop",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onShapeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isLoading prop"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
+        }
+      }
+    },
+    "marketing-stat-card": {
+      "type": "marketing-stat-card",
+      "category": "display",
+      "tier": "atoms",
+      "family": "marketing",
+      "description": "MarketingStatCard component",
+      "suggestedFor": [
+        "marketing",
+        "stat",
+        "card",
+        "marketing stat card"
+      ],
+      "typicalSize": "small",
+      "propsSchema": {
+        "value": {
+          "types": [
+            "string"
+          ],
+          "description": "The stat value to display prominently",
+          "required": true
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Label describing the value",
+          "required": true
+        },
+        "size": {
+          "types": [
+            "string"
+          ],
+          "description": "Size of the value text",
+          "enumValues": [
+            "sm",
+            "md",
+            "lg"
+          ],
+          "default": "md"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional class names"
         }
       }
     }
