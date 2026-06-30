@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-30T06:27:41.345Z",
+  "exportedAt": "2026-06-30T16:27:48.221Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -503,21 +503,6 @@
       "component": "GraphCanvas",
       "importPath": "@/components/core/molecules/GraphCanvas",
       "category": "visualization"
-    },
-    "battle-template": {
-      "component": "BattleTemplate",
-      "importPath": "@/components/game/2d/templates/BattleTemplate",
-      "category": "game"
-    },
-    "castle-template": {
-      "component": "CastleTemplate",
-      "importPath": "@/components/game/2d/templates/CastleTemplate",
-      "category": "game"
-    },
-    "world-map-template": {
-      "component": "WorldMapTemplate",
-      "importPath": "@/components/game/2d/templates/WorldMapTemplate",
-      "category": "game"
     },
     "error-boundary": {
       "component": "ErrorBoundary",
@@ -1194,19 +1179,9 @@
       "importPath": "@/components/marketing/organisms/BookViewer",
       "category": "display"
     },
-    "battle-board": {
-      "component": "BattleBoard",
-      "importPath": "@/components/game/2d/organisms/BattleBoard",
-      "category": "game"
-    },
     "canvas-effect": {
       "component": "CanvasEffect",
       "importPath": "@/components/game/2d/organisms/CanvasEffect",
-      "category": "game"
-    },
-    "castle-board": {
-      "component": "CastleBoard",
-      "importPath": "@/components/game/2d/organisms/CastleBoard",
       "category": "game"
     },
     "game-audio-toggle": {
@@ -1217,16 +1192,6 @@
     "trait-slot": {
       "component": "TraitSlot",
       "importPath": "@/components/game/2d/organisms/TraitSlot",
-      "category": "game"
-    },
-    "uncontrolled-battle-board": {
-      "component": "UncontrolledBattleBoard",
-      "importPath": "@/components/game/2d/organisms/UncontrolledBattleBoard",
-      "category": "game"
-    },
-    "world-map-board": {
-      "component": "WorldMapBoard",
-      "importPath": "@/components/game/2d/organisms/WorldMapBoard",
       "category": "game"
     },
     "simulation-canvas": {
@@ -1389,56 +1354,6 @@
       "importPath": "@/components/core/organisms/SegmentRenderer",
       "category": "display"
     },
-    "platformer-board": {
-      "component": "PlatformerBoard",
-      "importPath": "@/components/game/2d/organisms/PlatformerBoard",
-      "category": "game"
-    },
-    "roguelike-board": {
-      "component": "RoguelikeBoard",
-      "importPath": "@/components/game/2d/organisms/RoguelikeBoard",
-      "category": "game"
-    },
-    "tower-defense-board": {
-      "component": "TowerDefenseBoard",
-      "importPath": "@/components/game/2d/organisms/TowerDefenseBoard",
-      "category": "game"
-    },
-    "platformer-template": {
-      "component": "PlatformerTemplate",
-      "importPath": "@/components/game/2d/templates/PlatformerTemplate",
-      "category": "game"
-    },
-    "roguelike-template": {
-      "component": "RoguelikeTemplate",
-      "importPath": "@/components/game/2d/templates/RoguelikeTemplate",
-      "category": "game"
-    },
-    "tower-defense-template": {
-      "component": "TowerDefenseTemplate",
-      "importPath": "@/components/game/2d/templates/TowerDefenseTemplate",
-      "category": "game"
-    },
-    "city-builder-board": {
-      "component": "CityBuilderBoard",
-      "importPath": "@/components/game/2d/organisms/CityBuilderBoard",
-      "category": "game"
-    },
-    "top-down-shooter-board": {
-      "component": "TopDownShooterBoard",
-      "importPath": "@/components/game/2d/organisms/TopDownShooterBoard",
-      "category": "game"
-    },
-    "city-builder-template": {
-      "component": "CityBuilderTemplate",
-      "importPath": "@/components/game/2d/templates/CityBuilderTemplate",
-      "category": "game"
-    },
-    "top-down-shooter-template": {
-      "component": "TopDownShooterTemplate",
-      "importPath": "@/components/game/2d/templates/TopDownShooterTemplate",
-      "category": "game"
-    },
     "card-battler-board": {
       "component": "CardBattlerBoard",
       "importPath": "@/components/game/2d/organisms/CardBattlerBoard",
@@ -1447,21 +1362,6 @@
     "visual-novel-board": {
       "component": "VisualNovelBoard",
       "importPath": "@/components/game/2d/organisms/VisualNovelBoard",
-      "category": "game"
-    },
-    "card-battler-template": {
-      "component": "CardBattlerTemplate",
-      "importPath": "@/components/game/2d/templates/CardBattlerTemplate",
-      "category": "game"
-    },
-    "visual-novel-template": {
-      "component": "VisualNovelTemplate",
-      "importPath": "@/components/game/2d/templates/VisualNovelTemplate",
-      "category": "game"
-    },
-    "hex-strategy-board": {
-      "component": "HexStrategyBoard",
-      "importPath": "@/components/game/2d/organisms/HexStrategyBoard",
       "category": "game"
     },
     "chat-bar": {
@@ -1473,71 +1373,6 @@
       "component": "SubagentTracePanel",
       "importPath": "@/components/core/organisms/SubagentTracePanel",
       "category": "display"
-    },
-    "boardgame-board": {
-      "component": "BoardgameBoard",
-      "importPath": "@/components/game/2d/organisms/BoardgameBoard",
-      "category": "game"
-    },
-    "fishing-board": {
-      "component": "FishingBoard",
-      "importPath": "@/components/game/2d/organisms/FishingBoard",
-      "category": "game"
-    },
-    "holiday-runner-board": {
-      "component": "HolidayRunnerBoard",
-      "importPath": "@/components/game/2d/organisms/HolidayRunnerBoard",
-      "category": "game"
-    },
-    "match-puzzle-board": {
-      "component": "MatchPuzzleBoard",
-      "importPath": "@/components/game/2d/organisms/MatchPuzzleBoard",
-      "category": "game"
-    },
-    "minigolf-board": {
-      "component": "MinigolfBoard",
-      "importPath": "@/components/game/2d/organisms/MinigolfBoard",
-      "category": "game"
-    },
-    "pinball-board": {
-      "component": "PinballBoard",
-      "importPath": "@/components/game/2d/organisms/PinballBoard",
-      "category": "game"
-    },
-    "pirate-board": {
-      "component": "PirateBoard",
-      "importPath": "@/components/game/2d/organisms/PirateBoard",
-      "category": "game"
-    },
-    "racing-board": {
-      "component": "RacingBoard",
-      "importPath": "@/components/game/2d/organisms/RacingBoard",
-      "category": "game"
-    },
-    "sokoban-board": {
-      "component": "SokobanBoard",
-      "importPath": "@/components/game/2d/organisms/SokobanBoard",
-      "category": "game"
-    },
-    "space-shmup-board": {
-      "component": "SpaceShmupBoard",
-      "importPath": "@/components/game/2d/organisms/SpaceShmupBoard",
-      "category": "game"
-    },
-    "space-station-board": {
-      "component": "SpaceStationBoard",
-      "importPath": "@/components/game/2d/organisms/SpaceStationBoard",
-      "category": "game"
-    },
-    "sports-board": {
-      "component": "SportsBoard",
-      "importPath": "@/components/game/2d/organisms/SportsBoard",
-      "category": "game"
-    },
-    "tanks-board": {
-      "component": "TanksBoard",
-      "importPath": "@/components/game/2d/organisms/TanksBoard",
-      "category": "game"
     },
     "canvas-2d": {
       "component": "Canvas2D",

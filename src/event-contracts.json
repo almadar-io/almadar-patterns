@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-06-30T06:27:41.345Z",
+  "exportedAt": "2026-06-30T16:27:48.221Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1044,47 +1044,6 @@
         },
         {
           "event": "REMOVE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        }
-      ],
-      "requires": [],
-      "entityAware": true
-    },
-    "world-map-board": {
-      "emits": [
-        {
-          "event": "HERO_SELECT",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "HERO_MOVE",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "BATTLE_ENCOUNTER",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "FEATURE_ENTER",
-          "trigger": "action",
-          "payload": {
-            "type": "object"
-          }
-        },
-        {
-          "event": "TILE_CLICK",
           "trigger": "action",
           "payload": {
             "type": "object"
