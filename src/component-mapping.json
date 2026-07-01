@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T09:50:01.431Z",
+  "exportedAt": "2026-07-01T14:13:29.383Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1186,7 +1186,7 @@
     },
     "trait-slot": {
       "component": "TraitSlot",
-      "importPath": "@/components/game/2d/organisms/TraitSlot",
+      "importPath": "@/components/game/2d/molecules/TraitSlot",
       "category": "game"
     },
     "simulation-canvas": {
@@ -1196,17 +1196,17 @@
     },
     "event-log": {
       "component": "EventLog",
-      "importPath": "@/components/game/2d/organisms/EventLog",
+      "importPath": "@/components/game/2d/molecules/EventLog",
       "category": "game"
     },
     "action-palette": {
       "component": "ActionPalette",
-      "importPath": "@/components/game/2d/organisms/ActionPalette",
+      "importPath": "@/components/game/2d/molecules/ActionPalette",
       "category": "game"
     },
     "action-tile": {
       "component": "ActionTile",
-      "importPath": "@/components/game/2d/organisms/ActionTile",
+      "importPath": "@/components/game/2d/molecules/ActionTile",
       "category": "game"
     },
     "sequence-bar": {
@@ -1442,6 +1442,21 @@
     "state-graph": {
       "component": "StateGraph",
       "importPath": "@/components/game/2d/molecules/StateGraph",
+      "category": "game"
+    },
+    "object-rule-panel": {
+      "component": "ObjectRulePanel",
+      "importPath": "@/components/game/2d/molecules/ObjectRulePanel",
+      "category": "game"
+    },
+    "state-json-view": {
+      "component": "StateJsonView",
+      "importPath": "@/components/game/2d/molecules/StateJsonView",
+      "category": "game"
+    },
+    "variable-panel": {
+      "component": "VariablePanel",
+      "importPath": "@/components/game/2d/molecules/VariablePanel",
       "category": "game"
     }
   }

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T09:50:01.431Z",
+  "exportedAt": "2026-07-01T14:13:29.383Z",
   "contracts": {
     "form": {
       "emits": [
@@ -1051,7 +1051,7 @@
         }
       ],
       "requires": [],
-      "entityAware": true
+      "entityAware": false
     },
     "activation-block": {
       "emits": [

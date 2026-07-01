@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T09:50:01.431Z",
+  "exportedAt": "2026-07-01T14:13:29.383Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -31454,7 +31454,7 @@
     "trait-slot": {
       "type": "trait-slot",
       "category": "game",
-      "tier": "organisms",
+      "tier": "molecules",
       "family": "game",
       "dimension": "2d",
       "description": "Event Contract: Emits: UI:CLICK Emits: UI:REMOVE",
@@ -31744,12 +31744,6 @@
           "propertyRequired": [
             "message"
           ]
-        },
-        "entity": {
-          "types": [
-            "string"
-          ],
-          "description": "Entity name for schema-driven auto-fetch"
         },
         "onItemDrop": {
           "types": [
@@ -32041,6 +32035,25 @@
               "required": true
             }
           ]
+        },
+        "dropEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{dropEvent} with { slotNumber, itemId } when an item is dropped into this slot",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotNumber",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "itemId",
+              "type": "string",
+              "required": true
+            }
+          ]
         }
       }
     },
@@ -32120,7 +32133,7 @@
     "event-log": {
       "type": "event-log",
       "category": "game",
-      "tier": "organisms",
+      "tier": "molecules",
       "family": "game",
       "dimension": "2d",
       "description": "EventLog Component  Scrolling log of events during playback in the Event Handler tier. Shows the chain reaction as events cascade through objects.",
@@ -32207,7 +32220,7 @@
     "action-palette": {
       "type": "action-palette",
       "category": "game",
-      "tier": "organisms",
+      "tier": "molecules",
       "family": "game",
       "dimension": "2d",
       "description": "ActionPalette Component  Grid of draggable ActionTile components for the Sequencer tier. Kids pick from these to build their sequence.",
@@ -32402,7 +32415,7 @@
     "action-tile": {
       "type": "action-tile",
       "category": "game",
-      "tier": "organisms",
+      "tier": "molecules",
       "family": "game",
       "dimension": "2d",
       "description": "ActionTile Component  A draggable action tile for the Sequencer tier (ages 5-8). Kids drag these from the ActionPalette into SequenceBar slots. Sets SlotItemData on dataTransfer for TraitSlot compatibility.",
@@ -43120,6 +43133,234 @@
             "string"
           ],
           "description": "className prop"
+        }
+      }
+    },
+    "object-rule-panel": {
+      "type": "object-rule-panel",
+      "category": "game",
+      "tier": "molecules",
+      "family": "game",
+      "dimension": "2d",
+      "description": "ObjectRulePanel Component  Shows the rules panel for a selected world object in the Event Handler tier. Displays object info, its current state (via TraitStateViewer), and a list of WHEN/THEN rules the kid has set.",
+      "suggestedFor": [
+        "object",
+        "rule",
+        "panel",
+        "object rule panel"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "object": {
+          "types": [
+            "object"
+          ],
+          "description": "The selected puzzle-object row (`EntityRow` carrying the editable object data)",
+          "required": true,
+          "kind": "entity",
+          "cardinality": "record"
+        },
+        "onRulesChange": {
+          "types": [
+            "function"
+          ],
+          "description": "Called when rules change (callback path)",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "objectId",
+              "type": "string"
+            },
+            {
+              "name": "rules",
+              "type": "array"
+            }
+          ]
+        },
+        "rulesChangeEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{rulesChangeEvent} with { objectId, rules } when rules change (declarative path)",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "objectId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "name": "rules",
+              "type": "array",
+              "required": true
+            }
+          ]
+        },
+        "disabled": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether editing is disabled",
+          "default": false
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "state-json-view": {
+      "type": "state-json-view",
+      "category": "game",
+      "tier": "molecules",
+      "family": "game",
+      "dimension": "2d",
+      "description": "StateJsonView Component  Shows a state machine's definition as an expandable code block, so the learner sees the declarative schema behind the visual graph. Dumb molecule: takes the machine as plain typed fields (name/states/initialState/transitions) — the .lolo organism owns the entity and the molecule renders + stringifies it.",
+      "suggestedFor": [
+        "state",
+        "json",
+        "view",
+        "state json view"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "name": {
+          "types": [
+            "string"
+          ],
+          "description": "Machine name",
+          "required": true
+        },
+        "initialState": {
+          "types": [
+            "string"
+          ],
+          "description": "Initial state",
+          "required": true
+        },
+        "states": {
+          "types": [
+            "array"
+          ],
+          "description": "All state names",
+          "required": true,
+          "items": {
+            "types": [
+              "string"
+            ]
+          }
+        },
+        "transitions": {
+          "types": [
+            "array"
+          ],
+          "description": "The player's wired transitions",
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "from": {
+                "types": [
+                  "string"
+                ]
+              },
+              "to": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "event"
+            ]
+          }
+        },
+        "label": {
+          "types": [
+            "string"
+          ],
+          "description": "Header label"
+        },
+        "defaultExpanded": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Whether the code block is expanded by default",
+          "default": false
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
+        }
+      }
+    },
+    "variable-panel": {
+      "type": "variable-panel",
+      "category": "game",
+      "tier": "molecules",
+      "family": "game",
+      "dimension": "2d",
+      "description": "VariablePanel Component  Shows a machine's variables and their current values during State Architect playback. Dumb molecule: takes a plain typed list of { name, value } — the .lolo organism owns the entity data and passes it already flattened.",
+      "suggestedFor": [
+        "variable",
+        "panel",
+        "variable panel"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "entityName": {
+          "types": [
+            "string"
+          ],
+          "description": "Entity name shown in the header",
+          "required": true
+        },
+        "variables": {
+          "types": [
+            "array"
+          ],
+          "description": "Variable rows to display",
+          "required": true,
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "name": {
+                "types": [
+                  "string"
+                ]
+              },
+              "value": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "value"
+            ]
+          }
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "Additional CSS classes"
         }
       }
     }
