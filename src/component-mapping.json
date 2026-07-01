@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T02:07:40.613Z",
+  "exportedAt": "2026-07-01T07:28:28.185Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1179,11 +1179,6 @@
       "importPath": "@/components/marketing/organisms/BookViewer",
       "category": "display"
     },
-    "canvas-effect": {
-      "component": "CanvasEffect",
-      "importPath": "@/components/game/2d/organisms/CanvasEffect",
-      "category": "game"
-    },
     "game-audio-toggle": {
       "component": "GameAudioToggle",
       "importPath": "@/components/game/2d/atoms/GameAudioToggle",
@@ -1191,72 +1186,32 @@
     },
     "trait-slot": {
       "component": "TraitSlot",
-      "importPath": "@/components/game/2d/organisms/TraitSlot",
+      "importPath": "@/components/game/2d/molecules/TraitSlot",
       "category": "game"
     },
     "simulation-canvas": {
       "component": "SimulationCanvas",
-      "importPath": "@/components/game/2d/organisms/SimulationCanvas",
-      "category": "game"
-    },
-    "builder-board": {
-      "component": "BuilderBoard",
-      "importPath": "@/components/game/2d/organisms/BuilderBoard",
-      "category": "game"
-    },
-    "classifier-board": {
-      "component": "ClassifierBoard",
-      "importPath": "@/components/game/2d/organisms/ClassifierBoard",
-      "category": "game"
-    },
-    "debugger-board": {
-      "component": "DebuggerBoard",
-      "importPath": "@/components/game/2d/organisms/DebuggerBoard",
-      "category": "game"
-    },
-    "event-handler-board": {
-      "component": "EventHandlerBoard",
-      "importPath": "@/components/game/2d/organisms/EventHandlerBoard",
+      "importPath": "@/components/game/2d/molecules/SimulationCanvas",
       "category": "game"
     },
     "event-log": {
       "component": "EventLog",
-      "importPath": "@/components/game/2d/organisms/EventLog",
-      "category": "game"
-    },
-    "negotiator-board": {
-      "component": "NegotiatorBoard",
-      "importPath": "@/components/game/2d/organisms/NegotiatorBoard",
+      "importPath": "@/components/game/2d/molecules/EventLog",
       "category": "game"
     },
     "action-palette": {
       "component": "ActionPalette",
-      "importPath": "@/components/game/2d/organisms/ActionPalette",
+      "importPath": "@/components/game/2d/molecules/ActionPalette",
       "category": "game"
     },
     "action-tile": {
       "component": "ActionTile",
-      "importPath": "@/components/game/2d/organisms/ActionTile",
+      "importPath": "@/components/game/2d/molecules/ActionTile",
       "category": "game"
     },
     "sequence-bar": {
       "component": "SequenceBar",
-      "importPath": "@/components/game/2d/organisms/SequenceBar",
-      "category": "game"
-    },
-    "sequencer-board": {
-      "component": "SequencerBoard",
-      "importPath": "@/components/game/2d/organisms/SequencerBoard",
-      "category": "game"
-    },
-    "simulator-board": {
-      "component": "SimulatorBoard",
-      "importPath": "@/components/game/2d/organisms/SimulatorBoard",
-      "category": "game"
-    },
-    "state-architect-board": {
-      "component": "StateArchitectBoard",
-      "importPath": "@/components/game/2d/organisms/StateArchitectBoard",
+      "importPath": "@/components/game/2d/molecules/SequenceBar",
       "category": "game"
     },
     "dashboard-grid": {
