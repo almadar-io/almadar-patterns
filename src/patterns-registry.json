@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T08:26:07.585Z",
+  "exportedAt": "2026-07-01T09:50:01.431Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -43002,6 +43002,124 @@
           "description": "Emits UI:{playAgainEvent} — lolo handles PLAY_AGAIN",
           "kind": "event-ref",
           "emitPayloadSchema": []
+        }
+      }
+    },
+    "state-graph": {
+      "type": "state-graph",
+      "category": "game",
+      "tier": "molecules",
+      "family": "game",
+      "dimension": "2d",
+      "description": "StateGraph (molecule)  Dumb visual renderer for a state-machine graph: lays states out on a circle, draws the player's transitions as SVG arrows, and emits a node-click event. All state (which transitions exist, the pending \"from\" selection, test results) lives in the .lolo FSM — this molecule only renders and reports clicks.",
+      "suggestedFor": [
+        "state",
+        "graph",
+        "state graph"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "states": {
+          "types": [
+            "array"
+          ],
+          "description": "All states in the machine (node labels).",
+          "required": true,
+          "items": {
+            "types": [
+              "string"
+            ]
+          }
+        },
+        "transitions": {
+          "types": [
+            "array"
+          ],
+          "description": "Player-built transitions rendered as arrows.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "from": {
+                "types": [
+                  "string"
+                ]
+              },
+              "to": {
+                "types": [
+                  "string"
+                ]
+              },
+              "event": {
+                "types": [
+                  "string"
+                ]
+              },
+              "guardHint": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "from",
+              "to",
+              "event"
+            ]
+          },
+          "default": []
+        },
+        "currentState": {
+          "types": [
+            "string"
+          ],
+          "description": "State highlighted as current (test playback / initial)."
+        },
+        "selectedState": {
+          "types": [
+            "string"
+          ],
+          "description": "State the player has selected (first click)."
+        },
+        "addingFrom": {
+          "types": [
+            "string"
+          ],
+          "description": "When set, the graph is in \"pick a target\" mode from this state."
+        },
+        "initialState": {
+          "types": [
+            "string"
+          ],
+          "description": "The machine's initial state (ring-marked)."
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "Graph canvas width.",
+          "default": 500
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "Graph canvas height.",
+          "default": 400
+        },
+        "nodeClickEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{nodeClickEvent} with { stateId } when a node is clicked.",
+          "kind": "event"
+        },
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
         }
       }
     }

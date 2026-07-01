@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T08:26:07.585Z",
+  "exportedAt": "2026-07-01T09:50:01.431Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1437,6 +1437,11 @@
     "state-architect-board": {
       "component": "StateArchitectBoard",
       "importPath": "@/components/game/2d/organisms/StateArchitectBoard",
+      "category": "game"
+    },
+    "state-graph": {
+      "component": "StateGraph",
+      "importPath": "@/components/game/2d/molecules/StateGraph",
       "category": "game"
     }
   }
