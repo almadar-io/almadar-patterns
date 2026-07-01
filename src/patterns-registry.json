@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T14:13:29.383Z",
+  "exportedAt": "2026-07-01T16:18:04.850Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -32057,79 +32057,6 @@
         }
       }
     },
-    "simulation-canvas": {
-      "type": "simulation-canvas",
-      "category": "game",
-      "tier": "organisms",
-      "family": "game",
-      "dimension": "2d",
-      "description": "SimulationCanvas  Self-contained 2D physics canvas for educational presets. Runs its own Euler integration loop — no external physics hook needed.",
-      "suggestedFor": [
-        "simulation",
-        "canvas",
-        "simulation canvas"
-      ],
-      "typicalSize": "large",
-      "propsSchema": {
-        "preset": {
-          "types": [
-            "string",
-            "object"
-          ],
-          "description": "preset prop",
-          "required": true,
-          "enumValues": [
-            "mechanics-projectile",
-            "mechanics-pendulum",
-            "mechanics-spring"
-          ]
-        },
-        "width": {
-          "types": [
-            "number"
-          ],
-          "description": "width prop",
-          "default": 600
-        },
-        "height": {
-          "types": [
-            "number"
-          ],
-          "description": "height prop",
-          "default": 400
-        },
-        "running": {
-          "types": [
-            "boolean"
-          ],
-          "description": "running prop",
-          "required": true
-        },
-        "speed": {
-          "types": [
-            "number"
-          ],
-          "description": "speed prop"
-        },
-        "bodies": {
-          "types": [
-            "array"
-          ],
-          "description": "External model-authoritative body snapshots (~30Hz). When provided, the self-simulation loop is bypassed and positions are interpolated to 60fps between consecutive snapshots.",
-          "items": {
-            "types": [
-              "object"
-            ]
-          }
-        },
-        "className": {
-          "types": [
-            "string"
-          ],
-          "description": "className prop"
-        }
-      }
-    },
     "event-log": {
       "type": "event-log",
       "category": "game",
@@ -32682,7 +32609,7 @@
     "sequence-bar": {
       "type": "sequence-bar",
       "category": "game",
-      "tier": "organisms",
+      "tier": "molecules",
       "family": "game",
       "dimension": "2d",
       "description": "SequenceBar Component  A row of TraitSlot components forming the action sequence for the Sequencer tier (ages 5-8). Kids drag ActionTiles from the palette into these slots to build their sequence.",
@@ -32813,8 +32740,7 @@
           "types": [
             "function"
           ],
-          "description": "Called when an item is dropped into slot at index",
-          "required": true,
+          "description": "Called when an item is dropped into slot at index (callback path)",
           "kind": "callback",
           "callbackArgs": [
             {
@@ -32933,13 +32859,45 @@
           "types": [
             "function"
           ],
-          "description": "Called when a slot is cleared",
-          "required": true,
+          "description": "Called when a slot is cleared (callback path)",
           "kind": "callback",
           "callbackArgs": [
             {
               "name": "index",
               "type": "number"
+            }
+          ]
+        },
+        "slotDropEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{slotDropEvent} with { slotNumber, itemId } when an item is dropped (declarative path)",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotNumber",
+              "type": "number",
+              "required": true
+            },
+            {
+              "name": "itemId",
+              "type": "string",
+              "required": true
+            }
+          ]
+        },
+        "slotRemoveEvent": {
+          "types": [
+            "string"
+          ],
+          "description": "Emits UI:{slotRemoveEvent} with { slotNumber } when a slot is cleared (declarative path)",
+          "kind": "event-ref",
+          "emitPayloadSchema": [
+            {
+              "name": "slotNumber",
+              "type": "number",
+              "required": true
             }
           ]
         },

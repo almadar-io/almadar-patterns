@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T14:13:29.383Z",
+  "exportedAt": "2026-07-01T16:18:04.850Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1189,11 +1189,6 @@
       "importPath": "@/components/game/2d/molecules/TraitSlot",
       "category": "game"
     },
-    "simulation-canvas": {
-      "component": "SimulationCanvas",
-      "importPath": "@/components/game/2d/organisms/SimulationCanvas",
-      "category": "game"
-    },
     "event-log": {
       "component": "EventLog",
       "importPath": "@/components/game/2d/molecules/EventLog",
@@ -1211,7 +1206,7 @@
     },
     "sequence-bar": {
       "component": "SequenceBar",
-      "importPath": "@/components/game/2d/organisms/SequenceBar",
+      "importPath": "@/components/game/2d/molecules/SequenceBar",
       "category": "game"
     },
     "dashboard-grid": {
