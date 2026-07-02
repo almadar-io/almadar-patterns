@@ -1,6 +1,6 @@
 {
   "name": "@almadar/patterns",
-  "version": "2.88.1",
+  "version": "2.89.0",
   "description": "Pattern registry and component mappings for Almadar",
   "type": "module",
   "main": "./dist/index.js",
