@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-02T06:39:01.426Z",
+  "exportedAt": "2026-07-02T09:56:27.230Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -43358,6 +43358,432 @@
             "string"
           ],
           "description": "Additional CSS classes"
+        }
+      }
+    },
+    "algorithm-canvas": {
+      "type": "algorithm-canvas",
+      "category": "learning",
+      "tier": "molecules",
+      "family": "learning",
+      "description": "AlgorithmCanvas component",
+      "suggestedFor": [
+        "algorithm",
+        "canvas",
+        "algorithm canvas"
+      ],
+      "typicalSize": "medium",
+      "propsSchema": {
+        "className": {
+          "types": [
+            "string"
+          ],
+          "description": "className prop"
+        },
+        "width": {
+          "types": [
+            "number"
+          ],
+          "description": "width prop",
+          "default": 600
+        },
+        "height": {
+          "types": [
+            "number"
+          ],
+          "description": "height prop",
+          "default": 400
+        },
+        "title": {
+          "types": [
+            "string"
+          ],
+          "description": "title prop"
+        },
+        "backgroundColor": {
+          "types": [
+            "string"
+          ],
+          "description": "backgroundColor prop"
+        },
+        "bars": {
+          "types": [
+            "array"
+          ],
+          "description": "Sorting/histogram bars; laid out left-to-right, height proportional to value.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "value": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "value"
+            ]
+          },
+          "default": []
+        },
+        "cells": {
+          "types": [
+            "array"
+          ],
+          "description": "Grid/array/DP cells; laid out on a row/col lattice sized to the extent.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "row": {
+                "types": [
+                  "number"
+                ]
+              },
+              "col": {
+                "types": [
+                  "number"
+                ]
+              },
+              "value": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "row",
+              "col"
+            ]
+          },
+          "default": []
+        },
+        "pointers": {
+          "types": [
+            "array"
+          ],
+          "description": "Index cursors (i/j/lo/hi/mid); drawn as markers beneath the referenced bar/cell column.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "index": {
+                "types": [
+                  "number"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              }
+            },
+            "required": [
+              "index"
+            ]
+          },
+          "default": []
+        },
+        "shapes": {
+          "types": [
+            "array"
+          ],
+          "description": "Extra declarative shapes in canvas pixel coordinates.",
+          "items": {
+            "types": [
+              "object"
+            ],
+            "properties": {
+              "type": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "line",
+                  "arrow",
+                  "circle",
+                  "rect",
+                  "polygon",
+                  "path",
+                  "text",
+                  "axis",
+                  "grid"
+                ]
+              },
+              "id": {
+                "types": [
+                  "string"
+                ]
+              },
+              "x": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y1": {
+                "types": [
+                  "number"
+                ]
+              },
+              "x2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "y2": {
+                "types": [
+                  "number"
+                ]
+              },
+              "radius": {
+                "types": [
+                  "number"
+                ]
+              },
+              "width": {
+                "types": [
+                  "number"
+                ]
+              },
+              "height": {
+                "types": [
+                  "number"
+                ]
+              },
+              "points": {
+                "types": [
+                  "array"
+                ],
+                "items": {
+                  "types": [
+                    "object"
+                  ],
+                  "properties": {
+                    "x": {
+                      "types": [
+                        "number"
+                      ]
+                    },
+                    "y": {
+                      "types": [
+                        "number"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "x",
+                    "y"
+                  ]
+                }
+              },
+              "path": {
+                "types": [
+                  "string"
+                ]
+              },
+              "text": {
+                "types": [
+                  "string"
+                ]
+              },
+              "label": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fontSize": {
+                "types": [
+                  "number"
+                ]
+              },
+              "align": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "axis": {
+                "types": [
+                  "string"
+                ],
+                "enumValues": [
+                  "x",
+                  "y"
+                ]
+              },
+              "min": {
+                "types": [
+                  "number"
+                ]
+              },
+              "max": {
+                "types": [
+                  "number"
+                ]
+              },
+              "step": {
+                "types": [
+                  "number"
+                ]
+              },
+              "color": {
+                "types": [
+                  "string"
+                ]
+              },
+              "fill": {
+                "types": [
+                  "string"
+                ]
+              },
+              "lineWidth": {
+                "types": [
+                  "number"
+                ]
+              },
+              "opacity": {
+                "types": [
+                  "number"
+                ]
+              }
+            },
+            "required": [
+              "type"
+            ]
+          },
+          "default": []
+        },
+        "interactive": {
+          "types": [
+            "boolean"
+          ],
+          "description": "interactive prop",
+          "default": false
+        },
+        "animate": {
+          "types": [
+            "boolean"
+          ],
+          "description": "animate prop",
+          "default": false
+        },
+        "onShapeClick": {
+          "types": [
+            "function"
+          ],
+          "description": "onShapeClick prop",
+          "kind": "callback",
+          "callbackArgs": [
+            {
+              "name": "payload",
+              "type": "object",
+              "schema": {
+                "types": [
+                  "object"
+                ],
+                "properties": {
+                  "id": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "type": {
+                    "types": [
+                      "string"
+                    ]
+                  },
+                  "index": {
+                    "types": [
+                      "number"
+                    ]
+                  }
+                },
+                "required": [
+                  "index"
+                ]
+              }
+            }
+          ]
+        },
+        "isLoading": {
+          "types": [
+            "boolean"
+          ],
+          "description": "isLoading prop"
+        },
+        "error": {
+          "types": [
+            "object"
+          ],
+          "description": "error prop",
+          "properties": {
+            "message": {
+              "types": [
+                "string"
+              ]
+            },
+            "name": {
+              "types": [
+                "string"
+              ]
+            },
+            "code": {
+              "types": [
+                "string"
+              ]
+            },
+            "stack": {
+              "types": [
+                "string"
+              ]
+            }
+          },
+          "propertyRequired": [
+            "message"
+          ]
         }
       }
     }

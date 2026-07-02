@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-02T06:39:01.426Z",
+  "exportedAt": "2026-07-02T09:56:27.230Z",
   "mappings": {
     "page-header": {
       "component": "PageHeader",
@@ -1453,6 +1453,11 @@
       "component": "VariablePanel",
       "importPath": "@/components/game/2d/molecules/VariablePanel",
       "category": "game"
+    },
+    "algorithm-canvas": {
+      "component": "AlgorithmCanvas",
+      "importPath": "@/components/learning/molecules/AlgorithmCanvas",
+      "category": "learning"
     }
   }
 }
