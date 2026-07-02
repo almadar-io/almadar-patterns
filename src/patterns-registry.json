@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "exportedAt": "2026-07-01T16:18:04.850Z",
+  "exportedAt": "2026-07-02T00:14:49.904Z",
   "patterns": {
     "entity-table": {
       "type": "entity-table",
@@ -26447,6 +26447,25 @@
           ],
           "default": "bottom"
         },
+        "mood": {
+          "types": [
+            "string"
+          ],
+          "description": "Speaker mood — drives a portrait-ring accent; LOLO sets this per dialogue node/transition.",
+          "enumValues": [
+            "neutral",
+            "happy",
+            "concerned",
+            "angry"
+          ],
+          "default": "neutral"
+        },
+        "revealedChars": {
+          "types": [
+            "number"
+          ],
+          "description": "Number of `text` characters to reveal (typewriter effect). Omit to show the full string — LOLO drives this from `@entity.revealedChars` via a tick, incrementing it until it reaches `text.length`."
+        },
         "className": {
           "types": [
             "string"
@@ -35962,6 +35981,13 @@
             "fps"
           ]
         },
+        "interpolateUnits": {
+          "types": [
+            "boolean"
+          ],
+          "description": "Opt-in: smooth-interpolate unit positions between LOLO tick snapshots via a `requestAnimationFrame` loop (same fixed-timestep technique `SideView` already uses for the player), instead of the default tick-rate-cadence redraw. DEFAULT OFF — for continuous-movement boards only; tile-snapped boards see no behavior change.",
+          "default": false
+        },
         "debug": {
           "types": [
             "boolean"
@@ -37021,6 +37047,19 @@
             "lg"
           ],
           "default": "md"
+        },
+        "animState": {
+          "types": [
+            "string"
+          ],
+          "description": "One-shot pose LOLO drives on a transition (`DRAW`/`PLAY`), auto-reverted to `'idle'` by a short tick — same idiom as `HealthBar.animated`, plain CSS transform driven off a prop, no internal timer here.",
+          "enumValues": [
+            "idle",
+            "drawn",
+            "played",
+            "flipped"
+          ],
+          "default": "idle"
         },
         "onClick": {
           "types": [
